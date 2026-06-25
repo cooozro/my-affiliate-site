@@ -25,6 +25,14 @@ const ko: Dictionary = {
   },
   blog: {
     notFound: "글을 찾을 수 없습니다",
+    share: {
+      ariaLabel: "이 글 공유하기",
+      heading: "이 글 공유하기",
+      shareOn: "공유:",
+      copyLink: "링크 복사",
+      copied: "복사됨!",
+      copyFallback: "아래 링크를 복사하세요:",
+    },
   },
   ads: {
     top: "본문 상단",

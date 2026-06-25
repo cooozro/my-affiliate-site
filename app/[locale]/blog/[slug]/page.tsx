@@ -83,5 +83,15 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ArticleLayout post={post} locale={locale} />;
+  const dict = await getDictionary(locale);
+  const shareUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
+
+  return (
+    <ArticleLayout
+      post={post}
+      locale={locale}
+      shareUrl={shareUrl}
+      shareLabels={dict.blog.share}
+    />
+  );
 }

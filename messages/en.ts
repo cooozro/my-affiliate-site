@@ -23,6 +23,14 @@ const en = {
   },
   blog: {
     notFound: "Article not found",
+    share: {
+      ariaLabel: "Share this article",
+      heading: "Share this article",
+      shareOn: "Share on",
+      copyLink: "Copy link",
+      copied: "Copied!",
+      copyFallback: "Copy this link:",
+    },
   },
   ads: {
     top: "Top of article",

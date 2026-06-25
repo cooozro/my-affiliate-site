@@ -1,11 +1,16 @@
 import Image from "next/image";
+import { ArticleProtection } from "@/components/article-protection";
+import { ArticleShare } from "@/components/article-share";
 import { MarkdownContent } from "@/components/markdown-content";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/messages/en";
 
 type ArticleLayoutProps = {
   post: EnrichedPost;
   locale: Locale;
+  shareUrl: string;
+  shareLabels: Dictionary["blog"]["share"];
 };
 
 function formatDate(date: string, locale: Locale) {
@@ -16,10 +21,15 @@ function formatDate(date: string, locale: Locale) {
   }).format(new Date(date));
 }
 
-export function ArticleLayout({ post, locale }: ArticleLayoutProps) {
+export function ArticleLayout({
+  post,
+  locale,
+  shareUrl,
+  shareLabels,
+}: ArticleLayoutProps) {
   return (
     <article className="mx-auto w-full max-w-3xl px-6 py-12">
-      <header className="mb-10 border-b border-border/60 pb-10">
+      <header className="mb-6 border-b border-border/60 pb-6">
         <time
           dateTime={post.date}
           className="font-sans text-sm text-muted-foreground"
@@ -48,34 +58,51 @@ export function ArticleLayout({ post, locale }: ArticleLayoutProps) {
         ) : null}
       </header>
 
-      {post.coverImage ? (
-        <figure className="mb-10 overflow-hidden rounded-xl border border-border/60">
-          <Image
-            src={post.coverImage}
-            alt={post.coverImageAlt ?? post.title}
-            width={1200}
-            height={675}
-            className="h-auto w-full object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          {post.coverImageCredit ? (
-            <figcaption className="border-t border-border/60 bg-muted/40 px-4 py-2 font-sans text-xs text-muted-foreground">
-              {post.coverImageCredit}
-            </figcaption>
-          ) : null}
-        </figure>
-      ) : null}
+      <ArticleShare
+        url={shareUrl}
+        title={post.title}
+        labels={shareLabels}
+        variant="top"
+      />
 
-      {post.liveDataNote ? (
-        <p className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground">
-          {post.liveDataNote}
-        </p>
-      ) : null}
+      <ArticleProtection>
+        {post.coverImage ? (
+          <figure className="mb-10 overflow-hidden rounded-xl border border-border/60">
+            <Image
+              src={post.coverImage}
+              alt={post.coverImageAlt ?? post.title}
+              width={1200}
+              height={675}
+              className="h-auto w-full object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              draggable={false}
+            />
+            {post.coverImageCredit ? (
+              <figcaption className="border-t border-border/60 bg-muted/40 px-4 py-2 font-sans text-xs text-muted-foreground">
+                {post.coverImageCredit}
+              </figcaption>
+            ) : null}
+          </figure>
+        ) : null}
 
-      <div className="article-body">
-        <MarkdownContent content={post.content} />
-      </div>
+        {post.liveDataNote ? (
+          <p className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground">
+            {post.liveDataNote}
+          </p>
+        ) : null}
+
+        <div className="article-body">
+          <MarkdownContent content={post.content} />
+        </div>
+      </ArticleProtection>
+
+      <ArticleShare
+        url={shareUrl}
+        title={post.title}
+        labels={shareLabels}
+        variant="bottom"
+      />
     </article>
   );
 }

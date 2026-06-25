@@ -42,3 +42,17 @@ body {
 ::selection {
   background: color-mix(in oklab, var(--accent) 25%, transparent);
 }
+
+/* Article copy protection — scoped to post body only */
+.article-protected {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.article-protected img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
