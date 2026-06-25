@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint",
     "content:validate": "node scripts/validate-post.mjs",
-    "content:image": "node scripts/fetch-cover-image.mjs"
+    "content:image": "node scripts/fetch-cover-image.mjs",
+    "automation:write": "node scripts/automation/run.mjs write",
+    "automation:publish": "node scripts/automation/run.mjs publish",
+    "automation:buffer": "node scripts/automation/run.mjs buffer",
+    "automation:status": "node scripts/automation/run.mjs status"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

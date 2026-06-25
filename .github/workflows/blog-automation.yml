@@ -1,0 +1,80 @@
+name: Blog automation
+
+on:
+  schedule:
+    # KST 09:00 — morning write
+    - cron: "0 0 * * *"
+    # KST 18:00 — evening write
+    - cron: "0 9 * * *"
+    # KST 11:00 — publish slot 1
+    - cron: "0 2 * * *"
+    # KST 17:00 — publish slot 2 (6h after slot 1)
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Automation task"
+        required: true
+        type: choice
+        options:
+          - write-morning
+          - write-evening
+          - publish-slot
+          - buffer
+          - status
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Resolve task from schedule
+        id: task
+        run: |
+          if [ -n "${{ github.event.inputs.task }}" ]; then
+            echo "name=${{ github.event.inputs.task }}" >> "$GITHUB_OUTPUT"
+          else
+            case "${{ github.event.schedule }}" in
+              "0 0 * * *") echo "name=write-morning" >> "$GITHUB_OUTPUT" ;;
+              "0 9 * * *") echo "name=write-evening" >> "$GITHUB_OUTPUT" ;;
+              "0 2 * * *") echo "name=publish-slot" >> "$GITHUB_OUTPUT" ;;
+              "0 8 * * *") echo "name=publish-slot" >> "$GITHUB_OUTPUT" ;;
+              *) echo "name=status" >> "$GITHUB_OUTPUT" ;;
+            esac
+          fi
+
+      - name: Run automation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
+        run: node scripts/automation/run.mjs ${{ steps.task.outputs.name }}
+
+      - name: Validate content
+        if: success()
+        run: npm run content:validate
+
+      - name: Commit and push changes
+        if: success()
+        run: |
+          git config user.name "blog-automation[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts public/images/posts data/automation/state.json
+          if git diff --staged --quiet; then
+            echo "No content changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(automation): ${{ steps.task.outputs.name }}"
+          git push

@@ -17,3 +17,11 @@ Summary:
 Placeholders for live posts: `{{today}}`, `{{today_locale}}`, `{{usd_krw_rate}}`, `{{krw:29.99}}`.
 
 Images: `npm run content:image` with `PEXELS_API_KEY` (Pexels free API).
+
+## Blog automation
+
+Scheduled writing & publishing via GitHub Actions. See **`docs/BLOG_AUTOMATION.md`**.
+
+- 2 drafts/day (KST morning & evening), 2 publishes/day (6h+ apart), 2-draft buffer always
+- Google Indexing API on publish
+- Commands: `npm run automation:status`, `automation:buffer`, `automation:write`, `automation:publish`
