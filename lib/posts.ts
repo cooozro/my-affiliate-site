@@ -15,6 +15,9 @@ export type PostMeta = {
   updatedAt?: string;
   tags?: string[];
   coverImage?: string;
+  coverImageAlt?: string;
+  coverImageCredit?: string;
+  liveData?: boolean;
   draft?: boolean;
 };
 
@@ -52,6 +55,11 @@ function parsePostFile(slug: string, locale: Locale): Post {
     updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
     coverImage: data.coverImage ? String(data.coverImage) : undefined,
+    coverImageAlt: data.coverImageAlt ? String(data.coverImageAlt) : undefined,
+    coverImageCredit: data.coverImageCredit
+      ? String(data.coverImageCredit)
+      : undefined,
+    liveData: Boolean(data.liveData),
     draft: Boolean(data.draft),
     content: content.trim(),
   };

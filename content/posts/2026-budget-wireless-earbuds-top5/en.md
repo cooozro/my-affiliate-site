@@ -3,6 +3,10 @@ title: "2026 Best Budget Wireless Earbuds TOP 5 — Verified by Spec & Price Dat
 description: "Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scenario-based buying guide for every budget."
 date: "2026-06-25"
 tags: ["wireless earbuds", "budget tech", "TWS", "audio reviews"]
+liveData: true
+coverImage: "/images/posts/2026-budget-wireless-earbuds-top5/cover.jpg"
+coverImageAlt: "Wireless earbuds on a wooden surface"
+coverImageCredit: "Photo by Karolina Grabowska / Pexels"
 ---
 
 ## Introduction: The 2026 TWS Value War
@@ -31,15 +35,15 @@ We calculate a **Value Balance Index (VBI)** per product: higher specs and lower
 
 ## TOP 5 Comparison Table
 
-Snapshot as of June 25, 2026 (KRW converted at 1,380 KRW/USD).
+Snapshot as of {{today}}.
 
 | Rank | Model | Price | Driver | Codec | ANC | Battery (buds+case) | IP | Review | VBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **SoundPeats Air5 Pro** | $28.9 | 12mm | LDAC, aptX Adaptive | -45dB | 9h + 36h | IPX5 | 4.7 | **9.2** |
-| 2 | **EarFun Air Pro 4** | $32.5 | Dual 10+6mm | LDAC, aptX Lossless | -43dB | 8h + 32h | IPX5 | 4.6 | **8.9** |
-| 3 | **Anker Soundcore P40i** | $35.0 | 11mm | LDAC, AAC | -42dB | 10h + 40h | IPX5 | 4.8 | **8.7** |
-| 4 | **QCY MeloBuds Pro** | $24.9 | 10mm | AAC, SBC | -40dB | 7h + 28h | IPX4 | 4.5 | **8.5** |
-| 5 | **Redmi Buds 5 Pro** | $38.0 | Dual 10+6mm | LHDC 5.0, AAC | -46dB | 8h + 30h | IP54 | 4.6 | **8.4** |
+| 1 | **SoundPeats Air5 Pro** | $28.9 / ~{{krw:28.9}} | 12mm | LDAC, aptX Adaptive | -45dB | 9h + 36h | IPX5 | 4.7 | **9.2** |
+| 2 | **EarFun Air Pro 4** | $32.5 / ~{{krw:32.5}} | Dual 10+6mm | LDAC, aptX Lossless | -43dB | 8h + 32h | IPX5 | 4.6 | **8.9** |
+| 3 | **Anker Soundcore P40i** | $35.0 / ~{{krw:35.0}} | 11mm | LDAC, AAC | -42dB | 10h + 40h | IPX5 | 4.8 | **8.7** |
+| 4 | **QCY MeloBuds Pro** | $24.9 / ~{{krw:24.9}} | 10mm | AAC, SBC | -40dB | 7h + 28h | IPX4 | 4.5 | **8.5** |
+| 5 | **Redmi Buds 5 Pro** | $38.0 / ~{{krw:38.0}} | Dual 10+6mm | LHDC 5.0, AAC | -46dB | 8h + 30h | IP54 | 4.6 | **8.4** |
 
 ---
 

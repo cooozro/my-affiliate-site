@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -90,6 +91,24 @@ const markdownComponents: Components = {
       {children}
     </td>
   ),
+  img: ({ src, alt }) => {
+    if (!src || typeof src !== "string") {
+      return null;
+    }
+
+    return (
+      <span className="my-8 block overflow-hidden rounded-xl border border-border/60">
+        <Image
+          src={src}
+          alt={alt ?? ""}
+          width={1200}
+          height={675}
+          className="h-auto w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+      </span>
+    );
+  },
   hr: (props) => <hr className="my-10 border-border" {...props} />,
   strong: ({ children, ...props }) => (
     <strong className="font-semibold text-foreground" {...props}>

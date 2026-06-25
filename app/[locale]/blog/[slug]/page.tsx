@@ -4,8 +4,11 @@ import { ArticleLayout } from "@/components/article-layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
+import { enrichPost } from "@/lib/enrich-post";
 import { getAllStaticBlogParams, getPostBySlug, getPostSlugs } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
+
+export const revalidate = 3600;
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -27,6 +30,9 @@ export async function generateMetadata({
   try {
     const post = getPostBySlug(slug, { locale });
     const url = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
+    const ogImage = post.coverImage
+      ? `${siteConfig.url}${post.coverImage}`
+      : undefined;
 
     return {
       title: post.title,
@@ -41,11 +47,13 @@ export async function generateMetadata({
         modifiedTime: post.updatedAt ?? post.date,
         tags: post.tags,
         authors: [siteConfig.author],
+        ...(ogImage ? { images: [{ url: ogImage, alt: post.coverImageAlt }] } : {}),
       },
       twitter: {
-        card: "summary_large_image",
+        card: ogImage ? "summary_large_image" : "summary",
         title: post.title,
         description: post.description,
+        ...(ogImage ? { images: [ogImage] } : {}),
       },
       alternates: {
         canonical: url,
@@ -70,7 +78,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   let post;
   try {
-    post = getPostBySlug(slug, { locale });
+    post = await enrichPost(getPostBySlug(slug, { locale }), locale);
   } catch {
     notFound();
   }

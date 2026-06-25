@@ -1,9 +1,10 @@
+import Image from "next/image";
 import { MarkdownContent } from "@/components/markdown-content";
+import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
-import type { Post } from "@/lib/posts";
 
 type ArticleLayoutProps = {
-  post: Post;
+  post: EnrichedPost;
   locale: Locale;
 };
 
@@ -46,6 +47,31 @@ export function ArticleLayout({ post, locale }: ArticleLayoutProps) {
           </ul>
         ) : null}
       </header>
+
+      {post.coverImage ? (
+        <figure className="mb-10 overflow-hidden rounded-xl border border-border/60">
+          <Image
+            src={post.coverImage}
+            alt={post.coverImageAlt ?? post.title}
+            width={1200}
+            height={675}
+            className="h-auto w-full object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          {post.coverImageCredit ? (
+            <figcaption className="border-t border-border/60 bg-muted/40 px-4 py-2 font-sans text-xs text-muted-foreground">
+              {post.coverImageCredit}
+            </figcaption>
+          ) : null}
+        </figure>
+      ) : null}
+
+      {post.liveDataNote ? (
+        <p className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground">
+          {post.liveDataNote}
+        </p>
+      ) : null}
 
       <div className="article-body">
         <MarkdownContent content={post.content} />
