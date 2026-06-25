@@ -47,6 +47,12 @@ const en = {
     nameLabel: "Name",
     messageLabel: "Message",
     submit: "Send Message",
+    submitting: "Sending...",
+    successMessage:
+      "Your message has been sent successfully. We will get back to you soon.",
+    errorGeneric: "Failed to send your message. Please try again later.",
+    errorNotConfigured:
+      "The contact form is temporarily unavailable. Please try again later.",
     responseTime: "We typically respond within 2–3 business days.",
   },
   privacy: {

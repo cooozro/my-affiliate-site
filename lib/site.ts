@@ -8,5 +8,5 @@ export const siteConfig = {
   locale: ogLocales.en,
   author: "AI Pick & Report",
   /** Private inbox — never rendered on the public site */
-  contactEmail: process.env.CONTACT_EMAIL ?? "coooz@naver.com",
+  contactEmail: process.env.CONTACT_EMAIL ?? "cooozro@gmail.com",
 };

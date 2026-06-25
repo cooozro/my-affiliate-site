@@ -49,6 +49,11 @@ const ko: Dictionary = {
     nameLabel: "이름",
     messageLabel: "메시지",
     submit: "메시지 보내기",
+    submitting: "전송 중...",
+    successMessage: "문의가 성공적으로 전송되었습니다. 곧 답변드리겠습니다.",
+    errorGeneric: "전송에 실패했습니다. 잠시 후 다시 시도해 주세요.",
+    errorNotConfigured:
+      "문의 양식을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.",
     responseTime: "영업일 기준 2~3일 내 답변드립니다.",
   },
   privacy: {

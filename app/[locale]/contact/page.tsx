@@ -55,10 +55,7 @@ export default async function ContactPage({ params }: PageProps) {
         {dict.contact.formNotice}
       </p>
 
-      <ContactForm
-        deliveryEmail={siteConfig.contactEmail}
-        dict={dict.contact}
-      />
+      <ContactForm dict={dict.contact} />
 
       <p className="mt-6 font-sans text-sm text-muted-foreground">
         {dict.contact.responseTime}
