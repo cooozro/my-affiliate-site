@@ -45,10 +45,11 @@ export default async function HomePage({ params }: PageProps) {
   const posts = getAllPosts(locale);
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <>
       <HomeHero description={dict.meta.siteDescription} />
 
-      <section aria-labelledby="latest-posts-heading">
+      <div className="mx-auto max-w-3xl px-6 pb-12 pt-2">
+        <section aria-labelledby="latest-posts-heading">
         <h2
           id="latest-posts-heading"
           className="mb-6 font-sans text-sm font-semibold uppercase tracking-wider text-muted-foreground"
@@ -78,7 +79,8 @@ export default async function HomePage({ params }: PageProps) {
             ))}
           </div>
         )}
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
