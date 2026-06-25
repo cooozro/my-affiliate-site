@@ -115,9 +115,9 @@ export default async function AboutPage({ params }: PageProps) {
                 href={localizedPath(locale, "/contact")}
                 className="font-medium text-accent hover:underline"
               >
-                문의 페이지
+                문의 게시판
               </Link>
-              를 이용해 주세요.
+              을 이용해 주세요. 이메일 직접 문의는 받지 않습니다.
             </p>
           </div>
         </section>
@@ -219,22 +219,14 @@ export default async function AboutPage({ params }: PageProps) {
           </h2>
           <p className="text-muted-foreground">
             We value your feedback and inquiries. If you have questions about our
-            reviews or suggestions for future topics, please feel free to reach
-            out to us at{" "}
-            <a
-              href={`mailto:${siteConfig.contactEmail}`}
-              className="font-medium text-accent hover:underline"
-            >
-              {siteConfig.contactDisplayEmail}
-            </a>{" "}
-            or visit our{" "}
+            reviews or suggestions for future topics, please use our{" "}
             <Link
               href={localizedPath(locale, "/contact")}
               className="font-medium text-accent hover:underline"
             >
-              contact page
+              contact form
             </Link>
-            .
+            . We do not accept inquiries via direct email.
           </p>
         </div>
       </section>

@@ -42,10 +42,10 @@ const ko: Dictionary = {
     metaDescription:
       "AI Pick & Report 편집팀에 문의·제보·제휴 관련 연락을 남겨주세요.",
     intro:
-      "독자 피드백, 제품 제보, 제휴 문의를 환영합니다. 아래 양식 또는 이메일로 연락해 주세요.",
-    emailLabel: "이메일",
-    email: "contact@aipick.shop",
-    emailDeliveryNote: "문의 내용은 편집팀 메일함으로 바로 전달됩니다.",
+      "독자 피드백, 제품 제보, 제휴 문의를 환영합니다. 아래 문의 게시판을 통해서만 연락해 주세요.",
+    formNotice:
+      "개인정보 보호와 신속한 응대를 위해 이메일 직접 문의는 받지 않습니다. 반드시 아래 양식을 이용해 주세요.",
+    emailLabel: "회신 받을 이메일",
     nameLabel: "이름",
     messageLabel: "메시지",
     submit: "메시지 보내기",
@@ -78,11 +78,11 @@ const ko: Dictionary = {
       },
       rights: {
         title: "이용자 권리",
-        body: "관할 지역에 따라 개인정보 열람·정정·삭제를 요청할 수 있습니다. coooz@naver.com 으로 문의해 주세요.",
+        body: "관할 지역에 따라 개인정보 열람·정정·삭제를 요청할 수 있습니다. 해당 요청은 당사 웹사이트의 문의 게시판을 통해 제출해 주세요.",
       },
       contact: {
         title: "문의",
-        body: "개인정보처리방침 관련 문의: coooz@naver.com",
+        body: "개인정보처리방침 관련 문의는 웹사이트 문의 게시판을 이용해 주세요. 이메일 직접 문의는 받지 않습니다.",
       },
     },
   },

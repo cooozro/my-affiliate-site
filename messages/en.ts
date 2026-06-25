@@ -40,11 +40,10 @@ const en = {
     metaDescription:
       "Get in touch with the AI Pick & Report editorial team for questions, corrections, or partnership inquiries.",
     intro:
-      "We welcome reader feedback, product tips, and partnership inquiries. Please use the form below or email us directly.",
-    emailLabel: "Email",
-    email: "contact@aipick.shop",
-    emailDeliveryNote:
-      "Messages are delivered directly to our editorial inbox.",
+      "We welcome reader feedback, product tips, and partnership inquiries. Please contact us only through the form below.",
+    formNotice:
+      "For privacy and a timely response, we do not accept inquiries by direct email. Please use this contact form.",
+    emailLabel: "Your email",
     nameLabel: "Name",
     messageLabel: "Message",
     submit: "Send Message",
@@ -78,11 +77,11 @@ const en = {
       },
       rights: {
         title: "Your Rights",
-        body: "Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data. To exercise these rights, contact us at coooz@naver.com.",
+        body: "Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data. To exercise these rights, please submit your request through the Contact page on this website.",
       },
       contact: {
         title: "Contact Us",
-        body: "If you have questions about this Privacy Policy, please contact us at coooz@naver.com.",
+        body: "If you have questions about this Privacy Policy, please reach out through the Contact page on this website. We do not accept privacy-related inquiries via direct email.",
       },
     },
   },

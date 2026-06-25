@@ -51,28 +51,18 @@ export default async function ContactPage({ params }: PageProps) {
         {dict.contact.intro}
       </p>
 
-      <div className="mt-8 rounded-xl border border-border bg-surface p-6">
-        <p className="font-sans text-sm text-muted-foreground">
-          {dict.contact.emailLabel}
-        </p>
-        <a
-          href={`mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent("[AI Pick & Report] Contact")}`}
-          className="mt-1 inline-block font-sans text-lg font-medium text-accent hover:underline"
-        >
-          {siteConfig.contactDisplayEmail}
-        </a>
-        <p className="mt-3 font-sans text-xs text-muted-foreground">
-          {dict.contact.emailDeliveryNote}
-        </p>
-        <p className="mt-4 font-sans text-sm text-muted-foreground">
-          {dict.contact.responseTime}
-        </p>
-      </div>
+      <p className="mt-6 rounded-xl border border-border bg-muted/40 px-5 py-4 font-sans text-sm leading-relaxed text-muted-foreground">
+        {dict.contact.formNotice}
+      </p>
 
       <ContactForm
         deliveryEmail={siteConfig.contactEmail}
         dict={dict.contact}
       />
+
+      <p className="mt-6 font-sans text-sm text-muted-foreground">
+        {dict.contact.responseTime}
+      </p>
     </article>
   );
 }
