@@ -4,7 +4,7 @@ import { ArticleLayout } from "@/components/article-layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import { getAllStaticBlogParams, getPostBySlug, getPostSlugs } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -14,8 +14,7 @@ type PageProps = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const slugs = getPostSlugs();
-  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return getAllStaticBlogParams();
 }
 
 export async function generateMetadata({
@@ -51,10 +50,12 @@ export async function generateMetadata({
       alternates: {
         canonical: url,
         languages: Object.fromEntries(
-          locales.map((l) => [
-            l,
-            `${siteConfig.url}${localizedPath(l, `/blog/${slug}`)}`,
-          ]),
+          locales
+            .filter((l) => getPostSlugs(l).includes(slug))
+            .map((l) => [
+              l,
+              `${siteConfig.url}${localizedPath(l, `/blog/${slug}`)}`,
+            ]),
         ),
       },
     };
@@ -66,7 +67,6 @@ export async function generateMetadata({
 export default async function BlogPostPage({ params }: PageProps) {
   const { locale: localeParam, slug } = await params;
   const locale = localeParam as Locale;
-  const dict = await getDictionary(locale);
 
   let post;
   try {
@@ -75,5 +75,5 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ArticleLayout post={post} locale={locale} dict={dict} />;
+  return <ArticleLayout post={post} locale={locale} />;
 }

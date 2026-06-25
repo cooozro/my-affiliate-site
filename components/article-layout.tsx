@@ -1,14 +1,10 @@
-import { AdSlot } from "@/components/ad-slot";
 import { MarkdownContent } from "@/components/markdown-content";
 import type { Locale } from "@/lib/i18n/config";
 import type { Post } from "@/lib/posts";
-import { splitContentForAds } from "@/lib/posts";
-import type { Dictionary } from "@/messages/en";
 
 type ArticleLayoutProps = {
   post: Post;
   locale: Locale;
-  dict: Dictionary;
 };
 
 function formatDate(date: string, locale: Locale) {
@@ -19,9 +15,7 @@ function formatDate(date: string, locale: Locale) {
   }).format(new Date(date));
 }
 
-export function ArticleLayout({ post, locale, dict }: ArticleLayoutProps) {
-  const { beforeAd, afterAd } = splitContentForAds(post.content);
-
+export function ArticleLayout({ post, locale }: ArticleLayoutProps) {
   return (
     <article className="mx-auto w-full max-w-3xl px-6 py-12">
       <header className="mb-10 border-b border-border/60 pb-10">
@@ -53,20 +47,9 @@ export function ArticleLayout({ post, locale, dict }: ArticleLayoutProps) {
         ) : null}
       </header>
 
-      <AdSlot position="top" className="mb-10" labels={dict.ads} />
-
       <div className="article-body">
-        <MarkdownContent content={beforeAd} />
-
-        {afterAd ? (
-          <>
-            <AdSlot position="middle" className="my-10" labels={dict.ads} />
-            <MarkdownContent content={afterAd} />
-          </>
-        ) : null}
+        <MarkdownContent content={post.content} />
       </div>
-
-      <AdSlot position="bottom" className="mt-10" labels={dict.ads} />
     </article>
   );
 }

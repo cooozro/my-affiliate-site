@@ -1,10 +1,6 @@
 ---
-title:
-  en: "How We Review Tech Products"
-  ko: "제품 리뷰 방법론"
-description:
-  en: "A transparent look at how AI Pick & Report evaluates smartphones, gadgets, and consumer electronics with structured data."
-  ko: "AI Pick & Report가 스마트폰·가전·전자기기를 구조화된 데이터로 평가하는 방법을 소개합니다."
+title: "How We Review Tech Products"
+description: "A transparent look at how AI Pick & Report evaluates smartphones, gadgets, and consumer electronics with structured data."
 date: "2026-06-25"
 tags: ["methodology", "tech reviews", "buying guides"]
 ---
@@ -17,8 +13,6 @@ AI Pick & Report publishes in-depth guides for smartphones, audio gear, and cons
 
 We organize product details into comparison tables — chipset, battery life, codec support, IP rating, and price — so readers can evaluate options at a glance without marketing noise.
 
-<!-- ad-break -->
-
 ## Editorial Standards
 
 - **Original analysis** — no copied manufacturer copy
@@ -27,4 +21,4 @@ We organize product details into comparison tables — chipset, battery life, co
 
 ## Stay Updated
 
-New buying guides are published regularly. Subscribe via RSS or bookmark our latest articles for data-backed tech recommendations.
+New buying guides are published regularly. Bookmark our latest articles for data-backed tech recommendations.

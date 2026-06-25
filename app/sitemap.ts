@@ -7,8 +7,6 @@ import { siteConfig } from "@/lib/site";
 const staticPages = ["", "/about", "/contact", "/privacy"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts();
-
   const staticEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
     staticPages.map((page) => ({
       url: `${siteConfig.url}${localizedPath(locale, page)}`,
@@ -19,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const postEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
-    posts.map((post) => ({
+    getAllPosts(locale).map((post) => ({
       url: `${siteConfig.url}${localizedPath(locale, `/blog/${post.slug}`)}`,
       lastModified: post.updatedAt ?? post.date,
       changeFrequency: "weekly" as const,
