@@ -9,6 +9,39 @@ type ContactBody = {
   message?: string;
 };
 
+async function sendViaFormSubmit(
+  name: string,
+  email: string,
+  message: string,
+): Promise<boolean> {
+  const response = await fetch(
+    `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_TO)}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: `[AI Pick & Report] Contact from ${name}`,
+        _replyto: email,
+        _captcha: "false",
+        _template: "table",
+      }),
+    },
+  );
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as { success?: boolean | string };
+  return data.success === true || data.success === "true";
+}
+
 async function sendViaWeb3Forms(
   name: string,
   email: string,
@@ -98,7 +131,8 @@ export async function POST(request: Request) {
 
     const sent =
       (await sendViaWeb3Forms(name, email, message)) ||
-      (await sendViaSmtp(name, email, message));
+      (await sendViaSmtp(name, email, message)) ||
+      (await sendViaFormSubmit(name, email, message));
 
     if (!sent) {
       return NextResponse.json({ error: "not_configured" }, { status: 503 });
