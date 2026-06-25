@@ -15,7 +15,7 @@ Automated draft writing, publishing, and Google Search Console indexing for AI P
 
 - **작성:** 하루 최대 2건 (오전·오후 각 1건)
 - **발행:** 하루 최대 2건, 건당 **6시간 이상** 간격
-- **임시 보관(draft):** 항상 **2건** 유지 — 발행 후 자동 보충
+- **임시 보관(draft):** 항상 **2건** 유지 — 발행 후 **Cursor(형님·요미)** 가 새 글 작성
 - **콘텐츠 기준:** `docs/CONTENT_STANDARDS.md` (구글 가이드 · 애드센스 · SEO)
 
 ## Topics / categories

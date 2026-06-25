@@ -21,6 +21,10 @@ on:
 env:
   AUTOMATION_MODE: publish-only
 
+concurrency:
+  group: blog-automation
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
