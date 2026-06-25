@@ -18,18 +18,13 @@ export function HomeHero({ description }: HomeHeroProps) {
         sizes="100vw"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/55 to-black/20"
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"
         aria-hidden
       />
       <div className="absolute inset-0 flex items-end">
-        <div className="mx-auto w-full max-w-6xl px-6 pb-8 pt-20 sm:px-10 sm:pb-10 md:pb-12 lg:px-12">
-          <p className="mb-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-cyan-300/90 sm:text-xs">
-            TECH + ART
-          </p>
-          <h1 className="max-w-3xl font-serif text-2xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-            {siteConfig.name}
-          </h1>
-          <p className="mt-3 max-w-2xl font-sans text-sm leading-relaxed text-white/88 sm:text-base md:text-lg lg:text-xl">
+        <div className="mx-auto w-full max-w-6xl px-6 pb-8 sm:px-10 sm:pb-10 md:pb-12 lg:px-12">
+          <h1 className="sr-only">{siteConfig.name}</h1>
+          <p className="max-w-2xl font-sans text-sm leading-relaxed text-white/90 sm:text-base md:text-lg lg:text-xl">
             {description}
           </p>
         </div>
