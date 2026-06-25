@@ -41,7 +41,7 @@ export default async function HomePage({ params }: PageProps) {
   const { locale: localeParam } = await params;
   const locale = localeParam as Locale;
   const dict = await getDictionary(locale);
-  const posts = getAllPosts();
+  const posts = getAllPosts(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-12">

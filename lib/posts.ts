@@ -3,6 +3,7 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import type { Locale } from "@/lib/i18n/config";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "content", "posts");
 
@@ -29,7 +30,44 @@ function ensurePostsDirectory(): void {
   }
 }
 
-function parsePostFile(slug: string): Post {
+function parseLocalizedField(
+  data: Record<string, unknown>,
+  field: "title" | "description",
+  locale: Locale,
+): string {
+  const value = data[field];
+
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    const map = value as Record<string, string>;
+    return String(map[locale] ?? map.en ?? map.ko ?? "");
+  }
+
+  const localeOverride = data[`${field}_${locale}`];
+  if (localeOverride) {
+    return String(localeOverride);
+  }
+
+  return String(value ?? "");
+}
+
+function localizePostMeta(
+  slug: string,
+  data: Record<string, unknown>,
+  locale: Locale,
+): PostMeta {
+  return {
+    slug,
+    title: parseLocalizedField(data, "title", locale),
+    description: parseLocalizedField(data, "description", locale),
+    date: String(data.date ?? new Date().toISOString().slice(0, 10)),
+    updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
+    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
+    coverImage: data.coverImage ? String(data.coverImage) : undefined,
+    draft: Boolean(data.draft),
+  };
+}
+
+function parsePostFile(slug: string, locale: Locale = "en"): Post {
   const filePath = path.join(POSTS_DIRECTORY, `${slug}.md`);
 
   if (!fs.existsSync(filePath)) {
@@ -40,14 +78,7 @@ function parsePostFile(slug: string): Post {
   const { data, content } = matter(raw);
 
   return {
-    slug,
-    title: String(data.title ?? slug),
-    description: String(data.description ?? ""),
-    date: String(data.date ?? new Date().toISOString().slice(0, 10)),
-    updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
-    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
-    coverImage: data.coverImage ? String(data.coverImage) : undefined,
-    draft: Boolean(data.draft),
+    ...localizePostMeta(slug, data as Record<string, unknown>, locale),
     content: content.trim(),
   };
 }
@@ -67,10 +98,13 @@ export function getPostSlugs(options?: { includeDrafts?: boolean }): string[] {
     });
 }
 
-export function getAllPosts(options?: { includeDrafts?: boolean }): PostMeta[] {
+export function getAllPosts(
+  locale: Locale = "en",
+  options?: { includeDrafts?: boolean },
+): PostMeta[] {
   return getPostSlugs(options)
     .map((slug) => {
-      const { content: _content, ...meta } = parsePostFile(slug);
+      const { content: _content, ...meta } = parsePostFile(slug, locale);
       return meta;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -78,9 +112,10 @@ export function getAllPosts(options?: { includeDrafts?: boolean }): PostMeta[] {
 
 export function getPostBySlug(
   slug: string,
-  options?: { includeDrafts?: boolean },
+  options?: { includeDrafts?: boolean; locale?: Locale },
 ): Post {
-  const post = parsePostFile(slug);
+  const locale = options?.locale ?? "en";
+  const post = parsePostFile(slug, locale);
   if (post.draft && !options?.includeDrafts) {
     throw new Error(`Draft post is not publicly accessible: ${slug}`);
   }

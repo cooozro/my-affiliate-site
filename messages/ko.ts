@@ -45,6 +45,7 @@ const ko: Dictionary = {
       "독자 피드백, 제품 제보, 제휴 문의를 환영합니다. 아래 양식 또는 이메일로 연락해 주세요.",
     emailLabel: "이메일",
     email: "contact@aipick.shop",
+    emailDeliveryNote: "문의 내용은 편집팀 메일함으로 바로 전달됩니다.",
     nameLabel: "이름",
     messageLabel: "메시지",
     submit: "메시지 보내기",
@@ -77,11 +78,11 @@ const ko: Dictionary = {
       },
       rights: {
         title: "이용자 권리",
-        body: "관할 지역에 따라 개인정보 열람·정정·삭제를 요청할 수 있습니다. contact@aipick.shop 으로 문의해 주세요.",
+        body: "관할 지역에 따라 개인정보 열람·정정·삭제를 요청할 수 있습니다. coooz@naver.com 으로 문의해 주세요.",
       },
       contact: {
         title: "문의",
-        body: "개인정보처리방침 관련 문의: contact@aipick.shop",
+        body: "개인정보처리방침 관련 문의: coooz@naver.com",
       },
     },
   },

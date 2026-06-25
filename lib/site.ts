@@ -7,5 +7,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop",
   locale: ogLocales.en,
   author: "AI Pick & Report",
-  contactEmail: "contact@aipick.shop",
+  /** Public-facing contact address shown on the site */
+  contactDisplayEmail: "contact@aipick.shop",
+  /** Actual inbox where messages are delivered */
+  contactEmail: "coooz@naver.com",
 };

@@ -26,7 +26,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   try {
-    const post = getPostBySlug(slug);
+    const post = getPostBySlug(slug, { locale });
     const url = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
 
     return {
@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   let post;
   try {
-    post = getPostBySlug(slug);
+    post = getPostBySlug(slug, { locale });
   } catch {
     notFound();
   }

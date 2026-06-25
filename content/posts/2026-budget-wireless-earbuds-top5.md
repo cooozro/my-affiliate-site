@@ -1,8 +1,12 @@
 ---
-title: "2026년 가성비 무선 이어폰 TOP 5 분석 — 스펙·가격 데이터로 검증한 추천"
-description: "2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드."
+title:
+  en: "2026 Best Budget Wireless Earbuds TOP 5 — Verified by Spec & Price Data"
+  ko: "2026년 가성비 무선 이어폰 TOP 5 분석 — 스펙·가격 데이터로 검증한 추천"
+description:
+  en: "Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scenario-based buying guide for every budget."
+  ko: "2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드."
 date: "2026-06-25"
-tags: ["무선 이어폰 추천", "가성비 IT 기기", "최신 전자제품 리뷰", "TWS", "블루투스 이어폰"]
+tags: ["wireless earbuds", "budget tech", "TWS", "audio reviews"]
 ---
 
 ## 서론: 2026년 TWS 시장, '가성비 전쟁'이 본격화되다

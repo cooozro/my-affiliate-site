@@ -43,6 +43,8 @@ const en = {
       "We welcome reader feedback, product tips, and partnership inquiries. Please use the form below or email us directly.",
     emailLabel: "Email",
     email: "contact@aipick.shop",
+    emailDeliveryNote:
+      "Messages are delivered directly to our editorial inbox.",
     nameLabel: "Name",
     messageLabel: "Message",
     submit: "Send Message",
@@ -76,11 +78,11 @@ const en = {
       },
       rights: {
         title: "Your Rights",
-        body: "Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data. To exercise these rights, contact us at contact@aipick.shop.",
+        body: "Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data. To exercise these rights, contact us at coooz@naver.com.",
       },
       contact: {
         title: "Contact Us",
-        body: "If you have questions about this Privacy Policy, please contact us at contact@aipick.shop.",
+        body: "If you have questions about this Privacy Policy, please contact us at coooz@naver.com.",
       },
     },
   },
