@@ -17,11 +17,16 @@ import { publishOneDraft } from "./publish-draft.mjs";
 import { countDrafts, listDrafts } from "./posts-fs.mjs";
 import { loadState, saveState } from "./state.mjs";
 
-const task = process.argv[2] ?? "status";
+const task = (process.argv[2] ?? "status").trim() || "status";
+const publishOnly = process.env.AUTOMATION_MODE === "publish-only";
 
 async function main() {
   switch (task) {
     case "write":
+      if (publishOnly) {
+        console.log("Publish-only mode: draft writing is done in Cursor. Skipping.");
+        break;
+      }
       await generateOneDraft();
       break;
 
@@ -30,11 +35,21 @@ async function main() {
       break;
 
     case "buffer":
+      if (publishOnly) {
+        console.log(
+          `Publish-only mode: draft buffer is ${countDrafts()}/2. Add drafts via Cursor.`,
+        );
+        break;
+      }
       await maintainDraftBuffer();
       break;
 
     case "write-morning":
     case "write-evening":
+      if (publishOnly) {
+        console.log("Publish-only mode: scheduled write skipped.");
+        break;
+      }
       await generateOneDraft();
       await maintainDraftBuffer();
       break;
@@ -48,6 +63,7 @@ async function main() {
       const drafts = listDrafts();
       console.log(JSON.stringify({
         task,
+        mode: publishOnly ? "publish-only" : "full",
         draftCount: countDrafts(),
         drafts: drafts.map((d) => ({ slug: d.slug, createdAt: d.createdAt })),
         writeCountToday: state.writeCountToday,

@@ -68,9 +68,17 @@ export async function publishOneDraft(options = {}) {
   }
 
   const drafts = listDrafts();
+  const publishOnly = process.env.AUTOMATION_MODE === "publish-only";
+
   if (drafts.length === 0) {
-    console.log("No drafts to publish — running buffer maintenance");
-    await maintainDraftBuffer();
+    console.log(
+      publishOnly
+        ? "No drafts to publish. Write drafts in Cursor (draft: true) and push to main."
+        : "No drafts to publish — running buffer maintenance",
+    );
+    if (!publishOnly) {
+      await maintainDraftBuffer();
+    }
     saveState(state);
     return null;
   }
@@ -112,6 +120,8 @@ export async function publishOneDraft(options = {}) {
   ].slice(-50);
   saveState(state);
 
-  await maintainDraftBuffer();
+  if (!publishOnly) {
+    await maintainDraftBuffer();
+  }
   return slug;
 }

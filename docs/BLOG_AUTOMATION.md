@@ -2,14 +2,14 @@
 
 Automated draft writing, publishing, and Google Search Console indexing for AI Pick & Report.
 
-## Schedule (Korea Standard Time)
+## Schedule (Korea Standard Time) — Plan A (Cursor writes, automation publishes)
 
 | KST | Task | Script |
 | --- | --- | --- |
-| 09:00 | 글 작성 (오전) | `write-morning` |
 | 11:00 | 발행 1건 | `publish-slot` |
-| 17:00 | 발행 1건 (이전 발행과 6시간+ 간격) | `publish-slot` |
-| 18:00 | 글 작성 (오후·저녁) | `write-evening` |
+| 17:00 | 발행 1건 (6h+ gap) | `publish-slot` |
+
+**Writing** is done in **Cursor** (`draft: true`). GitHub Actions only publishes and requests Google indexing.
 
 ## Rules
 
@@ -36,9 +36,9 @@ Repository → Settings → Secrets and variables → Actions:
 
 | Secret | Required | Purpose |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | Yes | Article generation (GPT) |
-| `PEXELS_API_KEY` | Yes | Cover images |
+| `PEXELS_API_KEY` | Yes (for cover images via script) | Cover images |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
+| `OPENAI_API_KEY` | No (Plan A) | Only if using full auto-write mode |
 
 ### 2. GitHub Variables (optional)
 
