@@ -14,6 +14,7 @@ export type PostMeta = {
   updatedAt?: string;
   tags?: string[];
   coverImage?: string;
+  draft?: boolean;
 };
 
 export type Post = PostMeta & {
@@ -23,7 +24,7 @@ export type Post = PostMeta & {
 function ensurePostsDirectory(): void {
   if (!fs.existsSync(POSTS_DIRECTORY)) {
     throw new Error(
-      `content/posts 폴더를 찾을 수 없습니다: ${POSTS_DIRECTORY}`,
+      `content/posts folder not found: ${POSTS_DIRECTORY}`,
     );
   }
 }
@@ -32,7 +33,7 @@ function parsePostFile(slug: string): Post {
   const filePath = path.join(POSTS_DIRECTORY, `${slug}.md`);
 
   if (!fs.existsSync(filePath)) {
-    throw new Error(`포스트 파일을 찾을 수 없습니다: ${filePath}`);
+    throw new Error(`Post file not found: ${filePath}`);
   }
 
   const raw = fs.readFileSync(filePath, "utf8");
@@ -46,21 +47,28 @@ function parsePostFile(slug: string): Post {
     updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
     coverImage: data.coverImage ? String(data.coverImage) : undefined,
+    draft: Boolean(data.draft),
     content: content.trim(),
   };
 }
 
-export function getPostSlugs(): string[] {
+export function getPostSlugs(options?: { includeDrafts?: boolean }): string[] {
   ensurePostsDirectory();
+  const includeDrafts = options?.includeDrafts ?? false;
 
   return fs
     .readdirSync(POSTS_DIRECTORY)
     .filter((file) => file.endsWith(".md"))
-    .map((file) => file.replace(/\.md$/, ""));
+    .map((file) => file.replace(/\.md$/, ""))
+    .filter((slug) => {
+      if (includeDrafts) return true;
+      const post = parsePostFile(slug);
+      return !post.draft;
+    });
 }
 
-export function getAllPosts(): PostMeta[] {
-  return getPostSlugs()
+export function getAllPosts(options?: { includeDrafts?: boolean }): PostMeta[] {
+  return getPostSlugs(options)
     .map((slug) => {
       const { content: _content, ...meta } = parsePostFile(slug);
       return meta;
@@ -68,8 +76,15 @@ export function getAllPosts(): PostMeta[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): Post {
-  return parsePostFile(slug);
+export function getPostBySlug(
+  slug: string,
+  options?: { includeDrafts?: boolean },
+): Post {
+  const post = parsePostFile(slug);
+  if (post.draft && !options?.includeDrafts) {
+    throw new Error(`Draft post is not publicly accessible: ${slug}`);
+  }
+  return post;
 }
 
 const AD_BREAK_MARKER = "<!-- ad-break -->";

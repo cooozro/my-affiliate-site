@@ -1,21 +1,25 @@
 import { AdSlot } from "@/components/ad-slot";
 import { MarkdownContent } from "@/components/markdown-content";
+import type { Locale } from "@/lib/i18n/config";
 import type { Post } from "@/lib/posts";
 import { splitContentForAds } from "@/lib/posts";
+import type { Dictionary } from "@/messages/en";
 
 type ArticleLayoutProps = {
   post: Post;
+  locale: Locale;
+  dict: Dictionary;
 };
 
-function formatDate(date: string) {
-  return new Intl.DateTimeFormat("ko-KR", {
+function formatDate(date: string, locale: Locale) {
+  return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   }).format(new Date(date));
 }
 
-export function ArticleLayout({ post }: ArticleLayoutProps) {
+export function ArticleLayout({ post, locale, dict }: ArticleLayoutProps) {
   const { beforeAd, afterAd } = splitContentForAds(post.content);
 
   return (
@@ -25,7 +29,7 @@ export function ArticleLayout({ post }: ArticleLayoutProps) {
           dateTime={post.date}
           className="font-sans text-sm text-muted-foreground"
         >
-          {formatDate(post.date)}
+          {formatDate(post.date, locale)}
         </time>
         <h1 className="mt-3 font-serif text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">
           {post.title}
@@ -36,7 +40,7 @@ export function ArticleLayout({ post }: ArticleLayoutProps) {
           </p>
         ) : null}
         {post.tags && post.tags.length > 0 ? (
-          <ul className="mt-6 flex flex-wrap gap-2" aria-label="태그">
+          <ul className="mt-6 flex flex-wrap gap-2" aria-label="Tags">
             {post.tags.map((tag) => (
               <li
                 key={tag}
@@ -49,20 +53,20 @@ export function ArticleLayout({ post }: ArticleLayoutProps) {
         ) : null}
       </header>
 
-      <AdSlot position="top" className="mb-10" />
+      <AdSlot position="top" className="mb-10" labels={dict.ads} />
 
       <div className="article-body">
         <MarkdownContent content={beforeAd} />
 
         {afterAd ? (
           <>
-            <AdSlot position="middle" className="my-10" />
+            <AdSlot position="middle" className="my-10" labels={dict.ads} />
             <MarkdownContent content={afterAd} />
           </>
         ) : null}
       </div>
 
-      <AdSlot position="bottom" className="mt-10" />
+      <AdSlot position="bottom" className="mt-10" labels={dict.ads} />
     </article>
   );
 }

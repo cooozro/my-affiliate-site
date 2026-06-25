@@ -1,30 +1,26 @@
 ---
-title: "블로그에 오신 것을 환영합니다"
-description: "애드센스 승인을 목표로 하는 Next.js 블로그의 첫 번째 글입니다. 마크다운 파일만 추가하면 자동으로 게시됩니다."
+title: "How We Review Tech Products"
+description: "A transparent look at how AI Pick & Report evaluates smartphones, gadgets, and consumer electronics with structured data."
 date: "2026-06-25"
-tags: ["시작하기", "블로그"]
+tags: ["methodology", "tech reviews", "buying guides"]
 ---
 
-## 블로그 자동화 구조
+## Our Review Framework
 
-이 블로그는 `content/posts/` 폴더에 `.md` 파일을 추가하는 것만으로 새 글이 생성됩니다.
+AI Pick & Report publishes in-depth guides for smartphones, audio gear, and consumer electronics. Every article is built on **verifiable specifications**, pricing data, and real-world usage scenarios.
 
-빌드 시 Next.js가 모든 포스트를 **정적 페이지(SSG)** 로 미리 생성하므로, 구글이 선호하는 빠른 로딩 속도를 유지할 수 있습니다.
+## Data-First Comparisons
 
-## SEO에 최적화된 마크업
-
-본문은 `article`, `h2`, `h3` 등 **시맨틱 HTML** 로 렌더링됩니다. 각 포스트마다 고유한 Title, Description, Open Graph 메타 태그가 자동 적용됩니다.
+We organize product details into comparison tables — chipset, battery life, codec support, IP rating, and price — so readers can evaluate options at a glance without marketing noise.
 
 <!-- ad-break -->
 
-## 애드센스 광고 배치
+## Editorial Standards
 
-본문 **상단**, **중간**, **하단** 에 광고 슬롯이 준비되어 있습니다. 애드센스 승인 후 `AdSlot` 컴포넌트에 광고 코드만 연결하면 됩니다.
+- **Original analysis** — no copied manufacturer copy
+- **Transparent methodology** — specs and sources cited in every guide
+- **Reader-first recommendations** — trade-offs explained honestly
 
-중간 광고 위치를 직접 지정하려면 마크다운에 `<!-- ad-break -->` 주석을 넣으세요.
+## Stay Updated
 
-## 다음 단계
-
-1. `content/posts/` 에 유용한 정보성 글을 10~15개 작성
-2. Google Search Console에 사이트 등록
-3. `sitemap.xml` 제출 후 애드센스 신청
+New buying guides are published regularly. Subscribe via RSS or bookmark our latest articles for data-backed tech recommendations.

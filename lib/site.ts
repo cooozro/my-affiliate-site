@@ -1,8 +1,11 @@
+import { ogLocales } from "@/lib/i18n/config";
+
 export const siteConfig = {
   name: "AI Pick & Report",
   description:
-    "데이터로 검증된 스마트한 선택. 큐레이션 상품과 깊이 있는 분석 리포트를 만나보세요.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://my-affiliate-site.vercel.app",
-  locale: "ko_KR",
+    "Data-driven tech reviews and buying guides for smartphones, gadgets, and consumer electronics.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop",
+  locale: ogLocales.en,
   author: "AI Pick & Report",
+  contactEmail: "contact@aipick.shop",
 };
