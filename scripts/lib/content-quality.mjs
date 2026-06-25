@@ -6,6 +6,11 @@ export const MIN_BODY_CHARS = 2500;
 export const MIN_DESCRIPTION_CHARS = 50;
 export const MAX_DESCRIPTION_CHARS = 160;
 
+import {
+  FORMULAIC_TITLE_PATTERNS,
+  MISLEADING_SOURCE_PATTERNS,
+} from "./editorial-standards.mjs";
+
 const FORBIDDEN_PATTERNS = [
   /<!--\s*ad-break\s*-->/i,
   /adsense/i,
@@ -35,6 +40,24 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
 
   if (!data.title?.trim()) {
     issues.push(`${label}: missing title`);
+  } else if (profile === "buying-guide") {
+    for (const pattern of FORMULAIC_TITLE_PATTERNS) {
+      if (pattern.test(data.title.trim())) {
+        issues.push(
+          `${label}: title looks formulaic (vary format — see editorial-standards.mjs)`,
+        );
+        break;
+      }
+    }
+  }
+
+  for (const pattern of MISLEADING_SOURCE_PATTERNS) {
+    if (pattern.test(raw)) {
+      issues.push(
+        `${label}: misleading API/database claim — use public editorial sources only`,
+      );
+      break;
+    }
   }
 
   const desc = data.description?.trim() ?? "";

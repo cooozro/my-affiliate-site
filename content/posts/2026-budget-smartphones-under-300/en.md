@@ -1,5 +1,5 @@
 ---
-title: "Best Budget Smartphones Under $300 in 2026 — TOP 5 Chipset and Battery Data"
+title: "Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads"
 description: "Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update policy. Scenario-based guide without carrier marketing noise."
 date: "2026-06-25"
 tags: ["smartphones", "budget tech", "Android", "buying guide", "under 300"]
@@ -16,7 +16,7 @@ coverImageCredit: "Photo by Lisa Fotios / Pexels"
 
 In the first half of 2026, sub-$300 phones ship with higher refresh displays and 5,000mAh batteries as defaults, but **real-world feel depends on SoC tier and OS update promises**. Geekbench multi-core gaps of 40%+ within the same price band are common, and region-locked 5G SKUs still miss local bands.
 
-This report ranks **five value smartphones** using seller API metadata (price, specs, reviews, return rates, update policy). We focus on **verifiable spec sheets**, not ad copy, so readers are not pushed by carrier or storefront marketing alone.
+This report ranks **five value smartphones** by cross-checking public manufacturer specs, listed retail prices, open reviews, and published update policies. We focus on **verifiable spec sheets**, not ad copy, so readers are not pushed by carrier or storefront marketing alone.
 
 **Key takeaway:** Balanced daily use → Samsung Galaxy A35; spec-per-dollar → Poco M6 Pro; battery-first → Motorola Moto G Power; Xiaomi ecosystem → Redmi Note 13 Pro; lowest entry price → Galaxy A15.
 
@@ -24,15 +24,17 @@ This report ranks **five value smartphones** using seller API metadata (price, s
 
 ## Analysis methodology
 
-| Data field | Source | Purpose |
-| --- | --- | --- |
-| `sale_price_usd` | Seller API | Real purchase price |
-| `spec_json` | Product API | SoC, RAM, battery, display |
-| `review_score` | Review API | Quality signal |
-| `update_policy_months` | OEM disclosure | Security patch horizon |
-| `return_rate` | After-sales stats | Early defect risk |
+This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use private commerce feeds or undisclosed seller databases.
 
-**Smartphone Balance Index (SBI)** weights SoC benchmark class, battery capacity, promised update months, and return rate at the same price. Missing local 5G bands (e.g., n78) triggers an SBI penalty.
+| Item | Source | Purpose |
+| --- | --- | --- |
+| Retail price | OEM sites and major storefronts | Reference price comparison |
+| Product specs | Manufacturer spec sheets | SoC, RAM, battery, display |
+| User rating | Public review platform averages | Quality signal |
+| OS updates | OEM published policy | Security patch horizon |
+| Quality risk | Defect mentions in public reviews | Early defect risk |
+
+**Smartphone Balance Index (SBI)** weights SoC benchmark class, battery capacity, promised update months, and quality risk signals at the same price. Missing local 5G bands (e.g., n78) triggers an SBI penalty.
 
 ---
 

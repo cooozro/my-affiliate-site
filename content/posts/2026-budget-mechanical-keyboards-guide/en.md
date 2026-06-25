@@ -1,5 +1,5 @@
 ---
-title: "2026 Budget Mechanical Keyboards TOP 5 — Switches, Layout, and Value"
+title: "First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype"
 description: "Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Scenario guide for typing, gaming, and first-time buyers."
 date: "2026-06-25"
 tags: ["mechanical keyboard", "budget tech", "gaming", "typing", "buying guide"]
@@ -16,7 +16,7 @@ coverImageCredit: "Photo by Daniel Korpai / Pexels"
 
 In the first half of 2026, entry mechanical keyboards normalized **hot-swap sockets** and **75% / TKL layouts** at lower prices. Buyers now compare **switch type (red/blue/brown)**, **keycap material (PBT vs ABS)**, and **internal foam** more than logo prestige.
 
-This report ranks **five entry mechanical keyboards** using seller API metadata (price, switch specs, reviews, return rates). We focus on **verifiable specs** so first-time buyers avoid costly mismatch purchases.
+This report ranks **five entry mechanical keyboards** by cross-checking public manufacturer specs, listed retail prices, and open reviews. We focus on **verifiable specs** so first-time buyers avoid costly mismatch purchases.
 
 **Key takeaway:** Keychron C3 for typing starters, Royal Kludge RK84 for wireless gaming value, Epomaker TH80 Pro for quiet offices, Redragon K552 for cheapest trial, Akko 5075B for customization growth.
 
@@ -24,15 +24,17 @@ This report ranks **five entry mechanical keyboards** using seller API metadata 
 
 ## Analysis methodology
 
-| Data field | Source | Purpose |
-| --- | --- | --- |
-| `sale_price_usd` | Seller API | Real purchase price |
-| `spec_json` | Product API | Switch, layout, hot-swap, connectivity |
-| `review_score` | Review API | Quality signal |
-| `order_count_30d` | Sales API | Entry demand |
-| `return_rate` | After-sales stats | PCB/switch defect risk |
+This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use private commerce feeds or undisclosed seller databases.
 
-**Keyboard Balance Index (KBI)** weights hot-swap support, PBT keycaps, connectivity modes, and return rate at the same price tier.
+| Item | Source | Purpose |
+| --- | --- | --- |
+| Retail price | OEM sites and major storefronts | Reference price comparison |
+| Product specs | Manufacturer spec sheets | Switch, layout, hot-swap, connectivity |
+| User rating | Public review platform averages | Quality signal |
+| Market interest | Search and review volume trends | Entry demand context |
+| Quality risk | Defect mentions in public reviews | PCB/switch defect risk |
+
+**Keyboard Balance Index (KBI)** weights hot-swap support, PBT keycaps, connectivity modes, and quality risk signals at the same price tier.
 
 ---
 

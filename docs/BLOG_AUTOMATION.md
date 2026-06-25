@@ -2,6 +2,20 @@
 
 Automated draft writing, publishing, and Google Search Console indexing for AI Pick & Report.
 
+## 24/7 cloud scheduler (PC off — no VPS required)
+
+Publishing runs on **GitHub Actions** servers, not on your PC or the Next.js app.
+
+| What | Where it runs |
+| --- | --- |
+| Cron schedule (KST 11:00 & 17:00) | GitHub Actions (`ubuntu-latest`) |
+| `publish-slot` script | Same workflow job |
+| Git commit + push | GitHub → triggers Vercel redeploy |
+
+**Requirements:** GitHub repo with Actions enabled, secrets configured, default branch not blocked for `blog-automation[bot]` pushes.
+
+Next.js / Vercel **cannot** run this cron by itself — there is no always-on Node process in this repo. A VPS cron is optional only if you want a backup trigger; it is **not** needed when this workflow is active.
+
 ## Schedule (Korea Standard Time) — Plan A (Cursor writes, automation publishes)
 
 | KST | Task | Script |
@@ -79,15 +93,17 @@ npm run automation:buffer   # fill drafts up to 2
 
 Requires `.env.local` with the same keys as GitHub Secrets.
 
-## How it works
+## How it works (Plan A — publish-only)
 
 ```
-write-morning/evening → OpenAI (en+ko markdown) → Pexels cover → draft: true
-publish-slot          → oldest draft → draft: false → GSC Indexing API (en+ko URLs)
-                      → sitemap ping → refill buffer to 2 drafts
+Cursor / 요미          → draft: true posts in git (manual)
+publish-slot (GHA)     → oldest draft → draft: false → GSC Indexing API (en+ko URLs)
+                       → sitemap ping → draft buffer should stay at 2 (refill in Cursor)
 ```
 
 Files changed are committed by GitHub Actions → Vercel redeploys on push.
+
+Legacy full-auto mode (`write` + OpenAI) is disabled; `AUTOMATION_MODE=publish-only` in the workflow.
 
 ## Manual override
 

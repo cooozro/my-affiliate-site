@@ -31,6 +31,8 @@ Run before commit: `npm run content:validate`
 ## 3. SEO & indexing (mandatory)
 
 - Unique `title` and `description` (description ≥ 50 chars) per locale
+- **Varied headlines** — avoid repeating `2026 가성비 X TOP 5 — …` on every post; see `scripts/lib/editorial-standards.mjs`
+- **Honest sourcing** — never claim proprietary seller APIs or fake database field names (`sale_price_usd`, `판매자 API`, etc.); cite public manufacturer specs, listed prices, and open reviews
 - Both **`en.md` and `ko.md`** for every public post
 - Semantic headings (`##`, `###`), tables for comparisons, internal links where natural
 - No keyword stuffing; write for readers first
