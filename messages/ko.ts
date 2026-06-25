@@ -29,6 +29,7 @@ const ko: Dictionary = {
       ariaLabel: "이 글 공유하기",
       heading: "이 글 공유하기",
       shareOn: "공유:",
+      kakao: "카카오톡",
       copyLink: "링크 복사",
       copied: "복사됨!",
       copyFallback: "아래 링크를 복사하세요:",

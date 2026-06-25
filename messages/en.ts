@@ -27,6 +27,7 @@ const en = {
       ariaLabel: "Share this article",
       heading: "Share this article",
       shareOn: "Share on",
+      kakao: "KakaoTalk",
       copyLink: "Copy link",
       copied: "Copied!",
       copyFallback: "Copy this link:",

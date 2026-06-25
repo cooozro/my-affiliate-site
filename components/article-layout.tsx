@@ -4,6 +4,7 @@ import { ArticleShare } from "@/components/article-share";
 import { MarkdownContent } from "@/components/markdown-content";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
+import { siteConfig } from "@/lib/site";
 import type { Dictionary } from "@/messages/en";
 
 type ArticleLayoutProps = {
@@ -27,6 +28,10 @@ export function ArticleLayout({
   shareUrl,
   shareLabels,
 }: ArticleLayoutProps) {
+  const shareImageUrl = post.coverImage
+    ? `${siteConfig.url}${post.coverImage}`
+    : undefined;
+
   return (
     <article className="mx-auto w-full max-w-3xl px-6 py-12">
       <header className="mb-6 border-b border-border/60 pb-6">
@@ -61,6 +66,7 @@ export function ArticleLayout({
       <ArticleShare
         url={shareUrl}
         title={post.title}
+        imageUrl={shareImageUrl}
         labels={shareLabels}
         variant="top"
       />
@@ -100,6 +106,7 @@ export function ArticleLayout({
       <ArticleShare
         url={shareUrl}
         title={post.title}
+        imageUrl={shareImageUrl}
         labels={shareLabels}
         variant="bottom"
       />
