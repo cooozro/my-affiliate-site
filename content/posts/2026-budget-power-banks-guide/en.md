@@ -1,17 +1,25 @@
 ---
-title: "2026 Budget Power Banks TOP 5 — Capacity, PD Speed, and Safety Compared"
-description: "Five budget power banks compared by capacity, USB-C PD, weight, certifications, and return rates. Scenario-based guide for travel and daily carry."
-date: "2026-06-25"
-tags: ["power bank", "budget tech", "USB-C PD", "charging", "buying guide"]
+title: '2026 Budget Power Banks TOP 5 — Capacity, PD Speed, and Safety Compared'
+description: >-
+  Five budget power banks compared by capacity, USB-C PD, weight,
+  certifications, and return rates. Scenario-based guide for travel and daily
+  carry.
+date: '2026-06-25'
+tags:
+  - power bank
+  - budget tech
+  - USB-C PD
+  - charging
+  - buying guide
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-25T09:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-power-banks-guide/cover.jpg"
-coverImageAlt: "Portable power bank and charging cables on a desk"
-coverImageCredit: "Photo by Markus Spiske / Pexels"
+coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
+coverImageAlt: Portable power bank and charging cables on a desk
+coverImageCredit: Photo by Markus Spiske / Pexels
+updatedAt: '2026-06-25T12:06:58.000Z'
+publishedAt: '2026-06-25T12:06:58.000Z'
 ---
-
 ## Introduction: the 2026 power bank market shifts to wattage wars
 
 In the first half of 2026, the fastest-moving spec in mobile accessories is **USB-C PD output wattage**. Modern phones support 30W–45W fast charging, yet many budget power banks still cap at 18W. Choosing by label mAh alone often leads to poor **real usable capacity**, heat, cell safety, and airline compliance surprises.

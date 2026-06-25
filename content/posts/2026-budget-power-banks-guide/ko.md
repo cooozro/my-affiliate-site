@@ -1,17 +1,24 @@
 ---
-title: "2026년 가성비 보조배터리 TOP 5 — 용량·PD·안전 데이터 비교"
-description: "2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드."
-date: "2026-06-25"
-tags: ["보조배터리", "가성비", "USB-C PD", "충전", "구매 가이드"]
+title: 2026년 가성비 보조배터리 TOP 5 — 용량·PD·안전 데이터 비교
+description: >-
+  2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택
+  가이드.
+date: '2026-06-25'
+tags:
+  - 보조배터리
+  - 가성비
+  - USB-C PD
+  - 충전
+  - 구매 가이드
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-25T09:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-power-banks-guide/cover.jpg"
-coverImageAlt: "책상 위 보조배터리와 충전 케이블"
-coverImageCredit: "Photo by Markus Spiske / Pexels"
+coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
+coverImageAlt: 책상 위 보조배터리와 충전 케이블
+coverImageCredit: Photo by Markus Spiske / Pexels
+updatedAt: '2026-06-25T12:06:58.000Z'
+publishedAt: '2026-06-25T12:06:58.000Z'
 ---
-
 ## 서론: 2026년 보조배터리 시장, '와트 수 전쟁'이 시작됐다
 
 2026년 상반기 모바일 액세서리 시장에서 가장 빠르게 바뀐 스펙은 **USB-C PD 출력 와트**입니다. 최신 스마트폰은 30W~45W 고속 충전을 지원하지만, 저가 보조배터리 상당수는 여전히 18W에 머물러 있습니다. 표기 mAh만 크다고 골라서는 **실사용 가능 용량**, 발열, 셀 안전성, 항공기 휴대 규정**에서 손해를 보기 쉽습니다.
