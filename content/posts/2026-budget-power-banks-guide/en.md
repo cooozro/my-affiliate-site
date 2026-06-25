@@ -1,16 +1,22 @@
 ---
-title: "2026 Budget Power Banks Guide — Capacity, Speed, and Safety Compared"
-description: "A data-driven guide to choosing a budget power bank: mAh ratings, USB-C PD wattage, weight, and safety certifications explained for real travel use."
-date: "2026-06-25"
-tags: ["power bank", "budget tech", "charging", "buying guide"]
-draft: true
-createdAt: "2026-06-25T09:00:00+09:00"
+title: '2026 Budget Power Banks Guide — Capacity, Speed, and Safety Compared'
+description: >-
+  A data-driven guide to choosing a budget power bank: mAh ratings, USB-C PD
+  wattage, weight, and safety certifications explained for real travel use.
+date: '2026-06-25'
+tags:
+  - power bank
+  - budget tech
+  - charging
+  - buying guide
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-power-banks-guide/cover.jpg"
-coverImageAlt: "Portable power bank and charging cables on a desk"
-coverImageCredit: "Photo by Markus Spiske / Pexels"
+coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
+coverImageAlt: Portable power bank and charging cables on a desk
+coverImageCredit: Photo by Markus Spiske / Pexels
+updatedAt: '2026-06-25T17:43:17.000Z'
+publishedAt: '2026-06-25T17:43:17.000Z'
 ---
-
 ## Why power bank specs matter in 2026
 
 Phones and tablets now support **30W–45W USB-C PD**, but many cheap power banks still cap at 18W. That gap changes how fast you can recover battery during a commute or flight. This guide compares what actually matters: **real usable capacity**, output wattage, port count, weight, and certification marks.

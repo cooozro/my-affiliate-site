@@ -1,16 +1,22 @@
 ---
-title: "2026년 가성비 보조배터리 가이드 — 용량·충전속도·안전 비교"
-description: "가성비 보조배터리 선택 가이드. mAh, USB-C PD 와트, 무게, 안전 인증을 기준으로 실사용에 맞는 제품을 고르는 방법을 정리했습니다."
-date: "2026-06-25"
-tags: ["보조배터리", "가성비", "충전", "구매 가이드"]
-draft: true
-createdAt: "2026-06-25T09:00:00+09:00"
+title: 2026년 가성비 보조배터리 가이드 — 용량·충전속도·안전 비교
+description: >-
+  가성비 보조배터리 선택 가이드. mAh, USB-C PD 와트, 무게, 안전 인증을 기준으로 실사용에 맞는 제품을 고르는 방법을
+  정리했습니다.
+date: '2026-06-25'
+tags:
+  - 보조배터리
+  - 가성비
+  - 충전
+  - 구매 가이드
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-power-banks-guide/cover.jpg"
-coverImageAlt: "책상 위 보조배터리와 충전 케이블"
-coverImageCredit: "Photo by Markus Spiske / Pexels"
+coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
+coverImageAlt: 책상 위 보조배터리와 충전 케이블
+coverImageCredit: Photo by Markus Spiske / Pexels
+updatedAt: '2026-06-25T17:43:17.000Z'
+publishedAt: '2026-06-25T17:43:17.000Z'
 ---
-
 ## 2026년, 보조배터리는 ‘용량’만 보면 안 되는 이유
 
 최신 스마트폰은 **30W~45W USB-C PD**를 지원하는데, 저가 보조배터리는 여전히 18W에 머무는 경우가 많습니다. 통근·여행에서 실제로 중요한 건 표기 mAh가 아니라 **실사용 가능 용량**, 출력 와트, 포트 구성, 무게, **안전 인증**입니다.

@@ -1,10 +1,20 @@
 {
   "topicIndex": 0,
   "usedTopicIds": [],
-  "lastPublishAt": null,
-  "publishCountToday": 0,
-  "publishDateKst": null,
+  "lastPublishAt": "2026-06-25T08:43:18.231Z",
+  "publishCountToday": 1,
+  "publishDateKst": "2026-06-25",
   "writeCountToday": 0,
-  "writeDateKst": null,
-  "history": []
+  "writeDateKst": "2026-06-25",
+  "history": [
+    {
+      "action": "publish",
+      "slug": "2026-budget-power-banks-guide",
+      "at": "2026-06-25T08:43:18.231Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide"
+      ]
+    }
+  ]
 }
