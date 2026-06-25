@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HomeHero } from "@/components/home-hero";
 import { PostCard } from "@/components/post-card";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -45,14 +46,7 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-12">
-      <section className="mb-12 border-b border-border/60 pb-12">
-        <h1 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          {siteConfig.name}
-        </h1>
-        <p className="mt-4 max-w-2xl font-sans text-lg leading-relaxed text-muted-foreground">
-          {dict.meta.siteDescription}
-        </p>
-      </section>
+      <HomeHero description={dict.meta.siteDescription} />
 
       <section aria-labelledby="latest-posts-heading">
         <h2
