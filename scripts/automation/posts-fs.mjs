@@ -1,14 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { auditPostForPublish } from "../lib/content-quality.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
-
-const FORBIDDEN = [
-  /<!--\s*ad-break\s*-->/i,
-  /adsense/i,
-  /googlesyndication/i,
-];
 
 export function listSlugDirs() {
   if (!fs.existsSync(POSTS_DIR)) return [];
@@ -66,32 +61,16 @@ export function countDrafts() {
 }
 
 export function validatePostFiles(slug) {
-  const issues = [];
+  const root = process.cwd();
+  const issues = auditPostForPublish(root, slug);
 
-  for (const locale of ["en", "ko"]) {
-    const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
-    if (!fs.existsSync(filePath)) {
-      issues.push(`${slug}/${locale}.md missing`);
-      continue;
+  if (issues.length > 0) {
+    console.error(`Google content self-audit failed for ${slug}:`);
+    for (const issue of issues) {
+      console.error(`  - ${issue}`);
     }
-
-    const { data, content, raw } = readPost(slug, locale);
-
-    if (!data.title?.trim()) issues.push(`${locale}: missing title`);
-    if (!data.description || data.description.length < 50) {
-      issues.push(`${locale}: description too short`);
-    }
-    if (content.length < 800) {
-      issues.push(`${locale}: body too short (${content.length})`);
-    }
-    if (!data.coverImage) issues.push(`${locale}: missing coverImage`);
-    if (data.coverImage && !data.coverImageAlt) {
-      issues.push(`${locale}: missing coverImageAlt`);
-    }
-
-    for (const pattern of FORBIDDEN) {
-      if (pattern.test(raw)) issues.push(`${locale}: forbidden pattern`);
-    }
+  } else {
+    console.log(`Google content self-audit passed for ${slug} (publish-ready).`);
   }
 
   return issues;

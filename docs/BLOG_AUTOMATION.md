@@ -95,4 +95,4 @@ GitHub → Actions → **Blog automation** → **Run workflow** → choose task.
 
 ## Validation
 
-Every automation run executes `npm run content:validate` before commit. Posts with ad placeholders, missing images, or thin content are rejected.
+Before publish, `validatePostFiles` runs a **Google content self-audit** (2,500+ chars, methodology + conclusion sections, comparison table, checklist, cover image). Thin or template-only drafts are rejected. Published posts are also checked by `npm run content:validate` on CI.

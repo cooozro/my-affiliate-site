@@ -86,7 +86,9 @@ export async function publishOneDraft(options = {}) {
   const { slug } = drafts[0];
   const issues = validatePostFiles(slug);
   if (issues.length > 0) {
-    throw new Error(`Cannot publish ${slug}:\n${issues.join("\n")}`);
+    throw new Error(
+      `Cannot publish ${slug} — Google content self-audit failed:\n${issues.join("\n")}`,
+    );
   }
 
   publishSlug(slug);
