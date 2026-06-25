@@ -53,6 +53,8 @@ const en = {
     errorGeneric: "Failed to send your message. Please try again later.",
     errorNotConfigured:
       "The contact form is temporarily unavailable. Please try again later.",
+    errorActivation:
+      "The contact form needs one-time email activation. Please check the inbox for cooozro@gmail.com (including spam) for a FormSubmit activation email and click the link. Then try again.",
     responseTime: "We typically respond within 2–3 business days.",
   },
   privacy: {

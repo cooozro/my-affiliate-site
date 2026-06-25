@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT_FORM_EMAIL, FORM_SUBMIT_ENDPOINT } from "@/lib/contact-client";
 import type { Dictionary } from "@/messages/en";
 
 type ContactFormProps = {
@@ -8,6 +9,15 @@ type ContactFormProps = {
 };
 
 type FormStatus = "idle" | "loading" | "success" | "error";
+
+type FormSubmitResponse = {
+  success?: boolean | string;
+  message?: string;
+};
+
+function isFormSubmitSuccess(data: FormSubmitResponse): boolean {
+  return data.success === true || data.success === "true";
+}
 
 export function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -25,26 +35,55 @@ export function ContactForm({ dict }: ContactFormProps) {
     const message = String(formData.get("message") ?? "").trim();
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(FORM_SUBMIT_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `[AI Pick & Report] Contact from ${name}`,
+          _replyto: email,
+          _captcha: "false",
+          _template: "table",
+        }),
+      });
+
+      const data = (await response.json()) as FormSubmitResponse;
+
+      if (isFormSubmitSuccess(data)) {
+        setStatus("success");
+        form.reset();
+        return;
+      }
+
+      const activationRequired = String(data.message ?? "")
+        .toLowerCase()
+        .includes("activation");
+
+      if (activationRequired) {
+        setErrorMessage(dict.errorActivation);
+        setStatus("error");
+        return;
+      }
+
+      const apiResponse = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
 
-      const data = (await response.json()) as { error?: string };
-
-      if (!response.ok) {
-        setErrorMessage(
-          data.error === "not_configured"
-            ? dict.errorNotConfigured
-            : dict.errorGeneric,
-        );
-        setStatus("error");
+      if (apiResponse.ok) {
+        setStatus("success");
+        form.reset();
         return;
       }
 
-      setStatus("success");
-      form.reset();
+      setErrorMessage(dict.errorGeneric);
+      setStatus("error");
     } catch {
       setErrorMessage(dict.errorGeneric);
       setStatus("error");
@@ -128,6 +167,8 @@ export function ContactForm({ dict }: ContactFormProps) {
           {status === "loading" ? dict.submitting : dict.submit}
         </button>
       </form>
+
+      <p className="sr-only">{CONTACT_FORM_EMAIL}</p>
     </div>
   );
 }

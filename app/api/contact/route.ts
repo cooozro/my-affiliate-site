@@ -21,6 +21,8 @@ async function sendViaFormSubmit(
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        Origin: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop",
+        Referer: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop"}/contact`,
       },
       body: JSON.stringify({
         name,

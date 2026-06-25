@@ -54,6 +54,8 @@ const ko: Dictionary = {
     errorGeneric: "전송에 실패했습니다. 잠시 후 다시 시도해 주세요.",
     errorNotConfigured:
       "문의 양식을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+    errorActivation:
+      "문의 양식 최초 인증이 필요합니다. cooozro@gmail.com 메일함(스팸함 포함)에서 FormSubmit 인증 메일을 찾아 링크를 클릭한 뒤 다시 시도해 주세요.",
     responseTime: "영업일 기준 2~3일 내 답변드립니다.",
   },
   privacy: {
