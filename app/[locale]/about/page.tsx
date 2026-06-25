@@ -85,7 +85,10 @@ export default async function AboutPage({ params }: PageProps) {
               </li>
               <li>
                 <strong className="text-foreground">제휴 투명성:</strong>{" "}
-                제휴 링크는 명확히 공개하며, 편집 판단에 영향을 주지 않습니다.
+                제휴 링크를 통해 사이트 운영을 지원할 수 있습니다. 모든
+                콘텐츠는 Google 콘텐츠 가이드라인 및 품질 기준을 엄격히
+                준수하여 제작됩니다. 독자의 이익을 최우선으로 하며, 기술 분석의
+                독립성과 객관성을 유지합니다.
               </li>
             </ul>
           </div>
@@ -177,9 +180,10 @@ export default async function AboutPage({ params }: PageProps) {
             <li>
               <strong className="text-foreground">Affiliate Transparency:</strong>{" "}
               We may include affiliate links to help sustain this publication.
-              These links are disclosed clearly and do not influence our editorial
-              judgment. We prioritize the reader&apos;s interest above any
-              potential commission.
+              All content is created in strict accordance with Google&apos;s
+              content guidelines and quality standards. We prioritize the
+              reader&apos;s interest above all else, ensuring that our technical
+              analysis remains independent and unbiased.
             </li>
           </ul>
         </div>

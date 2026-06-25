@@ -69,8 +69,8 @@ const en = {
         body: "We use collected information to operate and maintain the website, improve user experience, analyze traffic and usage trends, deliver relevant content, and display advertisements through third-party partners such as Google.",
       },
       cookies: {
-        title: "Cookies and Advertising",
-        body: "Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. You may opt out of personalized advertising by visiting Google Ads Settings. You can also manage cookies through your browser settings.",
+        title: "Advertising",
+        body: "We partner with third-party advertising services to provide relevant content and ads. These partners may use cookies to serve ads based on your prior visits to our website or other websites across the internet. This practice adheres to Google's advertising policies and industry standards for transparency and user privacy. You may opt out of personalized advertising by visiting Google Ads Settings.",
       },
       thirdParty: {
         title: "Third-Party Services",
