@@ -1,23 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function AdminNavLink() {
-  const [visible, setVisible] = useState(false);
+  const [href, setHref] = useState("/admin/login");
 
   useEffect(() => {
     void fetch("/api/admin/auth")
       .then((response) => response.json())
-      .then((data: { ok?: boolean }) => setVisible(Boolean(data.ok)))
-      .catch(() => setVisible(false));
+      .then((data: { ok?: boolean }) => {
+        setHref(data.ok ? "/admin" : "/admin/login");
+      })
+      .catch(() => setHref("/admin/login"));
   }, []);
-
-  if (!visible) return null;
 
   return (
     <Link
-      href="/admin"
+      href={href}
       className="rounded-md border border-border px-2 py-1 text-xs font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
     >
       Admin

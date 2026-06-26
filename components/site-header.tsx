@@ -34,13 +34,13 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
           </Link>
           <Link
             href={localizedPath(locale, "/about")}
-            className="hidden text-sm text-muted-foreground transition hover:text-foreground md:inline"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
           >
             {dict.nav.about}
           </Link>
           <Link
             href={localizedPath(locale, "/contact")}
-            className="hidden text-sm text-muted-foreground transition hover:text-foreground md:inline"
+            className="text-sm text-muted-foreground transition hover:text-foreground"
           >
             {dict.nav.contact}
           </Link>

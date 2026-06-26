@@ -12,47 +12,54 @@ type SiteFooterProps = {
 export function SiteFooter({ locale, dict }: SiteFooterProps) {
   const year = new Date().getFullYear();
 
+  const links = [
+    { href: localizedPath(locale), label: dict.nav.home },
+    { href: localizedPath(locale, "/about"), label: dict.nav.about },
+    { href: localizedPath(locale, "/contact"), label: dict.nav.contact },
+    { href: localizedPath(locale, "/privacy"), label: dict.footer.privacy },
+    {
+      href: `${siteConfig.url}/${locale}/feed.xml`,
+      label: dict.footer.rss,
+      external: true,
+    },
+  ];
+
   return (
-    <footer className="mt-auto border-t border-border/60 bg-surface">
+    <footer className="mt-auto border-t border-border bg-surface">
       <div className="mx-auto max-w-3xl px-6 py-10">
-        <p className="font-sans text-sm text-muted-foreground">
-          © {year} {siteConfig.name}. {dict.footer.rights}
+        <p className="font-sans text-sm font-medium text-foreground">
+          {siteConfig.name}
+        </p>
+        <p className="mt-1 text-sm text-muted-foreground">
+          {dict.meta.siteDescription}
         </p>
         <nav
-          className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground"
+          className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm"
           aria-label={dict.footer.menu}
         >
-          <Link
-            href={localizedPath(locale)}
-            className="transition hover:text-foreground"
-          >
-            {dict.nav.home}
-          </Link>
-          <Link
-            href={localizedPath(locale, "/about")}
-            className="transition hover:text-foreground"
-          >
-            {dict.nav.about}
-          </Link>
-          <Link
-            href={localizedPath(locale, "/contact")}
-            className="transition hover:text-foreground"
-          >
-            {dict.nav.contact}
-          </Link>
-          <Link
-            href={localizedPath(locale, "/privacy")}
-            className="transition hover:text-foreground"
-          >
-            {dict.footer.privacy}
-          </Link>
-          <a
-            href={`${siteConfig.url}/${locale}/feed.xml`}
-            className="transition hover:text-foreground"
-          >
-            {dict.footer.rss}
-          </a>
+          {links.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-medium text-foreground/80 underline-offset-4 transition hover:text-accent hover:underline"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-medium text-foreground/80 underline-offset-4 transition hover:text-accent hover:underline"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
+        <p className="mt-6 text-xs text-muted-foreground">
+          © {year} {siteConfig.name}. {dict.footer.rights}
+        </p>
       </div>
     </footer>
   );

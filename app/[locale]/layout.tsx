@@ -34,7 +34,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${fontClassNames} h-full`}
+      className={`${fontClassNames} min-h-screen`}
     >
       <head>
         <link
@@ -60,7 +60,7 @@ export default async function LocaleLayout({
         />
         <meta property="og:locale" content={ogLocales[locale]} />
       </head>
-      <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
+      <body className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SiteHeader locale={locale} dict={dict} />
           <main className="flex-1">{children}</main>
