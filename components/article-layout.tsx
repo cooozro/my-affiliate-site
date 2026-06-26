@@ -6,7 +6,7 @@ import { PublicationTagline } from "@/components/publication-tagline";
 import { ARTICLE_SHELL } from "@/lib/layout";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
-import { splitAfterRelatedGuides } from "@/lib/split-article-content";
+import { splitRelatedGuidesForTagline } from "@/lib/split-article-content";
 import { siteConfig } from "@/lib/site";
 import type { Dictionary } from "@/messages/en";
 
@@ -36,7 +36,7 @@ export function ArticleLayout({
     : undefined;
   const feedUrl = `${siteConfig.url}/${locale}/feed.xml`;
 
-  const contentParts = splitAfterRelatedGuides(post.content, locale);
+  const contentParts = splitRelatedGuidesForTagline(post.content, locale);
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -108,9 +108,10 @@ export function ArticleLayout({
         <div className="article-body">
           {contentParts ? (
             <>
-              <MarkdownContent content={contentParts.beforeTagline} />
-              <PublicationTagline locale={locale} className="mb-2" />
-              <MarkdownContent content={contentParts.afterTagline} />
+              <MarkdownContent content={contentParts.throughHeading} />
+              <PublicationTagline locale={locale} variant="inline" />
+              <MarkdownContent content={contentParts.relatedLinks} />
+              <MarkdownContent content={contentParts.afterRelated} />
             </>
           ) : (
             <MarkdownContent content={post.content} />

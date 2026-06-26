@@ -58,6 +58,8 @@ After **Strengths** / **Weaknesses**, add one analytical line (no personal voice
 
 Link to other published guides using locale paths: `/en/blog/{slug}` or `/ko/blog/{slug}`.
 
+**Do not add the publication tagline in markdown.** `article-layout.tsx` injects it automatically directly under `## Related guides` / `## 관련 가이드`, above the bullet list.
+
 ```markdown
 ## Related guides
 

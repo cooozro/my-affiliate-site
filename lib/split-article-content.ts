@@ -5,14 +5,23 @@ const RELATED_HEADING: Record<Locale, string> = {
   ko: "## 관련 가이드",
 };
 
+export type RelatedGuidesSplit = {
+  /** Markdown through the Related guides heading (inclusive). */
+  throughHeading: string;
+  /** Bullet links and body copy under that heading only. */
+  relatedLinks: string;
+  /** Remaining sections (checklist, final verdict, etc.). */
+  afterRelated: string;
+};
+
 /**
- * Split markdown after the Related guides section so a publication tagline
- * can render before the remaining sections (checklist, final verdict).
+ * Split at Related guides so the publication tagline can sit directly under
+ * the heading and above the internal link list.
  */
-export function splitAfterRelatedGuides(
+export function splitRelatedGuidesForTagline(
   content: string,
   locale: Locale,
-): { beforeTagline: string; afterTagline: string } | null {
+): RelatedGuidesSplit | null {
   const heading = RELATED_HEADING[locale];
   const lines = content.split("\n");
   let relatedIdx = -1;
@@ -26,7 +35,7 @@ export function splitAfterRelatedGuides(
 
   if (relatedIdx === -1) return null;
 
-  let nextSectionIdx = -1;
+  let nextSectionIdx = lines.length;
   for (let i = relatedIdx + 1; i < lines.length; i++) {
     if (lines[i].startsWith("## ")) {
       nextSectionIdx = i;
@@ -34,10 +43,25 @@ export function splitAfterRelatedGuides(
     }
   }
 
-  if (nextSectionIdx === -1) return null;
+  const relatedLinks = lines.slice(relatedIdx + 1, nextSectionIdx).join("\n").trim();
+  if (!relatedLinks) return null;
 
   return {
-    beforeTagline: lines.slice(0, nextSectionIdx).join("\n"),
-    afterTagline: lines.slice(nextSectionIdx).join("\n"),
+    throughHeading: lines.slice(0, relatedIdx + 1).join("\n"),
+    relatedLinks,
+    afterRelated: lines.slice(nextSectionIdx).join("\n"),
+  };
+}
+
+/** @deprecated Use splitRelatedGuidesForTagline */
+export function splitAfterRelatedGuides(
+  content: string,
+  locale: Locale,
+): { beforeTagline: string; afterTagline: string } | null {
+  const split = splitRelatedGuidesForTagline(content, locale);
+  if (!split) return null;
+  return {
+    beforeTagline: `${split.throughHeading}\n\n${split.relatedLinks}`,
+    afterTagline: split.afterRelated,
   };
 }
