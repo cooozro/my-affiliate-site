@@ -2,8 +2,10 @@ import Image from "next/image";
 import { ArticleProtection } from "@/components/article-protection";
 import { ArticleShare } from "@/components/article-share";
 import { MarkdownContent } from "@/components/markdown-content";
+import { PublicationTagline } from "@/components/publication-tagline";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
+import { splitAfterRelatedGuides } from "@/lib/split-article-content";
 import { siteConfig } from "@/lib/site";
 import type { Dictionary } from "@/messages/en";
 
@@ -31,6 +33,8 @@ export function ArticleLayout({
   const shareImageUrl = post.coverImage
     ? `${siteConfig.url}${post.coverImage}`
     : undefined;
+
+  const contentParts = splitAfterRelatedGuides(post.content, locale);
 
   return (
     <article className="mx-auto w-full max-w-3xl px-6 py-12">
@@ -99,7 +103,15 @@ export function ArticleLayout({
         ) : null}
 
         <div className="article-body">
-          <MarkdownContent content={post.content} />
+          {contentParts ? (
+            <>
+              <MarkdownContent content={contentParts.beforeTagline} />
+              <PublicationTagline locale={locale} className="mb-2" />
+              <MarkdownContent content={contentParts.afterTagline} />
+            </>
+          ) : (
+            <MarkdownContent content={post.content} />
+          )}
         </div>
       </ArticleProtection>
 

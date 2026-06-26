@@ -14,6 +14,8 @@ const en = {
     privacy: "Privacy Policy",
     rss: "RSS",
     rights: "All rights reserved.",
+    publicationTagline:
+      "AI Pick & Report is an independent tech review publication dedicated to data-backed buying guides.",
   },
   home: {
     title: "Home",

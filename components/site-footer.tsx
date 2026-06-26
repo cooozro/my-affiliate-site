@@ -57,7 +57,10 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             ),
           )}
         </nav>
-        <p className="mt-6 text-xs text-muted-foreground">
+        <p className="mx-auto mt-8 max-w-xl border-t border-border/50 pt-6 text-center font-sans text-sm leading-relaxed text-muted-foreground sm:text-[0.9375rem]">
+          {dict.footer.publicationTagline}
+        </p>
+        <p className="mt-6 text-center text-xs text-muted-foreground">
           © {year} {siteConfig.name}. {dict.footer.rights}
         </p>
       </div>

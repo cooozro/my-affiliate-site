@@ -16,6 +16,8 @@ const ko: Dictionary = {
     privacy: "개인정보처리방침",
     rss: "RSS",
     rights: "All rights reserved.",
+    publicationTagline:
+      "AI Pick & Report는 데이터 기반 구매 가이드에 전념하는 독립 기술 리뷰 매체입니다.",
   },
   home: {
     title: "홈",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PublicationTagline } from "@/components/publication-tagline";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
@@ -121,6 +122,7 @@ export default async function AboutPage({ params }: PageProps) {
             </p>
           </div>
         </section>
+        <PublicationTagline locale={locale} className="mt-12" />
       </article>
     );
   }
@@ -230,6 +232,7 @@ export default async function AboutPage({ params }: PageProps) {
           </p>
         </div>
       </section>
+      <PublicationTagline locale={locale} className="mt-12" />
     </article>
   );
 }
