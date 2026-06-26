@@ -1,17 +1,22 @@
 ---
-title: "첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다"
-description: "2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드."
-date: "2026-06-25"
-tags: ["기계식 키보드", "가성비", "입문", "게이밍", "구매 가이드"]
+title: '첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다'
+description: '2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.'
+date: '2026-06-26'
+tags:
+  - 기계식 키보드
+  - 가성비
+  - 입문
+  - 게이밍
+  - 구매 가이드
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-26T10:00:00+09:00"
+draft: false
 liveData: false
-coverImage: "/images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg"
-coverImageAlt: "책상 위 기계식 키보드와 모니터"
-coverImageCredit: "Photo by Daniel Korpai / Pexels"
+coverImage: /images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg
+coverImageAlt: 책상 위 기계식 키보드와 모니터
+coverImageCredit: Photo by Daniel Korpai / Pexels
+updatedAt: '2026-06-26T08:03:41.000Z'
+publishedAt: '2026-06-26T08:03:41.000Z'
 ---
-
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 입문용 기계식 키보드를 공개 스펙 기준의 핫스왑·스위치·레이아웃 데이터로 평가합니다. **핫스왑과 스위치 타입**이 RGB·브랜드 마케팅보다 입문 만족도를 더 잘 설명합니다.

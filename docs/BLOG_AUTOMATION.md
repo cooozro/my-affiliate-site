@@ -6,7 +6,7 @@ Automated draft writing, publishing, and Google Search Console indexing for AI P
 
 | Step | Where | Schedule |
 | --- | --- | --- |
-| Publish check | GitHub Actions `blog-automation.yml` | Every 15 min |
+| Publish check | GitHub Actions `blog-automation.yml` | Every 15 min + hourly backup + on `main` push |
 | Publish draft | Same workflow | Random 4–6h gap, max 2/day KST |
 | Draft replenish | Same workflow + `cursor-draft-replenish.yml` backup | Right after publish; backup every 15 min if pending |
 | Indexing | Google Indexing API | On each publish |
@@ -25,13 +25,15 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 
 | Rule | Value |
 | --- | --- |
-| Cron check | Every **15 minutes** (GitHub Actions) |
+| Cron check | Every **15 minutes** + **hourly backup** (KST 08:00–23:00) + **every `main` push** |
 | Publish times | **Random** — not fixed 11:00 / 17:00 |
 | Gap between publishes | **4–6 hours** (random per slot) |
 | First slot of KST day | Random jitter **15–120 min** after midnight |
 | Daily cap | Max **2** publishes per KST day |
 
 `data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
+
+**GitHub cron reliability:** Scheduled workflows can be delayed or skipped on low-traffic repos. This project uses (1) hourly backup crons, (2) a `main` push trigger, and (3) catch-up logic when a slot is overdue by 15+ minutes.
 
 **Writing** is done in **Cursor** (`draft: true`). GitHub Actions only publishes and requests Google indexing.
 

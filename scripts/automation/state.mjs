@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
-import { scheduleFirstPublishOfDay } from "../lib/publish-schedule.mjs";
+import {
+  MAX_PUBLISH_PER_DAY,
+  scheduleFirstPublishOfDay,
+} from "../lib/publish-schedule.mjs";
 
 const STATE_PATH = path.join(process.cwd(), "data", "automation", "state.json");
 
@@ -53,10 +56,23 @@ export function resetDailyCounters(state) {
   const today = kstDateString();
   if (state.publishDateKst !== today) {
     const previousDay = state.publishDateKst;
+    const yesterdayCount = state.publishCountToday ?? 0;
     state.publishDateKst = today;
     state.publishCountToday = 0;
     if (previousDay) {
-      scheduleFirstPublishOfDay(state);
+      const missedSlot =
+        yesterdayCount < MAX_PUBLISH_PER_DAY &&
+        state.nextPublishAt &&
+        Date.now() >= new Date(state.nextPublishAt).getTime();
+
+      if (missedSlot) {
+        state.nextPublishAt = new Date().toISOString();
+        console.log(
+          "Catch-up: previous KST day had an overdue publish slot — publishing on next check.",
+        );
+      } else {
+        scheduleFirstPublishOfDay(state);
+      }
     }
   }
   if (state.writeDateKst !== today) {

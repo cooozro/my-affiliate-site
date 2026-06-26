@@ -1,17 +1,24 @@
 ---
-title: "First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype"
-description: "Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Scenario guide for typing, gaming, and first-time buyers."
-date: "2026-06-25"
-tags: ["mechanical keyboard", "budget tech", "gaming", "typing", "buying guide"]
+title: First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype
+description: >-
+  Five entry mechanical keyboards compared by switch type, layout, hot-swap, and
+  price. Scenario guide for typing, gaming, and first-time buyers.
+date: '2026-06-26'
+tags:
+  - mechanical keyboard
+  - budget tech
+  - gaming
+  - typing
+  - buying guide
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-26T10:00:00+09:00"
+draft: false
 liveData: false
-coverImage: "/images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg"
-coverImageAlt: "Mechanical keyboard on a desk with monitor"
-coverImageCredit: "Photo by Daniel Korpai / Pexels"
+coverImage: /images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg
+coverImageAlt: Mechanical keyboard on a desk with monitor
+coverImageCredit: Photo by Daniel Korpai / Pexels
+updatedAt: '2026-06-26T08:03:41.000Z'
+publishedAt: '2026-06-26T08:03:41.000Z'
 ---
-
 ## Editorial Overview
 
 > As an independent tech review publication, we evaluate entry mechanical keyboards on hot-swap support, switch type, and layout data from public spec sheets. These factors predict first-buyer satisfaction more reliably than RGB or brand marketing.

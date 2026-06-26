@@ -36,12 +36,20 @@ function canPublishNow(state, force = false) {
   if (force) return true;
 
   const nextAt = new Date(state.nextPublishAt).getTime();
-  if (Date.now() < nextAt) {
-    const waitMin = Math.ceil((nextAt - Date.now()) / 60000);
+  const now = Date.now();
+  if (now < nextAt) {
+    const waitMin = Math.ceil((nextAt - now) / 60000);
     console.log(
       `Publish skipped: next random slot in ${waitMin}min (KST ${formatKst(state.nextPublishAt)})`,
     );
     return false;
+  }
+
+  const overdueMin = Math.floor((now - nextAt) / 60000);
+  if (overdueMin >= 15) {
+    console.log(
+      `Catch-up publish: slot was due ${overdueMin}min ago (KST ${formatKst(state.nextPublishAt)}).`,
+    );
   }
 
   return true;

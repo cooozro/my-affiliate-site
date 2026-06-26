@@ -1,7 +1,14 @@
 {
-  "status": "complete",
-  "completedAt": "2026-06-26T12:00:00+09:00",
-  "writtenSlug": "2026-budget-monitors-buying-guide",
-  "draftCount": 2,
-  "note": "Buffer restored to 2/2 (keyboards + monitors)."
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-budget-mechanical-keyboards-guide",
+  "requestedAt": "2026-06-26T08:03:42.381Z",
+  "topic": {
+    "id": "wireless-earbuds",
+    "category": "audio",
+    "angle": "budget wireless earbuds comparison with specs, battery, codec, and ANC data",
+    "imageQuery": "wireless earbuds technology",
+    "liveData": true
+  },
+  "instructions": "Write one bilingual buying-guide draft (en+ko, draft:true) per docs/CONTENT_STANDARDS.md. Suggested slug: 2026-budget-{topic-id}-guide. Run npm run content:validate, then set status to complete."
 }
