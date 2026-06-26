@@ -7,6 +7,13 @@ import {
 } from "./posts-fs.mjs";
 import { maintainDraftBuffer } from "./generate-draft.mjs";
 import {
+  ensureNextPublishAt,
+  formatKst,
+  MAX_PUBLISH_PER_DAY,
+  scheduleNextPublishAfterSuccess,
+  TARGET_DRAFT_COUNT,
+} from "../lib/publish-schedule.mjs";
+import {
   kstDateString,
   kstNow,
   loadState,
@@ -14,12 +21,11 @@ import {
   saveState,
 } from "./state.mjs";
 
-const MAX_PUBLISH_PER_DAY = 2;
-const MIN_PUBLISH_GAP_MS = 6 * 60 * 60 * 1000;
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 
 function canPublishNow(state, force = false) {
   resetDailyCounters(state);
+  ensureNextPublishAt(state);
 
   if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) {
     console.log(`Daily publish limit reached (${MAX_PUBLISH_PER_DAY}/day KST)`);
@@ -28,15 +34,13 @@ function canPublishNow(state, force = false) {
 
   if (force) return true;
 
-  if (state.lastPublishAt) {
-    const elapsed = Date.now() - new Date(state.lastPublishAt).getTime();
-    if (elapsed < MIN_PUBLISH_GAP_MS) {
-      const waitMin = Math.ceil((MIN_PUBLISH_GAP_MS - elapsed) / 60000);
-      console.log(
-        `Publish skipped: ${waitMin}min until 6h gap elapsed (last at ${state.lastPublishAt})`,
-      );
-      return false;
-    }
+  const nextAt = new Date(state.nextPublishAt).getTime();
+  if (Date.now() < nextAt) {
+    const waitMin = Math.ceil((nextAt - Date.now()) / 60000);
+    console.log(
+      `Publish skipped: next random slot in ${waitMin}min (KST ${formatKst(state.nextPublishAt)})`,
+    );
+    return false;
   }
 
   return true;
@@ -63,8 +67,12 @@ function publishSlug(slug) {
 export async function publishOneDraft(options = {}) {
   const { force = false } = options;
   const state = loadState();
+  const stateBefore = JSON.stringify(state);
 
   if (!canPublishNow(state, force)) {
+    if (JSON.stringify(state) !== stateBefore) {
+      saveState(state);
+    }
     return null;
   }
 
@@ -74,7 +82,7 @@ export async function publishOneDraft(options = {}) {
   if (drafts.length === 0) {
     console.log(
       publishOnly
-        ? "No drafts to publish. Write drafts in Cursor (draft: true) and push to main."
+        ? `No drafts to publish (${drafts.length}/${TARGET_DRAFT_COUNT}). Write drafts in Cursor (draft: true) and push to main.`
         : "No drafts to publish — running buffer maintenance",
     );
     if (!publishOnly) {
@@ -117,6 +125,18 @@ export async function publishOneDraft(options = {}) {
 
   state.lastPublishAt = new Date().toISOString();
   state.publishCountToday += 1;
+  scheduleNextPublishAfterSuccess(state);
+  console.log(
+    `Next publish scheduled at KST ${formatKst(state.nextPublishAt)} (${state.scheduledGapHours}h gap)`,
+  );
+
+  const remainingDrafts = listDrafts().length;
+  if (publishOnly && remainingDrafts < TARGET_DRAFT_COUNT) {
+    console.log(
+      `Draft buffer ${remainingDrafts}/${TARGET_DRAFT_COUNT} — replenish in Cursor (Plan A does not auto-write).`,
+    );
+  }
+
   state.history = [
     ...(state.history ?? []),
     { action: "publish", slug, at: state.lastPublishAt, urls },

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { scheduleFirstPublishOfDay } from "../lib/publish-schedule.mjs";
 
 const STATE_PATH = path.join(process.cwd(), "data", "automation", "state.json");
 
@@ -7,6 +8,8 @@ const DEFAULT_STATE = {
   topicIndex: 0,
   usedTopicIds: [],
   lastPublishAt: null,
+  nextPublishAt: null,
+  scheduledGapHours: null,
   publishCountToday: 0,
   publishDateKst: null,
   writeCountToday: 0,
@@ -49,8 +52,12 @@ export function kstNow() {
 export function resetDailyCounters(state) {
   const today = kstDateString();
   if (state.publishDateKst !== today) {
+    const previousDay = state.publishDateKst;
     state.publishDateKst = today;
     state.publishCountToday = 0;
+    if (previousDay) {
+      scheduleFirstPublishOfDay(state);
+    }
   }
   if (state.writeDateKst !== today) {
     state.writeDateKst = today;

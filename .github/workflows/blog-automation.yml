@@ -2,14 +2,8 @@ name: Blog automation
 
 on:
   schedule:
-    # KST 11:00 — primary + backup (GitHub cron can be delayed/skipped)
-    - cron: "0 2 * * *"
-    - cron: "0 3 * * *"
-    - cron: "0 4 * * *"
-    # KST 17:00 — primary + backup
-    - cron: "0 8 * * *"
-    - cron: "0 9 * * *"
-    - cron: "0 10 * * *"
+    # Check every 15 minutes; actual publish time is random (4–6h gaps, KST day jitter).
+    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       task:

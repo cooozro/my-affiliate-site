@@ -21,9 +21,24 @@ type GaSummary = {
   activeUsers28d: number;
 };
 
+type AutomationStatus = {
+  mode: "publish-only";
+  draftCount: number;
+  targetDraftCount: number;
+  needsReplenish: boolean;
+  replenishNote: string;
+  nextPublishAt: string | null;
+  nextPublishAtKst: string | null;
+  scheduledGapHours: number | null;
+  publishCountToday: number;
+  maxPublishPerDay: number;
+  lastPublishAt: string | null;
+};
+
 export function AdminDashboard() {
   const [posts, setPosts] = useState<AdminPostRow[]>([]);
   const [analytics, setAnalytics] = useState<GaSummary | null>(null);
+  const [automation, setAutomation] = useState<AutomationStatus | null>(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -40,9 +55,11 @@ export function AdminDashboard() {
     const data = (await response.json()) as {
       posts: AdminPostRow[];
       analytics: GaSummary | null;
+      automation: AutomationStatus;
     };
     setPosts(data.posts);
     setAnalytics(data.analytics);
+    setAutomation(data.automation);
     setLoading(false);
   }
 
@@ -143,6 +160,47 @@ export function AdminDashboard() {
           </p>
         )}
       </section>
+
+      {automation ? (
+        <section className="rounded-xl border border-border bg-surface p-5">
+          <h2 className="mb-3 text-lg font-semibold">발행 스케줄 · 임시글 큐</h2>
+          <div className="grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
+            <MetricCard
+              label="임시글 (draft)"
+              value={`${automation.draftCount} / ${automation.targetDraftCount}`}
+            />
+            <MetricCard
+              label="오늘 발행"
+              value={`${automation.publishCountToday} / ${automation.maxPublishPerDay}`}
+            />
+            <MetricCard
+              label="다음 발행 (KST)"
+              value={automation.nextPublishAtKst ?? "미정"}
+            />
+            <MetricCard
+              label="다음 간격"
+              value={
+                automation.scheduledGapHours
+                  ? `${automation.scheduledGapHours}h (4–6h 랜덤)`
+                  : "—"
+              }
+            />
+          </div>
+          {automation.needsReplenish ? (
+            <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-800 dark:text-amber-200">
+              {automation.replenishNote}
+              <br />
+              발행 후 임시글이 자동으로 생기지 않습니다. Cursor에서 새 buying-guide
+              draft를 작성해 push 해 주세요.
+            </p>
+          ) : (
+            <p className="mt-4 text-sm text-muted-foreground">
+              임시글 버퍼가 충분합니다. 다음 자동 발행은 위 시각 이후 15분 단위
+              체크에서 진행됩니다.
+            </p>
+          )}
+        </section>
+      ) : null}
 
       {message ? (
         <p className="rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-700 dark:text-green-300">
@@ -247,11 +305,17 @@ export function AdminDashboard() {
   );
 }
 
-function MetricCard({ label, value }: { label: string; value: number }) {
+function MetricCard({
+  label,
+  value,
+}: {
+  label: string;
+  value: number | string;
+}) {
   return (
     <div className="rounded-lg border border-border bg-background p-4">
       <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
-      <p className="mt-2 text-2xl font-semibold">{value.toLocaleString()}</p>
+      <p className="mt-2 text-lg font-semibold">{typeof value === "number" ? value.toLocaleString() : value}</p>
     </div>
   );
 }

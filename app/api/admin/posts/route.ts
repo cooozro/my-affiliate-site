@@ -3,7 +3,7 @@ import {
   canAccessAdmin,
   getAdminSessionFromCookies,
 } from "@/lib/admin-auth";
-import { getAdminAnalytics, getAdminPosts } from "@/lib/admin-actions";
+import { getAdminAnalytics, getAdminAutomationStatus, getAdminPosts } from "@/lib/admin-actions";
 
 async function requireAdmin(request: Request) {
   const hasSession = await getAdminSessionFromCookies();
@@ -18,10 +18,11 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const [posts, analytics] = await Promise.all([
+  const [posts, analytics, automation] = await Promise.all([
     getAdminPosts(),
     getAdminAnalytics(),
+    Promise.resolve(getAdminAutomationStatus()),
   ]);
 
-  return NextResponse.json({ posts, analytics });
+  return NextResponse.json({ posts, analytics, automation });
 }

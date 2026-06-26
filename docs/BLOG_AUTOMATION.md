@@ -18,12 +18,15 @@ Next.js / Vercel **cannot** run this cron by itself — there is no always-on No
 
 ## Schedule (Korea Standard Time) — Plan A (Cursor writes, automation publishes)
 
-| KST | Task | Script |
-| --- | --- | --- |
-| 11:00 (+12:00, 13:00 backup) | 발행 1건 | `publish-slot` |
-| 17:00 (+18:00, 19:00 backup) | 발행 1건 (6h+ gap) | `publish-slot` |
+| Rule | Value |
+| --- | --- |
+| Cron check | Every **15 minutes** (GitHub Actions) |
+| Publish times | **Random** — not fixed 11:00 / 17:00 |
+| Gap between publishes | **4–6 hours** (random per slot) |
+| First slot of KST day | Random jitter **15–120 min** after midnight |
+| Daily cap | Max **2** publishes per KST day |
 
-GitHub cron can be delayed; backup hours retry the same slot. At most 2 publishes/day and 6h between publishes still apply.
+`data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
 
 **Writing** is done in **Cursor** (`draft: true`). GitHub Actions only publishes and requests Google indexing.
 

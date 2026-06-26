@@ -15,6 +15,11 @@
 import { generateOneDraft, maintainDraftBuffer } from "./generate-draft.mjs";
 import { publishOneDraft } from "./publish-draft.mjs";
 import { countDrafts, listDrafts } from "./posts-fs.mjs";
+import {
+  formatKst,
+  MAX_PUBLISH_PER_DAY,
+  TARGET_DRAFT_COUNT,
+} from "../lib/publish-schedule.mjs";
 import { loadState, saveState } from "./state.mjs";
 
 const task = (process.argv[2] ?? "status").trim() || "status";
@@ -31,7 +36,7 @@ async function main() {
       break;
 
     case "publish":
-      await publishOneDraft();
+      await publishOneDraft({ force: true });
       break;
 
     case "buffer":
@@ -65,10 +70,18 @@ async function main() {
         task,
         mode: publishOnly ? "publish-only" : "full",
         draftCount: countDrafts(),
+        targetDraftCount: TARGET_DRAFT_COUNT,
         drafts: drafts.map((d) => ({ slug: d.slug, createdAt: d.createdAt })),
         writeCountToday: state.writeCountToday,
         publishCountToday: state.publishCountToday,
+        maxPublishPerDay: MAX_PUBLISH_PER_DAY,
         lastPublishAt: state.lastPublishAt,
+        nextPublishAt: state.nextPublishAt,
+        nextPublishAtKst: state.nextPublishAt ? formatKst(state.nextPublishAt) : null,
+        scheduledGapHours: state.scheduledGapHours,
+        replenishNote: publishOnly
+          ? "Plan A: new drafts are written in Cursor, not auto-generated."
+          : null,
       }, null, 2));
       break;
     }
