@@ -80,7 +80,7 @@ async function main() {
         nextPublishAtKst: state.nextPublishAt ? formatKst(state.nextPublishAt) : null,
         scheduledGapHours: state.scheduledGapHours,
         replenishNote: publishOnly
-          ? "Plan A: new drafts are written in Cursor, not auto-generated."
+          ? "Publish 후 OPENAI_API_KEY가 있으면 draft 자동 보충."
           : null,
       }, null, 2));
       break;

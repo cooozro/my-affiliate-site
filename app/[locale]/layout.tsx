@@ -59,6 +59,10 @@ export default async function LocaleLayout({
           href={`${siteConfig.url}/${locale}/feed.xml`}
         />
         <meta property="og:locale" content={ogLocales[locale]} />
+        <meta
+          name="naver-site-verification"
+          content="87e4d3f412fa35084645462eeb1a048ada483475"
+        />
       </head>
       <body className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

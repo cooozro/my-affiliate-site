@@ -63,7 +63,9 @@ export function getAutomationStatus(): AutomationStatus {
     targetDraftCount: TARGET_DRAFT_COUNT,
     needsReplenish: draftCount < TARGET_DRAFT_COUNT,
     replenishNote:
-      "Plan A: 발행 후 새 임시글은 Cursor(요미)가 작성합니다. 자동 보충은 없습니다.",
+      process.env.OPENAI_API_KEY
+        ? "발행 직후 OPENAI로 임시글을 자동 보충합니다 (목표 2건)."
+        : "OPENAI_API_KEY가 없으면 발행 후 자동 보충이 되지 않습니다. GitHub Secrets에 키를 추가하세요.",
     nextPublishAt,
     nextPublishAtKst: nextPublishAt ? formatKst(nextPublishAt) : null,
     scheduledGapHours:

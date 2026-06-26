@@ -32,9 +32,9 @@ Next.js / Vercel **cannot** run this cron by itself — there is no always-on No
 
 ## Rules
 
-- **작성:** 하루 최대 2건 (오전·오후 각 1건)
-- **발행:** 하루 최대 2건, 건당 **6시간 이상** 간격
-- **임시 보관(draft):** 항상 **2건** 유지 — 발행 후 **Cursor(형님·요미)** 가 새 글 작성
+- **작성:** 발행 직후 임시글 **자동 보충** (`OPENAI_API_KEY` 필요, 목표 2건)
+- **발행:** 하루 최대 2건, **4–6시간 랜덤 간격**
+- **임시 보관(draft):** 항상 **2건** 유지 — 발행 후 OpenAI가 1건씩 보충
 - **콘텐츠 기준:** `docs/CONTENT_STANDARDS.md` (구글 가이드 · 애드센스 · SEO)
 
 ## Topics / categories
@@ -57,7 +57,7 @@ Repository → Settings → Secrets and variables → Actions:
 | --- | --- | --- |
 | `PEXELS_API_KEY` | Yes (for cover images via script) | Cover images |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
-| `OPENAI_API_KEY` | No (Plan A) | Only if using full auto-write mode |
+| `OPENAI_API_KEY` | Yes (auto-replenish drafts) | Draft generation after each publish |
 
 ### 2. GitHub Variables (optional)
 

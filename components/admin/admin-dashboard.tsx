@@ -190,8 +190,8 @@ export function AdminDashboard() {
             <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-800 dark:text-amber-200">
               {automation.replenishNote}
               <br />
-              발행 후 임시글이 자동으로 생기지 않습니다. Cursor에서 새 buying-guide
-              draft를 작성해 push 해 주세요.
+              임시글이 {automation.targetDraftCount}건 미만입니다. 다음 발행 후 자동
+              보충되거나, Cursor에서 수동으로 draft를 추가할 수 있습니다.
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

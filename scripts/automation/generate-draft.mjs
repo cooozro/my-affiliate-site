@@ -82,11 +82,12 @@ function buildFrontmatter(localeData, shared, draft = true) {
   };
 }
 
-export async function generateOneDraft() {
+export async function generateOneDraft(options = {}) {
+  const { bypassWriteCap = false } = options;
   const state = loadState();
   resetDailyCounters(state);
 
-  if (state.writeCountToday >= MAX_WRITES_PER_DAY) {
+  if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
     console.log(`Daily write limit reached (${MAX_WRITES_PER_DAY}/day KST)`);
     saveState(state);
     return null;
@@ -134,25 +135,47 @@ export async function generateOneDraft() {
   return slug;
 }
 
-export async function maintainDraftBuffer() {
+export async function maintainDraftBuffer(options = {}) {
+  const { bypassWriteCap = false, maxCreate } = options;
   let created = 0;
 
   while (countDrafts() < TARGET_DRAFT_BUFFER) {
+    if (maxCreate !== undefined && created >= maxCreate) break;
+
     const state = loadState();
     resetDailyCounters(state);
 
-    if (state.writeCountToday >= MAX_WRITES_PER_DAY) {
+    if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
       console.log(
         `Buffer below ${TARGET_DRAFT_BUFFER} but daily write cap reached — will refill tomorrow`,
       );
       break;
     }
 
-    const slug = await generateOneDraft();
+    const slug = await generateOneDraft({ bypassWriteCap });
     if (!slug) break;
     created += 1;
   }
 
   console.log(`Draft buffer: ${countDrafts()}/${TARGET_DRAFT_BUFFER}, created ${created} new`);
   return created;
+}
+
+/** Fill missing drafts right after a publish (bypasses daily write cap). */
+export async function replenishAfterPublish() {
+  const needed = TARGET_DRAFT_BUFFER - countDrafts();
+  if (needed <= 0) {
+    console.log(`Draft buffer full (${countDrafts()}/${TARGET_DRAFT_BUFFER})`);
+    return 0;
+  }
+
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn(
+      `Draft buffer ${countDrafts()}/${TARGET_DRAFT_BUFFER} — set OPENAI_API_KEY in GitHub Secrets to auto-replenish after publish.`,
+    );
+    return 0;
+  }
+
+  console.log(`Replenishing ${needed} draft(s) after publish...`);
+  return maintainDraftBuffer({ bypassWriteCap: true, maxCreate: needed });
 }
