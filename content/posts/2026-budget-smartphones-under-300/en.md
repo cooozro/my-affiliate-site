@@ -1,17 +1,24 @@
 ---
-title: "Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads"
-description: "Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update policy. Scenario-based guide without carrier marketing noise."
-date: "2026-06-25"
-tags: ["smartphones", "budget tech", "Android", "buying guide", "under 300"]
+title: 'Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads'
+description: >-
+  Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS
+  update policy. Scenario-based guide without carrier marketing noise.
+date: '2026-06-26'
+tags:
+  - smartphones
+  - budget tech
+  - Android
+  - buying guide
+  - under 300
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-25T18:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-smartphones-under-300/cover.jpg"
-coverImageAlt: "Modern smartphone on a minimal desk setup"
-coverImageCredit: "Photo by Lisa Fotios / Pexels"
+coverImage: /images/posts/2026-budget-smartphones-under-300/cover.jpg
+coverImageAlt: Modern smartphone on a minimal desk setup
+coverImageCredit: Photo by Lisa Fotios / Pexels
+updatedAt: '2026-06-26T02:57:56.000Z'
+publishedAt: '2026-06-26T02:57:56.000Z'
 ---
-
 ## Introduction: in 2026 entry phones are won on chipset tier
 
 In the first half of 2026, sub-$300 phones ship with higher refresh displays and 5,000mAh batteries as defaults, but **real-world feel depends on SoC tier and OS update promises**. Geekbench multi-core gaps of 40%+ within the same price band are common, and region-locked 5G SKUs still miss local bands.

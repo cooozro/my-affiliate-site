@@ -2,10 +2,14 @@ name: Blog automation
 
 on:
   schedule:
-    # KST 11:00 — publish slot 1
+    # KST 11:00 — primary + backup (GitHub cron can be delayed/skipped)
     - cron: "0 2 * * *"
-    # KST 17:00 — publish slot 2 (6h after slot 1)
+    - cron: "0 3 * * *"
+    - cron: "0 4 * * *"
+    # KST 17:00 — primary + backup
     - cron: "0 8 * * *"
+    - cron: "0 9 * * *"
+    - cron: "0 10 * * *"
   workflow_dispatch:
     inputs:
       task:
@@ -50,11 +54,29 @@ jobs:
           fi
 
       - name: Run automation
+        id: automation
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
-        run: node scripts/automation/run.mjs "${{ steps.task.outputs.name }}"
+        run: |
+          set -euo pipefail
+          LOG_FILE="$(mktemp)"
+          node scripts/automation/run.mjs "${{ steps.task.outputs.name }}" | tee "$LOG_FILE"
+          if grep -q "^Published:" "$LOG_FILE"; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+          if grep -q "Publish skipped:" "$LOG_FILE"; then
+            grep "Publish skipped:" "$LOG_FILE" || true
+          fi
+          if grep -q "Daily publish limit" "$LOG_FILE"; then
+            grep "Daily publish limit" "$LOG_FILE" || true
+          fi
+          if grep -q "No drafts to publish" "$LOG_FILE"; then
+            grep "No drafts to publish" "$LOG_FILE" || true
+          fi
 
       - name: Validate content
         if: success() && steps.task.outputs.name != 'status'

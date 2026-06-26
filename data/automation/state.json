@@ -1,8 +1,8 @@
 {
   "topicIndex": 0,
   "usedTopicIds": [],
-  "lastPublishAt": "2026-06-25T12:06:58.928Z",
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-06-26T02:57:56.989Z",
+  "publishCountToday": 1,
   "publishDateKst": "2026-06-26",
   "writeCountToday": 0,
   "writeDateKst": "2026-06-26",
@@ -23,6 +23,15 @@
       "urls": [
         "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
         "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-smartphones-under-300",
+      "at": "2026-06-26T02:57:56.989Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-smartphones-under-300",
+        "https://www.aipick.shop/ko/blog/2026-budget-smartphones-under-300"
       ]
     }
   ]

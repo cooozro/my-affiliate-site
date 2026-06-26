@@ -20,8 +20,10 @@ Next.js / Vercel **cannot** run this cron by itself — there is no always-on No
 
 | KST | Task | Script |
 | --- | --- | --- |
-| 11:00 | 발행 1건 | `publish-slot` |
-| 17:00 | 발행 1건 (6h+ gap) | `publish-slot` |
+| 11:00 (+12:00, 13:00 backup) | 발행 1건 | `publish-slot` |
+| 17:00 (+18:00, 19:00 backup) | 발행 1건 (6h+ gap) | `publish-slot` |
+
+GitHub cron can be delayed; backup hours retry the same slot. At most 2 publishes/day and 6h between publishes still apply.
 
 **Writing** is done in **Cursor** (`draft: true`). GitHub Actions only publishes and requests Google indexing.
 

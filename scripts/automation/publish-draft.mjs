@@ -32,7 +32,9 @@ function canPublishNow(state, force = false) {
     const elapsed = Date.now() - new Date(state.lastPublishAt).getTime();
     if (elapsed < MIN_PUBLISH_GAP_MS) {
       const waitMin = Math.ceil((MIN_PUBLISH_GAP_MS - elapsed) / 60000);
-      console.log(`Publish skipped: ${waitMin}min until 6h gap elapsed`);
+      console.log(
+        `Publish skipped: ${waitMin}min until 6h gap elapsed (last at ${state.lastPublishAt})`,
+      );
       return false;
     }
   }
@@ -63,7 +65,6 @@ export async function publishOneDraft(options = {}) {
   const state = loadState();
 
   if (!canPublishNow(state, force)) {
-    saveState(state);
     return null;
   }
 

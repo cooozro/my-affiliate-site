@@ -1,17 +1,24 @@
 ---
-title: "30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라"
-description: "2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드."
-date: "2026-06-25"
-tags: ["스마트폰", "가성비", "Android", "구매 가이드", "30만원대"]
+title: 30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라
+description: >-
+  2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별
+  구매 가이드.
+date: '2026-06-26'
+tags:
+  - 스마트폰
+  - 가성비
+  - Android
+  - 구매 가이드
+  - 30만원대
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-25T18:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-smartphones-under-300/cover.jpg"
-coverImageAlt: "미니멀 데스크 위 스마트폰"
-coverImageCredit: "Photo by Lisa Fotios / Pexels"
+coverImage: /images/posts/2026-budget-smartphones-under-300/cover.jpg
+coverImageAlt: 미니멀 데스크 위 스마트폰
+coverImageCredit: Photo by Lisa Fotios / Pexels
+updatedAt: '2026-06-26T02:57:56.000Z'
+publishedAt: '2026-06-26T02:57:56.000Z'
 ---
-
 ## 서론: 2026년 입문 스마트폰, '칩셋 티어'가 승부를 가른다
 
 2026년 상반기 30만 원대(약 $220–$300) 스마트폰 시장은 디스플레이 주사율과 배터리 용량이 기본으로 올라갔지만, **실사용 체감은 SoC(칩셋) 티어와 OS 업데이트 약속**에서 갈립니다. 동일 가격대에서 Geekbench 멀티 점수 차이가 40% 이상 나는 경우가 흔하고, 5G 밴드 누락으로 국내 통신 품질이 떨어지는 리전락 모델도 여전히 유통됩니다.
