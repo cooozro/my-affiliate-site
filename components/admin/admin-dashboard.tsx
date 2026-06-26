@@ -193,8 +193,8 @@ export function AdminDashboard() {
               {automation.replenishNote}
               <br />
               {automation.cursorDraftPending
-                ? "GitHub push 후 Cursor가 cursor-draft-request.json을 보고 임시글을 작성합니다 (OpenAI API 미사용)."
-                : `임시글이 ${automation.targetDraftCount}건 미만이면 발행 직후 Cursor 보충 요청이 생성됩니다.`}
+                ? "GitHub Actions + Cursor API가 임시글을 작성합니다 (PC 불필요, OpenAI 미사용)."
+                : "발행 후 buffer가 1건이면 GitHub Actions가 Cursor 에이전트로 자동 보충합니다."}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

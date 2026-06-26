@@ -2,19 +2,24 @@
 
 Automated draft writing, publishing, and Google Search Console indexing for AI Pick & Report.
 
-## 24/7 cloud scheduler (PC off — no VPS required)
+## 24/7 cloud (PC off)
 
-Publishing runs on **GitHub Actions** servers, not on your PC or the Next.js app.
+| Step | Where | Schedule |
+| --- | --- | --- |
+| Publish check | GitHub Actions `blog-automation.yml` | Every 15 min |
+| Publish draft | Same workflow | Random 4–6h gap, max 2/day KST |
+| Draft replenish | Same workflow + `cursor-draft-replenish.yml` backup | Right after publish; backup every 15 min if pending |
+| Indexing | Google Indexing API | On each publish |
 
-| What | Where it runs |
+All steps run on GitHub/Cursor cloud — **no PC, no VPS**.
+
+### Required secret for draft replenish
+
+| Secret | Purpose |
 | --- | --- |
-| Cron schedule (KST 11:00 & 17:00) | GitHub Actions (`ubuntu-latest`) |
-| `publish-slot` script | Same workflow job |
-| Git commit + push | GitHub → triggers Vercel redeploy |
+| `CURSOR_API_KEY` | Cursor agent on GHA writes drafts ([Dashboard → Integrations](https://cursor.com/dashboard/integrations)) |
 
-**Requirements:** GitHub repo with Actions enabled, secrets configured, default branch not blocked for `blog-automation[bot]` pushes.
-
-Next.js / Vercel **cannot** run this cron by itself — there is no always-on Node process in this repo. A VPS cron is optional only if you want a backup trigger; it is **not** needed when this workflow is active.
+Without `CURSOR_API_KEY`, publish still works but draft replenish fails until the key is added.
 
 ## Schedule (Korea Standard Time) — Plan A (Cursor writes, automation publishes)
 
@@ -33,7 +38,7 @@ Next.js / Vercel **cannot** run this cron by itself — there is no always-on No
 ## Rules
 
 - **작성:** Cursor(요미)가 `draft: true` 임시글 작성 — **OpenAI API 미사용**
-- **보충:** 발행 직후 buffer < 2이면 `data/automation/cursor-draft-request.json` 생성 → Cursor가 작성 후 `status: complete`
+- **보충:** 발행 직후 buffer < 2 → GitHub Actions가 **Cursor SDK**로 임시글 1건 작성 (PC 불필요)
 - **발행:** 하루 최대 2건, **4–6시간 랜덤 간격** (GitHub Actions)
 - **임시 보관(draft):** 항상 **2건** 유지
 - **콘텐츠 기준:** `docs/CONTENT_STANDARDS.md` (구글 가이드 · 애드센스 · SEO)
@@ -58,8 +63,9 @@ Repository → Settings → Secrets and variables → Actions:
 | --- | --- | --- |
 | `PEXELS_API_KEY` | Yes (for cover images via script) | Cover images |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
+| `CURSOR_API_KEY` | **Yes** (draft replenish on GHA) | Cursor agent writes drafts when PC is off |
 
-`OPENAI_API_KEY` is **not** used in Plan A (Cursor writes drafts).
+`OPENAI_API_KEY` is **not** used in Plan A.
 
 ### 2. GitHub Variables (optional)
 
@@ -91,26 +97,18 @@ npm run automation:publish  # publish oldest draft (local test)
 ## How it works (Plan A — publish-only)
 
 ```
-Cursor / 요미          → draft: true posts in git
-publish-slot (GHA)     → oldest draft → draft: false → GSC Indexing API (en+ko URLs)
-                       → sitemap ping → cursor-draft-request.json if buffer < 2
-Cursor (git push)      → reads request file → writes 1 draft → status: complete → push
+publish-slot (GHA)     → publish oldest draft → GSC indexing
+                       → cursor-draft-request.json if buffer < 2
+                       → run-cursor-replenish.mjs (Cursor SDK on runner)
+                       → commit + push → Vercel redeploy
+backup (GHA)           → cursor-draft-replenish.yml every 15 min if still pending
 ```
 
-### Cursor draft replenish
+### Cursor draft replenish (automated)
 
-After each publish, if fewer than 2 drafts remain, GitHub Actions writes
-`data/automation/cursor-draft-request.json` with `status: "pending"` and a suggested topic.
+After publish, `run-cursor-replenish.mjs` runs **inside GitHub Actions** using `@cursor/sdk` (local runtime on the Ubuntu runner). It reads `cursor-draft-request.json`, writes en+ko draft, fetches cover via Pexels, validates, and commits.
 
-**Cursor agent (요미) should:**
-
-1. Check `cursor-draft-request.json` when working on this repo
-2. If `status === "pending"`, write one buying-guide draft (en+ko) per `docs/CONTENT_STANDARDS.md`
-3. Run `npm run content:validate`
-4. Set request `status` to `"complete"` and push
-
-Optional: set up a **Cursor Automation** on `git push` to `main` when commit message contains
-`chore(automation): publish-slot` to run the replenish step without opening the IDE manually.
+Manual Cursor IDE is optional — only for editing or overrides.
 
 ## Manual override
 

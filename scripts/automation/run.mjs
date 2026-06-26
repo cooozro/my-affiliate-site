@@ -81,7 +81,7 @@ async function main() {
         nextPublishAtKst: state.nextPublishAt ? formatKst(state.nextPublishAt) : null,
         scheduledGapHours: state.scheduledGapHours,
         replenishNote: publishOnly
-          ? "Publish 후 buffer < 2이면 cursor-draft-request.json에 Cursor 보충 요청 생성 (OpenAI 미사용)."
+          ? "Publish 후 buffer < 2이면 GHA에서 Cursor SDK로 draft 자동 보충 (CURSOR_API_KEY 필요)."
           : null,
         cursorDraftRequest: readCursorDraftRequest(),
       }, null, 2));

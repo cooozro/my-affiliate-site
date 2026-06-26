@@ -1,0 +1,64 @@
+name: Cursor draft replenish
+
+# Backup scheduler: processes pending cursor-draft-request.json when PC is off.
+# Primary path: blog-automation.yml runs replenish right after publish.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: cursor-draft-replenish
+  cancel-in-progress: false
+
+jobs:
+  replenish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check pending request
+        id: pending
+        run: |
+          if [ -f data/automation/cursor-draft-request.json ] && grep -q '"status": "pending"' data/automation/cursor-draft-request.json; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "No pending cursor draft request"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.pending.outputs.needed == 'true'
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+        if: steps.pending.outputs.needed == 'true'
+
+      - name: Run Cursor replenish
+        if: steps.pending.outputs.needed == 'true'
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/automation/run-cursor-replenish.mjs
+
+      - name: Validate content
+        if: steps.pending.outputs.needed == 'true'
+        run: npm run content:validate
+
+      - name: Commit and push draft
+        if: steps.pending.outputs.needed == 'true'
+        run: |
+          git config user.name "blog-automation[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts public/images/posts data/automation/cursor-draft-request.json data/automation/state.json
+          if git diff --staged --quiet; then
+            echo "No draft changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(automation): cursor-draft-replenish"
+          git push

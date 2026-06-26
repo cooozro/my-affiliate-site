@@ -24,10 +24,10 @@ Scheduled publishing and Google Search Console indexing via GitHub Actions. See 
 
 - **Writing:** Cursor (요미) — `draft: true`, **not** OpenAI API
 - **Publishing:** GHA every 15 min check, 4–6h random gaps, 2/day KST cap
-- **Replenish:** After publish, `data/automation/cursor-draft-request.json` signals Cursor to write 1 draft
+- **Replenish:** GitHub Actions runs `run-cursor-replenish.mjs` with Cursor SDK (`CURSOR_API_KEY`)
 - **Buffer:** Always keep 2 drafts ready
-- Commands: `npm run automation:status`, `automation:publish`
+- Commands: `npm run automation:status`, `automation:publish`, `automation:replenish`
 
-### Draft replenish priority
+### Draft replenish priority (local IDE only)
 
-When `data/automation/cursor-draft-request.json` has `"status": "pending"`, write the requested buying-guide draft **before other tasks**. Follow `docs/CONTENT_STANDARDS.md`, run `npm run content:validate`, then set request status to `"complete"` and push.
+When editing in Cursor and `cursor-draft-request.json` is `pending`, you may write the draft manually instead of waiting for GHA.

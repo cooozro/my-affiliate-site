@@ -12,9 +12,11 @@
     "automation:write": "node scripts/automation/run.mjs write",
     "automation:publish": "node scripts/automation/run.mjs publish",
     "automation:buffer": "node scripts/automation/run.mjs buffer",
-    "automation:status": "node scripts/automation/run.mjs status"
+    "automation:status": "node scripts/automation/run.mjs status",
+    "automation:replenish": "node scripts/automation/run-cursor-replenish.mjs"
   },
   "dependencies": {
+    "@cursor/sdk": "^1.0.22",
     "gray-matter": "^4.0.3",
     "next": "16.2.9",
     "next-themes": "^0.4.6",

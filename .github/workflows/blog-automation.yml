@@ -62,6 +62,11 @@ jobs:
           else
             echo "published=false" >> "$GITHUB_OUTPUT"
           fi
+          if grep -q "Cursor draft replenish queued:" "$LOG_FILE"; then
+            echo "replenish_needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "replenish_needed=false" >> "$GITHUB_OUTPUT"
+          fi
           if grep -q "Publish skipped:" "$LOG_FILE"; then
             grep "Publish skipped:" "$LOG_FILE" || true
           fi
@@ -71,6 +76,13 @@ jobs:
           if grep -q "No drafts to publish" "$LOG_FILE"; then
             grep "No drafts to publish" "$LOG_FILE" || true
           fi
+
+      - name: Cursor draft replenish
+        if: success() && steps.task.outputs.name != 'status' && steps.automation.outputs.replenish_needed == 'true'
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/automation/run-cursor-replenish.mjs
 
       - name: Validate content
         if: success() && steps.task.outputs.name != 'status'

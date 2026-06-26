@@ -82,10 +82,10 @@ export function getAutomationStatus(): AutomationStatus {
   }
 
   const replenishNote = cursorDraftPending
-    ? `발행 후 Cursor(요미) 임시글 보충 대기 중${cursorDraftTopic ? ` — 주제: ${cursorDraftTopic}` : ""}.`
+    ? `GitHub Actions가 Cursor 에이전트로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. PC 꺼져도 자동 실행.`
     : draftCount < TARGET_DRAFT_COUNT
-      ? "임시글 버퍼가 부족합니다. Cursor에서 draft를 작성하거나, 다음 발행 시 자동으로 보충 요청이 생성됩니다."
-      : "임시글 버퍼 충분. 발행 후 부족하면 Cursor 보충 요청이 자동 생성됩니다.";
+      ? "임시글 버퍼 부족. 발행 시 GitHub Actions가 Cursor로 자동 보충합니다."
+      : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
 
   return {
     mode: "publish-only",
