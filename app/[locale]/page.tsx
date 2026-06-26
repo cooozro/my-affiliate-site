@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/home-hero";
 import { PostCard } from "@/components/post-card";
+import { CONTENT_SHELL } from "@/lib/layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
@@ -49,7 +50,7 @@ export default async function HomePage({ params }: PageProps) {
     <>
       <HomeHero description={en.meta.siteDescription} />
 
-      <div className="mx-auto max-w-3xl px-6 pb-12 pt-2">
+      <div className={`pb-12 pt-2 ${CONTENT_SHELL}`}>
         <section aria-labelledby="latest-posts-heading">
         <h2
           id="latest-posts-heading"

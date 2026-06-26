@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CONTENT_SHELL } from "@/lib/layout";
 import { siteConfig } from "@/lib/site";
 
 type HomeHeroProps = {
@@ -22,9 +23,9 @@ export function HomeHero({ description }: HomeHeroProps) {
         aria-hidden
       />
       <div className="absolute inset-0 flex items-end">
-        <div className="mx-auto w-full max-w-6xl px-6 pb-8 sm:px-10 sm:pb-10 md:pb-12 lg:px-12">
+        <div className={`flex w-full items-end ${CONTENT_SHELL} pb-8 sm:pb-10 md:pb-12`}>
           <h1 className="sr-only">{siteConfig.name}</h1>
-          <p className="max-w-2xl font-sans text-sm leading-relaxed text-white/90 sm:text-base md:text-lg lg:text-xl">
+          <p className="max-w-3xl font-sans text-sm leading-relaxed text-white/90 sm:text-base md:text-lg lg:text-xl">
             {description}
           </p>
         </div>

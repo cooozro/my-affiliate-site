@@ -12,7 +12,7 @@ export function PublicationTagline({
 }: PublicationTaglineProps) {
   return (
     <p
-      className={`mx-auto max-w-2xl border-t border-border/50 px-2 pt-8 text-center font-sans text-sm leading-relaxed text-muted-foreground sm:px-4 sm:pt-10 sm:text-[0.9375rem] ${className}`.trim()}
+      className={`w-full border-t border-border/50 px-2 pt-8 text-center font-sans text-sm leading-relaxed text-balance text-muted-foreground sm:px-4 sm:pt-10 sm:text-[0.9375rem] ${className}`.trim()}
     >
       {publicationTagline[locale]}
     </p>

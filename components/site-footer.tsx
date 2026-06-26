@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CONTENT_SHELL } from "@/lib/layout";
 import type { Locale } from "@/lib/i18n/config";
 import { localizedPath } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/messages/en";
@@ -26,7 +27,7 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
 
   return (
     <footer className="mt-auto border-t border-border bg-surface">
-      <div className="mx-auto max-w-3xl px-6 py-10">
+      <div className={`py-10 ${CONTENT_SHELL}`}>
         <p className="font-sans text-sm font-medium text-foreground">
           {siteConfig.name}
         </p>
@@ -57,7 +58,7 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             ),
           )}
         </nav>
-        <p className="mx-auto mt-8 max-w-xl border-t border-border/50 pt-6 text-center font-sans text-sm leading-relaxed text-muted-foreground sm:text-[0.9375rem]">
+        <p className="mx-auto mt-8 w-full max-w-3xl border-t border-border/50 pt-6 text-center font-sans text-sm leading-relaxed text-balance text-muted-foreground sm:text-[0.9375rem]">
           {dict.footer.publicationTagline}
         </p>
         <p className="mt-6 text-center text-xs text-muted-foreground">

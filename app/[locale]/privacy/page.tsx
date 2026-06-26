@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ARTICLE_SHELL } from "@/lib/layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
@@ -44,7 +45,7 @@ export default async function PrivacyPage({ params }: PageProps) {
   const { sections } = dict.privacy;
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-12">
+    <article className={ARTICLE_SHELL}>
       <h1 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
         {dict.privacy.title}
       </h1>

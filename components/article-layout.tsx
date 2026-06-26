@@ -3,6 +3,7 @@ import { ArticleProtection } from "@/components/article-protection";
 import { ArticleShare } from "@/components/article-share";
 import { MarkdownContent } from "@/components/markdown-content";
 import { PublicationTagline } from "@/components/publication-tagline";
+import { ARTICLE_SHELL } from "@/lib/layout";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
 import { splitAfterRelatedGuides } from "@/lib/split-article-content";
@@ -38,7 +39,7 @@ export function ArticleLayout({
   const contentParts = splitAfterRelatedGuides(post.content, locale);
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-12">
+    <article className={ARTICLE_SHELL}>
       <header className="mb-6 border-b border-border/60 pb-6">
         <time
           dateTime={post.date}
