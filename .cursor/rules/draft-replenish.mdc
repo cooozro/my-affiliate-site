@@ -1,0 +1,20 @@
+---
+description: Plan A draft replenish — write pending cursor-draft-request before other work
+globs:
+  - data/automation/cursor-draft-request.json
+alwaysApply: true
+---
+
+# Cursor draft replenish (Plan A)
+
+When `data/automation/cursor-draft-request.json` has `"status": "pending"`:
+
+1. Read `topic` and `instructions` in that file.
+2. Write **one** bilingual buying-guide (`en.md` + `ko.md`, `draft: true`) per `docs/CONTENT_STANDARDS.md`.
+3. Use `scripts/lib/editorial-standards.mjs` — no fake seller API claims.
+4. Add cover image (`npm run content:image` with slug + imageQuery if `PEXELS_API_KEY` is set).
+5. Run `npm run content:validate`.
+6. Update the request file: `"status": "complete"`, `writtenSlug`, `completedAt`.
+7. Commit and push with the new draft.
+
+Do **not** use OpenAI API for this replenish flow.

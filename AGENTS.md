@@ -20,8 +20,14 @@ Images: `npm run content:image` with `PEXELS_API_KEY` (Pexels free API).
 
 ## Blog automation
 
-Scheduled writing & publishing via GitHub Actions. See **`docs/BLOG_AUTOMATION.md`**.
+Scheduled publishing and Google Search Console indexing via GitHub Actions. See **`docs/BLOG_AUTOMATION.md`**.
 
-- 2 drafts/day (KST morning & evening), 2 publishes/day (6h+ apart), 2-draft buffer always
-- Google Indexing API on publish
-- Commands: `npm run automation:status`, `automation:buffer`, `automation:write`, `automation:publish`
+- **Writing:** Cursor (요미) — `draft: true`, **not** OpenAI API
+- **Publishing:** GHA every 15 min check, 4–6h random gaps, 2/day KST cap
+- **Replenish:** After publish, `data/automation/cursor-draft-request.json` signals Cursor to write 1 draft
+- **Buffer:** Always keep 2 drafts ready
+- Commands: `npm run automation:status`, `automation:publish`
+
+### Draft replenish priority
+
+When `data/automation/cursor-draft-request.json` has `"status": "pending"`, write the requested buying-guide draft **before other tasks**. Follow `docs/CONTENT_STANDARDS.md`, run `npm run content:validate`, then set request status to `"complete"` and push.

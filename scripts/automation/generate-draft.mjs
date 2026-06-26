@@ -161,21 +161,3 @@ export async function maintainDraftBuffer(options = {}) {
   return created;
 }
 
-/** Fill missing drafts right after a publish (bypasses daily write cap). */
-export async function replenishAfterPublish() {
-  const needed = TARGET_DRAFT_BUFFER - countDrafts();
-  if (needed <= 0) {
-    console.log(`Draft buffer full (${countDrafts()}/${TARGET_DRAFT_BUFFER})`);
-    return 0;
-  }
-
-  if (!process.env.OPENAI_API_KEY) {
-    console.warn(
-      `Draft buffer ${countDrafts()}/${TARGET_DRAFT_BUFFER} — set OPENAI_API_KEY in GitHub Secrets to auto-replenish after publish.`,
-    );
-    return 0;
-  }
-
-  console.log(`Replenishing ${needed} draft(s) after publish...`);
-  return maintainDraftBuffer({ bypassWriteCap: true, maxCreate: needed });
-}

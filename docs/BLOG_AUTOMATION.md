@@ -32,9 +32,10 @@ Next.js / Vercel **cannot** run this cron by itself — there is no always-on No
 
 ## Rules
 
-- **작성:** 발행 직후 임시글 **자동 보충** (`OPENAI_API_KEY` 필요, 목표 2건)
-- **발행:** 하루 최대 2건, **4–6시간 랜덤 간격**
-- **임시 보관(draft):** 항상 **2건** 유지 — 발행 후 OpenAI가 1건씩 보충
+- **작성:** Cursor(요미)가 `draft: true` 임시글 작성 — **OpenAI API 미사용**
+- **보충:** 발행 직후 buffer < 2이면 `data/automation/cursor-draft-request.json` 생성 → Cursor가 작성 후 `status: complete`
+- **발행:** 하루 최대 2건, **4–6시간 랜덤 간격** (GitHub Actions)
+- **임시 보관(draft):** 항상 **2건** 유지
 - **콘텐츠 기준:** `docs/CONTENT_STANDARDS.md` (구글 가이드 · 애드센스 · SEO)
 
 ## Topics / categories
@@ -57,13 +58,13 @@ Repository → Settings → Secrets and variables → Actions:
 | --- | --- | --- |
 | `PEXELS_API_KEY` | Yes (for cover images via script) | Cover images |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
-| `OPENAI_API_KEY` | Yes (auto-replenish drafts) | Draft generation after each publish |
+
+`OPENAI_API_KEY` is **not** used in Plan A (Cursor writes drafts).
 
 ### 2. GitHub Variables (optional)
 
 | Variable | Default |
 | --- | --- |
-| `OPENAI_MODEL` | `gpt-4o-mini` |
 | `NEXT_PUBLIC_SITE_URL` | `https://www.aipick.shop` |
 
 ### 3. Google Search Console Indexing API
@@ -78,37 +79,38 @@ Without GSC credentials, posts still publish; indexing is skipped with a warning
 
 ### 4. Initial draft buffer
 
-Before the first publish cron, seed 2 drafts:
-
-```bash
-npm run automation:buffer
-# repeat if needed, or run twice via GitHub Actions → workflow_dispatch → buffer
-```
-
-Or run **workflow_dispatch → buffer** twice in GitHub Actions UI.
+Before the first publish cron, seed 2 drafts in **Cursor** (`draft: true`, en+ko per post).
 
 ## Local commands
 
 ```bash
-npm run automation:status   # queue & daily counters
-npm run automation:write    # generate 1 draft
-npm run automation:publish  # publish oldest draft
-npm run automation:buffer   # fill drafts up to 2
+npm run automation:status   # queue & daily counters + cursor-draft-request
+npm run automation:publish  # publish oldest draft (local test)
 ```
-
-Requires `.env.local` with the same keys as GitHub Secrets.
 
 ## How it works (Plan A — publish-only)
 
 ```
-Cursor / 요미          → draft: true posts in git (manual)
+Cursor / 요미          → draft: true posts in git
 publish-slot (GHA)     → oldest draft → draft: false → GSC Indexing API (en+ko URLs)
-                       → sitemap ping → draft buffer should stay at 2 (refill in Cursor)
+                       → sitemap ping → cursor-draft-request.json if buffer < 2
+Cursor (git push)      → reads request file → writes 1 draft → status: complete → push
 ```
 
-Files changed are committed by GitHub Actions → Vercel redeploys on push.
+### Cursor draft replenish
 
-Legacy full-auto mode (`write` + OpenAI) is disabled; `AUTOMATION_MODE=publish-only` in the workflow.
+After each publish, if fewer than 2 drafts remain, GitHub Actions writes
+`data/automation/cursor-draft-request.json` with `status: "pending"` and a suggested topic.
+
+**Cursor agent (요미) should:**
+
+1. Check `cursor-draft-request.json` when working on this repo
+2. If `status === "pending"`, write one buying-guide draft (en+ko) per `docs/CONTENT_STANDARDS.md`
+3. Run `npm run content:validate`
+4. Set request `status` to `"complete"` and push
+
+Optional: set up a **Cursor Automation** on `git push` to `main` when commit message contains
+`chore(automation): publish-slot` to run the replenish step without opening the IDE manually.
 
 ## Manual override
 

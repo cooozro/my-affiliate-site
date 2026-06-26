@@ -1,6 +1,6 @@
 {
   "topicIndex": 0,
-  "usedTopicIds": [],
+  "usedTopicIds": ["budget-monitors"],
   "lastPublishAt": "2026-06-26T02:57:56.989Z",
   "nextPublishAt": "2026-06-26T07:01:07.692Z",
   "scheduledGapHours": 4.05,

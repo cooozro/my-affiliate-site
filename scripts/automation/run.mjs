@@ -20,7 +20,8 @@ import {
   MAX_PUBLISH_PER_DAY,
   TARGET_DRAFT_COUNT,
 } from "../lib/publish-schedule.mjs";
-import { loadState, saveState } from "./state.mjs";
+import { readCursorDraftRequest } from "./cursor-draft-request.mjs";
+import { loadState } from "./state.mjs";
 
 const task = (process.argv[2] ?? "status").trim() || "status";
 const publishOnly = process.env.AUTOMATION_MODE === "publish-only";
@@ -80,8 +81,9 @@ async function main() {
         nextPublishAtKst: state.nextPublishAt ? formatKst(state.nextPublishAt) : null,
         scheduledGapHours: state.scheduledGapHours,
         replenishNote: publishOnly
-          ? "Publish 후 OPENAI_API_KEY가 있으면 draft 자동 보충."
+          ? "Publish 후 buffer < 2이면 cursor-draft-request.json에 Cursor 보충 요청 생성 (OpenAI 미사용)."
           : null,
+        cursorDraftRequest: readCursorDraftRequest(),
       }, null, 2));
       break;
     }

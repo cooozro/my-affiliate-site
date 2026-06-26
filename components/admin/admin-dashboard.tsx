@@ -27,6 +27,8 @@ type AutomationStatus = {
   targetDraftCount: number;
   needsReplenish: boolean;
   replenishNote: string;
+  cursorDraftPending: boolean;
+  cursorDraftTopic: string | null;
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
@@ -190,8 +192,9 @@ export function AdminDashboard() {
             <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-800 dark:text-amber-200">
               {automation.replenishNote}
               <br />
-              임시글이 {automation.targetDraftCount}건 미만입니다. 다음 발행 후 자동
-              보충되거나, Cursor에서 수동으로 draft를 추가할 수 있습니다.
+              {automation.cursorDraftPending
+                ? "GitHub push 후 Cursor가 cursor-draft-request.json을 보고 임시글을 작성합니다 (OpenAI API 미사용)."
+                : `임시글이 ${automation.targetDraftCount}건 미만이면 발행 직후 Cursor 보충 요청이 생성됩니다.`}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

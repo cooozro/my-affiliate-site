@@ -27,6 +27,8 @@ export type AutomationStatus = {
   targetDraftCount: number;
   needsReplenish: boolean;
   replenishNote: string;
+  cursorDraftPending: boolean;
+  cursorDraftTopic: string | null;
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
@@ -57,15 +59,42 @@ export function getAutomationStatus(): AutomationStatus {
   const nextPublishAt =
     typeof state.nextPublishAt === "string" ? state.nextPublishAt : null;
 
+  const requestPath = path.join(
+    process.cwd(),
+    "data",
+    "automation",
+    "cursor-draft-request.json",
+  );
+  let cursorDraftPending = false;
+  let cursorDraftTopic: string | null = null;
+  if (fs.existsSync(requestPath)) {
+    try {
+      const request = JSON.parse(fs.readFileSync(requestPath, "utf8")) as {
+        status?: string;
+        topic?: { id?: string };
+      };
+      cursorDraftPending = request.status === "pending";
+      cursorDraftTopic =
+        typeof request.topic?.id === "string" ? request.topic.id : null;
+    } catch {
+      cursorDraftPending = false;
+    }
+  }
+
+  const replenishNote = cursorDraftPending
+    ? `발행 후 Cursor(요미) 임시글 보충 대기 중${cursorDraftTopic ? ` — 주제: ${cursorDraftTopic}` : ""}.`
+    : draftCount < TARGET_DRAFT_COUNT
+      ? "임시글 버퍼가 부족합니다. Cursor에서 draft를 작성하거나, 다음 발행 시 자동으로 보충 요청이 생성됩니다."
+      : "임시글 버퍼 충분. 발행 후 부족하면 Cursor 보충 요청이 자동 생성됩니다.";
+
   return {
     mode: "publish-only",
     draftCount,
     targetDraftCount: TARGET_DRAFT_COUNT,
-    needsReplenish: draftCount < TARGET_DRAFT_COUNT,
-    replenishNote:
-      process.env.OPENAI_API_KEY
-        ? "발행 직후 OPENAI로 임시글을 자동 보충합니다 (목표 2건)."
-        : "OPENAI_API_KEY가 없으면 발행 후 자동 보충이 되지 않습니다. GitHub Secrets에 키를 추가하세요.",
+    needsReplenish: draftCount < TARGET_DRAFT_COUNT || cursorDraftPending,
+    replenishNote,
+    cursorDraftPending,
+    cursorDraftTopic,
     nextPublishAt,
     nextPublishAtKst: nextPublishAt ? formatKst(nextPublishAt) : null,
     scheduledGapHours:

@@ -5,7 +5,8 @@ import {
   validatePostFiles,
   writePost,
 } from "./posts-fs.mjs";
-import { maintainDraftBuffer, replenishAfterPublish } from "./generate-draft.mjs";
+import { maintainDraftBuffer } from "./generate-draft.mjs";
+import { queueCursorDraftReplenish } from "./cursor-draft-request.mjs";
 import {
   ensureNextPublishAt,
   formatKst,
@@ -131,9 +132,9 @@ export async function publishOneDraft(options = {}) {
   );
 
   const remainingDrafts = listDrafts().length;
-  if (remainingDrafts < TARGET_DRAFT_COUNT && !process.env.OPENAI_API_KEY) {
+  if (remainingDrafts < TARGET_DRAFT_COUNT) {
     console.log(
-      `Draft buffer ${remainingDrafts}/${TARGET_DRAFT_COUNT} — set OPENAI_API_KEY to auto-replenish after publish.`,
+      `Draft buffer ${remainingDrafts}/${TARGET_DRAFT_COUNT} — queuing Cursor draft replenish (Plan A).`,
     );
   }
 
@@ -143,10 +144,7 @@ export async function publishOneDraft(options = {}) {
   ].slice(-50);
   saveState(state);
 
-  const created = await replenishAfterPublish();
-  if (created > 0) {
-    console.log(`Replenished ${created} draft(s); buffer now ${listDrafts().length}/${TARGET_DRAFT_COUNT}`);
-  }
+  queueCursorDraftReplenish(slug);
 
   return slug;
 }
