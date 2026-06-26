@@ -46,8 +46,8 @@ Content requirements (each locale):
 - TOP 5 comparison table
 - Scenario matrix
 - Five checks before you buy
+- Related guides section with /en/blog/ or /ko/blog/ internal links
 - Final Verdict with Who should buy / Who should skip tables (see BUYING_GUIDE_TEMPLATE.md)
-- Conclusion section
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:

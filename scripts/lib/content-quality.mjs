@@ -21,7 +21,7 @@ const FORBIDDEN_PATTERNS = [
 const METHODOLOGY_PATTERN =
   /##\s*(분석 방법론|Analysis methodology|Methodology)/i;
 const EDITORS_NOTE_PATTERN =
-  /##\s*(Editor'?s Note|에디터 노트)/i;
+  /##\s*(Editorial Overview|편집부 개요)/i;
 const FINAL_VERDICT_PATTERN =
   /##\s*(Final Verdict|최종 평가)/i;
 const WHO_SHOULD_BUY_PATTERN =
@@ -122,7 +122,11 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
   }
 
   if (!EDITORS_NOTE_PATTERN.test(body)) {
-    issues.push(`${label}: missing Editor's Note section (see BUYING_GUIDE_TEMPLATE.md)`);
+    issues.push(`${label}: missing Editorial Overview section (see BUYING_GUIDE_TEMPLATE.md)`);
+  }
+
+  if (!/##\s*(Related guides|관련 가이드)/i.test(body)) {
+    issues.push(`${label}: missing Related guides / 관련 가이드 internal links section`);
   }
 
   if (!FINAL_VERDICT_PATTERN.test(body)) {

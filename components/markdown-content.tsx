@@ -69,9 +69,9 @@ const markdownComponents: Components = {
     </blockquote>
   ),
   table: ({ children, ...props }) => (
-    <div className="mb-6 overflow-x-auto">
+    <div className="-mx-4 mb-6 overflow-x-auto px-4 sm:mx-0 sm:px-0">
       <table
-        className="w-full border-collapse font-sans text-sm text-foreground/90"
+        className="w-full min-w-[32rem] border-collapse font-sans text-xs leading-snug text-foreground/90 sm:min-w-0 sm:text-sm sm:leading-normal"
         {...props}
       >
         {children}
@@ -80,14 +80,17 @@ const markdownComponents: Components = {
   ),
   th: ({ children, ...props }) => (
     <th
-      className="border border-border bg-muted px-4 py-2 text-left font-semibold"
+      className="border border-border bg-muted px-2 py-2 text-left align-top font-semibold sm:px-4 sm:py-2.5"
       {...props}
     >
       {children}
     </th>
   ),
   td: ({ children, ...props }) => (
-    <td className="border border-border px-4 py-2" {...props}>
+    <td
+      className="break-words border border-border px-2 py-2 align-top sm:px-4 sm:py-2.5"
+      {...props}
+    >
       {children}
     </td>
   ),

@@ -32,4 +32,4 @@ Scheduled publishing and Google Search Console indexing via GitHub Actions. See 
 
 When editing in Cursor and `cursor-draft-request.json` is `pending`, you may write the draft manually instead of waiting for GHA.
 
-Buying-guide body format: **`docs/BUYING_GUIDE_TEMPLATE.md`** (Editor's Note, practical insights, Final Verdict buy/skip tables).
+Buying-guide body format: **`docs/BUYING_GUIDE_TEMPLATE.md`** (Editorial Overview, analysis takeaways, related guides, Final Verdict).

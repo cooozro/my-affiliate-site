@@ -1,96 +1,111 @@
-# Buying Guide — Professional Review Format
+# Buying Guide — AdSense-Optimized Review Format
 
-Use this structure for every **buying-guide** post (`contentProfile: buying-guide`). Required for AdSense-quality E-E-A-T reviews.
+Use for every **buying-guide** post (`contentProfile: buying-guide`). **English is the primary editorial language**; Korean (`ko.md`) should be a faithful translation of the English body.
+
+## AdSense pre-approval rules
+
+- **No ad code** in posts: no `<!-- ad-break -->`, AdSense scripts, or ad placeholders.
+- **No personal operator details**: no first-person career notes, employer names, or “I wrote this because…” framing.
+- **Publication voice only**: third-person editorial (“As an independent tech review publication, we analyze…”).
 
 ## Section order
 
-1. **Editor's Note** / **에디터 노트** — first `##` heading in body (right below title in frontmatter)
+1. **Editorial Overview** / **편집부 개요** — first `##` in body
 2. **Introduction** / **서론**
 3. **Analysis methodology** / **분석 방법론**
 4. **TOP 5 comparison table**
-5. **Product sections** (`## 1. Model name`) — one per pick
+5. **Product sections** (`## 1. Model name`)
 6. **Scenario matrix**
-7. **Five checks before you buy** (numbered list, ≥3 items)
-8. **Final Verdict** / **최종 평가** — not a thin summary; include Who should buy / Who should skip tables
+7. **Related guides** / **관련 가이드** — internal links to other categories on this site
+8. **Five checks before you buy** (numbered list, ≥3 items)
+9. **Final Verdict** / **최종 평가** — Who should buy / Who should skip tables
 
 ---
 
-## Editor's Note (required)
+## Editorial Overview (required)
 
-2–3 sentences. First person, operator insight. Explain **why** this category was analyzed and one honest observation from cross-checking public data.
+2–3 sentences. **Independent publication voice** — why this category was analyzed and one data-driven observation. No personal biography.
 
 **EN example:**
 
 ```markdown
-## Editor's Note
+## Editorial Overview
 
-> As someone who has compared hundreds of power-bank spec sheets for this site, I kept seeing shoppers chase mAh labels while airlines and fast-charge limits really depend on **watt-hours and PD output**. I wrote this guide to turn those dry numbers into carry decisions you can trust—not brand hype.
+> As an independent tech review publication, we cross-check public manufacturer specs and listed retail prices for portable power banks. In our analysis, **watt-hours (Wh) and USB-C PD output** predict airline compliance and real-world charge speed more reliably than mAh labels alone.
 ```
 
-**KO example:**
+**KO example (translate from EN, not a separate angle):**
 
 ```markdown
-## 에디터 노트
+## 편집부 개요
 
-> 수백 개의 보조배터리 스펙시트를 교차 검증하다 보니, 많은 분이 mAh 숫자만 보고 고르시더군요. 실제로는 **Wh(와트시)와 PD 와트**가 비행기 휴대와 충전 속도를 좌우합니다. 이 글은 마케팅 문구가 아닌, 검증 가능한 수치로 선택을 돕기 위해 썼습니다.
+> AI Pick & Report는 독립 기술 리뷰 매체로서 보조배터리 비교 시 제조사 공개 스펙과 공식 판매가를 교차 검증합니다. 분석 결과 **Wh(와트시)와 PD 와트**가 mAh 표기보다 항공기 휴대 적합성과 실제 충전 속도를 더 정확히 반영합니다.
 ```
 
 ---
 
 ## Product section (each H2)
 
-After **Strengths** / **Weaknesses**, add one line:
+After **Strengths** / **Weaknesses**, add one analytical line (no personal voice):
 
 | EN | KO |
 | --- | --- |
-| `**Practical insight:** For the average user, this translates to…` | `**실사용 인사이트:** 일반 사용자 입장에서는 이렇게 체감됩니다.…` |
+| `**Analysis takeaway:** For most buyers, this translates to…` | `**분석 요약:** 일반적인 사용 환경에서는…` |
 
-Tone: informative, trustworthy, helpful—not salesy. Tie specs to daily life.
+---
+
+## Related guides (required when relevant)
+
+Link to other published guides using locale paths: `/en/blog/{slug}` or `/ko/blog/{slug}`.
+
+```markdown
+## Related guides
+
+- [Sub-$300 smartphones](/en/blog/2026-budget-smartphones-under-300) — match PD output to your phone's fast-charge rating
+- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — portable audio gear that shares the same travel bag
+```
 
 ---
 
 ## Final Verdict (required)
 
-Replace a one-paragraph-only conclusion with:
+Use **two-column tables** (Model | Buy if / Skip if). Tables scroll horizontally on mobile via site CSS—keep rows concise.
 
 ```markdown
 ## Final Verdict
 
-[1–2 sentences: overall market takeaway in friendly, confident tone]
+[1–2 sentences: category takeaway in neutral editorial tone]
 
 ### Who should buy?
 
 | Model | Buy if you… |
 | --- | --- |
 | **Model A** | … |
-| **Model B** | … |
 
 ### Who should skip?
 
 | Model | Skip if you… |
 | --- | --- |
-| **Model A** | … |
 | **Model C** | … |
-
-[Optional closing line: remind reader to match use case before checkout; use {{today}} placeholders if liveData]
 ```
 
-Korean headings: `## 최종 평가`, `### 이런 분께 추천`, `### 이런 분은 패스`
+Korean: `## 최종 평가`, `### 이런 분께 추천`, `### 이런 분은 패스`
 
 ---
 
-## Tone
+## Tone (English-first)
 
-- **Informative** first; specs support the story.
-- **Trustworthy & helpful** — admit trade-offs, avoid hype.
-- Say **value for money** / **가성비** naturally in context, not in every sentence.
-- No seller API claims; cite public specs and reviews only.
+- Write **EN** as a natural US/UK tech review publication.
+- **KO** mirrors EN structure and claims; avoid Korea-only angles unless the EN version includes them.
+- Informative, trustworthy, helpful — no hype, no affiliate CTAs.
 
 ---
 
-## Checklist before publish
+## Checklist
 
-- [ ] `## Editor's Note` or `## 에디터 노트` at top of body
-- [ ] Practical insight in every product `## N.` section
+- [ ] No ad placeholders or scripts in body
+- [ ] `## Editorial Overview` / `## 편집부 개요` (publication voice, no personal info)
+- [ ] `**Analysis takeaway:**` / `**분석 요약:**` in every product section
+- [ ] `## Related guides` with internal links where relevant
 - [ ] `## Final Verdict` with buy/skip tables
-- [ ] `npm run content:validate` passes (2,500+ chars, methodology, table, checklist)
+- [ ] `npm run content:validate`
