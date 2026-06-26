@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontClassNames } from "@/lib/fonts";
 import { isValidLocale, locales, ogLocales, type Locale } from "@/lib/i18n/config";
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter locale={locale} dict={dict} />
         </ThemeProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );

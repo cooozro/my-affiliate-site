@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdminNavLink } from "@/components/admin/admin-nav-link";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import type { Locale } from "@/lib/i18n/config";
@@ -43,6 +44,7 @@ export function SiteHeader({ locale, dict }: SiteHeaderProps) {
           >
             {dict.nav.contact}
           </Link>
+          <AdminNavLink />
           <LocaleSwitcher />
           <ThemeToggle />
         </nav>

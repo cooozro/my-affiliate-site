@@ -1,0 +1,172 @@
+import "server-only";
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const POSTS_DIR = path.join(process.cwd(), "content", "posts");
+
+export type AdminPostRow = {
+  slug: string;
+  titleEn: string;
+  titleKo: string;
+  draft: boolean;
+  date: string;
+  updatedAt?: string;
+  publishedAt?: string;
+  createdAt?: string;
+  hasEn: boolean;
+  hasKo: boolean;
+  liveData: boolean;
+};
+
+function listSlugDirs(): string[] {
+  if (!fs.existsSync(POSTS_DIR)) return [];
+  return fs
+    .readdirSync(POSTS_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
+}
+
+export function readPostFile(slug: string, locale: "en" | "ko") {
+  const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
+  const raw = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(raw);
+  return { data, content: content.trim(), filePath };
+}
+
+export function writePostFile(
+  slug: string,
+  locale: "en" | "ko",
+  data: Record<string, unknown>,
+  content: string,
+) {
+  const dir = path.join(POSTS_DIR, slug);
+  fs.mkdirSync(dir, { recursive: true });
+  const filePath = path.join(dir, `${locale}.md`);
+  fs.writeFileSync(filePath, matter.stringify(content, data), "utf8");
+  return filePath;
+}
+
+export function listPostsForAdmin(): AdminPostRow[] {
+  return listSlugDirs()
+    .map((slug) => {
+      const enPath = path.join(POSTS_DIR, slug, "en.md");
+      const koPath = path.join(POSTS_DIR, slug, "ko.md");
+      const hasEn = fs.existsSync(enPath);
+      const hasKo = fs.existsSync(koPath);
+
+      let titleEn = slug;
+      let titleKo = slug;
+      let draft = false;
+      let date = "";
+      let updatedAt: string | undefined;
+      let publishedAt: string | undefined;
+      let createdAt: string | undefined;
+      let liveData = false;
+
+      if (hasEn) {
+        const en = readPostFile(slug, "en");
+        titleEn = String(en.data.title ?? slug);
+        draft = Boolean(en.data.draft);
+        date = String(en.data.date ?? "");
+        updatedAt = en.data.updatedAt ? String(en.data.updatedAt) : undefined;
+        publishedAt = en.data.publishedAt
+          ? String(en.data.publishedAt)
+          : undefined;
+        createdAt = en.data.createdAt ? String(en.data.createdAt) : undefined;
+        liveData = Boolean(en.data.liveData);
+      }
+
+      if (hasKo) {
+        const ko = readPostFile(slug, "ko");
+        titleKo = String(ko.data.title ?? slug);
+        if (!hasEn) {
+          draft = Boolean(ko.data.draft);
+          date = String(ko.data.date ?? "");
+        }
+      }
+
+      return {
+        slug,
+        titleEn,
+        titleKo,
+        draft,
+        date,
+        updatedAt,
+        publishedAt,
+        createdAt,
+        hasEn,
+        hasKo,
+        liveData,
+      };
+    })
+    .sort((a, b) => {
+      const aTime = new Date(a.updatedAt ?? a.date ?? 0).getTime();
+      const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();
+      return bTime - aTime;
+    });
+}
+
+function kstDateString(): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+export function publishPostLocally(slug: string) {
+  const publishDate = kstDateString();
+  const updatedAt = new Date().toISOString();
+
+  for (const locale of ["en", "ko"] as const) {
+    const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
+    if (!fs.existsSync(filePath)) continue;
+
+    const { data, content } = readPostFile(slug, locale);
+    const next: Record<string, unknown> = {
+      ...data,
+      draft: false,
+      date: publishDate,
+      updatedAt,
+      publishedAt: updatedAt,
+    };
+    delete next.createdAt;
+    writePostFile(slug, locale, next, content);
+  }
+}
+
+export function draftPostLocally(slug: string) {
+  const updatedAt = new Date().toISOString();
+
+  for (const locale of ["en", "ko"] as const) {
+    const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
+    if (!fs.existsSync(filePath)) continue;
+
+    const { data, content } = readPostFile(slug, locale);
+    const next: Record<string, unknown> = {
+      ...data,
+      draft: true,
+      updatedAt,
+      createdAt: data.createdAt ?? updatedAt,
+    };
+    writePostFile(slug, locale, next, content);
+  }
+}
+
+export function deletePostLocally(slug: string) {
+  const dir = path.join(POSTS_DIR, slug);
+  if (fs.existsSync(dir)) {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+export function slugExists(slug: string): boolean {
+  return fs.existsSync(path.join(POSTS_DIR, slug));
+}
+
+export function usesRemotePostStore(): boolean {
+  return process.env.VERCEL === "1" && Boolean(process.env.GITHUB_TOKEN?.trim());
+}
