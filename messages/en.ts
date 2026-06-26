@@ -34,6 +34,9 @@ const en = {
       copyLink: "Copy link",
       copied: "Copied!",
       copyFallback: "Copy this link:",
+      feedHeading: "Follow this site",
+      feedOn: "Subscribe on",
+      feedly: "Feedly",
     },
   },
   ads: {

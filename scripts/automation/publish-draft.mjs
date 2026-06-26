@@ -1,4 +1,4 @@
-import { requestGoogleIndexing, requestSitemapPing } from "./google-indexing.mjs";
+import { distributePublishedPost } from "./distributor.mjs";
 import {
   listDrafts,
   readPost,
@@ -116,24 +116,10 @@ export async function publishOneDraft(options = {}) {
   publishSlug(slug);
   console.log(`Published: ${slug}`);
 
-  const urls = [
-    `${SITE_URL}/en/blog/${slug}`,
-    `${SITE_URL}/ko/blog/${slug}`,
-  ];
-
-  for (const url of urls) {
-    try {
-      await requestGoogleIndexing(url);
-      console.log(`Indexing requested: ${url}`);
-    } catch (error) {
-      console.warn(`Indexing failed for ${url}: ${error.message}`);
-    }
-  }
-
   try {
-    await requestSitemapPing();
+    await distributePublishedPost(slug);
   } catch (error) {
-    console.warn(`Sitemap ping failed: ${error.message}`);
+    console.warn(`Distribution failed for ${slug}: ${error.message}`);
   }
 
   state.lastPublishAt = new Date().toISOString();
@@ -152,7 +138,15 @@ export async function publishOneDraft(options = {}) {
 
   state.history = [
     ...(state.history ?? []),
-    { action: "publish", slug, at: state.lastPublishAt, urls },
+    {
+      action: "publish",
+      slug,
+      at: state.lastPublishAt,
+      urls: [
+        `${SITE_URL}/en/blog/${slug}`,
+        `${SITE_URL}/ko/blog/${slug}`,
+      ],
+    },
   ].slice(-50);
   saveState(state);
 

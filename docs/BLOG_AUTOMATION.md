@@ -100,12 +100,15 @@ npm run automation:publish  # publish oldest draft (local test)
 ## How it works (Plan A — publish-only)
 
 ```
-publish-slot (GHA)     → publish oldest draft → GSC indexing
+publish-slot (GHA)     → publish oldest draft
+                       → distributor.mjs (GSC + IndexNow + share pack)
                        → cursor-draft-request.json if buffer < 2
-                       → run-cursor-replenish.mjs (Cursor SDK on runner)
                        → commit + push → Vercel redeploy
+                       → warm RSS/sitemap (120s after push)
 backup (GHA)           → cursor-draft-replenish.yml every 15 min if still pending
 ```
+
+**Distribution details:** `docs/DISTRIBUTION.md`
 
 ### Cursor draft replenish (automated)
 

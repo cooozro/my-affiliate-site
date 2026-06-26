@@ -98,10 +98,18 @@ jobs:
         run: |
           git config user.name "blog-automation[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/posts public/images/posts data/automation/state.json data/automation/cursor-draft-request.json
+          git add content/posts public/images/posts data/automation/state.json data/automation/cursor-draft-request.json data/automation/distribution-log.jsonl data/automation/share-packs
           if git diff --staged --quiet; then
             echo "No content changes to commit"
             exit 0
           fi
           git commit -m "chore(automation): ${{ steps.task.outputs.name }}"
           git push
+
+      - name: Warm RSS and sitemap after deploy
+        if: success() && steps.automation.outputs.published == 'true'
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
+        run: |
+          sleep 120
+          node scripts/automation/distributor.mjs warm

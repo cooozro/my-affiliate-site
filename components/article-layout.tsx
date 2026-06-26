@@ -33,6 +33,7 @@ export function ArticleLayout({
   const shareImageUrl = post.coverImage
     ? `${siteConfig.url}${post.coverImage}`
     : undefined;
+  const feedUrl = `${siteConfig.url}/${locale}/feed.xml`;
 
   const contentParts = splitAfterRelatedGuides(post.content, locale);
 
@@ -71,6 +72,7 @@ export function ArticleLayout({
         url={shareUrl}
         title={post.title}
         imageUrl={shareImageUrl}
+        feedUrl={feedUrl}
         labels={shareLabels}
         variant="top"
       />
@@ -119,6 +121,7 @@ export function ArticleLayout({
         url={shareUrl}
         title={post.title}
         imageUrl={shareImageUrl}
+        feedUrl={feedUrl}
         labels={shareLabels}
         variant="bottom"
       />

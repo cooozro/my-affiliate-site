@@ -13,6 +13,10 @@ export type KakaoSharePlatform = {
 
 export type SharePlatform = LinkSharePlatform | KakaoSharePlatform;
 
+export function feedlySubscribeUrl(feedUrl: string): string {
+  return `https://feedly.com/i/subscription/feed/${encodeURIComponent(feedUrl)}`;
+}
+
 export const SHARE_PLATFORMS: SharePlatform[] = [
   {
     id: "facebook",

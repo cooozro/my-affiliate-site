@@ -36,6 +36,9 @@ const ko: Dictionary = {
       copyLink: "링크 복사",
       copied: "복사됨!",
       copyFallback: "아래 링크를 복사하세요:",
+      feedHeading: "사이트 구독",
+      feedOn: "구독:",
+      feedly: "Feedly",
     },
   },
   ads: {

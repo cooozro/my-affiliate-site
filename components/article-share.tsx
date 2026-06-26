@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { shareViaKakao } from "@/lib/kakao-share";
-import { SHARE_PLATFORMS } from "@/lib/share";
+import { SHARE_PLATFORMS, feedlySubscribeUrl } from "@/lib/share";
 import type { Dictionary } from "@/messages/en";
 
 type ArticleShareProps = {
   url: string;
   title: string;
   imageUrl?: string;
+  feedUrl: string;
   labels: Dictionary["blog"]["share"];
   variant?: "top" | "bottom";
 };
@@ -48,6 +49,12 @@ function ShareIcon({ id }: { id: string }) {
           <path d="M12 3C6.477 3 2 6.463 2 10.714c0 2.742 1.817 5.144 4.563 6.514-.2-.734-.383-1.866.08-2.674.415-.72 2.688-1.73 2.688-1.73s-.325-.065-.65-.195c-.375-.15-.287-.93.078-.93.345 0 .555.225.555.225s.99-.645 2.79-.645c1.44 0 2.7.39 3.75 1.14C16.35 4.5 18 4.5 18 4.5s.21-.225.555-.225c.365 0 .453.78.078.93-.325.13-.65.195-.65.195s2.273 1.01 2.688 1.73c.463.808.28 1.94.08 2.674C20.183 15.858 22 13.456 22 10.714 22 6.463 17.523 3 12 3z" />
         </svg>
       );
+    case "feedly":
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden className="h-4 w-4 fill-current">
+          <path d="M4.6 2.2A2.2 2.2 0 002.2 4.4v15.2a2.2 2.2 0 002.2 2.2h14.8a2.2 2.2 0 002.2-2.2V4.4a2.2 2.2 0 00-2.2-2.2H4.6zm2.9 4.1h9.9c.6 0 1.1.5 1.1 1.1v2.2c0 .6-.5 1.1-1.1 1.1H7.5c-.6 0-1.1-.5-1.1-1.1V7.4c0-.6.5-1.1 1.1-1.1zm0 5.5h9.9c.6 0 1.1.5 1.1 1.1v2.2c0 .6-.5 1.1-1.1 1.1H7.5c-.6 0-1.1-.5-1.1-1.1v-2.2c0-.6.5-1.1 1.1-1.1z" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -66,6 +73,7 @@ export function ArticleShare({
   url,
   title,
   imageUrl,
+  feedUrl,
   labels,
   variant = "top",
 }: ArticleShareProps) {
@@ -136,6 +144,23 @@ export function ArticleShare({
           <span>{copied ? labels.copied : labels.copyLink}</span>
         </button>
       </div>
+      {variant === "bottom" ? (
+        <div className="mt-6 border-t border-border/60 pt-6">
+          <p className="mb-3 font-sans text-sm font-medium text-foreground">
+            {labels.feedHeading}
+          </p>
+          <a
+            href={feedlySubscribeUrl(feedUrl)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClassName}
+            aria-label={`${labels.feedOn} ${labels.feedly}`}
+          >
+            <ShareIcon id="feedly" />
+            <span>{labels.feedly}</span>
+          </a>
+        </div>
+      ) : null}
     </section>
   );
 }

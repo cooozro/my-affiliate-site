@@ -13,7 +13,8 @@
     "automation:publish": "node scripts/automation/run.mjs publish",
     "automation:buffer": "node scripts/automation/run.mjs buffer",
     "automation:status": "node scripts/automation/run.mjs status",
-    "automation:replenish": "node scripts/automation/run-cursor-replenish.mjs"
+    "automation:replenish": "node scripts/automation/run-cursor-replenish.mjs",
+    "automation:distribute": "node scripts/automation/distributor.mjs"
   },
   "dependencies": {
     "@cursor/sdk": "^1.0.22",
