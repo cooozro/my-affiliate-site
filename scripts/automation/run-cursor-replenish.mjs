@@ -27,6 +27,7 @@ function buildPrompt(request) {
 
 Read first:
 - docs/CONTENT_STANDARDS.md
+- docs/BUYING_GUIDE_TEMPLATE.md
 - scripts/lib/editorial-standards.mjs
 - data/automation/cursor-draft-request.json
 
@@ -45,6 +46,7 @@ Content requirements (each locale):
 - TOP 5 comparison table
 - Scenario matrix
 - Five checks before you buy
+- Final Verdict with Who should buy / Who should skip tables (see BUYING_GUIDE_TEMPLATE.md)
 - Conclusion section
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 

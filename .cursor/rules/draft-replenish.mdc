@@ -2,6 +2,7 @@
 description: Plan A draft replenish — write pending cursor-draft-request before other work
 globs:
   - data/automation/cursor-draft-request.json
+  - content/posts/**
 alwaysApply: true
 ---
 
@@ -10,7 +11,7 @@ alwaysApply: true
 When `data/automation/cursor-draft-request.json` has `"status": "pending"`:
 
 1. Read `topic` and `instructions` in that file.
-2. Write **one** bilingual buying-guide (`en.md` + `ko.md`, `draft: true`) per `docs/CONTENT_STANDARDS.md`.
+2. Write **one** bilingual buying-guide (`en.md` + `ko.md`, `draft: true`) per `docs/CONTENT_STANDARDS.md` and **`docs/BUYING_GUIDE_TEMPLATE.md`**.
 3. Use `scripts/lib/editorial-standards.mjs` — no fake seller API claims.
 4. Add cover image (`npm run content:image` with slug + imageQuery if `PEXELS_API_KEY` is set).
 5. Run `npm run content:validate`.

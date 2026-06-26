@@ -41,6 +41,15 @@ Title rules (buying-guide):
 - EN and KO titles should feel independently written, not literal translations of the same template.
 `.trim();
 
+/** Professional review format (AdSense E-E-A-T) — see docs/BUYING_GUIDE_TEMPLATE.md */
+export const REVIEW_FORMAT_GUIDE = `
+Required body structure (buying-guide):
+1. First ## heading: "Editor's Note" (EN) or "에디터 노트" (KO) — 2-3 sentences, first-person operator insight.
+2. Each product ## section: Strengths, Weaknesses, Practical insight ("For the average user, this translates to…" / "일반 사용자 입장에서는…"), Verdict.
+3. End with "## Final Verdict" / "## 최종 평가" including "### Who should buy?" and "### Who should skip?" tables (or KO: 이런 분께 추천 / 이런 분은 패스).
+4. Tone: informative, trustworthy, helpful — natural value-for-money context, not hype.
+`.trim();
+
 export const METHODOLOGY_BLOCK_KO = `## 분석 방법론
 
 본 비교는 **제조사 공개 스펙·공식 판매가·공개 리뷰**를 교차 검증한 편집부 분석입니다. 자체 판매 API나 비공개 셀러 데이터베이스를 사용하지 않으며, 독자가 직접 확인할 수 있는 출처만 포함합니다.

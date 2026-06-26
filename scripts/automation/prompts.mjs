@@ -11,6 +11,7 @@ MANDATORY RULES (violations = rejection):
 3. SEO: unique title & description (description 50-160 chars), semantic ##/### headings, comparison tables where useful, natural keywords only. Minimum 1200 characters of body per language. No keyword stuffing.
 4. Titles: do NOT reuse "2026 가성비 X TOP 5 — …" or "Best Budget X TOP 5 — …" templates. Rotate formats (question, scenario, myth-bust, number hook). EN and KO titles should feel independently written.
 5. Methodology: do NOT claim proprietary seller APIs, sale_price_usd fields, or private databases. Use honest editorial sources (manufacturer specs, listed retail prices, public reviews). Include a "## Analysis methodology" / "## 분석 방법론" section with a plain-language source table.
+6. Professional review format (docs/BUYING_GUIDE_TEMPLATE.md): start body with "## Editor's Note" / "## 에디터 노트"; each product section needs **Practical insight**; end with "## Final Verdict" / "## 최종 평가" plus Who should buy / Who should skip tables.
 
 ${topic.liveData ? `Use these placeholders in body where prices/dates appear:
 - {{today}} or {{today_locale}} for dates

@@ -20,6 +20,14 @@ const FORBIDDEN_PATTERNS = [
 
 const METHODOLOGY_PATTERN =
   /##\s*(분석 방법론|Analysis methodology|Methodology)/i;
+const EDITORS_NOTE_PATTERN =
+  /##\s*(Editor'?s Note|에디터 노트)/i;
+const FINAL_VERDICT_PATTERN =
+  /##\s*(Final Verdict|최종 평가)/i;
+const WHO_SHOULD_BUY_PATTERN =
+  /(Who should buy|이런 분께 추천)/i;
+const WHO_SHOULD_SKIP_PATTERN =
+  /(Who should skip|이런 분은 패스)/i;
 const CONCLUSION_PATTERN = /##\s*(결론|Conclusion)/i;
 
 function hasCoverImage(root, data) {
@@ -113,8 +121,24 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(`${label}: missing methodology section (Google E-E-A-T)`);
   }
 
-  if (!CONCLUSION_PATTERN.test(body)) {
-    issues.push(`${label}: missing conclusion section`);
+  if (!EDITORS_NOTE_PATTERN.test(body)) {
+    issues.push(`${label}: missing Editor's Note section (see BUYING_GUIDE_TEMPLATE.md)`);
+  }
+
+  if (!FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing Final Verdict section (see BUYING_GUIDE_TEMPLATE.md)`);
+  }
+
+  if (!WHO_SHOULD_BUY_PATTERN.test(body)) {
+    issues.push(`${label}: missing Who should buy / 이런 분께 추천 section`);
+  }
+
+  if (!WHO_SHOULD_SKIP_PATTERN.test(body)) {
+    issues.push(`${label}: missing Who should skip / 이런 분은 패스 section`);
+  }
+
+  if (!CONCLUSION_PATTERN.test(body) && !FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing conclusion or final verdict section`);
   }
 
   const listItems = (body.match(/^\d+\.\s+/gm) ?? []).length;
