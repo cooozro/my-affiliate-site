@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { fontClassNames } from "@/lib/fonts";
 import { isValidLocale, locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { siteConfig } from "@/lib/site";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -48,7 +49,13 @@ export default async function LocaleLayout({
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`https://www.aipick.shop/en`}
+          href={`${siteConfig.url}/en`}
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${siteConfig.name} (${locale.toUpperCase()})`}
+          href={`${siteConfig.url}/${locale}/feed.xml`}
         />
         <meta property="og:locale" content={ogLocales[locale]} />
       </head>

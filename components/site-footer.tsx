@@ -46,6 +46,12 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
           >
             {dict.footer.privacy}
           </Link>
+          <a
+            href={`${siteConfig.url}/${locale}/feed.xml`}
+            className="transition hover:text-foreground"
+          >
+            {dict.footer.rss}
+          </a>
         </nav>
       </div>
     </footer>

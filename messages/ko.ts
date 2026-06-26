@@ -14,6 +14,7 @@ const ko: Dictionary = {
   footer: {
     menu: "푸터 메뉴",
     privacy: "개인정보처리방침",
+    rss: "RSS",
     rights: "All rights reserved.",
   },
   home: {

@@ -12,6 +12,7 @@ const en = {
   footer: {
     menu: "Footer menu",
     privacy: "Privacy Policy",
+    rss: "RSS",
     rights: "All rights reserved.",
   },
   home: {
