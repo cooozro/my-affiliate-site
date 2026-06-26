@@ -17,6 +17,10 @@ import {
 } from "@/lib/posts-admin";
 import fs from "fs";
 import path from "path";
+import {
+  formatKst,
+  reconcilePublishSchedule,
+} from "../scripts/lib/publish-schedule.mjs";
 
 const TARGET_DRAFT_COUNT = 2;
 const MAX_PUBLISH_PER_DAY = 2;
@@ -37,23 +41,15 @@ export type AutomationStatus = {
   lastPublishAt: string | null;
 };
 
-function formatKst(isoString: string) {
-  return new Intl.DateTimeFormat("ko-KR", {
-    timeZone: "Asia/Seoul",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date(isoString));
-}
-
 export function getAutomationStatus(): AutomationStatus {
   const statePath = path.join(process.cwd(), "data", "automation", "state.json");
   const state = fs.existsSync(statePath)
     ? (JSON.parse(fs.readFileSync(statePath, "utf8")) as Record<string, unknown>)
     : {};
+
+  if (reconcilePublishSchedule(state)) {
+    fs.writeFileSync(statePath, `${JSON.stringify(state, null, 2)}\n`, "utf8");
+  }
 
   const draftCount = listPostsForAdmin().filter((post) => post.draft).length;
   const nextPublishAt =

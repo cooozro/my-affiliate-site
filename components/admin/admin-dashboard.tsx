@@ -182,14 +182,16 @@ export function AdminDashboard() {
             <MetricCard
               label="다음 간격"
               value={
-                automation.scheduledGapHours
-                  ? `${automation.scheduledGapHours}h (4–6h 랜덤)`
-                  : "—"
+                automation.publishCountToday >= automation.maxPublishPerDay
+                  ? "내일 06:00 + 4–6h"
+                  : automation.scheduledGapHours
+                    ? `${automation.scheduledGapHours}h (4–6h 랜덤)`
+                    : "—"
               }
             />
           </div>
           {automation.needsReplenish ? (
-            <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-800 dark:text-amber-200">
+            <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-foreground">
               {automation.replenishNote}
               <br />
               {automation.cursorDraftPending

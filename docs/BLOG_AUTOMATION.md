@@ -28,7 +28,8 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 | Cron check | Every **15 minutes** + **hourly backup** (KST 08:00–23:00) + **every `main` push** |
 | Publish times | **Random** — not fixed 11:00 / 17:00 |
 | Gap between publishes | **4–6 hours** (random per slot) |
-| First slot of KST day | Random jitter **15–120 min** after midnight |
+| First slot of KST day | **06:00 KST** anchor + **4–6h** random (typically 10:00–12:00) |
+| After daily cap (2/day) | Next slot rolls to **following KST day** (not same evening) |
 | Daily cap | Max **2** publishes per KST day |
 
 `data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
