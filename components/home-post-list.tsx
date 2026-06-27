@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import type { PostMeta } from "@/lib/posts";
 import type { Dictionary } from "@/messages/en";
@@ -25,8 +26,32 @@ function matchesPost(post: PostMeta, query: string) {
   return haystack.includes(query);
 }
 
-export function HomePostList({ posts, locale, labels }: HomePostListProps) {
-  const [query, setQuery] = useState("");
+function HomePostListContent({ posts, locale, labels }: HomePostListProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const urlQuery = searchParams.get("q") ?? "";
+  const [query, setQuery] = useState(urlQuery);
+
+  useEffect(() => {
+    setQuery(urlQuery);
+  }, [urlQuery]);
+
+  const setSearchQuery = useCallback(
+    (value: string) => {
+      setQuery(value);
+      const params = new URLSearchParams(searchParams.toString());
+      const trimmed = value.trim();
+      if (trimmed) {
+        params.set("q", trimmed);
+      } else {
+        params.delete("q");
+      }
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
@@ -48,7 +73,7 @@ export function HomePostList({ posts, locale, labels }: HomePostListProps) {
           id="home-post-search"
           type="search"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={labels.searchPlaceholder}
           className="w-full rounded-xl border border-border bg-surface px-4 py-3 font-sans text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus:border-accent focus:ring-2 focus:ring-accent/20"
           autoComplete="off"
@@ -109,5 +134,21 @@ export function HomePostList({ posts, locale, labels }: HomePostListProps) {
         </div>
       )}
     </>
+  );
+}
+
+function HomePostListFallback({ labels }: Pick<HomePostListProps, "labels">) {
+  return (
+    <div className="mb-6 h-12 animate-pulse rounded-xl border border-border bg-muted/50" aria-hidden>
+      <span className="sr-only">{labels.searchLabel}</span>
+    </div>
+  );
+}
+
+export function HomePostList(props: HomePostListProps) {
+  return (
+    <Suspense fallback={<HomePostListFallback labels={props.labels} />}>
+      <HomePostListContent {...props} />
+    </Suspense>
   );
 }
