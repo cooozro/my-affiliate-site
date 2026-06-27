@@ -50,7 +50,7 @@ function canPublishNow(state, force = false) {
   }
 
   const overdueMin = Math.floor((now - nextAt) / 60000);
-  if (overdueMin >= 15) {
+  if (overdueMin >= 1) {
     console.log(
       `Catch-up publish: slot was due ${overdueMin}min ago (KST ${formatKst(state.nextPublishAt)}).`,
     );

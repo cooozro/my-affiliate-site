@@ -1,9 +1,9 @@
 ---
 title: '이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가'
 description: >-
-  미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로
-  비교. 2026 여름 소형 주거 냉방 선택 가이드.
-date: '2026-06-28'
+  미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로 비교. 2026 여름 소형 주거 냉방 선택
+  가이드.
+date: '2026-06-27'
 tags:
   - 에어컨
   - 이동식 에어컨
@@ -11,12 +11,13 @@ tags:
   - 여름
   - 가전
 contentProfile: head-to-head
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-portable-vs-window-ac-head-to-head/cover.jpg
 coverImageAlt: 원룸에 놓인 이동식·창문형 에어컨
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-27T07:15:04.000Z'
+publishedAt: '2026-06-27T07:15:04.000Z'
 ---
 ## 편집부 개요
 

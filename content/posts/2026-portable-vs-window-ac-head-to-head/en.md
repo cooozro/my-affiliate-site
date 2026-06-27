@@ -1,9 +1,9 @@
 ---
 title: 'Portable vs Window AC: Which Cools a Small Apartment Better in Summer?'
 description: >-
-  Midea portable, LG dual-hose portable, and Frigidaire window AC compared on BTU,
-  noise, install hassle, and daily energy cost for summer 2026.
-date: '2026-06-28'
+  Midea portable, LG dual-hose portable, and Frigidaire window AC compared on
+  BTU, noise, install hassle, and daily energy cost for summer 2026.
+date: '2026-06-27'
 tags:
   - air conditioner
   - portable AC
@@ -11,12 +11,13 @@ tags:
   - summer
   - home appliances
 contentProfile: head-to-head
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-portable-vs-window-ac-head-to-head/cover.jpg
 coverImageAlt: Portable and window air conditioners in a small apartment room
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-27T07:15:04.000Z'
+publishedAt: '2026-06-27T07:15:04.000Z'
 ---
 ## Editorial Overview
 

@@ -7,26 +7,10 @@
     "portable-ac",
     "window-ac"
   ],
-  "topicHistory": [
-    { "id": "power-banks", "category": "accessories" },
-    { "id": "budget-smartphones", "category": "smartphones" },
-    { "id": "mechanical-keyboards", "category": "peripherals" },
-    { "id": "budget-monitors", "category": "displays" },
-    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
-    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
-    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
-    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" }
-  ],
-  "formatHistory": [
-    "head-to-head",
-    "scenario-guide",
-    "explainer",
-    "checklist"
-  ],
-  "lastPublishAt": "2026-06-27T01:16:48.240Z",
-  "nextPublishAt": "2026-06-27T07:09:27.253Z",
+  "lastPublishAt": "2026-06-27T07:15:05.684Z",
+  "nextPublishAt": "2026-06-28T02:53:00.000Z",
   "scheduledGapHours": 5.88,
-  "publishCountToday": 1,
+  "publishCountToday": 2,
   "publishDateKst": "2026-06-27",
   "writeCountToday": 0,
   "writeDateKst": "2026-06-27",
@@ -75,6 +59,63 @@
         "https://www.aipick.shop/en/blog/2026-budget-monitors-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-budget-monitors-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-portable-vs-window-ac-head-to-head",
+      "at": "2026-06-27T07:15:05.684Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-portable-vs-window-ac-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-portable-vs-window-ac-head-to-head"
+      ]
     }
+  ],
+  "topicHistory": [
+    {
+      "id": "power-banks",
+      "category": "accessories"
+    },
+    {
+      "id": "budget-smartphones",
+      "category": "smartphones"
+    },
+    {
+      "id": "mechanical-keyboards",
+      "category": "peripherals"
+    },
+    {
+      "id": "budget-monitors",
+      "category": "displays"
+    },
+    {
+      "id": "portable-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning"
+    },
+    {
+      "id": "portable-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning"
+    },
+    {
+      "id": "portable-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning"
+    },
+    {
+      "id": "portable-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "category": "audio"
+    }
+  ],
+  "formatHistory": [
+    "head-to-head",
+    "scenario-guide",
+    "explainer",
+    "checklist"
   ]
 }

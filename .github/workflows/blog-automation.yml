@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
   schedule:
-    # Ideal: every 15 minutes. GitHub often delays/skips */15 on low-traffic repos.
-    - cron: "*/15 * * * *"
-    # Hourly backup (UTC 23 + 0–14 ≈ KST 08:00–23:00) so overdue slots still fire.
-    - cron: "0 23 * * *"
-    - cron: "0 0-14 * * *"
+    # Primary: every 10 minutes (GitHub often skips */15 on low-traffic repos).
+    - cron: "*/10 * * * *"
+    # Hourly backup UTC 22–15 ≈ KST 07:00–00:00
+    - cron: "0 22-23 * * *"
+    - cron: "0 0-15 * * *"
   workflow_dispatch:
     inputs:
       task:

@@ -1,14 +1,6 @@
 {
-  "status": "pending",
-  "needed": 2,
-  "publishedSlug": "2026-budget-monitors-buying-guide",
-  "requestedAt": "2026-06-27T01:16:48.246Z",
-  "topic": {
-    "id": "budget-smartphones",
-    "category": "smartphones",
-    "angle": "best budget smartphones under a price tier with chipset, camera, and battery analysis",
-    "imageQuery": "smartphone comparison desk",
-    "liveData": true
-  },
-  "instructions": "Write one bilingual buying-guide draft (en+ko, draft:true) per docs/CONTENT_STANDARDS.md. Suggested slug: 2026-budget-{topic-id}-guide. Run npm run content:validate, then set status to complete."
+  "status": "complete",
+  "completedAt": "2026-06-27T07:15:05.689Z",
+  "draftCount": 3,
+  "note": "Buffer full; cleared stale pending request."
 }
