@@ -1,6 +1,13 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import type { PostMeta } from "@/lib/posts";
@@ -13,6 +20,8 @@ type HomePostListProps = {
   locale: Locale;
   labels: Dictionary["home"];
 };
+
+const URL_SYNC_DELAY_MS = 350;
 
 function normalizeQuery(value: string) {
   return value.trim().toLowerCase();
@@ -32,26 +41,48 @@ function HomePostListContent({ posts, locale, labels }: HomePostListProps) {
   const searchParams = useSearchParams();
   const urlQuery = searchParams.get("q") ?? "";
   const [query, setQuery] = useState(urlQuery);
+  const isComposingRef = useRef(false);
+  const skipUrlEchoRef = useRef(false);
 
+  // Home / back-forward: apply URL to the input without fighting IME.
   useEffect(() => {
+    if (skipUrlEchoRef.current) {
+      skipUrlEchoRef.current = false;
+      return;
+    }
+    if (isComposingRef.current) return;
     setQuery(urlQuery);
   }, [urlQuery]);
 
-  const setSearchQuery = useCallback(
+  const pushQueryToUrl = useCallback(
     (value: string) => {
-      setQuery(value);
-      const params = new URLSearchParams(searchParams.toString());
       const trimmed = value.trim();
+      const current = searchParams.get("q") ?? "";
+      if (trimmed === current) return;
+
+      const params = new URLSearchParams(searchParams.toString());
       if (trimmed) {
         params.set("q", trimmed);
       } else {
         params.delete("q");
       }
       const qs = params.toString();
+      skipUrlEchoRef.current = true;
       router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
     },
     [pathname, router, searchParams],
   );
+
+  // Debounce URL updates so Korean IME composition is not interrupted.
+  useEffect(() => {
+    if (isComposingRef.current) return;
+
+    const timer = window.setTimeout(() => {
+      pushQueryToUrl(query);
+    }, URL_SYNC_DELAY_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [query, pushQueryToUrl]);
 
   const filtered = useMemo(() => {
     const q = normalizeQuery(query);
@@ -73,7 +104,17 @@ function HomePostListContent({ posts, locale, labels }: HomePostListProps) {
           id="home-post-search"
           type="search"
           value={query}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
+          onCompositionStart={() => {
+            isComposingRef.current = true;
+          }}
+          onCompositionEnd={(e) => {
+            isComposingRef.current = false;
+            setQuery(e.currentTarget.value);
+          }}
+          onBlur={() => {
+            isComposingRef.current = false;
+          }}
           placeholder={labels.searchPlaceholder}
           className="w-full rounded-xl border border-border bg-surface px-4 py-3 font-sans text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus:border-accent focus:ring-2 focus:ring-accent/20"
           autoComplete="off"
@@ -139,7 +180,10 @@ function HomePostListContent({ posts, locale, labels }: HomePostListProps) {
 
 function HomePostListFallback({ labels }: Pick<HomePostListProps, "labels">) {
   return (
-    <div className="mb-6 h-12 animate-pulse rounded-xl border border-border bg-muted/50" aria-hidden>
+    <div
+      className="mb-6 h-12 animate-pulse rounded-xl border border-border bg-muted/50"
+      aria-hidden
+    >
       <span className="sr-only">{labels.searchLabel}</span>
     </div>
   );
