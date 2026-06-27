@@ -14,10 +14,11 @@ contentProfile: buying-guide
 draft: false
 liveData: true
 coverImage: /images/posts/2026-budget-smartphones-under-300/cover.jpg
-coverImageAlt: 미니멀 데스크 위 스마트폰
-coverImageCredit: Photo by Lisa Fotios / Pexels
+coverImageAlt: budget smartphone comparison
+coverImageCredit: Photo by kaboompics / Pixabay
 updatedAt: '2026-06-26T02:57:56.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
+coverImageProvider: pixabay
 ---
 ## 편집부 개요
 

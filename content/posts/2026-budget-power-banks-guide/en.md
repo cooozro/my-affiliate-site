@@ -15,10 +15,11 @@ contentProfile: buying-guide
 draft: false
 liveData: true
 coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
-coverImageAlt: Portable power bank and charging cables on a desk
-coverImageCredit: Photo by Markus Spiske / Pexels
+coverImageAlt: portable power bank charging
+coverImageCredit: Photo by 16671105 / Pixabay
 updatedAt: '2026-06-25T12:06:58.000Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
+coverImageProvider: pixabay
 ---
 ## Editorial Overview
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/home-hero";
-import { PostCard } from "@/components/post-card";
+import { HomePostList } from "@/components/home-post-list";
 import { CONTENT_SHELL } from "@/lib/layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -52,35 +52,27 @@ export default async function HomePage({ params }: PageProps) {
 
       <div className={`pb-12 pt-2 ${CONTENT_SHELL}`}>
         <section aria-labelledby="latest-posts-heading">
-        <h2
-          id="latest-posts-heading"
-          className="mb-6 font-sans text-sm font-semibold uppercase tracking-wider text-muted-foreground"
-        >
-          {dict.home.latestPosts} ({posts.length})
-        </h2>
-
-        {posts.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-border bg-muted/40 p-8 text-center font-sans text-sm text-muted-foreground">
-            {dict.home.noPosts}
-            <br />
-            <code className="mt-2 inline-block rounded bg-muted px-2 py-1 text-xs">
-              content/posts/*.md
-            </code>
-            <br />
-            <span className="mt-2 inline-block">{dict.home.noPostsHint}</span>
-          </p>
-        ) : (
-          <div className="grid gap-6">
-            {posts.map((post) => (
-              <PostCard
-                key={post.slug}
-                post={post}
-                locale={locale}
-                readMoreLabel={dict.home.readMore}
-              />
-            ))}
-          </div>
-        )}
+          {posts.length === 0 ? (
+            <>
+              <h2
+                id="latest-posts-heading"
+                className="mb-6 font-sans text-sm font-semibold uppercase tracking-wider text-muted-foreground"
+              >
+                {dict.home.latestPosts} (0)
+              </h2>
+              <p className="rounded-xl border border-dashed border-border bg-muted/40 p-8 text-center font-sans text-sm text-muted-foreground">
+                {dict.home.noPosts}
+                <br />
+                <code className="mt-2 inline-block rounded bg-muted px-2 py-1 text-xs">
+                  content/posts/*.md
+                </code>
+                <br />
+                <span className="mt-2 inline-block">{dict.home.noPostsHint}</span>
+              </p>
+            </>
+          ) : (
+            <HomePostList posts={posts} locale={locale} labels={dict.home} />
+          )}
         </section>
       </div>
     </>

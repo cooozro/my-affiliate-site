@@ -14,10 +14,11 @@ contentProfile: head-to-head
 draft: false
 liveData: true
 coverImage: /images/posts/2026-portable-vs-window-ac-head-to-head/cover.jpg
-coverImageAlt: Portable and window air conditioners in a small apartment room
-coverImageCredit: Photo by Pexels
+coverImageAlt: portable air conditioner room
+coverImageCredit: Photo by rupixen / Pixabay
 updatedAt: '2026-06-27T07:15:04.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
+coverImageProvider: pixabay
 ---
 ## Editorial Overview
 

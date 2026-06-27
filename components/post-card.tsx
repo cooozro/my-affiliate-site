@@ -9,54 +9,99 @@ type PostCardProps = {
   post: PostMeta;
   locale: Locale;
   readMoreLabel: Dictionary["home"]["readMore"];
+  variant?: "featured" | "default" | "compact";
 };
 
-function formatDate(date: string, locale: Locale) {
+function formatDate(post: PostMeta, locale: Locale) {
+  const iso = post.publishedAt ?? post.updatedAt ?? post.date;
   return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
-  }).format(new Date(date));
+  }).format(new Date(iso));
 }
 
-export function PostCard({ post, locale, readMoreLabel }: PostCardProps) {
+export function PostCard({
+  post,
+  locale,
+  readMoreLabel,
+  variant = "default",
+}: PostCardProps) {
   const href = localizedPath(locale, `/blog/${post.slug}`);
+  const isFeatured = variant === "featured";
+  const isCompact = variant === "compact";
 
   return (
     <article className="group overflow-hidden rounded-2xl border border-border bg-surface transition hover:border-accent/40 hover:shadow-sm">
-      <div className="flex flex-col sm:flex-row">
+      <div
+        className={
+          isFeatured
+            ? "flex flex-col"
+            : "flex flex-col sm:flex-row"
+        }
+      >
         {post.coverImage ? (
           <Link
             href={href}
-            className="relative block shrink-0 overflow-hidden sm:w-44 md:w-52"
+            className={
+              isFeatured
+                ? "relative block aspect-[21/9] w-full overflow-hidden"
+                : isCompact
+                  ? "relative block shrink-0 overflow-hidden sm:w-36"
+                  : "relative block shrink-0 overflow-hidden sm:w-44 md:w-52"
+            }
             tabIndex={-1}
             aria-hidden
           >
             <Image
               src={post.coverImage}
               alt={post.coverImageAlt ?? post.title}
-              width={416}
-              height={234}
-              className="aspect-[16/9] h-full w-full object-cover transition duration-300 group-hover:scale-[1.03] sm:aspect-auto sm:h-full sm:min-h-[9.5rem]"
-              sizes="(max-width: 640px) 100vw, 208px"
+              width={isFeatured ? 1200 : 416}
+              height={isFeatured ? 514 : 234}
+              className={
+                isFeatured
+                  ? "h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                  : "aspect-[16/9] h-full w-full object-cover transition duration-300 group-hover:scale-[1.03] sm:aspect-auto sm:h-full sm:min-h-[9.5rem]"
+              }
+              sizes={
+                isFeatured
+                  ? "100vw"
+                  : isCompact
+                    ? "(max-width: 640px) 100vw, 144px"
+                    : "(max-width: 640px) 100vw, 208px"
+              }
             />
           </Link>
         ) : null}
 
-        <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
+        <div
+          className={`flex min-w-0 flex-1 flex-col ${isCompact ? "p-4 sm:p-4" : "p-5 sm:p-6"}`}
+        >
           <time
-            dateTime={post.date}
+            dateTime={post.publishedAt ?? post.date}
             className="font-sans text-xs text-muted-foreground"
           >
-            {formatDate(post.date, locale)}
+            {formatDate(post, locale)}
           </time>
-          <h2 className="mt-2 font-serif text-xl font-bold leading-snug text-foreground group-hover:text-accent">
+          <h2
+            className={`mt-2 font-serif font-bold leading-snug text-foreground group-hover:text-accent ${
+              isFeatured ? "text-2xl sm:text-3xl" : isCompact ? "text-lg" : "text-xl"
+            }`}
+          >
             <Link href={href} className="outline-offset-4">
               {post.title}
             </Link>
           </h2>
           {post.description ? (
-            <p className="mt-3 line-clamp-2 font-sans text-sm leading-relaxed text-muted-foreground sm:line-clamp-3">
+            <p
+              className={`mt-3 font-sans leading-relaxed text-muted-foreground ${
+                isFeatured
+                  ? "line-clamp-3 text-sm sm:text-base"
+                  : isCompact
+                    ? "line-clamp-2 text-sm"
+                    : "line-clamp-2 text-sm sm:line-clamp-3"
+              }`}
+            >
               {post.description}
             </p>
           ) : null}

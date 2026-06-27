@@ -15,10 +15,11 @@ contentProfile: buying-guide
 draft: false
 liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
-coverImageAlt: Computer monitor on a clean desk setup
-coverImageCredit: Photo by Lisa Fotios / Pexels
+coverImageAlt: computer monitor desk setup
+coverImageCredit: Photo by sebagee / Pixabay
 updatedAt: '2026-06-27T01:16:46.000Z'
 publishedAt: '2026-06-27T01:16:46.000Z'
+coverImageProvider: pixabay
 ---
 ## Editorial Overview
 

@@ -1,5 +1,5 @@
 ---
-title: 비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다
+title: '비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다'
 description: >-
   2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택
   가이드.
@@ -14,10 +14,11 @@ contentProfile: buying-guide
 draft: false
 liveData: true
 coverImage: /images/posts/2026-budget-power-banks-guide/cover.jpg
-coverImageAlt: 책상 위 보조배터리와 충전 케이블
-coverImageCredit: Photo by Markus Spiske / Pexels
+coverImageAlt: portable power bank charging
+coverImageCredit: Photo by 16671105 / Pixabay
 updatedAt: '2026-06-25T12:06:58.000Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
+coverImageProvider: pixabay
 ---
 ## 편집부 개요
 

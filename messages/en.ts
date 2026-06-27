@@ -23,6 +23,10 @@ const en = {
     noPosts: "No articles published yet.",
     noPostsHint: "Add markdown files to content/posts/ and refresh.",
     readMore: "Read article",
+    searchPlaceholder: "Search articles by title or topic…",
+    searchLabel: "Search articles",
+    searchNoResults: "No articles match your search.",
+    moreArticles: "More articles",
   },
   blog: {
     notFound: "Article not found",

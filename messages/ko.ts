@@ -25,6 +25,10 @@ const ko: Dictionary = {
     noPosts: "아직 게시된 글이 없습니다.",
     noPostsHint: "content/posts/ 에 마크다운 파일을 추가한 뒤 새로고침하세요.",
     readMore: "글 읽기",
+    searchPlaceholder: "제목·주제로 글 검색…",
+    searchLabel: "글 검색",
+    searchNoResults: "검색 결과가 없습니다.",
+    moreArticles: "이전 글",
   },
   blog: {
     notFound: "글을 찾을 수 없습니다",

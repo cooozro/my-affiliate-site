@@ -19,6 +19,7 @@ export type PostMeta = {
   coverImageCredit?: string;
   liveData?: boolean;
   draft?: boolean;
+  publishedAt?: string;
   contentProfile?:
     | "buying-guide"
     | "head-to-head"
@@ -68,6 +69,7 @@ function parsePostFile(slug: string, locale: Locale): Post {
       : undefined,
     liveData: Boolean(data.liveData),
     draft: Boolean(data.draft),
+    publishedAt: data.publishedAt ? String(data.publishedAt) : undefined,
     contentProfile: data.contentProfile
       ? String(data.contentProfile)
       : undefined,
@@ -104,6 +106,12 @@ export function getPostSlugs(
   });
 }
 
+function postSortTime(meta: PostMeta): number {
+  const iso = meta.publishedAt ?? meta.updatedAt ?? meta.date;
+  const t = new Date(iso).getTime();
+  return Number.isNaN(t) ? 0 : t;
+}
+
 export function getAllPosts(
   locale: Locale,
   options?: { includeDrafts?: boolean },
@@ -113,7 +121,7 @@ export function getAllPosts(
       const { content: _content, ...meta } = parsePostFile(slug, locale);
       return meta;
     })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => postSortTime(b) - postSortTime(a));
 }
 
 export function getPostBySlug(
