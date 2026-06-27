@@ -8,6 +8,7 @@ import fs from "fs";
 import path from "path";
 import { Agent, CursorAgentError } from "@cursor/sdk";
 import { fetchCoverImage } from "./fetch-image.mjs";
+import { resolveImageContext, buildCoverAlt } from "../lib/image-query.mjs";
 import {
   completeCursorDraftRequest,
   readCursorDraftRequest,
@@ -63,22 +64,53 @@ Minimize scope. Only the one requested draft.`;
 }
 
 function coverFileExists(slug) {
-  return fs.existsSync(
-    path.join(process.cwd(), "public", "images", "posts", slug, "cover.jpg"),
-  );
+  const enPath = path.join(process.cwd(), "content", "posts", slug, "en.md");
+  if (!fs.existsSync(enPath)) return false;
+
+  const { data } = readPost(slug, "en");
+  if (data.coverImage?.startsWith("/images/posts/")) {
+    const imagePath = path.join(process.cwd(), "public", data.coverImage);
+    if (fs.existsSync(imagePath)) return true;
+  }
+
+  const dir = path.join(process.cwd(), "public", "images", "posts", slug);
+  if (!fs.existsSync(dir)) return false;
+  return fs.readdirSync(dir).some((name) => /\.(jpe?g|webp|png)$/i.test(name));
 }
 
-async function ensureCoverImage(slug, imageQuery) {
+async function ensureCoverImage(slug, topic) {
   if (coverFileExists(slug)) return;
 
-  const meta = await fetchCoverImage(slug, imageQuery);
+  const { data } = readPost(slug, "en");
+  const imageContext = resolveImageContext(slug, {
+    title: data.title,
+    tags: data.tags,
+    imageSearchKeywords: data.imageSearchKeywords ?? topic?.imageSearchKeywords,
+    imageQuery: topic?.imageQuery,
+    topicCluster: topic?.topicCluster ?? data.topicCluster,
+    topic,
+  });
+
+  const meta = await fetchCoverImage(slug, imageContext);
   if (!meta) return;
 
   for (const locale of ["en", "ko"]) {
     const postPath = path.join(process.cwd(), "content", "posts", slug, `${locale}.md`);
     if (!fs.existsSync(postPath)) continue;
-    const { data, content } = readPost(slug, locale);
-    writePost(slug, locale, { ...data, ...meta }, content);
+    const { data: postData, content } = readPost(slug, locale);
+    writePost(
+      slug,
+      locale,
+      {
+        ...postData,
+        ...meta,
+        coverImageAlt: buildCoverAlt(locale === "ko" ? "ko" : "en", {
+          ...imageContext,
+          title: postData.title,
+        }),
+      },
+      content,
+    );
   }
 }
 
@@ -135,10 +167,7 @@ async function main() {
     process.exit(2);
   }
 
-  await ensureCoverImage(
-    writtenSlug,
-    request.topic?.imageQuery ?? request.topic?.id ?? "technology product",
-  );
+  await ensureCoverImage(writtenSlug, request.topic);
 
   const issues = validatePostFiles(writtenSlug);
   if (issues.length > 0) {

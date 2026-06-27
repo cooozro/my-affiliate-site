@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
+import {
+  buildCoverAlt,
+  buildCoverFilename,
+  resolveImageContext,
+  scoreImageRelevance,
+} from "./image-query.mjs";
 
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
@@ -42,34 +48,51 @@ function providerOrder(slug, forced) {
   return [primary, ...available.filter((p) => p !== primary)];
 }
 
-function searchPage(slug) {
-  return (hashSlug(slug, "page") % 4) + 1;
+function searchPage(slug, queryIndex) {
+  return (hashSlug(slug, `page:${queryIndex}`) % 4) + 1;
 }
 
-function pickIndex(slug, count) {
-  if (count <= 0) return 0;
-  return hashSlug(slug, "index") % count;
+function rankCandidates(candidates, ctx) {
+  return candidates
+    .map((candidate) => ({
+      ...candidate,
+      score: scoreImageRelevance(
+        candidate.relevanceText,
+        ctx.productKeywords,
+        ctx.negativeTags,
+      ),
+    }))
+    .sort((a, b) => b.score - a.score);
 }
 
-async function downloadToSlug(slug, imageUrl) {
+function pickFromRanked(ranked, slug, minScore) {
+  const viable = ranked.filter((c) => c.score >= minScore);
+  if (viable.length === 0) return null;
+
+  const top = viable.slice(0, Math.min(5, viable.length));
+  const idx = hashSlug(slug, "pick") % top.length;
+  return top[idx];
+}
+
+async function downloadToSlug(slug, imageUrl, filename) {
   const imageResponse = await fetch(imageUrl);
   if (!imageResponse.ok) {
     throw new Error(`Image download failed: ${imageResponse.status}`);
   }
 
-  const relativePath = `/images/posts/${slug}/cover.jpg`;
-  const destPath = path.join(process.cwd(), "public", "images", "posts", slug, "cover.jpg");
+  const relativePath = `/images/posts/${slug}/${filename}`;
+  const destPath = path.join(process.cwd(), "public", "images", "posts", slug, filename);
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
   fs.writeFileSync(destPath, Buffer.from(await imageResponse.arrayBuffer()));
 
   return relativePath;
 }
 
-async function searchPexels(query, apiKey, slug) {
+async function searchPexels(query, apiKey, slug, queryIndex, ctx) {
   const url = new URL(PEXELS_SEARCH);
   url.searchParams.set("query", query);
-  url.searchParams.set("per_page", "15");
-  url.searchParams.set("page", String(searchPage(slug)));
+  url.searchParams.set("per_page", "20");
+  url.searchParams.set("page", String(searchPage(slug, queryIndex)));
   url.searchParams.set("orientation", "landscape");
 
   const response = await fetch(url, {
@@ -84,26 +107,32 @@ async function searchPexels(query, apiKey, slug) {
   const photos = data.photos ?? [];
   if (photos.length === 0) return null;
 
-  const photo = photos[pickIndex(slug, photos.length)];
-  const imageUrl = photo.src?.large2x || photo.src?.large;
-  if (!imageUrl) return null;
+  const candidates = photos
+    .map((photo) => {
+      const imageUrl = photo.src?.large2x || photo.src?.large;
+      if (!imageUrl) return null;
 
-  return {
-    imageUrl,
-    alt: query,
-    credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
-    provider: "pexels",
-  };
+      return {
+        imageUrl,
+        relevanceText: `${photo.alt ?? ""} ${query}`,
+        credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
+        provider: "pexels",
+      };
+    })
+    .filter(Boolean);
+
+  const ranked = rankCandidates(candidates, ctx);
+  return pickFromRanked(ranked, slug, 2) ?? pickFromRanked(ranked, slug, 0);
 }
 
-async function searchPixabay(query, apiKey, slug) {
+async function searchPixabay(query, apiKey, slug, queryIndex, ctx) {
   const url = new URL(PIXABAY_SEARCH);
   url.searchParams.set("key", apiKey);
   url.searchParams.set("q", query);
   url.searchParams.set("image_type", "photo");
   url.searchParams.set("orientation", "horizontal");
-  url.searchParams.set("per_page", "20");
-  url.searchParams.set("page", String(searchPage(slug)));
+  url.searchParams.set("per_page", "30");
+  url.searchParams.set("page", String(searchPage(slug, queryIndex)));
   url.searchParams.set("safesearch", "true");
 
   const response = await fetch(url);
@@ -115,26 +144,33 @@ async function searchPixabay(query, apiKey, slug) {
   const hits = data.hits ?? [];
   if (hits.length === 0) return null;
 
-  const hit = hits[pickIndex(slug, hits.length)];
-  const imageUrl = hit.largeImageURL || hit.webformatURL;
-  if (!imageUrl) return null;
+  const candidates = hits
+    .map((hit) => {
+      const imageUrl = hit.largeImageURL || hit.webformatURL;
+      if (!imageUrl) return null;
 
-  const user = hit.user ?? "Pixabay";
-  return {
-    imageUrl,
-    alt: query,
-    credit: `Photo by ${user} / Pixabay`,
-    provider: "pixabay",
-  };
+      const user = hit.user ?? "Pixabay";
+      return {
+        imageUrl,
+        relevanceText: `${hit.tags ?? ""} ${query}`,
+        credit: `Photo by ${user} / Pixabay`,
+        provider: "pixabay",
+      };
+    })
+    .filter(Boolean);
+
+  const ranked = rankCandidates(candidates, ctx);
+  return pickFromRanked(ranked, slug, 2) ?? pickFromRanked(ranked, slug, 0);
 }
 
 /**
  * Fetch a cover image using Pexels + Pixabay rotation (slug-stable).
  * @param {string} slug
- * @param {string} query
+ * @param {string | Record<string, unknown>} queryOrContext - legacy query string or post metadata
  * @param {{ provider?: 'pexels' | 'pixabay' }} [options]
  */
-export async function fetchCoverImage(slug, query, options = {}) {
+export async function fetchCoverImage(slug, queryOrContext, options = {}) {
+  const ctx = resolveImageContext(slug, queryOrContext);
   const order = providerOrder(slug, options.provider);
 
   if (order.length === 0) {
@@ -145,34 +181,56 @@ export async function fetchCoverImage(slug, query, options = {}) {
   }
 
   let lastError = null;
+  const filename = buildCoverFilename(ctx.productKeywords, slug);
+  const coverImageAlt = buildCoverAlt("en", ctx);
+  const coverImageAltKo = buildCoverAlt("ko", ctx);
 
-  for (const provider of order) {
-    try {
-      let result = null;
+  for (let queryIndex = 0; queryIndex < ctx.searchQueries.length; queryIndex++) {
+    const query = ctx.searchQueries[queryIndex];
 
-      if (provider === "pexels") {
-        result = await searchPexels(query, process.env.PEXELS_API_KEY.trim(), slug);
-      } else if (provider === "pixabay") {
-        result = await searchPixabay(query, process.env.PIXABAY_API_KEY.trim(), slug);
+    for (const provider of order) {
+      try {
+        let result = null;
+
+        if (provider === "pexels") {
+          result = await searchPexels(
+            query,
+            process.env.PEXELS_API_KEY.trim(),
+            slug,
+            queryIndex,
+            ctx,
+          );
+        } else if (provider === "pixabay") {
+          result = await searchPixabay(
+            query,
+            process.env.PIXABAY_API_KEY.trim(),
+            slug,
+            queryIndex,
+            ctx,
+          );
+        }
+
+        if (!result) {
+          console.warn(`${provider}: no relevant results for "${query}"`);
+          continue;
+        }
+
+        const coverImage = await downloadToSlug(slug, result.imageUrl, filename);
+        console.log(
+          `Cover image: ${slug} via ${result.provider} (query="${query}", keywords="${ctx.productKeywords.join(", ")}")`,
+        );
+
+        return {
+          coverImage,
+          coverImageAlt,
+          coverImageAltKo,
+          coverImageCredit: result.credit,
+          coverImageProvider: result.provider,
+        };
+      } catch (error) {
+        lastError = error;
+        console.warn(`${provider} failed for ${slug}: ${error.message}`);
       }
-
-      if (!result) {
-        console.warn(`${provider}: no results for "${query}"`);
-        continue;
-      }
-
-      const coverImage = await downloadToSlug(slug, result.imageUrl);
-      console.log(`Cover image: ${slug} via ${result.provider} (query="${query}")`);
-
-      return {
-        coverImage,
-        coverImageAlt: result.alt,
-        coverImageCredit: result.credit,
-        coverImageProvider: result.provider,
-      };
-    } catch (error) {
-      lastError = error;
-      console.warn(`${provider} failed for ${slug}: ${error.message}`);
     }
   }
 

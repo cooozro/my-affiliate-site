@@ -14,6 +14,7 @@ import {
   saveState,
 } from "./state.mjs";
 import { pickContentProfile } from "../lib/content-profiles.mjs";
+import { buildCoverAlt, resolveImageContext } from "../lib/image-query.mjs";
 
 const MAX_WRITES_PER_DAY = 2;
 const TARGET_DRAFT_BUFFER = 2;
@@ -68,7 +69,12 @@ function uniqueSlug(base) {
   return `${slug}-${suffix}`;
 }
 
-function buildFrontmatter(localeData, shared, draft = true) {
+function buildFrontmatter(locale, localeData, shared, draft = true) {
+  const coverImageAlt =
+    locale === "ko" && shared.coverImageAltKo
+      ? shared.coverImageAltKo
+      : shared.coverImageAlt;
+
   return {
     title: localeData.title,
     description: localeData.description,
@@ -79,8 +85,9 @@ function buildFrontmatter(localeData, shared, draft = true) {
     createdAt: shared.createdAt,
     ...(shared.liveData ? { liveData: true } : {}),
     ...(shared.coverImage ? { coverImage: shared.coverImage } : {}),
-    ...(shared.coverImageAlt ? { coverImageAlt: shared.coverImageAlt } : {}),
+    ...(coverImageAlt ? { coverImageAlt } : {}),
     ...(shared.coverImageCredit ? { coverImageCredit: shared.coverImageCredit } : {}),
+    ...(shared.coverImageProvider ? { coverImageProvider: shared.coverImageProvider } : {}),
   };
 }
 
@@ -107,21 +114,39 @@ export async function generateOneDraft(options = {}) {
   const createdAt = new Date().toISOString();
   const date = kstDateString();
 
-  const imageMeta = await fetchCoverImage(
-    slug,
-    article.imageQuery ?? topic.imageQuery,
-  );
+  const imageInput = {
+    title: article.en?.title,
+    tags: article.en?.tags ?? article.tags,
+    imageQuery: article.imageQuery ?? topic.imageQuery,
+    imageSearchKeywords: topic.imageSearchKeywords,
+    topicCluster: topic.topicCluster,
+    topic,
+  };
+  const imageContext = resolveImageContext(slug, imageInput);
+  const imageMeta = await fetchCoverImage(slug, imageInput);
 
   const shared = {
     date,
     createdAt,
     contentProfile: article.contentProfile ?? contentProfile,
     liveData: Boolean(article.liveData ?? topic.liveData),
-    ...imageMeta,
+    ...(imageMeta ?? {}),
+    ...(imageMeta
+      ? {
+          coverImageAlt: buildCoverAlt("en", {
+            ...imageContext,
+            title: article.en?.title,
+          }),
+          coverImageAltKo: buildCoverAlt("ko", {
+            ...imageContext,
+            title: article.ko?.title,
+          }),
+        }
+      : {}),
   };
 
-  writePost(slug, "en", buildFrontmatter(article.en, shared), article.en.body);
-  writePost(slug, "ko", buildFrontmatter(article.ko, shared), article.ko.body);
+  writePost(slug, "en", buildFrontmatter("en", article.en, shared), article.en.body);
+  writePost(slug, "ko", buildFrontmatter("ko", article.ko, shared), article.ko.body);
 
   const issues = validatePostFiles(slug);
   if (issues.length > 0) {

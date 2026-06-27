@@ -13,9 +13,12 @@ tags:
 contentProfile: head-to-head
 draft: false
 liveData: true
-coverImage: /images/posts/2026-portable-vs-window-ac-head-to-head/cover.jpg
-coverImageAlt: portable air conditioner room
-coverImageCredit: Photo by rupixen / Pixabay
+coverImage: >-
+  /images/posts/2026-portable-vs-window-ac-head-to-head/air-conditioner-portable-ac-window-ac-cover.jpg
+coverImageAlt: >-
+  Portable vs Window AC: Which Cools a Small Apartment Better in Summer? — air
+  conditioner, portable AC, window AC cover photo
+coverImageCredit: Photo by LUM3N / Pixabay
 updatedAt: '2026-06-27T07:15:04.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pixabay
