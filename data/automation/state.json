@@ -7,6 +7,16 @@
     "portable-ac",
     "window-ac"
   ],
+  "topicHistory": [
+    { "id": "power-banks", "category": "accessories" },
+    { "id": "budget-smartphones", "category": "smartphones" },
+    { "id": "mechanical-keyboards", "category": "peripherals" },
+    { "id": "budget-monitors", "category": "displays" },
+    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
+    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
+    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" },
+    { "id": "portable-ac", "category": "home-appliances", "cluster": "air-conditioning" }
+  ],
   "formatHistory": [
     "head-to-head",
     "scenario-guide",

@@ -3,11 +3,18 @@
  * Season metadata drives pickTopic() — current KST month/event boosts priority.
  */
 import { pickSeasonalTopic } from "../lib/season-topics.mjs";
+import {
+  filterByTopicDiversity,
+  getTopicHistory,
+  recordTopicPick,
+  wouldViolateTopicDiversity,
+} from "../lib/topic-diversity.mjs";
 
 export const POST_TOPICS = [
   {
     id: "portable-ac",
     category: "home-appliances",
+    topicCluster: "air-conditioning",
     imageQuery: "portable air conditioner room",
     liveData: true,
     seasons: ["summer"],
@@ -27,6 +34,7 @@ export const POST_TOPICS = [
   {
     id: "window-ac",
     category: "home-appliances",
+    topicCluster: "air-conditioning",
     imageQuery: "window air conditioner apartment",
     liveData: true,
     seasons: ["summer"],
@@ -194,6 +202,7 @@ export const POST_TOPICS = [
  */
 export function pickTopic(state, options = {}) {
   const used = new Set(state.usedTopicIds ?? []);
+  const topicHistory = getTopicHistory(state);
   let candidates = POST_TOPICS.filter((t) => !used.has(t.id));
 
   if (options.contentProfile) {
@@ -205,6 +214,8 @@ export function pickTopic(state, options = {}) {
     }
   }
 
+  candidates = filterByTopicDiversity(candidates, topicHistory);
+
   if (candidates.length === 0) {
     state.usedTopicIds = [];
     candidates = POST_TOPICS;
@@ -215,13 +226,33 @@ export function pickTopic(state, options = {}) {
       );
       if (formatFiltered.length > 0) candidates = formatFiltered;
     }
+    candidates = filterByTopicDiversity(candidates, topicHistory);
   }
 
   const topic = pickSeasonalTopic(candidates, new Set(), new Date());
 
+  const violation = wouldViolateTopicDiversity(topic, topicHistory);
+  if (violation.blocked) {
+    console.warn(
+      `Topic pick ${topic.id} would cluster (${violation.reason}) — picking from broader pool`,
+    );
+    const fallback = POST_TOPICS.filter(
+      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+    );
+    if (fallback.length > 0) {
+      const alt = pickSeasonalTopic(fallback, new Set(), new Date());
+      state.topicIndex =
+        (POST_TOPICS.findIndex((t) => t.id === alt.id) + 1) % POST_TOPICS.length;
+      state.usedTopicIds = [...(state.usedTopicIds ?? []), alt.id].slice(-20);
+      recordTopicPick(state, alt);
+      return alt;
+    }
+  }
+
   state.topicIndex =
     (POST_TOPICS.findIndex((t) => t.id === topic.id) + 1) % POST_TOPICS.length;
   state.usedTopicIds = [...(state.usedTopicIds ?? []), topic.id].slice(-20);
+  recordTopicPick(state, topic);
   return topic;
 }
 

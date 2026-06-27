@@ -48,7 +48,9 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 
 ## Topics / categories
 
-Rotating pool in `scripts/automation/topics.mjs`:
+Rotating pool in `scripts/automation/topics.mjs` (season-first via `scripts/lib/season-topics.mjs`).
+
+**Topic diversity:** `scripts/lib/topic-diversity.mjs` blocks a 3rd consecutive draft/pick with the same topic id, category, or `topicCluster` (e.g. `air-conditioning` for portable/window AC). Max **2 in a row**; history tracked in `state.json` → `topicHistory`.
 
 - audio (earbuds, speakers)
 - smartphones, tablets
