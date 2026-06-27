@@ -32,12 +32,12 @@ function canPublishNow(state, force = false) {
   }
   ensureNextPublishAt(state);
 
+  if (force) return true;
+
   if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) {
     console.log(`Daily publish limit reached (${MAX_PUBLISH_PER_DAY}/day KST)`);
     return false;
   }
-
-  if (force) return true;
 
   const nextAt = new Date(state.nextPublishAt).getTime();
   const now = Date.now();

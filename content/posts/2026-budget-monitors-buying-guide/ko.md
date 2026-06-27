@@ -1,17 +1,22 @@
 ---
-title: "가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다"
-description: "2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드."
-date: "2026-06-26"
-tags: ["모니터", "가성비", "디스플레이", "게이밍", "구매 가이드"]
+title: '가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다'
+description: '2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.'
+date: '2026-06-27'
+tags:
+  - 모니터
+  - 가성비
+  - 디스플레이
+  - 게이밍
+  - 구매 가이드
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-26T12:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-monitors-buying-guide/cover.jpg"
-coverImageAlt: "깔끔한 책상 위 컴퓨터 모니터"
-coverImageCredit: "Photo by Lisa Fotios / Pexels"
+coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
+coverImageAlt: 깔끔한 책상 위 컴퓨터 모니터
+coverImageCredit: Photo by Lisa Fotios / Pexels
+updatedAt: '2026-06-27T01:16:46.000Z'
+publishedAt: '2026-06-27T01:16:46.000Z'
 ---
-
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 가성비 모니터를 패널·해상도·스탠드 공개 스펙으로 벤치마크합니다. **일반 시청 거리에서의 픽셀 밀도**가 박스 주사율 문구보다 일상 사용 만족도를 더 잘 설명합니다.

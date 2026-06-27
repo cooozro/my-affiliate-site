@@ -1,13 +1,14 @@
 {
-  "topicIndex": 1,
+  "topicIndex": 2,
   "usedTopicIds": [
     "budget-monitors",
-    "wireless-earbuds"
+    "wireless-earbuds",
+    "budget-smartphones"
   ],
-  "lastPublishAt": "2026-06-26T08:03:42.376Z",
-  "nextPublishAt": "2026-06-27T02:42:00.000Z",
-  "scheduledGapHours": 5.7,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-06-27T01:16:48.240Z",
+  "nextPublishAt": "2026-06-27T07:09:27.253Z",
+  "scheduledGapHours": 5.88,
+  "publishCountToday": 1,
   "publishDateKst": "2026-06-27",
   "writeCountToday": 0,
   "writeDateKst": "2026-06-27",
@@ -46,6 +47,15 @@
       "urls": [
         "https://www.aipick.shop/en/blog/2026-budget-mechanical-keyboards-guide",
         "https://www.aipick.shop/ko/blog/2026-budget-mechanical-keyboards-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-monitors-buying-guide",
+      "at": "2026-06-27T01:16:48.240Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-monitors-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-monitors-buying-guide"
       ]
     }
   ]

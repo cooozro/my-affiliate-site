@@ -1,13 +1,13 @@
 {
   "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-budget-mechanical-keyboards-guide",
-  "requestedAt": "2026-06-26T08:03:42.381Z",
+  "needed": 2,
+  "publishedSlug": "2026-budget-monitors-buying-guide",
+  "requestedAt": "2026-06-27T01:16:48.246Z",
   "topic": {
-    "id": "wireless-earbuds",
-    "category": "audio",
-    "angle": "budget wireless earbuds comparison with specs, battery, codec, and ANC data",
-    "imageQuery": "wireless earbuds technology",
+    "id": "budget-smartphones",
+    "category": "smartphones",
+    "angle": "best budget smartphones under a price tier with chipset, camera, and battery analysis",
+    "imageQuery": "smartphone comparison desk",
     "liveData": true
   },
   "instructions": "Write one bilingual buying-guide draft (en+ko, draft:true) per docs/CONTENT_STANDARDS.md. Suggested slug: 2026-budget-{topic-id}-guide. Run npm run content:validate, then set status to complete."

@@ -1,17 +1,25 @@
 ---
-title: "1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo"
-description: "Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Work-from-home and casual gaming scenarios without marketing fluff."
-date: "2026-06-26"
-tags: ["monitors", "budget tech", "displays", "gaming", "buying guide"]
+title: '1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo'
+description: >-
+  Five budget monitors compared by panel type, resolution, refresh rate, and
+  ergonomics. Work-from-home and casual gaming scenarios without marketing
+  fluff.
+date: '2026-06-27'
+tags:
+  - monitors
+  - budget tech
+  - displays
+  - gaming
+  - buying guide
 contentProfile: buying-guide
-draft: true
-createdAt: "2026-06-26T12:00:00+09:00"
+draft: false
 liveData: true
-coverImage: "/images/posts/2026-budget-monitors-buying-guide/cover.jpg"
-coverImageAlt: "Computer monitor on a clean desk setup"
-coverImageCredit: "Photo by Lisa Fotios / Pexels"
+coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
+coverImageAlt: Computer monitor on a clean desk setup
+coverImageCredit: Photo by Lisa Fotios / Pexels
+updatedAt: '2026-06-27T01:16:46.000Z'
+publishedAt: '2026-06-27T01:16:46.000Z'
 ---
-
 ## Editorial Overview
 
 > As an independent tech review publication, we benchmark budget monitors on panel type, resolution, and stand ergonomics from public spec data. **Pixel density at normal viewing distance** drives daily comfort more reliably than refresh-rate claims on the box.
