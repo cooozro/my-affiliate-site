@@ -1,5 +1,8 @@
 # Buying Guide — AdSense-Optimized Review Format
 
+> **Moved:** Full template is now at [`docs/templates/buying-guide.md`](templates/buying-guide.md).  
+> Other formats: `head-to-head`, `scenario-guide`, `explainer`, `checklist` — see `docs/templates/`.
+
 Use for every **buying-guide** post (`contentProfile: buying-guide`). **English is the primary editorial language**; Korean (`ko.md`) should be a faithful translation of the English body.
 
 ## AdSense pre-approval rules

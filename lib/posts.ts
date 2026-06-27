@@ -19,6 +19,13 @@ export type PostMeta = {
   coverImageCredit?: string;
   liveData?: boolean;
   draft?: boolean;
+  contentProfile?:
+    | "buying-guide"
+    | "head-to-head"
+    | "scenario-guide"
+    | "explainer"
+    | "checklist"
+    | "editorial";
 };
 
 export type Post = PostMeta & {
@@ -61,6 +68,9 @@ function parsePostFile(slug: string, locale: Locale): Post {
       : undefined,
     liveData: Boolean(data.liveData),
     draft: Boolean(data.draft),
+    contentProfile: data.contentProfile
+      ? String(data.contentProfile)
+      : undefined,
     content: content.trim(),
   };
 }

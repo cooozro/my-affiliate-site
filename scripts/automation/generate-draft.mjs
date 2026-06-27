@@ -13,6 +13,7 @@ import {
   resetDailyCounters,
   saveState,
 } from "./state.mjs";
+import { pickContentProfile } from "../lib/content-profiles.mjs";
 
 const MAX_WRITES_PER_DAY = 2;
 const TARGET_DRAFT_BUFFER = 2;
@@ -74,6 +75,7 @@ function buildFrontmatter(localeData, shared, draft = true) {
     date: shared.date,
     tags: localeData.tags,
     draft,
+    contentProfile: shared.contentProfile ?? "buying-guide",
     createdAt: shared.createdAt,
     ...(shared.liveData ? { liveData: true } : {}),
     ...(shared.coverImage ? { coverImage: shared.coverImage } : {}),
@@ -93,11 +95,12 @@ export async function generateOneDraft(options = {}) {
     return null;
   }
 
-  const topic = pickTopic(state);
+  const contentProfile = pickContentProfile(state);
+  const topic = pickTopic(state, { contentProfile });
   const year = new Date().getFullYear();
-  const prompt = buildGenerationPrompt(topic, year);
+  const prompt = buildGenerationPrompt(topic, year, contentProfile);
 
-  console.log(`Generating draft: ${topic.id} (${topic.category})`);
+  console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
   const article = await callOpenAI(prompt);
 
   const slug = uniqueSlug(article.slug ?? `${year}-${topic.id}-guide`);
@@ -112,6 +115,7 @@ export async function generateOneDraft(options = {}) {
   const shared = {
     date,
     createdAt,
+    contentProfile: article.contentProfile ?? contentProfile,
     liveData: Boolean(article.liveData ?? topic.liveData),
     ...imageMeta,
   };

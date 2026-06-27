@@ -3,7 +3,15 @@
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
-    "budget-smartphones"
+    "budget-smartphones",
+    "portable-ac",
+    "window-ac"
+  ],
+  "formatHistory": [
+    "head-to-head",
+    "scenario-guide",
+    "explainer",
+    "checklist"
   ],
   "lastPublishAt": "2026-06-27T01:16:48.240Z",
   "nextPublishAt": "2026-06-27T07:09:27.253Z",

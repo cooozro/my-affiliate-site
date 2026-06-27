@@ -2,14 +2,15 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export const MIN_BODY_CHARS = 2500;
-export const MIN_DESCRIPTION_CHARS = 50;
-export const MAX_DESCRIPTION_CHARS = 160;
-
 import {
   FORMULAIC_TITLE_PATTERNS,
   MISLEADING_SOURCE_PATTERNS,
 } from "./editorial-standards.mjs";
+import { CONTENT_PROFILES, PROFILE_MIN_BODY_CHARS } from "./content-profiles.mjs";
+
+export const MIN_BODY_CHARS = 2500;
+export const MIN_DESCRIPTION_CHARS = 50;
+export const MAX_DESCRIPTION_CHARS = 160;
 
 const FORBIDDEN_PATTERNS = [
   /<!--\s*ad-break\s*-->/i,
@@ -29,18 +30,18 @@ const WHO_SHOULD_BUY_PATTERN =
 const WHO_SHOULD_SKIP_PATTERN =
   /(Who should skip|이런 분은 패스)/i;
 const CONCLUSION_PATTERN = /##\s*(결론|Conclusion)/i;
+const SCENARIO_PATTERN =
+  /##\s*(Scenario:\s|시나리오:\s)/i;
+const FAQ_PATTERN = /##\s*(FAQ|자주 묻는 질문|Frequently asked)/i;
+const PRODUCT_SECTION_PATTERN = /^##\s*\d+\.\s+/gm;
 
 function hasCoverImage(root, data) {
   if (!data.coverImage) return false;
   return fs.existsSync(path.join(root, "public", data.coverImage));
 }
 
-/**
- * Google Search Essentials / people-first self-audit before publish.
- * Returns human-readable issue strings.
- */
-export function auditLocalePost(root, slug, locale, raw, options = {}) {
-  const { forPublish = true, profile = "buying-guide" } = options;
+function auditShared(root, slug, locale, raw, profile, options) {
+  const { forPublish = true } = options;
   const issues = [];
   const { data, content } = matter(raw);
   const body = content.trim();
@@ -77,7 +78,7 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(`${label}: description over ${MAX_DESCRIPTION_CHARS} chars`);
   }
 
-  if (forPublish && !data.date) {
+  if (forPublish && !data.draft && !data.date) {
     issues.push(`${label}: missing date`);
   }
 
@@ -95,18 +96,37 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     }
   }
 
-  if (profile !== "buying-guide") {
-    if (body.length < 800) {
-      issues.push(`${label}: body too short (${body.length} chars, min 800)`);
-    }
+  const minChars =
+    PROFILE_MIN_BODY_CHARS[profile] ?? PROFILE_MIN_BODY_CHARS.editorial;
+  if (profile !== "editorial" && body.length < minChars) {
+    issues.push(
+      `${label}: body too short (${body.length} chars, min ${minChars} for ${profile})`,
+    );
+  } else if (profile === "editorial" && body.length < 800) {
+    issues.push(`${label}: body too short (${body.length} chars, min 800)`);
+  }
+
+  if (profile === "editorial") {
     return issues;
   }
 
-  if (body.length < MIN_BODY_CHARS) {
-    issues.push(
-      `${label}: body too short (${body.length} chars, min ${MIN_BODY_CHARS})`,
-    );
+  if (!METHODOLOGY_PATTERN.test(body)) {
+    issues.push(`${label}: missing methodology section (Google E-E-A-T)`);
   }
+
+  if (!EDITORS_NOTE_PATTERN.test(body)) {
+    issues.push(`${label}: missing Editorial Overview section`);
+  }
+
+  if (!/##\s*(Related guides|관련 가이드)/i.test(body)) {
+    issues.push(`${label}: missing Related guides / 관련 가이드 internal links section`);
+  }
+
+  return { issues, body, label };
+}
+
+function auditBuyingGuide(body, label) {
+  const issues = [];
 
   const h2Count = (body.match(/^##\s+/gm) ?? []).length;
   if (h2Count < 4) {
@@ -117,20 +137,8 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(`${label}: missing comparison table`);
   }
 
-  if (!METHODOLOGY_PATTERN.test(body)) {
-    issues.push(`${label}: missing methodology section (Google E-E-A-T)`);
-  }
-
-  if (!EDITORS_NOTE_PATTERN.test(body)) {
-    issues.push(`${label}: missing Editorial Overview section (see BUYING_GUIDE_TEMPLATE.md)`);
-  }
-
-  if (!/##\s*(Related guides|관련 가이드)/i.test(body)) {
-    issues.push(`${label}: missing Related guides / 관련 가이드 internal links section`);
-  }
-
   if (!FINAL_VERDICT_PATTERN.test(body)) {
-    issues.push(`${label}: missing Final Verdict section (see BUYING_GUIDE_TEMPLATE.md)`);
+    issues.push(`${label}: missing Final Verdict section`);
   }
 
   if (!WHO_SHOULD_BUY_PATTERN.test(body)) {
@@ -141,10 +149,6 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(`${label}: missing Who should skip / 이런 분은 패스 section`);
   }
 
-  if (!CONCLUSION_PATTERN.test(body) && !FINAL_VERDICT_PATTERN.test(body)) {
-    issues.push(`${label}: missing conclusion or final verdict section`);
-  }
-
   const listItems = (body.match(/^\d+\.\s+/gm) ?? []).length;
   if (listItems < 3) {
     issues.push(`${label}: need at least 3 numbered checklist items`);
@@ -153,9 +157,128 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
   return issues;
 }
 
-function resolveContentProfile(data) {
-  if (data.contentProfile === "buying-guide" || data.contentProfile === "editorial") {
+function auditHeadToHead(body, label) {
+  const issues = [];
+
+  if (!/\|.+\|/.test(body)) {
+    issues.push(`${label}: missing comparison table`);
+  }
+
+  const productSections = (body.match(PRODUCT_SECTION_PATTERN) ?? []).length;
+  if (productSections < 2) {
+    issues.push(`${label}: head-to-head needs at least 2 numbered product sections`);
+  }
+
+  if (
+    !/(Scenario winners|시나리오별 승자|Scenario winner)/i.test(body) &&
+    !FINAL_VERDICT_PATTERN.test(body)
+  ) {
+    issues.push(`${label}: missing Scenario winners or Final Verdict section`);
+  }
+
+  if (!FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing Final Verdict section`);
+  }
+
+  return issues;
+}
+
+function auditScenarioGuide(body, label) {
+  const issues = [];
+
+  const scenarios = (body.match(
+    new RegExp(SCENARIO_PATTERN.source, "gi"),
+  ) ?? []).length;
+  if (scenarios < 3) {
+    issues.push(`${label}: scenario-guide needs at least 3 scenario sections (found ${scenarios})`);
+  }
+
+  if (!/\|.+\|/.test(body)) {
+    issues.push(`${label}: missing comparison table`);
+  }
+
+  if (!FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing Final Verdict section`);
+  }
+
+  return issues;
+}
+
+function auditExplainer(body, label) {
+  const issues = [];
+
+  if (!FAQ_PATTERN.test(body)) {
+    issues.push(`${label}: explainer needs FAQ / 자주 묻는 질문 section`);
+  }
+
+  const faqItems = (body.match(/^###\s+.+\?/gm) ?? []).length;
+  if (faqItems < 5) {
+    issues.push(`${label}: explainer needs at least 5 FAQ entries (### headings, found ${faqItems})`);
+  }
+
+  if (!/\|.+\|/.test(body)) {
+    issues.push(`${label}: missing reference or comparison table`);
+  }
+
+  if (
+    !/(Key takeaways|핵심 정리)/i.test(body) &&
+    (body.match(/^\d+\.\s+/gm) ?? []).length < 3
+  ) {
+    issues.push(`${label}: explainer needs Key takeaways or numbered summary (≥3 items)`);
+  }
+
+  return issues;
+}
+
+function auditChecklist(body, label) {
+  const issues = [];
+
+  const listItems = (body.match(/^\d+\.\s+/gm) ?? []).length;
+  if (listItems < 7) {
+    issues.push(`${label}: checklist needs at least 7 numbered items (found ${listItems})`);
+  }
+
+  if (!FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing Final Verdict section`);
+  }
+
+  return issues;
+}
+
+/**
+ * Google Search Essentials / people-first self-audit before publish.
+ */
+export function auditLocalePost(root, slug, locale, raw, options = {}) {
+  const { forPublish = true, profile = "buying-guide" } = options;
+
+  const shared = auditShared(root, slug, locale, raw, profile, { forPublish });
+  if (Array.isArray(shared)) {
+    return shared;
+  }
+
+  const { issues, body, label } = shared;
+
+  if (profile === "buying-guide") {
+    issues.push(...auditBuyingGuide(body, label));
+  } else if (profile === "head-to-head") {
+    issues.push(...auditHeadToHead(body, label));
+  } else if (profile === "scenario-guide") {
+    issues.push(...auditScenarioGuide(body, label));
+  } else if (profile === "explainer") {
+    issues.push(...auditExplainer(body, label));
+  } else if (profile === "checklist") {
+    issues.push(...auditChecklist(body, label));
+  }
+
+  return issues;
+}
+
+export function resolveContentProfile(data) {
+  if (data.contentProfile && CONTENT_PROFILES.includes(data.contentProfile)) {
     return data.contentProfile;
+  }
+  if (data.contentProfile === "editorial") {
+    return "editorial";
   }
   return data.liveData ? "buying-guide" : "editorial";
 }

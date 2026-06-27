@@ -21,33 +21,37 @@ import {
 } from "./posts-fs.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 
+import { getTemplatePath } from "../lib/content-profiles.mjs";
+
 function buildPrompt(request) {
   const topic = request.topic ?? {};
+  const contentProfile = request.contentProfile ?? "buying-guide";
+  const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
+
   return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
 
 Read first:
 - docs/CONTENT_STANDARDS.md
-- docs/BUYING_GUIDE_TEMPLATE.md
+- ${templatePath}
 - scripts/lib/editorial-standards.mjs
 - data/automation/cursor-draft-request.json
 
-Write exactly ONE bilingual buying-guide draft:
+Write exactly ONE bilingual draft:
 - Files: content/posts/{slug}/en.md and ko.md
-- Frontmatter: draft:true, contentProfile:buying-guide
+- Frontmatter: draft:true, contentProfile:${contentProfile}
 - Topic id: ${topic.id ?? "see request file"}
 - Category: ${topic.category ?? ""}
 - Angle: ${topic.angle ?? ""}
-- Suggested slug: 2026-budget-${topic.id ?? "topic"}-guide (unique, lowercase, hyphens only)
+- Season priority: ${request.season ?? "current KST season"}${request.seasonalEvents?.length ? ` (${request.seasonalEvents.join(", ")})` : ""}
+- Suggested slug: 2026-${topic.id ?? "topic"}-guide (unique, lowercase, hyphens only)
 - liveData: ${topic.liveData ? "true — use {{today}}, {{today_locale}}, {{usd_krw_rate}}, {{krw:29.99}}" : "false"}
 
+Follow ${templatePath} for section structure.
+
 Content requirements (each locale):
-- 2500+ characters
+- Meet minimum length for profile ${contentProfile}
 - Analysis methodology table (editorial sources only — no seller API claims)
-- TOP 5 comparison table
-- Scenario matrix
-- Five checks before you buy
 - Related guides section with /en/blog/ or /ko/blog/ internal links
-- Final Verdict with Who should buy / Who should skip tables (see BUYING_GUIDE_TEMPLATE.md)
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:

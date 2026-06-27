@@ -1,0 +1,13 @@
+---
+description: Always commit and push completed work without asking
+alwaysApply: true
+---
+
+# Git — default commit and push
+
+When implementation work is complete and the user has not said "do not push":
+
+1. **Do not ask** whether to commit or push — do both by default.
+2. Stage relevant changes, write a concise commit message (why, not just what), commit, then `git push origin` (current branch).
+3. Only skip commit/push when the user explicitly says not to, or when there are no changes.
+4. Never force-push to main/master unless explicitly requested.

@@ -41,15 +41,17 @@ Title rules (buying-guide):
 - EN and KO titles should feel independently written, not literal translations of the same template.
 `.trim();
 
-/** Professional review format — see docs/BUYING_GUIDE_TEMPLATE.md */
+/** Professional review formats — see docs/templates/ */
 export const REVIEW_FORMAT_GUIDE = `
-Required body structure (buying-guide):
-1. First ## heading: "Editorial Overview" (EN) or "편집부 개요" (KO) — publication voice only; NO personal operator details or first-person career notes.
-2. English is primary; Korean is a faithful translation.
-3. Each product ## section: Strengths, Weaknesses, Analysis takeaway / 분석 요약, Verdict.
-4. "## Related guides" / "## 관련 가이드" with internal /en/blog/ or /ko/blog/ links.
-5. "## Final Verdict" / "## 최종 평가" with Who should buy / Who should skip tables.
-6. NO ad placeholders, AdSense snippets, or sponsored blocks in markdown.
+Content profiles (contentProfile frontmatter):
+- buying-guide: docs/templates/buying-guide.md
+- head-to-head: docs/templates/head-to-head.md
+- scenario-guide: docs/templates/scenario-guide.md
+- explainer: docs/templates/explainer.md
+- checklist: docs/templates/checklist.md
+
+All profiles require: Editorial Overview, methodology, Related guides.
+Season-first topic selection: scripts/lib/season-topics.mjs
 `.trim();
 
 export const METHODOLOGY_BLOCK_KO = `## 분석 방법론
