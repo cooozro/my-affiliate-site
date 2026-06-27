@@ -8,12 +8,12 @@
     "window-ac"
   ],
   "lastPublishAt": "2026-06-27T07:15:05.684Z",
-  "nextPublishAt": "2026-06-28T02:53:00.000Z",
-  "scheduledGapHours": 5.88,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-06-27",
+  "nextPublishAt": "2026-06-28T02:27:00.000Z",
+  "scheduledGapHours": 5.45,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-06-28",
   "writeCountToday": 0,
-  "writeDateKst": "2026-06-27",
+  "writeDateKst": "2026-06-28",
   "history": [
     {
       "action": "publish",
