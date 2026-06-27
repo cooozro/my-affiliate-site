@@ -10,13 +10,13 @@ import {
 } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Locale } from "@/lib/i18n/config";
-import type { PostMeta } from "@/lib/posts";
+import type { HomePost } from "@/lib/posts";
 import type { Dictionary } from "@/messages/en";
 import { PostCard } from "@/components/post-card";
 import { PostThumbnail } from "@/components/post-thumbnail";
 
 type HomePostListProps = {
-  posts: PostMeta[];
+  posts: HomePost[];
   locale: Locale;
   labels: Dictionary["home"];
 };
@@ -27,12 +27,9 @@ function normalizeQuery(value: string) {
   return value.trim().toLowerCase();
 }
 
-function matchesPost(post: PostMeta, query: string) {
+function matchesPost(post: HomePost, query: string) {
   if (!query) return true;
-  const haystack = [post.title, post.description, ...(post.tags ?? [])]
-    .join(" ")
-    .toLowerCase();
-  return haystack.includes(query);
+  return post.searchText.includes(query);
 }
 
 function HomePostListContent({ posts, locale, labels }: HomePostListProps) {

@@ -5,7 +5,7 @@ import { CONTENT_SHELL } from "@/lib/layout";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
-import { getAllPosts } from "@/lib/posts";
+import { getHomePosts } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 import en from "@/messages/en";
 
@@ -44,7 +44,7 @@ export default async function HomePage({ params }: PageProps) {
   const { locale: localeParam } = await params;
   const locale = localeParam as Locale;
   const dict = await getDictionary(locale);
-  const posts = getAllPosts(locale);
+  const posts = getHomePosts(locale);
 
   return (
     <>

@@ -33,6 +33,44 @@ export type Post = PostMeta & {
   content: string;
 };
 
+export type HomePost = PostMeta & {
+  /** Lowercased title, description, tags, body, and sibling locale text for client search. */
+  searchText: string;
+};
+
+function stripMarkdownForSearch(markdown: string): string {
+  return markdown
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`[^`]*`/g, " ")
+    .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)]\([^)]*\)/g, "$1")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/[*_~>|]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildSearchText(post: Post, sibling?: Post): string {
+  const chunks: string[] = [
+    post.title,
+    post.description,
+    ...(post.tags ?? []),
+    stripMarkdownForSearch(post.content),
+    post.slug.replace(/-/g, " "),
+  ];
+
+  if (sibling) {
+    chunks.push(
+      sibling.title,
+      sibling.description,
+      ...(sibling.tags ?? []),
+      stripMarkdownForSearch(sibling.content),
+    );
+  }
+
+  return chunks.filter(Boolean).join(" ").toLowerCase();
+}
+
 function ensurePostsDirectory(): void {
   if (!fs.existsSync(POSTS_DIRECTORY)) {
     throw new Error(
@@ -120,6 +158,29 @@ export function getAllPosts(
     .map((slug) => {
       const { content: _content, ...meta } = parsePostFile(slug, locale);
       return meta;
+    })
+    .sort((a, b) => postSortTime(b) - postSortTime(a));
+}
+
+export function getHomePosts(
+  locale: Locale,
+  options?: { includeDrafts?: boolean },
+): HomePost[] {
+  const otherLocale: Locale = locale === "en" ? "ko" : "en";
+
+  return getPostSlugs(locale, options)
+    .map((slug) => {
+      const post = parsePostFile(slug, locale);
+      const siblingPath = getPostFilePath(slug, otherLocale);
+      const sibling = fs.existsSync(siblingPath)
+        ? parsePostFile(slug, otherLocale)
+        : undefined;
+      const { content: _content, ...meta } = post;
+
+      return {
+        ...meta,
+        searchText: buildSearchText(post, sibling),
+      };
     })
     .sort((a, b) => postSortTime(b) - postSortTime(a));
 }
