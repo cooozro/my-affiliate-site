@@ -64,7 +64,8 @@ Repository → Settings → Secrets and variables → Actions:
 
 | Secret | Required | Purpose |
 | --- | --- | --- |
-| `PEXELS_API_KEY` | Yes (for cover images via script) | Cover images |
+| `PEXELS_API_KEY` | Yes (cover images) | Pexels stock photos |
+| `PIXABAY_API_KEY` | Yes (cover images) | Pixabay stock photos — rotates with Pexels by slug |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
 | `CURSOR_API_KEY` | **Yes** (draft replenish on GHA) | Cursor agent writes drafts when PC is off |
 

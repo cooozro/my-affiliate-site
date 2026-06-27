@@ -64,14 +64,24 @@ A data disclaimer is shown automatically below the cover image.
 
 ## Images (free, legal)
 
-### Recommended: Pexels API
+Cover images rotate between **Pexels** and **Pixabay** by post slug (`scripts/lib/cover-image.mjs`). Set one or both keys.
+
+### Pexels API
 
 1. Free key: https://www.pexels.com/api/
-2. Set `PEXELS_API_KEY` in `.env.local`
-3. Run:
+2. Set `PEXELS_API_KEY` in `.env.local` and GitHub Secrets
+
+### Pixabay API
+
+1. Free key: https://pixabay.com/api/docs/ (login → API key on docs page)
+2. Set `PIXABAY_API_KEY` in `.env.local` and GitHub Secrets
+
+### Fetch command
 
 ```bash
-npm run content:image -- --slug=my-post-slug --query="wireless earbuds" --locale=en
+npm run content:image -- --slug=my-post-slug --query="wireless earbuds"
+# Optional force: --provider=pexels or --provider=pixabay
+# Update both locales: --locale=all
 ```
 
 Repeat with `--locale=ko` if alt text should differ (or edit `coverImageAlt` manually).
@@ -84,6 +94,7 @@ Images are saved to `public/images/posts/{slug}/cover.jpg` and referenced in fro
 coverImage: "/images/posts/my-slug/cover.jpg"
 coverImageAlt: "Descriptive alt text for accessibility and SEO"
 coverImageCredit: "Photo by Name / Pexels"
+coverImageProvider: "pexels"   # optional: pexels | pixabay (set by fetch script)
 liveData: true   # optional, for FX/date placeholders
 ```
 

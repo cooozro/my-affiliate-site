@@ -1,66 +1,37 @@
 #!/usr/bin/env node
 /**
- * Fetch a royalty-free cover image from Pexels and update post frontmatter.
+ * Fetch a royalty-free cover image (Pexels + Pixabay rotation) and update post frontmatter.
  *
  * Usage:
- *   PEXELS_API_KEY=your_key npm run content:image -- --slug=my-post --query="wireless earbuds"
+ *   npm run content:image -- --slug=my-post --query="wireless earbuds"
  *
- * Get a free API key: https://www.pexels.com/api/
+ * Env: PEXELS_API_KEY and/or PIXABAY_API_KEY in .env.local
+ * Keys: https://www.pexels.com/api/ | https://pixabay.com/api/docs/
  */
 
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import {
+  availableImageProviders,
+  fetchCoverImage,
+  pickImageProvider,
+} from "./lib/cover-image.mjs";
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "content", "posts");
 
 function parseArgs(argv) {
-  const args = { slug: "", query: "", locale: "en" };
+  const args = { slug: "", query: "", locale: "en", provider: "" };
 
   for (const arg of argv) {
     if (arg.startsWith("--slug=")) args.slug = arg.slice(7);
     if (arg.startsWith("--query=")) args.query = arg.slice(8);
     if (arg.startsWith("--locale=")) args.locale = arg.slice(9);
+    if (arg.startsWith("--provider=")) args.provider = arg.slice(11);
   }
 
   return args;
-}
-
-async function searchPexels(query, apiKey) {
-  const url = new URL("https://api.pexels.com/v1/search");
-  url.searchParams.set("query", query);
-  url.searchParams.set("per_page", "1");
-  url.searchParams.set("orientation", "landscape");
-
-  const response = await fetch(url, {
-    headers: { Authorization: apiKey },
-  });
-
-  if (!response.ok) {
-    throw new Error(`Pexels API error: ${response.status}`);
-  }
-
-  const data = await response.json();
-  const photo = data.photos?.[0];
-
-  if (!photo) {
-    throw new Error(`No Pexels results for query: ${query}`);
-  }
-
-  return photo;
-}
-
-async function downloadImage(imageUrl, destPath) {
-  const response = await fetch(imageUrl);
-
-  if (!response.ok) {
-    throw new Error(`Image download failed: ${response.status}`);
-  }
-
-  const buffer = Buffer.from(await response.arrayBuffer());
-  fs.mkdirSync(path.dirname(destPath), { recursive: true });
-  fs.writeFileSync(destPath, buffer);
 }
 
 function updateFrontmatter(slug, locale, fields) {
@@ -73,50 +44,55 @@ function updateFrontmatter(slug, locale, fields) {
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
   const next = { ...data, ...fields };
-  const frontmatter = matter.stringify(content, next);
-
-  fs.writeFileSync(filePath, frontmatter, "utf8");
+  fs.writeFileSync(filePath, matter.stringify(content, next), "utf8");
   return filePath;
 }
 
 async function main() {
-  const { slug, query, locale } = parseArgs(process.argv.slice(2));
-  const apiKey = process.env.PEXELS_API_KEY;
+  const { slug, query, locale, provider } = parseArgs(process.argv.slice(2));
 
   if (!slug || !query) {
     console.error(
-      "Usage: PEXELS_API_KEY=... npm run content:image -- --slug=post-slug --query=\"search terms\"",
+      'Usage: npm run content:image -- --slug=post-slug --query="search terms" [--provider=pexels|pixabay]',
     );
     process.exit(1);
   }
 
-  if (!apiKey) {
+  if (availableImageProviders().length === 0) {
     console.error(
-      "Missing PEXELS_API_KEY. Get a free key at https://www.pexels.com/api/",
+      "Missing PEXELS_API_KEY and PIXABAY_API_KEY. Add at least one to .env.local",
     );
     process.exit(1);
   }
 
-  const photo = await searchPexels(query, apiKey);
-  const imageUrl = photo.src.large2x || photo.src.large;
-  const relativePath = `/images/posts/${slug}/cover.jpg`;
-  const destPath = path.join(ROOT, "public", "images", "posts", slug, "cover.jpg");
+  const forced =
+    provider === "pexels" || provider === "pixabay" ? provider : undefined;
+  const planned = forced ?? pickImageProvider(slug);
+  console.log(`Provider plan: ${planned ?? "auto"} (available: ${availableImageProviders().join(", ")})`);
 
-  await downloadImage(imageUrl, destPath);
+  const meta = await fetchCoverImage(slug, query, { provider: forced });
+  if (!meta) {
+    console.error(`Failed to fetch cover for ${slug}`);
+    process.exit(1);
+  }
 
-  const photographer = photo.photographer ?? "Pexels";
-  const credit = `Photo by ${photographer} / Pexels`;
-  const alt = query;
+  const locales = locale === "all" ? ["en", "ko"] : [locale];
+  for (const loc of locales) {
+    const postPath = path.join(POSTS_DIR, slug, `${loc}.md`);
+    if (!fs.existsSync(postPath)) continue;
+    const updated = updateFrontmatter(slug, loc, {
+      coverImage: meta.coverImage,
+      coverImageAlt: meta.coverImageAlt,
+      coverImageCredit: meta.coverImageCredit,
+      ...(meta.coverImageProvider
+        ? { coverImageProvider: meta.coverImageProvider }
+        : {}),
+    });
+    console.log(`Updated ${updated}`);
+  }
 
-  const updated = updateFrontmatter(slug, locale, {
-    coverImage: relativePath,
-    coverImageAlt: alt,
-    coverImageCredit: credit,
-  });
-
-  console.log(`Saved ${destPath}`);
-  console.log(`Updated ${updated}`);
-  console.log(`Credit: ${credit}`);
+  console.log(`Saved public/images/posts/${slug}/cover.jpg`);
+  console.log(`Credit: ${meta.coverImageCredit}`);
 }
 
 main().catch((error) => {
