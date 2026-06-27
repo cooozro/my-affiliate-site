@@ -19,11 +19,11 @@ import fs from "fs";
 import path from "path";
 import {
   formatKst,
-  reconcilePublishSchedule,
-} from "../scripts/lib/publish-schedule.mjs";
+  MAX_PUBLISH_PER_DAY,
+  previewReconcilePublishSchedule,
+} from "@/lib/publish-schedule";
 
 const TARGET_DRAFT_COUNT = 2;
-const MAX_PUBLISH_PER_DAY = 2;
 
 export type AutomationStatus = {
   mode: "publish-only";
@@ -47,13 +47,12 @@ export function getAutomationStatus(): AutomationStatus {
     ? (JSON.parse(fs.readFileSync(statePath, "utf8")) as Record<string, unknown>)
     : {};
 
-  if (reconcilePublishSchedule(state)) {
-    fs.writeFileSync(statePath, `${JSON.stringify(state, null, 2)}\n`, "utf8");
-  }
+  const reconciledNext = previewReconcilePublishSchedule(state);
+  const nextPublishAt =
+    reconciledNext ??
+    (typeof state.nextPublishAt === "string" ? state.nextPublishAt : null);
 
   const draftCount = listPostsForAdmin().filter((post) => post.draft).length;
-  const nextPublishAt =
-    typeof state.nextPublishAt === "string" ? state.nextPublishAt : null;
 
   const requestPath = path.join(
     process.cwd(),

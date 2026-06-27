@@ -48,9 +48,20 @@ export function AdminDashboard() {
   async function loadData() {
     setLoading(true);
     setError("");
-    const response = await fetch("/api/admin/posts");
+    const response = await fetch("/api/admin/posts", { credentials: "same-origin" });
     if (!response.ok) {
-      setError("Failed to load admin data");
+      let detail = `HTTP ${response.status}`;
+      try {
+        const body = (await response.json()) as { error?: string };
+        if (body.error) detail = body.error;
+      } catch {
+        /* ignore */
+      }
+      setError(
+        response.status === 401
+          ? "세션이 만료되었습니다. /admin/login 에서 다시 로그인하세요."
+          : `Failed to load admin data: ${detail}`,
+      );
       setLoading(false);
       return;
     }

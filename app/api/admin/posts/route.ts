@@ -18,11 +18,17 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const [posts, analytics, automation] = await Promise.all([
-    getAdminPosts(),
-    getAdminAnalytics(),
-    Promise.resolve(getAdminAutomationStatus()),
-  ]);
+  try {
+    const [posts, analytics, automation] = await Promise.all([
+      getAdminPosts(),
+      getAdminAnalytics(),
+      Promise.resolve(getAdminAutomationStatus()),
+    ]);
 
-  return NextResponse.json({ posts, analytics, automation });
+    return NextResponse.json({ posts, analytics, automation });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown error";
+    console.error("Admin posts API error:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
