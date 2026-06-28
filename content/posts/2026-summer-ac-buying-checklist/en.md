@@ -1,5 +1,5 @@
 ---
-title: '7 Checks Before You Buy a Summer Air Conditioner in 2026'
+title: 7 Checks Before You Buy a Summer Air Conditioner in 2026
 description: >-
   Pre-purchase checklist for window and portable AC — BTU fit, install rules,
   noise, energy label, hose seals, drainage, and warranty before heat season.
@@ -11,12 +11,13 @@ tags:
   - buying guide
   - home appliances
 contentProfile: checklist
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-summer-ac-buying-checklist/cover.jpg
 coverImageAlt: Checklist clipboard next to a summer air conditioner
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-28T17:36:03.000Z'
+publishedAt: '2026-06-28T17:36:03.000Z'
 ---
 ## Editorial Overview
 

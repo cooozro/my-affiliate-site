@@ -7,10 +7,10 @@
     "portable-ac",
     "window-ac"
   ],
-  "lastPublishAt": "2026-06-27T07:15:05.684Z",
-  "nextPublishAt": "2026-06-28T02:27:00.000Z",
-  "scheduledGapHours": 5.45,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-06-28T08:36:05.216Z",
+  "nextPublishAt": "2026-06-28T12:58:37.069Z",
+  "scheduledGapHours": 4.38,
+  "publishCountToday": 1,
   "publishDateKst": "2026-06-28",
   "writeCountToday": 0,
   "writeDateKst": "2026-06-28",
@@ -67,6 +67,15 @@
       "urls": [
         "https://www.aipick.shop/en/blog/2026-portable-vs-window-ac-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-portable-vs-window-ac-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-ac-buying-checklist",
+      "at": "2026-06-28T08:36:05.216Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
+        "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist"
       ]
     }
   ],

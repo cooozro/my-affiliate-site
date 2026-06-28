@@ -1,8 +1,6 @@
 ---
-title: '2026 여름 에어컨 사기 전 7가지 체크'
-description: >-
-  창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·
-  배수·필터. 폭염 전에 확인할 항목.
+title: 2026 여름 에어컨 사기 전 7가지 체크
+description: 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨· 배수·필터. 폭염 전에 확인할 항목.
 date: '2026-06-28'
 tags:
   - 에어컨
@@ -11,12 +9,13 @@ tags:
   - 구매 가이드
   - 가전
 contentProfile: checklist
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-summer-ac-buying-checklist/cover.jpg
 coverImageAlt: 여름 에어컨 옆 체크리스트
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-28T17:36:03.000Z'
+publishedAt: '2026-06-28T17:36:03.000Z'
 ---
 ## 편집부 개요
 
