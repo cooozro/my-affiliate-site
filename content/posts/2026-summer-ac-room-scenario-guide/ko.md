@@ -1,9 +1,7 @@
 ---
 title: '방 타입별 여름 에어컨: 원룸·침실·재택 데스크 시나리오'
-description: >-
-  2026 여름 폭염 대비 — 원룸·침실·재택 사무 구역별 BTU·설치형·모델 추천.
-  면적·채광·사용 패턴 기준 시나리오 가이드.
-date: '2026-06-28'
+description: 2026 여름 폭염 대비 — 원룸·침실·재택 사무 구역별 BTU·설치형·모델 추천. 면적·채광·사용 패턴 기준 시나리오 가이드.
+date: '2026-06-29'
 tags:
   - 에어컨
   - 여름
@@ -11,12 +9,13 @@ tags:
   - 재택근무
   - 원룸
 contentProfile: scenario-guide
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-summer-ac-room-scenario-guide/cover.jpg
 coverImageAlt: 여름 원룸을 냉방하는 에어컨
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-29T00:07:18.000Z'
+publishedAt: '2026-06-29T00:07:18.000Z'
 ---
 ## 편집부 개요
 

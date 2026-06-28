@@ -1,9 +1,9 @@
 ---
 title: 'Summer AC Picks by Room Type: Studio, Bedroom, and WFH Desk'
 description: >-
-  Scenario-based air conditioner guide for summer 2026 — which BTU, install type,
-  and model fit studios, bedrooms, and home offices in heat waves.
-date: '2026-06-28'
+  Scenario-based air conditioner guide for summer 2026 — which BTU, install
+  type, and model fit studios, bedrooms, and home offices in heat waves.
+date: '2026-06-29'
 tags:
   - air conditioner
   - summer
@@ -11,12 +11,13 @@ tags:
   - home office
   - apartment
 contentProfile: scenario-guide
-draft: true
+draft: false
 liveData: true
 coverImage: /images/posts/2026-summer-ac-room-scenario-guide/cover.jpg
 coverImageAlt: Air conditioner cooling a small apartment living space in summer
 coverImageCredit: Photo by Pexels
-createdAt: '2026-06-28T00:00:00.000Z'
+updatedAt: '2026-06-29T00:07:18.000Z'
+publishedAt: '2026-06-29T00:07:18.000Z'
 ---
 ## Editorial Overview
 

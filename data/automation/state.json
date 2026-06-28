@@ -7,13 +7,13 @@
     "portable-ac",
     "window-ac"
   ],
-  "lastPublishAt": "2026-06-28T08:36:05.216Z",
-  "nextPublishAt": "2026-06-28T12:58:37.069Z",
-  "scheduledGapHours": 4.38,
+  "lastPublishAt": "2026-06-28T15:07:19.713Z",
+  "nextPublishAt": "2026-06-28T20:29:19.711Z",
+  "scheduledGapHours": 5.37,
   "publishCountToday": 1,
-  "publishDateKst": "2026-06-28",
+  "publishDateKst": "2026-06-29",
   "writeCountToday": 0,
-  "writeDateKst": "2026-06-28",
+  "writeDateKst": "2026-06-29",
   "history": [
     {
       "action": "publish",
@@ -76,6 +76,15 @@
       "urls": [
         "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
         "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-ac-room-scenario-guide",
+      "at": "2026-06-28T15:07:19.713Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-ac-room-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-ac-room-scenario-guide"
       ]
     }
   ],
