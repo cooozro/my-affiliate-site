@@ -49,7 +49,12 @@ jobs:
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: npm run content:refresh-duplicates
+        run: |
+          set -euo pipefail
+          npm run content:refresh-duplicates || {
+            echo "Duplicate cover refresh skipped or failed — continuing publish check"
+            exit 0
+          }
 
       - name: Resolve task from schedule
         id: task

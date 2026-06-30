@@ -1,0 +1,45 @@
+name: Refresh duplicate cover images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/lib/cover-image.mjs"
+      - "scripts/lib/image-query.mjs"
+      - "scripts/refresh-duplicate-covers.mjs"
+      - ".github/workflows/refresh-cover-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Replace duplicate covers
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: npm run content:refresh-duplicates
+
+      - name: Commit updated covers
+        run: |
+          git config user.name "blog-automation[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts public/images/posts data/automation/used-cover-images.json
+          if git diff --staged --quiet; then
+            echo "No cover changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(content): replace duplicate post cover images"
+          git push

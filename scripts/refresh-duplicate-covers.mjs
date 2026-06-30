@@ -9,9 +9,18 @@ import path from "path";
 import matter from "gray-matter";
 import { fetchCoverImage, availableImageProviders } from "./lib/cover-image.mjs";
 import { buildCoverAlt, resolveImageContext } from "./lib/image-query.mjs";
-import { hashFile, syncImageRegistryFromPosts } from "./lib/used-images.mjs";
+import {
+  hashFile,
+  loadImageRegistry,
+  saveImageRegistry,
+  syncImageRegistryFromPosts,
+} from "./lib/used-images.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
+
+function coverFilePath(coverImage) {
+  return path.join(process.cwd(), "public", String(coverImage).replace(/^\//, ""));
+}
 
 function findDuplicateCoverSlugs() {
   const byHash = new Map();
@@ -23,11 +32,7 @@ function findDuplicateCoverSlugs() {
     const { data } = matter(fs.readFileSync(enPath, "utf8"));
     if (!data.coverImage) continue;
 
-    const filePath = path.join(
-      process.cwd(),
-      "public",
-      String(data.coverImage).replace(/^\//, ""),
-    );
+    const filePath = coverFilePath(data.coverImage);
     if (!fs.existsSync(filePath)) continue;
 
     const hash = hashFile(filePath);
@@ -46,9 +51,16 @@ function findDuplicateCoverSlugs() {
   return [...new Set(duplicates)].sort();
 }
 
+function clearRegistryHashes(hashes) {
+  const registry = loadImageRegistry();
+  const blocked = new Set(hashes);
+  registry.entries = registry.entries.filter((entry) => !entry.hash || !blocked.has(entry.hash));
+  saveImageRegistry(registry);
+}
+
 async function refreshSlug(slug) {
   const enPath = path.join(POSTS_DIR, slug, "en.md");
-  const { data, content } = matter(fs.readFileSync(enPath, "utf8"));
+  const { data } = matter(fs.readFileSync(enPath, "utf8"));
   const imageContext = resolveImageContext(slug, {
     title: data.title,
     tags: data.tags,
@@ -56,7 +68,14 @@ async function refreshSlug(slug) {
     topicCluster: data.topicCluster,
   });
 
-  const meta = await fetchCoverImage(slug, imageContext);
+  const oldCover = data.coverImage;
+  const oldPath = oldCover ? coverFilePath(oldCover) : null;
+  const oldHash = oldPath && fs.existsSync(oldPath) ? hashFile(oldPath) : null;
+  if (oldHash) {
+    clearRegistryHashes([oldHash]);
+  }
+
+  const meta = await fetchCoverImage(slug, imageContext, { forceRefresh: true });
   if (!meta) {
     console.warn(`Failed to refresh cover for ${slug}`);
     return false;
@@ -82,10 +101,8 @@ async function refreshSlug(slug) {
     fs.writeFileSync(localePath, matter.stringify(post.content, next), "utf8");
   }
 
-  const oldCover = data.coverImage;
-  if (oldCover && oldCover !== meta.coverImage) {
-    const oldPath = path.join(process.cwd(), "public", oldCover.replace(/^\//, ""));
-    if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+  if (oldCover && oldCover !== meta.coverImage && oldPath && fs.existsSync(oldPath)) {
+    fs.unlinkSync(oldPath);
   }
 
   console.log(`Refreshed ${slug} → ${meta.coverImage}`);
@@ -105,10 +122,37 @@ async function main() {
     return;
   }
 
-  console.log(`Refreshing ${slugs.length} post(s) with duplicate covers...`);
+  const duplicateHashes = new Set();
   for (const slug of slugs) {
-    await refreshSlug(slug);
+    const { data } = matter(
+      fs.readFileSync(path.join(POSTS_DIR, slug, "en.md"), "utf8"),
+    );
+    if (!data.coverImage) continue;
+    const filePath = coverFilePath(data.coverImage);
+    if (!fs.existsSync(filePath)) continue;
+    const hash = hashFile(filePath);
+    if (hash) duplicateHashes.add(hash);
   }
+  clearRegistryHashes([...duplicateHashes]);
+
+  console.log(`Refreshing ${slugs.length} post(s) with duplicate covers...`);
+  let failed = 0;
+  for (const slug of slugs) {
+    const ok = await refreshSlug(slug);
+    if (!ok) failed += 1;
+  }
+
+  const remaining = findDuplicateCoverSlugs();
+  if (remaining.length > 0) {
+    console.error(`Duplicate covers remain for: ${remaining.join(", ")}`);
+    process.exit(1);
+  }
+
+  if (failed > 0) {
+    process.exit(1);
+  }
+
+  console.log("All duplicate covers replaced.");
 }
 
 main().catch((error) => {

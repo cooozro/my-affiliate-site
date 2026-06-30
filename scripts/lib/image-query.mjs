@@ -77,7 +77,13 @@ const CLUSTER_NEGATIVES = {
     "monitor",
     "speaker",
     "cat",
+    "cats",
+    "kitten",
+    "kittens",
     "dog",
+    "pet",
+    "pets",
+    "funny animal",
     "pool",
     "sunglasses",
     "power bank",
@@ -90,7 +96,7 @@ const CLUSTER_NEGATIVES = {
   "smart-home": ["earbuds", "smartphone", "keyboard"],
 };
 
-const DEFAULT_NEGATIVES = ["cat", "dog", "kitten", "puppy"];
+const DEFAULT_NEGATIVES = ["cat", "cats", "kitten", "kittens", "dog", "puppy", "pet", "pets"];
 
 function slugTokens(slug) {
   return slug

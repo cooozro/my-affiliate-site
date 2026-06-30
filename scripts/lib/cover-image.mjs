@@ -235,8 +235,11 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
 
   for (let queryIndex = 0; queryIndex < ctx.searchQueries.length; queryIndex++) {
     const query = ctx.searchQueries[queryIndex];
+    const pageOffsets = options.forceRefresh
+      ? [0, 1, 2, 3, 4, 5, 6, 7]
+      : [0, 1, 2];
 
-    for (const pageOffset of [0, 1, 2]) {
+    for (const pageOffset of pageOffsets) {
       for (const provider of order) {
         try {
           let ordered = [];
