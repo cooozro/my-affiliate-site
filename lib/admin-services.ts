@@ -79,6 +79,50 @@ export async function deleteGithubFile(
   });
 }
 
+type GithubContentEntry = {
+  path: string;
+  sha: string;
+  type: "file" | "dir" | "submodule" | "symlink";
+};
+
+export async function listGithubDirectory(
+  dirPath: string,
+): Promise<GithubContentEntry[]> {
+  const data = await githubRequest(dirPath);
+  if (!Array.isArray(data)) return [];
+  return data as GithubContentEntry[];
+}
+
+async function safeDeleteGithubFile(filePath: string, message: string) {
+  try {
+    const existing = await readGithubFile(filePath);
+    await deleteGithubFile(filePath, existing.sha, message);
+  } catch (error) {
+    const messageText = error instanceof Error ? error.message : String(error);
+    if (messageText.includes("404")) return;
+    throw error;
+  }
+}
+
+async function deleteGithubDirectory(dirPath: string, message: string) {
+  let entries: GithubContentEntry[];
+  try {
+    entries = await listGithubDirectory(dirPath);
+  } catch (error) {
+    const messageText = error instanceof Error ? error.message : String(error);
+    if (messageText.includes("404")) return;
+    throw error;
+  }
+
+  for (const entry of entries) {
+    if (entry.type === "file") {
+      await deleteGithubFile(entry.path, entry.sha, message);
+    } else if (entry.type === "dir") {
+      await deleteGithubDirectory(entry.path, message);
+    }
+  }
+}
+
 export async function commitPostChanges(
   slug: string,
   message: string,
@@ -117,22 +161,13 @@ export async function commitPostChanges(
 }
 
 export async function deletePostOnGithub(slug: string) {
+  const message = `admin: delete ${slug}`;
+
   for (const locale of ["en", "ko"] as const) {
-    const filePath = `content/posts/${slug}/${locale}.md`;
-    try {
-      const existing = await readGithubFile(filePath);
-      await deleteGithubFile(
-        filePath,
-        existing.sha,
-        `admin: delete ${slug} (${locale})`,
-      );
-    } catch (error) {
-      const messageText =
-        error instanceof Error ? error.message : String(error);
-      if (messageText.includes("404")) continue;
-      throw error;
-    }
+    await safeDeleteGithubFile(`content/posts/${slug}/${locale}.md`, `${message} (${locale})`);
   }
+
+  await deleteGithubDirectory(`public/images/posts/${slug}`, `${message} (images)`);
 }
 
 function getServiceAccount() {

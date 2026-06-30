@@ -44,6 +44,10 @@ export function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [mutations, setMutations] = useState<{
+    mode: "github" | "local";
+    githubConfigured: boolean;
+  } | null>(null);
 
   async function loadData() {
     setLoading(true);
@@ -69,10 +73,12 @@ export function AdminDashboard() {
       posts: AdminPostRow[];
       analytics: GaSummary | null;
       automation: AutomationStatus;
+      mutations?: { mode: "github" | "local"; githubConfigured: boolean };
     };
     setPosts(data.posts);
     setAnalytics(data.analytics);
     setAutomation(data.automation);
+    setMutations(data.mutations ?? null);
     setLoading(false);
   }
 
@@ -142,6 +148,13 @@ export function AdminDashboard() {
           Log out
         </button>
       </div>
+
+      {mutations?.mode === "github" && !mutations.githubConfigured ? (
+        <p className="rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+          Vercel 배포에서는 글 발행·삭제가 GitHub API로 동작합니다.{" "}
+          <strong>GITHUB_TOKEN</strong>을 Vercel 환경변수에 추가한 뒤 재배포하세요.
+        </p>
+      ) : null}
 
       <section className="rounded-xl border border-border bg-surface p-5">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">

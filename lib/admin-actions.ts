@@ -6,6 +6,7 @@ import {
   fetchGaSummary,
 } from "@/lib/admin-services";
 import {
+  assertGithubAdminConfigured,
   deletePostLocally,
   draftPostLocally,
   listPostsForAdmin,
@@ -141,6 +142,7 @@ export async function publishPost(slug: string) {
   }
 
   if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
     const publishDate = kstDateString();
     const updatedAt = new Date().toISOString();
     await commitPostChanges(slug, `admin: publish ${slug}`, (_locale, data, content) => {
@@ -167,6 +169,7 @@ export async function draftPost(slug: string) {
   }
 
   if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
     const updatedAt = new Date().toISOString();
     await commitPostChanges(slug, `admin: draft ${slug}`, (_locale, data, content) => ({
       data: {
@@ -190,6 +193,7 @@ export async function deletePost(slug: string) {
   }
 
   if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
     await deletePostOnGithub(slug);
     return { mode: "github" as const };
   }

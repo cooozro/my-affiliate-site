@@ -167,6 +167,25 @@ export function slugExists(slug: string): boolean {
   return fs.existsSync(path.join(POSTS_DIR, slug));
 }
 
+export function isServerlessRuntime(): boolean {
+  return (
+    process.env.VERCEL === "1" ||
+    Boolean(process.env.AWS_LAMBDA_FUNCTION_NAME) ||
+    process.env.NETLIFY === "true"
+  );
+}
+
+/** Production deploys have a read-only bundle — mutations go through GitHub API. */
 export function usesRemotePostStore(): boolean {
-  return process.env.VERCEL === "1" && Boolean(process.env.GITHUB_TOKEN?.trim());
+  return isServerlessRuntime();
+}
+
+export function assertGithubAdminConfigured(): void {
+  if (!process.env.GITHUB_TOKEN?.trim()) {
+    throw new Error(
+      "Vercel(서버리스)에서는 GITHUB_TOKEN 환경변수가 필요합니다. " +
+        "GitHub PAT(repo 권한)를 발급해 Vercel → Project → Settings → Environment Variables에 " +
+        "GITHUB_TOKEN으로 추가한 뒤 재배포하세요.",
+    );
+  }
 }
