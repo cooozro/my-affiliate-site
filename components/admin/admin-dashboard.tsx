@@ -248,8 +248,8 @@ export function AdminDashboard() {
               ) : null}
               <br />
               {automation.cursorDraftPending
-                ? "GitHub Actions가 5분마다 pending 요청을 재시도합니다. OPENAI_API_KEY가 있으면 1분 내 완료됩니다."
-                : "발행 후 buffer가 1건이면 GitHub Actions가 자동 보충합니다."}
+                ? "GitHub Actions가 pending 요청을 5분마다 재시도합니다 (Cursor API, PC 불필요)."
+                : "발행 후 buffer가 부족하면 GitHub Actions가 Cursor로 자동 보충합니다."}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

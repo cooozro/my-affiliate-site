@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Draft replenish on GitHub Actions.
- * Prefers OpenAI (~1 min) when OPENAI_API_KEY is set; falls back to Cursor agent.
+ * Draft replenish on GitHub Actions (Plan A).
+ * Uses Cursor SDK when CURSOR_API_KEY is set. OpenAI is optional fallback only.
  */
 
 import fs from "fs";
@@ -217,9 +217,9 @@ async function main() {
 
   const openaiKey = process.env.OPENAI_API_KEY?.trim();
   const cursorKey = process.env.CURSOR_API_KEY?.trim();
-  if (!openaiKey && !cursorKey) {
+  if (!cursorKey && !openaiKey) {
     const message =
-      "OPENAI_API_KEY or CURSOR_API_KEY required for draft replenish on GitHub Actions.";
+      "CURSOR_API_KEY required for Plan A draft replenish (Cursor Dashboard → Integrations).";
     recordReplenishFailure(message);
     process.exit(1);
   }
@@ -229,11 +229,11 @@ async function main() {
   const createdSlugs = [];
 
   try {
-    if (openaiKey) {
-      createdSlugs.push(...(await replenishWithOpenAI(request)));
-    } else {
+    if (cursorKey) {
       const slug = await replenishWithCursor(request, draftsBefore);
       if (slug) createdSlugs.push(slug);
+    } else if (openaiKey) {
+      createdSlugs.push(...(await replenishWithOpenAI(request)));
     }
   } catch (error) {
     const message =
@@ -242,8 +242,21 @@ async function main() {
         : error instanceof Error
           ? error.message
           : String(error);
-    recordReplenishFailure(message);
-    process.exit(error instanceof CursorAgentError ? 1 : 2);
+
+    if (cursorKey && openaiKey && createdSlugs.length === 0) {
+      console.warn(`Cursor replenish failed, trying OpenAI fallback: ${message}`);
+      try {
+        createdSlugs.push(...(await replenishWithOpenAI(request)));
+      } catch (fallbackError) {
+        const fallbackMessage =
+          fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
+        recordReplenishFailure(`${message} | OpenAI fallback: ${fallbackMessage}`);
+        process.exit(2);
+      }
+    } else {
+      recordReplenishFailure(message);
+      process.exit(error instanceof CursorAgentError ? 1 : 2);
+    }
   }
 
   if (createdSlugs.length === 0) {
