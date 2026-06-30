@@ -87,6 +87,21 @@
       "hash": "b055d3b67b3cb6c0751c3b3ed673d0691793586c7b4b3f54b30618d20d79c199",
       "provider": "pixabay",
       "registeredAt": "2026-06-30T10:22:14.578Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-06-30T10:43:26.202Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "url": "https://pixabay.com/get/g83ced7c7c902ec196540d91c0dbf48cdc5229b336d1f03a5211c0cc1162eabcf7d881c9fe401020d5fccf77bdc315ab0_1280.jpg",
+      "assetKey": "pixabay:72765",
+      "hash": "f8f9c20c89beef732fcc9dae7c21bbcd66493b638e9e9709f00b1685e51e4239",
+      "provider": "pixabay",
+      "registeredAt": "2026-06-30T10:43:26.902Z"
     }
   ]
 }

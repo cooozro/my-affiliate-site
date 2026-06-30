@@ -1,26 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-summer-bluetooth-speakers-guide",
-  "requestedAt": "2026-06-30T08:14:31.726Z",
-  "requeuedAt": "2026-06-30T10:22:14.592Z",
-  "contentProfile": "buying-guide",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "dehumidifiers",
-    "category": "home-appliances",
-    "angle": "dehumidifiers for humid summers: pint capacity, noise, and energy cost per day",
-    "imageQuery": "dehumidifier home humidity",
-    "liveData": false,
-    "seasons": [
-      "summer"
-    ]
-  },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-06-30T10:44:19.648Z",
+  "writtenSlug": "2026-dehumidifiers-guide",
+  "draftCount": 2,
   "lastError": null
 }
