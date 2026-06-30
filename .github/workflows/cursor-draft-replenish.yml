@@ -46,6 +46,7 @@ jobs:
 
       - name: Run draft replenish
         if: steps.pending.outputs.needed == 'true'
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}

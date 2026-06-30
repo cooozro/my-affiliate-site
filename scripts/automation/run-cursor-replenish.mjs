@@ -219,9 +219,12 @@ async function main() {
   const cursorKey = process.env.CURSOR_API_KEY?.trim();
   if (!cursorKey && !openaiKey) {
     const message =
-      "CURSOR_API_KEY required for Plan A draft replenish (Cursor Dashboard → Integrations).";
+      "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions). " +
+      "Create at https://cursor.com/dashboard/integrations — chat/IDE keys are not auto-synced.";
     recordReplenishFailure(message);
-    process.exit(1);
+    console.error(message);
+    // Exit 0 so publish/validate steps still run; pending request retries on next cron.
+    return;
   }
 
   recordReplenishAttempt();

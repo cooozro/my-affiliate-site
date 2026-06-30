@@ -112,6 +112,7 @@ jobs:
 
       - name: Cursor draft replenish
         if: success() && steps.task.outputs.name != 'status' && (steps.automation.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
