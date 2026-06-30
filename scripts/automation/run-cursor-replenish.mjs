@@ -180,6 +180,8 @@ async function replenishWithCursor(request, draftsBefore) {
     `Cursor replenish starting: topic=${request.topic?.id ?? "unknown"}, needed=${request.needed}`,
   );
 
+  console.log(`Node ${process.version} (Cursor local agent needs >= 22.13 for node:sqlite)`);
+
   const result = await Agent.prompt(buildCursorPrompt(request), {
     apiKey,
     model: { id: "composer-2.5" },
