@@ -102,6 +102,21 @@
       "hash": "f8f9c20c89beef732fcc9dae7c21bbcd66493b638e9e9709f00b1685e51e4239",
       "provider": "pixabay",
       "registeredAt": "2026-06-30T10:43:26.902Z"
+    },
+    {
+      "slug": "2026-power-banks-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-06-30T13:08:38.067Z"
+    },
+    {
+      "slug": "2026-power-banks-guide",
+      "url": "https://pixabay.com/get/g447d4372ce576bb24edc5c904cf47418a5176c81b865650c7bd6e4f9d614316b61753955dd7276b8b192c400fd59a31580c61c98fdbff64ef701c1696998c2a6_1280.jpg",
+      "assetKey": "pixabay:560937",
+      "hash": "7d9be037cb9de6553cee16a56751c342a1f69d8df941715a20df1fc569b3750d",
+      "provider": "pixabay",
+      "registeredAt": "2026-06-30T13:08:38.810Z"
     }
   ]
 }
