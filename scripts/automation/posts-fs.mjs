@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { auditPostForPublish } from "../lib/content-quality.mjs";
+import { getPublishTopicHistory, inferPostTopic } from "../lib/infer-post-topic.mjs";
+import { wouldViolateTopicDiversity } from "../lib/topic-diversity.mjs";
+import { loadState } from "./state.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -58,6 +61,34 @@ export function listDrafts() {
 
 export function countDrafts() {
   return listDrafts().length;
+}
+
+export function pickDraftForPublish(drafts, state = loadState()) {
+  const history = getPublishTopicHistory(state);
+
+  for (const draft of drafts) {
+    const { data } = readPost(draft.slug, "en");
+    const topic = inferPostTopic(draft.slug, data);
+    const violation = wouldViolateTopicDiversity(
+      {
+        id: topic.id,
+        category: topic.category,
+        topicCluster: topic.cluster,
+      },
+      history,
+    );
+
+    if (!violation.blocked) {
+      if (draft.slug !== drafts[0]?.slug) {
+        console.log(
+          `Publish queue: skipped earlier draft(s) — picked ${draft.slug} to avoid topic clustering (${topic.cluster ?? topic.id}).`,
+        );
+      }
+      return draft;
+    }
+  }
+
+  return null;
 }
 
 export function validatePostFiles(slug) {

@@ -64,6 +64,16 @@ async function main() {
       await publishOneDraft();
       break;
 
+    case "refresh-covers": {
+      const { spawnSync } = await import("node:child_process");
+      const result = spawnSync("node", ["scripts/refresh-duplicate-covers.mjs"], {
+        stdio: "inherit",
+        cwd: process.cwd(),
+      });
+      if (result.status !== 0) process.exit(result.status ?? 1);
+      break;
+    }
+
     case "status": {
       const state = loadState();
       const drafts = listDrafts();

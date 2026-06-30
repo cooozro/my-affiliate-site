@@ -60,12 +60,15 @@ export function scheduleFirstPublishOfDay(state, from = new Date()) {
   const anchor = kstDayAnchorUtc(todayKst, KST_DAY_START_HOUR);
   const target = anchor.getTime() + offsetMs;
 
+  state.scheduledGapHours = Math.round((offsetMs / 3_600_000) * 100) / 100;
+
   if (target <= from.getTime()) {
-    scheduleNextDayFirstPublish(state, from);
+    // Morning window already passed — publish on the next cron check, not tomorrow.
+    state.scheduledGapHours = 0;
+    state.nextPublishAt = from.toISOString();
     return;
   }
 
-  state.scheduledGapHours = Math.round((offsetMs / 3_600_000) * 100) / 100;
   state.nextPublishAt = new Date(target).toISOString();
 }
 
@@ -82,18 +85,30 @@ export function scheduleNextPublishAfterSuccess(state) {
 
 /** Fix stale slots that still point to today after the daily cap is reached. */
 export function reconcilePublishSchedule(state, from = new Date()) {
-  if (state.publishCountToday < MAX_PUBLISH_PER_DAY || !state.nextPublishAt) {
-    return false;
+  let changed = false;
+
+  if (state.publishCountToday >= MAX_PUBLISH_PER_DAY && state.nextPublishAt) {
+    const nextKstDate = kstDateString(new Date(state.nextPublishAt));
+    const todayKst = kstDateString(from);
+    if (nextKstDate === todayKst) {
+      scheduleNextDayFirstPublish(state, from);
+      changed = true;
+    }
   }
 
-  const nextKstDate = kstDateString(new Date(state.nextPublishAt));
-  const todayKst = kstDateString(from);
-  if (nextKstDate !== todayKst) {
-    return false;
+  if (
+    state.publishCountToday < MAX_PUBLISH_PER_DAY &&
+    state.nextPublishAt
+  ) {
+    const nextKst = kstDateString(new Date(state.nextPublishAt));
+    const todayKst = kstDateString(from);
+    if (nextKst > todayKst) {
+      scheduleFirstPublishOfDay(state, from);
+      changed = true;
+    }
   }
 
-  scheduleNextDayFirstPublish(state, from);
-  return true;
+  return changed;
 }
 
 export function ensureNextPublishAt(state) {

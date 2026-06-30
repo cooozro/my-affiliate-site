@@ -131,6 +131,12 @@ async function main() {
       ...(meta.coverImageProvider
         ? { coverImageProvider: meta.coverImageProvider }
         : {}),
+      ...(meta.coverImageAssetId != null
+        ? { coverImageAssetId: meta.coverImageAssetId }
+        : {}),
+      ...(meta.coverImageSourceUrl
+        ? { coverImageSourceUrl: meta.coverImageSourceUrl }
+        : {}),
     });
     console.log(`Updated ${updated}`);
   }

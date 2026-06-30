@@ -9,6 +9,7 @@
     "lint": "eslint",
     "content:validate": "node scripts/validate-post.mjs",
     "content:image": "node scripts/fetch-cover-image.mjs",
+    "content:refresh-duplicates": "node scripts/refresh-duplicate-covers.mjs",
     "automation:write": "node scripts/automation/run.mjs write",
     "automation:publish": "node scripts/automation/run.mjs publish",
     "automation:buffer": "node scripts/automation/run.mjs buffer",

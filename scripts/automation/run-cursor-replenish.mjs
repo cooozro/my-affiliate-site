@@ -108,6 +108,12 @@ async function ensureCoverImage(slug, topic) {
           ...imageContext,
           title: postData.title,
         }),
+        ...(meta.coverImageAssetId != null
+          ? { coverImageAssetId: meta.coverImageAssetId }
+          : {}),
+        ...(meta.coverImageSourceUrl
+          ? { coverImageSourceUrl: meta.coverImageSourceUrl }
+          : {}),
       },
       content,
     );

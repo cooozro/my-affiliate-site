@@ -7,6 +7,15 @@ import {
   resolveImageContext,
   scoreImageRelevance,
 } from "./image-query.mjs";
+import {
+  assetKey,
+  hashBuffer,
+  isImageUsed,
+  loadImageRegistry,
+  registerUsedImage,
+  saveImageRegistry,
+  syncImageRegistryFromPosts,
+} from "./used-images.mjs";
 
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
@@ -24,9 +33,6 @@ export function availableImageProviders() {
   return providers;
 }
 
-/**
- * Rotate primary provider by slug so posts split across Pexels / Pixabay.
- */
 export function pickImageProvider(slug) {
   const providers = availableImageProviders();
   if (providers.length === 0) return null;
@@ -48,8 +54,8 @@ function providerOrder(slug, forced) {
   return [primary, ...available.filter((p) => p !== primary)];
 }
 
-function searchPage(slug, queryIndex) {
-  return (hashSlug(slug, `page:${queryIndex}`) % 4) + 1;
+function searchPage(slug, queryIndex, pageOffset = 0) {
+  return (hashSlug(slug, `page:${queryIndex}:${pageOffset}`) % 4) + 1 + pageOffset;
 }
 
 function rankCandidates(candidates, ctx) {
@@ -65,13 +71,14 @@ function rankCandidates(candidates, ctx) {
     .sort((a, b) => b.score - a.score);
 }
 
-function pickFromRanked(ranked, slug, minScore) {
+function orderedViableCandidates(ranked, slug, minScore) {
   const viable = ranked.filter((c) => c.score >= minScore);
-  if (viable.length === 0) return null;
+  const pool = viable.length > 0 ? viable : ranked;
+  if (pool.length === 0) return [];
 
-  const top = viable.slice(0, Math.min(5, viable.length));
-  const idx = hashSlug(slug, "pick") % top.length;
-  return top[idx];
+  const top = pool.slice(0, Math.min(12, pool.length));
+  const start = hashSlug(slug, "pick") % top.length;
+  return [...top.slice(start), ...top.slice(0, start)];
 }
 
 async function downloadToSlug(slug, imageUrl, filename) {
@@ -80,19 +87,40 @@ async function downloadToSlug(slug, imageUrl, filename) {
     throw new Error(`Image download failed: ${imageResponse.status}`);
   }
 
+  const buffer = Buffer.from(await imageResponse.arrayBuffer());
   const relativePath = `/images/posts/${slug}/${filename}`;
   const destPath = path.join(process.cwd(), "public", "images", "posts", slug, filename);
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
-  fs.writeFileSync(destPath, Buffer.from(await imageResponse.arrayBuffer()));
+  fs.writeFileSync(destPath, buffer);
 
-  return relativePath;
+  return { relativePath, buffer, hash: hashBuffer(buffer) };
 }
 
-async function searchPexels(query, apiKey, slug, queryIndex, ctx) {
+function candidateIsUsed(registry, candidate) {
+  return isImageUsed(registry, {
+    url: candidate.imageUrl,
+    assetKey: candidate.assetKey,
+  });
+}
+
+async function pickUnusedCandidate(candidates, slug, registry, minScore) {
+  const ranked = rankCandidates(candidates, { productKeywords: [], negativeTags: [] });
+  const ordered = orderedViableCandidates(ranked, slug, minScore);
+
+  for (const candidate of ordered) {
+    if (!candidateIsUsed(registry, candidate)) {
+      return candidate;
+    }
+  }
+
+  return null;
+}
+
+async function searchPexels(query, apiKey, slug, queryIndex, ctx, registry, pageOffset = 0) {
   const url = new URL(PEXELS_SEARCH);
   url.searchParams.set("query", query);
-  url.searchParams.set("per_page", "20");
-  url.searchParams.set("page", String(searchPage(slug, queryIndex)));
+  url.searchParams.set("per_page", "30");
+  url.searchParams.set("page", String(searchPage(slug, queryIndex, pageOffset)));
   url.searchParams.set("orientation", "landscape");
 
   const response = await fetch(url, {
@@ -114,25 +142,31 @@ async function searchPexels(query, apiKey, slug, queryIndex, ctx) {
 
       return {
         imageUrl,
+        assetKey: assetKey("pexels", photo.id),
         relevanceText: `${photo.alt ?? ""} ${query}`,
         credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
         provider: "pexels",
+        assetId: photo.id,
       };
     })
     .filter(Boolean);
 
   const ranked = rankCandidates(candidates, ctx);
-  return pickFromRanked(ranked, slug, 2) ?? pickFromRanked(ranked, slug, 0);
+  const ordered = orderedViableCandidates(ranked, slug, 2);
+  if (ordered.length === 0) {
+    return orderedViableCandidates(ranked, slug, 0);
+  }
+  return ordered;
 }
 
-async function searchPixabay(query, apiKey, slug, queryIndex, ctx) {
+async function searchPixabay(query, apiKey, slug, queryIndex, ctx, registry, pageOffset = 0) {
   const url = new URL(PIXABAY_SEARCH);
   url.searchParams.set("key", apiKey);
   url.searchParams.set("q", query);
   url.searchParams.set("image_type", "photo");
   url.searchParams.set("orientation", "horizontal");
   url.searchParams.set("per_page", "30");
-  url.searchParams.set("page", String(searchPage(slug, queryIndex)));
+  url.searchParams.set("page", String(searchPage(slug, queryIndex, pageOffset)));
   url.searchParams.set("safesearch", "true");
 
   const response = await fetch(url);
@@ -152,26 +186,40 @@ async function searchPixabay(query, apiKey, slug, queryIndex, ctx) {
       const user = hit.user ?? "Pixabay";
       return {
         imageUrl,
+        assetKey: assetKey("pixabay", hit.id),
         relevanceText: `${hit.tags ?? ""} ${query}`,
         credit: `Photo by ${user} / Pixabay`,
         provider: "pixabay",
+        assetId: hit.id,
       };
     })
     .filter(Boolean);
 
   const ranked = rankCandidates(candidates, ctx);
-  return pickFromRanked(ranked, slug, 2) ?? pickFromRanked(ranked, slug, 0);
+  const ordered = orderedViableCandidates(ranked, slug, 2);
+  if (ordered.length === 0) {
+    return orderedViableCandidates(ranked, slug, 0);
+  }
+  return ordered;
+}
+
+function pickFirstUnused(ordered, registry) {
+  for (const candidate of ordered) {
+    if (!candidateIsUsed(registry, candidate)) {
+      return candidate;
+    }
+  }
+  return null;
 }
 
 /**
  * Fetch a cover image using Pexels + Pixabay rotation (slug-stable).
- * @param {string} slug
- * @param {string | Record<string, unknown>} queryOrContext - legacy query string or post metadata
- * @param {{ provider?: 'pexels' | 'pixabay' }} [options]
+ * Never reuses a provider asset id, source url, or file hash already in the registry.
  */
 export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   const ctx = resolveImageContext(slug, queryOrContext);
   const order = providerOrder(slug, options.provider);
+  let registry = syncImageRegistryFromPosts();
 
   if (order.length === 0) {
     console.warn(
@@ -188,48 +236,88 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   for (let queryIndex = 0; queryIndex < ctx.searchQueries.length; queryIndex++) {
     const query = ctx.searchQueries[queryIndex];
 
-    for (const provider of order) {
-      try {
-        let result = null;
+    for (const pageOffset of [0, 1, 2]) {
+      for (const provider of order) {
+        try {
+          let ordered = [];
 
-        if (provider === "pexels") {
-          result = await searchPexels(
-            query,
-            process.env.PEXELS_API_KEY.trim(),
+          if (provider === "pexels") {
+            ordered =
+              (await searchPexels(
+                query,
+                process.env.PEXELS_API_KEY.trim(),
+                slug,
+                queryIndex,
+                ctx,
+                registry,
+                pageOffset,
+              )) ?? [];
+          } else if (provider === "pixabay") {
+            ordered =
+              (await searchPixabay(
+                query,
+                process.env.PIXABAY_API_KEY.trim(),
+                slug,
+                queryIndex,
+                ctx,
+                registry,
+                pageOffset,
+              )) ?? [];
+          }
+
+          const result = pickFirstUnused(ordered, registry);
+          if (!result) {
+            console.warn(
+              `${provider}: all results already used for "${query}" (page+${pageOffset})`,
+            );
+            continue;
+          }
+
+          const downloaded = await downloadToSlug(slug, result.imageUrl, filename);
+          if (isImageUsed(registry, { hash: downloaded.hash })) {
+            console.warn(
+              `${provider}: downloaded bytes match an existing cover — trying next candidate`,
+            );
+            fs.unlinkSync(
+              path.join(process.cwd(), "public", downloaded.relativePath.replace(/^\//, "")),
+            );
+            registerUsedImage(registry, {
+              slug,
+              url: result.imageUrl,
+              assetKey: result.assetKey,
+              hash: downloaded.hash,
+              provider: result.provider,
+            });
+            saveImageRegistry(registry);
+            continue;
+          }
+
+          registerUsedImage(registry, {
             slug,
-            queryIndex,
-            ctx,
+            url: result.imageUrl,
+            assetKey: result.assetKey,
+            hash: downloaded.hash,
+            provider: result.provider,
+          });
+          saveImageRegistry(registry);
+
+          console.log(
+            `Cover image: ${slug} via ${result.provider} id=${result.assetId} (query="${query}")`,
           );
-        } else if (provider === "pixabay") {
-          result = await searchPixabay(
-            query,
-            process.env.PIXABAY_API_KEY.trim(),
-            slug,
-            queryIndex,
-            ctx,
-          );
+
+          return {
+            coverImage: downloaded.relativePath,
+            coverImageAlt,
+            coverImageAltKo,
+            coverImageCredit: result.credit,
+            coverImageProvider: result.provider,
+            coverImageAssetId: result.assetId,
+            coverImageSourceUrl: result.imageUrl,
+          };
+        } catch (error) {
+          lastError = error;
+          console.warn(`${provider} failed for ${slug}: ${error.message}`);
         }
-
-        if (!result) {
-          console.warn(`${provider}: no relevant results for "${query}"`);
-          continue;
-        }
-
-        const coverImage = await downloadToSlug(slug, result.imageUrl, filename);
-        console.log(
-          `Cover image: ${slug} via ${result.provider} (query="${query}", keywords="${ctx.productKeywords.join(", ")}")`,
-        );
-
-        return {
-          coverImage,
-          coverImageAlt,
-          coverImageAltKo,
-          coverImageCredit: result.credit,
-          coverImageProvider: result.provider,
-        };
-      } catch (error) {
-        lastError = error;
-        console.warn(`${provider} failed for ${slug}: ${error.message}`);
       }
     }
   }

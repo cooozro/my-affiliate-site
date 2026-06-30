@@ -70,10 +70,7 @@ export function wouldViolateTopicDiversity(topic, history) {
  * @param {TopicHistoryEntry[]} history
  */
 export function filterByTopicDiversity(candidates, history) {
-  const allowed = candidates.filter(
-    (t) => !wouldViolateTopicDiversity(t, history).blocked,
-  );
-  return allowed.length > 0 ? allowed : candidates;
+  return candidates.filter((t) => !wouldViolateTopicDiversity(t, history).blocked);
 }
 
 /**
@@ -92,18 +89,21 @@ export function recordTopicPick(state, topic) {
   return entry;
 }
 
+import { getPublishTopicHistory } from "./infer-post-topic.mjs";
+
 /**
- * Build history tail from automation state + optional draft slugs.
  * @param {object} state
  */
 export function getTopicHistory(state) {
+  const fromPublishes = getPublishTopicHistory(state);
+
   if (state.topicHistory?.length) {
-    return state.topicHistory;
+    return [...fromPublishes, ...state.topicHistory].slice(-30);
   }
 
   const fromWrites = (state.history ?? [])
     .filter((h) => h.action === "write" && h.topic)
     .map((h) => ({ id: h.topic, at: h.at }));
 
-  return fromWrites;
+  return [...fromPublishes, ...fromWrites].slice(-30);
 }

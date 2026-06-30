@@ -1,12 +1,15 @@
 import { distributePublishedPost } from "./distributor.mjs";
 import {
   listDrafts,
+  pickDraftForPublish,
   readPost,
   validatePostFiles,
   writePost,
 } from "./posts-fs.mjs";
 import { maintainDraftBuffer } from "./generate-draft.mjs";
 import { queueCursorDraftReplenish } from "./cursor-draft-request.mjs";
+import { inferPostTopic } from "../lib/infer-post-topic.mjs";
+import { recordTopicPick } from "../lib/topic-diversity.mjs";
 import {
   ensureNextPublishAt,
   formatKst,
@@ -105,13 +108,25 @@ export async function publishOneDraft(options = {}) {
     return null;
   }
 
-  const { slug } = drafts[0];
+  const picked = pickDraftForPublish(drafts, state);
+  if (!picked) {
+    console.log(
+      "Publish skipped: every queued draft violates topic diversity (max 2 consecutive same topic/category/cluster).",
+    );
+    saveState(state);
+    return null;
+  }
+
+  const { slug } = picked;
   const issues = validatePostFiles(slug);
   if (issues.length > 0) {
     throw new Error(
       `Cannot publish ${slug} — Google content self-audit failed:\n${issues.join("\n")}`,
     );
   }
+
+  const { data: enData } = readPost(slug, "en");
+  const topic = inferPostTopic(slug, enData);
 
   publishSlug(slug);
   console.log(`Published: ${slug}`);
@@ -141,6 +156,11 @@ export async function publishOneDraft(options = {}) {
     {
       action: "publish",
       slug,
+      topic: {
+        id: topic.id,
+        category: topic.category,
+        cluster: topic.cluster,
+      },
       at: state.lastPublishAt,
       urls: [
         `${SITE_URL}/en/blog/${slug}`,
@@ -148,6 +168,13 @@ export async function publishOneDraft(options = {}) {
       ],
     },
   ].slice(-50);
+
+  recordTopicPick(state, {
+    id: topic.id,
+    category: topic.category,
+    topicCluster: topic.cluster,
+  });
+
   saveState(state);
 
   queueCursorDraftReplenish(slug);

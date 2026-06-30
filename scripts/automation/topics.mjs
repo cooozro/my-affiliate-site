@@ -223,8 +223,23 @@ export function pickTopic(state, options = {}) {
   candidates = filterByTopicDiversity(candidates, topicHistory);
 
   if (candidates.length === 0) {
+    candidates = POST_TOPICS.filter(
+      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+    );
+    if (options.contentProfile) {
+      const formatFiltered = candidates.filter(
+        (t) =>
+          !t.allowedFormats || t.allowedFormats.includes(options.contentProfile),
+      );
+      if (formatFiltered.length > 0) candidates = formatFiltered;
+    }
+  }
+
+  if (candidates.length === 0) {
     state.usedTopicIds = [];
-    candidates = POST_TOPICS;
+    candidates = POST_TOPICS.filter(
+      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+    );
     if (options.contentProfile) {
       const formatFiltered = candidates.filter(
         (t) =>

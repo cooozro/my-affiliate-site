@@ -73,6 +73,11 @@ export function resetDailyCounters(state) {
       } else {
         scheduleFirstPublishOfDay(state);
       }
+    } else if (!state.nextPublishAt) {
+      scheduleFirstPublishOfDay(state);
+    } else if (new Date(state.nextPublishAt).getTime() <= Date.now()) {
+      state.nextPublishAt = new Date().toISOString();
+      console.log("Catch-up: publish slot already due at day rollover — publishing on next check.");
     }
   }
   if (state.writeDateKst !== today) {
