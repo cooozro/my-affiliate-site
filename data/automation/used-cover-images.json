@@ -44,18 +44,34 @@
       "registeredAt": "2026-06-30T07:04:09.239Z"
     },
     {
-      "slug": "2026-summer-ac-buying-checklist",
-      "assetKey": null,
-      "hash": "b4df05093ed73e9dd8c7583556c09175503d8e5d0d52e6f95ad76f6aed270432",
-      "provider": null,
-      "registeredAt": "2026-06-30T07:04:09.240Z"
-    },
-    {
       "slug": "welcome",
       "assetKey": null,
       "hash": "3bdd3802997580c60e26cbb5e9ee6c72c20603d4734b3d3cb36ee7b3b5832095",
       "provider": null,
       "registeredAt": "2026-06-30T07:04:09.242Z"
+    },
+    {
+      "slug": "2026-summer-ac-buying-checklist",
+      "url": "https://images.pexels.com/photos/28165595/pexels-photo-28165595.jpeg",
+      "assetKey": "pexels:28165595",
+      "hash": "b52e35ba1d2cc47fa0479241e61670827205f91b9fcb75bbe2b45924ca20e74c",
+      "provider": "pexels",
+      "registeredAt": "2026-06-30T08:01:43.907Z"
+    },
+    {
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "assetKey": null,
+      "hash": "b4df05093ed73e9dd8c7583556c09175503d8e5d0d52e6f95ad76f6aed270432",
+      "provider": null,
+      "registeredAt": "2026-06-30T08:01:43.914Z"
+    },
+    {
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "url": "https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg",
+      "assetKey": "pixabay:1822629",
+      "hash": "8431d09223b021be53c7c021bf1d229222e2735b0ecc714aa9fd7706d44a8ca1",
+      "provider": "pixabay",
+      "registeredAt": "2026-06-30T08:01:46.576Z"
     }
   ]
 }

@@ -1,8 +1,8 @@
 ---
 title: '수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다'
 description: >-
-  2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로
-  비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+  2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천
+  가이드.
 date: '2026-06-28'
 tags:
   - 블루투스 스피커
@@ -13,10 +13,17 @@ tags:
 contentProfile: buying-guide
 draft: true
 liveData: true
-coverImage: /images/posts/2026-summer-bluetooth-speakers-guide/cover.jpg
-coverImageAlt: 여름날 수영장 타월과 선글라스 옆에 놓인 휴대 블루투스 스피커
-coverImageCredit: Photo by Pexels
+coverImage: >-
+  /images/posts/2026-summer-bluetooth-speakers-guide/bluetooth-speaker-portable-audio-outdoor-tech-cover.jpg
+coverImageAlt: >-
+  수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다 — 블루투스 스피커·portable audio·outdoor
+  tech 커버 이미지
+coverImageCredit: Photo by phamtu1509 / Pixabay
 createdAt: '2026-06-28T08:00:00.000Z'
+coverImageProvider: pixabay
+coverImageAssetId: 1822629
+coverImageSourceUrl: >-
+  https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
 ---
 ## 편집부 개요
 
