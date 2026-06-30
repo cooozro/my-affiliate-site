@@ -10,6 +10,7 @@ import path from "path";
 import matter from "gray-matter";
 import {
   auditPublishedPost,
+  listPublishedSlugs,
   MIN_BODY_CHARS,
 } from "./lib/content-quality.mjs";
 
@@ -27,6 +28,7 @@ function listSlugDirs() {
 
 function main() {
   const allIssues = [];
+  const publishedSlugs = listPublishedSlugs(ROOT);
 
   for (const slug of listSlugDirs()) {
     const localeFiles = REQUIRED_LOCALES.map((locale) => ({
@@ -48,7 +50,7 @@ function main() {
         continue;
       }
 
-      allIssues.push(...auditPublishedPost(ROOT, slug, locale));
+      allIssues.push(...auditPublishedPost(ROOT, slug, locale, publishedSlugs));
     }
   }
 

@@ -249,7 +249,7 @@ function auditChecklist(body, label) {
  * Google Search Essentials / people-first self-audit before publish.
  */
 export function auditLocalePost(root, slug, locale, raw, options = {}) {
-  const { forPublish = true, profile = "buying-guide" } = options;
+  const { forPublish = true, profile = "buying-guide", publishedSlugs } = options;
 
   const shared = auditShared(root, slug, locale, raw, profile, { forPublish });
   if (Array.isArray(shared)) {
@@ -270,6 +270,44 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(...auditChecklist(body, label));
   }
 
+  if (publishedSlugs) {
+    issues.push(...auditInternalBlogLinks(slug, locale, body, publishedSlugs));
+  }
+
+  return issues;
+}
+
+const INTERNAL_BLOG_LINK_RE = /]\(\/(?:en|ko)\/blog\/([a-z0-9][a-z0-9-]*)\)/gi;
+
+export function listPublishedSlugs(root) {
+  const postsDir = path.join(root, "content", "posts");
+  const slugs = new Set();
+  if (!fs.existsSync(postsDir)) return slugs;
+
+  for (const entry of fs.readdirSync(postsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const enPath = path.join(postsDir, entry.name, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = matter(fs.readFileSync(enPath, "utf8"));
+    if (!data.draft) slugs.add(entry.name);
+  }
+
+  return slugs;
+}
+
+export function auditInternalBlogLinks(slug, locale, body, publishedSlugs) {
+  const issues = [];
+  const label = `${slug}/${locale}.md`;
+
+  for (const match of body.matchAll(INTERNAL_BLOG_LINK_RE)) {
+    const target = match[1];
+    if (!publishedSlugs.has(target)) {
+      issues.push(
+        `${label}: broken internal link → /blog/${target} (post missing or draft)`,
+      );
+    }
+  }
+
   return issues;
 }
 
@@ -287,6 +325,7 @@ export function auditPostForPublish(root, slug) {
   const postDir = path.join(root, "content", "posts", slug);
   const issues = [];
   const bodyLengths = {};
+  const publishedSlugs = listPublishedSlugs(root);
 
   for (const locale of ["en", "ko"]) {
     const filePath = path.join(postDir, `${locale}.md`);
@@ -302,6 +341,7 @@ export function auditPostForPublish(root, slug) {
       ...auditLocalePost(root, slug, locale, raw, {
         forPublish: true,
         profile,
+        publishedSlugs,
       }),
     );
   }
@@ -326,7 +366,7 @@ export function auditPostForPublish(root, slug) {
   return issues;
 }
 
-export function auditPublishedPost(root, slug, locale) {
+export function auditPublishedPost(root, slug, locale, publishedSlugs) {
   const filePath = path.join(root, "content", "posts", slug, `${locale}.md`);
   if (!fs.existsSync(filePath)) {
     return [`${slug}/${locale}.md: missing file`];
@@ -340,5 +380,6 @@ export function auditPublishedPost(root, slug, locale) {
   return auditLocalePost(root, slug, locale, raw, {
     forPublish: true,
     profile,
+    publishedSlugs,
   });
 }

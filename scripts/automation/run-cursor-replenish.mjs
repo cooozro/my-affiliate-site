@@ -23,11 +23,13 @@ import {
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 
 import { getTemplatePath } from "../lib/content-profiles.mjs";
+import { listPublishedSlugs } from "../lib/content-quality.mjs";
 
 function buildPrompt(request) {
   const topic = request.topic ?? {};
   const contentProfile = request.contentProfile ?? "buying-guide";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
+  const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
 
   return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
 
@@ -52,7 +54,7 @@ Follow ${templatePath} for section structure.
 Content requirements (each locale):
 - Meet minimum length for profile ${contentProfile}
 - Analysis methodology table (editorial sources only — no seller API claims)
-- Related guides section with /en/blog/ or /ko/blog/ internal links
+- Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these published slugs: ${publishedSlugs}
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:

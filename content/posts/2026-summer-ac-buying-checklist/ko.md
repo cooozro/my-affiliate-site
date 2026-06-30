@@ -29,7 +29,7 @@ coverImageSourceUrl: >-
 
 ## 서론: 무더위 전에 읽는 7항목
 
-폭염 예보가 나오면 인기 모델이 품절되기 쉽습니다. 가장 더운 주에 **창문 규정·배기 불가·BTU 부족**을 알게 되지 않도록, 결제 전 아래 7가지를 순서대로 확인하세요. 체크리스트는 창문형·이동식 모두에 적용되며, 각 항목마다 **이유**와 **주의 신호**를 함께 적었습니다. 한 번 통과한 뒤에는 [방 타입별 시나리오 가이드](/ko/blog/2026-summer-ac-room-scenario-guide)와 [이동식 vs 창문형 맞대결](/ko/blog/2026-portable-vs-window-ac-head-to-head)로 모델을 좁히면 됩니다.
+폭염 예보가 나오면 인기 모델이 품절되기 쉽습니다. 가장 더운 주에 **창문 규정·배기 불가·BTU 부족**을 알게 되지 않도록, 결제 전 아래 7가지를 순서대로 확인하세요. 체크리스트는 창문형·이동식 모두에 적용되며, 각 항목마다 **이유**와 **주의 신호**를 함께 적었습니다. 한 번 통과한 뒤에는 [이동식 vs 창문형 맞대결](/ko/blog/2026-portable-vs-window-ac-head-to-head)로 모델을 좁히면 됩니다.
 
 ---
 
@@ -91,9 +91,9 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [BTU·방 크기 설명](/ko/blog/btu-room-size-ac-explainer) — 용량 계산 심화
 - [이동식 vs 창문형](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 체크 후 모델 비교
-- [방 타입별 여름 에어컨](/ko/blog/2026-summer-ac-room-scenario-guide) — 시나리오별 추천
+- [여름 블루투스 스피커](/ko/blog/2026-summer-bluetooth-speakers-guide) — 야외·피크닉 오디오
+- [가성비 보조배터리](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 대비
 
 ---
 

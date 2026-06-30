@@ -89,9 +89,9 @@ Prices checked against listings as of {{today}}; use {{usd_krw_rate}} for KRW co
 
 ## Related guides
 
-- [BTU room size explainer](/en/blog/btu-room-size-ac-explainer) — depth on sizing math
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — after checklist passes
-- [Summer AC scenarios](/en/blog/2026-summer-ac-room-scenario-guide) — room-type picks
+- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — compare install types after the checklist
+- [Summer bluetooth speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio for pool and picnic days
+- [Budget power banks](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
 
 ---
 
