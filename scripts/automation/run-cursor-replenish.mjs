@@ -260,22 +260,31 @@ async function main() {
       }
     } else {
       recordReplenishFailure(message);
-      process.exit(error instanceof CursorAgentError ? 1 : 2);
+      console.error(message);
+      // Exit 0 so publish/validate steps still run; pending request retries on next cron.
+      return;
     }
   }
 
   if (createdSlugs.length === 0) {
     const message = "Replenish finished but no new draft was created.";
     recordReplenishFailure(message);
-    process.exit(2);
+    console.error(message);
+    return;
   }
 
   for (const slug of createdSlugs) {
     await ensureCoverImage(slug, request.topic);
-    const issues = validatePostFiles(slug);
+    const issues = validatePostFiles(slug, {
+      phase: "draft",
+      applyRepair: true,
+    });
     if (issues.length > 0) {
-      recordReplenishFailure(`Validation failed for ${slug}: ${issues[0]}`);
-      process.exit(2);
+      recordReplenishFailure(
+        `Integrity gate failed for ${slug}: ${issues.slice(0, 3).join(" | ")}`,
+      );
+      console.error(`Integrity gate failed for ${slug}`);
+      return;
     }
   }
 

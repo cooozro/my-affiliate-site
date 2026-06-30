@@ -192,10 +192,17 @@ export function getAdminAutomationStatus() {
 }
 
 async function validateForPublish(slug: string): Promise<string[]> {
-  const { auditPostForPublish } = await import(
-    "../scripts/lib/content-quality.mjs"
+  const { integrityIssuesFlat, runPublishIntegrityGate } = await import(
+    "../scripts/lib/publish-integrity.mjs"
   );
-  return auditPostForPublish(process.cwd(), slug);
+  const { state } = await loadAutomationState();
+  const applyRepair = !usesRemotePostStore();
+  const result = runPublishIntegrityGate(process.cwd(), slug, {
+    phase: "publish",
+    state,
+    applyRepair,
+  });
+  return integrityIssuesFlat(result);
 }
 
 export async function publishPost(slug: string) {

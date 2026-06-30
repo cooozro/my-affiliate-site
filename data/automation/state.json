@@ -1,5 +1,5 @@
 {
-  "topicIndex": 13,
+  "topicIndex": 5,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -7,12 +7,13 @@
     "portable-ac",
     "window-ac",
     "air-purifiers",
-    "dehumidifiers"
+    "dehumidifiers",
+    "power-banks"
   ],
-  "lastPublishAt": "2026-06-30T08:14:31.718Z",
-  "nextPublishAt": "2026-06-30T12:31:22.241Z",
-  "scheduledGapHours": 4.28,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-06-30T13:06:31.556Z",
+  "nextPublishAt": "2026-07-01T02:27:00.000Z",
+  "scheduledGapHours": 5.45,
+  "publishCountToday": 2,
   "publishDateKst": "2026-06-30",
   "writeCountToday": 0,
   "writeDateKst": "2026-06-30",
@@ -102,6 +103,18 @@
         "https://www.aipick.shop/en/blog/2026-summer-bluetooth-speakers-guide",
         "https://www.aipick.shop/ko/blog/2026-summer-bluetooth-speakers-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-air-purifiers-guide",
+      "topic": {
+        "id": "2026-air-purifiers-guide"
+      },
+      "at": "2026-06-30T13:06:31.556Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-air-purifiers-guide",
+        "https://www.aipick.shop/ko/blog/2026-air-purifiers-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -160,6 +173,15 @@
       "id": "dehumidifiers",
       "category": "home-appliances",
       "at": "2026-06-30T10:22:14.591Z"
+    },
+    {
+      "id": "2026-air-purifiers-guide",
+      "at": "2026-06-30T13:06:31.559Z"
+    },
+    {
+      "id": "power-banks",
+      "category": "accessories",
+      "at": "2026-06-30T13:06:31.564Z"
     }
   ],
   "formatHistory": [
@@ -167,6 +189,7 @@
     "scenario-guide",
     "explainer",
     "checklist",
-    "buying-guide"
+    "buying-guide",
+    "explainer"
   ]
 }

@@ -1,5 +1,5 @@
 ---
-title: "Budget Wireless Earbuds in 2026: When LDAC and ANC Beat Brand Names"
+title: "Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names"
 description: "Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scenario-based buying guide for every budget."
 date: "2026-06-25"
 tags: ["wireless earbuds", "budget tech", "TWS", "audio reviews"]

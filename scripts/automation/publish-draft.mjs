@@ -110,21 +110,48 @@ export async function publishOneDraft(options = {}) {
     return null;
   }
 
-  const picked = pickDraftForPublish(drafts, state);
-  if (!picked) {
+  const tried = new Set();
+  let slug = null;
+
+  while (!slug) {
+    const candidates = drafts.filter((d) => !tried.has(d.slug));
+    if (candidates.length === 0) break;
+
+    const picked = pickDraftForPublish(candidates, state);
+    if (!picked) {
+      console.log(
+        "Publish skipped: every queued draft violates topic diversity (max 2 consecutive same topic/category/cluster).",
+      );
+      saveState(state);
+      return null;
+    }
+
+    tried.add(picked.slug);
+    const issues = validatePostFiles(picked.slug, {
+      phase: "publish",
+      state,
+      applyRepair: true,
+    });
+
+    if (issues.length > 0) {
+      console.error(
+        `Integrity gate blocked ${picked.slug} — trying next draft (${issues.length} issue(s)):`,
+      );
+      for (const issue of issues) {
+        console.error(`  - ${issue}`);
+      }
+      continue;
+    }
+
+    slug = picked.slug;
+  }
+
+  if (!slug) {
     console.log(
-      "Publish skipped: every queued draft violates topic diversity (max 2 consecutive same topic/category/cluster).",
+      `Publish skipped: ${tried.size} draft(s) failed integrity gate — fix drafts or wait for replenish.`,
     );
     saveState(state);
     return null;
-  }
-
-  const { slug } = picked;
-  const issues = validatePostFiles(slug);
-  if (issues.length > 0) {
-    throw new Error(
-      `Cannot publish ${slug} — Google content self-audit failed:\n${issues.join("\n")}`,
-    );
   }
 
   const { data: enData } = readPost(slug, "en");

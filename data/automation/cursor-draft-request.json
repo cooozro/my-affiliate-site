@@ -1,7 +1,25 @@
 {
-  "status": "complete",
-  "completedAt": "2026-06-30T10:44:19.648Z",
-  "writtenSlug": "2026-dehumidifiers-guide",
-  "draftCount": 2,
-  "lastError": null
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-air-purifiers-guide",
+  "requestedAt": "2026-06-30T13:06:31.564Z",
+  "contentProfile": "explainer",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "power-banks",
+    "category": "accessories",
+    "angle": "power bank buying guide: capacity, charging speed, port types, and safety certifications",
+    "imageQuery": "portable power bank charger",
+    "liveData": true,
+    "seasons": [
+      "summer",
+      "winter"
+    ]
+  },
+  "templatePath": "docs/templates/explainer.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
 }

@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { auditPostForPublish } from "../lib/content-quality.mjs";
+import {
+  integrityIssuesFlat,
+  runPublishIntegrityGate,
+} from "../lib/publish-integrity.mjs";
 import { getPublishTopicHistory, inferPostTopic } from "../lib/infer-post-topic.mjs";
 import { wouldViolateTopicDiversity } from "../lib/topic-diversity.mjs";
 import { loadState } from "./state.mjs";
@@ -91,18 +94,23 @@ export function pickDraftForPublish(drafts, state = loadState()) {
   return null;
 }
 
-export function validatePostFiles(slug) {
+/**
+ * Run publish integrity gate. Returns blocking issue messages (empty = pass).
+ * @param {string} slug
+ * @param {{ phase?: 'draft'|'publish', state?: object, applyRepair?: boolean }} [options]
+ */
+export function validatePostFiles(slug, options = {}) {
   const root = process.cwd();
-  const issues = auditPostForPublish(root, slug);
+  const phase = options.phase ?? "publish";
+  const state =
+    options.state ?? (phase === "publish" ? loadState() : null);
+  const applyRepair = options.applyRepair !== false;
 
-  if (issues.length > 0) {
-    console.error(`Google content self-audit failed for ${slug}:`);
-    for (const issue of issues) {
-      console.error(`  - ${issue}`);
-    }
-  } else {
-    console.log(`Google content self-audit passed for ${slug} (publish-ready).`);
-  }
+  const result = runPublishIntegrityGate(root, slug, {
+    phase,
+    state,
+    applyRepair,
+  });
 
-  return issues;
+  return integrityIssuesFlat(result);
 }

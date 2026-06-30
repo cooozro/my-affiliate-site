@@ -12,9 +12,8 @@ tags:
   - summer
   - buying guide
 contentProfile: buying-guide
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-06-30T10:30:00.000Z'
 coverImage: >-
   /images/posts/2026-air-purifiers-guide/air-purifier-home-appliances-indoor-air-quality-cover.jpg
 coverImageAlt: >-
@@ -28,6 +27,8 @@ coverImageProvider: pixabay
 coverImageAssetId: 8315886
 coverImageSourceUrl: >-
   https://pixabay.com/get/ge88131ee70e55174d096afab23269bdeafcf96441ed826ec06a1df36dcfb3e0fdf6effa54d96ce5df99ce1ab87b376ec8fb322b8757424babad9837f91765c95_1280.jpg
+updatedAt: '2026-06-30T13:06:30.000Z'
+publishedAt: '2026-06-30T13:06:30.000Z'
 ---
 ## Editorial Overview
 

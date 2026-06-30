@@ -186,9 +186,12 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   writePost(slug, "en", buildFrontmatter("en", article.en, shared), article.en.body);
   writePost(slug, "ko", buildFrontmatter("ko", article.ko, shared), article.ko.body);
 
-  const issues = validatePostFiles(slug);
+  const issues = validatePostFiles(slug, {
+    phase: "draft",
+    applyRepair: true,
+  });
   if (issues.length > 0) {
-    throw new Error(`Validation failed for ${slug}:\n${issues.join("\n")}`);
+    throw new Error(`Draft integrity gate failed for ${slug}:\n${issues.join("\n")}`);
   }
 
   if (!bypassWriteCap) {

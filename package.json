@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "content:validate": "node scripts/validate-post.mjs",
+    "content:integrity": "node scripts/check-integrity.mjs --drafts-only",
     "content:image": "node scripts/fetch-cover-image.mjs",
     "content:refresh-duplicates": "node scripts/refresh-duplicate-covers.mjs",
     "automation:write": "node scripts/automation/run.mjs write",
