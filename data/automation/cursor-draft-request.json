@@ -22,5 +22,7 @@
     ]
   },
   "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastAttemptAt": "2026-06-30T10:14:36.410Z",
+  "lastError": "Cursor agent: Default local agent storage requires the built-in node:sqlite module (Node >= 22.13, or another runtime that implements node:sqlite). Upgrade Node, or configure a custom store: Cursor.configure({ local: { store: new JsonlLocalAgentStore(rootDir) } }) or pass local.store / store on Agent.create and Agent.resume."
 }
