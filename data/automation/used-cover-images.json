@@ -72,6 +72,21 @@
       "hash": "8431d09223b021be53c7c021bf1d229222e2735b0ecc714aa9fd7706d44a8ca1",
       "provider": "pixabay",
       "registeredAt": "2026-06-30T08:01:46.576Z"
+    },
+    {
+      "slug": "2026-air-purifiers-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-06-30T10:22:13.803Z"
+    },
+    {
+      "slug": "2026-air-purifiers-guide",
+      "url": "https://pixabay.com/get/ge88131ee70e55174d096afab23269bdeafcf96441ed826ec06a1df36dcfb3e0fdf6effa54d96ce5df99ce1ab87b376ec8fb322b8757424babad9837f91765c95_1280.jpg",
+      "assetKey": "pixabay:8315886",
+      "hash": "b055d3b67b3cb6c0751c3b3ed673d0691793586c7b4b3f54b30618d20d79c199",
+      "provider": "pixabay",
+      "registeredAt": "2026-06-30T10:22:14.578Z"
     }
   ]
 }

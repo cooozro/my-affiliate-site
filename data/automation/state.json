@@ -1,16 +1,17 @@
 {
-  "topicIndex": 12,
+  "topicIndex": 13,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
     "budget-smartphones",
     "portable-ac",
     "window-ac",
-    "air-purifiers"
+    "air-purifiers",
+    "dehumidifiers"
   ],
   "lastPublishAt": "2026-06-30T08:14:31.718Z",
-  "nextPublishAt": "2026-06-30T13:18:09.220Z",
-  "scheduledGapHours": 5.06,
+  "nextPublishAt": "2026-06-30T12:46:32.805Z",
+  "scheduledGapHours": 4.53,
   "publishCountToday": 1,
   "publishDateKst": "2026-06-30",
   "writeCountToday": 0,
@@ -154,6 +155,11 @@
       "id": "air-purifiers",
       "category": "home-appliances",
       "at": "2026-06-30T08:14:31.725Z"
+    },
+    {
+      "id": "dehumidifiers",
+      "category": "home-appliances",
+      "at": "2026-06-30T10:22:14.591Z"
     }
   ],
   "formatHistory": [

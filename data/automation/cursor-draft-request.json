@@ -1,8 +1,9 @@
 {
   "status": "pending",
-  "needed": 2,
+  "needed": 1,
   "publishedSlug": "2026-summer-bluetooth-speakers-guide",
   "requestedAt": "2026-06-30T08:14:31.726Z",
+  "requeuedAt": "2026-06-30T10:22:14.592Z",
   "contentProfile": "buying-guide",
   "season": "summer",
   "seasonalEvents": [
@@ -10,19 +11,16 @@
     "폭염·냉방"
   ],
   "topic": {
-    "id": "air-purifiers",
+    "id": "dehumidifiers",
     "category": "home-appliances",
-    "angle": "air purifier guide for small rooms: CADR, filter types, noise levels, and running costs",
-    "imageQuery": "air purifier modern home",
+    "angle": "dehumidifiers for humid summers: pint capacity, noise, and energy cost per day",
+    "imageQuery": "dehumidifier home humidity",
     "liveData": false,
     "seasons": [
-      "spring",
-      "summer",
-      "winter"
+      "summer"
     ]
   },
   "templatePath": "docs/templates/buying-guide.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastAttemptAt": "2026-06-30T10:14:36.410Z",
-  "lastError": "Cursor agent: Default local agent storage requires the built-in node:sqlite module (Node >= 22.13, or another runtime that implements node:sqlite). Upgrade Node, or configure a custom store: Cursor.configure({ local: { store: new JsonlLocalAgentStore(rootDir) } }) or pass local.store / store on Agent.create and Agent.resume."
+  "lastError": null
 }
