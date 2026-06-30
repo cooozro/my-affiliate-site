@@ -25,6 +25,8 @@ type AutomationStatus = {
   mode: "publish-only";
   draftCount: number;
   targetDraftCount: number;
+  cursorDraftNeeded: number;
+  draftLabel: string;
   needsReplenish: boolean;
   replenishNote: string;
   cursorDraftPending: boolean;
@@ -32,9 +34,12 @@ type AutomationStatus = {
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
+  gapLabel: string;
+  slotOverdue: boolean;
   publishCountToday: number;
   maxPublishPerDay: number;
   lastPublishAt: string | null;
+  stateSource: "github" | "bundle";
 };
 
 export function AdminDashboard() {
@@ -193,7 +198,7 @@ export function AdminDashboard() {
           <div className="grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
             <MetricCard
               label="임시글 (draft)"
-              value={`${automation.draftCount} / ${automation.targetDraftCount}`}
+              value={automation.draftLabel}
             />
             <MetricCard
               label="오늘 발행"
@@ -203,17 +208,20 @@ export function AdminDashboard() {
               label="다음 발행 (KST)"
               value={automation.nextPublishAtKst ?? "미정"}
             />
-            <MetricCard
-              label="다음 간격"
-              value={
-                automation.publishCountToday >= automation.maxPublishPerDay
-                  ? "내일 06:00 + 4–6h"
-                  : automation.scheduledGapHours
-                    ? `${automation.scheduledGapHours}h (4–6h 랜덤)`
-                    : "—"
-              }
-            />
+            <MetricCard label="다음 간격" value={automation.gapLabel} />
           </div>
+          {automation.slotOverdue ? (
+            <p className="mt-3 text-sm text-amber-200">
+              예정 시각이 지났습니다. GitHub Actions가 5분마다 catch-up 발행을
+              시도합니다.
+            </p>
+          ) : null}
+          {automation.stateSource === "bundle" && mutations?.mode === "github" ? (
+            <p className="mt-3 text-xs text-muted-foreground">
+              스케줄 state는 배포 번들 기준입니다. GITHUB_TOKEN 설정 시 GitHub
+              최신 state를 우선 표시합니다.
+            </p>
+          ) : null}
           {automation.needsReplenish ? (
             <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-foreground">
               {automation.replenishNote}

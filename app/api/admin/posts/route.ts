@@ -3,7 +3,7 @@ import {
   canAccessAdmin,
   getAdminSessionFromCookies,
 } from "@/lib/admin-auth";
-import { getAdminAnalytics, getAdminAutomationStatus, getAdminPosts } from "@/lib/admin-actions";
+import { getAdminAnalytics, getAutomationStatus, getAdminPosts } from "@/lib/admin-actions";
 import { isServerlessRuntime } from "@/lib/posts-admin";
 
 async function requireAdmin(request: Request) {
@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     const [posts, analytics, automation] = await Promise.all([
       getAdminPosts(),
       getAdminAnalytics(),
-      Promise.resolve(getAdminAutomationStatus()),
+      getAutomationStatus(),
     ]);
 
     return NextResponse.json({

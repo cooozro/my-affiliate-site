@@ -16,6 +16,7 @@ import {
   MAX_PUBLISH_PER_DAY,
   reconcileOverduePublishSlot,
   reconcilePublishSchedule,
+  reconcileStaleCatchUpSlot,
   scheduleNextPublishAfterSuccess,
   TARGET_DRAFT_COUNT,
 } from "../lib/publish-schedule.mjs";
@@ -31,7 +32,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 
 function canPublishNow(state, force = false) {
   resetDailyCounters(state);
-  if (reconcilePublishSchedule(state) || reconcileOverduePublishSlot(state)) {
+  if (reconcilePublishSchedule(state) || reconcileOverduePublishSlot(state) || reconcileStaleCatchUpSlot(state)) {
     saveState(state);
   }
   ensureNextPublishAt(state);

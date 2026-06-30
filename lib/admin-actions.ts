@@ -4,6 +4,7 @@ import {
   commitPostChanges,
   deletePostOnGithub,
   fetchGaSummary,
+  tryReadGithubJson,
 } from "@/lib/admin-services";
 import {
   assertGithubAdminConfigured,
@@ -19,17 +20,23 @@ import {
 import fs from "fs";
 import path from "path";
 import {
-  formatKst,
   MAX_PUBLISH_PER_DAY,
-  previewReconcilePublishSchedule,
+  previewPublishSchedule,
+  TARGET_DRAFT_COUNT,
 } from "@/lib/publish-schedule";
 
-const TARGET_DRAFT_COUNT = 2;
+/** Internal/editorial slugs — not counted toward automation draft buffer. */
+const AUTOMATION_DRAFT_EXCLUDE = new Set([
+  "welcome",
+  "adsense-seo-checklist",
+]);
 
 export type AutomationStatus = {
   mode: "publish-only";
   draftCount: number;
   targetDraftCount: number;
+  cursorDraftNeeded: number;
+  draftLabel: string;
   needsReplenish: boolean;
   replenishNote: string;
   cursorDraftPending: boolean;
@@ -37,45 +44,90 @@ export type AutomationStatus = {
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
+  gapLabel: string;
+  slotOverdue: boolean;
   publishCountToday: number;
   maxPublishPerDay: number;
   lastPublishAt: string | null;
+  stateSource: "github" | "bundle";
 };
 
-export function getAutomationStatus(): AutomationStatus {
-  const statePath = path.join(process.cwd(), "data", "automation", "state.json");
-  const state = fs.existsSync(statePath)
-    ? (JSON.parse(fs.readFileSync(statePath, "utf8")) as Record<string, unknown>)
-    : {};
+function readLocalJson(filePath: string): Record<string, unknown> | null {
+  if (!fs.existsSync(filePath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8")) as Record<
+      string,
+      unknown
+    >;
+  } catch {
+    return null;
+  }
+}
 
-  const reconciledNext = previewReconcilePublishSchedule(state);
-  const nextPublishAt =
-    reconciledNext ??
-    (typeof state.nextPublishAt === "string" ? state.nextPublishAt : null);
+async function loadAutomationState(): Promise<{
+  state: Record<string, unknown>;
+  source: "github" | "bundle";
+}> {
+  const localPath = path.join(process.cwd(), "data", "automation", "state.json");
 
-  const draftCount = listPostsForAdmin().filter((post) => post.draft).length;
+  if (usesRemotePostStore()) {
+    const remote = await tryReadGithubJson("data/automation/state.json");
+    if (remote) {
+      return { state: remote, source: "github" };
+    }
+  }
 
-  const requestPath = path.join(
+  return {
+    state: readLocalJson(localPath) ?? {},
+    source: "bundle",
+  };
+}
+
+async function loadCursorDraftRequest(): Promise<Record<string, unknown> | null> {
+  const localPath = path.join(
     process.cwd(),
     "data",
     "automation",
     "cursor-draft-request.json",
   );
-  let cursorDraftPending = false;
-  let cursorDraftTopic: string | null = null;
-  if (fs.existsSync(requestPath)) {
-    try {
-      const request = JSON.parse(fs.readFileSync(requestPath, "utf8")) as {
-        status?: string;
-        topic?: { id?: string };
-      };
-      cursorDraftPending = request.status === "pending";
-      cursorDraftTopic =
-        typeof request.topic?.id === "string" ? request.topic.id : null;
-    } catch {
-      cursorDraftPending = false;
-    }
+
+  if (usesRemotePostStore()) {
+    const remote = await tryReadGithubJson(
+      "data/automation/cursor-draft-request.json",
+    );
+    if (remote) return remote;
   }
+
+  return readLocalJson(localPath);
+}
+
+function countAutomationDrafts(posts: AdminPostRow[]): number {
+  return posts.filter(
+    (post) => post.draft && !AUTOMATION_DRAFT_EXCLUDE.has(post.slug),
+  ).length;
+}
+
+export async function getAutomationStatus(): Promise<AutomationStatus> {
+  const { state, source: stateSource } = await loadAutomationState();
+  const schedule = previewPublishSchedule(state);
+
+  const draftCount = countAutomationDrafts(listPostsForAdmin());
+
+  const request = await loadCursorDraftRequest();
+  const cursorDraftPending = request?.status === "pending";
+  const cursorDraftTopic =
+    typeof (request?.topic as { id?: string } | undefined)?.id === "string"
+      ? (request?.topic as { id: string }).id
+      : null;
+  const cursorDraftNeeded =
+    cursorDraftPending && typeof request?.needed === "number"
+      ? request.needed
+      : 0;
+
+  const draftLabel =
+    cursorDraftPending && cursorDraftNeeded > 0
+      ? `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 작성 중)`
+      : `${draftCount} / ${TARGET_DRAFT_COUNT}`;
 
   const replenishNote = cursorDraftPending
     ? `GitHub Actions가 Cursor 에이전트로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. PC 꺼져도 자동 실행.`
@@ -87,19 +139,22 @@ export function getAutomationStatus(): AutomationStatus {
     mode: "publish-only",
     draftCount,
     targetDraftCount: TARGET_DRAFT_COUNT,
+    cursorDraftNeeded,
+    draftLabel,
     needsReplenish: draftCount < TARGET_DRAFT_COUNT || cursorDraftPending,
     replenishNote,
     cursorDraftPending,
     cursorDraftTopic,
-    nextPublishAt,
-    nextPublishAtKst: nextPublishAt ? formatKst(nextPublishAt) : null,
-    scheduledGapHours:
-      typeof state.scheduledGapHours === "number" ? state.scheduledGapHours : null,
-    publishCountToday:
-      typeof state.publishCountToday === "number" ? state.publishCountToday : 0,
+    nextPublishAt: schedule.nextPublishAt,
+    nextPublishAtKst: schedule.nextPublishAtKst,
+    scheduledGapHours: schedule.scheduledGapHours,
+    gapLabel: schedule.gapLabel,
+    slotOverdue: schedule.slotOverdue,
+    publishCountToday: schedule.publishCountToday,
     maxPublishPerDay: MAX_PUBLISH_PER_DAY,
     lastPublishAt:
       typeof state.lastPublishAt === "string" ? state.lastPublishAt : null,
+    stateSource,
   };
 }
 

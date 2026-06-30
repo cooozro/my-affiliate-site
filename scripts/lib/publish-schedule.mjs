@@ -137,9 +137,30 @@ export function reconcileOverduePublishSlot(state, from = new Date()) {
   return false;
 }
 
+/** Repair catch-up slots that were saved without a real 4–6h gap after publish. */
+export function reconcileStaleCatchUpSlot(state, from = new Date()) {
+  if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) return false;
+  if (!state.lastPublishAt || !state.nextPublishAt) return false;
+
+  const lastMs = new Date(state.lastPublishAt).getTime();
+  const nextMs = new Date(state.nextPublishAt).getTime();
+  const minGapMs = MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
+
+  if (nextMs - lastMs >= minGapMs) return false;
+
+  const gapMs = randomPublishGapMs();
+  state.scheduledGapHours = Math.round((gapMs / 3_600_000) * 100) / 100;
+  const candidate = lastMs + gapMs;
+  state.nextPublishAt = new Date(
+    candidate > from.getTime() ? candidate : from.getTime(),
+  ).toISOString();
+  return true;
+}
+
 export function ensureNextPublishAt(state) {
   reconcilePublishSchedule(state);
   reconcileOverduePublishSlot(state);
+  reconcileStaleCatchUpSlot(state);
 
   if (state.nextPublishAt) return;
 

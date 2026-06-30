@@ -291,3 +291,19 @@ export async function fetchGaSummary(): Promise<GaSummary | null> {
     activeUsers28d: Number(month?.rows?.[0]?.metricValues?.[0]?.value ?? 0),
   };
 }
+
+export async function tryReadGithubJson(
+  filePath: string,
+): Promise<Record<string, unknown> | null> {
+  if (!process.env.GITHUB_TOKEN?.trim()) return null;
+
+  try {
+    const { content } = await readGithubFile(filePath);
+    return JSON.parse(content) as Record<string, unknown>;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    if (message.includes("404")) return null;
+    console.warn(`tryReadGithubJson(${filePath}):`, message);
+    return null;
+  }
+}
