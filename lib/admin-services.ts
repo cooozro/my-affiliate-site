@@ -22,7 +22,7 @@ async function githubRequest(path: string, init: RequestInit = {}) {
     headers: {
       Authorization: `Bearer ${getToken()}`,
       Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2023-11-29",
+      "X-GitHub-Api-Version": "2026-03-10",
       ...(init.headers ?? {}),
     },
   });
