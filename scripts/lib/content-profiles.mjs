@@ -30,12 +30,15 @@ export const PROFILE_TEMPLATE_PATHS = {
 
 export const PROFILE_MIN_BODY_CHARS = {
   "buying-guide": 2500,
-  "head-to-head": 2200,
-  "scenario-guide": 2200,
-  explainer: 1800,
-  checklist: 1500,
+  "head-to-head": 2400,
+  "scenario-guide": 2400,
+  explainer: 2200,
+  checklist: 2200,
   editorial: 800,
 };
+
+/** Korean body should stay close to English depth (bilingual quality gate). */
+export const MIN_KO_TO_EN_BODY_RATIO = 0.75;
 
 /**
  * Pick next content profile using weighted rotation.

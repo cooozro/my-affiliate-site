@@ -4,7 +4,7 @@ description: >-
   Five portable Bluetooth speakers compared for summer outdoors—IP rating,
   battery, loudness, and weight. Scenario picks for poolside, picnic, and
   travel.
-date: '2026-06-28'
+date: '2026-06-30'
 tags:
   - bluetooth speaker
   - portable audio
@@ -12,7 +12,7 @@ tags:
   - outdoor tech
   - buying guide
 contentProfile: buying-guide
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-summer-bluetooth-speakers-guide/bluetooth-speaker-portable-audio-outdoor-tech-cover.jpg
@@ -20,11 +20,12 @@ coverImageAlt: >-
   Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker
   — bluetooth speaker, portable audio, outdoor tech cover photo
 coverImageCredit: Photo by phamtu1509 / Pixabay
-createdAt: '2026-06-28T08:00:00.000Z'
 coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
+updatedAt: '2026-06-30T08:14:30.000Z'
+publishedAt: '2026-06-30T08:14:30.000Z'
 ---
 ## Editorial Overview
 

@@ -13,8 +13,8 @@ Use for **`contentProfile: checklist`**. Fast, actionable pre-purchase checks.
 3. **Analysis methodology** / **분석 방법론** (brief)
 4. **## The checklist** / **## 구매 전 체크리스트** — **≥7 numbered items**, each with:
    - **What to check**
-   - **Why it matters** (1–2 sentences)
-   - **Red flag** (what to avoid)
+   - **Why it matters** (2–3 sentences with a concrete example)
+   - **Red flag** (what to avoid, 1–2 sentences)
 5. **Quick reference table** — optional spec thresholds
 6. **Related guides** / **관련 가이드**
 7. **Final Verdict** / **최종 평가** — 1–2 paragraphs summarizing priority order
@@ -22,5 +22,6 @@ Use for **`contentProfile: checklist`**. Fast, actionable pre-purchase checks.
 ## Rules
 
 - Minimum **7** numbered checklist items (`1.`, `2.`, …)
+- Minimum body: **2200** chars per locale; Korean ≥ **75%** of English length
 - Seasonal hook in title or intro when relevant (summer AC, back-to-school, etc.)
 - English primary; Korean faithful translation

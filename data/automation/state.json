@@ -1,19 +1,20 @@
 {
-  "topicIndex": 2,
+  "topicIndex": 12,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
     "budget-smartphones",
     "portable-ac",
-    "window-ac"
+    "window-ac",
+    "air-purifiers"
   ],
-  "lastPublishAt": "2026-06-28T15:07:19.713Z",
-  "nextPublishAt": "2026-06-28T20:29:19.711Z",
-  "scheduledGapHours": 5.37,
+  "lastPublishAt": "2026-06-30T08:14:31.718Z",
+  "nextPublishAt": "2026-06-30T12:17:59.167Z",
+  "scheduledGapHours": 4.06,
   "publishCountToday": 1,
-  "publishDateKst": "2026-06-29",
+  "publishDateKst": "2026-06-30",
   "writeCountToday": 0,
-  "writeDateKst": "2026-06-29",
+  "writeDateKst": "2026-06-30",
   "history": [
     {
       "action": "publish",
@@ -86,6 +87,20 @@
         "https://www.aipick.shop/en/blog/2026-summer-ac-room-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-summer-ac-room-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "topic": {
+        "id": "bluetooth-speakers",
+        "category": "audio",
+        "cluster": "audio"
+      },
+      "at": "2026-06-30T08:14:31.718Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-bluetooth-speakers-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-bluetooth-speakers-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -128,12 +143,24 @@
     {
       "id": "bluetooth-speakers",
       "category": "audio"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "category": "audio",
+      "cluster": "audio",
+      "at": "2026-06-30T08:14:31.721Z"
+    },
+    {
+      "id": "air-purifiers",
+      "category": "home-appliances",
+      "at": "2026-06-30T08:14:31.725Z"
     }
   ],
   "formatHistory": [
     "head-to-head",
     "scenario-guide",
     "explainer",
-    "checklist"
+    "checklist",
+    "buying-guide"
   ]
 }

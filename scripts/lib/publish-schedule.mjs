@@ -111,8 +111,35 @@ export function reconcilePublishSchedule(state, from = new Date()) {
   return changed;
 }
 
+/**
+ * If today's first slot window passed but nothing published yet, publish on next cron.
+ */
+export function reconcileOverduePublishSlot(state, from = new Date()) {
+  if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) return false;
+
+  const todayKst = kstDateString(from);
+  if (state.publishDateKst !== todayKst) return false;
+  if (!state.nextPublishAt) return false;
+
+  const now = from.getTime();
+  const nextMs = new Date(state.nextPublishAt).getTime();
+  if (nextMs <= now) return false;
+
+  const anchor = kstDayAnchorUtc(todayKst, KST_DAY_START_HOUR);
+  const staleAfterMs = anchor.getTime() + MAX_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
+
+  if (now >= staleAfterMs) {
+    state.scheduledGapHours = 0;
+    state.nextPublishAt = from.toISOString();
+    return true;
+  }
+
+  return false;
+}
+
 export function ensureNextPublishAt(state) {
   reconcilePublishSchedule(state);
+  reconcileOverduePublishSlot(state);
 
   if (state.nextPublishAt) return;
 

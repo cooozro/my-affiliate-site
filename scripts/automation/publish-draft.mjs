@@ -14,6 +14,7 @@ import {
   ensureNextPublishAt,
   formatKst,
   MAX_PUBLISH_PER_DAY,
+  reconcileOverduePublishSlot,
   reconcilePublishSchedule,
   scheduleNextPublishAfterSuccess,
   TARGET_DRAFT_COUNT,
@@ -30,7 +31,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 
 function canPublishNow(state, force = false) {
   resetDailyCounters(state);
-  if (reconcilePublishSchedule(state)) {
+  if (reconcilePublishSchedule(state) || reconcileOverduePublishSlot(state)) {
     saveState(state);
   }
   ensureNextPublishAt(state);

@@ -1,6 +1,26 @@
 {
-  "status": "complete",
-  "completedAt": "2026-06-27T07:15:05.689Z",
-  "draftCount": 3,
-  "note": "Buffer full; cleared stale pending request."
+  "status": "pending",
+  "needed": 2,
+  "publishedSlug": "2026-summer-bluetooth-speakers-guide",
+  "requestedAt": "2026-06-30T08:14:31.726Z",
+  "contentProfile": "buying-guide",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "air-purifiers",
+    "category": "home-appliances",
+    "angle": "air purifier guide for small rooms: CADR, filter types, noise levels, and running costs",
+    "imageQuery": "air purifier modern home",
+    "liveData": false,
+    "seasons": [
+      "spring",
+      "summer",
+      "winter"
+    ]
+  },
+  "templatePath": "docs/templates/buying-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
 }
