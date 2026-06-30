@@ -91,8 +91,81 @@ export function completeCursorDraftRequest(writtenSlug) {
     completedAt: new Date().toISOString(),
     writtenSlug,
     draftCount: countDrafts(),
+    lastError: null,
   });
   console.log(`Cursor draft request completed: ${writtenSlug}`);
+}
+
+/** Re-queue after partial replenish (buffer still below target). */
+export function requeueCursorDraftReplenish(publishedSlug = null) {
+  const draftCount = countDrafts();
+  const needed = TARGET_DRAFT_COUNT - draftCount;
+  if (needed <= 0) {
+    completeCursorDraftRequest(null);
+    return false;
+  }
+
+  const existing = readCursorDraftRequest();
+  const state = loadState();
+  const contentProfile =
+    existing?.contentProfile ?? pickContentProfile(state);
+  const topic = pickTopic(state, { contentProfile });
+  saveState(state);
+
+  const season = getCurrentSeason();
+  const events = getActiveSeasonalEvents();
+
+  writeRequest({
+    status: "pending",
+    needed,
+    publishedSlug: publishedSlug ?? existing?.publishedSlug ?? null,
+    requestedAt: existing?.requestedAt ?? new Date().toISOString(),
+    requeuedAt: new Date().toISOString(),
+    contentProfile,
+    season,
+    seasonalEvents: events.map((e) => e.label),
+    topic: {
+      id: topic.id,
+      category: topic.category,
+      angle: topic.angle,
+      imageQuery: topic.imageQuery,
+      liveData: topic.liveData,
+      seasons: topic.seasons,
+    },
+    templatePath: getTemplatePath(contentProfile),
+    instructions:
+      `Write one bilingual draft (en+ko, draft:true) with contentProfile:${contentProfile}. ` +
+      `Follow ${getTemplatePath(contentProfile)} and docs/CONTENT_STANDARDS.md. ` +
+      `Season priority: ${season}; active events: ${events.map((e) => e.label).join(", ") || "none"}. ` +
+      `Run npm run content:validate, then set status to complete.`,
+    lastError: null,
+  });
+
+  console.log(
+    `Cursor draft replenish re-queued: ${needed} still needed, topic=${topic.id}`,
+  );
+  return true;
+}
+
+export function recordReplenishAttempt() {
+  const existing = readCursorDraftRequest();
+  if (!existing || existing.status !== "pending") return;
+  writeRequest({
+    ...existing,
+    lastAttemptAt: new Date().toISOString(),
+  });
+}
+
+export function recordReplenishFailure(message) {
+  const existing = readCursorDraftRequest();
+  if (!existing) return;
+  writeRequest({
+    ...existing,
+    status: "pending",
+    lastError: message,
+    lastAttemptAt: new Date().toISOString(),
+  });
+  console.error(`Draft replenish failed (will retry): ${message}`);
 }
 
 function writeRequest(data) {

@@ -101,9 +101,19 @@ jobs:
             grep "No drafts to publish" "$LOG_FILE" || true
           fi
 
+      - name: Check pending draft replenish
+        id: pending_replenish
+        run: |
+          if [ -f data/automation/cursor-draft-request.json ] && grep -q '"status": "pending"' data/automation/cursor-draft-request.json; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Cursor draft replenish
-        if: success() && steps.task.outputs.name != 'status' && steps.automation.outputs.replenish_needed == 'true'
+        if: success() && steps.task.outputs.name != 'status' && (steps.automation.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
         env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

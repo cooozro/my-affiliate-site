@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * PC-off draft replenish: runs Cursor agent on GitHub Actions (local runtime on runner).
- * Requires CURSOR_API_KEY in GitHub Secrets.
+ * Draft replenish on GitHub Actions.
+ * Prefers OpenAI (~1 min) when OPENAI_API_KEY is set; falls back to Cursor agent.
  */
 
 import fs from "fs";
@@ -12,7 +12,13 @@ import { resolveImageContext, buildCoverAlt } from "../lib/image-query.mjs";
 import {
   completeCursorDraftRequest,
   readCursorDraftRequest,
+  recordReplenishAttempt,
+  recordReplenishFailure,
+  requeueCursorDraftReplenish,
 } from "./cursor-draft-request.mjs";
+import { generateDraftFromRequest } from "./generate-draft.mjs";
+import { pickTopic } from "./topics.mjs";
+import { loadState, saveState } from "./state.mjs";
 import {
   countDrafts,
   listDrafts,
@@ -21,11 +27,10 @@ import {
   writePost,
 } from "./posts-fs.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
-
 import { getTemplatePath } from "../lib/content-profiles.mjs";
 import { listPublishedSlugs } from "../lib/content-quality.mjs";
 
-function buildPrompt(request) {
+function buildCursorPrompt(request) {
   const topic = request.topic ?? {};
   const contentProfile = request.contentProfile ?? "buying-guide";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
@@ -122,43 +127,67 @@ async function ensureCoverImage(slug, topic) {
   }
 }
 
-async function main() {
-  const request = readCursorDraftRequest();
-  if (!request || request.status !== "pending") {
-    console.log("No pending cursor draft request — skip");
-    return;
-  }
+function requestForNextOpenAiDraft(request, index) {
+  if (index === 0) return request;
 
-  const apiKey = process.env.CURSOR_API_KEY?.trim();
-  if (!apiKey) {
-    console.error(
-      "CURSOR_API_KEY missing — add GitHub Secret for PC-off draft replenish (Cursor Dashboard → Integrations).",
+  const state = loadState();
+  const topic = pickTopic(state, { contentProfile: request.contentProfile });
+  saveState(state);
+
+  return {
+    ...request,
+    topic: {
+      id: topic.id,
+      category: topic.category,
+      angle: topic.angle,
+      imageQuery: topic.imageQuery,
+      liveData: topic.liveData,
+      seasons: topic.seasons,
+    },
+  };
+}
+
+async function replenishWithOpenAI(request) {
+  const openaiKey = process.env.OPENAI_API_KEY?.trim();
+  if (!openaiKey) return [];
+
+  const created = [];
+  const maxCreates = Math.min(
+    typeof request.needed === "number" ? request.needed : TARGET_DRAFT_COUNT,
+    TARGET_DRAFT_COUNT - countDrafts(),
+  );
+
+  for (let i = 0; i < maxCreates && countDrafts() < TARGET_DRAFT_COUNT; i += 1) {
+    const activeRequest = requestForNextOpenAiDraft(request, i);
+    console.log(
+      `OpenAI replenish ${i + 1}/${maxCreates}: topic=${activeRequest.topic?.id}`,
     );
-    process.exit(1);
+    const slug = await generateDraftFromRequest(activeRequest, {
+      bypassWriteCap: true,
+    });
+    if (!slug) break;
+    created.push(slug);
   }
 
-  const draftsBefore = new Set(listDrafts().map((d) => d.slug));
+  return created;
+}
+
+async function replenishWithCursor(request, draftsBefore) {
+  const apiKey = process.env.CURSOR_API_KEY?.trim();
+  if (!apiKey) return null;
+
   console.log(
     `Cursor replenish starting: topic=${request.topic?.id ?? "unknown"}, needed=${request.needed}`,
   );
 
-  try {
-    const result = await Agent.prompt(buildPrompt(request), {
-      apiKey,
-      model: { id: "composer-2.5" },
-      local: { cwd: process.cwd(), settingSources: [] },
-    });
+  const result = await Agent.prompt(buildCursorPrompt(request), {
+    apiKey,
+    model: { id: "composer-2.5" },
+    local: { cwd: process.cwd(), settingSources: [] },
+  });
 
-    if (result.status === "error") {
-      console.error(`Cursor agent run failed: ${result.id ?? "unknown"}`);
-      process.exit(2);
-    }
-  } catch (error) {
-    if (error instanceof CursorAgentError) {
-      console.error(`Cursor agent startup failed: ${error.message}`);
-      process.exit(1);
-    }
-    throw error;
+  if (result.status === "error") {
+    throw new Error(`Cursor agent run failed: ${result.id ?? "unknown"}`);
   }
 
   const updated = readCursorDraftRequest();
@@ -170,29 +199,87 @@ async function main() {
     writtenSlug = newDrafts[0]?.slug ?? null;
   }
 
-  if (!writtenSlug) {
-    console.error("Cursor agent finished but no new draft was detected.");
+  return writtenSlug;
+}
+
+async function main() {
+  const request = readCursorDraftRequest();
+  if (!request || request.status !== "pending") {
+    console.log("No pending cursor draft request — skip");
+    return;
+  }
+
+  if (countDrafts() >= TARGET_DRAFT_COUNT) {
+    completeCursorDraftRequest(null);
+    console.log(`Draft buffer already full (${countDrafts()}/${TARGET_DRAFT_COUNT})`);
+    return;
+  }
+
+  const openaiKey = process.env.OPENAI_API_KEY?.trim();
+  const cursorKey = process.env.CURSOR_API_KEY?.trim();
+  if (!openaiKey && !cursorKey) {
+    const message =
+      "OPENAI_API_KEY or CURSOR_API_KEY required for draft replenish on GitHub Actions.";
+    recordReplenishFailure(message);
+    process.exit(1);
+  }
+
+  recordReplenishAttempt();
+  const draftsBefore = new Set(listDrafts().map((d) => d.slug));
+  const createdSlugs = [];
+
+  try {
+    if (openaiKey) {
+      createdSlugs.push(...(await replenishWithOpenAI(request)));
+    } else {
+      const slug = await replenishWithCursor(request, draftsBefore);
+      if (slug) createdSlugs.push(slug);
+    }
+  } catch (error) {
+    const message =
+      error instanceof CursorAgentError
+        ? `Cursor agent: ${error.message}`
+        : error instanceof Error
+          ? error.message
+          : String(error);
+    recordReplenishFailure(message);
+    process.exit(error instanceof CursorAgentError ? 1 : 2);
+  }
+
+  if (createdSlugs.length === 0) {
+    const message = "Replenish finished but no new draft was created.";
+    recordReplenishFailure(message);
     process.exit(2);
   }
 
-  await ensureCoverImage(writtenSlug, request.topic);
-
-  const issues = validatePostFiles(writtenSlug);
-  if (issues.length > 0) {
-    console.error(`Validation failed for ${writtenSlug}:\n${issues.join("\n")}`);
-    process.exit(2);
+  for (const slug of createdSlugs) {
+    await ensureCoverImage(slug, request.topic);
+    const issues = validatePostFiles(slug);
+    if (issues.length > 0) {
+      recordReplenishFailure(`Validation failed for ${slug}: ${issues[0]}`);
+      process.exit(2);
+    }
   }
 
-  if (updated?.status !== "complete") {
-    completeCursorDraftRequest(writtenSlug);
+  const lastSlug = createdSlugs[createdSlugs.length - 1];
+  const remaining = TARGET_DRAFT_COUNT - countDrafts();
+
+  if (remaining <= 0) {
+    completeCursorDraftRequest(lastSlug);
+    console.log(
+      `Replenish OK: buffer full ${countDrafts()}/${TARGET_DRAFT_COUNT} (wrote ${createdSlugs.join(", ")})`,
+    );
+    return;
   }
 
+  requeueCursorDraftReplenish(request.publishedSlug);
   console.log(
-    `Cursor replenish OK: ${writtenSlug} (buffer ${countDrafts()}/${TARGET_DRAFT_COUNT})`,
+    `Partial replenish OK: ${createdSlugs.join(", ")} — buffer ${countDrafts()}/${TARGET_DRAFT_COUNT}, ${remaining} still queued`,
   );
 }
 
 main().catch((error) => {
+  recordReplenishFailure(error.message);
   console.error(error.message);
   process.exit(1);
 });

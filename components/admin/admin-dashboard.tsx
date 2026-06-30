@@ -31,6 +31,8 @@ type AutomationStatus = {
   replenishNote: string;
   cursorDraftPending: boolean;
   cursorDraftTopic: string | null;
+  cursorDraftPendingSince: string | null;
+  cursorDraftLastError: string | null;
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
@@ -225,10 +227,29 @@ export function AdminDashboard() {
           {automation.needsReplenish ? (
             <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-foreground">
               {automation.replenishNote}
+              {automation.cursorDraftPendingSince ? (
+                <>
+                  <br />
+                  대기 시작:{" "}
+                  {new Intl.DateTimeFormat("ko-KR", {
+                    timeZone: "Asia/Seoul",
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                  }).format(new Date(automation.cursorDraftPendingSince))}
+                </>
+              ) : null}
+              {automation.cursorDraftLastError ? (
+                <>
+                  <br />
+                  <span className="text-amber-200">
+                    최근 실패: {automation.cursorDraftLastError}
+                  </span>
+                </>
+              ) : null}
               <br />
               {automation.cursorDraftPending
-                ? "GitHub Actions + Cursor API가 임시글을 작성합니다 (PC 불필요, OpenAI 미사용)."
-                : "발행 후 buffer가 1건이면 GitHub Actions가 Cursor 에이전트로 자동 보충합니다."}
+                ? "GitHub Actions가 5분마다 pending 요청을 재시도합니다. OPENAI_API_KEY가 있으면 1분 내 완료됩니다."
+                : "발행 후 buffer가 1건이면 GitHub Actions가 자동 보충합니다."}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

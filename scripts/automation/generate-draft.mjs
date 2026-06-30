@@ -104,6 +104,44 @@ export async function generateOneDraft(options = {}) {
 
   const contentProfile = pickContentProfile(state);
   const topic = pickTopic(state, { contentProfile });
+  return generateDraftForTopic(topic, contentProfile, { bypassWriteCap, state });
+}
+
+function normalizeRequestTopic(raw) {
+  if (!raw?.id || !raw?.angle) {
+    throw new Error("cursor-draft-request missing topic.id or topic.angle");
+  }
+  return {
+    id: raw.id,
+    category: raw.category ?? "gadgets",
+    angle: raw.angle,
+    imageQuery: raw.imageQuery,
+    imageSearchKeywords: raw.imageSearchKeywords,
+    topicCluster: raw.topicCluster,
+    liveData: raw.liveData,
+    seasons: raw.seasons,
+  };
+}
+
+export async function generateDraftFromRequest(request, options = {}) {
+  const { bypassWriteCap = true } = options;
+  const topic = normalizeRequestTopic(request.topic);
+  const contentProfile = request.contentProfile ?? "buying-guide";
+  const state = loadState();
+  resetDailyCounters(state);
+
+  if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
+    console.log(`Daily write limit reached (${MAX_WRITES_PER_DAY}/day KST)`);
+    saveState(state);
+    return null;
+  }
+
+  return generateDraftForTopic(topic, contentProfile, { bypassWriteCap, state });
+}
+
+async function generateDraftForTopic(topic, contentProfile, options = {}) {
+  const { bypassWriteCap = false, state: inputState } = options;
+  const state = inputState ?? loadState();
   const year = new Date().getFullYear();
   const prompt = buildGenerationPrompt(topic, year, contentProfile);
 
@@ -153,7 +191,9 @@ export async function generateOneDraft(options = {}) {
     throw new Error(`Validation failed for ${slug}:\n${issues.join("\n")}`);
   }
 
-  state.writeCountToday += 1;
+  if (!bypassWriteCap) {
+    state.writeCountToday += 1;
+  }
   state.history = [
     ...(state.history ?? []),
     { action: "write", slug, at: createdAt, topic: topic.id },

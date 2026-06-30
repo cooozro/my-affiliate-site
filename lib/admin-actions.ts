@@ -41,6 +41,8 @@ export type AutomationStatus = {
   replenishNote: string;
   cursorDraftPending: boolean;
   cursorDraftTopic: string | null;
+  cursorDraftPendingSince: string | null;
+  cursorDraftLastError: string | null;
   nextPublishAt: string | null;
   nextPublishAtKst: string | null;
   scheduledGapHours: number | null;
@@ -123,6 +125,14 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     cursorDraftPending && typeof request?.needed === "number"
       ? request.needed
       : 0;
+  const cursorDraftPendingSince =
+    cursorDraftPending && typeof request?.requestedAt === "string"
+      ? request.requestedAt
+      : null;
+  const cursorDraftLastError =
+    cursorDraftPending && typeof request?.lastError === "string"
+      ? request.lastError
+      : null;
 
   const draftLabel =
     cursorDraftPending && cursorDraftNeeded > 0
@@ -130,7 +140,7 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       : `${draftCount} / ${TARGET_DRAFT_COUNT}`;
 
   const replenishNote = cursorDraftPending
-    ? `GitHub Actions가 Cursor 에이전트로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. PC 꺼져도 자동 실행.`
+    ? `GitHub Actions가 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. OpenAI 우선(~1분), 없으면 Cursor 에이전트.`
     : draftCount < TARGET_DRAFT_COUNT
       ? "임시글 버퍼 부족. 발행 시 GitHub Actions가 Cursor로 자동 보충합니다."
       : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
@@ -145,6 +155,8 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     replenishNote,
     cursorDraftPending,
     cursorDraftTopic,
+    cursorDraftPendingSince,
+    cursorDraftLastError,
     nextPublishAt: schedule.nextPublishAt,
     nextPublishAtKst: schedule.nextPublishAtKst,
     scheduledGapHours: schedule.scheduledGapHours,
