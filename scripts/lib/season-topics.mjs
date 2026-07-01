@@ -131,14 +131,17 @@ export function scoreTopicForSeason(topic, date = new Date()) {
  * @param {Set<string>} usedIds
  * @param {Date} [date]
  */
-export function pickSeasonalTopic(topics, usedIds, date = new Date()) {
+export function pickSeasonalTopic(topics, usedIds, date = new Date(), options = {}) {
+  const { lightSeason = false } = options;
   const available = topics.filter((t) => !usedIds.has(t.id));
   const pool = available.length > 0 ? available : topics;
 
   const ranked = pool
     .map((topic) => ({
       topic,
-      score: scoreTopicForSeason(topic, date),
+      score: lightSeason
+        ? Math.min(scoreTopicForSeason(topic, date), 6)
+        : scoreTopicForSeason(topic, date),
     }))
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
@@ -148,7 +151,7 @@ export function pickSeasonalTopic(topics, usedIds, date = new Date()) {
   const topScore = ranked[0]?.score ?? 0;
   const tier =
     topScore > 0
-      ? ranked.filter((r) => r.score >= topScore - 2)
+      ? ranked.filter((r) => r.score >= topScore - (lightSeason ? 4 : 2))
       : ranked;
 
   const pick = tier[Math.floor(Math.random() * tier.length)]?.topic ?? pool[0];

@@ -1,5 +1,5 @@
 {
-  "topicIndex": 11,
+  "topicIndex": 9,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -11,7 +11,8 @@
     "power-banks",
     "window-ac",
     "bluetooth-speakers",
-    "air-purifiers"
+    "air-purifiers",
+    "robot-vacuums"
   ],
   "lastPublishAt": "2026-07-01T01:41:46.782Z",
   "nextPublishAt": "2026-07-01T05:59:37.462Z",
@@ -221,6 +222,11 @@
       "id": "air-purifiers",
       "category": "home-appliances",
       "at": "2026-07-01T02:17:49.122Z"
+    },
+    {
+      "id": "robot-vacuums",
+      "category": "smart-home",
+      "at": "2026-07-01T03:17:31.021Z"
     }
   ],
   "formatHistory": [
@@ -230,6 +236,8 @@
     "checklist",
     "buying-guide",
     "explainer",
-    "head-to-head"
-  ]
+    "head-to-head",
+    "scenario-guide"
+  ],
+  "roadmapPhase": "tier1-first-pass"
 }

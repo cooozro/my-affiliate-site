@@ -1,6 +1,6 @@
 /**
  * IT review topics for AI Pick & Report.
- * Season metadata drives pickTopic() — current KST month/event boosts priority.
+ * Roadmap phase → season score → diversity.
  */
 import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
 import { pickSeasonalTopic } from "../lib/season-topics.mjs";
@@ -14,6 +14,11 @@ import {
   topicFormatUsageCount,
   clusterFormatUsageCount,
 } from "../lib/topic-coverage.mjs";
+import {
+  describeRoadmapPhase,
+  getRoadmapPhase,
+  isTopicBlockedByRoadmap,
+} from "../lib/content-roadmap.mjs";
 import {
   filterByTopicDiversity,
   getTopicHistory,
@@ -32,21 +37,44 @@ function sortByFreshness(candidates, coverage, clusterCoverage, recentlyUsed) {
   return [...candidates].sort((a, b) => {
     const clusterA = a.topicCluster ?? a.cluster;
     const clusterB = b.topicCluster ?? b.cluster;
-    const clusterUsageA = clusterA ? clusterFormatUsageCount(clusterA, clusterCoverage) : 0;
-    const clusterUsageB = clusterB ? clusterFormatUsageCount(clusterB, clusterCoverage) : 0;
+    const clusterUsageA = clusterA
+      ? clusterFormatUsageCount(clusterA, clusterCoverage)
+      : 0;
+    const clusterUsageB = clusterB
+      ? clusterFormatUsageCount(clusterB, clusterCoverage)
+      : 0;
     if (clusterUsageA !== clusterUsageB) return clusterUsageA - clusterUsageB;
 
     const usageA = topicFormatUsageCount(a.id, coverage);
     const usageB = topicFormatUsageCount(b.id, coverage);
     if (usageA !== usageB) return usageA - usageB;
+
     const recentA = recentlyUsed.has(a.id) ? 1 : 0;
     const recentB = recentlyUsed.has(b.id) ? 1 : 0;
     return recentA - recentB;
   });
 }
 
+function formatBlockedFn(topic, contentProfile, coverage, clusterCoverage) {
+  return (
+    isTopicFormatBlocked(topic.id, contentProfile, coverage) ||
+    isClusterFormatBlocked(topic, contentProfile, clusterCoverage)
+  );
+}
+
+function pickFromCandidates(candidates, recentlyUsed, roadmapPhase) {
+  const fresh = candidates.filter((t) => !recentlyUsed.has(t.id));
+  const pool = fresh.length > 0 ? fresh : candidates;
+
+  if (roadmapPhase !== "format-rotation") {
+    return pickSeasonalTopic(pool, recentlyUsed, new Date(), { lightSeason: true });
+  }
+
+  return pickSeasonalTopic(pool, recentlyUsed, new Date());
+}
+
 /**
- * Pick next topic — prefer uncovered product lines, then season score.
+ * Pick next topic — roadmap phase, uncovered lines, then season score.
  * @param {object} state
  * @param {{ contentProfile?: string }} [options]
  */
@@ -56,11 +84,22 @@ export function pickTopic(state, options = {}) {
   const topicHistory = getTopicHistory(state);
   const coverage = getTopicFormatCoverage();
   const clusterCoverage = getClusterFormatCoverage();
+  const roadmapPhase = getRoadmapPhase(coverage);
+
+  console.log(
+    `Content roadmap: ${roadmapPhase} — ${describeRoadmapPhase(roadmapPhase, coverage)}`,
+  );
 
   const formatAvailable = (t) =>
     supportsFormat(t, contentProfile) &&
-    !isTopicFormatBlocked(t.id, contentProfile, coverage) &&
-    !isClusterFormatBlocked(t, contentProfile, clusterCoverage);
+    !isTopicBlockedByRoadmap(
+      t,
+      contentProfile,
+      coverage,
+      clusterCoverage,
+      roadmapPhase,
+      formatBlockedFn,
+    );
 
   let candidates = sortByFreshness(
     POST_TOPICS.filter(formatAvailable),
@@ -84,7 +123,7 @@ export function pickTopic(state, options = {}) {
     );
   }
 
-  if (candidates.length === 0) {
+  if (candidates.length === 0 && roadmapPhase === "format-rotation") {
     console.warn(
       "No fresh topic×format pairs — relaxing diversity guard for this profile",
     );
@@ -98,24 +137,24 @@ export function pickTopic(state, options = {}) {
 
   if (candidates.length === 0) {
     throw new Error(
-      `All ${POST_TOPICS.length} topics already have a ${contentProfile} post or draft — pick another contentProfile or add taxonomy entries`,
+      `No topics available for ${contentProfile} in roadmap phase ${roadmapPhase}`,
     );
   }
 
   const blocked = listBlockedTopicFormats(coverage);
   const blockedClusters = listBlockedClusterFormats(clusterCoverage);
-  if (blocked.length > 0) {
+  if (blocked.length > 0 && roadmapPhase === "format-rotation") {
     console.log(
       `Topic×format pool excludes ${blocked.length} existing pair(s) (showing 8): ${blocked.slice(0, 8).join(", ")}`,
     );
   }
-  if (blockedClusters.length > 0) {
+  if (blockedClusters.length > 0 && roadmapPhase === "format-rotation") {
     console.log(
       `Cluster×format excludes ${blockedClusters.length} pair(s) (showing 6): ${blockedClusters.slice(0, 6).join(", ")}`,
     );
   }
 
-  const topic = pickSeasonalTopic(candidates, new Set(), new Date());
+  let topic = pickFromCandidates(candidates, recentlyUsed, roadmapPhase);
 
   const violation = wouldViolateTopicDiversity(topic, topicHistory);
   if (violation.blocked) {
@@ -133,18 +172,14 @@ export function pickTopic(state, options = {}) {
       recentlyUsed,
     );
     if (fallback.length > 0) {
-      const alt = pickSeasonalTopic(fallback, new Set(), new Date());
-      state.topicIndex =
-        (POST_TOPICS.findIndex((t) => t.id === alt.id) + 1) % POST_TOPICS.length;
-      state.usedTopicIds = [...(state.usedTopicIds ?? []), alt.id].slice(-30);
-      recordTopicPick(state, alt);
-      return alt;
+      topic = pickFromCandidates(fallback, recentlyUsed, roadmapPhase);
     }
   }
 
   state.topicIndex =
     (POST_TOPICS.findIndex((t) => t.id === topic.id) + 1) % POST_TOPICS.length;
   state.usedTopicIds = [...(state.usedTopicIds ?? []), topic.id].slice(-30);
+  state.roadmapPhase = roadmapPhase;
   recordTopicPick(state, topic);
   return topic;
 }

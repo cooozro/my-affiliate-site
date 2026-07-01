@@ -36,12 +36,21 @@ import {
   validateReplenishWrittenSlug,
 } from "../lib/automation-guard.mjs";
 
+import {
+  describeRoadmapPhase,
+  getRoadmapPhase,
+} from "../lib/content-roadmap.mjs";
+import { getTopicFormatCoverage } from "../lib/topic-coverage.mjs";
+
 function buildCursorPrompt(request) {
   const topic = request.topic ?? {};
   const contentProfile = request.contentProfile ?? "buying-guide";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
   const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
   const reservedSlugs = reservedSlugListForPrompt().join(", ");
+  const coverage = getTopicFormatCoverage();
+  const roadmapPhase = getRoadmapPhase(coverage);
+  const roadmapNote = describeRoadmapPhase(roadmapPhase, coverage);
 
   return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
 
@@ -54,7 +63,8 @@ Read first:
 Write exactly ONE bilingual draft:
 - Files: content/posts/{slug}/en.md and ko.md
 - Frontmatter: draft:true, contentProfile:${contentProfile}
-- Topic id: ${topic.id ?? "see request file"}
+- Topic id: ${topic.id ?? "see request file"} (assigned by content roadmap — do not swap to bluetooth-speakers/window-ac unless this IS the assigned topic)
+- Content roadmap phase: ${roadmapPhase} — ${roadmapNote}
 - Category: ${topic.category ?? ""}
 - Angle: ${topic.angle ?? ""}
 - Season priority: ${request.season ?? "current KST season"}${request.seasonalEvents?.length ? ` (${request.seasonalEvents.join(", ")})` : ""}

@@ -80,6 +80,7 @@ export async function deleteGithubFile(
 }
 
 type GithubContentEntry = {
+  name?: string;
   path: string;
   sha: string;
   type: "file" | "dir" | "submodule" | "symlink";
@@ -185,6 +186,7 @@ export async function deletePostOnGithub(slug: string) {
   }
 
   await deleteGithubDirectory(`public/images/posts/${slug}`, `${message} (images)`);
+  await deleteGithubDirectory(`images/posts/${slug}`, `${message} (legacy images)`);
 }
 
 function getServiceAccount() {

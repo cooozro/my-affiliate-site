@@ -17,7 +17,7 @@ import {
   assertGithubAdminConfigured,
   deletePostLocally,
   draftPostLocally,
-  listPostsForAdmin,
+  listPostsForAdminLive,
   publishPostLocally,
   readPostFile,
   slugExists,
@@ -120,7 +120,8 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
   const { state, source: stateSource } = await loadAutomationState();
   const schedule = previewPublishSchedule(state);
 
-  const draftCount = countAutomationDrafts(listPostsForAdmin());
+  const posts = await listPostsForAdminLive();
+  const draftCount = countAutomationDrafts(posts);
 
   const request = await loadCursorDraftRequest();
   const cursorDraftPending = request?.status === "pending";
@@ -187,7 +188,7 @@ function kstDateString(): string {
 }
 
 export async function getAdminPosts() {
-  const posts = listPostsForAdmin();
+  const posts = await listPostsForAdminLive();
   return enrichPostsWithCover(posts);
 }
 
@@ -270,14 +271,14 @@ export async function draftPost(slug: string) {
 }
 
 export async function deletePost(slug: string) {
-  if (!slugExists(slug)) {
-    throw new Error(`Post not found: ${slug}`);
-  }
-
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
     await deletePostOnGithub(slug);
     return { mode: "github" as const };
+  }
+
+  if (!slugExists(slug)) {
+    throw new Error(`Post not found: ${slug}`);
   }
 
   deletePostLocally(slug);

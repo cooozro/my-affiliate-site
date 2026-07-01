@@ -3,6 +3,7 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { listGithubDirectory, readGithubFile } from "@/lib/admin-services";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -107,6 +108,91 @@ export function listPostsForAdmin(): AdminPostRow[] {
       const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();
       return bTime - aTime;
     });
+}
+
+function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
+  return rows.sort((a, b) => {
+    const aTime = new Date(a.updatedAt ?? a.date ?? 0).getTime();
+    const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();
+    return bTime - aTime;
+  });
+}
+
+async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | null> {
+  let titleEn = slug;
+  let titleKo = slug;
+  let draft = false;
+  let date = "";
+  let updatedAt: string | undefined;
+  let publishedAt: string | undefined;
+  let createdAt: string | undefined;
+  let liveData = false;
+  let hasEn = false;
+  let hasKo = false;
+
+  for (const locale of ["en", "ko"] as const) {
+    try {
+      const { content } = await readGithubFile(`content/posts/${slug}/${locale}.md`);
+      const { data } = matter(content);
+      hasEn = locale === "en" ? true : hasEn;
+      hasKo = locale === "ko" ? true : hasKo;
+
+      if (locale === "en") {
+        titleEn = String(data.title ?? slug);
+        draft = Boolean(data.draft);
+        date = String(data.date ?? "");
+        updatedAt = data.updatedAt ? String(data.updatedAt) : undefined;
+        publishedAt = data.publishedAt ? String(data.publishedAt) : undefined;
+        createdAt = data.createdAt ? String(data.createdAt) : undefined;
+        liveData = Boolean(data.liveData);
+      }
+      if (locale === "ko") {
+        titleKo = String(data.title ?? slug);
+        if (!hasEn) {
+          draft = Boolean(data.draft);
+          date = String(data.date ?? "");
+        }
+      }
+    } catch {
+      /* locale missing on GitHub */
+    }
+  }
+
+  if (!hasEn && !hasKo) return null;
+
+  return {
+    slug,
+    titleEn,
+    titleKo,
+    draft,
+    date,
+    updatedAt,
+    publishedAt,
+    createdAt,
+    hasEn,
+    hasKo,
+    liveData,
+  };
+}
+
+/** Live GitHub main — avoids stale Vercel bundle after admin delete. */
+export async function listPostsForAdminLive(): Promise<AdminPostRow[]> {
+  if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
+    const entries = await listGithubDirectory("content/posts");
+    const slugs = entries
+      .filter((entry) => entry.type === "dir")
+      .map((entry) => entry.name ?? entry.path.split("/").pop() ?? "")
+      .filter(Boolean);
+
+    const rows: AdminPostRow[] = [];
+    for (const slug of slugs) {
+      const row = await buildAdminRowFromGithub(slug);
+      if (row) rows.push(row);
+    }
+    return sortAdminRows(rows);
+  }
+
+  return listPostsForAdmin();
 }
 
 function kstDateString(): string {
