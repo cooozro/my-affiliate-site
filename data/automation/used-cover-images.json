@@ -247,6 +247,21 @@
       "hash": "90ea22c210a9f2ed72273092882a75918cd7fc3b9308ea9f66e1ccb5f6c33c18",
       "provider": "admin-upload",
       "registeredAt": "2026-07-01T05:27:04.548Z"
+    },
+    {
+      "slug": "2026-action-cameras-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T05:32:12.061Z"
+    },
+    {
+      "slug": "2026-action-cameras-buying-guide",
+      "url": "https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg",
+      "assetKey": "pexels:92723",
+      "hash": "3fe088f66449aaa4bac88e9df2cbf954810b75cdd0fbab3483b57ca41912bd08",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T05:32:20.519Z"
     }
   ]
 }
