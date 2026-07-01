@@ -54,6 +54,7 @@ type AutomationStatus = {
   maxPublishPerDay: number;
   lastPublishAt: string | null;
   stateSource: "github" | "bundle";
+  healthIssues: Array<{ code: string; message: string; severity: string }>;
 };
 
 export function AdminDashboard() {
@@ -350,9 +351,19 @@ export function AdminDashboard() {
           </div>
           {automation.slotOverdue ? (
             <p className="mt-3 text-sm text-amber-200">
-              예정 시각이 지났습니다. GitHub Actions가 5분마다 catch-up 발행을
-              시도합니다.
+              예정 시각이 지났습니다. 전용 publish-slot 워크플로가 5분마다
+              catch-up 발행을 시도합니다. (Cursor 보충 작업과 분리됨)
             </p>
+          ) : null}
+          {automation.healthIssues && automation.healthIssues.length > 0 ? (
+            <div className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm">
+              <p className="font-medium text-amber-100">자동 점검 알림</p>
+              <ul className="mt-2 list-inside list-disc text-foreground">
+                {automation.healthIssues.map((issue) => (
+                  <li key={issue.code}>{issue.message}</li>
+                ))}
+              </ul>
+            </div>
           ) : null}
           {automation.stateSource === "bundle" && mutations?.mode === "github" ? (
             <p className="mt-3 text-xs text-muted-foreground">

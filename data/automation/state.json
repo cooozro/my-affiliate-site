@@ -1,5 +1,5 @@
 {
-  "topicIndex": 36,
+  "topicIndex": 23,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -13,12 +13,13 @@
     "bluetooth-speakers",
     "air-purifiers",
     "robot-vacuums",
-    "action-cameras"
+    "action-cameras",
+    "noise-cancelling-headphones"
   ],
-  "lastPublishAt": "2026-07-01T01:41:46.782Z",
-  "nextPublishAt": "2026-07-01T07:20:12.811Z",
-  "scheduledGapHours": 5.64,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-01T07:26:12.652Z",
+  "nextPublishAt": "2026-07-02T02:46:00.000Z",
+  "scheduledGapHours": 5.77,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-01",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-01",
@@ -134,6 +135,18 @@
         "https://www.aipick.shop/en/blog/2026-dehumidifiers-guide",
         "https://www.aipick.shop/ko/blog/2026-dehumidifiers-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-action-cameras-buying-guide",
+      "topic": {
+        "id": "action-cameras"
+      },
+      "at": "2026-07-01T07:26:12.652Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-action-cameras-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-action-cameras-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -233,6 +246,15 @@
       "id": "action-cameras",
       "category": "cameras",
       "at": "2026-07-01T05:30:36.267Z"
+    },
+    {
+      "id": "action-cameras",
+      "at": "2026-07-01T07:26:12.657Z"
+    },
+    {
+      "id": "noise-cancelling-headphones",
+      "category": "audio",
+      "at": "2026-07-01T07:26:12.667Z"
     }
   ],
   "formatHistory": [
@@ -244,7 +266,20 @@
     "explainer",
     "head-to-head",
     "scenario-guide",
-    "buying-guide"
+    "buying-guide",
+    "head-to-head"
   ],
-  "roadmapPhase": "tier1-first-pass"
+  "roadmapPhase": "tier1-first-pass",
+  "lastHealthCheck": {
+    "at": "2026-07-01T07:30:00.073Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
+        "severity": "warning"
+      }
+    ],
+    "repairs": []
+  }
 }

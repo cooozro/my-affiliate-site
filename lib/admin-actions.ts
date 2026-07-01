@@ -59,6 +59,7 @@ export type AutomationStatus = {
   maxPublishPerDay: number;
   lastPublishAt: string | null;
   stateSource: "github" | "bundle";
+  healthIssues: Array<{ code: string; message: string; severity: string }>;
 };
 
 function readLocalJson(filePath: string): Record<string, unknown> | null {
@@ -153,6 +154,21 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       ? "임시글 버퍼 부족. 발행 시 GitHub Actions가 Cursor로 자동 보충합니다."
       : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
 
+  const lastHealthCheck = state.lastHealthCheck as
+    | {
+        issues?: Array<{ code: string; message: string; severity?: string }>;
+      }
+    | undefined;
+  const healthIssues = (lastHealthCheck?.issues ?? [])
+    .filter(
+      (issue) => issue.severity === "error" || issue.severity === "warning",
+    )
+    .map((issue) => ({
+      code: issue.code,
+      message: issue.message,
+      severity: issue.severity ?? "info",
+    }));
+
   return {
     mode: "publish-only",
     draftCount,
@@ -175,6 +191,7 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     lastPublishAt:
       typeof state.lastPublishAt === "string" ? state.lastPublishAt : null,
     stateSource,
+    healthIssues,
   };
 }
 

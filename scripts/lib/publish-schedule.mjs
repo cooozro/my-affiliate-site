@@ -142,17 +142,26 @@ export function reconcileStaleCatchUpSlot(state, from = new Date()) {
   if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) return false;
   if (!state.lastPublishAt || !state.nextPublishAt) return false;
 
+  const now = from.getTime();
   const lastMs = new Date(state.lastPublishAt).getTime();
   const nextMs = new Date(state.nextPublishAt).getTime();
   const minGapMs = MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
 
+  // Slot already due — never push it forward; publish should run on this cron.
+  if (nextMs <= now) return false;
+
   if (nextMs - lastMs >= minGapMs) return false;
 
-  const gapMs = randomPublishGapMs();
+  const storedGapMs =
+    typeof state.scheduledGapHours === "number" &&
+    state.scheduledGapHours >= MIN_PUBLISH_GAP_HOURS
+      ? state.scheduledGapHours * 3_600_000
+      : null;
+  const gapMs = storedGapMs ?? randomPublishGapMs();
   state.scheduledGapHours = Math.round((gapMs / 3_600_000) * 100) / 100;
   const candidate = lastMs + gapMs;
   state.nextPublishAt = new Date(
-    candidate > from.getTime() ? candidate : from.getTime(),
+    candidate > now ? candidate : now,
   ).toISOString();
   return true;
 }

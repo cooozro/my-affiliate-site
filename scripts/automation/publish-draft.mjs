@@ -9,6 +9,10 @@ import {
 import { maintainDraftBuffer } from "./generate-draft.mjs";
 import { queueCursorDraftReplenish } from "./cursor-draft-request.mjs";
 import { inferPostTopic } from "../lib/infer-post-topic.mjs";
+import {
+  logAutomationHealthResult,
+  runAutomationHealthCheck,
+} from "../lib/automation-health.mjs";
 import { recordTopicPick } from "../lib/topic-diversity.mjs";
 import {
   ensureNextPublishAt,
@@ -86,6 +90,13 @@ export async function publishOneDraft(options = {}) {
   const { force = false } = options;
   const state = loadState();
   const stateBefore = JSON.stringify(state);
+  const drafts = listDrafts();
+
+  const health = runAutomationHealthCheck({ state, drafts });
+  logAutomationHealthResult(health);
+  if (health.stateChanged) {
+    saveState(state);
+  }
 
   if (!canPublishNow(state, force)) {
     if (JSON.stringify(state) !== stateBefore) {
@@ -94,7 +105,6 @@ export async function publishOneDraft(options = {}) {
     return null;
   }
 
-  const drafts = listDrafts();
   const publishOnly = process.env.AUTOMATION_MODE === "publish-only";
 
   if (drafts.length === 0) {
@@ -150,6 +160,11 @@ export async function publishOneDraft(options = {}) {
     console.log(
       `Publish skipped: ${tried.size} draft(s) failed integrity gate — fix drafts or wait for replenish.`,
     );
+    state.lastPublishSkipReason = {
+      at: new Date().toISOString(),
+      reason: "integrity-gate",
+      triedSlugs: [...tried],
+    };
     saveState(state);
     return null;
   }

@@ -1,0 +1,68 @@
+name: Blog publish slot
+
+# Fast publish-only cron — separate from slow Cursor replenish so slots are not blocked.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+env:
+  AUTOMATION_MODE: publish-only
+
+concurrency:
+  group: blog-publish-slot
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.13"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run publish slot
+        id: publish
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
+        run: |
+          set -euo pipefail
+          LOG_FILE="$(mktemp)"
+          node scripts/automation/run.mjs publish-slot | tee "$LOG_FILE"
+          if grep -q "^Published:" "$LOG_FILE"; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+          if grep -q "Publish skipped:" "$LOG_FILE"; then
+            grep "Publish skipped:" "$LOG_FILE" || true
+          fi
+          if grep -q "Automation health:" "$LOG_FILE"; then
+            grep -E "Automation health:|ERROR \[|WARN \[" "$LOG_FILE" || true
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "blog-automation[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts public/images/posts data/automation/
+          if git diff --staged --quiet; then
+            echo "No content changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(automation): publish-slot"
+          git push
+
+      - name: Trigger Vercel redeploy
+        if: steps.publish.outputs.published == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: node scripts/trigger-vercel-deploy.mjs
