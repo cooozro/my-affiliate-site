@@ -3,7 +3,7 @@
   "needed": 1,
   "publishedSlug": "2026-dehumidifiers-guide",
   "requestedAt": "2026-07-01T01:41:46.787Z",
-  "requeuedAt": "2026-07-01T02:07:23.162Z",
+  "requeuedAt": "2026-07-01T02:17:49.122Z",
   "contentProfile": "head-to-head",
   "season": "summer",
   "seasonalEvents": [
@@ -11,19 +11,18 @@
     "폭염·냉방"
   ],
   "topic": {
-    "id": "bluetooth-speakers",
-    "category": "audio",
-    "angle": "portable Bluetooth speakers compared by sound, IP rating, and battery life",
-    "imageQuery": "portable bluetooth speaker",
-    "liveData": true,
+    "id": "air-purifiers",
+    "category": "home-appliances",
+    "angle": "air purifier guide for small rooms: CADR, filter types, noise levels, and running costs",
+    "imageQuery": "HEPA air purifier product photo",
+    "liveData": false,
     "seasons": [
-      "summer"
+      "spring",
+      "summer",
+      "winter"
     ]
   },
   "templatePath": "docs/templates/head-to-head.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Integrity gate failed for 2026-bluetooth-speakers-guide: 2026-bluetooth-speakers-guide/en.md: description over 160 chars | 2026-bluetooth-speakers-guide/ko.md: Korean body too short (3767 chars, need ≥5375 — match English depth)",
-  "lastAttemptAt": "2026-07-01T02:13:06.521Z",
-  "writtenSlug": "2026-bluetooth-speakers-guide",
-  "completedAt": "2026-07-01T02:20:00.000Z"
+  "lastError": null
 }

@@ -1,8 +1,8 @@
 ---
 title: 'Sound, Splash, and Runtime: JBL Flip 6 vs UE WONDERBOOM 3 vs Anker Soundcore 2'
 description: >-
-  Three portable Bluetooth speakers compared on IP rating, battery life, and
-  outdoor loudness for summer poolside, picnic, and travel. Prices as of
+  JBL Flip 6, UE WONDERBOOM 3 & Anker Soundcore 2 compared on IP rating, battery
+  life, and outdoor loudness for summer pool, picnic, and travel.
   {{today_locale}}.
 date: '2026-07-01'
 tags:
