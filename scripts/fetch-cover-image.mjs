@@ -96,6 +96,11 @@ async function main() {
     process.exit(0);
   }
 
+  if (force) {
+    const { clearSlugCoverAssets } = await import("./lib/cover-image.mjs");
+    clearSlugCoverAssets(slug, enMeta.coverImage);
+  }
+
   const imageInput = {
     title: enMeta.title,
     tags: enMeta.tags,
@@ -110,7 +115,10 @@ async function main() {
   const planned = forced ?? pickImageProvider(slug);
   console.log(`Provider plan: ${planned ?? "auto"}`);
 
-  const meta = await fetchCoverImage(slug, imageInput, { provider: forced });
+  const meta = await fetchCoverImage(slug, imageInput, {
+    provider: forced,
+    forceRefresh: force,
+  });
   if (!meta) {
     console.error(`Failed to fetch cover for ${slug}`);
     process.exit(1);
@@ -121,13 +129,18 @@ async function main() {
     const postPath = path.join(POSTS_DIR, slug, `${loc}.md`);
     if (!fs.existsSync(postPath)) continue;
     const postMeta = readPostMeta(slug, loc);
+    const altCtx = {
+      ...imageContext,
+      productKeywords: meta.imageSearchKeywords ?? imageContext.productKeywords,
+      title: postMeta?.title,
+    };
     const updated = updateFrontmatter(slug, loc, {
       coverImage: meta.coverImage,
-      coverImageAlt: buildCoverAlt(loc === "ko" ? "ko" : "en", {
-        ...imageContext,
-        title: postMeta?.title,
-      }),
+      coverImageAlt: buildCoverAlt(loc === "ko" ? "ko" : "en", altCtx),
       coverImageCredit: meta.coverImageCredit,
+      ...(meta.imageSearchKeywords
+        ? { imageSearchKeywords: meta.imageSearchKeywords }
+        : {}),
       ...(meta.coverImageProvider
         ? { coverImageProvider: meta.coverImageProvider }
         : {}),

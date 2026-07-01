@@ -50,8 +50,87 @@ const GENERIC_TAGS = new Set([
   "checklist",
 ]);
 
+/** Per-slug tuned keywords — avoids ambiguous stock search (e.g. air → airplane). */
+export const SLUG_IMAGE_PROFILES = {
+  "2026-air-purifiers-guide": {
+    imageSearchKeywords: [
+      "HEPA air purifier",
+      "room air cleaner device",
+      "indoor air purifier",
+    ],
+    extraSearchQueries: [
+      "HEPA air purifier bedroom",
+      "air purifier appliance living room",
+      "room air filter device white",
+    ],
+    topicCluster: "air-quality",
+  },
+  "2026-portable-vs-window-ac-head-to-head": {
+    imageSearchKeywords: [
+      "portable air conditioner",
+      "window air conditioner unit",
+    ],
+    extraSearchQueries: [
+      "portable AC unit hose window",
+      "window mounted air conditioner",
+      "room air conditioner appliance",
+    ],
+    topicCluster: "air-conditioning",
+  },
+  "2026-budget-mechanical-keyboards-guide": {
+    imageSearchKeywords: [
+      "mechanical keyboard",
+      "hot swap keyboard",
+      "gaming keyboard desk",
+    ],
+    extraSearchQueries: [
+      "mechanical keyboard RGB desk",
+      "tenkeyless mechanical keyboard",
+    ],
+    topicCluster: "computing",
+  },
+  "2026-budget-smartphones-under-300": {
+    imageSearchKeywords: [
+      "budget smartphone",
+      "android phone handset",
+    ],
+    extraSearchQueries: [
+      "smartphone on desk product",
+      "mobile phone budget device",
+    ],
+    topicCluster: "smartphones",
+  },
+  "2026-budget-wireless-earbuds-top5": {
+    imageSearchKeywords: [
+      "wireless earbuds",
+      "true wireless earphones",
+      "TWS earbuds case",
+    ],
+    extraSearchQueries: [
+      "wireless earbuds charging case",
+      "bluetooth earbuds product photo",
+    ],
+    topicCluster: "audio",
+  },
+  "2026-dehumidifiers-guide": {
+    imageSearchKeywords: [
+      "home dehumidifier",
+      "room dehumidifier appliance",
+    ],
+    extraSearchQueries: [
+      "dehumidifier bedroom appliance",
+      "portable dehumidifier unit",
+    ],
+    topicCluster: "air-quality",
+  },
+};
+
 const SLUG_TOKEN_MAP = {
   ac: "air conditioner",
+  purifiers: "HEPA air purifier",
+  purifier: "HEPA air purifier",
+  dehumidifiers: "home dehumidifier",
+  dehumidifier: "home dehumidifier",
   earbuds: "wireless earbuds",
   smartphone: "smartphone",
   smartphones: "smartphone",
@@ -66,37 +145,73 @@ const SLUG_TOKEN_MAP = {
   window: "window",
 };
 
+/** Reject common wrong-subject stock photo tags. */
+const GLOBAL_STOCK_NEGATIVES = [
+  "airplane",
+  "aircraft",
+  "aviation",
+  "airport",
+  "jet",
+  "cockpit",
+  "pilot",
+  "flight",
+  "airline",
+  "helicopter",
+  "drone aerial only",
+];
+
 const CLUSTER_NEGATIVES = {
-  "air-conditioning": [
+  "air-quality": [
+    ...GLOBAL_STOCK_NEGATIVES,
+    "air conditioner",
+    "portable ac",
+    "window ac",
     "earbuds",
-    "earbud",
-    "headphone",
-    "headphones",
     "smartphone",
     "keyboard",
-    "monitor",
-    "speaker",
+    "swimming pool",
+  ],
+  "air-conditioning": [
+    ...GLOBAL_STOCK_NEGATIVES,
+    "air purifier",
+    "hepa filter only",
+    "earbuds",
+    "headphone",
+    "smartphone",
+    "keyboard",
     "cat",
-    "cats",
-    "kitten",
-    "kittens",
-    "dog",
-    "pet",
-    "pets",
-    "funny animal",
     "pool",
     "sunglasses",
     "power bank",
     "laptop",
   ],
-  audio: ["air conditioner", "keyboard", "monitor", "cat", "dog"],
-  smartphones: ["earbuds", "keyboard", "air conditioner", "cat"],
-  computing: ["earbuds", "smartphone", "air conditioner", "cat"],
-  power: ["earbuds", "smartphone", "keyboard", "air conditioner"],
-  "smart-home": ["earbuds", "smartphone", "keyboard"],
+  audio: [
+    "air conditioner",
+    "air purifier",
+    "keyboard",
+    "monitor",
+    "cat",
+    "dog",
+    "airplane",
+    "aircraft",
+  ],
+  smartphones: ["earbuds", "keyboard", "air conditioner", "air purifier", "cat", "airplane"],
+  computing: ["earbuds", "smartphone", "air conditioner", "air purifier", "cat", "airplane"],
+  power: ["earbuds", "smartphone", "keyboard", "air conditioner", "airplane"],
+  "smart-home": ["earbuds", "smartphone", "keyboard", "airplane", "aircraft"],
 };
 
-const DEFAULT_NEGATIVES = ["cat", "cats", "kitten", "kittens", "dog", "puppy", "pet", "pets"];
+const DEFAULT_NEGATIVES = [
+  "cat",
+  "cats",
+  "kitten",
+  "kittens",
+  "dog",
+  "puppy",
+  "pet",
+  "pets",
+  ...GLOBAL_STOCK_NEGATIVES,
+];
 
 function slugTokens(slug) {
   return slug
@@ -131,6 +246,10 @@ function uniqueStrings(items) {
   return out;
 }
 
+function slugProfile(slug) {
+  return slug ? SLUG_IMAGE_PROFILES[slug] ?? null : null;
+}
+
 /**
  * @param {{
  *   slug?: string,
@@ -144,7 +263,10 @@ function uniqueStrings(items) {
  */
 export function deriveProductKeywords(input = {}) {
   const topic = input.topic ?? {};
+  const profile = slugProfile(input.slug);
+
   const explicit = uniqueStrings([
+    ...(profile?.imageSearchKeywords ?? []),
     ...(input.imageSearchKeywords ?? []),
     ...(topic.imageSearchKeywords ?? []),
   ]);
@@ -168,34 +290,42 @@ export function deriveProductKeywords(input = {}) {
 
 /**
  * @param {string[]} productKeywords
- * @param {{ imageQuery?: string, topic?: { imageQuery?: string } }} [input]
+ * @param {{ slug?: string, imageQuery?: string, topic?: { imageQuery?: string } }} [input]
  */
 export function buildSearchQueries(productKeywords, input = {}) {
   const topic = input.topic ?? {};
-  const primary = productKeywords.slice(0, 3).join(" ");
-  const secondary = productKeywords.slice(0, 2).join(" ");
-  const tertiary = productKeywords[0] ?? "product";
+  const profile = slugProfile(input.slug);
+  const primary = productKeywords.slice(0, 2).join(" ");
+  const secondary = productKeywords[0] ?? "product";
 
-  return uniqueStrings([
+  const queries = uniqueStrings([
+    ...(profile?.extraSearchQueries ?? []),
     primary,
-    secondary,
+    `${secondary} product photo`,
+    `${secondary} appliance`,
     input.imageQuery,
     topic.imageQuery,
-    `${tertiary} product photo`,
-    tertiary,
+    profile?.extraSearchQueries?.[0],
   ]);
+
+  return queries.filter((q) => {
+    const lower = q.toLowerCase();
+    if (lower === "air" || lower === "air product photo") return false;
+    return true;
+  });
 }
 
-export function negativeTagsForCluster(topicCluster) {
+export function negativeTagsForCluster(topicCluster, slug) {
+  const profile = slugProfile(slug);
   return uniqueStrings([
     ...(CLUSTER_NEGATIVES[topicCluster] ?? []),
+    ...(profile?.extraNegatives ?? []),
     ...DEFAULT_NEGATIVES,
   ]);
 }
 
 /**
- * Score how well provider metadata matches the article product keywords.
- * @param {string} text - tags / alt / description blob
+ * @param {string} text
  * @param {string[]} productKeywords
  * @param {string[]} negatives
  */
@@ -205,19 +335,29 @@ export function scoreImageRelevance(text, productKeywords, negatives) {
 
   let score = 0;
 
+  for (const negative of negatives) {
+    const n = negative.toLowerCase();
+    if (n.length >= 3 && blob.includes(n)) return -100;
+  }
+
   for (const keyword of productKeywords) {
     const k = keyword.toLowerCase();
     if (blob.includes(k)) {
-      score += 4;
+      score += 6;
       continue;
     }
-    for (const token of k.split(/\s+/)) {
-      if (token.length > 3 && blob.includes(token)) score += 1;
+    const tokens = k.split(/\s+/).filter((t) => t.length > 3);
+    let tokenHits = 0;
+    for (const token of tokens) {
+      if (blob.includes(token)) tokenHits += 1;
     }
+    if (tokenHits >= 2) score += 4;
+    else if (tokenHits === 1) score += 1;
   }
 
-  for (const negative of negatives) {
-    if (blob.includes(negative.toLowerCase())) score -= 25;
+  if (blob.includes("air ") && !blob.includes("purifier") && !blob.includes("conditioner")) {
+    const needsPurifier = productKeywords.some((k) => k.toLowerCase().includes("purifier"));
+    if (needsPurifier) score -= 8;
   }
 
   return score;
@@ -241,22 +381,23 @@ export function pickRankedCandidate(candidates, slug, minScore = 2) {
 }
 
 /**
- * SEO-friendly filename inside the post image folder.
+ * Primary SEO keyword for filename / alt (first 2 product keywords condensed).
+ */
+export function primaryImageKeyword(productKeywords) {
+  const primary = productKeywords.slice(0, 2).join(" ");
+  return primary || "product";
+}
+
+/**
  * @param {string[]} productKeywords
  * @param {string} slug
  */
 export function buildCoverFilename(productKeywords, slug) {
-  const slugified = productKeywords
-    .slice(0, 3)
-    .map((kw) =>
-      kw
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, ""),
-    )
-    .filter(Boolean)
-    .join("-")
-    .slice(0, 55);
+  const slugified = primaryImageKeyword(productKeywords)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 48);
 
   if (slugified) return `${slugified}-cover.jpg`;
 
@@ -275,45 +416,43 @@ export function buildCoverFilename(productKeywords, slug) {
  */
 export function buildCoverAlt(locale, ctx) {
   const keywords = ctx.productKeywords.slice(0, 3);
+  const focus = primaryImageKeyword(ctx.productKeywords);
   const title = ctx.title?.trim();
 
   if (locale === "ko") {
-    const koProducts = keywords
-      .map((kw) => {
-        const k = kw.toLowerCase();
-        if (k.includes("portable") && k.includes("air")) return "이동식 에어컨";
-        if (k.includes("window") && k.includes("air")) return "창문형 에어컨";
-        if (k.includes("air conditioner") || k === "portable ac" || k === "window ac") {
-          return "에어컨";
-        }
-        if (k.includes("earbuds")) return "무선 이어폰";
-        if (k.includes("smartphone")) return "스마트폰";
-        if (k.includes("keyboard")) return "기계식 키보드";
-        if (k.includes("monitor")) return "모니터";
-        if (k.includes("power bank")) return "보조배터리";
-        if (k.includes("bluetooth speaker")) return "블루투스 스피커";
-        return kw;
-      })
-      .filter(Boolean);
-
-    const productPhrase = [...new Set(koProducts)].join("·");
-    if (title) return `${title} — ${productPhrase} 커버 이미지`;
-    return `${productPhrase} 제품 사진`;
+    const koFocus = mapKeywordToKo(focus);
+    if (title) return `${koFocus} — ${title} 커버 이미지`;
+    return `${koFocus} 제품 사진`;
   }
 
-  const productPhrase = keywords.join(", ");
-  if (title) return `${title} — ${productPhrase} cover photo`;
-  return `${productPhrase} product photo`;
+  if (title) return `${focus} — ${title} cover photo`;
+  return `${focus} product photo`;
+}
+
+function mapKeywordToKo(keyword) {
+  const k = keyword.toLowerCase();
+  if (k.includes("air purifier") || k.includes("hepa")) return "HEPA 공기청정기";
+  if (k.includes("dehumidifier")) return "제습기";
+  if (k.includes("portable") && k.includes("air")) return "이동식 에어컨";
+  if (k.includes("window") && k.includes("air")) return "창문형 에어컨";
+  if (k.includes("air conditioner")) return "에어컨";
+  if (k.includes("earbuds") || k.includes("earphone")) return "무선 이어폰";
+  if (k.includes("smartphone") || k.includes("phone")) return "스마트폰";
+  if (k.includes("keyboard")) return "기계식 키보드";
+  if (k.includes("monitor")) return "모니터";
+  if (k.includes("power bank")) return "보조배터리";
+  if (k.includes("bluetooth speaker")) return "블루투스 스피커";
+  return keyword;
 }
 
 /**
- * Normalize caller input (string query or metadata object).
  * @param {string} slug
  * @param {string | Record<string, unknown>} input
  */
 export function resolveImageContext(slug, input = {}) {
   const meta = typeof input === "string" ? { imageQuery: input } : input;
   const topic = meta.topic ?? {};
+  const profile = slugProfile(slug);
 
   const productKeywords = deriveProductKeywords({
     slug,
@@ -325,23 +464,35 @@ export function resolveImageContext(slug, input = {}) {
   });
 
   const topicCluster =
-    meta.topicCluster ?? topic.topicCluster ?? inferClusterFromKeywords(productKeywords);
+    meta.topicCluster ??
+    profile?.topicCluster ??
+    topic.topicCluster ??
+    inferClusterFromKeywords(productKeywords);
 
   return {
     slug,
     title: meta.title,
     tags: meta.tags ?? [],
     productKeywords,
-    searchQueries: buildSearchQueries(productKeywords, meta),
-    negativeTags: negativeTagsForCluster(topicCluster),
+    primaryKeyword: primaryImageKeyword(productKeywords),
+    searchQueries: buildSearchQueries(productKeywords, { ...meta, slug }),
+    negativeTags: negativeTagsForCluster(topicCluster, slug),
     topicCluster,
+    imageSearchKeywords: productKeywords,
   };
 }
 
 function inferClusterFromKeywords(keywords) {
   const blob = keywords.join(" ").toLowerCase();
-  if (blob.includes("air conditioner") || blob.includes(" ac")) return "air-conditioning";
-  if (blob.includes("earbuds") || blob.includes("headphone")) return "audio";
+  if (blob.includes("air purifier") || blob.includes("hepa") || blob.includes("dehumidifier")) {
+    return "air-quality";
+  }
+  if (blob.includes("air conditioner") || /\bportable ac\b/.test(blob) || /\bwindow ac\b/.test(blob)) {
+    return "air-conditioning";
+  }
+  if (blob.includes("earbuds") || blob.includes("earphone") || blob.includes("headphone")) {
+    return "audio";
+  }
   if (blob.includes("smartphone") || blob.includes("phone")) return "smartphones";
   if (blob.includes("keyboard") || blob.includes("monitor")) return "computing";
   if (blob.includes("power bank")) return "power";

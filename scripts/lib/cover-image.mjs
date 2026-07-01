@@ -8,6 +8,12 @@ import {
   scoreImageRelevance,
 } from "./image-query.mjs";
 import {
+  pickVisionWinner,
+  rankCandidatesWithVision,
+  visionMinScore,
+  visionSelectionEnabled,
+} from "./image-vision.mjs";
+import {
   assetKey,
   hashBuffer,
   isImageUsed,
@@ -19,6 +25,8 @@ import {
 
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
+
+const TEXT_MIN_SCORE = 2;
 
 /** Stable numeric hash from slug (provider pick + result offset). */
 export function hashSlug(slug, salt = "") {
@@ -41,44 +49,16 @@ export function pickImageProvider(slug) {
   return providers[idx];
 }
 
-function providerOrder(slug, forced) {
+function allProviders(forced) {
   const available = availableImageProviders();
-  if (available.length === 0) return [];
-
   if (forced && available.includes(forced)) {
     return [forced, ...available.filter((p) => p !== forced)];
   }
-
-  const primary = pickImageProvider(slug);
-  if (!primary) return available;
-  return [primary, ...available.filter((p) => p !== primary)];
+  return available;
 }
 
 function searchPage(slug, queryIndex, pageOffset = 0) {
   return (hashSlug(slug, `page:${queryIndex}:${pageOffset}`) % 4) + 1 + pageOffset;
-}
-
-function rankCandidates(candidates, ctx) {
-  return candidates
-    .map((candidate) => ({
-      ...candidate,
-      score: scoreImageRelevance(
-        candidate.relevanceText,
-        ctx.productKeywords,
-        ctx.negativeTags,
-      ),
-    }))
-    .sort((a, b) => b.score - a.score);
-}
-
-function orderedViableCandidates(ranked, slug, minScore) {
-  const viable = ranked.filter((c) => c.score >= minScore);
-  const pool = viable.length > 0 ? viable : ranked;
-  if (pool.length === 0) return [];
-
-  const top = pool.slice(0, Math.min(12, pool.length));
-  const start = hashSlug(slug, "pick") % top.length;
-  return [...top.slice(start), ...top.slice(0, start)];
 }
 
 async function downloadToSlug(slug, imageUrl, filename) {
@@ -103,20 +83,21 @@ function candidateIsUsed(registry, candidate) {
   });
 }
 
-async function pickUnusedCandidate(candidates, slug, registry, minScore) {
-  const ranked = rankCandidates(candidates, { productKeywords: [], negativeTags: [] });
-  const ordered = orderedViableCandidates(ranked, slug, minScore);
-
-  for (const candidate of ordered) {
-    if (!candidateIsUsed(registry, candidate)) {
-      return candidate;
-    }
-  }
-
-  return null;
+function rankText(candidates, ctx) {
+  return candidates
+    .map((candidate) => ({
+      ...candidate,
+      textScore: scoreImageRelevance(
+        candidate.relevanceText,
+        ctx.productKeywords,
+        ctx.negativeTags,
+      ),
+    }))
+    .filter((c) => c.textScore >= TEXT_MIN_SCORE)
+    .sort((a, b) => b.textScore - a.textScore);
 }
 
-async function searchPexels(query, apiKey, slug, queryIndex, ctx, registry, pageOffset = 0) {
+async function fetchPexelsCandidates(query, apiKey, slug, queryIndex, ctx, pageOffset) {
   const url = new URL(PEXELS_SEARCH);
   url.searchParams.set("query", query);
   url.searchParams.set("per_page", "30");
@@ -126,40 +107,28 @@ async function searchPexels(query, apiKey, slug, queryIndex, ctx, registry, page
   const response = await fetch(url, {
     headers: { Authorization: apiKey },
   });
-
-  if (!response.ok) {
-    throw new Error(`Pexels API ${response.status}`);
-  }
+  if (!response.ok) throw new Error(`Pexels API ${response.status}`);
 
   const data = await response.json();
-  const photos = data.photos ?? [];
-  if (photos.length === 0) return null;
-
-  const candidates = photos
+  return (data.photos ?? [])
     .map((photo) => {
       const imageUrl = photo.src?.large2x || photo.src?.large;
       if (!imageUrl) return null;
-
       return {
         imageUrl,
+        thumbUrl: photo.src?.medium || photo.src?.small || imageUrl,
         assetKey: assetKey("pexels", photo.id),
         relevanceText: `${photo.alt ?? ""} ${query}`,
         credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
         provider: "pexels",
         assetId: photo.id,
+        searchQuery: query,
       };
     })
     .filter(Boolean);
-
-  const ranked = rankCandidates(candidates, ctx);
-  const ordered = orderedViableCandidates(ranked, slug, 2);
-  if (ordered.length === 0) {
-    return orderedViableCandidates(ranked, slug, 0);
-  }
-  return ordered;
 }
 
-async function searchPixabay(query, apiKey, slug, queryIndex, ctx, registry, pageOffset = 0) {
+async function fetchPixabayCandidates(query, apiKey, slug, queryIndex, ctx, pageOffset) {
   const url = new URL(PIXABAY_SEARCH);
   url.searchParams.set("key", apiKey);
   url.searchParams.set("q", query);
@@ -170,164 +139,254 @@ async function searchPixabay(query, apiKey, slug, queryIndex, ctx, registry, pag
   url.searchParams.set("safesearch", "true");
 
   const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`Pixabay API ${response.status}`);
-  }
+  if (!response.ok) throw new Error(`Pixabay API ${response.status}`);
 
   const data = await response.json();
-  const hits = data.hits ?? [];
-  if (hits.length === 0) return null;
-
-  const candidates = hits
+  return (data.hits ?? [])
     .map((hit) => {
       const imageUrl = hit.largeImageURL || hit.webformatURL;
       if (!imageUrl) return null;
-
-      const user = hit.user ?? "Pixabay";
       return {
         imageUrl,
+        thumbUrl: hit.previewURL || imageUrl,
         assetKey: assetKey("pixabay", hit.id),
         relevanceText: `${hit.tags ?? ""} ${query}`,
-        credit: `Photo by ${user} / Pixabay`,
+        credit: `Photo by ${hit.user ?? "Pixabay"} / Pixabay`,
         provider: "pixabay",
         assetId: hit.id,
+        searchQuery: query,
       };
     })
     .filter(Boolean);
-
-  const ranked = rankCandidates(candidates, ctx);
-  const ordered = orderedViableCandidates(ranked, slug, 2);
-  if (ordered.length === 0) {
-    return orderedViableCandidates(ranked, slug, 0);
-  }
-  return ordered;
 }
 
-function pickFirstUnused(ordered, registry) {
-  for (const candidate of ordered) {
-    if (!candidateIsUsed(registry, candidate)) {
-      return candidate;
-    }
+function dedupeCandidates(candidates) {
+  const seen = new Set();
+  const out = [];
+  for (const c of candidates) {
+    if (seen.has(c.assetKey)) continue;
+    seen.add(c.assetKey);
+    out.push(c);
   }
-  return null;
+  return out;
 }
 
 /**
- * Fetch a cover image using Pexels + Pixabay rotation (slug-stable).
- * Never reuses a provider asset id, source url, or file hash already in the registry.
+ * Search both providers across queries; return text-ranked unused pool.
  */
-export async function fetchCoverImage(slug, queryOrContext, options = {}) {
-  const ctx = resolveImageContext(slug, queryOrContext);
-  const order = providerOrder(slug, options.provider);
-  let registry = syncImageRegistryFromPosts();
+async function collectCandidatePool(slug, ctx, registry, options) {
+  const providers = allProviders(options.provider);
+  const pageOffsets = options.forceRefresh
+    ? [0, 1, 2, 3, 4, 5]
+    : [0, 1, 2];
 
-  if (order.length === 0) {
-    console.warn(
-      "No image API keys set — add PEXELS_API_KEY and/or PIXABAY_API_KEY",
-    );
-    return null;
-  }
-
+  const raw = [];
   let lastError = null;
-  const filename = buildCoverFilename(ctx.productKeywords, slug);
-  const coverImageAlt = buildCoverAlt("en", ctx);
-  const coverImageAltKo = buildCoverAlt("ko", ctx);
 
   for (let queryIndex = 0; queryIndex < ctx.searchQueries.length; queryIndex++) {
     const query = ctx.searchQueries[queryIndex];
-    const pageOffsets = options.forceRefresh
-      ? [0, 1, 2, 3, 4, 5, 6, 7]
-      : [0, 1, 2];
-
     for (const pageOffset of pageOffsets) {
-      for (const provider of order) {
+      for (const provider of providers) {
         try {
-          let ordered = [];
-
-          if (provider === "pexels") {
-            ordered =
-              (await searchPexels(
-                query,
-                process.env.PEXELS_API_KEY.trim(),
-                slug,
-                queryIndex,
-                ctx,
-                registry,
-                pageOffset,
-              )) ?? [];
-          } else if (provider === "pixabay") {
-            ordered =
-              (await searchPixabay(
-                query,
-                process.env.PIXABAY_API_KEY.trim(),
-                slug,
-                queryIndex,
-                ctx,
-                registry,
-                pageOffset,
-              )) ?? [];
-          }
-
-          const result = pickFirstUnused(ordered, registry);
-          if (!result) {
-            console.warn(
-              `${provider}: all results already used for "${query}" (page+${pageOffset})`,
-            );
-            continue;
-          }
-
-          const downloaded = await downloadToSlug(slug, result.imageUrl, filename);
-          if (isImageUsed(registry, { hash: downloaded.hash })) {
-            console.warn(
-              `${provider}: downloaded bytes match an existing cover — trying next candidate`,
-            );
-            fs.unlinkSync(
-              path.join(process.cwd(), "public", downloaded.relativePath.replace(/^\//, "")),
-            );
-            registerUsedImage(registry, {
+          let batch = [];
+          if (provider === "pexels" && process.env.PEXELS_API_KEY?.trim()) {
+            batch = await fetchPexelsCandidates(
+              query,
+              process.env.PEXELS_API_KEY.trim(),
               slug,
-              url: result.imageUrl,
-              assetKey: result.assetKey,
-              hash: downloaded.hash,
-              provider: result.provider,
-            });
-            saveImageRegistry(registry);
-            continue;
+              queryIndex,
+              ctx,
+              pageOffset,
+            );
+          } else if (provider === "pixabay" && process.env.PIXABAY_API_KEY?.trim()) {
+            batch = await fetchPixabayCandidates(
+              query,
+              process.env.PIXABAY_API_KEY.trim(),
+              slug,
+              queryIndex,
+              ctx,
+              pageOffset,
+            );
           }
-
-          registerUsedImage(registry, {
-            slug,
-            url: result.imageUrl,
-            assetKey: result.assetKey,
-            hash: downloaded.hash,
-            provider: result.provider,
-          });
-          saveImageRegistry(registry);
-
-          console.log(
-            `Cover image: ${slug} via ${result.provider} id=${result.assetId} (query="${query}")`,
-          );
-
-          return {
-            coverImage: downloaded.relativePath,
-            coverImageAlt,
-            coverImageAltKo,
-            coverImageCredit: result.credit,
-            coverImageProvider: result.provider,
-            coverImageAssetId: result.assetId,
-            coverImageSourceUrl: result.imageUrl,
-          };
+          raw.push(...batch);
         } catch (error) {
           lastError = error;
-          console.warn(`${provider} failed for ${slug}: ${error.message}`);
+          console.warn(`${provider} search failed for "${query}": ${error.message}`);
         }
       }
     }
   }
 
-  if (lastError) {
-    console.warn(`All image providers failed for ${slug}: ${lastError.message}`);
+  const ranked = rankText(dedupeCandidates(raw), ctx);
+  const unused = ranked.filter((c) => !candidateIsUsed(registry, c));
+
+  return { pool: unused, lastError };
+}
+
+export function clearSlugCoverAssets(slug, coverImage) {
+  if (coverImage?.startsWith("/images/posts/")) {
+    const filePath = path.join(process.cwd(), "public", coverImage.replace(/^\//, ""));
+    if (fs.existsSync(filePath)) {
+      try {
+        fs.unlinkSync(filePath);
+      } catch {
+        /* ignore */
+      }
+    }
   }
 
-  return null;
+  const dir = path.join(process.cwd(), "public", "images", "posts", slug);
+  if (fs.existsSync(dir)) {
+    for (const name of fs.readdirSync(dir)) {
+      if (/\.(jpe?g|webp|png)$/i.test(name)) {
+        try {
+          fs.unlinkSync(path.join(dir, name));
+        } catch {
+          /* ignore */
+        }
+      }
+    }
+  }
+
+  const registry = loadImageRegistry();
+  registry.entries = registry.entries.filter((e) => e.slug !== slug);
+  saveImageRegistry(registry);
+}
+
+/**
+ * Fetch a cover image using Pexels + Pixabay with vision ranking when available.
+ */
+export async function fetchCoverImage(slug, queryOrContext, options = {}) {
+  const ctx = resolveImageContext(slug, queryOrContext);
+  let registry = syncImageRegistryFromPosts();
+
+  const providers = allProviders(options.provider);
+  if (providers.length === 0) {
+    console.warn("No image API keys set — add PEXELS_API_KEY and/or PIXABAY_API_KEY");
+    return null;
+  }
+
+  if (options.forceRefresh) {
+    const meta =
+      typeof queryOrContext === "object" && queryOrContext?.coverImage
+        ? queryOrContext.coverImage
+        : null;
+    clearSlugCoverAssets(slug, meta);
+    registry = syncImageRegistryFromPosts();
+  }
+
+  const filename = buildCoverFilename(ctx.productKeywords, slug);
+  const coverImageAlt = buildCoverAlt("en", ctx);
+  const coverImageAltKo = buildCoverAlt("ko", ctx);
+
+  console.log(`Image search: ${slug}`);
+  console.log(`  keywords: ${ctx.productKeywords.join(" | ")}`);
+  console.log(`  queries: ${ctx.searchQueries.slice(0, 4).join(" | ")}`);
+  console.log(
+    `  vision: ${visionSelectionEnabled() ? `on (min ${visionMinScore()}/10)` : "off (text-only)"}`,
+  );
+
+  const { pool, lastError } = await collectCandidatePool(slug, ctx, registry, options);
+
+  if (pool.length === 0) {
+    console.warn(`No viable candidates for ${slug}`);
+    if (lastError) console.warn(lastError.message);
+    return null;
+  }
+
+  console.log(`  text-ranked pool: ${pool.length} unused candidate(s)`);
+
+  let winner = null;
+
+  if (visionSelectionEnabled()) {
+    const visionRanked = await rankCandidatesWithVision(pool, ctx);
+    winner = pickVisionWinner(visionRanked);
+
+    if (!winner) {
+      console.warn(
+        `Vision rejected all candidates for ${slug} — expanding search across providers`,
+      );
+      const { pool: widerPool } = await collectCandidatePool(slug, ctx, registry, {
+        ...options,
+        forceRefresh: false,
+        provider: undefined,
+      });
+      const extra = widerPool.filter(
+        (c) => !pool.some((p) => p.assetKey === c.assetKey),
+      );
+      if (extra.length > 0) {
+        const extraRanked = await rankCandidatesWithVision(
+          [...pool.slice(0, 5), ...extra].slice(0, 12),
+          ctx,
+        );
+        winner = pickVisionWinner(extraRanked);
+      }
+    }
+  }
+
+  if (!winner) {
+    const strongText = pool.filter((c) => c.textScore >= 6);
+    if (strongText.length > 0) {
+      winner = strongText[0];
+      console.log(
+        `  text fallback: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+      );
+    }
+  }
+
+  if (!winner) {
+    if (!visionSelectionEnabled() && pool.length > 0) {
+      winner = pool[0];
+      console.log(
+        `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+      );
+    } else {
+      console.warn(`No suitable image for ${slug}`);
+      if (lastError) console.warn(lastError.message);
+      return null;
+    }
+  } else if (winner.visionScore != null) {
+    console.log(
+      `  vision pick: ${winner.provider}:${winner.assetId} vision=${winner.visionScore}/10 text=${winner.textScore}`,
+    );
+  }
+
+  try {
+    const downloaded = await downloadToSlug(slug, winner.imageUrl, filename);
+
+    if (isImageUsed(registry, { hash: downloaded.hash })) {
+      console.warn(`Downloaded hash already used — aborting ${slug}`);
+      fs.unlinkSync(
+        path.join(process.cwd(), "public", downloaded.relativePath.replace(/^\//, "")),
+      );
+      return null;
+    }
+
+    registerUsedImage(registry, {
+      slug,
+      url: winner.imageUrl,
+      assetKey: winner.assetKey,
+      hash: downloaded.hash,
+      provider: winner.provider,
+    });
+    saveImageRegistry(registry);
+
+    console.log(
+      `Cover image: ${slug} via ${winner.provider} id=${winner.assetId} query="${winner.searchQuery}"`,
+    );
+
+    return {
+      coverImage: downloaded.relativePath,
+      coverImageAlt,
+      coverImageAltKo,
+      coverImageCredit: winner.credit,
+      coverImageProvider: winner.provider,
+      coverImageAssetId: winner.assetId,
+      coverImageSourceUrl: winner.imageUrl,
+      imageSearchKeywords: ctx.imageSearchKeywords,
+    };
+  } catch (error) {
+    console.warn(`Download failed for ${slug}: ${error.message}`);
+    return null;
+  }
 }

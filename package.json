@@ -11,6 +11,7 @@
     "content:integrity": "node scripts/check-integrity.mjs --drafts-only",
     "content:image": "node scripts/fetch-cover-image.mjs",
     "content:refresh-duplicates": "node scripts/refresh-duplicate-covers.mjs",
+    "content:refresh-post-covers": "node scripts/refresh-post-covers.mjs",
     "automation:write": "node scripts/automation/run.mjs write",
     "automation:publish": "node scripts/automation/run.mjs publish",
     "automation:buffer": "node scripts/automation/run.mjs buffer",

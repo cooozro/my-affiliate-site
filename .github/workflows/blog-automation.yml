@@ -21,6 +21,7 @@ on:
           - publish-slot
           - publish
           - refresh-covers
+          - refresh-post-covers
 
 env:
   AUTOMATION_MODE: publish-only
@@ -49,6 +50,7 @@ jobs:
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           set -euo pipefail
           npm run content:refresh-duplicates || {
@@ -65,7 +67,16 @@ jobs:
             echo "name=publish-slot" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Refresh post covers (vision)
+        if: steps.task.outputs.name == 'refresh-post-covers'
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/refresh-post-covers.mjs
+
       - name: Run automation
+        if: steps.task.outputs.name != 'refresh-post-covers'
         id: automation
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -77,6 +88,11 @@ jobs:
           LOG_FILE="$(mktemp)"
           node scripts/automation/run.mjs "${{ steps.task.outputs.name }}" | tee "$LOG_FILE"
           if [ "${{ steps.task.outputs.name }}" = "refresh-covers" ]; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "replenish_needed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ steps.task.outputs.name }}" = "refresh-post-covers" ]; then
             echo "published=false" >> "$GITHUB_OUTPUT"
             echo "replenish_needed=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -103,6 +119,7 @@ jobs:
 
       - name: Check pending draft replenish
         id: pending_replenish
+        if: steps.task.outputs.name != 'refresh-post-covers'
         run: |
           if [ -f data/automation/cursor-draft-request.json ] && grep -q '"status": "pending"' data/automation/cursor-draft-request.json; then
             echo "needed=true" >> "$GITHUB_OUTPUT"
@@ -111,10 +128,11 @@ jobs:
           fi
 
       - name: Cursor draft replenish
-        if: success() && steps.task.outputs.name != 'status' && (steps.automation.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
+        if: success() && steps.task.outputs.name != 'status' && steps.task.outputs.name != 'refresh-post-covers' && (steps.automation.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_VISION_MODEL: gpt-4o-mini
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

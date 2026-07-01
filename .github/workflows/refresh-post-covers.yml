@@ -1,0 +1,53 @@
+name: Refresh post covers
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/lib/cover-image.mjs
+      - scripts/lib/image-query.mjs
+      - scripts/lib/image-vision.mjs
+      - scripts/refresh-post-covers.mjs
+      - .github/workflows/refresh-post-covers.yml
+
+concurrency:
+  group: refresh-post-covers
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.13"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh covers (vision + dual provider)
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/refresh-post-covers.mjs
+
+      - name: Validate content
+        run: npm run content:validate
+
+      - name: Commit and push
+        run: |
+          git config user.name "blog-automation[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts public/images/posts data/automation/
+          if git diff --staged --quiet; then
+            echo "No cover changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(content): refresh post covers with vision ranking"
+          git push
