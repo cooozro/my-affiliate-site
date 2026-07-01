@@ -101,6 +101,7 @@ export function listPostsForAdmin(): AdminPostRow[] {
         liveData,
       };
     })
+    .filter((row) => row.hasEn || row.hasKo)
     .sort((a, b) => {
       const aTime = new Date(a.updatedAt ?? a.date ?? 0).getTime();
       const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();

@@ -84,19 +84,36 @@ export function githubCoverPreviewUrl(coverImage: string, version = 0): string |
   return version > 0 ? `${base}?v=${version}` : base;
 }
 
-async function readEnDataForAdmin(slug: string): Promise<Record<string, unknown>> {
+const POST_LOCALES = ["en", "ko"] as const;
+
+async function readPostDataForAdmin(slug: string): Promise<Record<string, unknown>> {
   if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
-    try {
-      const matter = await import("gray-matter");
-      const { content } = await readGithubFile(`content/posts/${slug}/en.md`);
-      return matter.default(content).data as Record<string, unknown>;
-    } catch {
-      /* fall through to bundle */
+    const matter = await import("gray-matter");
+    for (const locale of POST_LOCALES) {
+      try {
+        const { content } = await readGithubFile(
+          `content/posts/${slug}/${locale}.md`,
+        );
+        return matter.default(content).data as Record<string, unknown>;
+      } catch {
+        /* try next locale */
+      }
     }
   }
-  if (slugExists(slug)) {
-    return readPostFile(slug, "en").data;
+
+  for (const locale of POST_LOCALES) {
+    const filePath = path.join(
+      process.cwd(),
+      "content",
+      "posts",
+      slug,
+      `${locale}.md`,
+    );
+    if (fs.existsSync(filePath)) {
+      return readPostFile(slug, locale).data;
+    }
   }
+
   return {};
 }
 
@@ -321,21 +338,30 @@ export async function enrichPostsWithCover(
   const enriched: Array<AdminPostRow & AdminPostCoverInfo> = [];
 
   for (const post of posts) {
-    const data = await readEnDataForAdmin(post.slug);
-    const cover = await assessCoverFromData(post.slug, data);
-    enriched.push({
-      ...post,
-      ...cover,
-      coverFilename: coverFilenameFromPath(cover.coverImage),
-      coverImageAlt:
-        typeof data.coverImageAlt === "string" ? data.coverImageAlt : undefined,
-      coverImageAltKo:
-        typeof data.coverImageAltKo === "string" ? data.coverImageAltKo : undefined,
-      coverPreviewUrl:
-        usesRemotePostStore() && cover.coverImage
-          ? githubCoverPreviewUrl(cover.coverImage)
-          : undefined,
-    });
+    try {
+      const data = await readPostDataForAdmin(post.slug);
+      const cover = await assessCoverFromData(post.slug, data);
+      enriched.push({
+        ...post,
+        ...cover,
+        coverFilename: coverFilenameFromPath(cover.coverImage),
+        coverImageAlt:
+          typeof data.coverImageAlt === "string" ? data.coverImageAlt : undefined,
+        coverImageAltKo:
+          typeof data.coverImageAltKo === "string"
+            ? data.coverImageAltKo
+            : undefined,
+        coverPreviewUrl:
+          usesRemotePostStore() && cover.coverImage
+            ? githubCoverPreviewUrl(cover.coverImage)
+            : undefined,
+      });
+    } catch {
+      enriched.push({
+        ...post,
+        coverStatus: "no-meta",
+      });
+    }
   }
 
   return enriched;
