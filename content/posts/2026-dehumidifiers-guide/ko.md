@@ -16,16 +16,13 @@ liveData: false
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
 coverImageAlt: 습한 실내의 제습기
-coverImageCredit: Photo by Jakub Zerdzicki / Pexels
-coverImageProvider: pexels
-coverImageAssetId: 16695385
-coverImageSourceUrl: >-
-  https://images.pexels.com/photos/16695385/pexels-photo-16695385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+coverImageCredit: Uploaded via admin
+coverImageProvider: admin-upload
 imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-07-01T10:41:45.000Z'
+updatedAt: '2026-07-01T04:36:28.140Z'
 publishedAt: '2026-07-01T10:41:45.000Z'
 ---
 ## 편집부 개요
