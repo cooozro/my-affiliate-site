@@ -203,6 +203,21 @@
       "hash": "ef632e55c82ae05839c33a1aec9e4ad96155fe5b788c1842e22aea8f361f71ca",
       "provider": "pixabay",
       "registeredAt": "2026-07-01T02:36:14.017Z"
+    },
+    {
+      "slug": "2026-robot-vacuums-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T03:22:18.914Z"
+    },
+    {
+      "slug": "2026-robot-vacuums-scenario-guide",
+      "url": "https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg",
+      "assetKey": "pexels:8566426",
+      "hash": "015a88f8fb12fe7454779a46a31414eec673eb0c914ae07a5f1a467284fadc17",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T03:22:23.878Z"
     }
   ]
 }
