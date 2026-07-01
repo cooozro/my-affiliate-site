@@ -1,7 +1,28 @@
 {
-  "status": "complete",
-  "completedAt": "2026-06-30T13:09:17.274Z",
-  "writtenSlug": "2026-power-banks-guide",
-  "draftCount": 2,
-  "lastError": null
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-dehumidifiers-guide",
+  "requestedAt": "2026-07-01T01:41:46.787Z",
+  "contentProfile": "head-to-head",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "window-ac",
+    "category": "home-appliances",
+    "angle": "window and wall-mounted air conditioners: BTU per room size, install constraints, and efficiency labels",
+    "imageQuery": "window air conditioner apartment",
+    "liveData": true,
+    "seasons": [
+      "summer"
+    ]
+  },
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastAttemptAt": "2026-07-01T01:43:15.605Z",
+  "writtenSlug": "2026-window-ac-guide",
+  "completedAt": "2026-07-01T02:15:00.000Z",
+  "lastError": "Integrity gate failed for 2026-window-ac-guide: 2026-window-ac-guide/en.md: description over 160 chars"
 }

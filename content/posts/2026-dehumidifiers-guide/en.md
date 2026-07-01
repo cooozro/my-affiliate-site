@@ -3,7 +3,7 @@ title: 'Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy'
 description: >-
   Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain
   options, and daily electricity cost for apartments and basements.
-date: '2026-06-30'
+date: '2026-07-01'
 tags:
   - dehumidifier
   - home appliances
@@ -11,9 +11,8 @@ tags:
   - humidity
   - buying guide
 contentProfile: buying-guide
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-06-30T10:45:00.000Z'
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
 coverImageAlt: >-
@@ -30,6 +29,8 @@ imageSearchKeywords:
 coverImageAltKo: >-
   제습기 — Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy 커버
   이미지
+updatedAt: '2026-07-01T10:41:45.000Z'
+publishedAt: '2026-07-01T10:41:45.000Z'
 ---
 ## Editorial Overview
 

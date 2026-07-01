@@ -3,7 +3,7 @@ title: '습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전
 description: >-
   폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년
   여름 구매 가이드입니다.
-date: '2026-06-30'
+date: '2026-07-01'
 tags:
   - 제습기
   - 가전
@@ -11,9 +11,8 @@ tags:
   - 습도
   - 구매 가이드
 contentProfile: buying-guide
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-06-30T10:45:00.000Z'
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
 coverImageAlt: '제습기 — 습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다 커버 이미지'
@@ -25,6 +24,8 @@ coverImageSourceUrl: >-
 imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
+updatedAt: '2026-07-01T10:41:45.000Z'
+publishedAt: '2026-07-01T10:41:45.000Z'
 ---
 ## 편집부 개요
 

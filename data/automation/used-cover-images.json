@@ -164,6 +164,21 @@
       "hash": "16fda947e4bebfb8e57eed5165e1bd3e472ce340086642672626b6f427d0cac9",
       "provider": "pexels",
       "registeredAt": "2026-07-01T01:26:25.560Z"
+    },
+    {
+      "slug": "2026-window-ac-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T01:42:29.844Z"
+    },
+    {
+      "slug": "2026-window-ac-guide",
+      "url": "https://images.pexels.com/photos/37315328/pexels-photo-37315328.jpeg",
+      "assetKey": "pexels:37315328",
+      "hash": "efaf1f2973096639eb7844ba70bb1f1a9186d02485a3883567e6d5aa9b0ab22e",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T01:42:36.390Z"
     }
   ]
 }
