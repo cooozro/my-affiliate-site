@@ -15,19 +15,18 @@ draft: true
 liveData: true
 createdAt: '2026-07-01T02:00:00.000Z'
 coverImage: /images/posts/2026-window-ac-guide/air-conditioner-window-ac-cover.jpg
-coverImageAlt: >-
-  air conditioner window AC — Standard, U-Shaped, or Through-Wall? Window AC
-  Install Types Compared cover photo
-coverImageCredit: Photo by Duong Nguyen / Pexels
+coverImageAlt: room air conditioner in an apartment room
+coverImageCredit: Photo by ymyphoto / Pixabay
 imageSearchKeywords:
   - air conditioner
   - window AC
   - through-wall AC
   - home appliances
-coverImageProvider: pexels
-coverImageAssetId: 37315328
+coverImageProvider: pixabay
+coverImageAssetId: 7093257
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/37315328/pexels-photo-37315328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://pixabay.com/get/g7db65e6660ed2d37cd11efcea2020a911053fbdcc5a21dc4292b137ca0e0eb202d2670676bc02ebd030cef673bf7b29073ff1cfb3e234bb503db1f4d14aa9e59_1280.jpg
+coverImageAltKo: 원룸의 에어컨
 ---
 ## Editorial Overview
 

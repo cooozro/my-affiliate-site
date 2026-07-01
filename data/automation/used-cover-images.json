@@ -166,41 +166,43 @@
       "registeredAt": "2026-07-01T01:26:25.560Z"
     },
     {
-      "slug": "2026-window-ac-guide",
-      "assetKey": null,
-      "hash": null,
-      "provider": null,
-      "registeredAt": "2026-07-01T01:42:29.844Z"
-    },
-    {
-      "slug": "2026-window-ac-guide",
-      "url": "https://images.pexels.com/photos/37315328/pexels-photo-37315328.jpeg",
-      "assetKey": "pexels:37315328",
-      "hash": "efaf1f2973096639eb7844ba70bb1f1a9186d02485a3883567e6d5aa9b0ab22e",
-      "provider": "pexels",
-      "registeredAt": "2026-07-01T01:42:36.390Z"
-    },
-    {
-      "slug": "2026-bluetooth-speakers-guide",
-      "assetKey": null,
-      "hash": null,
-      "provider": null,
-      "registeredAt": "2026-07-01T02:12:43.079Z"
-    },
-    {
-      "slug": "2026-bluetooth-speakers-guide",
-      "url": "https://images.pexels.com/photos/8380078/pexels-photo-8380078.jpeg",
-      "assetKey": "pexels:8380078",
-      "hash": "9f027921a4c239736e75f64f8b213bdea0912715546a64afa1269ecb42bfd57d",
-      "provider": "pexels",
-      "registeredAt": "2026-07-01T02:12:56.665Z"
-    },
-    {
       "slug": "2026-air-purifiers-guide",
       "assetKey": null,
       "hash": "a879cf5af0292d986e2820eafe0c9ae35397952eb8e1af546c70b2c89cdd5dad",
       "provider": "admin-upload",
       "registeredAt": "2026-07-01T02:29:48.623Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-guide",
+      "url": "https://images.pexels.com/photos/8380078/pexels-photo-8380078.jpeg",
+      "assetKey": "pexels:8380078",
+      "hash": null,
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T02:35:49.937Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-guide",
+      "url": "https://images.pexels.com/photos/10495912/pexels-photo-10495912.jpeg",
+      "assetKey": "pexels:10495912",
+      "hash": "6404c918f604df77ef136ef615990eebb28602d2acc0ea7f6bf4568ee59c326b",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T02:36:03.369Z"
+    },
+    {
+      "slug": "2026-window-ac-guide",
+      "url": "https://images.pexels.com/photos/37315328/pexels-photo-37315328.jpeg",
+      "assetKey": "pexels:37315328",
+      "hash": null,
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T02:36:03.384Z"
+    },
+    {
+      "slug": "2026-window-ac-guide",
+      "url": "https://pixabay.com/get/g7db65e6660ed2d37cd11efcea2020a911053fbdcc5a21dc4292b137ca0e0eb202d2670676bc02ebd030cef673bf7b29073ff1cfb3e234bb503db1f4d14aa9e59_1280.jpg",
+      "assetKey": "pixabay:7093257",
+      "hash": "ef632e55c82ae05839c33a1aec9e4ad96155fe5b788c1842e22aea8f361f71ca",
+      "provider": "pixabay",
+      "registeredAt": "2026-07-01T02:36:14.017Z"
     }
   ]
 }

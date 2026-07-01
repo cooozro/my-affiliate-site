@@ -18,16 +18,16 @@ createdAt: '2026-07-01T02:15:00.000Z'
 coverImage: >-
   /images/posts/2026-bluetooth-speakers-guide/portable-bluetooth-speaker-outdoor-audio-cover.jpg
 coverImageAlt: portable Bluetooth speaker in a home interior
-coverImageCredit: Photo by Kampus Production / Pexels
+coverImageCredit: Photo by Ron Lach / Pexels
 imageSearchKeywords:
   - portable bluetooth speaker
   - outdoor audio
   - summer picnic
 coverImageAltKo: 실내의 블루투스 스피커
 coverImageProvider: pexels
-coverImageAssetId: 8380078
+coverImageAssetId: 10495912
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/8380078/pexels-photo-8380078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/10495912/pexels-photo-10495912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 
