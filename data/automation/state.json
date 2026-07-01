@@ -271,15 +271,9 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-01T07:31:30.821Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-01T11:19:16.369Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": []
   }
 }
