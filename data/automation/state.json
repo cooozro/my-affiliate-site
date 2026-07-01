@@ -1,5 +1,5 @@
 {
-  "topicIndex": 6,
+  "topicIndex": 24,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -9,7 +9,8 @@
     "air-purifiers",
     "dehumidifiers",
     "power-banks",
-    "window-ac"
+    "window-ac",
+    "bluetooth-speakers"
   ],
   "lastPublishAt": "2026-07-01T01:41:46.782Z",
   "nextPublishAt": "2026-07-01T07:28:18.917Z",
@@ -209,6 +210,11 @@
       "category": "home-appliances",
       "cluster": "air-conditioning",
       "at": "2026-07-01T01:41:46.787Z"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "category": "audio",
+      "at": "2026-07-01T02:07:23.162Z"
     }
   ],
   "formatHistory": [

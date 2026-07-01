@@ -1,9 +1,8 @@
 ---
 title: 'Standard, U-Shaped, or Through-Wall? Window AC Install Types Compared'
 description: >-
-  Frigidaire slider, Midea U-shaped inverter, and LG through-wall 12,000 BTU
-  units compared on room-size fit, install constraints, CEER labels, and summer
-  running cost as of {{today_locale}}.
+  Frigidaire, Midea U-shaped, and LG 12,000 BTU window ACs compared on room
+  sizing, install rules, and CEER efficiency. {{today_locale}}.
 date: '2026-07-01'
 tags:
   - air conditioner
