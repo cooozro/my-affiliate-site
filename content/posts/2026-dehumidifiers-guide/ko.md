@@ -22,7 +22,7 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-07-01T04:36:28.140Z'
+updatedAt: '2026-07-01T05:26:20.074Z'
 publishedAt: '2026-07-01T10:41:45.000Z'
 ---
 ## 편집부 개요
