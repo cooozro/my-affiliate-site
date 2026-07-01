@@ -70,6 +70,18 @@ const RULES = [
     cluster: "air-quality",
   },
   {
+    pattern: /robot-vacuum|robot-vacuums/i,
+    id: "robot-vacuums",
+    category: "smart-home",
+    cluster: "cleaning",
+  },
+  {
+    pattern: /cordless-vacuum|stick-vacuum/i,
+    id: "cordless-vacuums",
+    category: "smart-home",
+    cluster: "cleaning",
+  },
+  {
     pattern: /keyboard/i,
     id: "mechanical-keyboards",
     category: "peripherals",

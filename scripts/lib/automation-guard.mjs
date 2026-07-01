@@ -8,6 +8,9 @@ import path from "path";
 import matter from "gray-matter";
 
 import { listPublishedSlugs } from "./content-quality.mjs";
+import { topicHasAnyPost } from "./content-roadmap.mjs";
+import { getTopicFormatCoverage } from "./topic-coverage.mjs";
+import { inferPostTopic } from "./infer-post-topic.mjs";
 
 const AUTOMATION_SLUG_EXCLUDE = new Set(["welcome", "adsense-seo-checklist"]);
 
@@ -56,6 +59,54 @@ export function validateReplenishWrittenSlug(slug, slugsBefore, root = process.c
   }
 
   return { ok: true };
+}
+
+/** One topic id must not appear in two slugs during first-pass / draft buffer. */
+export function validateReplenishTopicUnique(slug, root = process.cwd()) {
+  const enPath = path.join(root, "content", "posts", slug, "en.md");
+  if (!fs.existsSync(enPath)) {
+    return { ok: false, reason: `Missing en.md for ${slug}` };
+  }
+
+  const { data } = matter(fs.readFileSync(enPath, "utf8"));
+  const topic = inferPostTopic(slug, data);
+  const coverage = getTopicFormatCoverage(root);
+  const entry = coverage.get(topic.id);
+
+  if (!entry) return { ok: true };
+
+  const others = entry.slugs.filter((s) => s !== slug);
+  if (others.length > 0) {
+    return {
+      ok: false,
+      reason: `Topic "${topic.id}" already has post(s): ${others.join(", ")}`,
+    };
+  }
+
+  return { ok: true };
+}
+
+export function removeReplenishSlugArtifacts(slug, root = process.cwd()) {
+  const postDir = path.join(root, "content", "posts", slug);
+  if (fs.existsSync(postDir)) {
+    fs.rmSync(postDir, { recursive: true, force: true });
+  }
+  for (const prefix of ["public/images/posts", "images/posts"]) {
+    const imgDir = path.join(root, prefix, slug);
+    if (fs.existsSync(imgDir)) {
+      fs.rmSync(imgDir, { recursive: true, force: true });
+    }
+  }
+}
+
+/**
+ * Pending request still points at a topic that already has a post (e.g. after failed validate + commit).
+ */
+export function isRequestTopicStale(request, root = process.cwd()) {
+  const topicId = request?.topic?.id;
+  if (!topicId || typeof topicId !== "string") return false;
+  const coverage = getTopicFormatCoverage(root);
+  return topicHasAnyPost(topicId, coverage);
 }
 
 export function revertPostSlugFromGit(slug) {

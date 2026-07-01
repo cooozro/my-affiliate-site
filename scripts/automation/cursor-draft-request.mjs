@@ -57,7 +57,7 @@ export function queueCursorDraftReplenish(publishedSlug) {
 
   writeRequest({
     status: "pending",
-    needed,
+    needed: Math.min(1, needed),
     publishedSlug,
     requestedAt: new Date().toISOString(),
     contentProfile,
@@ -96,6 +96,10 @@ export function completeCursorDraftRequest(writtenSlug) {
   console.log(`Cursor draft request completed: ${writtenSlug}`);
 }
 
+export function saveCursorDraftRequest(request) {
+  writeRequest(request);
+}
+
 /** Re-queue after partial replenish (buffer still below target). */
 export function requeueCursorDraftReplenish(publishedSlug = null) {
   const draftCount = countDrafts();
@@ -117,7 +121,7 @@ export function requeueCursorDraftReplenish(publishedSlug = null) {
 
   writeRequest({
     status: "pending",
-    needed,
+    needed: Math.min(1, needed),
     publishedSlug: publishedSlug ?? existing?.publishedSlug ?? null,
     requestedAt: existing?.requestedAt ?? new Date().toISOString(),
     requeuedAt: new Date().toISOString(),

@@ -15,6 +15,7 @@ import {
   recordReplenishAttempt,
   recordReplenishFailure,
   requeueCursorDraftReplenish,
+  saveCursorDraftRequest,
 } from "./cursor-draft-request.mjs";
 import { generateDraftFromRequest } from "./generate-draft.mjs";
 import { pickTopic } from "./topics.mjs";
@@ -28,11 +29,14 @@ import {
   writePost,
 } from "./posts-fs.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
-import { getTemplatePath } from "../lib/content-profiles.mjs";
+import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { listPublishedSlugs } from "../lib/content-quality.mjs";
 import {
+  isRequestTopicStale,
+  removeReplenishSlugArtifacts,
   reservedSlugListForPrompt,
   revertPostSlugFromGit,
+  validateReplenishTopicUnique,
   validateReplenishWrittenSlug,
 } from "../lib/automation-guard.mjs";
 
@@ -90,9 +94,40 @@ Never overwrite or edit an existing post directory. Minimize scope. Only the one
 }
 
 function rejectReplenishOverwrite(slug, reason) {
+  removeReplenishSlugArtifacts(slug);
   revertPostSlugFromGit(slug);
   recordReplenishFailure(reason);
   console.error(reason);
+}
+
+function refreshStaleRequestTopic(request) {
+  if (!isRequestTopicStale(request)) return request;
+
+  const assignedId = request.topic?.id;
+  const state = loadState();
+  const contentProfile =
+    request.contentProfile ?? pickContentProfile(state);
+  const topic = pickTopic(state, { contentProfile });
+  saveState(state);
+
+  console.log(
+    `Replenish topic rotated: ${assignedId} already has a post → ${topic.id} (${contentProfile})`,
+  );
+
+  return {
+    ...request,
+    contentProfile,
+    topic: {
+      id: topic.id,
+      category: topic.category,
+      angle: topic.angle,
+      imageQuery: topic.imageQuery,
+      liveData: topic.liveData,
+      seasons: topic.seasons,
+    },
+    templatePath: getTemplatePath(contentProfile),
+    lastError: null,
+  };
 }
 
 function coverFileExists(slug) {
@@ -230,11 +265,14 @@ async function replenishWithCursor(request, draftsBefore) {
 }
 
 async function main() {
-  const request = readCursorDraftRequest();
+  let request = readCursorDraftRequest();
   if (!request || request.status !== "pending") {
     console.log("No pending cursor draft request — skip");
     return;
   }
+
+  request = refreshStaleRequestTopic(request);
+  saveCursorDraftRequest({ ...request, status: "pending" });
 
   if (countDrafts() >= TARGET_DRAFT_COUNT) {
     completeCursorDraftRequest(null);
@@ -306,12 +344,19 @@ async function main() {
       return;
     }
 
+    const topicCheck = validateReplenishTopicUnique(slug);
+    if (!topicCheck.ok) {
+      rejectReplenishOverwrite(slug, topicCheck.reason);
+      return;
+    }
+
     await ensureCoverImage(slug, request.topic);
     const issues = validatePostFiles(slug, {
       phase: "draft",
       applyRepair: true,
     });
     if (issues.length > 0) {
+      removeReplenishSlugArtifacts(slug);
       recordReplenishFailure(
         `Integrity gate failed for ${slug}: ${issues.slice(0, 3).join(" | ")}`,
       );

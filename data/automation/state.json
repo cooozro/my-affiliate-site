@@ -1,5 +1,5 @@
 {
-  "topicIndex": 9,
+  "topicIndex": 36,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -12,7 +12,8 @@
     "window-ac",
     "bluetooth-speakers",
     "air-purifiers",
-    "robot-vacuums"
+    "robot-vacuums",
+    "action-cameras"
   ],
   "lastPublishAt": "2026-07-01T01:41:46.782Z",
   "nextPublishAt": "2026-07-01T06:46:45.549Z",
@@ -227,6 +228,11 @@
       "id": "robot-vacuums",
       "category": "smart-home",
       "at": "2026-07-01T03:17:31.021Z"
+    },
+    {
+      "id": "action-cameras",
+      "category": "cameras",
+      "at": "2026-07-01T05:30:36.267Z"
     }
   ],
   "formatHistory": [
@@ -237,7 +243,8 @@
     "buying-guide",
     "explainer",
     "head-to-head",
-    "scenario-guide"
+    "scenario-guide",
+    "buying-guide"
   ],
   "roadmapPhase": "tier1-first-pass"
 }
