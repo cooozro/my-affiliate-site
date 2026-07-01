@@ -9,6 +9,7 @@ import path from "path";
 import matter from "gray-matter";
 import { fetchCoverImage, availableImageProviders } from "./lib/cover-image.mjs";
 import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
+import { isPublishedSlug } from "./lib/automation-guard.mjs";
 import {
   hashFile,
   loadImageRegistry,
@@ -59,6 +60,11 @@ function clearRegistryHashes(hashes) {
 }
 
 async function refreshSlug(slug) {
+  if (isPublishedSlug(slug)) {
+    console.log(`Skip ${slug}: published post — cover preserved`);
+    return false;
+  }
+
   const enPath = path.join(POSTS_DIR, slug, "en.md");
   const { data } = matter(fs.readFileSync(enPath, "utf8"));
   const imageContext = resolveImageContext(slug, {

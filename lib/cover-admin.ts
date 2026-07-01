@@ -185,6 +185,7 @@ function makeUploadCoverMutate(coverImage: string) {
     data: Record<string, unknown>,
     content: string,
   ) => {
+    const wasPublished = data.draft === false;
     const next: Record<string, unknown> = {
       ...data,
       coverImage,
@@ -192,10 +193,31 @@ function makeUploadCoverMutate(coverImage: string) {
       coverImageCredit: "Uploaded via admin",
       updatedAt: new Date().toISOString(),
     };
+    if (wasPublished) {
+      next.draft = false;
+      if (data.publishedAt) next.publishedAt = data.publishedAt;
+      if (data.date) next.date = data.date;
+    }
     delete next.coverImageAssetId;
     delete next.coverImageSourceUrl;
     return { data: next, content };
   };
+}
+
+async function findGithubImageSha(coverImage: string): Promise<string | undefined> {
+  const candidates = [
+    coverWebPathToRepoPath(coverImage),
+    coverImage.replace(/^\//, ""),
+  ];
+  for (const repoPath of [...new Set(candidates)]) {
+    try {
+      const existing = await readGithubFile(repoPath);
+      return existing.sha;
+    } catch {
+      /* try next path */
+    }
+  }
+  return undefined;
 }
 
 async function writeCoverBinary(
@@ -208,13 +230,7 @@ async function writeCoverBinary(
 
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
-    let existingSha: string | undefined;
-    try {
-      const existing = await readGithubFile(repoPath);
-      existingSha = existing.sha;
-    } catch {
-      existingSha = undefined;
-    }
+    const existingSha = await findGithubImageSha(coverImage);
     await writeGithubBinaryFile(repoPath, buffer, message, existingSha);
     return;
   }
@@ -265,7 +281,10 @@ export async function uploadPostCover(
     throw new Error("이미지는 4MB 이하여야 합니다.");
   }
 
-  const enData = await readEnPostData(slug);
+  const enData = await readPostDataForAdmin(slug);
+  if (!Object.keys(enData).length) {
+    throw new Error(`Post not found: ${slug}`);
+  }
   const coverImage = resolveUploadCoverPath(
     slug,
     enData,
@@ -423,6 +442,7 @@ function makeCoverMutate(
     const coverImageAlt =
       locale === "ko" ? buildCoverAlt("ko", ctx) : meta.coverImageAlt;
 
+    const wasPublished = data.draft === false;
     const next: Record<string, unknown> = {
       ...data,
       coverImage: meta.coverImage,
@@ -436,6 +456,12 @@ function makeCoverMutate(
         : {}),
       updatedAt: new Date().toISOString(),
     };
+
+    if (wasPublished) {
+      next.draft = false;
+      if (data.publishedAt) next.publishedAt = data.publishedAt;
+      if (data.date) next.date = data.date;
+    }
 
     if (locale === "en" && meta.coverImageAltKo) {
       next.coverImageAltKo = meta.coverImageAltKo;
@@ -507,14 +533,7 @@ async function commitCoverImageOnGithub(
   const imageAbs = path.join(rootDir, "public", imageRel);
   const imageBuffer = fs.readFileSync(imageAbs);
   const repoPath = coverWebPathToRepoPath(meta.coverImage);
-
-  let existingSha: string | undefined;
-  try {
-    const existing = await readGithubFile(repoPath);
-    existingSha = existing.sha;
-  } catch {
-    existingSha = undefined;
-  }
+  const existingSha = await findGithubImageSha(meta.coverImage);
 
   await writeGithubBinaryFile(
     repoPath,

@@ -22,6 +22,7 @@ import { loadState, saveState } from "./state.mjs";
 import {
   countDrafts,
   listDrafts,
+  listSlugDirs,
   readPost,
   validatePostFiles,
   writePost,
@@ -29,12 +30,18 @@ import {
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 import { getTemplatePath } from "../lib/content-profiles.mjs";
 import { listPublishedSlugs } from "../lib/content-quality.mjs";
+import {
+  reservedSlugListForPrompt,
+  revertPostSlugFromGit,
+  validateReplenishWrittenSlug,
+} from "../lib/automation-guard.mjs";
 
 function buildCursorPrompt(request) {
   const topic = request.topic ?? {};
   const contentProfile = request.contentProfile ?? "buying-guide";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
   const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
+  const reservedSlugs = reservedSlugListForPrompt().join(", ");
 
   return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
 
@@ -51,7 +58,9 @@ Write exactly ONE bilingual draft:
 - Category: ${topic.category ?? ""}
 - Angle: ${topic.angle ?? ""}
 - Season priority: ${request.season ?? "current KST season"}${request.seasonalEvents?.length ? ` (${request.seasonalEvents.join(", ")})` : ""}
-- Suggested slug: 2026-${topic.id ?? "topic"}-guide (unique, lowercase, hyphens only)
+- Slug MUST be brand-new: pick a slug that does NOT already exist under content/posts/
+- FORBIDDEN slugs (never write to these paths): ${reservedSlugs}
+- Suggested pattern: 2026-${topic.id ?? "topic"}-${contentProfile} (add suffix if taken)
 - liveData: ${topic.liveData ? "true — use {{today}}, {{today_locale}}, {{usd_krw_rate}}, {{krw:29.99}}" : "false"}
 
 Follow ${templatePath} for section structure.
@@ -67,7 +76,13 @@ After writing posts:
 2. Keep draft:true — do not publish
 3. Do not git commit (CI commits)
 
-Minimize scope. Only the one requested draft.`;
+Never overwrite or edit an existing post directory. Minimize scope. Only the one NEW draft.`;
+}
+
+function rejectReplenishOverwrite(slug, reason) {
+  revertPostSlugFromGit(slug);
+  recordReplenishFailure(reason);
+  console.error(reason);
 }
 
 function coverFileExists(slug) {
@@ -231,6 +246,7 @@ async function main() {
 
   recordReplenishAttempt();
   const draftsBefore = new Set(listDrafts().map((d) => d.slug));
+  const slugsBefore = new Set(listSlugDirs());
   const createdSlugs = [];
 
   try {
@@ -274,6 +290,12 @@ async function main() {
   }
 
   for (const slug of createdSlugs) {
+    const slugCheck = validateReplenishWrittenSlug(slug, slugsBefore);
+    if (!slugCheck.ok) {
+      rejectReplenishOverwrite(slug, slugCheck.reason);
+      return;
+    }
+
     await ensureCoverImage(slug, request.topic);
     const issues = validatePostFiles(slug, {
       phase: "draft",
