@@ -21,5 +21,9 @@
     ]
   },
   "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastAttemptAt": "2026-07-01T07:33:02.239Z",
+  "writtenSlug": "2026-noise-cancelling-headphones-head-to-head",
+  "completedAt": "2026-07-01T07:32:31.000Z",
+  "lastError": "Integrity gate failed for 2026-noise-cancelling-headphones-head-to-head: 2026-noise-cancelling-headphones-head-to-head/ko.md: Korean body too short (4291 chars, need ≥5719 — match English depth)"
 }
