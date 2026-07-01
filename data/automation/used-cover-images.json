@@ -218,6 +218,28 @@
       "hash": "015a88f8fb12fe7454779a46a31414eec673eb0c914ae07a5f1a467284fadc17",
       "provider": "pexels",
       "registeredAt": "2026-07-01T03:22:23.878Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "assetKey": null,
+      "hash": "371141481d3738331b2140c526cb3660958f48335b9f13a1053384958141a2ad",
+      "provider": "admin-upload",
+      "registeredAt": "2026-07-01T04:39:14.014Z"
+    },
+    {
+      "slug": "2026-apartment-robot-vacuums-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T04:40:26.341Z"
+    },
+    {
+      "slug": "2026-apartment-robot-vacuums-scenario-guide",
+      "url": "https://images.pexels.com/photos/5591953/pexels-photo-5591953.jpeg",
+      "assetKey": "pexels:5591953",
+      "hash": "fea62c03640f1e7032b29126ef54ed3d3179282596130d6196df91ba87148d18",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T04:40:32.274Z"
     }
   ]
 }

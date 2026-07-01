@@ -1,29 +1,7 @@
 {
-  "status": "pending",
-  "needed": 2,
-  "publishedSlug": "content-roadmap",
-  "requestedAt": "2026-07-01T03:17:31.022Z",
-  "contentProfile": "scenario-guide",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "robot-vacuums",
-    "category": "smart-home",
-    "angle": "robot vacuum comparison for apartments: suction, mapping, mop features, and maintenance",
-    "imageQuery": "robot vacuum smart home",
-    "liveData": true,
-    "seasons": [
-      "spring",
-      "summer"
-    ]
-  },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastAttemptAt": "2026-07-01T03:22:23.894Z",
-  "writtenSlug": "2026-robot-vacuums-scenario-guide",
-  "completedAt": "2026-07-01T03:25:00.000Z",
-  "lastError": "Integrity gate failed for 2026-robot-vacuums-scenario-guide: 2026-robot-vacuums-scenario-guide/ko.md: Korean body too short (5461 chars, need ≥7151 — match English depth)"
+  "status": "complete",
+  "completedAt": "2026-07-01T04:41:04.473Z",
+  "writtenSlug": "2026-apartment-robot-vacuums-scenario-guide",
+  "draftCount": 2,
+  "lastError": null
 }
