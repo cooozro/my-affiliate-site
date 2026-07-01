@@ -17,12 +17,12 @@
     "noise-cancelling-headphones"
   ],
   "lastPublishAt": "2026-07-01T07:26:12.652Z",
-  "nextPublishAt": "2026-07-02T02:46:00.000Z",
-  "scheduledGapHours": 5.77,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-01",
+  "nextPublishAt": "2026-07-02T01:03:00.000Z",
+  "scheduledGapHours": 4.05,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-02",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-01",
+  "writeDateKst": "2026-07-02",
   "history": [
     {
       "action": "publish",
@@ -271,7 +271,7 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-01T11:19:16.369Z",
+    "at": "2026-07-01T16:41:44.268Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
