@@ -277,6 +277,21 @@
       "hash": "ff1bac64d87d9febcba25cddbc9805245865443c675e2b271ee81075a6f79ac3",
       "provider": "pexels",
       "registeredAt": "2026-07-01T07:33:02.220Z"
+    },
+    {
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T10:56:51.786Z"
+    },
+    {
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "url": "https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg",
+      "assetKey": "pexels:610945",
+      "hash": "228a5a9e146d74ab1be93b5f8af1df93aadd6a0db937626f15e4b23ad61a608f",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T10:56:58.064Z"
     }
   ]
 }

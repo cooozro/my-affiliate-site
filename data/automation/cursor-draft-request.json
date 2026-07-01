@@ -1,29 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-action-cameras-buying-guide",
-  "requestedAt": "2026-07-01T07:26:12.667Z",
-  "contentProfile": "head-to-head",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "noise-cancelling-headphones",
-    "category": "audio",
-    "angle": "budget noise-cancelling headphones: ANC depth, codec support, and comfort for travel",
-    "imageQuery": "over ear noise cancelling headphones",
-    "liveData": true,
-    "seasons": [
-      "summer",
-      "winter"
-    ]
-  },
-  "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastAttemptAt": "2026-07-01T07:33:02.239Z",
+  "status": "complete",
+  "completedAt": "2026-07-01T10:58:19.261Z",
   "writtenSlug": "2026-noise-cancelling-headphones-head-to-head",
-  "completedAt": "2026-07-01T07:32:31.000Z",
-  "lastError": "Integrity gate failed for 2026-noise-cancelling-headphones-head-to-head: 2026-noise-cancelling-headphones-head-to-head/ko.md: Korean body too short (4291 chars, need ≥5719 — match English depth)"
+  "draftCount": 2,
+  "lastError": null
 }
