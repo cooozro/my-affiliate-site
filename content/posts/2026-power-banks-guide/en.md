@@ -14,15 +14,23 @@ contentProfile: explainer
 draft: true
 liveData: true
 createdAt: '2026-06-30T13:10:00.000Z'
-coverImage: /images/posts/2026-power-banks-guide/power-bank-usb-c-pd-accessories-cover.jpg
+coverImage: >-
+  /images/posts/2026-power-banks-guide/portable-power-bank-usb-c-power-bank-charger-cover.jpg
 coverImageAlt: >-
-  Heat Wave Carry: mAh, PD Watts, Ports, and Safety Marks Explained — power
-  bank, USB-C PD, accessories cover photo
-coverImageCredit: Photo by Yummymoon / Pixabay
-coverImageProvider: pixabay
-coverImageAssetId: 560937
+  portable power bank USB-C power bank charger — Heat Wave Carry: mAh, PD Watts,
+  Ports, and Safety Marks Explained cover photo
+coverImageCredit: Photo by Tanha Tamanna  Syed / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 35673090
 coverImageSourceUrl: >-
-  https://pixabay.com/get/g447d4372ce576bb24edc5c904cf47418a5176c81b865650c7bd6e4f9d614316b61753955dd7276b8b192c400fd59a31580c61c98fdbff64ef701c1696998c2a6_1280.jpg
+  https://images.pexels.com/photos/35673090/pexels-photo-35673090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - portable power bank
+  - USB-C power bank charger
+  - battery pack phone charging
+coverImageAltKo: >-
+  보조배터리 — Heat Wave Carry: mAh, PD Watts, Ports, and Safety Marks Explained 커버
+  이미지
 ---
 ## Editorial Overview
 

@@ -18,13 +18,13 @@ coverImage: >-
 coverImageAlt: >-
   mechanical keyboard hot swap keyboard — First Mechanical Keyboard? Hot-Swap
   and Switch Type Beat the Hype cover photo
-coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
+coverImageCredit: Photo by Matheus Bertelli / Pexels
 updatedAt: '2026-06-26T08:03:41.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
-coverImageAssetId: 35504606
+coverImageAssetId: 32755764
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/35504606/pexels-photo-35504606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/32755764/pexels-photo-32755764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - mechanical keyboard
   - hot swap keyboard

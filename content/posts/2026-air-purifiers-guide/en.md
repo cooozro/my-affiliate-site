@@ -22,11 +22,11 @@ coverImageAlt: >-
 coverImageAltKo: >-
   HEPA 공기청정기 — Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running
   Costs 커버 이미지
-coverImageCredit: Photo by Helena Lopes / Pexels
-coverImageProvider: pexels
-coverImageAssetId: 27176671
+coverImageCredit: Photo by lequangutc89 / Pixabay
+coverImageProvider: pixabay
+coverImageAssetId: 6577523
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/27176671/pexels-photo-27176671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://pixabay.com/get/gc03df5687419af0a1a03e006fa323dfd5a1d75ff548bd58b592f345f5fad1c654439a91c358904bccfedb4651f7e12f560bb469630a4de1a86ff64bd95a53b70_1280.jpg
 updatedAt: '2026-06-30T13:06:30.000Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:

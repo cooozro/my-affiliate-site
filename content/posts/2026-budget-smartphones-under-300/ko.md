@@ -20,9 +20,9 @@ coverImageCredit: Photo by Andrey Matveev / Pexels
 updatedAt: '2026-06-26T02:57:56.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
-coverImageAssetId: 33041301
+coverImageAssetId: 32767987
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/33041301/pexels-photo-33041301.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/32767987/pexels-photo-32767987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - budget smartphone
   - android phone handset

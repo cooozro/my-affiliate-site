@@ -19,11 +19,11 @@ coverImage: >-
 coverImageAlt: >-
   home dehumidifier room dehumidifier appliance — Humid Summer Rooms: Pint
   Capacity, dB, and Daily kWh Before You Buy cover photo
-coverImageCredit: Photo by Jakub Zerdzicki / Pexels
+coverImageCredit: Photo by Max Vakhtbovych / Pexels
 coverImageProvider: pexels
-coverImageAssetId: 16695385
+coverImageAssetId: 6958145
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/16695385/pexels-photo-16695385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/6958145/pexels-photo-6958145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
