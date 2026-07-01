@@ -194,6 +194,13 @@
       "hash": "9f027921a4c239736e75f64f8b213bdea0912715546a64afa1269ecb42bfd57d",
       "provider": "pexels",
       "registeredAt": "2026-07-01T02:12:56.665Z"
+    },
+    {
+      "slug": "2026-air-purifiers-guide",
+      "assetKey": null,
+      "hash": "a879cf5af0292d986e2820eafe0c9ae35397952eb8e1af546c70b2c89cdd5dad",
+      "provider": "admin-upload",
+      "registeredAt": "2026-07-01T02:29:48.623Z"
     }
   ]
 }
