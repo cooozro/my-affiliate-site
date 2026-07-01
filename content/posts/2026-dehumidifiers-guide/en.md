@@ -23,7 +23,7 @@ imageSearchKeywords:
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
 updatedAt: '2026-07-01T05:26:19.446Z'
-publishedAt: '2026-07-01T10:41:45.000Z'
+publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## Editorial Overview
 

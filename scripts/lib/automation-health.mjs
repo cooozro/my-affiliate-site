@@ -11,6 +11,10 @@ import { validatePostFiles } from "../automation/posts-fs.mjs";
 import { kstDateString, loadState, resetDailyCounters } from "../automation/state.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import {
+  checkHomepageFeaturedOrder,
+  repairPublishedAtFromHistory,
+} from "./post-timestamps.mjs";
+import {
   MAX_PUBLISH_PER_DAY,
   reconcileStaleCatchUpSlot,
   TARGET_DRAFT_COUNT,
@@ -145,6 +149,30 @@ export function runAutomationHealthCheck(options = {}) {
       message: `Duplicate topic drafts: ${dupTopics.map(([t, c]) => `${t}×${c}`).join(", ")}`,
       severity: "error",
     });
+  }
+
+  const timestampRepairs = repairPublishedAtFromHistory(root, state);
+  if (timestampRepairs.length > 0) {
+    for (const repair of timestampRepairs) {
+      repairs.push(repair);
+    }
+    stateChanged = true;
+  }
+
+  const homepageOrder = checkHomepageFeaturedOrder(root, state);
+  if (!homepageOrder.ok && homepageOrder.expectedSlug) {
+    issues.push({
+      code: "homepage-featured-mismatch",
+      message: `Home featured is ${homepageOrder.featuredSlug}, expected latest ${homepageOrder.expectedSlug}`,
+      severity: "warning",
+    });
+    if (timestampRepairs.length === 0) {
+      const retryRepairs = repairPublishedAtFromHistory(root, state);
+      if (retryRepairs.length > 0) {
+        repairs.push(...retryRepairs);
+        stateChanged = true;
+      }
+    }
   }
 
   const cursorRequest = readCursorDraftRequest(root);

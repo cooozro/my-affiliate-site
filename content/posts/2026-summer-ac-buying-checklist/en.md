@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
 updatedAt: '2026-06-28T17:36:03.000Z'
-publishedAt: '2026-06-28T17:36:03.000Z'
+publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
 coverImageSourceUrl: >-

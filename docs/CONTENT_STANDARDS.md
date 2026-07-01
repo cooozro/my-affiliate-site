@@ -24,7 +24,7 @@ Reference: [Google Search Essentials](https://developers.google.com/search/docs/
 - At least **one real image** per published post (`coverImage` or inline `![alt](url)`)
 - Proper **image alt text** and **photographer credit** (Pexels/Unsplash license)
 - About, Contact, Privacy pages (already on site)
-- Substantive body (**2,500+ characters** per locale for publish)
+- Substantive body (**EN ≥ 5,000 UTF-8 bytes**, **KO ≥ 2,500 characters** per published post)
 
 Run before commit: `npm run content:validate`
 

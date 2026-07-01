@@ -22,6 +22,6 @@ Use for **`contentProfile: checklist`**. Fast, actionable pre-purchase checks.
 ## Rules
 
 - Minimum **7** numbered checklist items (`1.`, `2.`, …)
-- Minimum body: **2200** chars per locale; Korean ≥ **75%** of English length
+- Minimum body: EN ≥ **5,000** UTF-8 bytes; KO ≥ **2,500** characters
 - Seasonal hook in title or intro when relevant (summer AC, back-to-school, etc.)
 - English primary; Korean faithful translation

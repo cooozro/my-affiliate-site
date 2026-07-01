@@ -159,7 +159,11 @@ export function getAllPosts(
       const { content: _content, ...meta } = parsePostFile(slug, locale);
       return meta;
     })
-    .sort((a, b) => postSortTime(b) - postSortTime(a));
+    .sort((a, b) => {
+      const diff = postSortTime(b) - postSortTime(a);
+      if (diff !== 0) return diff;
+      return b.slug.localeCompare(a.slug);
+    });
 }
 
 export function getHomePosts(
@@ -182,7 +186,11 @@ export function getHomePosts(
         searchText: buildSearchText(post, sibling),
       };
     })
-    .sort((a, b) => postSortTime(b) - postSortTime(a));
+    .sort((a, b) => {
+      const diff = postSortTime(b) - postSortTime(a);
+      if (diff !== 0) return diff;
+      return b.slug.localeCompare(a.slug);
+    });
 }
 
 export function getPostBySlug(

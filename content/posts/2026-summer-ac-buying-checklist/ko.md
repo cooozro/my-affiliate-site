@@ -18,7 +18,7 @@ coverImage: >-
 coverImageAlt: 여름 침실의 이동식 에어컨
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
 updatedAt: '2026-06-28T17:36:03.000Z'
-publishedAt: '2026-06-28T17:36:03.000Z'
+publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
 coverImageSourceUrl: >-

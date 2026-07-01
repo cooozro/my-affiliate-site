@@ -6,7 +6,12 @@ import {
   FORMULAIC_TITLE_PATTERNS,
   MISLEADING_SOURCE_PATTERNS,
 } from "./editorial-standards.mjs";
-import { CONTENT_PROFILES, PROFILE_MIN_BODY_CHARS, MIN_KO_TO_EN_BODY_RATIO } from "./content-profiles.mjs";
+import {
+  CONTENT_PROFILES,
+  MIN_EN_BODY_BYTES,
+  MIN_KO_BODY_CHARS,
+  PROFILE_MIN_BODY_CHARS,
+} from "./content-profiles.mjs";
 
 export const MIN_BODY_CHARS = 2500;
 export const MIN_DESCRIPTION_CHARS = 50;
@@ -346,19 +351,21 @@ export function auditPostForPublish(root, slug) {
     );
   }
 
-  const enLen = bodyLengths.en ?? 0;
   const koLen = bodyLengths.ko ?? 0;
-  if (enLen > 0 && koLen > 0) {
-    const profile =
-      resolveContentProfile(
-        matter(fs.readFileSync(path.join(postDir, "en.md"), "utf8")).data,
-      );
-    const profileMin = PROFILE_MIN_BODY_CHARS[profile] ?? PROFILE_MIN_BODY_CHARS.editorial;
-    const ratioMin = Math.floor(enLen * MIN_KO_TO_EN_BODY_RATIO);
-    const requiredKo = Math.max(profileMin, ratioMin);
-    if (koLen < requiredKo) {
+  if (koLen > 0 && koLen < MIN_KO_BODY_CHARS) {
+    issues.push(
+      `${slug}/ko.md: Korean body too short (${koLen} chars, need ≥${MIN_KO_BODY_CHARS})`,
+    );
+  }
+
+  const enLen = bodyLengths.en ?? 0;
+  if (enLen > 0) {
+    const enPath = path.join(postDir, "en.md");
+    const enBody = matter(fs.readFileSync(enPath, "utf8")).content.trim();
+    const enBytes = Buffer.byteLength(enBody, "utf8");
+    if (enBytes < MIN_EN_BODY_BYTES) {
       issues.push(
-        `${slug}/ko.md: Korean body too short (${koLen} chars, need ≥${requiredKo} — match English depth)`,
+        `${slug}/en.md: English body too short (${enBytes} bytes, need ≥${MIN_EN_BODY_BYTES})`,
       );
     }
   }
