@@ -16,11 +16,11 @@ coverImage: >-
 coverImageAlt: >-
   wireless earbuds true wireless earphones — Budget Wireless Earbuds: When LDAC
   and ANC Beat Brand Names cover photo
-coverImageCredit: Photo by Monstera Production / Pexels
+coverImageCredit: Photo by Gije Cho / Pexels
 coverImageProvider: pexels
-coverImageAssetId: 6238087
+coverImageAssetId: 2933606
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/6238087/pexels-photo-6238087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/2933606/pexels-photo-2933606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones

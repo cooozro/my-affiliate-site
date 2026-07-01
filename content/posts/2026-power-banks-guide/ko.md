@@ -17,11 +17,11 @@ createdAt: '2026-06-30T13:10:00.000Z'
 coverImage: >-
   /images/posts/2026-power-banks-guide/portable-power-bank-usb-c-power-bank-charger-cover.jpg
 coverImageAlt: 보조배터리 — 폭염·방학철 보조배터리 — 용량·충전속도·포트·안전인증 읽는 법 커버 이미지
-coverImageCredit: Photo by Tanha Tamanna  Syed / Pexels
+coverImageCredit: Photo by Luis Quintero / Pexels
 coverImageProvider: pexels
-coverImageAssetId: 35673090
+coverImageAssetId: 10668297
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/35673090/pexels-photo-35673090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/10668297/pexels-photo-10668297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - portable power bank
   - USB-C power bank charger

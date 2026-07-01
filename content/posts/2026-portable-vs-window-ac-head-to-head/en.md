@@ -18,13 +18,13 @@ coverImage: >-
 coverImageAlt: >-
   portable air conditioner window air conditioner unit — Portable vs Window AC:
   Which Cools a Small Apartment Better in Summer? cover photo
-coverImageCredit: Photo by zhang kaiyv / Pexels
+coverImageCredit: Photo by Geri Tech / Pexels
 updatedAt: '2026-06-27T07:15:04.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
-coverImageAssetId: 7692226
+coverImageAssetId: 32737485
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/7692226/pexels-photo-7692226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/32737485/pexels-photo-32737485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 imageSearchKeywords:
   - portable air conditioner
   - window air conditioner unit
