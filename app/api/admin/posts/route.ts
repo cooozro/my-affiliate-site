@@ -3,7 +3,7 @@ import {
   canAccessAdmin,
   getAdminSessionFromCookies,
 } from "@/lib/admin-auth";
-import { getAdminAnalytics, getAutomationStatus, getAdminPosts } from "@/lib/admin-actions";
+import { getAdminAnalytics, getAutomationStatus, getAdminPosts, coverApisReady } from "@/lib/admin-actions";
 import { isServerlessRuntime } from "@/lib/posts-admin";
 
 async function requireAdmin(request: Request) {
@@ -30,6 +30,7 @@ export async function GET(request: Request) {
       posts,
       analytics,
       automation,
+      coverApisReady: coverApisReady(),
       mutations: {
         mode: isServerlessRuntime() ? "github" : "local",
         githubConfigured: Boolean(process.env.GITHUB_TOKEN?.trim()),

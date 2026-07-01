@@ -2,11 +2,13 @@
  * IT review topics for AI Pick & Report.
  * Season metadata drives pickTopic() — current KST month/event boosts priority.
  */
+import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
 import { pickSeasonalTopic } from "../lib/season-topics.mjs";
 import {
-  getTopicCoverage,
-  isTopicBlocked,
-  listBlockedTopicIds,
+  getTopicFormatCoverage,
+  isTopicFormatBlocked,
+  listBlockedTopicFormats,
+  topicFormatUsageCount,
 } from "../lib/topic-coverage.mjs";
 import {
   filterByTopicDiversity,
@@ -15,304 +17,81 @@ import {
   wouldViolateTopicDiversity,
 } from "../lib/topic-diversity.mjs";
 
-export const POST_TOPICS = [
-  {
-    id: "portable-ac",
-    category: "home-appliances",
-    topicCluster: "air-conditioning",
-    imageQuery: "portable air conditioner room",
-    imageSearchKeywords: [
-      "portable air conditioner",
-      "window air conditioner",
-      "room cooling",
-    ],
-    liveData: true,
-    seasons: ["summer"],
-    peakMonths: [6, 7, 8],
-    peakMonthBonus: 10,
-    seasonBoost: { summer: 12 },
-    allowedFormats: [
-      "buying-guide",
-      "head-to-head",
-      "scenario-guide",
-      "explainer",
-      "checklist",
-    ],
-    angle:
-      "portable air conditioners for apartments: BTU sizing, hose setup, noise, and energy use in summer heat",
-  },
-  {
-    id: "window-ac",
-    category: "home-appliances",
-    topicCluster: "air-conditioning",
-    imageQuery: "window air conditioner apartment",
-    imageSearchKeywords: ["window air conditioner", "wall air conditioner", "apartment cooling"],
-    liveData: true,
-    seasons: ["summer"],
-    peakMonths: [5, 6, 7, 8],
-    peakMonthBonus: 10,
-    seasonBoost: { summer: 11 },
-    allowedFormats: ["buying-guide", "head-to-head", "scenario-guide", "checklist"],
-    angle:
-      "window and wall-mounted air conditioners: BTU per room size, install constraints, and efficiency labels",
-  },
-  {
-    id: "wireless-earbuds",
-    category: "audio",
-    imageQuery: "wireless earbuds technology",
-    liveData: true,
-    seasons: ["summer", "winter"],
-    peakMonths: [11, 12, 6, 7],
-    allowedFormats: ["buying-guide", "head-to-head", "explainer", "checklist"],
-    angle:
-      "budget wireless earbuds comparison with specs, battery, codec, and ANC data",
-  },
-  {
-    id: "budget-smartphones",
-    category: "smartphones",
-    imageQuery: "smartphone comparison desk",
-    liveData: true,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 8, 9],
-    peakMonthBonus: 6,
-    allowedFormats: ["buying-guide", "head-to-head", "scenario-guide"],
-    angle:
-      "best budget smartphones under a price tier with chipset, camera, and battery analysis",
-  },
-  {
-    id: "power-banks",
-    category: "accessories",
-    imageQuery: "portable power bank charger",
-    liveData: true,
-    seasons: ["summer", "winter"],
-    peakMonths: [6, 7, 12, 1],
-    allowedFormats: ["buying-guide", "explainer", "checklist"],
-    angle:
-      "power bank buying guide: capacity, charging speed, port types, and safety certifications",
-  },
-  {
-    id: "mechanical-keyboards",
-    category: "peripherals",
-    imageQuery: "mechanical keyboard workspace",
-    liveData: false,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 9],
-    allowedFormats: ["buying-guide", "checklist", "explainer"],
-    angle:
-      "entry-level mechanical keyboards compared by switch type, layout, and build quality",
-  },
-  {
-    id: "budget-monitors",
-    category: "displays",
-    imageQuery: "computer monitor desk setup",
-    liveData: true,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 8, 9],
-    allowedFormats: ["buying-guide", "scenario-guide", "head-to-head"],
-    angle:
-      "budget monitors for work and gaming: panel type, resolution, refresh rate guide",
-  },
-  {
-    id: "robot-vacuums",
-    category: "smart-home",
-    imageQuery: "robot vacuum smart home",
-    liveData: true,
-    seasons: ["spring", "summer"],
-    allowedFormats: ["buying-guide", "scenario-guide", "head-to-head"],
-    angle:
-      "robot vacuum comparison for apartments: suction, mapping, mop features, and maintenance",
-  },
-  {
-    id: "bluetooth-speakers",
-    category: "audio",
-    imageQuery: "portable bluetooth speaker",
-    liveData: true,
-    seasons: ["summer"],
-    peakMonths: [6, 7, 8],
-    allowedFormats: ["buying-guide", "head-to-head", "scenario-guide"],
-    angle:
-      "portable Bluetooth speakers compared by sound, IP rating, and battery life",
-  },
-  {
-    id: "fitness-trackers",
-    category: "wearables",
-    imageQuery: "fitness tracker smartwatch",
-    liveData: true,
-    seasons: ["spring", "winter"],
-    peakMonths: [1, 2, 3],
-    allowedFormats: ["buying-guide", "head-to-head", "checklist"],
-    angle:
-      "budget fitness trackers: heart rate accuracy, sleep tracking, and app ecosystem",
-  },
-  {
-    id: "usb-c-hubs",
-    category: "accessories",
-    imageQuery: "usb c hub laptop",
-    liveData: false,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 9],
-    allowedFormats: ["buying-guide", "checklist", "explainer"],
-    angle:
-      "USB-C hub buying guide for laptops: ports, power delivery, and compatibility",
-  },
-  {
-    id: "air-purifiers",
-    category: "home-appliances",
-    imageQuery: "air purifier modern home",
-    liveData: false,
-    seasons: ["spring", "summer", "winter"],
-    peakMonths: [3, 4, 5, 6],
-    peakMonthBonus: 7,
-    seasonBoost: { spring: 8, summer: 6 },
-    allowedFormats: ["buying-guide", "scenario-guide", "explainer", "checklist"],
-    angle:
-      "air purifier guide for small rooms: CADR, filter types, noise levels, and running costs",
-  },
-  {
-    id: "dehumidifiers",
-    category: "home-appliances",
-    imageQuery: "dehumidifier home humidity",
-    liveData: false,
-    seasons: ["summer"],
-    peakMonths: [6, 7, 8, 9],
-    peakMonthBonus: 9,
-    seasonBoost: { summer: 9 },
-    allowedFormats: ["buying-guide", "explainer", "checklist"],
-    angle:
-      "dehumidifiers for humid summers: pint capacity, noise, and energy cost per day",
-  },
-  {
-    id: "tablet-budget",
-    category: "tablets",
-    imageQuery: "tablet reading study",
-    liveData: true,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 8, 9],
-    peakMonthBonus: 8,
-    allowedFormats: ["buying-guide", "scenario-guide", "head-to-head"],
-    angle:
-      "budget tablets for reading and video: display, storage, stylus support comparison",
-  },
-  {
-    id: "webcams",
-    category: "peripherals",
-    imageQuery: "webcam video conference",
-    liveData: false,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 9],
-    allowedFormats: ["buying-guide", "checklist", "head-to-head"],
-    angle:
-      "webcams for remote work: resolution, autofocus, microphone quality comparison",
-  },
-  {
-    id: "electric-fans",
-    category: "home-appliances",
-    topicCluster: "air-conditioning",
-    imageQuery: "electric desk fan summer",
-    imageSearchKeywords: ["electric fan", "desk fan", "tower fan", "summer cooling"],
-    liveData: false,
-    seasons: ["summer"],
-    peakMonths: [6, 7, 8],
-    peakMonthBonus: 8,
-    seasonBoost: { summer: 10 },
-    allowedFormats: ["buying-guide", "explainer", "checklist"],
-    angle:
-      "electric fans for summer rooms: airflow CFM, noise dB, and energy use vs AC",
-  },
-  {
-    id: "noise-cancelling-headphones",
-    category: "audio",
-    imageQuery: "over ear noise cancelling headphones",
-    liveData: true,
-    seasons: ["summer", "winter"],
-    peakMonths: [6, 7, 11, 12],
-    allowedFormats: ["buying-guide", "head-to-head", "explainer"],
-    angle:
-      "budget noise-cancelling headphones: ANC depth, codec support, and comfort for travel",
-  },
-  {
-    id: "portable-ssd",
-    category: "accessories",
-    imageQuery: "portable ssd external drive",
-    liveData: false,
-    seasons: ["fall", "spring"],
-    peakMonths: [2, 3, 8, 9],
-    allowedFormats: ["buying-guide", "explainer", "checklist"],
-    angle:
-      "portable SSD buying guide: USB speeds, TBW endurance, and backup workflows",
-  },
-];
+export const POST_TOPICS = PRODUCT_TOPICS;
+
+function supportsFormat(topic, contentProfile) {
+  if (!contentProfile) return true;
+  return !topic.allowedFormats || topic.allowedFormats.includes(contentProfile);
+}
+
+function sortByFreshness(candidates, coverage, recentlyUsed) {
+  return [...candidates].sort((a, b) => {
+    const usageA = topicFormatUsageCount(a.id, coverage);
+    const usageB = topicFormatUsageCount(b.id, coverage);
+    if (usageA !== usageB) return usageA - usageB;
+    const recentA = recentlyUsed.has(a.id) ? 1 : 0;
+    const recentB = recentlyUsed.has(b.id) ? 1 : 0;
+    return recentA - recentB;
+  });
+}
 
 /**
- * Pick next topic — season score first, then avoid recent repeats.
+ * Pick next topic — prefer uncovered product lines, then season score.
  * @param {object} state
  * @param {{ contentProfile?: string }} [options]
  */
 export function pickTopic(state, options = {}) {
-  const used = new Set(state.usedTopicIds ?? []);
+  const contentProfile = options.contentProfile ?? "buying-guide";
+  const recentlyUsed = new Set(state.usedTopicIds ?? []);
   const topicHistory = getTopicHistory(state);
-  const coverage = getTopicCoverage();
+  const coverage = getTopicFormatCoverage();
 
-  const notBlocked = (t) => !isTopicBlocked(t.id, coverage);
+  const formatAvailable = (t) =>
+    supportsFormat(t, contentProfile) &&
+    !isTopicFormatBlocked(t.id, contentProfile, coverage);
 
-  let candidates = POST_TOPICS.filter((t) => !used.has(t.id) && notBlocked(t));
-
-  if (options.contentProfile) {
-    const formatFiltered = candidates.filter(
-      (t) => !t.allowedFormats || t.allowedFormats.includes(options.contentProfile),
-    );
-    if (formatFiltered.length > 0) {
-      candidates = formatFiltered;
-    }
-  }
+  let candidates = sortByFreshness(
+    POST_TOPICS.filter(formatAvailable),
+    coverage,
+    recentlyUsed,
+  );
 
   candidates = filterByTopicDiversity(candidates, topicHistory);
 
   if (candidates.length === 0) {
-    candidates = POST_TOPICS.filter(
-      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
-    );
-    if (options.contentProfile) {
-      const formatFiltered = candidates.filter(
+    candidates = sortByFreshness(
+      POST_TOPICS.filter(
         (t) =>
-          !t.allowedFormats || t.allowedFormats.includes(options.contentProfile),
-      );
-      if (formatFiltered.length > 0) candidates = formatFiltered;
-    }
-  }
-
-  if (candidates.length === 0) {
-    state.usedTopicIds = [];
-    candidates = POST_TOPICS.filter(
-      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
+          formatAvailable(t) &&
+          !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      ),
+      coverage,
+      recentlyUsed,
     );
-    if (options.contentProfile) {
-      const formatFiltered = candidates.filter(
-        (t) =>
-          !t.allowedFormats || t.allowedFormats.includes(options.contentProfile),
-      );
-      if (formatFiltered.length > 0) candidates = formatFiltered;
-    }
-    candidates = filterByTopicDiversity(candidates, topicHistory);
   }
 
   if (candidates.length === 0) {
     console.warn(
-      "No fresh topics in rotation pool — picking any topic not already on site",
+      "No fresh topic×format pairs — relaxing diversity guard for this profile",
     );
-    candidates = POST_TOPICS.filter((t) => notBlocked(t));
-    candidates = filterByTopicDiversity(candidates, topicHistory);
+    candidates = sortByFreshness(
+      POST_TOPICS.filter(formatAvailable),
+      coverage,
+      new Set(),
+    );
   }
 
   if (candidates.length === 0) {
     throw new Error(
-      "All topics are already covered by published posts or drafts — add POST_TOPICS entries or remove a duplicate draft",
+      `All ${POST_TOPICS.length} topics already have a ${contentProfile} post or draft — pick another contentProfile or add taxonomy entries`,
     );
   }
 
-  const blocked = listBlockedTopicIds(coverage);
+  const blocked = listBlockedTopicFormats(coverage);
   if (blocked.length > 0) {
-    console.log(`Topic pool excludes already-covered: ${blocked.join(", ")}`);
+    console.log(
+      `Topic×format pool excludes ${blocked.length} existing pair(s) (showing 8): ${blocked.slice(0, 8).join(", ")}`,
+    );
   }
 
   const topic = pickSeasonalTopic(candidates, new Set(), new Date());
@@ -322,14 +101,20 @@ export function pickTopic(state, options = {}) {
     console.warn(
       `Topic pick ${topic.id} would cluster (${violation.reason}) — picking from broader pool`,
     );
-    const fallback = POST_TOPICS.filter(
-      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
+    const fallback = sortByFreshness(
+      POST_TOPICS.filter(
+        (t) =>
+          formatAvailable(t) &&
+          !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      ),
+      coverage,
+      recentlyUsed,
     );
     if (fallback.length > 0) {
       const alt = pickSeasonalTopic(fallback, new Set(), new Date());
       state.topicIndex =
         (POST_TOPICS.findIndex((t) => t.id === alt.id) + 1) % POST_TOPICS.length;
-      state.usedTopicIds = [...(state.usedTopicIds ?? []), alt.id].slice(-20);
+      state.usedTopicIds = [...(state.usedTopicIds ?? []), alt.id].slice(-30);
       recordTopicPick(state, alt);
       return alt;
     }
@@ -337,7 +122,7 @@ export function pickTopic(state, options = {}) {
 
   state.topicIndex =
     (POST_TOPICS.findIndex((t) => t.id === topic.id) + 1) % POST_TOPICS.length;
-  state.usedTopicIds = [...(state.usedTopicIds ?? []), topic.id].slice(-20);
+  state.usedTopicIds = [...(state.usedTopicIds ?? []), topic.id].slice(-30);
   recordTopicPick(state, topic);
   return topic;
 }

@@ -8,6 +8,7 @@ on:
       - scripts/lib/cover-image.mjs
       - scripts/lib/image-query.mjs
       - scripts/lib/image-vision.mjs
+      - scripts/lib/product-taxonomy.mjs
       - scripts/refresh-post-covers.mjs
       - .github/workflows/refresh-post-covers.yml
 
@@ -51,3 +52,8 @@ jobs:
           fi
           git commit -m "chore(content): refresh post covers with vision ranking"
           git push
+
+      - name: Trigger Vercel redeploy
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: node scripts/trigger-vercel-deploy.mjs

@@ -7,6 +7,8 @@ import {
   deletePost,
   draftPost,
   publishPost,
+  refreshCoverImage,
+  removeCoverImage,
 } from "@/lib/admin-actions";
 
 type RouteContext = {
@@ -27,7 +29,9 @@ export async function PATCH(request: Request, context: RouteContext) {
   }
 
   const { slug } = await context.params;
-  const body = (await request.json()) as { action?: "publish" | "draft" };
+  const body = (await request.json()) as {
+    action?: "publish" | "draft" | "refresh-cover" | "remove-cover";
+  };
 
   try {
     if (body.action === "publish") {
@@ -37,6 +41,16 @@ export async function PATCH(request: Request, context: RouteContext) {
 
     if (body.action === "draft") {
       const result = await draftPost(slug);
+      return NextResponse.json({ ok: true, ...result });
+    }
+
+    if (body.action === "refresh-cover") {
+      const result = await refreshCoverImage(slug);
+      return NextResponse.json({ ok: true, ...result });
+    }
+
+    if (body.action === "remove-cover") {
+      const result = await removeCoverImage(slug);
       return NextResponse.json({ ok: true, ...result });
     }
 

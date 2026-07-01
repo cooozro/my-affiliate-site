@@ -5,8 +5,11 @@
 
 const OPENAI_CHAT = "https://api.openai.com/v1/chat/completions";
 const VISION_MODEL = process.env.OPENAI_VISION_MODEL ?? "gpt-4o-mini";
-const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 7);
-const VISION_CANDIDATE_LIMIT = Number(process.env.IMAGE_VISION_CANDIDATE_LIMIT ?? 10);
+const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 8);
+const VISION_CANDIDATE_LIMIT = Number(process.env.IMAGE_VISION_CANDIDATE_LIMIT ?? 12);
+
+const REASON_REJECT_PATTERN =
+  /\b(vacuum|robot vacuum|clock|watch|wristwatch|airplane|aircraft|tablet|laptop|bedroom|wrong|unrelated)\b/i;
 
 export function visionSelectionEnabled() {
   return Boolean(process.env.OPENAI_API_KEY?.trim());
@@ -16,9 +19,14 @@ export function visionMinScore() {
   return VISION_MIN_SCORE;
 }
 
+export function visionReasonRejected(reason) {
+  if (!reason) return false;
+  return REASON_REJECT_PATTERN.test(reason);
+}
+
 /**
- * @param {string} imageUrl - thumbnail or full image URL
- * @param {{ title?: string, productLabel: string, negativeTags: string[] }} ctx
+ * @param {string} imageUrl - thumbnail, full image URL, or data: URI
+ * @param {{ title?: string, productLabel: string, negativeTags: string[], forbiddenSubjects?: string[], detail?: 'low' | 'high' }} ctx
  * @returns {Promise<{ score: number, reason: string }>}
  */
 export async function scoreImageRelevanceWithVision(imageUrl, ctx) {
@@ -29,6 +37,7 @@ export async function scoreImageRelevanceWithVision(imageUrl, ctx) {
 
   const negatives = (ctx.negativeTags ?? []).slice(0, 20).join(", ");
   const forbidden = (ctx.forbiddenSubjects ?? []).slice(0, 12).join(", ");
+  const detail = ctx.detail ?? "low";
   const prompt = `You are a strict stock-photo reviewer for a product review blog cover.
 
 Article title: ${ctx.title ?? "n/a"}
@@ -38,8 +47,8 @@ Also reject: ${negatives}
 
 Rules:
 - Score 9-10 ONLY if the REQUIRED subject is clearly the main focus (product photo or obvious in-use scene).
-- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, or any forbidden/wrong device instead of the required subject.
-- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank.
+- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, bedroom without the product, or any forbidden/wrong device.
+- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank. A generic bedroom scene is NOT an air purifier cover.
 
 Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 
@@ -58,7 +67,7 @@ Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
           role: "user",
           content: [
             { type: "text", text: prompt },
-            { type: "image_url", image_url: { url: imageUrl, detail: "low" } },
+            { type: "image_url", image_url: { url: imageUrl, detail } },
           ],
         },
       ],
@@ -88,9 +97,26 @@ Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 }
 
 /**
+ * @param {Buffer} buffer
+ * @param {{ title?: string, productKeywords: string[], negativeTags: string[], forbiddenSubjects?: string[] }} ctx
+ */
+export async function verifyDownloadedImage(buffer, ctx) {
+  const base64 = buffer.toString("base64");
+  const dataUrl = `data:image/jpeg;base64,${base64}`;
+  const productLabel = ctx.productKeywords.slice(0, 3).join(" / ");
+  return scoreImageRelevanceWithVision(dataUrl, {
+    title: ctx.title,
+    productLabel,
+    negativeTags: ctx.negativeTags,
+    forbiddenSubjects: ctx.forbiddenSubjects,
+    detail: "high",
+  });
+}
+
+/**
  * Rank candidates with vision; preserves textScore on each item.
  * @param {Array<{ imageUrl: string, thumbUrl?: string, textScore?: number, provider: string, assetId: string | number }>} candidates
- * @param {{ title?: string, productKeywords: string[], negativeTags: string[] }} ctx
+ * @param {{ title?: string, productKeywords: string[], negativeTags: string[], forbiddenSubjects?: string[] }} ctx
  */
 export async function rankCandidatesWithVision(candidates, ctx) {
   if (!visionSelectionEnabled() || candidates.length === 0) {
@@ -109,6 +135,7 @@ export async function rankCandidatesWithVision(candidates, ctx) {
         productLabel,
         negativeTags: ctx.negativeTags,
         forbiddenSubjects: ctx.forbiddenSubjects,
+        detail: "low",
       });
       ranked.push({
         ...candidate,
@@ -142,7 +169,10 @@ export function pickVisionWinner(ranked) {
   const withVision = ranked.filter((c) => typeof c.visionScore === "number" && c.visionScore >= 0);
   if (withVision.length === 0) return null;
 
-  const passing = withVision.filter((c) => c.visionScore >= VISION_MIN_SCORE);
+  const passing = withVision.filter(
+    (c) =>
+      c.visionScore >= VISION_MIN_SCORE && !visionReasonRejected(c.visionReason),
+  );
   if (passing.length > 0) return passing[0];
 
   return null;

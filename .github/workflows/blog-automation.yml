@@ -155,6 +155,12 @@ jobs:
           git commit -m "chore(automation): ${{ steps.task.outputs.name }}"
           git push
 
+      - name: Trigger Vercel redeploy
+        if: success() && steps.task.outputs.name != 'status'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: node scripts/trigger-vercel-deploy.mjs
+
       - name: Warm RSS and sitemap after deploy
         if: success() && steps.automation.outputs.published == 'true'
         env:

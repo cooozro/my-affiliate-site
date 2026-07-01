@@ -1,6 +1,12 @@
 import "server-only";
 
 import {
+  coverApisReady,
+  enrichPostsWithCover,
+  refreshPostCover,
+  removePostCover,
+} from "@/lib/cover-admin";
+import {
   commitPostChanges,
   deletePostOnGithub,
   fetchGaSummary,
@@ -179,8 +185,9 @@ function kstDateString(): string {
   }).format(new Date());
 }
 
-export async function getAdminPosts(): Promise<AdminPostRow[]> {
-  return listPostsForAdmin();
+export async function getAdminPosts() {
+  const posts = listPostsForAdmin();
+  return enrichPostsWithCover(posts);
 }
 
 export async function getAdminAnalytics() {
@@ -279,3 +286,13 @@ export async function deletePost(slug: string) {
 export function getPostPreview(slug: string, locale: "en" | "ko") {
   return readPostFile(slug, locale);
 }
+
+export async function refreshCoverImage(slug: string) {
+  return refreshPostCover(slug);
+}
+
+export async function removeCoverImage(slug: string) {
+  return removePostCover(slug);
+}
+
+export { coverApisReady };

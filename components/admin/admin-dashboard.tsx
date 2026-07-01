@@ -12,7 +12,14 @@ type AdminPostRow = {
   updatedAt?: string;
   hasEn: boolean;
   hasKo: boolean;
+  coverImage?: string;
+  coverStatus: "ok" | "missing" | "flagged" | "no-meta";
+  coverFlagReason?: string;
+  coverImageProvider?: string;
+  coverImageAssetId?: string | number;
 };
+
+type PostFilter = "all" | "cover-issues";
 
 type GaSummary = {
   activeUsers7d: number;
@@ -55,6 +62,9 @@ export function AdminDashboard() {
     mode: "github" | "local";
     githubConfigured: boolean;
   } | null>(null);
+  const [postFilter, setPostFilter] = useState<PostFilter>("all");
+  const [coverApisReady, setCoverApisReady] = useState(true);
+  const [coverBusy, setCoverBusy] = useState<string | null>(null);
 
   async function loadData() {
     setLoading(true);
@@ -80,11 +90,13 @@ export function AdminDashboard() {
       posts: AdminPostRow[];
       analytics: GaSummary | null;
       automation: AutomationStatus;
+      coverApisReady?: boolean;
       mutations?: { mode: "github" | "local"; githubConfigured: boolean };
     };
     setPosts(data.posts);
     setAnalytics(data.analytics);
     setAutomation(data.automation);
+    setCoverApisReady(data.coverApisReady ?? true);
     setMutations(data.mutations ?? null);
     setLoading(false);
   }
@@ -128,6 +140,53 @@ export function AdminDashboard() {
     );
     await loadData();
   }
+
+  async function runCoverAction(slug: string, action: "refresh-cover" | "remove-cover") {
+    if (action === "remove-cover") {
+      const confirmed = window.confirm(`"${slug}" 커버 이미지를 삭제할까요?`);
+      if (!confirmed) return;
+    }
+
+    setCoverBusy(slug);
+    setMessage("");
+    setError("");
+
+    const response = await fetch(`/api/admin/posts/${slug}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action }),
+    });
+
+    const data = (await response.json()) as {
+      error?: string;
+      mode?: "local" | "github";
+      coverImage?: string;
+    };
+
+    setCoverBusy(null);
+
+    if (!response.ok) {
+      setError(data.error ?? "Cover action failed");
+      return;
+    }
+
+    const deployNote =
+      data.mode === "github"
+        ? " GitHub commit 완료 — Vercel 재배포 후 1–2분 내 라이브 반영."
+        : "";
+    setMessage(
+      action === "refresh-cover"
+        ? `커버 교체: ${slug}${data.coverImage ? ` → ${data.coverImage}` : ""}.${deployNote}`
+        : `커버 삭제: ${slug}.${deployNote}`,
+    );
+    await loadData();
+  }
+
+  const coverIssueCount = posts.filter((p) => p.coverStatus !== "ok").length;
+  const visiblePosts =
+    postFilter === "cover-issues"
+      ? posts.filter((p) => p.coverStatus !== "ok")
+      : posts;
 
   async function logout() {
     await fetch("/api/admin/auth", { method: "DELETE" });
@@ -272,11 +331,47 @@ export function AdminDashboard() {
       ) : null}
 
       <section className="rounded-xl border border-border bg-surface p-5">
-        <h2 className="mb-4 text-lg font-semibold">Posts</h2>
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold">Posts</h2>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => setPostFilter("all")}
+              className={`rounded-lg border px-3 py-1.5 text-xs ${
+                postFilter === "all"
+                  ? "border-accent bg-accent/10 text-accent"
+                  : "border-border hover:bg-muted"
+              }`}
+            >
+              전체 ({posts.length})
+            </button>
+            <button
+              type="button"
+              onClick={() => setPostFilter("cover-issues")}
+              className={`rounded-lg border px-3 py-1.5 text-xs ${
+                postFilter === "cover-issues"
+                  ? "border-amber-500 bg-amber-500/15 text-amber-800 dark:text-amber-200"
+                  : "border-border hover:bg-muted"
+              }`}
+            >
+              커버 이슈 ({coverIssueCount})
+            </button>
+          </div>
+        </div>
+
+        {!coverApisReady ? (
+          <p className="mb-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm">
+            커버 자동 교체에는 Vercel에{" "}
+            <strong>PEXELS_API_KEY</strong> 또는 <strong>PIXABAY_API_KEY</strong>
+            (권장: <strong>OPENAI_API_KEY</strong> vision)가 필요합니다.
+          </p>
+        ) : null}
+
         <div className="overflow-x-auto">
           <table className="min-w-full text-left text-sm">
             <thead className="border-b border-border text-muted-foreground">
               <tr>
+                <th className="px-3 py-2 font-medium">Cover</th>
                 <th className="px-3 py-2 font-medium">Slug</th>
                 <th className="px-3 py-2 font-medium">Title (EN)</th>
                 <th className="px-3 py-2 font-medium">Status</th>
@@ -286,8 +381,11 @@ export function AdminDashboard() {
               </tr>
             </thead>
             <tbody>
-              {posts.map((post) => (
+              {visiblePosts.map((post) => (
                 <tr key={post.slug} className="border-b border-border/60">
+                  <td className="px-3 py-3 align-top">
+                    <CoverCell post={post} />
+                  </td>
                   <td className="px-3 py-3 font-mono text-xs">{post.slug}</td>
                   <td className="px-3 py-3">{post.titleEn}</td>
                   <td className="px-3 py-3">
@@ -351,14 +449,88 @@ export function AdminDashboard() {
                       >
                         Delete
                       </button>
+                      <button
+                        type="button"
+                        disabled={coverBusy === post.slug || !coverApisReady}
+                        onClick={() => void runCoverAction(post.slug, "refresh-cover")}
+                        className="rounded border border-sky-500/40 px-2 py-1 text-xs text-sky-700 hover:bg-sky-500/10 disabled:opacity-40 dark:text-sky-300"
+                      >
+                        {coverBusy === post.slug ? "…" : "커버 교체"}
+                      </button>
+                      {post.coverImage ? (
+                        <button
+                          type="button"
+                          disabled={coverBusy === post.slug}
+                          onClick={() => void runCoverAction(post.slug, "remove-cover")}
+                          className="rounded border border-amber-500/40 px-2 py-1 text-xs text-amber-800 hover:bg-amber-500/10 disabled:opacity-40 dark:text-amber-200"
+                        >
+                          커버 삭제
+                        </button>
+                      ) : null}
                     </div>
                   </td>
                 </tr>
               ))}
+              {visiblePosts.length === 0 ? (
+                <tr>
+                  <td
+                    colSpan={7}
+                    className="px-3 py-8 text-center text-muted-foreground"
+                  >
+                    {postFilter === "cover-issues"
+                      ? "커버 이슈가 있는 글이 없습니다."
+                      : "글이 없습니다."}
+                  </td>
+                </tr>
+              ) : null}
             </tbody>
           </table>
         </div>
       </section>
+    </div>
+  );
+}
+
+function CoverCell({ post }: { post: AdminPostRow }) {
+  const statusStyles: Record<AdminPostRow["coverStatus"], string> = {
+    ok: "bg-green-500/15 text-green-700 dark:text-green-300",
+    missing: "bg-red-500/15 text-red-700 dark:text-red-300",
+    flagged: "bg-amber-500/15 text-amber-800 dark:text-amber-200",
+    "no-meta": "bg-muted text-muted-foreground",
+  };
+
+  const statusLabel: Record<AdminPostRow["coverStatus"], string> = {
+    ok: "OK",
+    missing: "누락",
+    flagged: "오류",
+    "no-meta": "없음",
+  };
+
+  return (
+    <div className="flex max-w-[140px] flex-col gap-2">
+      {post.coverImage ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={post.coverImage}
+          alt=""
+          className="h-16 w-28 rounded border border-border object-cover"
+        />
+      ) : (
+        <div className="flex h-16 w-28 items-center justify-center rounded border border-dashed border-border text-xs text-muted-foreground">
+          No image
+        </div>
+      )}
+      <span
+        className={`inline-flex w-fit rounded-full px-2 py-0.5 text-[10px] font-medium ${statusStyles[post.coverStatus]}`}
+        title={post.coverFlagReason}
+      >
+        {statusLabel[post.coverStatus]}
+      </span>
+      {post.coverFlagReason ? (
+        <p className="text-[10px] leading-snug text-muted-foreground">
+          {post.coverFlagReason}
+        </p>
+      ) : null}
     </div>
   );
 }

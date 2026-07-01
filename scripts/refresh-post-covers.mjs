@@ -44,6 +44,7 @@ function loadEnvLocal() {
 const DEFAULT_SLUGS = [
   "2026-air-purifiers-guide",
   "2026-power-banks-guide",
+  "2026-budget-power-banks-guide",
   "2026-portable-vs-window-ac-head-to-head",
   "2026-budget-mechanical-keyboards-guide",
   "2026-budget-smartphones-under-300",

@@ -1,37 +1,26 @@
 /**
- * Track which topic IDs already have published posts or drafts on disk.
+ * Track which topic × contentProfile pairs already exist on disk.
+ * Same product line can have buying-guide + explainer + checklist without blocking.
  */
 
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { inferPostTopic } from "./infer-post-topic.mjs";
-
-const KNOWN_TOPIC_IDS = new Set([
-  "portable-ac",
-  "window-ac",
-  "wireless-earbuds",
-  "budget-smartphones",
-  "power-banks",
-  "mechanical-keyboards",
-  "budget-monitors",
-  "robot-vacuums",
-  "bluetooth-speakers",
-  "fitness-trackers",
-  "usb-c-hubs",
-  "air-purifiers",
-  "dehumidifiers",
-  "tablet-budget",
-  "webcams",
-  "electric-fans",
-  "noise-cancelling-headphones",
-  "portable-ssd",
-]);
+import { POST_TOPIC_IDS } from "./product-taxonomy.mjs";
 
 /**
- * @returns {Map<string, { published: boolean, draft: boolean, slugs: string[] }>}
+ * @typedef {{
+ *   publishedFormats: Set<string>,
+ *   draftFormats: Set<string>,
+ *   slugs: string[],
+ * }} TopicCoverageEntry
  */
-export function getTopicCoverage(root = process.cwd()) {
+
+/**
+ * @returns {Map<string, TopicCoverageEntry>}
+ */
+export function getTopicFormatCoverage(root = process.cwd()) {
   const postsDir = path.join(root, "content", "posts");
   const coverage = new Map();
 
@@ -46,15 +35,18 @@ export function getTopicCoverage(root = process.cwd()) {
     const topic = inferPostTopic(slug.name, data);
     const topicId = topic.id;
 
-    if (!KNOWN_TOPIC_IDS.has(topicId)) continue;
+    if (!POST_TOPIC_IDS.has(topicId)) continue;
 
+    const profile = String(data.contentProfile ?? "buying-guide");
     const entry = coverage.get(topicId) ?? {
-      published: false,
-      draft: false,
+      publishedFormats: new Set(),
+      draftFormats: new Set(),
       slugs: [],
     };
-    if (data.draft) entry.draft = true;
-    else entry.published = true;
+
+    if (data.draft) entry.draftFormats.add(profile);
+    else entry.publishedFormats.add(profile);
+
     entry.slugs.push(slug.name);
     coverage.set(topicId, entry);
   }
@@ -62,19 +54,40 @@ export function getTopicCoverage(root = process.cwd()) {
   return coverage;
 }
 
+/** @deprecated Use getTopicFormatCoverage — kept for callers migrating gradually */
+export function getTopicCoverage(root = process.cwd()) {
+  return getTopicFormatCoverage(root);
+}
+
 /**
- * Block re-using a topic that already has a LIVE post, or a draft in the buffer.
+ * Block re-using the same topic + contentProfile when a post or draft already exists.
  */
-export function isTopicBlocked(topicId, coverage) {
+export function isTopicFormatBlocked(topicId, contentProfile, coverage) {
+  if (!contentProfile) return false;
   const entry = coverage.get(topicId);
   if (!entry) return false;
-  if (entry.published) return true;
-  if (entry.draft) return true;
+  if (entry.publishedFormats.has(contentProfile)) return true;
+  if (entry.draftFormats.has(contentProfile)) return true;
   return false;
 }
 
-export function listBlockedTopicIds(coverage) {
-  return [...coverage.entries()]
-    .filter(([, entry]) => entry.published || entry.draft)
-    .map(([id]) => id);
+/** How many distinct formats already exist for this topic (lower = fresher). */
+export function topicFormatUsageCount(topicId, coverage) {
+  const entry = coverage.get(topicId);
+  if (!entry) return 0;
+  const all = new Set([...entry.publishedFormats, ...entry.draftFormats]);
+  return all.size;
+}
+
+export function listBlockedTopicFormats(coverage) {
+  const lines = [];
+  for (const [topicId, entry] of coverage.entries()) {
+    for (const profile of entry.publishedFormats) {
+      lines.push(`${topicId}:${profile} (published)`);
+    }
+    for (const profile of entry.draftFormats) {
+      lines.push(`${topicId}:${profile} (draft)`);
+    }
+  }
+  return lines;
 }

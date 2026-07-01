@@ -59,9 +59,9 @@ export const SLUG_IMAGE_PROFILES = {
       "indoor air purifier",
     ],
     extraSearchQueries: [
-      "HEPA air purifier bedroom",
-      "white air purifier appliance table",
-      "indoor air purifier device close up",
+      "white HEPA air purifier product isolated",
+      "air purifier appliance close up white",
+      "room air cleaner device product photo",
     ],
     forbiddenSubjects: [
       "vacuum cleaner",
@@ -164,6 +164,36 @@ export const SLUG_IMAGE_PROFILES = {
     forbiddenSubjects: ["clock", "wristwatch", "watch", "wall clock"],
     topicCluster: "power",
   },
+};
+
+/** Auto-picks that failed vision QA — never reuse. */
+export const BLOCKED_ASSET_IDS = new Set([
+  "pexels:27176671",
+  "pexels:35673090",
+  "pixabay:6577523",
+  "pixabay:8315886",
+  "pixabay:560937",
+]);
+
+/**
+ * Curated stock IDs tried before open search (each still vision-verified).
+ * @type {Record<string, Array<{ provider: 'pexels' | 'pixabay', assetId: number, query?: string }>>}
+ */
+export const CURATED_SLUG_ASSETS = {
+  "2026-air-purifiers-guide": [
+    { provider: "pexels", assetId: 3875333, query: "white air purifier product" },
+    { provider: "pexels", assetId: 6782062, query: "HEPA air purifier appliance" },
+    { provider: "pexels", assetId: 7792874, query: "air purifier room device" },
+  ],
+  "2026-power-banks-guide": [
+    { provider: "pexels", assetId: 4421508, query: "power bank charging phone" },
+    { provider: "pexels", assetId: 1630167, query: "portable battery charger USB" },
+    { provider: "pexels", assetId: 6078124, query: "portable power bank product" },
+  ],
+  "2026-budget-power-banks-guide": [
+    { provider: "pexels", assetId: 4421508, query: "power bank charging phone" },
+    { provider: "pexels", assetId: 6078124, query: "portable power bank product" },
+  ],
 };
 
 const SLUG_TOKEN_MAP = {

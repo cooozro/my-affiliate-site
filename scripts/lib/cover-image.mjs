@@ -4,13 +4,17 @@ import crypto from "crypto";
 import {
   buildCoverAlt,
   buildCoverFilename,
+  BLOCKED_ASSET_IDS,
+  CURATED_SLUG_ASSETS,
   resolveImageContext,
   scoreImageRelevance,
 } from "./image-query.mjs";
 import {
   pickVisionWinner,
   rankCandidatesWithVision,
+  verifyDownloadedImage,
   visionMinScore,
+  visionReasonRejected,
   visionSelectionEnabled,
 } from "./image-vision.mjs";
 import {
@@ -26,7 +30,16 @@ import {
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
 
+const PEXELS_PHOTO = "https://api.pexels.com/v1/photos";
 const TEXT_MIN_SCORE = 2;
+
+function isBlockedAsset(candidate) {
+  return BLOCKED_ASSET_IDS.has(`${candidate.provider}:${candidate.assetId}`);
+}
+
+function filterBlocked(candidates) {
+  return candidates.filter((c) => !isBlockedAsset(c));
+}
 
 /** Stable numeric hash from slug (provider pick + result offset). */
 export function hashSlug(slug, salt = "") {
@@ -61,7 +74,7 @@ function searchPage(slug, queryIndex, pageOffset = 0) {
   return (hashSlug(slug, `page:${queryIndex}:${pageOffset}`) % 4) + 1 + pageOffset;
 }
 
-async function downloadToSlug(slug, imageUrl, filename) {
+async function downloadToSlug(slug, imageUrl, filename, rootDir = process.cwd()) {
   const imageResponse = await fetch(imageUrl);
   if (!imageResponse.ok) {
     throw new Error(`Image download failed: ${imageResponse.status}`);
@@ -69,7 +82,7 @@ async function downloadToSlug(slug, imageUrl, filename) {
 
   const buffer = Buffer.from(await imageResponse.arrayBuffer());
   const relativePath = `/images/posts/${slug}/${filename}`;
-  const destPath = path.join(process.cwd(), "public", "images", "posts", slug, filename);
+  const destPath = path.join(rootDir, "public", "images", "posts", slug, filename);
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
   fs.writeFileSync(destPath, buffer);
 
@@ -128,6 +141,48 @@ async function fetchPexelsCandidates(query, apiKey, slug, queryIndex, ctx, pageO
     .filter(Boolean);
 }
 
+async function fetchPexelsPhotoById(photoId, apiKey, query = "curated") {
+  const response = await fetch(`${PEXELS_PHOTO}/${photoId}`, {
+    headers: { Authorization: apiKey },
+  });
+  if (!response.ok) throw new Error(`Pexels photo ${photoId}: ${response.status}`);
+
+  const photo = await response.json();
+  const imageUrl = photo.src?.large2x || photo.src?.large;
+  if (!imageUrl) throw new Error(`Pexels photo ${photoId}: no image URL`);
+
+  return {
+    imageUrl,
+    thumbUrl: photo.src?.medium || photo.src?.small || imageUrl,
+    assetKey: assetKey("pexels", photo.id),
+    relevanceText: `${photo.alt ?? ""} ${query}`,
+    credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
+    provider: "pexels",
+    assetId: photo.id,
+    searchQuery: query,
+  };
+}
+
+async function fetchCuratedCandidates(slug) {
+  const curated = CURATED_SLUG_ASSETS[slug] ?? [];
+  if (curated.length === 0) return [];
+
+  const apiKey = process.env.PEXELS_API_KEY?.trim();
+  if (!apiKey) return [];
+
+  const out = [];
+  for (const entry of curated) {
+    if (entry.provider !== "pexels") continue;
+    try {
+      const candidate = await fetchPexelsPhotoById(entry.assetId, apiKey, entry.query ?? "curated");
+      if (!isBlockedAsset(candidate)) out.push(candidate);
+    } catch (error) {
+      console.warn(`Curated pexels:${entry.assetId} failed: ${error.message}`);
+    }
+  }
+  return out;
+}
+
 async function fetchPixabayCandidates(query, apiKey, slug, queryIndex, ctx, pageOffset) {
   const url = new URL(PIXABAY_SEARCH);
   url.searchParams.set("key", apiKey);
@@ -181,6 +236,11 @@ async function collectCandidatePool(slug, ctx, registry, options) {
     : [0, 1, 2, 3];
 
   const raw = [];
+
+  if (!options.skipCurated) {
+    raw.push(...(await fetchCuratedCandidates(slug)));
+  }
+
   let lastError = null;
 
   for (let queryIndex = 0; queryIndex < ctx.searchQueries.length; queryIndex++) {
@@ -218,14 +278,55 @@ async function collectCandidatePool(slug, ctx, registry, options) {
   }
 
   const ranked = rankText(dedupeCandidates(raw), ctx);
-  const unused = ranked.filter((c) => !candidateIsUsed(registry, c));
+  const unused = filterBlocked(ranked).filter((c) => !candidateIsUsed(registry, c));
 
   return { pool: unused, lastError };
 }
 
-export function clearSlugCoverAssets(slug, coverImage) {
+async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
+  if (pool.length === 0) return null;
+
+  let winner = null;
+
+  if (visionSelectionEnabled()) {
+    const visionRanked = await rankCandidatesWithVision(pool, ctx);
+    winner = pickVisionWinner(visionRanked);
+
+    if (!winner) {
+      console.warn(`Vision rejected pool for ${slug} — expanding search`);
+      const { pool: widerPool } = await collectCandidatePool(slug, ctx, registry, {
+        ...options,
+        forceRefresh: false,
+        provider: undefined,
+        skipCurated: true,
+      });
+      const extra = widerPool.filter((c) => !pool.some((p) => p.assetKey === c.assetKey));
+      if (extra.length > 0) {
+        const extraRanked = await rankCandidatesWithVision(
+          [...pool.slice(0, 6), ...extra].slice(0, 14),
+          ctx,
+        );
+        winner = pickVisionWinner(extraRanked);
+      }
+    }
+  } else {
+    const strongText = pool.filter((c) => c.textScore >= 6);
+    winner = strongText[0] ?? pool[0];
+    if (winner) {
+      console.log(
+        `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+      );
+    }
+  }
+
+  return winner;
+}
+
+export function clearSlugCoverAssets(slug, coverImage, options = {}) {
+  const rootDir = options.rootDir ?? process.cwd();
+
   if (coverImage?.startsWith("/images/posts/")) {
-    const filePath = path.join(process.cwd(), "public", coverImage.replace(/^\//, ""));
+    const filePath = path.join(rootDir, "public", coverImage.replace(/^\//, ""));
     if (fs.existsSync(filePath)) {
       try {
         fs.unlinkSync(filePath);
@@ -235,7 +336,7 @@ export function clearSlugCoverAssets(slug, coverImage) {
     }
   }
 
-  const dir = path.join(process.cwd(), "public", "images", "posts", slug);
+  const dir = path.join(rootDir, "public", "images", "posts", slug);
   if (fs.existsSync(dir)) {
     for (const name of fs.readdirSync(dir)) {
       if (/\.(jpe?g|webp|png)$/i.test(name)) {
@@ -253,11 +354,16 @@ export function clearSlugCoverAssets(slug, coverImage) {
   saveImageRegistry(registry);
 }
 
+function workRoot(options) {
+  return options.rootDir ?? process.cwd();
+}
+
 /**
  * Fetch a cover image using Pexels + Pixabay with vision ranking when available.
  */
 export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   const ctx = resolveImageContext(slug, queryOrContext);
+  const rootDir = workRoot(options);
   let registry = syncImageRegistryFromPosts();
 
   const providers = allProviders(options.provider);
@@ -271,7 +377,7 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
       typeof queryOrContext === "object" && queryOrContext?.coverImage
         ? queryOrContext.coverImage
         : null;
-    clearSlugCoverAssets(slug, meta);
+    clearSlugCoverAssets(slug, meta, options);
     registry = syncImageRegistryFromPosts();
   }
 
@@ -296,68 +402,44 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
 
   console.log(`  text-ranked pool: ${pool.length} unused candidate(s)`);
 
-  let winner = null;
-
-  if (visionSelectionEnabled()) {
-    const visionRanked = await rankCandidatesWithVision(pool, ctx);
-    winner = pickVisionWinner(visionRanked);
-
-    if (!winner) {
-      console.warn(
-        `Vision rejected all candidates for ${slug} — expanding search across providers`,
-      );
-      const { pool: widerPool } = await collectCandidatePool(slug, ctx, registry, {
-        ...options,
-        forceRefresh: false,
-        provider: undefined,
-      });
-      const extra = widerPool.filter(
-        (c) => !pool.some((p) => p.assetKey === c.assetKey),
-      );
-      if (extra.length > 0) {
-        const extraRanked = await rankCandidatesWithVision(
-          [...pool.slice(0, 5), ...extra].slice(0, 12),
-          ctx,
-        );
-        winner = pickVisionWinner(extraRanked);
-      }
-    }
-  }
+  const winner = await pickWinnerFromPool(pool, ctx, registry, slug, options);
 
   if (!winner) {
-    const strongText = pool.filter((c) => c.textScore >= 6);
-    if (strongText.length > 0) {
-      winner = strongText[0];
-      console.log(
-        `  text fallback: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
-      );
-    }
+    console.warn(`No vision-approved image for ${slug} (min ${visionMinScore()}/10)`);
+    if (lastError) console.warn(lastError.message);
+    return null;
   }
 
-  if (!winner) {
-    if (!visionSelectionEnabled() && pool.length > 0) {
-      winner = pool[0];
-      console.log(
-        `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
-      );
-    } else {
-      console.warn(`No suitable image for ${slug}`);
-      if (lastError) console.warn(lastError.message);
-      return null;
-    }
-  } else if (winner.visionScore != null) {
+  if (winner.visionScore != null) {
     console.log(
       `  vision pick: ${winner.provider}:${winner.assetId} vision=${winner.visionScore}/10 text=${winner.textScore}`,
     );
   }
 
   try {
-    const downloaded = await downloadToSlug(slug, winner.imageUrl, filename);
+    const downloaded = await downloadToSlug(slug, winner.imageUrl, filename, rootDir);
+
+    if (visionSelectionEnabled()) {
+      const verify = await verifyDownloadedImage(downloaded.buffer, ctx);
+      console.log(
+        `  post-download verify: ${verify.score}/10 (${verify.reason})`,
+      );
+      if (
+        verify.score < visionMinScore() ||
+        visionReasonRejected(verify.reason)
+      ) {
+        console.warn(`Post-download vision rejected ${slug} — discarding file`);
+        fs.unlinkSync(
+          path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
+        );
+        return null;
+      }
+    }
 
     if (isImageUsed(registry, { hash: downloaded.hash })) {
       console.warn(`Downloaded hash already used — aborting ${slug}`);
       fs.unlinkSync(
-        path.join(process.cwd(), "public", downloaded.relativePath.replace(/^\//, "")),
+        path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
       );
       return null;
     }

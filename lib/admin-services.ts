@@ -104,7 +104,7 @@ async function safeDeleteGithubFile(filePath: string, message: string) {
   }
 }
 
-async function deleteGithubDirectory(dirPath: string, message: string) {
+export async function deleteGithubDirectory(dirPath: string, message: string) {
   let entries: GithubContentEntry[];
   try {
     entries = await listGithubDirectory(dirPath);
@@ -121,6 +121,23 @@ async function deleteGithubDirectory(dirPath: string, message: string) {
       await deleteGithubDirectory(entry.path, message);
     }
   }
+}
+
+export async function writeGithubBinaryFile(
+  filePath: string,
+  buffer: Buffer,
+  message: string,
+  sha?: string,
+) {
+  await githubRequest(filePath, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      content: buffer.toString("base64"),
+      ...(sha ? { sha } : {}),
+    }),
+  });
 }
 
 export async function commitPostChanges(
