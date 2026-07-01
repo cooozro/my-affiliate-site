@@ -17,6 +17,7 @@ import {
   writePostFile,
   type AdminPostRow,
 } from "@/lib/posts-admin";
+import { siteConfig } from "@/lib/site";
 
 export type CoverStatus = "ok" | "missing" | "flagged" | "no-meta" | "github-only";
 
@@ -76,12 +77,36 @@ function githubRepoRef(): { repo: string; branch: string } {
   };
 }
 
+/** `/images/posts/...` web path → `public/images/posts/...` repo path */
+function coverWebPathToRepoPath(coverImage: string): string {
+  const rel = coverImage.replace(/^\//, "");
+  return rel.startsWith("public/") ? rel : `public/${rel}`;
+}
+
+function coverWebPathToLocalPublicPath(coverImage: string): string {
+  return path.join(process.cwd(), coverWebPathToRepoPath(coverImage));
+}
+
 /** Live image on GitHub main — use in admin when Vercel bundle is stale. */
 export function githubCoverPreviewUrl(coverImage: string, version = 0): string | undefined {
   if (!coverImage?.startsWith("/")) return undefined;
   const { repo, branch } = githubRepoRef();
-  const base = `https://raw.githubusercontent.com/${repo}/${branch}/${coverImage.replace(/^\//, "")}`;
+  const base = `https://raw.githubusercontent.com/${repo}/${branch}/${coverWebPathToRepoPath(coverImage)}`;
   return version > 0 ? `${base}?v=${version}` : base;
+}
+
+function adminCoverPreviewUrl(
+  coverImage: string,
+  coverStatus: CoverStatus,
+): string | undefined {
+  if (!coverImage.startsWith("/")) return undefined;
+  if (coverStatus === "ok") {
+    return `${siteConfig.url}${coverImage}`;
+  }
+  if (usesRemotePostStore()) {
+    return githubCoverPreviewUrl(coverImage);
+  }
+  return coverImage;
 }
 
 const POST_LOCALES = ["en", "ko"] as const;
@@ -179,22 +204,22 @@ async function writeCoverBinary(
   buffer: Buffer,
   message: string,
 ) {
-  const imageRel = coverImage.replace(/^\//, "");
+  const repoPath = coverWebPathToRepoPath(coverImage);
 
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
     let existingSha: string | undefined;
     try {
-      const existing = await readGithubFile(imageRel);
+      const existing = await readGithubFile(repoPath);
       existingSha = existing.sha;
     } catch {
       existingSha = undefined;
     }
-    await writeGithubBinaryFile(imageRel, buffer, message, existingSha);
+    await writeGithubBinaryFile(repoPath, buffer, message, existingSha);
     return;
   }
 
-  const dest = path.join(process.cwd(), "public", imageRel);
+  const dest = coverWebPathToLocalPublicPath(coverImage);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, buffer);
 }
@@ -304,11 +329,7 @@ export async function assessCoverFromData(
     }
   }
 
-  const filePath = path.join(
-    process.cwd(),
-    "public",
-    coverImage.replace(/^\//, ""),
-  );
+  const filePath = coverWebPathToLocalPublicPath(coverImage);
   if (!fs.existsSync(filePath)) {
     const onGithub =
       usesRemotePostStore() &&
@@ -351,10 +372,9 @@ export async function enrichPostsWithCover(
           typeof data.coverImageAltKo === "string"
             ? data.coverImageAltKo
             : undefined,
-        coverPreviewUrl:
-          usesRemotePostStore() && cover.coverImage
-            ? githubCoverPreviewUrl(cover.coverImage)
-            : undefined,
+        coverPreviewUrl: cover.coverImage
+          ? adminCoverPreviewUrl(cover.coverImage, cover.coverStatus)
+          : undefined,
       });
     } catch {
       enriched.push({
@@ -486,17 +506,18 @@ async function commitCoverImageOnGithub(
   const imageRel = meta.coverImage.replace(/^\//, "");
   const imageAbs = path.join(rootDir, "public", imageRel);
   const imageBuffer = fs.readFileSync(imageAbs);
+  const repoPath = coverWebPathToRepoPath(meta.coverImage);
 
   let existingSha: string | undefined;
   try {
-    const existing = await readGithubFile(imageRel);
+    const existing = await readGithubFile(repoPath);
     existingSha = existing.sha;
   } catch {
     existingSha = undefined;
   }
 
   await writeGithubBinaryFile(
-    imageRel,
+    repoPath,
     imageBuffer,
     `admin: refresh cover ${slug}`,
     existingSha,
