@@ -179,6 +179,21 @@
       "hash": "efaf1f2973096639eb7844ba70bb1f1a9186d02485a3883567e6d5aa9b0ab22e",
       "provider": "pexels",
       "registeredAt": "2026-07-01T01:42:36.390Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-01T02:12:43.079Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-guide",
+      "url": "https://images.pexels.com/photos/8380078/pexels-photo-8380078.jpeg",
+      "assetKey": "pexels:8380078",
+      "hash": "9f027921a4c239736e75f64f8b213bdea0912715546a64afa1269ecb42bfd57d",
+      "provider": "pexels",
+      "registeredAt": "2026-07-01T02:12:56.665Z"
     }
   ]
 }

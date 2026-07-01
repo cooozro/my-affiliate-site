@@ -22,5 +22,8 @@
   },
   "templatePath": "docs/templates/head-to-head.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "lastError": "Integrity gate failed for 2026-bluetooth-speakers-guide: 2026-bluetooth-speakers-guide/en.md: description over 160 chars | 2026-bluetooth-speakers-guide/ko.md: Korean body too short (3767 chars, need ≥5375 — match English depth)",
+  "lastAttemptAt": "2026-07-01T02:13:06.521Z",
+  "writtenSlug": "2026-bluetooth-speakers-guide",
+  "completedAt": "2026-07-01T02:20:00.000Z"
 }
