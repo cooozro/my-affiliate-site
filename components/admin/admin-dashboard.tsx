@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import Link from "next/link";
 
 type AdminPostRow = {
@@ -13,6 +13,9 @@ type AdminPostRow = {
   hasEn: boolean;
   hasKo: boolean;
   coverImage?: string;
+  coverFilename?: string;
+  coverImageAlt?: string;
+  coverImageAltKo?: string;
   coverStatus: "ok" | "missing" | "flagged" | "no-meta";
   coverFlagReason?: string;
   coverImageProvider?: string;
@@ -65,6 +68,9 @@ export function AdminDashboard() {
   const [postFilter, setPostFilter] = useState<PostFilter>("all");
   const [coverApisReady, setCoverApisReady] = useState(true);
   const [coverBusy, setCoverBusy] = useState<string | null>(null);
+  const [uploadSlug, setUploadSlug] = useState<string | null>(null);
+  const [imageVersion, setImageVersion] = useState(0);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   async function loadData() {
     setLoading(true);
@@ -141,6 +147,58 @@ export function AdminDashboard() {
     await loadData();
   }
 
+  async function runCoverUpload(slug: string, file: File) {
+    setCoverBusy(slug);
+    setMessage("");
+    setError("");
+
+    const form = new FormData();
+    form.append("file", file);
+
+    const response = await fetch(`/api/admin/posts/${slug}/cover`, {
+      method: "POST",
+      body: form,
+    });
+
+    const data = (await response.json()) as {
+      error?: string;
+      mode?: "local" | "github";
+      coverImage?: string;
+      coverFilename?: string;
+    };
+
+    setCoverBusy(null);
+
+    if (!response.ok) {
+      setError(data.error ?? "이미지 업로드 실패");
+      return;
+    }
+
+    const deployNote =
+      data.mode === "github"
+        ? " GitHub commit 완료 — Vercel 재배포 후 1–2분 내 라이브 반영."
+        : "";
+    setMessage(
+      `커버 업로드: ${slug}${data.coverFilename ? ` (${data.coverFilename})` : ""}.${deployNote}`,
+    );
+    setImageVersion((v) => v + 1);
+    await loadData();
+  }
+
+  function openCoverUpload(slug: string) {
+    setUploadSlug(slug);
+    fileInputRef.current?.click();
+  }
+
+  function onCoverFileSelected(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    const slug = uploadSlug;
+    event.target.value = "";
+    setUploadSlug(null);
+    if (!file || !slug) return;
+    void runCoverUpload(slug, file);
+  }
+
   async function runCoverAction(slug: string, action: "refresh-cover" | "remove-cover") {
     if (action === "remove-cover") {
       const confirmed = window.confirm(`"${slug}" 커버 이미지를 삭제할까요?`);
@@ -179,6 +237,7 @@ export function AdminDashboard() {
         ? `커버 교체: ${slug}${data.coverImage ? ` → ${data.coverImage}` : ""}.${deployNote}`
         : `커버 삭제: ${slug}.${deployNote}`,
     );
+    setImageVersion((v) => v + 1);
     await loadData();
   }
 
@@ -359,13 +418,26 @@ export function AdminDashboard() {
           </div>
         </div>
 
-        {!coverApisReady ? (
-          <p className="mb-4 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm">
-            커버 자동 교체에는 Vercel에{" "}
-            <strong>PEXELS_API_KEY</strong> 또는 <strong>PIXABAY_API_KEY</strong>
-            (권장: <strong>OPENAI_API_KEY</strong> vision)가 필요합니다.
-          </p>
-        ) : null}
+      {mutations?.mode === "github" && !mutations.githubConfigured ? (
+        <p className="mb-4 rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+          커버 업로드·발행·삭제는 <strong>GITHUB_TOKEN</strong>이 필요합니다. Vercel
+          환경변수에 추가 후 재배포하세요.
+        </p>
+      ) : null}
+
+        <p className="mb-4 text-xs text-muted-foreground">
+          <strong>커버 교체</strong>: 파일 선택 창이 열립니다. 기존 파일명이 있으면 같은
+          이름으로 덮어씁니다. 아래 파일명·ALT를 참고해 수동 교체하세요.{" "}
+          <strong>자동 검색</strong>은 Pexels/Pixabay API가 있을 때만 사용합니다.
+        </p>
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          className="hidden"
+          onChange={onCoverFileSelected}
+        />
 
         <div className="overflow-x-auto">
           <table className="min-w-full text-left text-sm">
@@ -384,7 +456,7 @@ export function AdminDashboard() {
               {visiblePosts.map((post) => (
                 <tr key={post.slug} className="border-b border-border/60">
                   <td className="px-3 py-3 align-top">
-                    <CoverCell post={post} />
+                    <CoverCell post={post} imageVersion={imageVersion} />
                   </td>
                   <td className="px-3 py-3 font-mono text-xs">{post.slug}</td>
                   <td className="px-3 py-3">{post.titleEn}</td>
@@ -451,11 +523,27 @@ export function AdminDashboard() {
                       </button>
                       <button
                         type="button"
-                        disabled={coverBusy === post.slug || !coverApisReady}
-                        onClick={() => void runCoverAction(post.slug, "refresh-cover")}
+                        disabled={
+                          coverBusy === post.slug ||
+                          (mutations?.mode === "github" && !mutations.githubConfigured)
+                        }
+                        onClick={() => openCoverUpload(post.slug)}
                         className="rounded border border-sky-500/40 px-2 py-1 text-xs text-sky-700 hover:bg-sky-500/10 disabled:opacity-40 dark:text-sky-300"
                       >
                         {coverBusy === post.slug ? "…" : "커버 교체"}
+                      </button>
+                      <button
+                        type="button"
+                        disabled={coverBusy === post.slug || !coverApisReady}
+                        title={
+                          coverApisReady
+                            ? "Pexels/Pixabay에서 자동 검색"
+                            : "API 키 미설정"
+                        }
+                        onClick={() => void runCoverAction(post.slug, "refresh-cover")}
+                        className="rounded border border-border px-2 py-1 text-xs text-muted-foreground hover:bg-muted disabled:opacity-40"
+                      >
+                        자동 검색
                       </button>
                       {post.coverImage ? (
                         <button
@@ -491,7 +579,13 @@ export function AdminDashboard() {
   );
 }
 
-function CoverCell({ post }: { post: AdminPostRow }) {
+function CoverCell({
+  post,
+  imageVersion,
+}: {
+  post: AdminPostRow;
+  imageVersion: number;
+}) {
   const statusStyles: Record<AdminPostRow["coverStatus"], string> = {
     ok: "bg-green-500/15 text-green-700 dark:text-green-300",
     missing: "bg-red-500/15 text-red-700 dark:text-red-300",
@@ -506,13 +600,17 @@ function CoverCell({ post }: { post: AdminPostRow }) {
     "no-meta": "없음",
   };
 
+  const imgSrc = post.coverImage
+    ? `${post.coverImage}${post.coverImage.includes("?") ? "&" : "?"}v=${imageVersion}`
+    : undefined;
+
   return (
-    <div className="flex max-w-[140px] flex-col gap-2">
-      {post.coverImage ? (
+    <div className="flex max-w-[220px] flex-col gap-1.5">
+      {imgSrc ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={post.coverImage}
-          alt=""
+          src={imgSrc}
+          alt={post.coverImageAlt ?? ""}
           className="h-16 w-28 rounded border border-border object-cover"
         />
       ) : (
@@ -520,6 +618,28 @@ function CoverCell({ post }: { post: AdminPostRow }) {
           No image
         </div>
       )}
+      {post.coverFilename ? (
+        <p
+          className="break-all font-mono text-[10px] leading-snug text-foreground"
+          title={post.coverFilename}
+        >
+          {post.coverFilename}
+        </p>
+      ) : null}
+      {post.coverImageAlt ? (
+        <p className="text-[10px] leading-snug text-muted-foreground" title={post.coverImageAlt}>
+          <span className="font-medium text-foreground/80">ALT:</span> {post.coverImageAlt}
+        </p>
+      ) : null}
+      {post.coverImageAltKo ? (
+        <p
+          className="text-[10px] leading-snug text-muted-foreground"
+          title={post.coverImageAltKo}
+        >
+          <span className="font-medium text-foreground/80">ALT KO:</span>{" "}
+          {post.coverImageAltKo}
+        </p>
+      ) : null}
       <span
         className={`inline-flex w-fit rounded-full px-2 py-0.5 text-[10px] font-medium ${statusStyles[post.coverStatus]}`}
         title={post.coverFlagReason}

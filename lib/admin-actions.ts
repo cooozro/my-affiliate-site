@@ -5,6 +5,7 @@ import {
   enrichPostsWithCover,
   refreshPostCover,
   removePostCover,
+  uploadPostCover,
 } from "@/lib/cover-admin";
 import {
   commitPostChanges,
@@ -285,6 +286,13 @@ export async function deletePost(slug: string) {
 
 export function getPostPreview(slug: string, locale: "en" | "ko") {
   return readPostFile(slug, locale);
+}
+
+export async function uploadCoverImage(
+  slug: string,
+  file: { buffer: Buffer; mimeType: string; originalName?: string },
+) {
+  return uploadPostCover(slug, file);
 }
 
 export async function refreshCoverImage(slug: string) {

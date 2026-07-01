@@ -22,6 +22,9 @@ export type CoverStatus = "ok" | "missing" | "flagged" | "no-meta";
 
 export type AdminPostCoverInfo = {
   coverImage?: string;
+  coverFilename?: string;
+  coverImageAlt?: string;
+  coverImageAltKo?: string;
   coverStatus: CoverStatus;
   coverFlagReason?: string;
   coverImageProvider?: string;
@@ -50,10 +53,170 @@ type CoverFetchMeta = {
   imageSearchKeywords?: string[];
 };
 
+const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
+const ALLOWED_MIME = new Set(["image/jpeg", "image/png", "image/webp"]);
+
+function coverFilenameFromPath(coverImage?: string): string | undefined {
+  if (!coverImage) return undefined;
+  const parts = coverImage.split("/");
+  return parts[parts.length - 1] || undefined;
+}
+
+function extForMime(mimeType: string): string {
+  if (mimeType === "image/png") return "png";
+  if (mimeType === "image/webp") return "webp";
+  return "jpg";
+}
+
+async function readEnPostData(slug: string): Promise<Record<string, unknown>> {
+  if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
+    const matter = await import("gray-matter");
+    const enFile = await readGithubFile(`content/posts/${slug}/en.md`);
+    return matter.default(enFile.content).data as Record<string, unknown>;
+  }
+  if (!slugExists(slug)) {
+    throw new Error(`Post not found: ${slug}`);
+  }
+  return readPostFile(slug, "en").data;
+}
+
+function resolveUploadCoverPath(
+  slug: string,
+  enData: Record<string, unknown>,
+  mimeType: string,
+  originalName?: string,
+): string {
+  const existing =
+    typeof enData.coverImage === "string" ? enData.coverImage.trim() : "";
+  if (existing.startsWith(`/images/posts/${slug}/`)) {
+    return existing;
+  }
+
+  const ext = extForMime(mimeType);
+  const fromUpload = originalName
+    ?.split(/[/\\]/)
+    .pop()
+    ?.replace(/[^a-zA-Z0-9._-]/g, "");
+  const filename =
+    fromUpload && /\.(jpe?g|png|webp)$/i.test(fromUpload)
+      ? fromUpload
+      : `${slug}-cover.${ext}`;
+  return `/images/posts/${slug}/${filename}`;
+}
+
+function makeUploadCoverMutate(coverImage: string) {
+  return (
+    locale: "en" | "ko",
+    data: Record<string, unknown>,
+    content: string,
+  ) => {
+    const next: Record<string, unknown> = {
+      ...data,
+      coverImage,
+      coverImageProvider: "admin-upload",
+      coverImageCredit: "Uploaded via admin",
+      updatedAt: new Date().toISOString(),
+    };
+    delete next.coverImageAssetId;
+    delete next.coverImageSourceUrl;
+    return { data: next, content };
+  };
+}
+
+async function writeCoverBinary(
+  slug: string,
+  coverImage: string,
+  buffer: Buffer,
+  message: string,
+) {
+  const imageRel = coverImage.replace(/^\//, "");
+
+  if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
+    let existingSha: string | undefined;
+    try {
+      const existing = await readGithubFile(imageRel);
+      existingSha = existing.sha;
+    } catch {
+      existingSha = undefined;
+    }
+    await writeGithubBinaryFile(imageRel, buffer, message, existingSha);
+    return;
+  }
+
+  const dest = path.join(process.cwd(), "public", imageRel);
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, buffer);
+}
+
+async function applyCoverPathToPosts(
+  slug: string,
+  coverImage: string,
+  commitMessage: string,
+) {
+  const mutate = makeUploadCoverMutate(coverImage);
+
+  if (usesRemotePostStore()) {
+    await commitPostChanges(slug, commitMessage, mutate);
+    await triggerVercelDeploy();
+    return { mode: "github" as const };
+  }
+
+  for (const locale of ["en", "ko"] as const) {
+    const filePath = path.join(process.cwd(), "content", "posts", slug, `${locale}.md`);
+    if (!fs.existsSync(filePath)) continue;
+    const { data, content } = readPostFile(slug, locale);
+    const next = mutate(locale, data, content);
+    writePostFile(slug, locale, next.data, next.content);
+  }
+
+  return { mode: "local" as const };
+}
+
 function imageApisConfigured(): boolean {
   return Boolean(
     process.env.PEXELS_API_KEY?.trim() || process.env.PIXABAY_API_KEY?.trim(),
   );
+}
+
+export async function uploadPostCover(
+  slug: string,
+  file: { buffer: Buffer; mimeType: string; originalName?: string },
+) {
+  if (!ALLOWED_MIME.has(file.mimeType)) {
+    throw new Error("JPEG, PNG, WebP 이미지만 업로드할 수 있습니다.");
+  }
+  if (file.buffer.length > MAX_UPLOAD_BYTES) {
+    throw new Error("이미지는 4MB 이하여야 합니다.");
+  }
+
+  const enData = await readEnPostData(slug);
+  const coverImage = resolveUploadCoverPath(
+    slug,
+    enData,
+    file.mimeType,
+    file.originalName,
+  );
+
+  await writeCoverBinary(
+    slug,
+    coverImage,
+    file.buffer,
+    `admin: upload cover ${slug}`,
+  );
+
+  const result = await applyCoverPathToPosts(
+    slug,
+    coverImage,
+    `admin: upload cover ${slug}`,
+  );
+
+  return {
+    ...result,
+    coverImage,
+    coverFilename: coverFilenameFromPath(coverImage),
+  };
 }
 
 async function loadBlockedAssetIds(): Promise<Set<string>> {
@@ -129,7 +292,15 @@ export async function enrichPostsWithCover(
       }
     }
     const cover = await assessCoverFromData(post.slug, data);
-    enriched.push({ ...post, ...cover });
+    enriched.push({
+      ...post,
+      ...cover,
+      coverFilename: coverFilenameFromPath(cover.coverImage),
+      coverImageAlt:
+        typeof data.coverImageAlt === "string" ? data.coverImageAlt : undefined,
+      coverImageAltKo:
+        typeof data.coverImageAltKo === "string" ? data.coverImageAltKo : undefined,
+    });
   }
 
   return enriched;
@@ -280,16 +451,7 @@ export async function refreshPostCover(slug: string) {
     throw new Error(`Post not found: ${slug}`);
   }
 
-  let enData: Record<string, unknown>;
-
-  if (usesRemotePostStore()) {
-    assertGithubAdminConfigured();
-    const matter = await import("gray-matter");
-    const enFile = await readGithubFile(`content/posts/${slug}/en.md`);
-    enData = matter.default(enFile.content).data as Record<string, unknown>;
-  } else {
-    enData = readPostFile(slug, "en").data;
-  }
+  const enData = await readEnPostData(slug);
 
   const { meta, rootDir } = await fetchNewCoverMeta(slug, enData);
   const { buildCoverAlt } = await import("../scripts/lib/image-query.mjs");
