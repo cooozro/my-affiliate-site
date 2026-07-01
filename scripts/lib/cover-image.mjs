@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import crypto from "crypto";
 import {
-  buildCoverAlt,
+  buildCoverAlts,
   buildCoverFilename,
   BLOCKED_ASSET_IDS,
   CURATED_SLUG_ASSETS,
@@ -382,8 +382,9 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   }
 
   const filename = buildCoverFilename(ctx.productKeywords, slug);
-  const coverImageAlt = buildCoverAlt("en", ctx);
-  const coverImageAltKo = buildCoverAlt("ko", ctx);
+  const alts = buildCoverAlts(ctx);
+  const coverImageAlt = alts.en;
+  const coverImageAltKo = alts.ko;
 
   console.log(`Image search: ${slug}`);
   console.log(`  keywords: ${ctx.productKeywords.join(" | ")}`);

@@ -15,9 +15,7 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
-coverImageAlt: >-
-  mechanical keyboard hot swap keyboard — First Mechanical Keyboard? Hot-Swap
-  and Switch Type Beat the Hype cover photo
+coverImageAlt: mechanical keyboard on a desk
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
 updatedAt: '2026-06-26T08:03:41.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
@@ -29,9 +27,7 @@ imageSearchKeywords:
   - mechanical keyboard
   - hot swap keyboard
   - gaming keyboard desk
-coverImageAltKo: >-
-  기계식 키보드 — First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype 커버
-  이미지
+coverImageAltKo: 책상 위의 기계식 키보드
 ---
 ## Editorial Overview
 

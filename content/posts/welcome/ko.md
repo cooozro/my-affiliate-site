@@ -1,11 +1,15 @@
 ---
-title: "제품 리뷰 방법론"
-description: "AI Pick & Report가 스마트폰·가전·전자기기를 구조화된 데이터로 평가하는 방법을 소개합니다."
-date: "2026-06-25"
-tags: ["방법론", "기술 리뷰", "구매 가이드"]
-coverImage: "/images/posts/welcome/cover.jpg"
-coverImageAlt: "제품 리서치를 위한 노트북과 메모"
-coverImageCredit: "Photo by fauxels / Pexels"
+title: 제품 리뷰 방법론
+description: AI Pick & Report가 스마트폰·가전·전자기기를 구조화된 데이터로 평가하는 방법을 소개합니다.
+date: '2026-06-25'
+tags:
+  - 방법론
+  - 기술 리뷰
+  - 구매 가이드
+coverImage: /images/posts/welcome/cover.jpg
+coverImageAlt: 책상 위 노트북과 메모
+coverImageCredit: Photo by fauxels / Pexels
+coverImageAltKo: 책상 위 노트북과 메모
 ---
 
 ## 리뷰 프레임워크

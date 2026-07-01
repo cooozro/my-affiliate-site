@@ -14,7 +14,7 @@ import {
   saveState,
 } from "./state.mjs";
 import { pickContentProfile } from "../lib/content-profiles.mjs";
-import { buildCoverAlt, resolveImageContext } from "../lib/image-query.mjs";
+import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 
 const MAX_WRITES_PER_DAY = 2;
 const TARGET_DRAFT_BUFFER = 2;
@@ -86,6 +86,9 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
     ...(shared.liveData ? { liveData: true } : {}),
     ...(shared.coverImage ? { coverImage: shared.coverImage } : {}),
     ...(coverImageAlt ? { coverImageAlt } : {}),
+    ...(locale === "en" && shared.coverImageAltKo
+      ? { coverImageAltKo: shared.coverImageAltKo }
+      : {}),
     ...(shared.coverImageCredit ? { coverImageCredit: shared.coverImageCredit } : {}),
     ...(shared.coverImageProvider ? { coverImageProvider: shared.coverImageProvider } : {}),
   };
@@ -170,16 +173,10 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     liveData: Boolean(article.liveData ?? topic.liveData),
     ...(imageMeta ?? {}),
     ...(imageMeta
-      ? {
-          coverImageAlt: buildCoverAlt("en", {
-            ...imageContext,
-            title: article.en?.title,
-          }),
-          coverImageAltKo: buildCoverAlt("ko", {
-            ...imageContext,
-            title: article.ko?.title,
-          }),
-        }
+      ? (() => {
+          const alts = buildCoverAlts(imageContext);
+          return { coverImageAlt: alts.en, coverImageAltKo: alts.ko };
+        })()
       : {}),
   };
 

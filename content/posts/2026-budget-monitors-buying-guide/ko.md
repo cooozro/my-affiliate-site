@@ -12,11 +12,12 @@ contentProfile: buying-guide
 draft: false
 liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
-coverImageAlt: computer monitor desk setup
+coverImageAlt: 책상의 모니터
 coverImageCredit: Photo by sebagee / Pixabay
 updatedAt: '2026-06-27T01:16:46.000Z'
 publishedAt: '2026-06-27T01:16:46.000Z'
 coverImageProvider: pixabay
+coverImageAltKo: 책상의 모니터
 ---
 ## 편집부 개요
 

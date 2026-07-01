@@ -4,5 +4,6 @@ export {
   resolveImageContext,
   deriveProductKeywords,
   buildCoverAlt,
+  buildCoverAlts,
   buildSearchQueries,
 } from "../lib/image-query.mjs";

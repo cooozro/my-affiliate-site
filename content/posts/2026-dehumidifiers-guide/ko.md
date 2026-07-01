@@ -15,7 +15,7 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
-coverImageAlt: '제습기 — 습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다 커버 이미지'
+coverImageAlt: 습한 실내의 제습기
 coverImageCredit: Photo by Jakub Zerdzicki / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 16695385
@@ -24,6 +24,7 @@ coverImageSourceUrl: >-
 imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
+coverImageAltKo: 습한 실내의 제습기
 updatedAt: '2026-07-01T10:41:45.000Z'
 publishedAt: '2026-07-01T10:41:45.000Z'
 ---

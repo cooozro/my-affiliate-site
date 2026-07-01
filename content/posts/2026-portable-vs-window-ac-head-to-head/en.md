@@ -15,9 +15,7 @@ draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
-coverImageAlt: >-
-  portable air conditioner window air conditioner unit — Portable vs Window AC:
-  Which Cools a Small Apartment Better in Summer? cover photo
+coverImageAlt: portable air conditioner in an apartment room
 coverImageCredit: Photo by Geri Tech / Pexels
 updatedAt: '2026-06-27T07:15:04.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
@@ -28,9 +26,7 @@ coverImageSourceUrl: >-
 imageSearchKeywords:
   - portable air conditioner
   - window air conditioner unit
-coverImageAltKo: >-
-  이동식 에어컨 — Portable vs Window AC: Which Cools a Small Apartment Better in
-  Summer? 커버 이미지
+coverImageAltKo: 원룸의 이동식 에어컨
 ---
 ## Editorial Overview
 

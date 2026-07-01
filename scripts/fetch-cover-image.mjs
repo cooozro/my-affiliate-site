@@ -17,7 +17,7 @@ import {
   fetchCoverImage,
   pickImageProvider,
 } from "./lib/cover-image.mjs";
-import { buildCoverAlt, resolveImageContext } from "./lib/image-query.mjs";
+import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "content", "posts");
@@ -132,11 +132,12 @@ async function main() {
     const altCtx = {
       ...imageContext,
       productKeywords: meta.imageSearchKeywords ?? imageContext.productKeywords,
-      title: postMeta?.title,
     };
+    const alts = buildCoverAlts(altCtx);
     const updated = updateFrontmatter(slug, loc, {
       coverImage: meta.coverImage,
-      coverImageAlt: buildCoverAlt(loc === "ko" ? "ko" : "en", altCtx),
+      coverImageAlt: loc === "ko" ? alts.ko : alts.en,
+      ...(loc === "en" ? { coverImageAltKo: alts.ko } : { coverImageAltKo: alts.ko }),
       coverImageCredit: meta.coverImageCredit,
       ...(meta.imageSearchKeywords
         ? { imageSearchKeywords: meta.imageSearchKeywords }

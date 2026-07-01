@@ -58,6 +58,7 @@ export const SLUG_IMAGE_PROFILES = {
       "room air cleaner device",
       "indoor air purifier",
     ],
+    altScene: { en: "in a small bedroom", ko: "작은 침실" },
     extraSearchQueries: [
       "white HEPA air purifier product isolated",
       "air purifier appliance close up white",
@@ -83,6 +84,7 @@ export const SLUG_IMAGE_PROFILES = {
       "room air conditioner appliance",
     ],
     topicCluster: "air-conditioning",
+    altScene: { en: "in an apartment room", ko: "원룸" },
   },
   "2026-budget-mechanical-keyboards-guide": {
     imageSearchKeywords: [
@@ -95,6 +97,7 @@ export const SLUG_IMAGE_PROFILES = {
       "tenkeyless mechanical keyboard",
     ],
     topicCluster: "computing",
+    altScene: { en: "on a desk", ko: "책상 위" },
   },
   "2026-budget-smartphones-under-300": {
     imageSearchKeywords: [
@@ -106,6 +109,7 @@ export const SLUG_IMAGE_PROFILES = {
       "mobile phone budget device",
     ],
     topicCluster: "smartphones",
+    altScene: { en: "on a desk", ko: "책상 위" },
   },
   "2026-budget-wireless-earbuds-top5": {
     imageSearchKeywords: [
@@ -118,6 +122,7 @@ export const SLUG_IMAGE_PROFILES = {
       "bluetooth earbuds product photo",
     ],
     topicCluster: "audio",
+    altScene: { en: "with charging case on a desk", ko: "책상 위" },
   },
   "2026-dehumidifiers-guide": {
     imageSearchKeywords: [
@@ -130,6 +135,7 @@ export const SLUG_IMAGE_PROFILES = {
     ],
     forbiddenSubjects: ["air purifier", "vacuum cleaner", "clock", "watch"],
     topicCluster: "air-quality",
+    altScene: { en: "in a humid room", ko: "습한 실내" },
   },
   "2026-power-banks-guide": {
     imageSearchKeywords: [
@@ -150,6 +156,7 @@ export const SLUG_IMAGE_PROFILES = {
       "alarm clock",
     ],
     topicCluster: "power",
+    altScene: { en: "charging a smartphone", ko: "책상 위" },
   },
   "2026-budget-power-banks-guide": {
     imageSearchKeywords: [
@@ -163,6 +170,29 @@ export const SLUG_IMAGE_PROFILES = {
     ],
     forbiddenSubjects: ["clock", "wristwatch", "watch", "wall clock"],
     topicCluster: "power",
+    altScene: { en: "on a travel desk", ko: "책상 위" },
+  },
+  "2026-summer-ac-buying-checklist": {
+    imageSearchKeywords: ["portable air conditioner", "window air conditioner"],
+    altScene: { en: "in a summer bedroom", ko: "여름 침실" },
+    topicCluster: "air-conditioning",
+  },
+  "2026-summer-bluetooth-speakers-guide": {
+    imageSearchKeywords: ["portable bluetooth speaker", "outdoor speaker"],
+    altScene: { en: "outdoors in summer", ko: "여름 야외" },
+    topicCluster: "audio",
+  },
+  "2026-budget-monitors-buying-guide": {
+    imageSearchKeywords: ["computer monitor", "desk monitor setup"],
+    altScene: { en: "on a workspace desk", ko: "책상" },
+    topicCluster: "computing",
+  },
+  welcome: {
+    imageSearchKeywords: ["laptop notebook desk research"],
+    coverAlt: {
+      en: "Laptop and notebook on a desk",
+      ko: "책상 위 노트북과 메모",
+    },
   },
 };
 
@@ -525,23 +555,108 @@ export function buildCoverFilename(productKeywords, slug) {
   return `${fallback || "cover"}-cover.jpg`;
 }
 
+const CLUSTER_ALT_SCENES = {
+  "air-quality": { en: "in a small room", ko: "작은 방" },
+  "air-conditioning": { en: "in an apartment room", ko: "원룸" },
+  audio: { en: "on a desk", ko: "책상 위" },
+  smartphones: { en: "on a desk", ko: "책상 위" },
+  computing: { en: "on a workspace desk", ko: "책상" },
+  power: { en: "charging a phone", ko: "스마트폰 충전" },
+  "smart-home": { en: "in a home interior", ko: "실내" },
+};
+
+/**
+ * Short English subject for alt text (no title, no "cover photo").
+ * @param {string[]} productKeywords
+ */
+export function altSubjectEn(productKeywords) {
+  const raw = productKeywords[0]?.trim() || productKeywords.join(" ").trim() || "product";
+  const lower = raw.toLowerCase();
+
+  if (lower.includes("air purifier") || lower.includes("hepa")) return "HEPA air purifier";
+  if (lower.includes("dehumidifier")) return "home dehumidifier";
+  if (lower.includes("portable") && (lower.includes("air") || lower.includes("ac"))) {
+    return "portable air conditioner";
+  }
+  if (lower.includes("window") && lower.includes("air")) return "window air conditioner";
+  if (lower.includes("air conditioner") || lower.includes("btu")) return "room air conditioner";
+  if (lower.includes("power bank")) return "portable power bank";
+  if (lower.includes("earbuds") || lower.includes("earphone")) return "wireless earbuds";
+  if (lower.includes("headphone")) return "noise-cancelling headphones";
+  if (lower.includes("smartphone") || lower.includes("phone")) return "budget smartphone";
+  if (lower.includes("keyboard")) return "mechanical keyboard";
+  if (lower.includes("monitor")) return "computer monitor";
+  if (lower.includes("bluetooth") && lower.includes("speaker")) {
+    return "portable Bluetooth speaker";
+  }
+  if (lower.includes("speaker")) return "Bluetooth speaker";
+  if (lower.includes("webcam")) return "webcam";
+  if (lower.includes("tablet")) return "tablet";
+  if (lower.includes("fitness") || lower.includes("tracker")) return "fitness tracker";
+  if (lower.includes("robot") && lower.includes("vacuum")) return "robot vacuum";
+  if (lower.includes("vacuum")) return "cordless vacuum";
+  if (lower.includes("fan")) return "electric fan";
+  if (lower.includes("humidifier")) return "humidifier";
+  if (lower.includes("laptop")) return "laptop";
+
+  return raw.split(/\s+/).slice(0, 4).join(" ");
+}
+
+/**
+ * @param {string[]} productKeywords
+ */
+export function altSubjectKo(productKeywords) {
+  return mapKeywordToKo(altSubjectEn(productKeywords));
+}
+
+function resolveAltScene(ctx) {
+  const profile = slugProfile(ctx.slug);
+  if (profile?.altScene) return profile.altScene;
+
+  const cluster =
+    ctx.topicCluster ?? inferClusterFromKeywords(ctx.productKeywords ?? []);
+  return CLUSTER_ALT_SCENES[cluster] ?? null;
+}
+
 /**
  * @param {'en' | 'ko'} locale
- * @param {{ title?: string, productKeywords: string[] }} ctx
+ * @param {{ slug?: string, title?: string, productKeywords: string[], topicCluster?: string }} ctx
  */
 export function buildCoverAlt(locale, ctx) {
-  const keywords = ctx.productKeywords.slice(0, 3);
-  const focus = primaryImageKeyword(ctx.productKeywords);
-  const title = ctx.title?.trim();
-
-  if (locale === "ko") {
-    const koFocus = mapKeywordToKo(focus);
-    if (title) return `${koFocus} — ${title} 커버 이미지`;
-    return `${koFocus} 제품 사진`;
+  const profile = slugProfile(ctx.slug);
+  if (profile?.coverAlt?.[locale]) {
+    return profile.coverAlt[locale];
   }
 
-  if (title) return `${focus} — ${title} cover photo`;
-  return `${focus} product photo`;
+  const scene = resolveAltScene(ctx);
+  const keywords = ctx.productKeywords ?? [];
+
+  if (locale === "ko") {
+    const subject = altSubjectKo(keywords);
+    if (scene?.ko) return `${scene.ko}의 ${subject}`;
+    return subject;
+  }
+
+  const subject = altSubjectEn(keywords);
+  if (scene?.en) return `${subject} ${scene.en}`;
+  return subject;
+}
+
+/**
+ * @param {{ slug?: string, title?: string, productKeywords: string[], topicCluster?: string }} ctx
+ */
+export function buildCoverAlts(ctx) {
+  const topicCluster =
+    ctx.topicCluster ??
+    (ctx.slug
+      ? resolveImageContext(ctx.slug, ctx).topicCluster
+      : inferClusterFromKeywords(ctx.productKeywords ?? []));
+
+  const full = { ...ctx, topicCluster };
+  return {
+    en: buildCoverAlt("en", full),
+    ko: buildCoverAlt("ko", full),
+  };
 }
 
 function mapKeywordToKo(keyword) {
@@ -557,6 +672,17 @@ function mapKeywordToKo(keyword) {
   if (k.includes("monitor")) return "모니터";
   if (k.includes("power bank")) return "보조배터리";
   if (k.includes("bluetooth speaker")) return "블루투스 스피커";
+  if (k.includes("webcam")) return "웹캠";
+  if (k.includes("tablet")) return "태블릿";
+  if (k.includes("fitness") || k.includes("tracker")) return "피트니스 트래커";
+  if (k.includes("robot") && k.includes("vacuum")) return "로봇 청소기";
+  if (k.includes("vacuum")) return "무선 청소기";
+  if (k.includes("fan")) return "선풍기";
+  if (k.includes("humidifier")) return "가습기";
+  if (k.includes("laptop")) return "노트북";
+  if (k.includes("product research") || k.includes("notebook")) {
+    return "노트북과 메모";
+  }
   return keyword;
 }
 

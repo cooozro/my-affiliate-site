@@ -15,10 +15,8 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
-coverImageAlt: 'HEPA 공기청정기 — 폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다 커버 이미지'
-coverImageAltKo: >-
-  Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs — air
-  purifier·home appliances·indoor air quality 커버 이미지
+coverImageAlt: 작은 침실의 HEPA 공기청정기
+coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Photo by Michelangelo Buonarroti / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 4176366

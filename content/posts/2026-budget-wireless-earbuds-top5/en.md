@@ -13,9 +13,7 @@ contentProfile: buying-guide
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-wireless-earbuds-top5/wireless-earbuds-true-wireless-earphones-cover.jpg
-coverImageAlt: >-
-  wireless earbuds true wireless earphones — Budget Wireless Earbuds: When LDAC
-  and ANC Beat Brand Names cover photo
+coverImageAlt: wireless earbuds with charging case on a desk
 coverImageCredit: Photo by Gije Cho / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 2933606
@@ -25,7 +23,7 @@ imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones
   - TWS earbuds case
-coverImageAltKo: '무선 이어폰 — Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names 커버 이미지'
+coverImageAltKo: 책상 위의 무선 이어폰
 ---
 
 ## Editorial Overview

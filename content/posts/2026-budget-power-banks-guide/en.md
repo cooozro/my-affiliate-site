@@ -16,9 +16,7 @@ draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
-coverImageAlt: >-
-  portable power bank USB-C power bank — Travel-Ready Power Banks: How Wh and PD
-  Wattage Change the Pick cover photo
+coverImageAlt: portable power bank on a travel desk
 coverImageCredit: Photo by ready made / Pexels
 updatedAt: '2026-06-25T12:06:58.000Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
@@ -30,7 +28,7 @@ imageSearchKeywords:
   - portable power bank
   - USB-C power bank
   - phone charging battery pack
-coverImageAltKo: '보조배터리 — Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick 커버 이미지'
+coverImageAltKo: 책상 위의 보조배터리
 ---
 ## Editorial Overview
 

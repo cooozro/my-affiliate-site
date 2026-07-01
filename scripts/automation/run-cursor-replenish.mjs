@@ -8,7 +8,7 @@ import fs from "fs";
 import path from "path";
 import { Agent, CursorAgentError } from "@cursor/sdk";
 import { fetchCoverImage } from "./fetch-image.mjs";
-import { resolveImageContext, buildCoverAlt } from "../lib/image-query.mjs";
+import { resolveImageContext, buildCoverAlts } from "../lib/image-query.mjs";
 import {
   completeCursorDraftRequest,
   readCursorDraftRequest,
@@ -101,6 +101,8 @@ async function ensureCoverImage(slug, topic) {
   const meta = await fetchCoverImage(slug, imageContext);
   if (!meta) return;
 
+  const alts = buildCoverAlts(imageContext);
+
   for (const locale of ["en", "ko"]) {
     const postPath = path.join(process.cwd(), "content", "posts", slug, `${locale}.md`);
     if (!fs.existsSync(postPath)) continue;
@@ -111,10 +113,8 @@ async function ensureCoverImage(slug, topic) {
       {
         ...postData,
         ...meta,
-        coverImageAlt: buildCoverAlt(locale === "ko" ? "ko" : "en", {
-          ...imageContext,
-          title: postData.title,
-        }),
+        coverImageAlt: locale === "ko" ? alts.ko : alts.en,
+        coverImageAltKo: alts.ko,
         ...(meta.coverImageAssetId != null
           ? { coverImageAssetId: meta.coverImageAssetId }
           : {}),

@@ -13,7 +13,7 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
-coverImageAlt: '기계식 키보드 — 첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다 커버 이미지'
+coverImageAlt: 책상 위의 기계식 키보드
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
 updatedAt: '2026-06-26T08:03:41.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
@@ -25,6 +25,7 @@ imageSearchKeywords:
   - mechanical keyboard
   - hot swap keyboard
   - gaming keyboard desk
+coverImageAltKo: 책상 위의 기계식 키보드
 ---
 ## 편집부 개요
 

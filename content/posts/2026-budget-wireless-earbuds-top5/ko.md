@@ -11,7 +11,7 @@ contentProfile: buying-guide
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-wireless-earbuds-top5/wireless-earbuds-true-wireless-earphones-cover.jpg
-coverImageAlt: '무선 이어폰 — 5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다 커버 이미지'
+coverImageAlt: 책상 위의 무선 이어폰
 coverImageCredit: Photo by Gije Cho / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 2933606
@@ -21,6 +21,7 @@ imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones
   - TWS earbuds case
+coverImageAltKo: 책상 위의 무선 이어폰
 ---
 
 ## 편집부 개요

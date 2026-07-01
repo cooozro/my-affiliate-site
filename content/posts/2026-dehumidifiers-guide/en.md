@@ -15,9 +15,7 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
-coverImageAlt: >-
-  home dehumidifier room dehumidifier appliance — Humid Summer Rooms: Pint
-  Capacity, dB, and Daily kWh Before You Buy cover photo
+coverImageAlt: home dehumidifier in a humid room
 coverImageCredit: Photo by Jakub Zerdzicki / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 16695385
@@ -26,9 +24,7 @@ coverImageSourceUrl: >-
 imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
-coverImageAltKo: >-
-  제습기 — Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy 커버
-  이미지
+coverImageAltKo: 습한 실내의 제습기
 updatedAt: '2026-07-01T10:41:45.000Z'
 publishedAt: '2026-07-01T10:41:45.000Z'
 ---

@@ -17,7 +17,7 @@ import {
   clearSlugCoverAssets,
   fetchCoverImage,
 } from "./lib/cover-image.mjs";
-import { buildCoverAlt } from "./lib/image-query.mjs";
+import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -98,10 +98,16 @@ async function refreshSlug(slug) {
     return false;
   }
 
-  const ctx = {
-    productKeywords: meta.imageSearchKeywords ?? en.data.imageSearchKeywords ?? [],
+  const imageInput = {
     title: en.data.title,
+    tags: en.data.tags,
+    imageSearchKeywords: en.data.imageSearchKeywords,
+    imageQuery: en.data.imageQuery,
+    topicCluster: en.data.topicCluster,
+    coverImage: en.data.coverImage,
   };
+  const ctx = resolveImageContext(slug, imageInput);
+  const alts = buildCoverAlts(ctx);
 
   for (const locale of ["en", "ko"]) {
     const post = readPost(slug, locale);
@@ -110,11 +116,7 @@ async function refreshSlug(slug) {
     const next = {
       ...post.data,
       coverImage: meta.coverImage,
-      coverImageAlt: buildCoverAlt(locale === "ko" ? "ko" : "en", {
-        ...ctx,
-        productKeywords: meta.imageSearchKeywords ?? ctx.productKeywords,
-        title: post.data.title ?? en.data.title,
-      }),
+      coverImageAlt: locale === "ko" ? alts.ko : alts.en,
       coverImageCredit: meta.coverImageCredit,
       coverImageProvider: meta.coverImageProvider,
       coverImageAssetId: meta.coverImageAssetId,
@@ -124,8 +126,10 @@ async function refreshSlug(slug) {
         : {}),
     };
 
-    if (locale === "en" && meta.coverImageAltKo) {
-      next.coverImageAltKo = meta.coverImageAltKo;
+    if (locale === "en") {
+      next.coverImageAltKo = alts.ko;
+    } else {
+      next.coverImageAltKo = alts.ko;
     }
 
     writePost(slug, locale, next, post.content);

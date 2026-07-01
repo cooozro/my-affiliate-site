@@ -8,7 +8,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { fetchCoverImage, availableImageProviders } from "./lib/cover-image.mjs";
-import { buildCoverAlt, resolveImageContext } from "./lib/image-query.mjs";
+import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
 import {
   hashFile,
   loadImageRegistry,
@@ -81,18 +81,17 @@ async function refreshSlug(slug) {
     return false;
   }
 
+  const alts = buildCoverAlts(imageContext);
+
   for (const locale of ["en", "ko"]) {
     const localePath = path.join(POSTS_DIR, slug, `${locale}.md`);
     if (!fs.existsSync(localePath)) continue;
     const post = matter(fs.readFileSync(localePath, "utf8"));
-    const coverImageAlt = buildCoverAlt(locale === "ko" ? "ko" : "en", {
-      ...imageContext,
-      title: post.data.title,
-    });
     const next = {
       ...post.data,
       coverImage: meta.coverImage,
-      coverImageAlt,
+      coverImageAlt: locale === "ko" ? alts.ko : alts.en,
+      coverImageAltKo: alts.ko,
       coverImageCredit: meta.coverImageCredit,
       coverImageProvider: meta.coverImageProvider,
       coverImageAssetId: meta.coverImageAssetId,

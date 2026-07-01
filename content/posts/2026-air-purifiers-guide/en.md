@@ -16,12 +16,8 @@ draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
-coverImageAlt: >-
-  HEPA air purifier room air cleaner device — Small-Room Air Purifiers: CADR,
-  Filter Math, Noise, and Running Costs cover photo
-coverImageAltKo: >-
-  HEPA 공기청정기 — Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running
-  Costs 커버 이미지
+coverImageAlt: HEPA air purifier in a small bedroom
+coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Photo by Michelangelo Buonarroti / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 4176366

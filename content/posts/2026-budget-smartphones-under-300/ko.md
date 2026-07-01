@@ -15,7 +15,7 @@ draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
-coverImageAlt: 스마트폰 — 30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라 커버 이미지
+coverImageAlt: 책상 위의 스마트폰
 coverImageCredit: Photo by Andrey Matveev / Pexels
 updatedAt: '2026-06-26T02:57:56.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
@@ -26,6 +26,7 @@ coverImageSourceUrl: >-
 imageSearchKeywords:
   - budget smartphone
   - android phone handset
+coverImageAltKo: 책상 위의 스마트폰
 ---
 ## 편집부 개요
 
