@@ -1,8 +1,8 @@
 ---
 title: '폭염·냉방 시즌, 소형방 공기청정기는 CADR과 유지비로 가른다'
 description: >-
-  레보it Core 300S, Winix 5500-2, Coway AP-1512HH를 연기 CADR, HEPA·탄소 필터,
-  수면 소음, 3년 유지비 기준으로 비교한 2026년 여름 소형방 헤드투헤드 리뷰입니다.
+  레보it Core 300S, Winix 5500-2, Coway AP-1512HH를 연기 CADR, HEPA·탄소 필터, 수면 소음, 3년
+  유지비 기준으로 비교한 2026년 여름 소형방 헤드투헤드 리뷰입니다.
 date: '2026-07-01'
 tags:
   - 공기청정기
@@ -23,6 +23,7 @@ imageSearchKeywords:
   - HEPA air purifier
   - room air cleaner device
   - indoor air purifier
+updatedAt: '2026-07-01T02:28:55.749Z'
 ---
 ## 편집부 개요
 
