@@ -18,12 +18,9 @@ coverImage: >-
   /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
 coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
-coverImageCredit: Photo by Michelangelo Buonarroti / Pexels
-coverImageProvider: pexels
-coverImageAssetId: 4176366
-coverImageSourceUrl: >-
-  https://images.pexels.com/photos/4176366/pexels-photo-4176366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-06-30T13:06:30.000Z'
+coverImageCredit: Uploaded via admin
+coverImageProvider: admin-upload
+updatedAt: '2026-07-01T02:09:48.896Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
