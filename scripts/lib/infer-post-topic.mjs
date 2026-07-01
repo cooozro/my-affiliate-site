@@ -40,6 +40,18 @@ const RULES = [
     cluster: "power",
   },
   {
+    pattern: /air-purifier|air-purifiers/i,
+    id: "air-purifiers",
+    category: "home-appliances",
+    cluster: "air-quality",
+  },
+  {
+    pattern: /dehumidifier/i,
+    id: "dehumidifiers",
+    category: "home-appliances",
+    cluster: "air-quality",
+  },
+  {
     pattern: /keyboard/i,
     id: "mechanical-keyboards",
     category: "peripherals",

@@ -5,7 +5,7 @@
 
 const OPENAI_CHAT = "https://api.openai.com/v1/chat/completions";
 const VISION_MODEL = process.env.OPENAI_VISION_MODEL ?? "gpt-4o-mini";
-const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 6);
+const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 7);
 const VISION_CANDIDATE_LIMIT = Number(process.env.IMAGE_VISION_CANDIDATE_LIMIT ?? 10);
 
 export function visionSelectionEnabled() {
@@ -28,17 +28,18 @@ export async function scoreImageRelevanceWithVision(imageUrl, ctx) {
   }
 
   const negatives = (ctx.negativeTags ?? []).slice(0, 20).join(", ");
-  const prompt = `You judge stock photos for a product review blog cover image.
+  const forbidden = (ctx.forbiddenSubjects ?? []).slice(0, 12).join(", ");
+  const prompt = `You are a strict stock-photo reviewer for a product review blog cover.
 
 Article title: ${ctx.title ?? "n/a"}
-REQUIRED subject in the photo: ${ctx.productLabel}
-Must NOT be: ${negatives || "unrelated subjects, wrong product, abstract-only art"}
+REQUIRED visible subject: ${ctx.productLabel}
+FORBIDDEN subjects (score 0-2 if any are the main focus): ${forbidden || negatives || "wrong product, unrelated objects"}
+Also reject: ${negatives}
 
-Score 0-10:
-- 9-10: clear photo of the correct product or realistic in-use scene
-- 6-8: correct category, product visible but not ideal
-- 3-5: tangentially related or ambiguous
-- 0-2: wrong subject (e.g. airplane when air purifier needed), people-only, irrelevant
+Rules:
+- Score 9-10 ONLY if the REQUIRED subject is clearly the main focus (product photo or obvious in-use scene).
+- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, or any forbidden/wrong device instead of the required subject.
+- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank.
 
 Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 
@@ -107,6 +108,7 @@ export async function rankCandidatesWithVision(candidates, ctx) {
         title: ctx.title,
         productLabel,
         negativeTags: ctx.negativeTags,
+        forbiddenSubjects: ctx.forbiddenSubjects,
       });
       ranked.push({
         ...candidate,
@@ -143,7 +145,5 @@ export function pickVisionWinner(ranked) {
   const passing = withVision.filter((c) => c.visionScore >= VISION_MIN_SCORE);
   if (passing.length > 0) return passing[0];
 
-  const best = withVision[0];
-  if (best.visionScore >= 4) return best;
   return null;
 }

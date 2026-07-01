@@ -60,8 +60,15 @@ export const SLUG_IMAGE_PROFILES = {
     ],
     extraSearchQueries: [
       "HEPA air purifier bedroom",
-      "air purifier appliance living room",
-      "room air filter device white",
+      "white air purifier appliance table",
+      "indoor air purifier device close up",
+    ],
+    forbiddenSubjects: [
+      "vacuum cleaner",
+      "robot vacuum",
+      "cordless vacuum",
+      "airplane",
+      "aircraft",
     ],
     topicCluster: "air-quality",
   },
@@ -121,7 +128,41 @@ export const SLUG_IMAGE_PROFILES = {
       "dehumidifier bedroom appliance",
       "portable dehumidifier unit",
     ],
+    forbiddenSubjects: ["air purifier", "vacuum cleaner", "clock", "watch"],
     topicCluster: "air-quality",
+  },
+  "2026-power-banks-guide": {
+    imageSearchKeywords: [
+      "portable power bank",
+      "USB-C power bank charger",
+      "battery pack phone charging",
+    ],
+    extraSearchQueries: [
+      "portable charger power bank desk",
+      "USB C PD power bank",
+      "mobile battery pack charging phone",
+    ],
+    forbiddenSubjects: [
+      "clock",
+      "wristwatch",
+      "watch",
+      "wall clock",
+      "alarm clock",
+    ],
+    topicCluster: "power",
+  },
+  "2026-budget-power-banks-guide": {
+    imageSearchKeywords: [
+      "portable power bank",
+      "USB-C power bank",
+      "phone charging battery pack",
+    ],
+    extraSearchQueries: [
+      "power bank charging smartphone",
+      "portable battery charger travel",
+    ],
+    forbiddenSubjects: ["clock", "wristwatch", "watch", "wall clock"],
+    topicCluster: "power",
   },
 };
 
@@ -163,12 +204,21 @@ const GLOBAL_STOCK_NEGATIVES = [
 const CLUSTER_NEGATIVES = {
   "air-quality": [
     ...GLOBAL_STOCK_NEGATIVES,
+    "vacuum",
+    "vacuum cleaner",
+    "robot vacuum",
+    "cordless vacuum",
+    "stick vacuum",
+    "cleaner",
     "air conditioner",
     "portable ac",
     "window ac",
     "earbuds",
     "smartphone",
     "keyboard",
+    "clock",
+    "watch",
+    "wristwatch",
     "swimming pool",
   ],
   "air-conditioning": [
@@ -197,7 +247,19 @@ const CLUSTER_NEGATIVES = {
   ],
   smartphones: ["earbuds", "keyboard", "air conditioner", "air purifier", "cat", "airplane"],
   computing: ["earbuds", "smartphone", "air conditioner", "air purifier", "cat", "airplane"],
-  power: ["earbuds", "smartphone", "keyboard", "air conditioner", "airplane"],
+  power: [
+    "earbuds",
+    "smartphone",
+    "keyboard",
+    "air conditioner",
+    "airplane",
+    "clock",
+    "watch",
+    "wristwatch",
+    "wall clock",
+    "alarm clock",
+    "timepiece",
+  ],
   "smart-home": ["earbuds", "smartphone", "keyboard", "airplane", "aircraft"],
 };
 
@@ -314,6 +376,29 @@ export function buildSearchQueries(productKeywords, input = {}) {
     return true;
   });
 }
+
+export function forbiddenSubjectsForCluster(topicCluster, slug) {
+  const profile = slugProfile(slug);
+  return uniqueStrings([
+    ...(profile?.forbiddenSubjects ?? []),
+    ...(CLUSTER_FORBIDDEN[topicCluster] ?? []),
+  ]);
+}
+
+const CLUSTER_FORBIDDEN = {
+  "air-quality": [
+    "vacuum cleaner",
+    "robot vacuum",
+    "cordless vacuum",
+    "airplane",
+    "aircraft",
+    "clock",
+    "watch",
+  ],
+  power: ["clock", "wristwatch", "wall clock", "alarm clock", "watch"],
+  audio: ["clock", "watch", "air conditioner"],
+  smartphones: ["clock", "watch", "earbuds only"],
+};
 
 export function negativeTagsForCluster(topicCluster, slug) {
   const profile = slugProfile(slug);
@@ -477,6 +562,7 @@ export function resolveImageContext(slug, input = {}) {
     primaryKeyword: primaryImageKeyword(productKeywords),
     searchQueries: buildSearchQueries(productKeywords, { ...meta, slug }),
     negativeTags: negativeTagsForCluster(topicCluster, slug),
+    forbiddenSubjects: forbiddenSubjectsForCluster(topicCluster, slug),
     topicCluster,
     imageSearchKeywords: productKeywords,
   };

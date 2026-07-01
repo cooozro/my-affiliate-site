@@ -177,8 +177,8 @@ function dedupeCandidates(candidates) {
 async function collectCandidatePool(slug, ctx, registry, options) {
   const providers = allProviders(options.provider);
   const pageOffsets = options.forceRefresh
-    ? [0, 1, 2, 3, 4, 5]
-    : [0, 1, 2];
+    ? [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    : [0, 1, 2, 3];
 
   const raw = [];
   let lastError = null;

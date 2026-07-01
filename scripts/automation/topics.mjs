@@ -4,6 +4,11 @@
  */
 import { pickSeasonalTopic } from "../lib/season-topics.mjs";
 import {
+  getTopicCoverage,
+  isTopicBlocked,
+  listBlockedTopicIds,
+} from "../lib/topic-coverage.mjs";
+import {
   filterByTopicDiversity,
   getTopicHistory,
   recordTopicPick,
@@ -199,6 +204,43 @@ export const POST_TOPICS = [
     angle:
       "webcams for remote work: resolution, autofocus, microphone quality comparison",
   },
+  {
+    id: "electric-fans",
+    category: "home-appliances",
+    topicCluster: "air-conditioning",
+    imageQuery: "electric desk fan summer",
+    imageSearchKeywords: ["electric fan", "desk fan", "tower fan", "summer cooling"],
+    liveData: false,
+    seasons: ["summer"],
+    peakMonths: [6, 7, 8],
+    peakMonthBonus: 8,
+    seasonBoost: { summer: 10 },
+    allowedFormats: ["buying-guide", "explainer", "checklist"],
+    angle:
+      "electric fans for summer rooms: airflow CFM, noise dB, and energy use vs AC",
+  },
+  {
+    id: "noise-cancelling-headphones",
+    category: "audio",
+    imageQuery: "over ear noise cancelling headphones",
+    liveData: true,
+    seasons: ["summer", "winter"],
+    peakMonths: [6, 7, 11, 12],
+    allowedFormats: ["buying-guide", "head-to-head", "explainer"],
+    angle:
+      "budget noise-cancelling headphones: ANC depth, codec support, and comfort for travel",
+  },
+  {
+    id: "portable-ssd",
+    category: "accessories",
+    imageQuery: "portable ssd external drive",
+    liveData: false,
+    seasons: ["fall", "spring"],
+    peakMonths: [2, 3, 8, 9],
+    allowedFormats: ["buying-guide", "explainer", "checklist"],
+    angle:
+      "portable SSD buying guide: USB speeds, TBW endurance, and backup workflows",
+  },
 ];
 
 /**
@@ -209,7 +251,11 @@ export const POST_TOPICS = [
 export function pickTopic(state, options = {}) {
   const used = new Set(state.usedTopicIds ?? []);
   const topicHistory = getTopicHistory(state);
-  let candidates = POST_TOPICS.filter((t) => !used.has(t.id));
+  const coverage = getTopicCoverage();
+
+  const notBlocked = (t) => !isTopicBlocked(t.id, coverage);
+
+  let candidates = POST_TOPICS.filter((t) => !used.has(t.id) && notBlocked(t));
 
   if (options.contentProfile) {
     const formatFiltered = candidates.filter(
@@ -224,7 +270,7 @@ export function pickTopic(state, options = {}) {
 
   if (candidates.length === 0) {
     candidates = POST_TOPICS.filter(
-      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
     );
     if (options.contentProfile) {
       const formatFiltered = candidates.filter(
@@ -238,7 +284,7 @@ export function pickTopic(state, options = {}) {
   if (candidates.length === 0) {
     state.usedTopicIds = [];
     candidates = POST_TOPICS.filter(
-      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
     );
     if (options.contentProfile) {
       const formatFiltered = candidates.filter(
@@ -250,6 +296,25 @@ export function pickTopic(state, options = {}) {
     candidates = filterByTopicDiversity(candidates, topicHistory);
   }
 
+  if (candidates.length === 0) {
+    console.warn(
+      "No fresh topics in rotation pool — picking any topic not already on site",
+    );
+    candidates = POST_TOPICS.filter((t) => notBlocked(t));
+    candidates = filterByTopicDiversity(candidates, topicHistory);
+  }
+
+  if (candidates.length === 0) {
+    throw new Error(
+      "All topics are already covered by published posts or drafts — add POST_TOPICS entries or remove a duplicate draft",
+    );
+  }
+
+  const blocked = listBlockedTopicIds(coverage);
+  if (blocked.length > 0) {
+    console.log(`Topic pool excludes already-covered: ${blocked.join(", ")}`);
+  }
+
   const topic = pickSeasonalTopic(candidates, new Set(), new Date());
 
   const violation = wouldViolateTopicDiversity(topic, topicHistory);
@@ -258,7 +323,7 @@ export function pickTopic(state, options = {}) {
       `Topic pick ${topic.id} would cluster (${violation.reason}) — picking from broader pool`,
     );
     const fallback = POST_TOPICS.filter(
-      (t) => !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      (t) => notBlocked(t) && !wouldViolateTopicDiversity(t, topicHistory).blocked,
     );
     if (fallback.length > 0) {
       const alt = pickSeasonalTopic(fallback, new Set(), new Date());
