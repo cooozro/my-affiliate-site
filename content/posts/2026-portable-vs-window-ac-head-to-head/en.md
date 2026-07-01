@@ -11,6 +11,8 @@ tags:
   - summer
   - home appliances
 contentProfile: head-to-head
+topicId: portable-ac
+topicCluster: air-conditioning
 draft: false
 liveData: true
 coverImage: >-

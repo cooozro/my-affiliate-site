@@ -37,6 +37,8 @@ Set liveData true in output.` : "Do not use live data placeholders."}
 Return ONLY valid JSON (no markdown fences):
 {
   "slug": "lowercase-hyphenated-english-slug-with-year",
+  "topicId": "${topic.id}",
+  "topicCluster": "${topic.topicCluster ?? topic.category ?? ""}",
   "contentProfile": "${contentProfile}",
   "imageQuery": "3-5 word English Pexels search query",
   "liveData": boolean,

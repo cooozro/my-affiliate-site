@@ -6,9 +6,13 @@ import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
 import { pickSeasonalTopic } from "../lib/season-topics.mjs";
 import {
   getTopicFormatCoverage,
+  getClusterFormatCoverage,
   isTopicFormatBlocked,
+  isClusterFormatBlocked,
   listBlockedTopicFormats,
+  listBlockedClusterFormats,
   topicFormatUsageCount,
+  clusterFormatUsageCount,
 } from "../lib/topic-coverage.mjs";
 import {
   filterByTopicDiversity,
@@ -24,8 +28,14 @@ function supportsFormat(topic, contentProfile) {
   return !topic.allowedFormats || topic.allowedFormats.includes(contentProfile);
 }
 
-function sortByFreshness(candidates, coverage, recentlyUsed) {
+function sortByFreshness(candidates, coverage, clusterCoverage, recentlyUsed) {
   return [...candidates].sort((a, b) => {
+    const clusterA = a.topicCluster ?? a.cluster;
+    const clusterB = b.topicCluster ?? b.cluster;
+    const clusterUsageA = clusterA ? clusterFormatUsageCount(clusterA, clusterCoverage) : 0;
+    const clusterUsageB = clusterB ? clusterFormatUsageCount(clusterB, clusterCoverage) : 0;
+    if (clusterUsageA !== clusterUsageB) return clusterUsageA - clusterUsageB;
+
     const usageA = topicFormatUsageCount(a.id, coverage);
     const usageB = topicFormatUsageCount(b.id, coverage);
     if (usageA !== usageB) return usageA - usageB;
@@ -45,14 +55,17 @@ export function pickTopic(state, options = {}) {
   const recentlyUsed = new Set(state.usedTopicIds ?? []);
   const topicHistory = getTopicHistory(state);
   const coverage = getTopicFormatCoverage();
+  const clusterCoverage = getClusterFormatCoverage();
 
   const formatAvailable = (t) =>
     supportsFormat(t, contentProfile) &&
-    !isTopicFormatBlocked(t.id, contentProfile, coverage);
+    !isTopicFormatBlocked(t.id, contentProfile, coverage) &&
+    !isClusterFormatBlocked(t, contentProfile, clusterCoverage);
 
   let candidates = sortByFreshness(
     POST_TOPICS.filter(formatAvailable),
     coverage,
+    clusterCoverage,
     recentlyUsed,
   );
 
@@ -66,6 +79,7 @@ export function pickTopic(state, options = {}) {
           !wouldViolateTopicDiversity(t, topicHistory).blocked,
       ),
       coverage,
+      clusterCoverage,
       recentlyUsed,
     );
   }
@@ -77,6 +91,7 @@ export function pickTopic(state, options = {}) {
     candidates = sortByFreshness(
       POST_TOPICS.filter(formatAvailable),
       coverage,
+      clusterCoverage,
       new Set(),
     );
   }
@@ -88,9 +103,15 @@ export function pickTopic(state, options = {}) {
   }
 
   const blocked = listBlockedTopicFormats(coverage);
+  const blockedClusters = listBlockedClusterFormats(clusterCoverage);
   if (blocked.length > 0) {
     console.log(
       `Topic×format pool excludes ${blocked.length} existing pair(s) (showing 8): ${blocked.slice(0, 8).join(", ")}`,
+    );
+  }
+  if (blockedClusters.length > 0) {
+    console.log(
+      `Cluster×format excludes ${blockedClusters.length} pair(s) (showing 6): ${blockedClusters.slice(0, 6).join(", ")}`,
     );
   }
 
@@ -108,6 +129,7 @@ export function pickTopic(state, options = {}) {
           !wouldViolateTopicDiversity(t, topicHistory).blocked,
       ),
       coverage,
+      clusterCoverage,
       recentlyUsed,
     );
     if (fallback.length > 0) {

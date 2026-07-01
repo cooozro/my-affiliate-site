@@ -4,14 +4,32 @@
 
 const RULES = [
   {
-    pattern: /portable.*window|window.*portable|head-to-head.*ac/i,
+    pattern: /portable.*window|window.*portable|vs-window|vs-portable/i,
     id: "portable-ac",
     category: "home-appliances",
     cluster: "air-conditioning",
   },
   {
-    pattern: /summer-ac|ac-buying|ac-room|btu.*ac|ac.*btu|air-condition|portable-ac|window-ac/i,
+    pattern: /window-ac|window-air|through-wall|u-shaped.*ac|slider.*ac/i,
+    id: "window-ac",
+    category: "home-appliances",
+    cluster: "air-conditioning",
+  },
+  {
+    pattern: /portable-ac|portable-air|mobile-air/i,
     id: "portable-ac",
+    category: "home-appliances",
+    cluster: "air-conditioning",
+  },
+  {
+    pattern: /summer-ac|ac-buying|ac-room|btu.*ac|ac.*btu|air-condition/i,
+    id: "portable-ac",
+    category: "home-appliances",
+    cluster: "air-conditioning",
+  },
+  {
+    pattern: /electric-fan|desk-fan|tower-fan/i,
+    id: "electric-fans",
     category: "home-appliances",
     cluster: "air-conditioning",
   },

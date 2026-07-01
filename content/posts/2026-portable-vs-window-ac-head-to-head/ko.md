@@ -11,6 +11,8 @@ tags:
   - 여름
   - 가전
 contentProfile: head-to-head
+topicId: portable-ac
+topicCluster: air-conditioning
 draft: false
 liveData: true
 coverImage: >-

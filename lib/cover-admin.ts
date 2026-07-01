@@ -18,13 +18,14 @@ import {
   type AdminPostRow,
 } from "@/lib/posts-admin";
 
-export type CoverStatus = "ok" | "missing" | "flagged" | "no-meta";
+export type CoverStatus = "ok" | "missing" | "flagged" | "no-meta" | "github-only";
 
 export type AdminPostCoverInfo = {
   coverImage?: string;
   coverFilename?: string;
   coverImageAlt?: string;
   coverImageAltKo?: string;
+  coverPreviewUrl?: string;
   coverStatus: CoverStatus;
   coverFlagReason?: string;
   coverImageProvider?: string;
@@ -66,6 +67,37 @@ function extForMime(mimeType: string): string {
   if (mimeType === "image/png") return "png";
   if (mimeType === "image/webp") return "webp";
   return "jpg";
+}
+
+function githubRepoRef(): { repo: string; branch: string } {
+  return {
+    repo: process.env.GITHUB_REPO?.trim() ?? "cooozro/my-affiliate-site",
+    branch: process.env.GITHUB_BRANCH?.trim() ?? "main",
+  };
+}
+
+/** Live image on GitHub main — use in admin when Vercel bundle is stale. */
+export function githubCoverPreviewUrl(coverImage: string, version = 0): string | undefined {
+  if (!coverImage?.startsWith("/")) return undefined;
+  const { repo, branch } = githubRepoRef();
+  const base = `https://raw.githubusercontent.com/${repo}/${branch}/${coverImage.replace(/^\//, "")}`;
+  return version > 0 ? `${base}?v=${version}` : base;
+}
+
+async function readEnDataForAdmin(slug: string): Promise<Record<string, unknown>> {
+  if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
+    try {
+      const matter = await import("gray-matter");
+      const { content } = await readGithubFile(`content/posts/${slug}/en.md`);
+      return matter.default(content).data as Record<string, unknown>;
+    } catch {
+      /* fall through to bundle */
+    }
+  }
+  if (slugExists(slug)) {
+    return readPostFile(slug, "en").data;
+  }
+  return {};
 }
 
 async function readEnPostData(slug: string): Promise<Record<string, unknown>> {
@@ -216,6 +248,7 @@ export async function uploadPostCover(
     ...result,
     coverImage,
     coverFilename: coverFilenameFromPath(coverImage),
+    coverPreviewUrl: githubCoverPreviewUrl(coverImage, Date.now()),
   };
 }
 
@@ -260,10 +293,15 @@ export async function assessCoverFromData(
     coverImage.replace(/^\//, ""),
   );
   if (!fs.existsSync(filePath)) {
+    const onGithub =
+      usesRemotePostStore() &&
+      (provider === "admin-upload" || Boolean(process.env.GITHUB_TOKEN?.trim()));
     return {
       coverImage,
-      coverStatus: "missing",
-      coverFlagReason: "배포 번들/CDN에 이미지 파일 없음",
+      coverStatus: onGithub ? "github-only" : "missing",
+      coverFlagReason: onGithub
+        ? "GitHub에 저장됨 — Vercel 재배포 전까지 CDN은 이전 이미지"
+        : "배포 번들/CDN에 이미지 파일 없음",
       coverImageProvider: provider,
       coverImageAssetId: assetId as string | number | undefined,
     };
@@ -283,14 +321,7 @@ export async function enrichPostsWithCover(
   const enriched: Array<AdminPostRow & AdminPostCoverInfo> = [];
 
   for (const post of posts) {
-    let data: Record<string, unknown> = {};
-    if (slugExists(post.slug)) {
-      try {
-        data = readPostFile(post.slug, "en").data;
-      } catch {
-        /* ignore */
-      }
-    }
+    const data = await readEnDataForAdmin(post.slug);
     const cover = await assessCoverFromData(post.slug, data);
     enriched.push({
       ...post,
@@ -300,6 +331,10 @@ export async function enrichPostsWithCover(
         typeof data.coverImageAlt === "string" ? data.coverImageAlt : undefined,
       coverImageAltKo:
         typeof data.coverImageAltKo === "string" ? data.coverImageAltKo : undefined,
+      coverPreviewUrl:
+        usesRemotePostStore() && cover.coverImage
+          ? githubCoverPreviewUrl(cover.coverImage)
+          : undefined,
     });
   }
 

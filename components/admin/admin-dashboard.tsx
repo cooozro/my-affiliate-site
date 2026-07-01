@@ -16,7 +16,9 @@ type AdminPostRow = {
   coverFilename?: string;
   coverImageAlt?: string;
   coverImageAltKo?: string;
-  coverStatus: "ok" | "missing" | "flagged" | "no-meta";
+  coverPreviewUrl?: string;
+  coverImageProvider?: string;
+  coverStatus: "ok" | "missing" | "flagged" | "no-meta" | "github-only";
   coverFlagReason?: string;
   coverImageProvider?: string;
   coverImageAssetId?: string | number;
@@ -165,6 +167,7 @@ export function AdminDashboard() {
       mode?: "local" | "github";
       coverImage?: string;
       coverFilename?: string;
+      coverPreviewUrl?: string;
     };
 
     setCoverBusy(null);
@@ -176,12 +179,27 @@ export function AdminDashboard() {
 
     const deployNote =
       data.mode === "github"
-        ? " GitHub commit 완료 — Vercel 재배포 후 1–2분 내 라이브 반영."
+        ? " GitHub 저장 완료 — 미리보기는 GitHub 이미지를 표시합니다. 라이브 사이트는 Vercel 재배포 후 반영."
         : "";
     setMessage(
       `커버 업로드: ${slug}${data.coverFilename ? ` (${data.coverFilename})` : ""}.${deployNote}`,
     );
     setImageVersion((v) => v + 1);
+    setPosts((prev) =>
+      prev.map((p) =>
+        p.slug === slug
+          ? {
+              ...p,
+              coverImage: data.coverImage ?? p.coverImage,
+              coverFilename: data.coverFilename ?? p.coverFilename,
+              coverPreviewUrl: data.coverPreviewUrl ?? p.coverPreviewUrl,
+              coverStatus: "github-only",
+              coverFlagReason: "방금 업로드 — GitHub 미리보기",
+              coverImageProvider: "admin-upload",
+            }
+          : p,
+      ),
+    );
     await loadData();
   }
 
@@ -591,6 +609,7 @@ function CoverCell({
     missing: "bg-red-500/15 text-red-700 dark:text-red-300",
     flagged: "bg-amber-500/15 text-amber-800 dark:text-amber-200",
     "no-meta": "bg-muted text-muted-foreground",
+    "github-only": "bg-sky-500/15 text-sky-800 dark:text-sky-200",
   };
 
   const statusLabel: Record<AdminPostRow["coverStatus"], string> = {
@@ -598,11 +617,14 @@ function CoverCell({
     missing: "누락",
     flagged: "오류",
     "no-meta": "없음",
+    "github-only": "GitHub",
   };
 
-  const imgSrc = post.coverImage
-    ? `${post.coverImage}${post.coverImage.includes("?") ? "&" : "?"}v=${imageVersion}`
-    : undefined;
+  const imgSrc = post.coverPreviewUrl
+    ? `${post.coverPreviewUrl}${post.coverPreviewUrl.includes("?") ? "&" : "?"}v=${imageVersion}`
+    : post.coverImage
+      ? `${post.coverImage}${post.coverImage.includes("?") ? "&" : "?"}v=${imageVersion}`
+      : undefined;
 
   return (
     <div className="flex max-w-[220px] flex-col gap-1.5">

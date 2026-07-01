@@ -11,6 +11,8 @@ tags:
   - buying guide
   - home appliances
 contentProfile: checklist
+topicId: portable-ac
+topicCluster: air-conditioning
 draft: false
 liveData: true
 coverImage: >-

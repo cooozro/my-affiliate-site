@@ -9,6 +9,8 @@ tags:
   - 구매 가이드
   - 가전
 contentProfile: checklist
+topicId: portable-ac
+topicCluster: air-conditioning
 draft: false
 liveData: true
 coverImage: >-

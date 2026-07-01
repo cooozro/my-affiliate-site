@@ -82,6 +82,8 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
     tags: localeData.tags,
     draft,
     contentProfile: shared.contentProfile ?? "buying-guide",
+    ...(shared.topicId ? { topicId: shared.topicId } : {}),
+    ...(shared.topicCluster ? { topicCluster: shared.topicCluster } : {}),
     createdAt: shared.createdAt,
     ...(shared.liveData ? { liveData: true } : {}),
     ...(shared.coverImage ? { coverImage: shared.coverImage } : {}),
@@ -170,6 +172,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     date,
     createdAt,
     contentProfile: article.contentProfile ?? contentProfile,
+    topicId: article.topicId ?? topic.id,
+    topicCluster: article.topicCluster ?? topic.topicCluster,
     liveData: Boolean(article.liveData ?? topic.liveData),
     ...(imageMeta ?? {}),
     ...(imageMeta
