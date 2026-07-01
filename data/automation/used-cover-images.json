@@ -240,6 +240,13 @@
       "hash": "fea62c03640f1e7032b29126ef54ed3d3179282596130d6196df91ba87148d18",
       "provider": "pexels",
       "registeredAt": "2026-07-01T04:40:32.274Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "assetKey": null,
+      "hash": "90ea22c210a9f2ed72273092882a75918cd7fc3b9308ea9f66e1ccb5f6c33c18",
+      "provider": "admin-upload",
+      "registeredAt": "2026-07-01T05:27:04.548Z"
     }
   ]
 }
