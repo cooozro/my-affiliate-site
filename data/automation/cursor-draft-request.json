@@ -24,5 +24,8 @@
   },
   "templatePath": "docs/templates/head-to-head.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "lastError": "Integrity gate failed for 2026-air-purifiers-guide: 2026-air-purifiers-guide/en.md: description over 160 chars | 2026-air-purifiers-guide/ko.md: Korean body too short (6927 chars, need ≥9075 — match English depth)",
+  "lastAttemptAt": "2026-07-01T02:22:39.987Z",
+  "writtenSlug": "2026-air-purifiers-guide",
+  "completedAt": "2026-07-01T02:22:26.000Z"
 }
