@@ -1,13 +1,31 @@
 ---
-title: "Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names"
-description: "Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scenario-based buying guide for every budget."
-date: "2026-06-25"
-tags: ["wireless earbuds", "budget tech", "TWS", "audio reviews"]
+title: 'Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names'
+description: >-
+  Five budget wireless earbuds compared across battery, codec, ANC, and price
+  data. A scenario-based buying guide for every budget.
+date: '2026-06-25'
+tags:
+  - wireless earbuds
+  - budget tech
+  - TWS
+  - audio reviews
 contentProfile: buying-guide
 liveData: true
-coverImage: "/images/posts/2026-budget-wireless-earbuds-top5/cover.jpg"
-coverImageAlt: "Wireless earbuds on a wooden surface"
-coverImageCredit: "Photo by Karolina Grabowska / Pexels"
+coverImage: >-
+  /images/posts/2026-budget-wireless-earbuds-top5/wireless-earbuds-true-wireless-earphones-cover.jpg
+coverImageAlt: >-
+  wireless earbuds true wireless earphones — Budget Wireless Earbuds: When LDAC
+  and ANC Beat Brand Names cover photo
+coverImageCredit: Photo by Gije Cho / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 2933606
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/2933606/pexels-photo-2933606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - wireless earbuds
+  - true wireless earphones
+  - TWS earbuds case
+coverImageAltKo: '무선 이어폰 — Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names 커버 이미지'
 ---
 
 ## Editorial Overview

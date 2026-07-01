@@ -13,12 +13,19 @@ tags:
 contentProfile: buying-guide
 draft: false
 liveData: true
-coverImage: /images/posts/2026-budget-smartphones-under-300/cover.jpg
-coverImageAlt: budget smartphone comparison
-coverImageCredit: Photo by kaboompics / Pixabay
+coverImage: >-
+  /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
+coverImageAlt: 스마트폰 — 30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라 커버 이미지
+coverImageCredit: Photo by Andrey Matveev / Pexels
 updatedAt: '2026-06-26T02:57:56.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
-coverImageProvider: pixabay
+coverImageProvider: pexels
+coverImageAssetId: 33041301
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/33041301/pexels-photo-33041301.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - budget smartphone
+  - android phone handset
 ---
 ## 편집부 개요
 

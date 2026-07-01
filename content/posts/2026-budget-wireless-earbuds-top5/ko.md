@@ -1,13 +1,26 @@
-﻿---
-title: "5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다"
-description: "2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드."
-date: "2026-06-25"
-tags: ["무선 이어폰", "가성비", "TWS", "오디오 리뷰"]
+---
+title: '5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다'
+description: 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
+date: '2026-06-25'
+tags:
+  - 무선 이어폰
+  - 가성비
+  - TWS
+  - 오디오 리뷰
 contentProfile: buying-guide
 liveData: true
-coverImage: "/images/posts/2026-budget-wireless-earbuds-top5/cover.jpg"
-coverImageAlt: "나무 책상 위에 놓인 무선 이어폰"
-coverImageCredit: "Photo by Karolina Grabowska / Pexels"
+coverImage: >-
+  /images/posts/2026-budget-wireless-earbuds-top5/wireless-earbuds-true-wireless-earphones-cover.jpg
+coverImageAlt: '무선 이어폰 — 5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다 커버 이미지'
+coverImageCredit: Photo by Gije Cho / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 2933606
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/2933606/pexels-photo-2933606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - wireless earbuds
+  - true wireless earphones
+  - TWS earbuds case
 ---
 
 ## 편집부 개요

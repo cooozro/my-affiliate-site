@@ -13,11 +13,25 @@ tags:
 contentProfile: buying-guide
 draft: false
 liveData: false
-coverImage: /images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg
-coverImageAlt: Mechanical keyboard on a desk with monitor
-coverImageCredit: Photo by Daniel Korpai / Pexels
+coverImage: >-
+  /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
+coverImageAlt: >-
+  mechanical keyboard hot swap keyboard — First Mechanical Keyboard? Hot-Swap
+  and Switch Type Beat the Hype cover photo
+coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
 updatedAt: '2026-06-26T08:03:41.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
+coverImageProvider: pexels
+coverImageAssetId: 35504606
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/35504606/pexels-photo-35504606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - mechanical keyboard
+  - hot swap keyboard
+  - gaming keyboard desk
+coverImageAltKo: >-
+  기계식 키보드 — First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype 커버
+  이미지
 ---
 ## Editorial Overview
 

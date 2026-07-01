@@ -14,12 +14,18 @@ contentProfile: head-to-head
 draft: false
 liveData: true
 coverImage: >-
-  /images/posts/2026-portable-vs-window-ac-head-to-head/air-conditioner-portable-ac-window-ac-cover.jpg
-coverImageAlt: '이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가 — 에어컨 커버 이미지'
-coverImageCredit: Photo by LUM3N / Pixabay
+  /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
+coverImageAlt: '이동식 에어컨 — 이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가 커버 이미지'
+coverImageCredit: Photo by Geri Tech / Pexels
 updatedAt: '2026-06-27T07:15:04.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
-coverImageProvider: pixabay
+coverImageProvider: pexels
+coverImageAssetId: 32737485
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/32737485/pexels-photo-32737485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - portable air conditioner
+  - window air conditioner unit
 ---
 ## 편집부 개요
 

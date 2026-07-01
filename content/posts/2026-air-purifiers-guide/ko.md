@@ -14,20 +14,22 @@ contentProfile: buying-guide
 draft: false
 liveData: false
 coverImage: >-
-  /images/posts/2026-air-purifiers-guide/air-purifier-home-appliances-indoor-air-quality-cover.jpg
-coverImageAlt: >-
-  폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다 — air purifier·home appliances·indoor air
-  quality 커버 이미지
+  /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
+coverImageAlt: 'HEPA 공기청정기 — 폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다 커버 이미지'
 coverImageAltKo: >-
   Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs — air
   purifier·home appliances·indoor air quality 커버 이미지
-coverImageCredit: Photo by 2h1yucel / Pixabay
-coverImageProvider: pixabay
-coverImageAssetId: 8315886
+coverImageCredit: Photo by Helena Lopes / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 27176671
 coverImageSourceUrl: >-
-  https://pixabay.com/get/ge88131ee70e55174d096afab23269bdeafcf96441ed826ec06a1df36dcfb3e0fdf6effa54d96ce5df99ce1ab87b376ec8fb322b8757424babad9837f91765c95_1280.jpg
+  https://images.pexels.com/photos/27176671/pexels-photo-27176671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 updatedAt: '2026-06-30T13:06:30.000Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
+imageSearchKeywords:
+  - HEPA air purifier
+  - room air cleaner device
+  - indoor air purifier
 ---
 ## 편집부 개요
 

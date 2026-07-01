@@ -11,11 +11,20 @@ tags:
 contentProfile: buying-guide
 draft: false
 liveData: false
-coverImage: /images/posts/2026-budget-mechanical-keyboards-guide/cover.jpg
-coverImageAlt: 책상 위 기계식 키보드와 모니터
-coverImageCredit: Photo by Daniel Korpai / Pexels
+coverImage: >-
+  /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
+coverImageAlt: '기계식 키보드 — 첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다 커버 이미지'
+coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
 updatedAt: '2026-06-26T08:03:41.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
+coverImageProvider: pexels
+coverImageAssetId: 35504606
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/35504606/pexels-photo-35504606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - mechanical keyboard
+  - hot swap keyboard
+  - gaming keyboard desk
 ---
 ## 편집부 개요
 
