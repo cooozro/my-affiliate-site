@@ -95,6 +95,7 @@ export function runAutomationHealthCheck(options = {}) {
     stateChanged = true;
   }
 
+  const blockedDrafts = [];
   for (const draft of drafts) {
     try {
       const draftIssues = validatePostFiles(draft.slug, {
