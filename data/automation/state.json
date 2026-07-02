@@ -1,5 +1,5 @@
 {
-  "topicIndex": 35,
+  "topicIndex": 7,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -15,12 +15,13 @@
     "robot-vacuums",
     "action-cameras",
     "noise-cancelling-headphones",
-    "gaming-consoles"
+    "gaming-consoles",
+    "electric-fans"
   ],
-  "lastPublishAt": "2026-07-02T01:23:32.016Z",
-  "nextPublishAt": "2026-07-02T06:12:29.774Z",
-  "scheduledGapHours": 4.82,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-02T03:15:31.755Z",
+  "nextPublishAt": "2026-07-03T01:24:00.000Z",
+  "scheduledGapHours": 4.4,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-02",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-02",
@@ -160,6 +161,18 @@
         "https://www.aipick.shop/en/blog/2026-robot-vacuums-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-robot-vacuums-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "topic": {
+        "id": "gaming-consoles"
+      },
+      "at": "2026-07-02T03:15:31.755Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-gaming-consoles-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-gaming-consoles-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -277,6 +290,16 @@
       "id": "gaming-consoles",
       "category": "gaming",
       "at": "2026-07-02T01:23:32.029Z"
+    },
+    {
+      "id": "gaming-consoles",
+      "at": "2026-07-02T03:15:31.757Z"
+    },
+    {
+      "id": "electric-fans",
+      "category": "home-appliances",
+      "cluster": "air-conditioning",
+      "at": "2026-07-02T03:15:31.764Z"
     }
   ],
   "formatHistory": [
@@ -290,13 +313,20 @@
     "scenario-guide",
     "buying-guide",
     "head-to-head",
-    "scenario-guide"
+    "scenario-guide",
+    "buying-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-02T02:07:30.279Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-07-02T03:15:30.227Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "homepage-featured-mismatch",
+        "message": "Home featured is 2026-budget-wireless-earbuds-top5, expected latest 2026-robot-vacuums-scenario-guide",
+        "severity": "warning"
+      }
+    ],
     "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-02",
