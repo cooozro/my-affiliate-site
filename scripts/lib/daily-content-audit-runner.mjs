@@ -169,10 +169,10 @@ export async function runDailyContentAuditIfDue(root = process.cwd(), options = 
     );
   }
 
-  if (process.env.OPENAI_API_KEY?.trim()) {
+  if (process.env.CURSOR_API_KEY?.trim()) {
     const faqSummary = await repairAllFaqSectionsWithLlm(root, {
       includeDrafts: false,
-      delayMs: 400,
+      delayMs: 800,
     });
     if (faqSummary.repairs.length > 0) {
       console.log(
@@ -186,7 +186,7 @@ export async function runDailyContentAuditIfDue(root = process.cwd(), options = 
       }
     }
   } else {
-    console.warn("FAQ LLM repair skipped: OPENAI_API_KEY not set");
+    console.warn("FAQ repair skipped: CURSOR_API_KEY not set");
   }
 
   const report = runDailyContentAudit(root, { state });

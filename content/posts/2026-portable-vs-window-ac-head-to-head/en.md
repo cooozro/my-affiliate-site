@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: portable air conditioner in an apartment room
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-07-02T03:44:29.389Z'
+updatedAt: '2026-07-02T12:00:00.000Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -117,17 +117,17 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 ## FAQ
 
-### Who should choose Frigidaire FHWW083WBE (8,000 BTU window) from this guide?
+### My landlord allows window units — will a window AC really cost less to run than portable?
 
-Strengths: Lowest noise in this trio, strong cooling per dollar, standard 8,000 BTU fits many 12–18 m² bedrooms, mechanical controls survive power blips. Weaknesses: Requires suitable window sill and install kit; not viable for floor-to-ceiling or casement windows without adapter
+At similar BTU ratings, window units exhaust heat directly outside with less indoor negative pressure and warm-air recirculation — so cooling often feels stronger per watt. The Frigidaire 8,000 BTU window model leads this comparison on noise and estimated daily power use. Single-hose portables struggle when the vent seal is loose, forcing the compressor to run longer. If installation is allowed, fixed window AC usually wins on summer running cost. Confirm bracket fit and window type before buying.
 
-### What is the bottom-line recommendation in this guide?
+### Window install isn't an option — can a single-hose portable cool an all-day studio?
 
-Window AC still wins on noise and running cost when you can install it. Among portables, dual-hose beats single-hose for rooms you actually live in all day — not just sleep in for four hours. ### Who should buy? | Model | Buy if you… | | --- | --- | | Frigidaire window | Have landlord approval and a compatible window |
+For a small room under about 15 m² or short heat waves, the Midea single-hose can feel adequate for "get cool fast" sessions. Open-plan studios of 20 m² or more used all day often hit limits quickly because single-hose designs pull warm air back inside. A loose vent kit makes that worse. "Sleep four hours" and "work from home all day" are different BTU and comfort problems. All-day patterns point toward the LG dual-hose instead.
 
-### Who should choose Frigidaire FHWW083WBE (8,000 BTU window) from this guide?
+### Dual-hose sealing looks fussy — is it a real substitute when window AC isn't allowed?
 
-Strengths: Lowest noise in this trio, strong cooling per dollar, standard 8,000 BTU fits many 12–18 m² bedrooms, mechanical controls survive power blips. Weaknesses: Requires suitable window sill and install kit; not viable for floor-to-ceiling or casement windows without adapter
+When window units are banned, the LG 14,000 BTU dual-hose typically delivers more effective cooling and dehumidifying than single-hose rivals in the same price tier. Seal both ducts properly at a balcony door or window gap and a 20–25 m² open studio becomes manageable. Sloppy sealing erases most of the efficiency advantage over window AC. Setup is harder than single-hose, but for living-in-all-day rooms the trade-off usually pays off. If window install later becomes possible, switch long term to save money.
 
 ## Related guides
 

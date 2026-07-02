@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-02T03:43:56.431Z'
+updatedAt: '2026-07-02T15:30:00.000Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -157,17 +157,17 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## FAQ
 
-### Who should choose Levoit Core 300S from this guide?
+### My AC runs all night — do I still need an air purifier in a small bedroom?
 
-Strengths: Strong smoke CADR for the price (141 cfm), H13 True HEPA with carbon pre-layer, 24 dB Sleep Mode, app scheduling and filter-life tracking, compact 8.7″ footprint fits nightstands. Weaknesses: Replacement filter bundles add up if you run 24/7 through pollen season; auto
+Yes — during summer cooling season, the two often work as a pair. Sealed windows keep heat out but also trap dust, pet dander, cooking smells, and pollen that drifts in when you briefly ventilate. AC filters usually catch larger particles; a HEPA purifier handles finer allergens more reliably. In a 10–15 m² bedroom, a quiet model like the Levoit Core 300S on a nightstand can run overnight without fighting the AC for airflow. A quick five-to-ten-minute vent, then close up and switch the purifier on, often feels noticeably fresher within an hour.
 
-### Who should choose Winix 5500-2 from this guide?
+### CADR numbers confuse me — what's a simple way to size one for my room?
 
-Strengths: Highest smoke CADR in the group (246 cfm) so it can run on low in small rooms, washable pre-filter and washable AOC carbon sheet, PlasmaWave ionizer (can be disabled), proven long-term track record. Weaknesses: Larger chassis than Core 300S; overkill CADR if you always
+CADR tells you how much clean air a unit pushes per minute — higher numbers move air faster through the filter. A simple rule: divide your room’s square footage by 4.8 to estimate a minimum smoke CADR in cfm. A 120 sq ft bedroom needs roughly 25+ cfm; every pick in this guide clears that bar with headroom. You do not need to memorize the math — just confirm the model’s smoke CADR fits your room size. If you cook in the same space or live in an open studio, pair CADR with a carbon filter stage, not HEPA alone.
 
-### Who should choose Blueair Blue Pure 511 from this guide?
+### I'm a light sleeper — how quiet does a bedroom purifier need to be?
 
-Strengths: One-button simplicity, compact cylinder design, particle + carbon in a single replaceable fabric pre-filter, energy-efficient at low watts, fits IKEA-heavy dorm aesthetics. Weaknesses: Lowest smoke CADR here (125 cfm) — borderline for 15 m² if you cook nearby; fabric p
+Look for sleep-mode ratings around 27 dB or lower if the unit will run all night next to a bed. The Levoit Core 300S lists 24 dB; the Winix 5500-2 sits near 27 dB on low — both are common bedroom picks. Models like the Honeywell HPA100 at 50 dB on low are better as daytime desk units you switch off at bedtime. Place the purifier at foot level or on a nightstand rather than inches from your pillow, and run low speed for the first few nights while you adjust. If you are a light sleeper, favor lower dB over flashy app features.
 
 ## Related guides
 

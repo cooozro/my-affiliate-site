@@ -1,6 +1,8 @@
 /**
- * LLM-generated FAQ — beginner questions, warm editorial answers.
+ * FAQ generation via Cursor Agent (Plan A — no OpenAI).
  */
+
+import { Agent } from "@cursor/sdk";
 
 import {
   buildFaqLlmSystemPrompt,
@@ -8,36 +10,48 @@ import {
   validateFaqQuality,
 } from "./faq-quality.mjs";
 
-async function callOpenAI(messages) {
-  const apiKey = process.env.OPENAI_API_KEY?.trim();
-  if (!apiKey) {
-    throw new Error("OPENAI_API_KEY is required for FAQ generation");
+function extractJsonObject(text) {
+  const raw = String(text ?? "").trim();
+  if (!raw) throw new Error("Empty Cursor FAQ response");
+
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)```/);
+  const candidate = fenced?.[1]?.trim() ?? raw;
+
+  const start = candidate.indexOf("{");
+  const end = candidate.lastIndexOf("}");
+  if (start < 0 || end <= start) {
+    throw new Error("Cursor FAQ response did not contain JSON");
   }
 
-  const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      temperature: 0.78,
-      response_format: { type: "json_object" },
-      messages,
-    }),
+  return JSON.parse(candidate.slice(start, end + 1));
+}
+
+async function callCursorForFaq(system, user) {
+  const apiKey = process.env.CURSOR_API_KEY?.trim();
+  if (!apiKey) {
+    throw new Error("CURSOR_API_KEY is required for FAQ generation");
+  }
+
+  const prompt = `${system}
+
+---
+
+${user}
+
+Reply with ONLY valid JSON (no markdown prose outside the object):
+{ "faqs": [ { "q": "...", "a": "..." } ] }`;
+
+  const result = await Agent.prompt(prompt, {
+    apiKey,
+    model: { id: process.env.CURSOR_FAQ_MODEL ?? "composer-2.5" },
+    local: { cwd: process.cwd(), settingSources: [] },
   });
 
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`OpenAI API ${response.status}: ${err.slice(0, 300)}`);
+  if (result.status === "error") {
+    throw new Error(`Cursor agent FAQ failed: ${result.id ?? "unknown"}`);
   }
 
-  const data = await response.json();
-  const text = data.choices?.[0]?.message?.content;
-  if (!text) throw new Error("Empty OpenAI FAQ response");
-  return JSON.parse(text);
+  return extractJsonObject(result.result);
 }
 
 /**
@@ -70,23 +84,19 @@ export async function generateFaqEntriesWithLlm(input) {
 
   let lastError = "unknown";
   for (let attempt = 0; attempt < 3; attempt += 1) {
-    const raw = await callOpenAI([
-      { role: "system", content: system },
-      {
-        role: "user",
-        content:
-          attempt === 0
-            ? user
-            : `${user}\n\nPrevious output rejected (${lastError}). Use conversational beginner questions and longer, friendlier answers. Never reuse banned template patterns.`,
-      },
-    ]);
+    const raw = await callCursorForFaq(
+      system,
+      attempt === 0
+        ? user
+        : `${user}\n\nPrevious output rejected (${lastError}). Use conversational beginner questions and longer, friendlier answers. Never reuse banned template patterns.`,
+    );
 
     const check = validateFaqQuality(raw.faqs ?? raw.faq, locale, minCount);
     if (check.ok) return check.entries;
     lastError = check.reason;
   }
 
-  throw new Error(`LLM FAQ validation failed for ${slug}/${locale}.md: ${lastError}`);
+  throw new Error(`FAQ validation failed for ${slug}/${locale}.md: ${lastError}`);
 }
 
 export function sleep(ms) {

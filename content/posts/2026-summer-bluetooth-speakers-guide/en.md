@@ -22,7 +22,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-07-02T03:44:03.817Z'
+updatedAt: '2026-07-02T12:00:00.000Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
@@ -145,17 +145,17 @@ Snapshot as of {{today}}.
 
 ## FAQ
 
-### Who should choose Anker Soundcore 2 from this guide?
+### I only use speakers at the pool edge — is IPX7 enough, or do I need IP67?
 
-Strengths: Lowest price in the list, IPX7 splash resistance, 12h battery, strong bass EQ in the Soundcore app, wide retail availability. Weaknesses: IPX7 (not dust-rated IP67), mono driver limits stereo spread at picnic distance, 414g feels chunky for ultralight day packs.
+For picnic tables, light rain, and drink splashes, IPX7 on the Anker Soundcore 2 is enough for many buyers. Beach sand and camping dust are where IP67 — water plus dust sealing — pays off in longevity. IPX7 handles brief dunking but not grit clogging the grille. If you plan to drop the speaker in the pool, a float-friendly IP67 model like the UE WONDERBOOM 3 is the safer bet. Rinsing with fresh water and closing the charge port cap after use matters more than the label alone.
 
-### Who should choose Tribit StormBox Micro 2 from this guide?
+### I want to clip a speaker on my bike — does 400 g feel heavy in practice?
 
-Strengths: Smallest and lightest here (341g), IP67 dust and water, built-in strap and bike mount, doubles as a power bank for emergency phone top-ups. Weaknesses: Lower max output than Flip 6, bass thins at max volume outdoors, app EQ less polished than Anker or JBL. Analysis tak
+At 341 g, the Tribit StormBox Micro 2 feels easy on handlebars or in a pocket; the 414 g Anker is fine for stationary picnics but noticeable while pedaling. Anything above 550 g belongs in a tote for campsite or tailgate duty, not on a bike frame. Included strap and mount hardware change how annoying weight feels on long rides. Tribit pairs IP67 with emergency phone charging — a strong match for "light one-hand" summer outings.
 
-### Who should choose Ultimate Ears WONDERBOOM 3 from this guide?
+### I'm worried about dropping it in the pool — do I need a float-friendly model?
 
-Strengths: Floats in water, 360° sound for group listening, IP67, 14h battery, Outdoor Boost mode for open-air loudness. Weaknesses: Premium price vs Anker/Tribit, no aux input, bass-heavy tuning may not suit acoustic playlists. Analysis takeaway: For most buyers, this translates
+If drops are likely, the UE WONDERBOOM 3's float design saves a lot of panic at the pool edge. IPX7 speakers can survive splashes but may sink if they slide off a ledge. Its 360° sound also helps when people sit in a circle and you do not want to aim a single driver. It costs more than Anker or Tribit, but think of it as drop insurance for lake trips and kid-heavy pool days. For boat decks and shared outdoor listening, float plus IP67 is worth prioritizing.
 
 ## Related guides
 

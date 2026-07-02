@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T03:44:02.175Z'
+updatedAt: '2026-07-02T12:00:00.000Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## Editorial Overview
@@ -168,17 +168,17 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 ## FAQ
 
-### For "Compact studio under 35 m² with narrow walkways", which pick in this guide fits best?
+### Forty centimeters beside the bed: will an auto-empty dock fit?
 
-What matters here - Slim dock footprint — some auto-empty bases need 40+ cm clearance behind furniture. - LiDAR mapping — bump-and-turn robots miss corners in L-shaped studios. - Cliff and threshold handling — bathroom lips and balcony tracks should not trap t
+Many auto-empty bases want 40 cm or more clearance behind or beside furniture. In a compact studio under 35 m², the Roborock Q7 Max+ pairs LiDAR mapping with a mid-size dock that handles corners better than bump-and-turn robots. The eufy X10 Pro Omni cleans and dries mop pads at the dock, but its station is wide — awkward when the bed leaves only one wall slot. Tape the dock footprint on the floor before buying and you will know immediately if the path pinches. If walkways stay under 50 cm, pick the dock location first, then the robot.
 
-### For "Pet hair on hardwood and low-pile rugs", which pick in this guide fits best?
+### Shedding dog at home — how often must I empty the bin without a dock?
 
-What matters here - Brush roll design — rubber fins vs bristle tangles on long hair. - Obstacle recognition — summer means more shoes, leashes, and pet bowls on the floor. - Auto-empty frequency — pet households fill bins in 1–2 runs without a dock.
+Pet households often fill the onboard bin after one or two runs; summer shedding can mean multiple manual dumps per day. The iRobot Roomba Combo j5+ targets rubber brush design, obstacle alerts, and Clean Base auto-empty for hair, leashes, and floor clutter. Roborock Q7 Max+ suction is strong, but toy-strewn floors during school break favor j5+ obstacle tooling. Before skipping a dock, ask whether daily bin trips fit your routine. For many pet owners, auto-empty is less luxury and more maintenance schedule.
 
-### For "Hard floors plus light mopping through humid summer weeks", which pick in this guide fits best?
+### Humid summer mopping: do pads really start smelling after a few days?
 
-What matters here - Mop lift on rugs — wetting a thin entry mat causes odor fast in humidity. - Dock wash/dry cycle — stagnant mop pads smell within days above 28 °C indoor dew point. - Water tank access — tight kitchens make refilling awkward if the dock is w
+In sealed, air-conditioned apartments above roughly 28 °C indoor humidity, stagnant mop pads can smell within days — one of the most common one-star themes in public reviews. The eufy X10 Pro Omni runs pad wash and dry cycles at the dock, which directly targets that problem. Shark Matrix Plus 2-in-1 costs less but expects you to launder pads by hand, which adds work in sticky weeks. Thin entry mats wet easily and sour fast, so mop lift and no-go zones matter too. If you plan to mop through humid summer weeks, budget for dock washing rather than fighting odor later.
 
 ## Related guides
 

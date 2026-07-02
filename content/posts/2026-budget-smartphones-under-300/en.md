@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-02T03:43:58.893Z'
+updatedAt: '2026-07-02T15:30:00.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -149,17 +149,17 @@ Snapshot as of {{today}}.
 
 ## FAQ
 
-### Who should choose Samsung Galaxy A35 from this guide?
+### How much RAM do I need in a sub-$300 phone?
 
-Strengths: Four-year security updates, 120Hz AMOLED, IP67, full domestic 5G band support. Weaknesses: Exynos 1380 trails peer Snapdragon GPUs, 6GB RAM limits heavy multitasking, costs more than A15. Analysis takeaway: For most buyers, this translates to a phone you can keep four
+For everyday use in 2026, treat **6GB as the practical floor**. Messaging, banking, and YouTube in the background will choke a 4GB phone with frequent app reloads. The Galaxy A35 and Moto G Power ship with 6GB; the Poco M6 Pro and Redmi Note 13 Pro step up to 8GB/256GB for heavier multitasking and mobile games. If you edit clips or keep many apps alive, 8GB feels noticeably smoother. The Galaxy A15 at 4GB works as a gift or light-use phone — just know the ceiling arrives sooner.
 
-### Who should choose Poco M6 Pro from this guide?
+### Does a two-year vs four-year update policy really matter?
 
-Strengths: Generous 8GB/256GB at the price, Snapdragon 7s Gen 2 responsiveness, 120Hz AMOLED. Weaknesses: MIUI ads and bloat divide users, no IP rating, fewer offline service centers vs Samsung. Analysis takeaway: For most buyers, this translates to the most responsive feel per d
+It matters if you plan to keep the phone more than a couple of years. The Galaxy A35 and A15 promise four years of security patches, which helps resale value and long-term safety. The Moto G Power stops at two years — fine if you upgrade often, risky if you stretch ownership. Poco and Redmi sit in the middle at three years. Banking and payment apps increasingly assume current security fixes. Match update length to how long you honestly expect to carry the device.
 
-### Who should choose Motorola Moto G Power (2026) from this guide?
+### Will I notice AMOLED vs LCD in daily use?
 
-See the strengths, weaknesses, and verdict notes for Motorola Moto G Power (2026) in the body.
+For video, social feeds, and night scrolling, AMOLED’s deeper blacks and punchier colors are easy to spot. The Galaxy A35, Poco M6 Pro, Redmi Note 13 Pro, and A15 all use AMOLED panels at 90–120Hz. The Moto G Power is the LCD outlier — less contrast, but paired with a class-leading 6,000mAh battery for every-other-day charging. If runtime beats screen glamour, LCD is a fair trade. If you watch a lot of content outdoors or in dim rooms, AMOLED usually feels like the better daily driver.
 
 ## Related guides
 
