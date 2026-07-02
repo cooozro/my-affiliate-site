@@ -5,7 +5,7 @@
  * Batch file edit: node scripts/repair-faq-cursor.mjs
  */
 
-import { repairAllFaqSectionsWithLlm } from "./lib/faq-section.mjs";
+import { repairAllFaqSectionsWithLlm } from "./lib/faq-section-repair.mjs";
 
 const args = process.argv.slice(2);
 const slugArg = args.find((a) => a.startsWith("--slug="))?.split("=")[1];

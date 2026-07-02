@@ -10,7 +10,7 @@ import { FORBIDDEN_AD_PATTERNS } from "./content-policy.mjs";
 import {
   auditFaqSection,
   MIN_FAQ_BY_PROFILE,
-} from "./faq-section.mjs";
+} from "./faq-section-audit.mjs";
 import {
   CONTENT_PROFILES,
   MIN_EN_BODY_BYTES,

@@ -76,7 +76,7 @@ async function main() {
     }
 
     case "repair-faq-llm": {
-      const { repairAllFaqSectionsWithLlm } = await import("../lib/faq-section.mjs");
+      const { repairAllFaqSectionsWithLlm } = await import("../lib/faq-section-repair.mjs");
       const summary = await repairAllFaqSectionsWithLlm(process.cwd(), {
         includeDrafts: true,
         force: process.argv.includes("--force"),
@@ -87,7 +87,7 @@ async function main() {
     }
 
     case "scan-templated-content": {
-      const { scanTemplatedContentIssues } = await import("../lib/faq-section.mjs");
+      const { scanTemplatedContentIssues } = await import("../lib/faq-section-audit.mjs");
       const report = scanTemplatedContentIssues(process.cwd());
       console.log(JSON.stringify(report, null, 2));
       break;

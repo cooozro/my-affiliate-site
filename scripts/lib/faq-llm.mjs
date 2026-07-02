@@ -2,8 +2,6 @@
  * FAQ generation via Cursor Agent (Plan A — no OpenAI).
  */
 
-import { Agent } from "@cursor/sdk";
-
 import {
   buildFaqLlmSystemPrompt,
   buildFaqLlmUserPrompt,
@@ -31,6 +29,8 @@ async function callCursorForFaq(system, user) {
   if (!apiKey) {
     throw new Error("CURSOR_API_KEY is required for FAQ generation");
   }
+
+  const { Agent } = await import("@cursor/sdk");
 
   const prompt = `${system}
 

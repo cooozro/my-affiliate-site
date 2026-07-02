@@ -16,7 +16,7 @@ import {
 } from "./publish-integrity.mjs";
 import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
-import { repairAllFaqSectionsWithLlm } from "./faq-section.mjs";
+import { repairAllFaqSectionsWithLlm } from "./lib/faq-section-repair.mjs";
 import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(

@@ -4,9 +4,7 @@
  * Usage: node scripts/repair-faq-cursor.mjs
  */
 
-import { Agent } from "@cursor/sdk";
-
-import { scanTemplatedContentIssues } from "./lib/faq-section.mjs";
+import { scanTemplatedContentIssues } from "./lib/faq-section-audit.mjs";
 
 function slugsFromMechanicalList(mechanicalFaq) {
   return [...new Set(mechanicalFaq.map((label) => label.split("/")[0]))].sort();
@@ -63,6 +61,7 @@ async function main() {
 
   console.log(`Cursor batch FAQ repair: ${slugs.length} slug(s)`);
 
+  const { Agent } = await import("@cursor/sdk");
   const result = await Agent.prompt(buildBatchPrompt(slugs), {
     apiKey,
     model: { id: process.env.CURSOR_FAQ_MODEL ?? "composer-2.5" },
