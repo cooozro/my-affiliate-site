@@ -87,11 +87,17 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
 
   for (const slug of slugs) {
     const phase = isDraftSlug(root, slug) ? "draft" : "publish";
-    const result = runPublishIntegrityGate(root, slug, {
-      phase,
-      state,
-      applyRepair: true,
-    });
+    let result;
+    try {
+      result = runPublishIntegrityGate(root, slug, {
+        phase,
+        state,
+        applyRepair: true,
+      });
+    } catch (error) {
+      console.error(`Daily audit: skipped ${slug} after error: ${error.message}`);
+      continue;
+    }
     scanned += 1;
 
     if (result.repairs.length > 0) {

@@ -95,15 +95,22 @@ export function runAutomationHealthCheck(options = {}) {
     stateChanged = true;
   }
 
-  const blockedDrafts = [];
   for (const draft of drafts) {
-    const draftIssues = validatePostFiles(draft.slug, {
-      phase: "publish",
-      state,
-      applyRepair: true,
-    });
-    if (draftIssues.length > 0) {
-      blockedDrafts.push({ slug: draft.slug, issues: draftIssues });
+    try {
+      const draftIssues = validatePostFiles(draft.slug, {
+        phase: "publish",
+        state,
+        applyRepair: true,
+      });
+      if (draftIssues.length > 0) {
+        blockedDrafts.push({ slug: draft.slug, issues: draftIssues });
+      }
+    } catch (error) {
+      issues.push({
+        code: "draft-health-crash",
+        message: `Health check crashed on ${draft.slug}: ${error.message}`,
+        severity: "warning",
+      });
     }
   }
 

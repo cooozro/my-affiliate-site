@@ -1,8 +1,8 @@
 {
   "dateKst": "2026-07-02",
-  "scannedAt": "2026-07-02T01:51:25.927Z",
+  "scannedAt": "2026-07-02T02:02:28.632Z",
   "postsScanned": 14,
-  "autoRepairCount": 6,
+  "autoRepairCount": 2,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -15,33 +15,8 @@
       "repairs": [
         "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
       ]
-    },
-    {
-      "slug": "welcome",
-      "repairs": [
-        "welcome/en.md: inserted Related guides section",
-        "welcome/en.md: Related guides 0 → 5 links (relevance order, max 5)",
-        "welcome/ko.md: inserted Related guides section",
-        "welcome/ko.md: Related guides 0 → 5 links (relevance order, max 5)"
-      ]
     }
   ],
-  "manualReviewCount": 1,
-  "manualReview": [
-    {
-      "order": 1,
-      "slug": "2026-summer-ac-buying-checklist",
-      "phase": "publish",
-      "issues": [
-        "2026-summer-ac-buying-checklist/en.md: English body too short (4023 bytes, need ≥5000)"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
-        "ko": "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=ko"
-      }
-    }
-  ]
+  "manualReviewCount": 0,
+  "manualReview": []
 }

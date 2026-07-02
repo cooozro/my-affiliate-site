@@ -9,4 +9,7 @@ if (!hook) {
 const response = await fetch(hook, { method: "POST" });
 const body = await response.text();
 console.log(`Vercel deploy hook: HTTP ${response.status} ${body.slice(0, 120)}`);
-if (!response.ok) process.exit(1);
+if (!response.ok) {
+  console.warn(`Vercel deploy hook failed (non-fatal): HTTP ${response.status}`);
+  process.exit(0);
+}

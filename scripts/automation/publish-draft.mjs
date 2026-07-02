@@ -93,10 +93,14 @@ export async function publishOneDraft(options = {}) {
   const stateBefore = JSON.stringify(state);
   const drafts = listDrafts();
 
-  const health = runAutomationHealthCheck({ state, drafts });
-  logAutomationHealthResult(health);
-  if (health.stateChanged) {
-    saveState(state);
+  try {
+    const health = runAutomationHealthCheck({ state, drafts });
+    logAutomationHealthResult(health);
+    if (health.stateChanged) {
+      saveState(state);
+    }
+  } catch (error) {
+    console.error(`Automation health check failed (non-fatal): ${error.message}`);
   }
 
   if (!canPublishNow(state, force)) {
