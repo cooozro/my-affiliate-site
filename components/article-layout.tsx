@@ -26,14 +26,15 @@ function formatDate(date: string, locale: Locale) {
   }).format(new Date(date));
 }
 
-function sameCalendarDay(a: string, b: string): boolean {
-  const da = new Date(a);
-  const db = new Date(b);
-  return (
-    da.getUTCFullYear() === db.getUTCFullYear() &&
-    da.getUTCMonth() === db.getUTCMonth() &&
-    da.getUTCDate() === db.getUTCDate()
-  );
+function formatDateTime(date: string, locale: Locale) {
+  return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "Asia/Seoul",
+  }).format(new Date(date));
 }
 
 export function ArticleLayout({
@@ -51,8 +52,6 @@ export function ArticleLayout({
   const contentParts = splitRelatedGuidesForTagline(post.content, locale);
   const publishedIso = post.publishedAt ?? post.date;
   const modifiedIso = post.updatedAt ?? publishedIso;
-  const showUpdated =
-    Boolean(post.updatedAt) && !sameCalendarDay(publishedIso, modifiedIso);
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -61,11 +60,9 @@ export function ArticleLayout({
           <time dateTime={publishedIso}>
             {dateLabels.published}: {formatDate(publishedIso, locale)}
           </time>
-          {showUpdated ? (
-            <time dateTime={modifiedIso}>
-              {dateLabels.updated}: {formatDate(modifiedIso, locale)}
-            </time>
-          ) : null}
+          <time dateTime={modifiedIso}>
+            {dateLabels.updated}: {formatDateTime(modifiedIso, locale)}
+          </time>
         </div>
         <h1 className="mt-3 font-serif text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">
           {post.title}
