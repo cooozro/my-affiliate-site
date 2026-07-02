@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: portable air conditioner in an apartment room
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-06-27T07:15:04.000Z'
+updatedAt: '2026-07-02T03:09:11.105Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -114,6 +114,20 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 | Humid coastal summer + cooling | **LG dual-hose** | Strong dehumidify + cooling combo |
 
 ---
+
+## FAQ
+
+### What should I verify first before buying air conditioner?
+
+Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+
+### Is the cheapest option always a bad deal?
+
+Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+
+### Can I rely on star ratings alone?
+
+Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
 
 ## Related guides
 

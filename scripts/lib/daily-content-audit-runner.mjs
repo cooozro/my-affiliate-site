@@ -16,6 +16,7 @@ import {
 } from "./publish-integrity.mjs";
 import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
+import { repairAllFaqSections } from "./faq-section.mjs";
 import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
@@ -165,6 +166,12 @@ export function runDailyContentAuditIfDue(root = process.cwd(), options = {}) {
   if (lengthSummary.repairs.length > 0) {
     console.log(
       `English body auto-expand: ${lengthSummary.changed} post(s), ${lengthSummary.repairs.length} change(s)`,
+    );
+  }
+  const faqSummary = repairAllFaqSections(root, { includeDrafts: true });
+  if (faqSummary.repairs.length > 0) {
+    console.log(
+      `FAQ section auto-repair: ${faqSummary.changed} post(s), ${faqSummary.repairs.length} change(s)`,
     );
   }
   const report = runDailyContentAudit(root, { state });

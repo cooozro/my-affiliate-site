@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleLayout } from "@/components/article-layout";
+import { JsonLd } from "@/components/json-ld";
 import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
 import { enrichPost } from "@/lib/enrich-post";
 import { getAllStaticBlogParams, getPostBySlug, getPostSlugs } from "@/lib/posts";
+import {
+  buildBlogPostBreadcrumbs,
+  buildBlogPostJsonLdGraph,
+} from "@/lib/seo/json-ld/compose";
 import { siteConfig } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -85,13 +90,43 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const dict = await getDictionary(locale);
   const shareUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
+  const publishedIso = post.publishedAt ?? post.date;
+  const modifiedIso = post.updatedAt ?? publishedIso;
+  const ogImage = post.coverImage
+    ? `${siteConfig.url}${post.coverImage}`
+    : undefined;
+
+  const jsonLd = buildBlogPostJsonLdGraph({
+    locale,
+    slug,
+    title: post.title,
+    description: post.description,
+    datePublished: publishedIso,
+    dateModified: modifiedIso,
+    url: shareUrl,
+    imageUrl: ogImage,
+    tags: post.tags,
+    content: post.content,
+    contentProfile: post.contentProfile,
+    breadcrumbs: buildBlogPostBreadcrumbs(locale, post.title, slug, {
+      home: dict.nav.home,
+      articles: dict.home.latestPosts,
+    }),
+  });
 
   return (
-    <ArticleLayout
-      post={post}
-      locale={locale}
-      shareUrl={shareUrl}
-      shareLabels={dict.blog.share}
-    />
+    <>
+      <JsonLd data={jsonLd} />
+      <ArticleLayout
+        post={post}
+        locale={locale}
+        shareUrl={shareUrl}
+        shareLabels={dict.blog.share}
+        dateLabels={{
+          published: dict.blog.published,
+          updated: dict.blog.updated,
+        }}
+      />
+    </>
   );
 }

@@ -8,6 +8,10 @@ import {
 } from "./editorial-standards.mjs";
 import { FORBIDDEN_AD_PATTERNS } from "./content-policy.mjs";
 import {
+  auditFaqSection,
+  MIN_FAQ_BY_PROFILE,
+} from "./faq-section.mjs";
+import {
   CONTENT_PROFILES,
   MIN_EN_BODY_BYTES,
   MIN_KO_BODY_CHARS,
@@ -33,7 +37,6 @@ const WHO_SHOULD_SKIP_PATTERN =
 const CONCLUSION_PATTERN = /##\s*(결론|Conclusion)/i;
 const SCENARIO_PATTERN =
   /##\s*(Scenario:\s|시나리오:\s)/i;
-const FAQ_PATTERN = /##\s*(FAQ|자주 묻는 질문|Frequently asked)/i;
 const PRODUCT_SECTION_PATTERN = /^##\s*\d+\.\s+/gm;
 
 function hasCoverImage(root, data) {
@@ -208,15 +211,6 @@ function auditScenarioGuide(body, label) {
 function auditExplainer(body, label) {
   const issues = [];
 
-  if (!FAQ_PATTERN.test(body)) {
-    issues.push(`${label}: explainer needs FAQ / 자주 묻는 질문 section`);
-  }
-
-  const faqItems = (body.match(/^###\s+.+\?/gm) ?? []).length;
-  if (faqItems < 5) {
-    issues.push(`${label}: explainer needs at least 5 FAQ entries (### headings, found ${faqItems})`);
-  }
-
   if (!/\|.+\|/.test(body)) {
     issues.push(`${label}: missing reference or comparison table`);
   }
@@ -269,6 +263,10 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(...auditExplainer(body, label));
   } else if (profile === "checklist") {
     issues.push(...auditChecklist(body, label));
+  }
+
+  if (MIN_FAQ_BY_PROFILE[profile] > 0) {
+    issues.push(...auditFaqSection(body, label, profile));
   }
 
   if (publishedSlugs) {

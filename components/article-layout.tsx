@@ -15,6 +15,7 @@ type ArticleLayoutProps = {
   locale: Locale;
   shareUrl: string;
   shareLabels: Dictionary["blog"]["share"];
+  dateLabels: Pick<Dictionary["blog"], "published" | "updated">;
 };
 
 function formatDate(date: string, locale: Locale) {
@@ -25,11 +26,22 @@ function formatDate(date: string, locale: Locale) {
   }).format(new Date(date));
 }
 
+function sameCalendarDay(a: string, b: string): boolean {
+  const da = new Date(a);
+  const db = new Date(b);
+  return (
+    da.getUTCFullYear() === db.getUTCFullYear() &&
+    da.getUTCMonth() === db.getUTCMonth() &&
+    da.getUTCDate() === db.getUTCDate()
+  );
+}
+
 export function ArticleLayout({
   post,
   locale,
   shareUrl,
   shareLabels,
+  dateLabels,
 }: ArticleLayoutProps) {
   const shareImageUrl = post.coverImage
     ? `${siteConfig.url}${post.coverImage}`
@@ -37,16 +49,24 @@ export function ArticleLayout({
   const feedUrl = `${siteConfig.url}/${locale}/feed.xml`;
 
   const contentParts = splitRelatedGuidesForTagline(post.content, locale);
+  const publishedIso = post.publishedAt ?? post.date;
+  const modifiedIso = post.updatedAt ?? publishedIso;
+  const showUpdated =
+    Boolean(post.updatedAt) && !sameCalendarDay(publishedIso, modifiedIso);
 
   return (
     <article className={ARTICLE_SHELL}>
       <header className="mb-6 border-b border-border/60 pb-6">
-        <time
-          dateTime={post.date}
-          className="font-sans text-sm text-muted-foreground"
-        >
-          {formatDate(post.date, locale)}
-        </time>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-sm text-muted-foreground">
+          <time dateTime={publishedIso}>
+            {dateLabels.published}: {formatDate(publishedIso, locale)}
+          </time>
+          {showUpdated ? (
+            <time dateTime={modifiedIso}>
+              {dateLabels.updated}: {formatDate(modifiedIso, locale)}
+            </time>
+          ) : null}
+        </div>
         <h1 className="mt-3 font-serif text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">
           {post.title}
         </h1>

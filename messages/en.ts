@@ -30,6 +30,8 @@ const en = {
   },
   blog: {
     notFound: "Article not found",
+    published: "Published",
+    updated: "Updated",
     share: {
       ariaLabel: "Share this article",
       heading: "Share this article",

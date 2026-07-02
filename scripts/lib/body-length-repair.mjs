@@ -8,6 +8,7 @@ import matter from "gray-matter";
 
 import { MIN_EN_BODY_BYTES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
+import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
 import { listPublishedSlugs } from "./content-quality.mjs";
 
 const INSERT_BEFORE_RE =
@@ -142,7 +143,7 @@ export function repairShortEnglishBody(root, slug, options = {}) {
     return { changed: false, repairs: [] };
   }
 
-  fs.writeFileSync(filePath, matter.stringify(expanded.body, data), "utf8");
+  writeLocaleFileWithBump(filePath, data, expanded.body, fs, matter);
   return { changed: true, repairs: expanded.repairs };
 }
 

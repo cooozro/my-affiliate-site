@@ -7,6 +7,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { inferPostTopic } from "./infer-post-topic.mjs";
+import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
 import { listPublishedSlugs } from "./content-quality.mjs";
 
 export const MAX_RELATED_GUIDE_LINKS = 5;
@@ -309,7 +310,7 @@ export function repairRelatedGuidesForPost(root, slug, options = {}) {
     );
 
     if (result.changed) {
-      fs.writeFileSync(filePath, matter.stringify(result.body, data), "utf8");
+      writeLocaleFileWithBump(filePath, data, result.body, fs, matter);
       anyChanged = true;
     }
     allRepairs.push(...result.repairs);

@@ -55,6 +55,10 @@ export default async function AdminPreviewPage({
         locale={locale}
         shareUrl={shareUrl}
         shareLabels={dict.blog.share}
+        dateLabels={{
+          published: dict.blog.published,
+          updated: dict.blog.updated,
+        }}
       />
     </div>
   );

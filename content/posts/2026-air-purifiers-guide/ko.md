@@ -19,7 +19,7 @@ coverImageAlt: 작은 침실의 HEPA 공기청정기
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-01T02:09:49.584Z'
+updatedAt: '2026-07-02T03:09:11.093Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -161,6 +161,20 @@ imageSearchKeywords:
 **시나리오 팁:** '밤새 에어컨+청정' 조합에서는 **Levoit → Winix** 순이 흔합니다. **$100 미만·1년 미만 거주**면 IKEA → Blueair가 초기 부담이 낮습니다. 반려동물 털이 많으면 세척 프리필터가 있는 Winix·Levoit 쪽이 HEPA 교체 주기를 늘리는 데 유리합니다.
 
 ---
+
+## 자주 묻는 질문
+
+### 공기청정기 구매 전 가장 먼저 확인할 항목은 무엇인가요?
+
+방 크기·사용 패턴·설치 제약을 먼저 적어 두고, 그 조건에 맞는 스펙만 비교하세요. 스펙표만 보고 고르면 반품·교체 비용이 커질 수 있습니다.
+
+### 최저가 모델을 고르면 손해인가요?
+
+항상 그런 것은 아닙니다. 다만 필터·호환 액세서리·AS·소음·전력 같은 유지 비용이 낮은 모델이 장기적으로 더 나을 때가 많습니다.
+
+### 리뷰 평점만 믿어도 될까요?
+
+평점은 참고용으로만 쓰고, 본문의 비교 표·시나리오·단점 항목을 함께 보세요. 같은 평점이라도 사용 환경에 따라 체감이 크게 달라집니다.
 
 ## 관련 가이드
 

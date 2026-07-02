@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-01T02:10:14.686Z'
+updatedAt: '2026-07-02T03:09:11.092Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -154,6 +154,20 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 | Lowest 3-year ownership cost | Winix 5500-2 | IKEA FÖRNUFTIG |
 
 ---
+
+## FAQ
+
+### What should I verify first before buying air purifier?
+
+Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+
+### Is the cheapest option always a bad deal?
+
+Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+
+### Can I rely on star ratings alone?
+
+Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
 
 ## Related guides
 

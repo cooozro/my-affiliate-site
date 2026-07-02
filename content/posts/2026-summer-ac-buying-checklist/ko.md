@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: 여름 침실의 이동식 에어컨
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-06-28T17:36:03.000Z'
+updatedAt: '2026-07-02T03:09:11.108Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -91,6 +91,20 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 위 수치는 출발점이며, 서향·옥상·개방형 주방 연결 공간은 한 단계 올려 검토하세요. 가격은 {{today}} 기준 공시가 참고, 원화는 {{usd_krw_rate}} 활용.
 
 ---
+
+## 자주 묻는 질문
+
+### 에어컨 구매 전 가장 먼저 확인할 항목은 무엇인가요?
+
+방 크기·사용 패턴·설치 제약을 먼저 적어 두고, 그 조건에 맞는 스펙만 비교하세요. 스펙표만 보고 고르면 반품·교체 비용이 커질 수 있습니다.
+
+### 최저가 모델을 고르면 손해인가요?
+
+항상 그런 것은 아닙니다. 다만 필터·호환 액세서리·AS·소음·전력 같은 유지 비용이 낮은 모델이 장기적으로 더 나을 때가 많습니다.
+
+### 리뷰 평점만 믿어도 될까요?
+
+평점은 참고용으로만 쓰고, 본문의 비교 표·시나리오·단점 항목을 함께 보세요. 같은 평점이라도 사용 환경에 따라 체감이 크게 달라집니다.
 
 ## 관련 가이드
 

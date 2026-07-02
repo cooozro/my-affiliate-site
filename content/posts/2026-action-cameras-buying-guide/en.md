@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-01T07:26:11.000Z'
+updatedAt: '2026-07-02T03:09:11.088Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview
@@ -146,6 +146,20 @@ Reference prices from OEM and major US storefront listings (July 2026).
 | Budget pool and trail days | AKASO Brave 8 | GoPro HERO13 Black (refurb) |
 
 ---
+
+## FAQ
+
+### What should I verify first before buying action camera?
+
+Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+
+### Is the cheapest option always a bad deal?
+
+Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+
+### Can I rely on star ratings alone?
+
+Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
 
 ## Related guides
 

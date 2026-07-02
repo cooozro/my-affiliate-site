@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-06-26T02:57:56.000Z'
+updatedAt: '2026-07-02T03:09:11.099Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -146,6 +146,20 @@ Snapshot as of {{today}}.
 ---
 
 ---
+
+## FAQ
+
+### What should I verify first before buying smartphones?
+
+Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+
+### Is the cheapest option always a bad deal?
+
+Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+
+### Can I rely on star ratings alone?
+
+Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
 
 ## Related guides
 

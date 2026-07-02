@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-02T12:00:00.000Z'
+updatedAt: '2026-07-02T03:09:11.108Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -103,6 +103,20 @@ Install during a mild day if you can, then run a **30-minute sealed-room test**:
 If you share walls with neighbors, note **start-up times** for sleep schedules. Many units use a louder burst for the first five minutes after the compressor kicks in. Staggering smart-plug schedules or using “dry” mode only when cooling is unnecessary can keep bedroom noise inside acceptable dB without sacrificing afternoon WFH comfort.
 
 ---
+
+## FAQ
+
+### What should I verify first before buying air conditioner?
+
+Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+
+### Is the cheapest option always a bad deal?
+
+Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+
+### Can I rely on star ratings alone?
+
+Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
 
 ## Related guides
 

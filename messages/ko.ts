@@ -32,6 +32,8 @@ const ko: Dictionary = {
   },
   blog: {
     notFound: "글을 찾을 수 없습니다",
+    published: "발행",
+    updated: "최종 수정",
     share: {
       ariaLabel: "이 글 공유하기",
       heading: "이 글 공유하기",
