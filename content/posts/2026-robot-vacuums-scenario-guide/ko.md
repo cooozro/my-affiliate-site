@@ -1,7 +1,7 @@
 ---
 title: '원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택'
 description: '25~55㎡ 아파트 시나리오별 추천 — 흡입력·LiDAR 매핑·물걸레 유지보수·여름 냉방 중 실내 먼지까지, 공개 스펙 기준 편집부 비교.'
-date: '2026-07-01'
+date: '2026-07-02'
 tags:
   - 로봇청소기
   - 스마트홈
@@ -10,7 +10,7 @@ tags:
   - 가전
 contentProfile: scenario-guide
 topicId: robot-vacuums
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-scenario-guide/robot-vacuum-smart-home-robot-vacuum-hardwood-fl-cover.jpg
@@ -24,6 +24,8 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-02T01:23:30.000Z'
+publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## 편집부 개요
 

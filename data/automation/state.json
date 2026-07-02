@@ -1,5 +1,5 @@
 {
-  "topicIndex": 23,
+  "topicIndex": 35,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -14,12 +14,13 @@
     "air-purifiers",
     "robot-vacuums",
     "action-cameras",
-    "noise-cancelling-headphones"
+    "noise-cancelling-headphones",
+    "gaming-consoles"
   ],
-  "lastPublishAt": "2026-07-01T07:26:12.652Z",
-  "nextPublishAt": "2026-07-02T01:03:00.000Z",
-  "scheduledGapHours": 4.05,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-02T01:23:32.016Z",
+  "nextPublishAt": "2026-07-02T06:12:29.774Z",
+  "scheduledGapHours": 4.82,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-02",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-02",
@@ -147,6 +148,18 @@
         "https://www.aipick.shop/en/blog/2026-action-cameras-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-action-cameras-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-robot-vacuums-scenario-guide",
+      "topic": {
+        "id": "robot-vacuums"
+      },
+      "at": "2026-07-02T01:23:32.016Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-robot-vacuums-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-robot-vacuums-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -255,6 +268,15 @@
       "id": "noise-cancelling-headphones",
       "category": "audio",
       "at": "2026-07-01T07:26:12.667Z"
+    },
+    {
+      "id": "robot-vacuums",
+      "at": "2026-07-02T01:23:32.019Z"
+    },
+    {
+      "id": "gaming-consoles",
+      "category": "gaming",
+      "at": "2026-07-02T01:23:32.029Z"
     }
   ],
   "formatHistory": [
@@ -267,13 +289,22 @@
     "head-to-head",
     "scenario-guide",
     "buying-guide",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-01T22:07:45.495Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-02T01:23:30.518Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 20min (KST 2026-07-02)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   }
 }

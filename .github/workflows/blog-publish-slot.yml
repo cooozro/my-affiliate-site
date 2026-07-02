@@ -2,8 +2,20 @@ name: Blog publish slot
 
 # Fast publish-only cron — separate from slow Cursor replenish so slots are not blocked.
 on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "data/automation/**"
+      - ".github/workflows/blog-publish-slot.yml"
   schedule:
     - cron: "*/5 * * * *"
+    # Hourly backup UTC 22–15 ≈ KST 07:00–00:00 (GitHub often skips */5 on quiet repos)
+    - cron: "0 22-23 * * *"
+    - cron: "0 0-15 * * *"
+  workflow_run:
+    workflows: ["Blog automation"]
+    types: [completed]
   workflow_dispatch:
 
 env:

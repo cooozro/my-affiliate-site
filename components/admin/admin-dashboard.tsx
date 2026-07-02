@@ -74,6 +74,31 @@ export function AdminDashboard() {
   const [uploadSlug, setUploadSlug] = useState<string | null>(null);
   const [imageVersion, setImageVersion] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const publishTriggerRef = useRef(false);
+
+  async function maybeTriggerOverduePublish(slotOverdue: boolean) {
+    if (!slotOverdue || publishTriggerRef.current) return;
+
+    const storageKey = "admin-publish-slot-trigger";
+    const last = Number(sessionStorage.getItem(storageKey) ?? "0");
+    const now = Date.now();
+    if (now - last < 10 * 60 * 1000) return;
+
+    publishTriggerRef.current = true;
+    try {
+      const response = await fetch("/api/admin/trigger-publish-slot", {
+        method: "POST",
+        credentials: "same-origin",
+      });
+      if (response.ok) {
+        sessionStorage.setItem(storageKey, String(now));
+      }
+    } catch {
+      /* ignore — cron or next admin visit will retry */
+    } finally {
+      publishTriggerRef.current = false;
+    }
+  }
 
   async function loadData() {
     setLoading(true);
@@ -105,6 +130,7 @@ export function AdminDashboard() {
     setPosts(data.posts);
     setAnalytics(data.analytics);
     setAutomation(data.automation);
+    void maybeTriggerOverduePublish(data.automation.slotOverdue);
     setCoverApisReady(data.coverApisReady ?? true);
     setMutations(data.mutations ?? null);
     setLoading(false);
@@ -350,9 +376,10 @@ export function AdminDashboard() {
             <MetricCard label="다음 간격" value={automation.gapLabel} />
           </div>
           {automation.slotOverdue ? (
-            <p className="mt-3 text-sm text-amber-200">
-              예정 시각이 지났습니다. 전용 publish-slot 워크플로가 5분마다
-              catch-up 발행을 시도합니다. (Cursor 보충 작업과 분리됨)
+            <p className="mt-3 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-600 dark:text-red-400">
+              예정 시각이 지났습니다. publish-slot 워크플로가 5분마다 catch-up
+              발행을 시도합니다. 지연 시 이 페이지 접속 시 워크플로를 자동으로
+              한 번 더 요청합니다.
             </p>
           ) : null}
           {automation.healthIssues && automation.healthIssues.length > 0 ? (
@@ -400,8 +427,8 @@ export function AdminDashboard() {
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">
-              임시글 버퍼가 충분합니다. 다음 자동 발행은 위 시각 이후 15분 단위
-              체크에서 진행됩니다.
+              임시글 버퍼가 충분합니다. publish-slot 워크플로가 5분마다 자동
+              발행을 확인합니다.
             </p>
           )}
         </section>
