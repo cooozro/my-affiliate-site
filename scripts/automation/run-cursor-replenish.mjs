@@ -22,6 +22,7 @@ import { pickTopic } from "./topics.mjs";
 import { loadState, saveState } from "./state.mjs";
 import {
   countDrafts,
+  ensureDraftCreatedAt,
   listDrafts,
   listSlugDirs,
   readPost,
@@ -363,6 +364,8 @@ async function main() {
       console.error(`Integrity gate failed for ${slug}`);
       return;
     }
+
+    ensureDraftCreatedAt(slug, new Date().toISOString());
   }
 
   const lastSlug = createdSlugs[createdSlugs.length - 1];

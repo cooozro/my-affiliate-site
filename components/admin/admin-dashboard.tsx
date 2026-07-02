@@ -10,6 +10,8 @@ type AdminPostRow = {
   draft: boolean;
   date: string;
   updatedAt?: string;
+  publishedAt?: string;
+  createdAt?: string;
   hasEn: boolean;
   hasKo: boolean;
   coverImage?: string;
@@ -23,6 +25,14 @@ type AdminPostRow = {
   coverImageProvider?: string;
   coverImageAssetId?: string | number;
 };
+
+function adminWrittenDateLabel(post: AdminPostRow): string {
+  const raw = post.draft
+    ? (post.createdAt ?? post.date)
+    : (post.publishedAt ?? post.date);
+  if (!raw) return "—";
+  return raw.slice(0, 10);
+}
 
 type PostFilter = "all" | "cover-issues";
 
@@ -556,7 +566,7 @@ export function AdminDashboard() {
                 <th className="px-3 py-2 font-medium">Slug</th>
                 <th className="px-3 py-2 font-medium">Title (EN)</th>
                 <th className="px-3 py-2 font-medium">Status</th>
-                <th className="px-3 py-2 font-medium">Date</th>
+                <th className="px-3 py-2 font-medium">작성일</th>
                 <th className="px-3 py-2 font-medium">Locales</th>
                 <th className="px-3 py-2 font-medium">Actions</th>
               </tr>
@@ -581,7 +591,7 @@ export function AdminDashboard() {
                     </span>
                   </td>
                   <td className="px-3 py-3 text-muted-foreground">
-                    {post.updatedAt?.slice(0, 10) ?? post.date}
+                    {adminWrittenDateLabel(post)}
                   </td>
                   <td className="px-3 py-3 text-muted-foreground">
                     {post.hasEn ? "EN" : "—"}

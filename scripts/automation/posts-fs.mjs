@@ -34,6 +34,19 @@ export function writePost(slug, locale, data, content) {
   return filePath;
 }
 
+/** Draft 작성일 — admin sort uses createdAt, not scheduled `date`. */
+export function ensureDraftCreatedAt(slug, at = new Date().toISOString()) {
+  for (const locale of ["en", "ko"]) {
+    const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
+    if (!fs.existsSync(filePath)) continue;
+
+    const { data, content } = readPost(slug, locale);
+    if (!data.draft || data.createdAt) continue;
+
+    writePost(slug, locale, { ...data, createdAt: at }, content);
+  }
+}
+
 export function slugExists(slug) {
   return fs.existsSync(path.join(POSTS_DIR, slug));
 }

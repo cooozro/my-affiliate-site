@@ -12,11 +12,12 @@ When `data/automation/cursor-draft-request.json` has `"status": "pending"`:
 
 1. Read `topic`, `contentProfile`, `templatePath`, and `instructions` in that file.
 2. Write **one** bilingual draft (`en.md` + `ko.md`, `draft: true`) per `docs/CONTENT_STANDARDS.md` and the profile template in `docs/templates/` (see `contentProfile`).
-3. Set frontmatter `contentProfile` to match the request (buying-guide | head-to-head | scenario-guide | explainer | checklist).
-4. Use `scripts/lib/editorial-standards.mjs` — no fake seller API claims. **Season-first:** frame the angle for current KST season/events in the request.
-5. Add cover image (`npm run content:image` with slug + imageQuery if `PEXELS_API_KEY` is set).
-6. Run `npm run content:validate`.
-7. Update the request file: `"status": "complete"`, `writtenSlug`, `completedAt`.
-8. Commit and push with the new draft.
+3. Set frontmatter `createdAt` to the current ISO timestamp (actual 작성일 for admin sort; `date` is the scheduled publish slot only).
+4. Set frontmatter `contentProfile` to match the request (buying-guide | head-to-head | scenario-guide | explainer | checklist).
+5. Use `scripts/lib/editorial-standards.mjs` — no fake seller API claims. **Season-first:** frame the angle for current KST season/events in the request.
+6. Add cover image (`npm run content:image` with slug + imageQuery if `PEXELS_API_KEY` is set).
+7. Run `npm run content:validate`.
+8. Update the request file: `"status": "complete"`, `writtenSlug`, `completedAt`.
+9. Commit and push with the new draft.
 
 Do **not** use OpenAI API for this replenish flow.

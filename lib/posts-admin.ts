@@ -21,6 +21,27 @@ export type AdminPostRow = {
   liveData: boolean;
 };
 
+/** Admin list sort — 작성일 only (never updatedAt). */
+export function adminPostWrittenIso(row: AdminPostRow): string {
+  if (row.draft) {
+    return row.createdAt ?? row.date;
+  }
+  return row.publishedAt ?? row.date;
+}
+
+function adminPostSortTime(row: AdminPostRow): number {
+  const t = new Date(adminPostWrittenIso(row)).getTime();
+  return Number.isNaN(t) ? 0 : t;
+}
+
+function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
+  return rows.sort((a, b) => {
+    const diff = adminPostSortTime(b) - adminPostSortTime(a);
+    if (diff !== 0) return diff;
+    return b.slug.localeCompare(a.slug);
+  });
+}
+
 function listSlugDirs(): string[] {
   if (!fs.existsSync(POSTS_DIR)) return [];
   return fs
@@ -50,7 +71,7 @@ export function writePostFile(
 }
 
 export function listPostsForAdmin(): AdminPostRow[] {
-  return listSlugDirs()
+  const rows = listSlugDirs()
     .map((slug) => {
       const enPath = path.join(POSTS_DIR, slug, "en.md");
       const koPath = path.join(POSTS_DIR, slug, "ko.md");
@@ -102,20 +123,8 @@ export function listPostsForAdmin(): AdminPostRow[] {
         liveData,
       };
     })
-    .filter((row) => row.hasEn || row.hasKo)
-    .sort((a, b) => {
-      const aTime = new Date(a.updatedAt ?? a.date ?? 0).getTime();
-      const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();
-      return bTime - aTime;
-    });
-}
-
-function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
-  return rows.sort((a, b) => {
-    const aTime = new Date(a.updatedAt ?? a.date ?? 0).getTime();
-    const bTime = new Date(b.updatedAt ?? b.date ?? 0).getTime();
-    return bTime - aTime;
-  });
+    .filter((row) => row.hasEn || row.hasKo);
+  return sortAdminRows(rows);
 }
 
 async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | null> {

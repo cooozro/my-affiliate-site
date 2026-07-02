@@ -4,6 +4,7 @@ description: >-
   Three budget over-ear ANC headphones compared on cancellation depth, LDAC
   codec support, weight, and comfort for long flights and hot-season commutes.
 date: '2026-07-01'
+createdAt: '2026-07-02T04:52:03.000Z'
 tags:
   - noise cancelling headphones
   - travel audio

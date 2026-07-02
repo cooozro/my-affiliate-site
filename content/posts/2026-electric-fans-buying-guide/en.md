@@ -4,6 +4,7 @@ description: >-
   Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise
   in dB, wattage vs window AC, and scenario picks for summer heat waves.
 date: '2026-07-02'
+createdAt: '2026-07-02T04:12:26.254Z'
 tags:
   - electric fan
   - home appliances
