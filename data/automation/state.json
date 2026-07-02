@@ -318,19 +318,10 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-02T03:47:49.616Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "homepage-featured-mismatch",
-        "message": "Home featured is 2026-budget-wireless-earbuds-top5, expected latest 2026-gaming-consoles-scenario-guide",
-        "severity": "warning"
-      }
-    ],
-    "repairs": [
-      "2026-gaming-consoles-scenario-guide/en.md: publishedAt 2026-07-02T12:15:30.000Z → 2026-07-02T03:15:31.755Z",
-      "2026-gaming-consoles-scenario-guide/ko.md: publishedAt 2026-07-02T12:15:30.000Z → 2026-07-02T03:15:31.755Z"
-    ]
+    "at": "2026-07-02T03:59:06.594Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-02",
   "lastDailyContentAudit": {
