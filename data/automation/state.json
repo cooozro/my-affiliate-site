@@ -294,15 +294,9 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-02T02:05:27.093Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      }
-    ],
+    "at": "2026-07-02T02:07:30.279Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-02",
