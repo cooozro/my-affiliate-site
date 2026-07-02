@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T03:09:11.106Z'
+updatedAt: '2026-07-02T03:44:02.175Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## Editorial Overview
@@ -168,17 +168,17 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 ## FAQ
 
-### What should I verify first before buying robot vacuum?
+### For "Compact studio under 35 m² with narrow walkways", which pick in this guide fits best?
 
-Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+What matters here - Slim dock footprint — some auto-empty bases need 40+ cm clearance behind furniture. - LiDAR mapping — bump-and-turn robots miss corners in L-shaped studios. - Cliff and threshold handling — bathroom lips and balcony tracks should not trap t
 
-### Is the cheapest option always a bad deal?
+### For "Pet hair on hardwood and low-pile rugs", which pick in this guide fits best?
 
-Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+What matters here - Brush roll design — rubber fins vs bristle tangles on long hair. - Obstacle recognition — summer means more shoes, leashes, and pet bowls on the floor. - Auto-empty frequency — pet households fill bins in 1–2 runs without a dock.
 
-### Can I rely on star ratings alone?
+### For "Hard floors plus light mopping through humid summer weeks", which pick in this guide fits best?
 
-Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
+What matters here - Mop lift on rugs — wetting a thin entry mat causes odor fast in humidity. - Dock wash/dry cycle — stagnant mop pads smell within days above 28 °C indoor dew point. - Water tank access — tight kitchens make refilling awkward if the dock is w
 
 ## Related guides
 

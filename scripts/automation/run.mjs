@@ -68,10 +68,28 @@ async function main() {
       const { runDailyContentAuditIfDue } = await import(
         "../lib/daily-content-audit-runner.mjs"
       );
-      const result = runDailyContentAuditIfDue();
+      const result = await runDailyContentAuditIfDue();
       if (!result.ran) {
         console.log(`Daily content audit skipped: ${result.reason}`);
       }
+      break;
+    }
+
+    case "repair-faq-llm": {
+      const { repairAllFaqSectionsWithLlm } = await import("../lib/faq-section.mjs");
+      const summary = await repairAllFaqSectionsWithLlm(process.cwd(), {
+        includeDrafts: true,
+        force: process.argv.includes("--force"),
+      });
+      console.log(JSON.stringify(summary, null, 2));
+      if (summary.errors?.length > 0) process.exit(1);
+      break;
+    }
+
+    case "scan-templated-content": {
+      const { scanTemplatedContentIssues } = await import("../lib/faq-section.mjs");
+      const report = scanTemplatedContentIssues(process.cwd());
+      console.log(JSON.stringify(report, null, 2));
       break;
     }
 

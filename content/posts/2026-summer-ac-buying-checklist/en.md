@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-02T03:09:11.108Z'
+updatedAt: '2026-07-02T03:44:02.996Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -106,17 +106,17 @@ If you share walls with neighbors, note **start-up times** for sleep schedules. 
 
 ## FAQ
 
-### What should I verify first before buying air conditioner?
+### Why does the checklist stress "Measure net floor area and ceiling height" before checkout?
 
-Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.
+Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
 
-### Is the cheapest option always a bad deal?
+### Why does the checklist stress "Confirm lease / building rules on window hardware" before checkout?
 
-Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.
+Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
 
-### Can I rely on star ratings alone?
+### Why does the checklist stress "Map the exhaust path (window, sash, or balcony door)" before checkout?
 
-Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.
+Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
 
 ## Related guides
 

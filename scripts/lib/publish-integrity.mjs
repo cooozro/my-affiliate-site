@@ -24,8 +24,6 @@ import {
   loadPublishedPostIndex,
 } from "./related-guides.mjs";
 import { repairShortEnglishBody, expandEnglishBodyIfNeeded } from "./body-length-repair.mjs";
-import { repairFaqSectionInBody } from "./faq-section.mjs";
-import { bumpUpdatedAt } from "./post-updated-at.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
@@ -181,14 +179,6 @@ export function repairPostLocale(root, slug, locale) {
     if (expanded.changed) {
       body = expanded.body;
       repairs.push(...expanded.repairs);
-    }
-  }
-
-  if (!isIntegrityExempt(slug, data)) {
-    const faq = repairFaqSectionInBody(body, locale, slug, data);
-    if (faq.changed) {
-      body = faq.body;
-      repairs.push(...faq.repairs);
     }
   }
 

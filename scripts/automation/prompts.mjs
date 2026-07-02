@@ -28,6 +28,7 @@ MANDATORY RULES (violations = rejection):
 8. Season-first framing: tie the angle to current season (${season}) when the topic is seasonal (AC in summer, air purifier in spring, back-to-school in fall, etc.).
 9. Bilingual depth: EN body ≥ 5,000 UTF-8 bytes; KO body ≥ 2,500 characters. Checklist items need 2–3 sentences each for Why and Red flag in both languages.
 10. Publish integrity gate (auto-checked before draft save & LIVE): no calendar year (20xx) in titles; EN titles must not start with How to / Stop / Why you / What to / When to; no hangul-latin typos in Korean (e.g. 백그ra운드); ≥3 Related guides links to published slugs only; ≥3 tags; ≥4 H2 sections (head-to-head ≥3); locale-correct internal links (/en/ in en.md, /ko/ in ko.md); no duplicate H2 headings; no draft/preview URLs in body.
+11. FAQ: include ## FAQ / ## 자주 묻는 질문 with 3–5 post-specific Q&A (### headings). Never use generic templates like "구매 전 가장 먼저 확인", "최저가 모델", "리뷰 평점만", or English equivalents — questions must reference this article's products, scenarios, and verdict.
 
 ${topic.liveData ? `Use these placeholders in body where prices/dates appear:
 - {{today}} or {{today_locale}} for dates

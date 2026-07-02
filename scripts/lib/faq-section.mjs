@@ -1,18 +1,16 @@
 /**
- * FAQ section audit + auto-repair for published posts.
+ * FAQ section audit + LLM auto-repair for published posts.
  */
 
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { inferPostTopic } from "./infer-post-topic.mjs";
+import { generateFaqEntries, sleep } from "./faq-llm.mjs";
 import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
 
 export const FAQ_HEADING_RE =
   /^##\s*(FAQ|자주 묻는 질문|Frequently [Aa]sked(?:\s+[Qq]uestions)?)\s*$/m;
-
-const FAQ_QUESTION_RE = /^###\s+(.+)$/;
 
 export const MIN_FAQ_BY_PROFILE = {
   "buying-guide": 3,
@@ -21,6 +19,19 @@ export const MIN_FAQ_BY_PROFILE = {
   explainer: 5,
   checklist: 3,
   editorial: 0,
+};
+
+const TEMPLATE_FAQ_SIGNATURES = {
+  ko: [
+    /구매 전 가장 먼저 확인할 항목은 무엇인가요/,
+    /최저가 모델을 고르면 손해인가요/,
+    /리뷰 평점만 믿어도 될까요/,
+  ],
+  en: [
+    /What should I verify first before buying/i,
+    /Is the cheapest option always a bad deal/i,
+    /Can I rely on star ratings alone/i,
+  ],
 };
 
 const INSERT_BEFORE_RE =
@@ -34,75 +45,49 @@ function faqHeading(locale) {
   return locale === "ko" ? "## 자주 묻는 질문" : "## FAQ";
 }
 
-function topicLabel(slug, data, locale) {
-  const topic = inferPostTopic(slug, data);
-  const tag = data.tags?.[0];
-  if (locale === "ko") {
-    return tag ?? topic.category ?? "이 제품";
-  }
-  return tag ?? topic.category ?? "this category";
-}
-
-function defaultFaqEntries(slug, locale, data, needed) {
-  const subject = topicLabel(slug, data, locale);
-  const pool =
-    locale === "ko"
-      ? [
-          {
-            q: `${subject} 구매 전 가장 먼저 확인할 항목은 무엇인가요?`,
-            a: "방 크기·사용 패턴·설치 제약을 먼저 적어 두고, 그 조건에 맞는 스펙만 비교하세요. 스펙표만 보고 고르면 반품·교체 비용이 커질 수 있습니다.",
-          },
-          {
-            q: "최저가 모델을 고르면 손해인가요?",
-            a: "항상 그런 것은 아닙니다. 다만 필터·호환 액세서리·AS·소음·전력 같은 유지 비용이 낮은 모델이 장기적으로 더 나을 때가 많습니다.",
-          },
-          {
-            q: "리뷰 평점만 믿어도 될까요?",
-            a: "평점은 참고용으로만 쓰고, 본문의 비교 표·시나리오·단점 항목을 함께 보세요. 같은 평점이라도 사용 환경에 따라 체감이 크게 달라집니다.",
-          },
-          {
-            q: "언제 다시 비교 목록을 업데이트해야 하나요?",
-            a: "신형 출시, 가격 변동, 펌웨어 업데이트가 있을 때 후보를 다시 좁히세요. 특히 시즌성 제품은 출시 직후 한 달이 가장 변동이 큽니다.",
-          },
-          {
-            q: "이 가이드의 추천은 어떻게 검증하나요?",
-            a: "제조사 공개 스펙·설치 요건·공개 리뷰 패턴을 교차 확인합니다. 판매자 스크립트나 광고 문구는 추천 근거로 쓰지 않습니다.",
-          },
-        ]
-      : [
-          {
-            q: `What should I verify first before buying ${subject}?`,
-            a: "Write down room size, daily use pattern, and install constraints, then compare only models that fit. Spec-sheet shopping alone often leads to returns and hidden running costs.",
-          },
-          {
-            q: "Is the cheapest option always a bad deal?",
-            a: "Not always — but filter life, accessories, warranty, noise, and power use often favor a slightly higher-priced finalist over the lowest sticker price.",
-          },
-          {
-            q: "Can I rely on star ratings alone?",
-            a: "Use ratings as one signal. Cross-check comparison tables, scenario notes, and weakness bullets in the guide — the same score can feel very different by use case.",
-          },
-          {
-            q: "When should I refresh my shortlist?",
-            a: "After new model launches, price shifts, or firmware updates. Seasonal categories move fastest in the first month after release.",
-          },
-          {
-            q: "How are recommendations in this guide validated?",
-            a: "We cross-check public manufacturer specs, install requirements, and open review patterns — not seller scripts or ad copy.",
-          },
-        ];
-
-  return pool.slice(0, needed);
-}
-
-function countFaqInBody(body) {
+function extractFaqSectionBounds(body) {
   const start = body.search(FAQ_HEADING_RE);
-  if (start < 0) return 0;
+  if (start < 0) return null;
 
-  const section = body.slice(start);
-  const nextH2 = section.slice(1).search(/^##\s+/m);
-  const block = nextH2 >= 0 ? section.slice(0, nextH2 + 1) : section;
-  return (block.match(/^###\s+/gm) ?? []).length;
+  const afterHeading = body.slice(start);
+  const nextH2 = afterHeading.slice(1).search(/^##\s+/m);
+  const end = nextH2 >= 0 ? start + 1 + nextH2 : body.length;
+  return { start, end };
+}
+
+export function extractFaqSectionText(body) {
+  const bounds = extractFaqSectionBounds(body);
+  if (!bounds) return "";
+  return body.slice(bounds.start, bounds.end);
+}
+
+export function countFaqInBody(body) {
+  const section = extractFaqSectionText(body);
+  if (!section) return 0;
+  return (section.match(/^###\s+/gm) ?? []).length;
+}
+
+export function isTemplatedFaqBody(body, locale) {
+  const section = extractFaqSectionText(body);
+  if (!section) return false;
+
+  const patterns = TEMPLATE_FAQ_SIGNATURES[locale] ?? TEMPLATE_FAQ_SIGNATURES.en;
+  let hits = 0;
+  for (const pattern of patterns) {
+    if (pattern.test(section)) hits += 1;
+  }
+  return hits >= 2;
+}
+
+export function needsFaqLlmRepair(body, locale, profile, options = {}) {
+  const minFaq = options.minFaq ?? MIN_FAQ_BY_PROFILE[profile] ?? 3;
+  if (minFaq <= 0) return false;
+  if (options.force) return true;
+
+  const count = countFaqInBody(body);
+  if (count < minFaq) return true;
+  if (isTemplatedFaqBody(body, locale)) return true;
+  return false;
 }
 
 function formatFaqBlock(locale, entries) {
@@ -116,8 +101,16 @@ function formatFaqBlock(locale, entries) {
   return lines.join("\n").trim();
 }
 
-function insertFaqBlock(body, locale, entries) {
+export function replaceFaqSection(body, locale, entries) {
   const block = formatFaqBlock(locale, entries);
+  const bounds = extractFaqSectionBounds(body);
+
+  if (bounds) {
+    const before = body.slice(0, bounds.start).trimEnd();
+    const after = body.slice(bounds.end).trimStart();
+    return [before, block, after].filter(Boolean).join("\n\n").trim();
+  }
+
   const trimmed = body.trim();
   const match = trimmed.match(INSERT_BEFORE_RE);
   if (match?.index != null) {
@@ -127,49 +120,156 @@ function insertFaqBlock(body, locale, entries) {
 }
 
 /**
+ * Sync repair is disabled — use repairFaqSectionWithLlm / repairAllFaqSectionsWithLlm.
  * @returns {{ body: string, repairs: string[], changed: boolean }}
  */
 export function repairFaqSectionInBody(body, locale, slug, data, options = {}) {
-  const repairs = [];
+  if (needsFaqLlmRepair(body, locale, data.contentProfile ?? "buying-guide", options)) {
+    return {
+      body,
+      repairs: [
+        `${slug}/${locale}.md: FAQ needs LLM repair (missing or templated) — run repair-faq-llm`,
+      ],
+      changed: false,
+    };
+  }
+  return { body, repairs: [], changed: false };
+}
+
+export async function repairFaqSectionWithLlm(
+  root,
+  slug,
+  locale,
+  options = {},
+) {
+  const filePath = path.join(postsDir(root), slug, `${locale}.md`);
+  if (!fs.existsSync(filePath)) {
+    return { changed: false, repairs: [], skipped: true };
+  }
+
+  const raw = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(raw);
+  if (data.draft && !options.includeDrafts) {
+    return { changed: false, repairs: [], skipped: true };
+  }
+
   const profile = data.contentProfile ?? "buying-guide";
-  const minFaq = options.minFaq ?? MIN_FAQ_BY_PROFILE[profile] ?? 3;
+  const minFaq = MIN_FAQ_BY_PROFILE[profile] ?? 3;
   if (minFaq <= 0) {
-    return { body, repairs, changed: false };
+    return { changed: false, repairs: [], skipped: true };
   }
 
-  const existing = countFaqInBody(body);
-  if (existing >= minFaq) {
-    return { body, repairs, changed: false };
+  const body = content.trim();
+  if (!needsFaqLlmRepair(body, locale, profile, options)) {
+    return { changed: false, repairs: [], skipped: true };
   }
 
-  const needed = minFaq - existing;
-  const fillers = defaultFaqEntries(slug, locale, data, needed);
+  const entries = await generateFaqEntries({
+    slug,
+    locale,
+    title: String(data.title ?? slug),
+    description: String(data.description ?? ""),
+    body,
+    data,
+    minCount: minFaq,
+  });
 
-  let newBody;
-  if (existing === 0) {
-    newBody = insertFaqBlock(body, locale, fillers);
-    repairs.push(
-      `${slug}/${locale}.md: inserted FAQ section (${fillers.length} entries)`,
-    );
-  } else {
-    const start = body.search(FAQ_HEADING_RE);
-    const section = body.slice(start);
-    const nextH2 = section.slice(1).search(/^##\s+/m);
-    const blockEnd = nextH2 >= 0 ? start + nextH2 + 1 : body.length;
-    const appendLines = fillers
-      .map((entry) => `### ${entry.q}\n\n${entry.a}`)
-      .join("\n\n");
-    newBody = `${body.slice(0, blockEnd).trimEnd()}\n\n${appendLines}\n\n${body.slice(blockEnd).trimStart()}`.trim();
-    repairs.push(
-      `${slug}/${locale}.md: expanded FAQ ${existing} → ${existing + fillers.length} entries`,
-    );
+  const newBody = replaceFaqSection(body, locale, entries);
+  if (newBody === body) {
+    return { changed: false, repairs: [], skipped: true };
   }
+
+  writeLocaleFileWithBump(filePath, data, newBody, fs, matter);
+
+  const reason = isTemplatedFaqBody(body, locale)
+    ? "replaced templated FAQ"
+    : countFaqInBody(body) === 0
+      ? "inserted LLM FAQ"
+      : "expanded LLM FAQ";
 
   return {
-    body: newBody,
-    repairs,
-    changed: newBody !== body.trim(),
+    changed: true,
+    repairs: [`${slug}/${locale}.md: ${reason} (${entries.length} entries)`],
   };
+}
+
+export async function repairFaqSectionForPostWithLlm(root, slug, options = {}) {
+  const allRepairs = [];
+  let anyChanged = false;
+
+  for (const locale of ["en", "ko"]) {
+    const result = await repairFaqSectionWithLlm(root, slug, locale, options);
+    if (result.changed) anyChanged = true;
+    allRepairs.push(...result.repairs);
+    if (options.delayMs) await sleep(options.delayMs);
+  }
+
+  return { changed: anyChanged, repairs: allRepairs };
+}
+
+export async function repairAllFaqSectionsWithLlm(root = process.cwd(), options = {}) {
+  const postsRoot = postsDir(root);
+  if (!fs.existsSync(postsRoot)) {
+    return { scanned: 0, changed: 0, repairs: [], errors: [] };
+  }
+
+  let slugs = fs
+    .readdirSync(postsRoot, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter((s) => s !== "welcome" && s !== "adsense-seo-checklist");
+
+  if (options.slug) {
+    slugs = slugs.filter((s) => s === options.slug);
+  }
+
+  const summary = {
+    scanned: 0,
+    changed: 0,
+    repairs: [],
+    errors: [],
+    templatedFound: 0,
+    missingFound: 0,
+  };
+
+  for (const slug of slugs.sort()) {
+    summary.scanned += 1;
+
+    for (const locale of ["en", "ko"]) {
+      const filePath = path.join(postsRoot, slug, `${locale}.md`);
+      if (!fs.existsSync(filePath)) continue;
+      const { data, content } = matter(fs.readFileSync(filePath, "utf8"));
+      const profile = data.contentProfile ?? "buying-guide";
+      const body = content.trim();
+
+      if (isTemplatedFaqBody(body, locale)) summary.templatedFound += 1;
+      if (countFaqInBody(body) < (MIN_FAQ_BY_PROFILE[profile] ?? 3)) {
+        summary.missingFound += 1;
+      }
+    }
+
+    try {
+      const result = await repairFaqSectionForPostWithLlm(root, slug, {
+        includeDrafts: options.includeDrafts ?? true,
+        force: options.force,
+        delayMs: options.delayMs ?? 400,
+      });
+      if (result.changed) summary.changed += 1;
+      summary.repairs.push(...result.repairs);
+    } catch (error) {
+      summary.errors.push({
+        slug,
+        message: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  return summary;
+}
+
+/** @deprecated Use repairAllFaqSectionsWithLlm */
+export async function repairAllFaqSections(root = process.cwd(), options = {}) {
+  return repairAllFaqSectionsWithLlm(root, options);
 }
 
 export function auditFaqSection(body, label, profile) {
@@ -178,6 +278,11 @@ export function auditFaqSection(body, label, profile) {
 
   if (!FAQ_HEADING_RE.test(body)) {
     return [`${label}: missing FAQ / 자주 묻는 질문 section`];
+  }
+
+  const locale = label.endsWith("/ko.md") ? "ko" : "en";
+  if (isTemplatedFaqBody(body, locale)) {
+    return [`${label}: FAQ uses generic template questions — needs LLM rewrite`];
   }
 
   const count = countFaqInBody(body);
@@ -191,46 +296,55 @@ export function auditFaqSection(body, label, profile) {
 }
 
 export function repairFaqSectionForPost(root, slug, options = {}) {
-  const allRepairs = [];
-  let anyChanged = false;
-
-  for (const locale of ["en", "ko"]) {
-    const filePath = path.join(postsDir(root), slug, `${locale}.md`);
-    if (!fs.existsSync(filePath)) continue;
-
-    const raw = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(raw);
-    if (data.draft && !options.includeDrafts) continue;
-
-    const result = repairFaqSectionInBody(content.trim(), locale, slug, data, options);
-    if (!result.changed) continue;
-
-    writeLocaleFileWithBump(filePath, data, result.body, fs, matter);
-    anyChanged = true;
-    allRepairs.push(...result.repairs);
-  }
-
-  return { changed: anyChanged, repairs: allRepairs };
+  return repairFaqSectionForPostWithLlm(root, slug, options);
 }
 
-export function repairAllFaqSections(root = process.cwd(), options = {}) {
+/**
+ * Corpus scan for duplicate/templated content patterns (reporting).
+ */
+export function scanTemplatedContentIssues(root = process.cwd()) {
   const postsRoot = postsDir(root);
-  if (!fs.existsSync(postsRoot)) {
-    return { scanned: 0, changed: 0, repairs: [] };
+  const issues = {
+    templatedFaq: [],
+    missingFaq: [],
+    duplicateEnSupplementHeadings: new Map(),
+  };
+
+  if (!fs.existsSync(postsRoot)) return issues;
+
+  for (const slug of fs.readdirSync(postsRoot, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name)) {
+    if (slug === "welcome" || slug === "adsense-seo-checklist") continue;
+
+    for (const locale of ["en", "ko"]) {
+      const filePath = path.join(postsRoot, slug, `${locale}.md`);
+      if (!fs.existsSync(filePath)) continue;
+      const { data, content } = matter(fs.readFileSync(filePath, "utf8"));
+      const profile = data.contentProfile ?? "buying-guide";
+      const body = content.trim();
+      const label = `${slug}/${locale}.md`;
+
+      if (MIN_FAQ_BY_PROFILE[profile] > 0) {
+        if (!FAQ_HEADING_RE.test(body)) {
+          issues.missingFaq.push(label);
+        } else if (isTemplatedFaqBody(body, locale)) {
+          issues.templatedFaq.push(label);
+        }
+      }
+    }
+
+    const enPath = path.join(postsRoot, slug, "en.md");
+    if (fs.existsSync(enPath)) {
+      const enBody = matter(fs.readFileSync(enPath, "utf8")).content;
+      const supplementMatch = enBody.match(/^## (Seasonal install|Room context|Real-world listening|Floor plan|Desk fit|Extended pre-purchase)/m);
+      if (supplementMatch) {
+        const heading = supplementMatch[0];
+        issues.duplicateEnSupplementHeadings.set(
+          heading,
+          [...(issues.duplicateEnSupplementHeadings.get(heading) ?? []), slug],
+        );
+      }
+    }
   }
 
-  const slugs = fs
-    .readdirSync(postsRoot, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .filter((s) => s !== "welcome" && s !== "adsense-seo-checklist");
-
-  const summary = { scanned: 0, changed: 0, repairs: [] };
-  for (const slug of slugs.sort()) {
-    summary.scanned += 1;
-    const result = repairFaqSectionForPost(root, slug, options);
-    if (result.changed) summary.changed += 1;
-    summary.repairs.push(...result.repairs);
-  }
-  return summary;
+  return issues;
 }
