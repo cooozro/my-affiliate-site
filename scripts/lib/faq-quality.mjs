@@ -106,8 +106,8 @@ export function validateFaqQuality(entries, locale, minCount) {
     if (isMechanicalFaqQuestion(q, locale)) {
       return { ok: false, reason: `mechanical question: ${q.slice(0, 70)}` };
     }
-    if (locale === "ko" && !/[?？]$/.test(q) && !/나요|까요|죠|인가요/.test(q)) {
-      return { ok: false, reason: "Korean question should read like a real reader ask" };
+    if (locale === "ko" && !/[?？]$/.test(q)) {
+      return { ok: false, reason: "Korean question should end with ?" };
     }
     if (locale === "ko" && (a.match(/입니다\./g) ?? []).length >= 4 && a.length < 180) {
       return { ok: false, reason: "answer reads too stiff / bullet-like" };

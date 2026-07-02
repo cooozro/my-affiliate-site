@@ -145,17 +145,17 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 ## FAQ
 
-### Who should choose Dell S2721DS from this guide?
+### I'm new to monitors — is 1440p on a 27-inch screen worth it for office work?
 
-Strengths: Sharp 27" 1440p IPS, reliable color for documents, slim bezels, strong office warranty reputation. Weaknesses: 75Hz only — not ideal for competitive FPS; tilt-only stand; higher price than 24" 1080p options. Analysis takeaway: For most buyers, this translates to crisp
+If you sit about **60–70 cm** from the screen, 27-inch 1080p often looks a bit soft for spreadsheets and long reading sessions. 1440p packs more pixels into the same size, so text looks sharper without squinting. A 24-inch 1080p panel is a better match at that distance if you want to save money. If you stare at the screen all day, we’d pick resolution before chasing 144 Hz.
 
-### Who should choose AOC 24G2 from this guide?
+### Do I really need 144 Hz if I only game sometimes?
 
-Strengths: 144Hz IPS at entry price, height-adjust stand rare in class, low input lag in public reviews. Weaknesses: 1080p at 24" is fine; scaling to 27" would look soft; occasional IPS glow in dark rooms. Analysis takeaway: For most buyers, this translates to smooth gaming and a
+For documents, video, and casual browsing, **75 Hz is perfectly fine**. 144 Hz shines in fast shooters and racing titles where motion clarity matters. Budget picks like the AOC 24G2 pair 144 Hz with a height-adjust stand — a sweet spot for students and part-time gamers. Jot down how often you actually play competitive titles; that honest number makes the refresh-rate decision easy.
 
-### Who should choose LG 27QN600 from this guide?
+### Is a height-adjustable stand worth it, or can I just stack books?
 
-Strengths: 27" 1440p IPS under many 1440p rivals; good for spreadsheets and creative previews; AMD FreeSync listed. Weaknesses: 75Hz cap; stand adjustments limited; some units report backlight bleed in corners. Analysis takeaway: For most buyers, this translates to more screen re
+Books work in a pinch, but your neck angle drifts day to day and fatigue adds up. A stand that moves up and down keeps your eyes level and clears clutter under the monitor. Planning a VESA arm? Check the mount pattern (often 100×100 mm) before you buy. For WFH and study setups, a proper stand is closer to **ergonomics than luxury**.
 
 ## Related guides
 

@@ -18,5 +18,12 @@ const summary = await repairAllFaqSectionsWithLlm(process.cwd(), {
 
 console.log(JSON.stringify(summary, null, 2));
 if (summary.errors?.length > 0) {
+  const allNoKey = summary.errors.every((e) =>
+    String(e.message).includes("OPENAI_API_KEY"),
+  );
+  if (allNoKey) {
+    console.warn("FAQ repair skipped: OPENAI_API_KEY not set");
+    process.exit(0);
+  }
   process.exit(1);
 }

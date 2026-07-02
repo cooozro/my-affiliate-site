@@ -106,17 +106,17 @@ If you share walls with neighbors, note **start-up times** for sleep schedules. 
 
 ## FAQ
 
-### Why does the checklist stress "Measure net floor area and ceiling height" before checkout?
+### If I buy the highest BTU I can afford, will my studio apartment stay cold?
 
-Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
+Not necessarily. BTU has to match **room volume, ceiling height, and sun exposure** — not just marketing labels. Top-floor or west-facing windows often need a step up from a shaded bedroom rating. Oversizing can short-cycle the compressor and leave the room clammy instead of comfortable. Measure floor area and ceiling height first; items 1 and 4 in the checklist exist so you don’t trust “studio size” slogans alone.
 
-### Why does the checklist stress "Confirm lease / building rules on window hardware" before checkout?
+### My lease bans window brackets — is a portable unit always the answer?
 
-Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
+A portable AC can work, but only if you **seal the exhaust hose** in a window or door kit. A hose dangling into the room pulls hot air back in and burns electricity for little cooling. If window hardware is off limits, portables are realistic — just budget for dual-hose models, sealing kits, and honest dB ratings. Sketch your install before checkout; that alone prevents a lot of summer returns.
 
-### Why does the checklist stress "Map the exhaust path (window, sash, or balcony door)" before checkout?
+### Does one energy-label step really matter on the power bill?
 
-Skipping this check often leads to install or performance surprises. Read the Why and Red flag notes for this item in the body.
+During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap on the tag. Two units with the same BTU can draw very different kWh if efficiency ratings differ. Choosing the cheapest box without a label often means paying again next summer. Copy the annual kWh figure from the spec sheet for each finalist — the comparison takes two minutes and ages well.
 
 ## Related guides
 

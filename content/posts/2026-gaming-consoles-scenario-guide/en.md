@@ -169,17 +169,17 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 ## FAQ
 
-### Which pick fits the "4K living-room marathon sessions with AC running all day" scenario in this guide?
+### Will my console overheat if I play 4K all day with the windows closed and AC on?
 
-What matters here - True 4K output — some consoles upscale from 1440p; check native vs upscaled on your TV size. - Thermals and fan noise — sealed rooms with window AC can push console exhaust heat back toward the couch. - HDMI 2.1 features — 120 Hz and VRR he
+Sealed, air-conditioned rooms **trap heat around the TV stand**, so consoles can run hotter and louder than in an open layout. Leave **10–15 cm of clearance** behind and beside the unit — blocking vents shows up as fan noise and frame drops before warranty issues do. Don’t aim the AC vent directly at the console either. Series X and PS5 both handle summer sessions fine when airflow is planned, not an afterthought.
 
-### Which pick fits the "Exclusive single-player titles and expandable storage" scenario in this guide?
+### PS5 or Xbox — where should a first-time buyer start?
 
-What matters here - Platform exclusives — narrative action and Sony first-party releases remain a deciding factor for many buyers. - M.2 SSD expansion — summer sale season fills internal storage fast; Sony publishes a compatibility list for approved drives. - 
+Start with **which games you must play**. Sony exclusives, used discs, and M.2 expansion point toward **PS5 Slim (Disc)**; a rotating library via subscription favors **Xbox Series X** for many households. If friends already play on one platform, that social lock-in beats spec sheets. Write down three titles you care about — the right console usually becomes obvious.
 
-### Which pick fits the "Subscription-first buyer on a tighter budget" scenario in this guide?
+### Is Xbox Series S a mistake if I’m on a tight budget?
 
-What matters here - Monthly library access — Game Pass Ultimate includes console, PC, and cloud streaming tiers in one bill. - Digital-only footprint — no disc drive means smaller hardware cost but no used-game market. - Storage pressure — 512 GB fills quickly
+Series S fits **subscription-first buyers, smaller TVs, and upscaled 4K** — not every living-room marathon setup. The 512 GB drive fills fast with Game Pass, and there’s no disc drive for used games. If your goal is all-day 4K on a big TV through summer break, step up to Series X or PS5. If you’re in a bedroom or secondary screen with lighter play, Series S stays sensible. Estimate how many games you’ll install at once before you click buy.
 
 ## Related guides
 

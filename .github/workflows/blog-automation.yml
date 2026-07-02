@@ -136,6 +136,7 @@ jobs:
 
       - name: Repair mechanical FAQs
         if: success() && steps.task.outputs.name != 'status' && steps.task.outputs.name != 'refresh-post-covers'
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/repair-faq-llm.mjs
