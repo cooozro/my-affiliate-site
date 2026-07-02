@@ -62,6 +62,10 @@ jobs:
             echo "name=publish-slot" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Install Cursor SDK (GHA scripts only)
+        if: steps.task.outputs.name != 'refresh-post-covers'
+        run: npm install @cursor/sdk@1.0.22 --no-save
+
       - name: Refresh post covers (vision)
         if: steps.task.outputs.name == 'refresh-post-covers'
         env:

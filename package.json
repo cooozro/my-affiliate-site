@@ -34,7 +34,6 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
-    "@cursor/sdk": "^1.0.22",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/nodemailer": "^8.0.1",

@@ -44,6 +44,10 @@ jobs:
       - run: npm ci
         if: steps.pending.outputs.needed == 'true'
 
+      - name: Install Cursor SDK (GHA scripts only)
+        if: steps.pending.outputs.needed == 'true'
+        run: npm install @cursor/sdk@1.0.22 --no-save
+
       - name: Run draft replenish
         if: steps.pending.outputs.needed == 'true'
         continue-on-error: true
