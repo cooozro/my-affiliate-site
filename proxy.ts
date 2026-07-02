@@ -1,6 +1,18 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { defaultLocale, isValidLocale, locales } from "@/lib/i18n/config";
+import {
+  defaultLocale,
+  isValidLocale,
+  locales,
+  type Locale,
+} from "@/lib/i18n/config";
+
+/** Root `/` only — Korean Accept-Language visitors land on /ko for Naver/KR UX. */
+function localeForRoot(request: NextRequest): Locale {
+  const accept = request.headers.get("accept-language")?.toLowerCase() ?? "";
+  if (accept.includes("ko")) return "ko";
+  return defaultLocale;
+}
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -22,17 +34,18 @@ export function proxy(request: NextRequest) {
   );
 
   if (!pathnameHasLocale) {
-    const locale = defaultLocale;
+    const locale = pathname === "/" ? localeForRoot(request) : defaultLocale;
     const redirectUrl = new URL(
       `/${locale}${pathname === "/" ? "" : pathname}`,
       request.url,
     );
-    return NextResponse.redirect(redirectUrl);
+    // 308 = permanent redirect (root has no content; /ko or /en is canonical)
+    return NextResponse.redirect(redirectUrl, 308);
   }
 
   const segment = pathname.split("/")[1];
   if (segment && !isValidLocale(segment)) {
-    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url), 308);
   }
 
   return NextResponse.next();
