@@ -90,12 +90,11 @@ Prices checked against listings as of {{today}}; use {{usd_krw_rate}} for KRW co
 
 ## Related guides
 
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — compare install types after the checklist
-- [Summer bluetooth speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio for pool and picnic days
-- [Budget power banks](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
-
----
-
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — compare install types after the checklist
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio for pool and picnic days
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
 ## Final Verdict
 
 Run the checklist in order: **permission → exhaust → BTU → noise → energy → maintenance**. Skipping lease and exhaust checks causes more regret than picking the “wrong” brand. Once install constraints are clear, our scenario and head-to-head guides narrow the model shortlist.

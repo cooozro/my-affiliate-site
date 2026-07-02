@@ -152,8 +152,11 @@ Prices are reference USD list values.
 
 ## Related guides
 
-- [Budget monitors](/en/blog/2026-budget-monitors-buying-guide) — complete a productive desk setup with your keyboard pick
-
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — complete a productive desk setup with your keyboard pick
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scena…
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
 ## Five checks before you buy
 
 1. **Switch type** — Red (linear), Blue (clicky), Brown (tactile). Avoid Blue in shared offices.

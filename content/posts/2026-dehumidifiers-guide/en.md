@@ -158,11 +158,11 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## Related guides
 
-- [Summer AC buying checklist](/en/blog/2026-summer-ac-buying-checklist) — right-size cooling first; AC alone rarely fixes a wet basement
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — sealed install choices affect how much moisture stays indoors
-- [Summer Bluetooth speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor gear storage needs dry closets; pair with basement dehumidifying
-- [Travel-ready power banks](/en/blog/2026-budget-power-banks-guide) — storm-season outages can stop pumps; know your backup plan
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — right-size cooling first; AC alone rarely fixes a wet basement
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor gear storage needs dry closets; pair with basement dehumidifying
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — sealed install choices affect how much moisture stays indoors
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — storm-season outages can stop pumps; know your backup plan
 ## Five checks before you buy
 
 1. **Match DOE pints to space and leak source** — A 35 DOE pint unit suits many 800–1,200 sq ft zones; unfinished basements with active seepage may need pro waterproofing, not just a bigger bucket.

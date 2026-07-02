@@ -94,12 +94,11 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 
 ## 관련 가이드
 
-- [이동식 vs 창문형](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 체크 후 모델 비교
-- [여름 블루투스 스피커](/ko/blog/2026-summer-bluetooth-speakers-guide) — 야외·피크닉 오디오
-- [가성비 보조배터리](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 대비
-
----
-
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 체크 후 모델 비교
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 야외·피크닉 오디오
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 대비
 ## 최종 평가
 
 순서는 **규정 → 배기 → BTU → 소음 → 에너지 → 유지보수**입니다. 브랜드·할인율보다 설치 조건을 먼저 통과시키는 편이 반품과 후회를 줄입니다. 7항목을 종이나 메모에 체크한 뒤, 통과한 제약 조건(창문 가능 여부, 허용 소음, 예산)만 남기고 시나리오·맞대결 가이드로 모델을 좁히면 {{today}} 시즌에도 후회 없는 선택에 가까워집니다.

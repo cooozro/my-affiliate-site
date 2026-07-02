@@ -149,10 +149,11 @@ coverImageAltKo: 책상 위의 스마트폰
 
 ## 관련 가이드
 
-- [보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide) — 폰 PD 스펙에 맞는 휴대 충전
-- [가성비 무선 이어폰](/ko/blog/2026-budget-wireless-earbuds-top5) — 폰 코덱 지원과 연동되는 TWS
-- [가성비 모니터](/ko/blog/2026-budget-monitors-buying-guide) — 생산성용 데스크 디스플레이
-
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 생산성용 데스크 디스플레이
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폰 PD 스펙에 맞는 휴대 충전
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 폰 코덱 지원과 연동되는 TWS
+- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
 ## 구매 전 반드시 확인할 5가지
 
 1. **5G 밴드** — 국내 통신사 지원 주파수(n78 등) 표기를 확인하세요. 해외 전용 모델은 속도가 절반 이하일 수 있습니다.

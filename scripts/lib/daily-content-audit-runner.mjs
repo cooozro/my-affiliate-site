@@ -14,6 +14,7 @@ import {
   integrityIssuesFlat,
   runPublishIntegrityGate,
 } from "./publish-integrity.mjs";
+import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
@@ -97,7 +98,10 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
     }
 
     if (!result.ok && !result.exempt) {
-      const issues = integrityIssuesFlat(result);
+      const issues = integrityIssuesFlat(result).filter(
+        (issue) => !issue.includes("Related guides has"),
+      );
+      if (issues.length === 0) continue;
       manualReview.push({
         slug,
         phase,
@@ -142,6 +146,12 @@ export function runDailyContentAuditIfDue(root = process.cwd(), options = {}) {
   }
 
   console.log("Daily content audit: scanning all published posts and drafts…");
+  const relatedSummary = repairAllRelatedGuides(root, { includeDrafts: true });
+  if (relatedSummary.repairs.length > 0) {
+    console.log(
+      `Related guides auto-repair: ${relatedSummary.changed} post(s), ${relatedSummary.repairs.length} change(s)`,
+    );
+  }
   const report = runDailyContentAudit(root, { state });
 
   console.log(

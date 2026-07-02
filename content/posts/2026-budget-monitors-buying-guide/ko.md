@@ -142,9 +142,11 @@ coverImageAltKo: 책상의 모니터
 
 ## 관련 가이드
 
-- [입문 기계식 키보드](/ko/blog/2026-budget-mechanical-keyboards-guide) — 모니터와 함께 맞추는 타이핑 환경
-- [30만 원대 스마트폰](/ko/blog/2026-budget-smartphones-under-300) — 데스크와 함께 쓰는 모바일 생산성
-
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 모니터와 함께 맞추는 타이핑 환경
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 데스크와 함께 쓰는 모바일 생산성
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
 ## 구매 전 체크 5가지
 
 1. **해상도 vs 거리** — 27인치 1080p는 70cm 이내에서 글자가 뭉개져 보일 수 있음; 문서 위주면 1440p 유리.

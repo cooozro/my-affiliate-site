@@ -307,9 +307,9 @@
   },
   "lastDailyContentAuditKst": "2026-07-02",
   "lastDailyContentAudit": {
-    "at": "2026-07-02T01:39:09.148Z",
+    "at": "2026-07-02T01:51:25.927Z",
     "postsScanned": 14,
-    "autoRepairCount": 28,
-    "manualReviewCount": 5
+    "autoRepairCount": 6,
+    "manualReviewCount": 1
   }
 }

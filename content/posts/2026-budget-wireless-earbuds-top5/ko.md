@@ -144,9 +144,11 @@ coverImageAltKo: 책상 위의 무선 이어폰
 
 ## 관련 가이드
 
-- [30만 원대 스마트폰](/ko/blog/2026-budget-smartphones-under-300) — TWS 구매 전 코덱 지원 확인
-- [보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide) — 이동 중 폰·이어폰 충전
-
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — TWS 구매 전 코덱 지원 확인
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 이동 중 폰·이어폰 충전
 ## 구매 전 반드시 확인할 5가지
 
 1. **코덱 호환성** — 본인 스마트폰이 LDAC/aptX/LHDC를 지원하는지 확인하세요. 미지원 시 AAC로 fallback되어 음질 체감 차이가 큽니다.

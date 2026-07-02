@@ -149,10 +149,11 @@ Snapshot as of {{today}}.
 
 ## Related guides
 
-- [Travel-ready power banks](/en/blog/2026-budget-power-banks-guide) — portable charging matched to your phone's PD rating
-- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — TWS picks that depend on your phone's codec support
-- [Budget monitors](/en/blog/2026-budget-monitors-buying-guide) — desk displays for productivity alongside your phone
-
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — desk displays for productivity alongside your phone
+- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Sce…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — portable charging matched to your phone's PD rating
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — TWS picks that depend on your phone's codec support
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
 ## Five checks before you buy
 
 1. **5G bands** — Confirm local carrier bands (e.g., n78). Import SKUs can run at half speed.

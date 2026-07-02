@@ -75,6 +75,20 @@ async function main() {
       break;
     }
 
+    case "repair-related-guides": {
+      const { repairAllRelatedGuides } = await import("../lib/related-guides.mjs");
+      const summary = repairAllRelatedGuides(process.cwd(), {
+        includeDrafts: true,
+      });
+      console.log(
+        `Related guides repair: ${summary.scanned} scanned, ${summary.changed} updated`,
+      );
+      for (const repair of summary.repairs) {
+        console.log(`  · ${repair}`);
+      }
+      break;
+    }
+
     case "refresh-covers": {
       const { spawnSync } = await import("node:child_process");
       const result = spawnSync("node", ["scripts/refresh-duplicate-covers.mjs"], {

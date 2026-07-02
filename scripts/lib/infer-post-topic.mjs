@@ -93,6 +93,24 @@ const RULES = [
     category: "displays",
     cluster: "computing",
   },
+  {
+    pattern: /action-cam|action-camera/i,
+    id: "action-cameras",
+    category: "cameras",
+    cluster: "cameras",
+  },
+  {
+    pattern: /noise-cancelling|noise-canceling|headphone/i,
+    id: "noise-cancelling-headphones",
+    category: "audio",
+    cluster: "audio",
+  },
+  {
+    pattern: /gaming-console|playstation|xbox|nintendo/i,
+    id: "gaming-consoles",
+    category: "gaming",
+    cluster: "gaming",
+  },
 ];
 
 /**

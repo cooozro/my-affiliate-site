@@ -157,10 +157,11 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## Related guides
 
-- [Summer AC buying checklist](/en/blog/2026-summer-ac-buying-checklist) — seal and cool the room first; purifiers complement closed-window cooling
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — match room size before adding filtration load
-- [Budget monitors buying guide](/en/blog/2026-budget-monitors-buying-guide) — small home-office setups often share air with a bedroom purifier
-
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — seal and cool the room first; purifiers complement closed-window cooling
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — Scenario picks for studio and one-bedroom apartments — suction power, LiDAR mapping, mop…
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — match room size before adding filtration load
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — small home-office setups often share air with a bedroom purifier
 ## Five checks before you buy
 
 1. **Size CADR to the room** — Divide square footage by 4.8 for a minimum smoke CADR target. A 120 sq ft bedroom needs roughly 25+ cfm minimum; all picks here except bare-minimum HPA100 exceed that with headroom.

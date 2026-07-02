@@ -18,6 +18,11 @@ import {
   HANGUL_LATIN_TYPO_RE,
   repairContentPolicyText,
 } from "./content-policy.mjs";
+import {
+  repairRelatedGuidesInBody,
+  MAX_RELATED_GUIDE_LINKS,
+  loadPublishedPostIndex,
+} from "./related-guides.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
@@ -36,6 +41,7 @@ const EN_TEMPLATE_TITLE_RE = /^(How to|Stop|Why you|What to|When to)\b/i;
 
 const INTEGRITY_EXEMPT_SLUGS = new Set(["welcome", "adsense-seo-checklist"]);
 const MIN_RELATED_GUIDES_PUBLISH = 3;
+const MAX_RELATED_GUIDES_PUBLISH = MAX_RELATED_GUIDE_LINKS;
 const MIN_TAGS_PUBLISH = 3;
 const TITLE_SIMILARITY_BLOCK = 0.82;
 
@@ -129,15 +135,13 @@ export function repairPostLocale(root, slug, locale) {
     }
   }
 
+  const policyBody = repairContentPolicyText(content, locale);
+  let body = policyBody.text;
   if (policyBody.repairs.length > 0) {
     repairs.push(
-      ...policyBody.repairs.map(
-        (r) => `${slug}/${locale}.md: ${r}`,
-      ),
+      ...policyBody.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
     );
   }
-
-  let body = policyBody.text;
 
   const title = String(data.title ?? "").trim();
   const h1Match = body.match(/^#\s+(.+)$/m);
@@ -156,6 +160,15 @@ export function repairPostLocale(root, slug, locale) {
   if (PREVIEW_URL_RE.test(body)) {
     body = body.replace(/\[([^\]]*)\]\([^)]*(?:draft|preview|localhost)[^)]*\)/gi, "");
     repairs.push(`${slug}/${locale}.md: removed draft/preview URL links`);
+  }
+
+  const postIndex = loadPublishedPostIndex(root);
+  if (postIndex.has(slug) && !isIntegrityExempt(slug, data)) {
+    const related = repairRelatedGuidesInBody(body, locale, slug, postIndex);
+    if (related.changed) {
+      body = related.body;
+      repairs.push(...related.repairs);
+    }
   }
 
   body = body.replace(/\n{4,}/g, "\n\n\n").trim();
@@ -225,6 +238,11 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
         `${label}: Related guides has ${relatedCount} links (need ≥${MIN_RELATED_GUIDES_PUBLISH} at publish)`,
       );
     }
+  } else if (relatedCount > MAX_RELATED_GUIDES_PUBLISH) {
+    addWarning(
+      bucket,
+      `${label}: Related guides has ${relatedCount} links (max ${MAX_RELATED_GUIDES_PUBLISH})`,
+    );
   }
 
   const tags = data.tags ?? [];

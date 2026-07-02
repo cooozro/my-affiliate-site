@@ -149,10 +149,11 @@ Reference prices from OEM and major US storefront listings (July 2026).
 
 ## Related guides
 
-- [Travel-ready power banks](/en/blog/2026-budget-power-banks-guide) — keep action cams and phones topped up on long transit days
-- [Summer Bluetooth speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — poolside playback after you stash the camera
-- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — private audio when editing clips on the flight home
-
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — poolside playback after you stash the camera
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep action cams and phones topped up on long transit days
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — private audio when editing clips on the flight home
 ## Five checks before you buy
 
 1. **Decode native depth** — 10 m handles pool and snorkel; 20 m reduces housing bulk for shallow dives. Salt and sand still require a fresh-water rinse; depth ratings assume intact door seals.

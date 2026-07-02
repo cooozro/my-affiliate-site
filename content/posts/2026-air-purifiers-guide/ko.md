@@ -164,11 +164,11 @@ imageSearchKeywords:
 
 ## 관련 가이드
 
-- [여름 에어컨 구매 체크리스트](/ko/blog/2026-summer-ac-buying-checklist) — 냉방·밀폐를 먼저 맞춘 뒤 청정기를 보완
-- [이동식 vs 창문형 에어컨](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 방 크기·배기 경로 확인 후 청정기 배치
-- [가성비 모니터 구매 가이드](/ko/blog/2026-budget-monitors-buying-guide) — 소형 재택 책상과 침실 공기청정기를 함께 쓰는 경우
-- [여름 블루투스 스피커 가이드](/ko/blog/2026-summer-bluetooth-speakers-guide) — 실내 공기와 야외 사용을 나눠 생각할 때 참고
-
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 냉방·밀폐를 먼저 맞춘 뒤 청정기를 보완
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 실내 공기와 야외 사용을 나눠 생각할 때 참고
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 방 크기·배기 경로 확인 후 청정기 배치
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 소형 재택 책상과 침실 공기청정기를 함께 쓰는 경우
 ## 구매 전 다섯 가지 확인
 
 1. **CADR을 방 크기에 맞출 것** — 평수 ÷ 4.8 ≈ 최소 smoke CADR(cfm). 120 sq ft(약 11㎡) 침실은 대략 25 cfm 이상; 본문 5종은 HPA100을 제외하고 여유 있음.

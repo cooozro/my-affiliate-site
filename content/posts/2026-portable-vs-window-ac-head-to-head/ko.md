@@ -117,12 +117,11 @@ coverImageAltKo: 원룸의 이동식 에어컨
 
 ## 관련 가이드
 
-- [가성비 보조배터리](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 시 모바일·공유기 백업
-- [가성비 모니터](/ko/blog/2026-budget-monitors-buying-guide) — 냉방된 방에서 재택 작업
-- [30만 원대 스마트폰](/ko/blog/2026-budget-smartphones-under-300) — 에어컨 타이머·에너지 앱 연동
-
----
-
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 25~55㎡ 아파트 시나리오별 추천 — 흡입력·LiDAR 매핑·물걸레 유지보수·여름 냉방 중 실내 먼지까지, 공개 스펙 기준 편집부 비교.
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 냉방된 방에서 재택 작업
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 에어컨 타이머·에너지 앱 연동
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 시 모바일·공유기 백업
 ## 최종 평가
 
 창문 설치가 가능하면 **창문형이 소음·전기요금에서 유리**합니다. 이동식만 쓸 때는 **듀얼호스가 단일호스보다 종일 사용에 적합**합니다.

@@ -145,10 +145,11 @@ Snapshot as of {{today}}.
 
 ## Related guides
 
-- [Travel-ready power banks](/en/blog/2026-budget-power-banks-guide) — keep phones charged for playlists and maps on summer trips
-- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — private listening when shared speakers are too loud
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool indoor recovery after hot outdoor days
-
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — private listening when shared speakers are too loud
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep phones charged for playlists and maps on summer trips
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool indoor recovery after hot outdoor days
 ## Five checks before you buy
 
 1. **Decode IP ratings** — IPX7 handles splashes and brief dunking; IP67 adds dust protection for beach sand. Neither means infinite depth or saltwater immunity—rinse after pool or ocean use.

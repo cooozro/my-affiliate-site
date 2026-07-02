@@ -146,9 +146,11 @@ Snapshot as of {{today}}.
 
 ## Related guides
 
-- [Sub-$300 smartphones](/en/blog/2026-budget-smartphones-under-300) — verify codec support before buying TWS
-- [Travel-ready power banks](/en/blog/2026-budget-power-banks-guide) — keep earbuds and phone charged on the go
-
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
+- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Sce…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — verify codec support before buying TWS
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep earbuds and phone charged on the go
 ## Five checks before you buy
 
 1. **Codec compatibility** — Match LDAC/aptX/LHDC to your phone or expect AAC fallback.

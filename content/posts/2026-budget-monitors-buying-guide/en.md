@@ -145,9 +145,11 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 ## Related guides
 
-- [Entry mechanical keyboards](/en/blog/2026-budget-mechanical-keyboards-guide) — pair a monitor with an ergonomic typing setup
-- [Sub-$300 smartphones](/en/blog/2026-budget-smartphones-under-300) — mobile productivity alongside your desk display
-
+- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — pair a monitor with an ergonomic typing setup
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — mobile productivity alongside your desk display
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scena…
 ## Five checks before you buy
 
 1. **Resolution vs distance** — 27" 1080p looks soft under 70cm; 1440p pays off for text-heavy work.

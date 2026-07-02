@@ -164,14 +164,11 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 
 ## 관련 가이드
 
-- [소형 공간 공기청정기](/ko/blog/2026-air-purifiers-guide) — 여름에 AC로 밀폐된 실내 먼지 부담을 줄일 때
-- [2026 제습기 가이드](/ko/blog/2026-dehumidifiers-guide) — 습한 아파트에서 물걸레 로봇과 함께 볼 때
-- [여름 에어컨 구매 체크리스트](/ko/blog/2026-summer-ac-buying-checklist) — 냉방하는 같은 방에 도크를 둘 때
-- [이동식 vs 창문형 에어컨](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 냉방 경로와 청소 도크 위치 모두 평면에 달림
-- [AI Pick 소개](/ko/blog/welcome) — 제품 평가 방식과 liveData 가격 갱신
-
----
-
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 냉방 경로와 청소 도크 위치 모두 평면에 달림
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 여름에 AC로 밀폐된 실내 먼지 부담을 줄일 때
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 습한 아파트에서 물걸레 로봇과 함께 볼 때
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 냉방하는 같은 방에 도크를 둘 때
+- [제품 리뷰 방법론](/ko/blog/welcome) — 제품 평가 방식과 liveData 가격 갱신
 ## 최종 평가
 
 아파트용 로봇청소기는 **매핑 기술과 도크 유지보수**가 체감 만족도를 가릅니다. 대부분 원룸엔 **Roborock Q7 Max+** 가 LiDAR와 도크 크기 균형이 좋습니다. 반려 가구는 **Roomba Combo j5+** 브러시·장애물 도구가 우선입니다. 끈적한 여름 습기까지 물걸레 자동화를 원하면 **eufy X10 Pro Omni** 패드 세척 예산을 잡으세요 — 여기서 아끼면 별점 하락의 대부분이 ‘냄새’입니다. clutter가 잦지만 옴니 값은 거절하면 **Shark Matrix Plus 2-in-1**.

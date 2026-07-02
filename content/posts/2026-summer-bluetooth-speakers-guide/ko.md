@@ -157,10 +157,11 @@ coverImageAltKo: 여름 야외의 블루투스 스피커
 
 ## 관련 가이드
 
-- [여행용 보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide) — 여름 나들이에서 플레이리스트·지도용 폰 충전
-- [가성비 무선 이어폰 TOP 5](/ko/blog/2026-budget-wireless-earbuds-top5) — 공유 스피커가 시끄러울 때 개인 청취
-- [이동식 vs 창문형 에어컨](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 더운 야외 후 실내 냉방 선택
-
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 공유 스피커가 시끄러울 때 개인 청취
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 여름 나들이에서 플레이리스트·지도용 폰 충전
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 더운 야외 후 실내 냉방 선택
 ## 구매 전 다섯 가지 확인
 
 1. **IP 등급 해석** — IPX7은 스플래시·짧은 침수, IP67은 모래·먼지까지 추가. 어느 쪽도 무한 수심·해수 내성을 뜻하지 않습니다. 수영장·바다 사용 후에는 헹구고, 충전 포트 고무캡이 닳았는지 매 시즌 점검하세요.

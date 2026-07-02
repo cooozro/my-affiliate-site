@@ -117,12 +117,11 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 ## Related guides
 
-- [Budget power banks](/en/blog/2026-budget-power-banks-guide) — backup power if summer outages affect your AC or router
-- [Budget monitors](/en/blog/2026-budget-monitors-buying-guide) — stay productive when working from a cooled room
-- [Sub-$300 smartphones](/en/blog/2026-budget-smartphones-under-300) — smart-home apps for AC timers and energy tracking
-
----
-
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — Scenario picks for studio and one-bedroom apartments — suction power, LiDAR mapping, mop…
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — stay productive when working from a cooled room
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — smart-home apps for AC timers and energy tracking
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power if summer outages affect your AC or router
 ## Final Verdict
 
 Window AC still wins on **noise and running cost** when you can install it. Among portables, **dual-hose beats single-hose** for rooms you actually live in all day — not just sleep in for four hours.

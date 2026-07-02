@@ -151,9 +151,11 @@ Snapshot as of {{today}}.
 
 ## Related guides
 
-- [Sub-$300 smartphones](/en/blog/2026-budget-smartphones-under-300) — match PD output to your phone's fast-charge rating
-- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — portable audio gear for the same travel use case
-
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
+- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Sce…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — match PD output to your phone's fast-charge rating
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — portable audio gear for the same travel use case
 ## Five checks before you buy
 
 1. **Match PD watts** — Compare your phone or laptop charger label with the bank’s max output. An 18W bank on a 45W phone feels slow.
