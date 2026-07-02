@@ -292,6 +292,21 @@
       "hash": "228a5a9e146d74ab1be93b5f8af1df93aadd6a0db937626f15e4b23ad61a608f",
       "provider": "pexels",
       "registeredAt": "2026-07-01T10:56:58.064Z"
+    },
+    {
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-02T02:06:47.662Z"
+    },
+    {
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "url": "https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg",
+      "assetKey": "pexels:9071502",
+      "hash": "ed63c47fe36bad97a99cbc4fdd4de821a3d03b933294ecbb164e70de75099e19",
+      "provider": "pexels",
+      "registeredAt": "2026-07-02T02:06:50.426Z"
     }
   ]
 }
