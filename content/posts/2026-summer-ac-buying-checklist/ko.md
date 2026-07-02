@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: 여름 침실의 이동식 에어컨
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-02T03:44:03.404Z'
+updatedAt: '2026-07-02T04:37:59.377Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
