@@ -24,6 +24,7 @@ import {
   loadPublishedPostIndex,
 } from "./related-guides.mjs";
 import { repairShortEnglishBody, expandEnglishBodyIfNeeded } from "./body-length-repair.mjs";
+import { writeContentRepair } from "./post-updated-at.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
@@ -68,7 +69,7 @@ function readLocaleFile(root, slug, locale) {
 function writeLocaleFile(root, slug, locale, data, content) {
   const filePath = path.join(postsDir(root), slug, `${locale}.md`);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, matter.stringify(content, bumpUpdatedAt(data)), "utf8");
+  writeContentRepair(filePath, data, content, fs, matter);
 }
 
 function normalizeTitleForCompare(title) {

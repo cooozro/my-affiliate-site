@@ -13,7 +13,7 @@ type PostCardProps = {
 };
 
 function formatDate(post: PostMeta, locale: Locale) {
-  const iso = post.publishedAt ?? post.updatedAt ?? post.date;
+  const iso = post.publishedAt ?? post.date;
   return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
     year: "numeric",
     month: "short",

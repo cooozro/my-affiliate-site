@@ -30,7 +30,7 @@ function listPublishedSlugs(root) {
 }
 
 function postSortTime(meta) {
-  const iso = meta.publishedAt ?? meta.updatedAt ?? meta.date;
+  const iso = meta.publishedAt ?? meta.date;
   const t = new Date(iso).getTime();
   return Number.isNaN(t) ? 0 : t;
 }
@@ -115,6 +115,32 @@ export function repairPublishedAtFromHistory(root, state) {
           `${slug}/${locale}.md: publishedAt ${previousAt} → ${canonicalAt}`,
         );
       }
+    }
+  }
+
+  return repairs;
+}
+
+/**
+ * Backfill publishedAt for live posts that only have frontmatter date (legacy).
+ */
+export function repairMissingPublishedAt(root) {
+  const repairs = [];
+
+  for (const slug of listPublishedSlugs(root)) {
+    if (slug === "welcome" || slug === "adsense-seo-checklist") continue;
+    for (const locale of ["en", "ko"]) {
+      const filePath = path.join(postsRoot(root), slug, `${locale}.md`);
+      if (!fs.existsSync(filePath)) continue;
+
+      const raw = fs.readFileSync(filePath, "utf8");
+      const { data, content } = matter(raw);
+      if (data.draft || data.publishedAt || !data.date) continue;
+
+      const publishedAt = new Date(`${String(data.date).slice(0, 10)}T08:00:00.000Z`).toISOString();
+      data.publishedAt = publishedAt;
+      fs.writeFileSync(filePath, matter.stringify(content, data), "utf8");
+      repairs.push(`${slug}/${locale}.md: publishedAt backfilled from date → ${publishedAt}`);
     }
   }
 

@@ -25,7 +25,7 @@ function toRfc822(dateStr: string): string {
 
 function buildItem(post: PostMeta, locale: Locale): string {
   const postUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${post.slug}`)}`;
-  const pubDate = toRfc822(post.updatedAt ?? post.date);
+  const pubDate = toRfc822(post.publishedAt ?? post.date);
   const title = escapeXml(post.title);
 
   let description = escapeXml(post.description);
@@ -82,7 +82,7 @@ export function buildRssFeed(
   const language = locale === "ko" ? "ko-KR" : "en-US";
   const lastBuildDate =
     posts.length > 0
-      ? toRfc822(posts[0].updatedAt ?? posts[0].date)
+      ? toRfc822(posts[0].publishedAt ?? posts[0].date)
       : new Date().toUTCString();
 
   const channelImage = posts[0]?.coverImage

@@ -1,5 +1,6 @@
 /**
  * Bump frontmatter updatedAt when automated repairs change post files.
+ * Repair writes must never change draft / publishedAt (publish flow only).
  */
 
 export function bumpUpdatedAt(data) {
@@ -16,8 +17,25 @@ export function bumpUpdatedAt(data) {
  * @param {import('fs')} fs
  * @param {typeof import('gray-matter')} matter
  */
+export function writeContentRepair(filePath, data, content, fs, matter) {
+  const next = bumpUpdatedAt(data);
+
+  if (Object.prototype.hasOwnProperty.call(data, "draft")) {
+    next.draft = data.draft;
+  }
+  if (data.publishedAt != null) {
+    next.publishedAt = data.publishedAt;
+  }
+  if (data.date != null) {
+    next.date = data.date;
+  }
+
+  fs.writeFileSync(filePath, matter.stringify(content, next), "utf8");
+}
+
+/** @deprecated Use writeContentRepair */
 export function writeLocaleFileWithBump(filePath, data, content, fs, matter) {
-  fs.writeFileSync(filePath, matter.stringify(content, bumpUpdatedAt(data)), "utf8");
+  writeContentRepair(filePath, data, content, fs, matter);
 }
 
 /**

@@ -144,9 +144,13 @@ export function getPostSlugs(
   });
 }
 
+/** Homepage / list sort key — publication time only (never updatedAt). */
+export function postPublishedIso(meta: PostMeta): string {
+  return meta.publishedAt ?? meta.date;
+}
+
 function postSortTime(meta: PostMeta): number {
-  const iso = meta.publishedAt ?? meta.updatedAt ?? meta.date;
-  const t = new Date(iso).getTime();
+  const t = new Date(postPublishedIso(meta)).getTime();
   return Number.isNaN(t) ? 0 : t;
 }
 

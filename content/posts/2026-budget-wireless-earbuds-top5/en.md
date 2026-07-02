@@ -25,6 +25,7 @@ imageSearchKeywords:
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
 updatedAt: '2026-07-02T03:43:59.712Z'
+publishedAt: '2026-06-25T08:00:00.000Z'
 ---
 ## Editorial Overview
 

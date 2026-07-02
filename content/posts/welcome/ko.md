@@ -10,6 +10,7 @@ coverImage: /images/posts/welcome/cover.jpg
 coverImageAlt: 책상 위 노트북과 메모
 coverImageCredit: Photo by fauxels / Pexels
 coverImageAltKo: 책상 위 노트북과 메모
+publishedAt: '2026-06-25T08:00:00.000Z'
 ---
 
 ## 리뷰 프레임워크

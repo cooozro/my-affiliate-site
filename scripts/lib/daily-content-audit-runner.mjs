@@ -171,7 +171,7 @@ export async function runDailyContentAuditIfDue(root = process.cwd(), options = 
 
   if (process.env.OPENAI_API_KEY?.trim()) {
     const faqSummary = await repairAllFaqSectionsWithLlm(root, {
-      includeDrafts: true,
+      includeDrafts: false,
       delayMs: 400,
     });
     if (faqSummary.repairs.length > 0) {

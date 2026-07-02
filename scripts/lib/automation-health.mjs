@@ -13,6 +13,7 @@ import { inferPostTopic } from "./infer-post-topic.mjs";
 import {
   checkHomepageFeaturedOrder,
   repairPublishedAtFromHistory,
+  repairMissingPublishedAt,
 } from "./post-timestamps.mjs";
 import {
   MAX_PUBLISH_PER_DAY,
@@ -164,6 +165,12 @@ export function runAutomationHealthCheck(options = {}) {
     for (const repair of timestampRepairs) {
       repairs.push(repair);
     }
+    stateChanged = true;
+  }
+
+  const missingPublishedRepairs = repairMissingPublishedAt(root);
+  if (missingPublishedRepairs.length > 0) {
+    repairs.push(...missingPublishedRepairs);
     stateChanged = true;
   }
 

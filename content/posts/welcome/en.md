@@ -12,6 +12,7 @@ coverImage: /images/posts/welcome/cover.jpg
 coverImageAlt: Laptop and notebook on a desk
 coverImageCredit: Photo by fauxels / Pexels
 coverImageAltKo: 책상 위 노트북과 메모
+publishedAt: '2026-06-25T08:00:00.000Z'
 ---
 
 ## Our Review Framework
