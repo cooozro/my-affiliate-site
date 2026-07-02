@@ -134,6 +134,12 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: node scripts/automation/run-cursor-replenish.mjs
 
+      - name: Repair mechanical FAQs
+        if: success() && steps.task.outputs.name != 'status' && steps.task.outputs.name != 'refresh-post-covers'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/repair-faq-llm.mjs
+
       - name: Validate content
         if: success() && steps.task.outputs.name != 'status'
         run: npm run content:validate
