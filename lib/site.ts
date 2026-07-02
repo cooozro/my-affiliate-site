@@ -3,7 +3,7 @@ import { ogLocales } from "@/lib/i18n/config";
 export const siteConfig = {
   name: "AI Pick & Report",
   description:
-    "Data-driven tech reviews and buying guides for smartphones, gadgets, and consumer electronics.",
+    "Data-driven tech reviews and buying guides for phones, gadgets, and more.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop",
   locale: ogLocales.en,
   author: "AI Pick & Report",

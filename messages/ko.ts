@@ -3,7 +3,7 @@ import type { Dictionary } from "@/messages/en";
 const ko: Dictionary = {
   meta: {
     siteDescription:
-      "스마트폰·가전·전자기기를 데이터 기반으로 분석하는 IT 리뷰 및 구매 가이드 사이트입니다.",
+      "데이터 기반 IT 리뷰·구매 가이드 — 스마트폰, 가전, 전자기기",
   },
   nav: {
     home: "홈",

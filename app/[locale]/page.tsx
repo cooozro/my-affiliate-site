@@ -7,7 +7,6 @@ import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
 import { getHomePosts } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
-import en from "@/messages/en";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -48,7 +47,7 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
-      <HomeHero description={en.meta.siteDescription} />
+      <HomeHero description={dict.meta.siteDescription} />
 
       <div className={`pb-12 pt-2 ${CONTENT_SHELL}`}>
         <section aria-labelledby="latest-posts-heading">

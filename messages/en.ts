@@ -1,7 +1,7 @@
 const en = {
   meta: {
     siteDescription:
-      "Data-driven tech reviews and buying guides for smartphones, gadgets, and consumer electronics.",
+      "Data-driven tech reviews and buying guides for phones, gadgets, and more.",
   },
   nav: {
     home: "Home",
