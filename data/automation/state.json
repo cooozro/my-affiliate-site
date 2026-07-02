@@ -19,12 +19,12 @@
     "electric-fans"
   ],
   "lastPublishAt": "2026-07-02T03:15:31.755Z",
-  "nextPublishAt": "2026-07-03T01:24:00.000Z",
-  "scheduledGapHours": 4.4,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-02",
+  "nextPublishAt": "2026-07-03T02:02:00.000Z",
+  "scheduledGapHours": 5.03,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-03",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-02",
+  "writeDateKst": "2026-07-03",
   "history": [
     {
       "action": "publish",
@@ -318,7 +318,7 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-02T14:08:13.205Z",
+    "at": "2026-07-02T16:28:26.706Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
