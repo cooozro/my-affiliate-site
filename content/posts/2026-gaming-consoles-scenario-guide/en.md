@@ -14,7 +14,7 @@ tags:
   - summer gaming
 contentProfile: scenario-guide
 topicId: gaming-consoles
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-gaming-consoles-scenario-guide/game-console-living-room-playstation-xbox-contro-cover.jpg
@@ -29,7 +29,8 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T03:44:48.769Z'
+updatedAt: '2026-07-02T12:15:30.000Z'
+publishedAt: '2026-07-02T12:15:30.000Z'
 ---
 ## Editorial Overview
 
