@@ -7,7 +7,12 @@ import path from "path";
 import matter from "gray-matter";
 
 import { generateFaqEntries, sleep } from "./faq-llm.mjs";
-import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
+import {
+  isMechanicalFaqSection,
+  LEGACY_TEMPLATE_QUESTIONS_EN,
+  LEGACY_TEMPLATE_QUESTIONS_KO,
+} from "./faq-quality.mjs";
+import { writeContentRepair } from "./post-updated-at.mjs";
 
 export const FAQ_HEADING_RE =
   /^##\s*(FAQ|자주 묻는 질문|Frequently [Aa]sked(?:\s+[Qq]uestions)?)\s*$/m;
@@ -22,16 +27,8 @@ export const MIN_FAQ_BY_PROFILE = {
 };
 
 const TEMPLATE_FAQ_SIGNATURES = {
-  ko: [
-    /구매 전 가장 먼저 확인할 항목은 무엇인가요/,
-    /최저가 모델을 고르면 손해인가요/,
-    /리뷰 평점만 믿어도 될까요/,
-  ],
-  en: [
-    /What should I verify first before buying/i,
-    /Is the cheapest option always a bad deal/i,
-    /Can I rely on star ratings alone/i,
-  ],
+  ko: LEGACY_TEMPLATE_QUESTIONS_KO,
+  en: LEGACY_TEMPLATE_QUESTIONS_EN,
 };
 
 const INSERT_BEFORE_RE =
@@ -70,6 +67,8 @@ export function countFaqInBody(body) {
 export function isTemplatedFaqBody(body, locale) {
   const section = extractFaqSectionText(body);
   if (!section) return false;
+
+  if (isMechanicalFaqSection(section, locale)) return true;
 
   const patterns = TEMPLATE_FAQ_SIGNATURES[locale] ?? TEMPLATE_FAQ_SIGNATURES.en;
   let hits = 0;
@@ -179,10 +178,10 @@ export async function repairFaqSectionWithLlm(
     return { changed: false, repairs: [], skipped: true };
   }
 
-  writeLocaleFileWithBump(filePath, data, newBody, fs, matter);
+  writeContentRepair(filePath, data, newBody, fs, matter);
 
   const reason = isTemplatedFaqBody(body, locale)
-    ? "replaced templated FAQ"
+    ? "replaced mechanical FAQ"
     : countFaqInBody(body) === 0
       ? "inserted LLM FAQ"
       : "expanded LLM FAQ";
@@ -282,7 +281,7 @@ export function auditFaqSection(body, label, profile) {
 
   const locale = label.endsWith("/ko.md") ? "ko" : "en";
   if (isTemplatedFaqBody(body, locale)) {
-    return [`${label}: FAQ uses generic template questions — needs LLM rewrite`];
+    return [`${label}: FAQ uses mechanical/template questions — needs LLM rewrite`];
   }
 
   const count = countFaqInBody(body);
@@ -306,6 +305,7 @@ export function scanTemplatedContentIssues(root = process.cwd()) {
   const postsRoot = postsDir(root);
   const issues = {
     templatedFaq: [],
+    mechanicalFaq: [],
     missingFaq: [],
     duplicateEnSupplementHeadings: new Map(),
   };
@@ -326,6 +326,8 @@ export function scanTemplatedContentIssues(root = process.cwd()) {
       if (MIN_FAQ_BY_PROFILE[profile] > 0) {
         if (!FAQ_HEADING_RE.test(body)) {
           issues.missingFaq.push(label);
+        } else if (isMechanicalFaqSection(extractFaqSectionText(body), locale)) {
+          issues.mechanicalFaq.push(label);
         } else if (isTemplatedFaqBody(body, locale)) {
           issues.templatedFaq.push(label);
         }
