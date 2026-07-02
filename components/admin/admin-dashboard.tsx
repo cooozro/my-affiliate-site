@@ -55,6 +55,13 @@ type AutomationStatus = {
   lastPublishAt: string | null;
   stateSource: "github" | "bundle";
   healthIssues: Array<{ code: string; message: string; severity: string }>;
+  manualReviewQueue: Array<{
+    order: number;
+    slug: string;
+    issues: string[];
+    urls: { en: string; ko: string; admin: string };
+  }>;
+  lastDailyContentAuditKst: string | null;
 };
 
 export function AdminDashboard() {
@@ -390,6 +397,52 @@ export function AdminDashboard() {
                   <li key={issue.code}>{issue.message}</li>
                 ))}
               </ul>
+            </div>
+          ) : null}
+          {automation.manualReviewQueue.length > 0 ? (
+            <div className="mt-3 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm">
+              <p className="font-medium text-red-600 dark:text-red-400">
+                일일 콘텐츠 검열 — 수동 확인 필요 (
+                {automation.lastDailyContentAuditKst ?? "—"})
+              </p>
+              <ol className="mt-3 list-decimal space-y-3 pl-5 text-foreground">
+                {automation.manualReviewQueue.map((item) => (
+                  <li key={item.slug}>
+                    <span className="font-medium">{item.slug}</span>
+                    <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+                      {item.issues.slice(0, 3).map((issue) => (
+                        <li key={issue}>{issue}</li>
+                      ))}
+                    </ul>
+                    <p className="mt-1 text-xs">
+                      <a
+                        href={item.urls.en}
+                        className="text-blue-600 underline dark:text-blue-400"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        EN
+                      </a>
+                      {" · "}
+                      <a
+                        href={item.urls.ko}
+                        className="text-blue-600 underline dark:text-blue-400"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        KO
+                      </a>
+                      {" · "}
+                      <a
+                        href={item.urls.admin}
+                        className="text-blue-600 underline dark:text-blue-400"
+                      >
+                        Admin
+                      </a>
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
           ) : null}
           {automation.stateSource === "bundle" && mutations?.mode === "github" ? (

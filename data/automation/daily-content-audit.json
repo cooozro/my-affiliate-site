@@ -1,0 +1,173 @@
+{
+  "dateKst": "2026-07-02",
+  "scannedAt": "2026-07-02T01:39:09.148Z",
+  "postsScanned": 14,
+  "autoRepairCount": 28,
+  "autoRepairs": [
+    {
+      "slug": "2026-action-cameras-buying-guide",
+      "repairs": [
+        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links",
+        "2026-action-cameras-buying-guide/ko.md: typo fixes (1)",
+        "2026-action-cameras-buying-guide/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-air-purifiers-guide",
+      "repairs": [
+        "2026-air-purifiers-guide/ko.md: typo fixes (1)",
+        "2026-air-purifiers-guide/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-budget-mechanical-keyboards-guide",
+      "repairs": [
+        "2026-budget-mechanical-keyboards-guide/en.md: forbidden phrase (private-feed-claim)",
+        "2026-budget-mechanical-keyboards-guide/en.md: forbidden phrase (undisclosed-db)"
+      ]
+    },
+    {
+      "slug": "2026-budget-monitors-buying-guide",
+      "repairs": [
+        "2026-budget-monitors-buying-guide/en.md: forbidden phrase (private-feed-claim)",
+        "2026-budget-monitors-buying-guide/en.md: forbidden phrase (undisclosed-db)",
+        "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
+      "slug": "2026-budget-power-banks-guide",
+      "repairs": [
+        "2026-budget-power-banks-guide/en.md: forbidden phrase (private-feed-claim)",
+        "2026-budget-power-banks-guide/en.md: forbidden phrase (undisclosed-db)"
+      ]
+    },
+    {
+      "slug": "2026-budget-smartphones-under-300",
+      "repairs": [
+        "2026-budget-smartphones-under-300/en.md: forbidden phrase (private-feed-claim)",
+        "2026-budget-smartphones-under-300/en.md: forbidden phrase (undisclosed-db)"
+      ]
+    },
+    {
+      "slug": "2026-budget-wireless-earbuds-top5",
+      "repairs": [
+        "2026-budget-wireless-earbuds-top5/en.md: forbidden phrase (private-feed-claim)",
+        "2026-budget-wireless-earbuds-top5/en.md: forbidden phrase (undisclosed-db)",
+        "2026-budget-wireless-earbuds-top5/ko.md: typo fixes (1)",
+        "2026-budget-wireless-earbuds-top5/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "repairs": [
+        "2026-dehumidifiers-guide/ko.md: typo fixes (1)",
+        "2026-dehumidifiers-guide/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "repairs": [
+        "2026-noise-cancelling-headphones-head-to-head/ko.md: typo fixes (1)",
+        "2026-noise-cancelling-headphones-head-to-head/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-summer-ac-buying-checklist",
+      "repairs": [
+        "2026-summer-ac-buying-checklist/ko.md: typo fixes (1)",
+        "2026-summer-ac-buying-checklist/ko.md: fixed hangul typo in body"
+      ]
+    },
+    {
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "repairs": [
+        "2026-summer-bluetooth-speakers-guide/en.md: forbidden phrase (private-feed-claim)",
+        "2026-summer-bluetooth-speakers-guide/en.md: forbidden phrase (undisclosed-db)",
+        "2026-summer-bluetooth-speakers-guide/ko.md: typo fixes (1)",
+        "2026-summer-bluetooth-speakers-guide/ko.md: fixed hangul typo in body"
+      ]
+    }
+  ],
+  "manualReviewCount": 5,
+  "manualReview": [
+    {
+      "order": 1,
+      "slug": "2026-budget-mechanical-keyboards-guide",
+      "phase": "publish",
+      "issues": [
+        "2026-budget-mechanical-keyboards-guide/en.md: Related guides has 1 links (need ≥3)",
+        "2026-budget-mechanical-keyboards-guide/ko.md: Related guides has 1 links (need ≥3)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-budget-mechanical-keyboards-guide",
+        "ko": "https://www.aipick.shop/ko/blog/2026-budget-mechanical-keyboards-guide",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-budget-mechanical-keyboards-guide?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-budget-mechanical-keyboards-guide?locale=ko"
+      }
+    },
+    {
+      "order": 2,
+      "slug": "2026-budget-monitors-buying-guide",
+      "phase": "publish",
+      "issues": [
+        "2026-budget-monitors-buying-guide/en.md: Related guides has 2 links (need ≥3)",
+        "2026-budget-monitors-buying-guide/ko.md: Related guides has 2 links (need ≥3)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-budget-monitors-buying-guide",
+        "ko": "https://www.aipick.shop/ko/blog/2026-budget-monitors-buying-guide",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-budget-monitors-buying-guide?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-budget-monitors-buying-guide?locale=ko"
+      }
+    },
+    {
+      "order": 3,
+      "slug": "2026-budget-power-banks-guide",
+      "phase": "publish",
+      "issues": [
+        "2026-budget-power-banks-guide/en.md: Related guides has 2 links (need ≥3)",
+        "2026-budget-power-banks-guide/ko.md: Related guides has 2 links (need ≥3)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
+        "ko": "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-budget-power-banks-guide?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-budget-power-banks-guide?locale=ko"
+      }
+    },
+    {
+      "order": 4,
+      "slug": "2026-budget-wireless-earbuds-top5",
+      "phase": "publish",
+      "issues": [
+        "2026-budget-wireless-earbuds-top5/en.md: Related guides has 2 links (need ≥3)",
+        "2026-budget-wireless-earbuds-top5/ko.md: Related guides has 2 links (need ≥3)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-budget-wireless-earbuds-top5",
+        "ko": "https://www.aipick.shop/ko/blog/2026-budget-wireless-earbuds-top5",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-budget-wireless-earbuds-top5?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-budget-wireless-earbuds-top5?locale=ko"
+      }
+    },
+    {
+      "order": 5,
+      "slug": "2026-summer-ac-buying-checklist",
+      "phase": "publish",
+      "issues": [
+        "2026-summer-ac-buying-checklist/en.md: English body too short (3469 bytes, need ≥5000)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
+        "ko": "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=ko"
+      }
+    }
+  ]
+}

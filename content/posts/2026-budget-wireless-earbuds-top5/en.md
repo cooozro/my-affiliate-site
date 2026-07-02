@@ -25,7 +25,6 @@ imageSearchKeywords:
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
 ---
-
 ## Editorial Overview
 
 > As an independent tech review publication, we compare budget true wireless earbuds using public codec, ANC, and battery data. Our benchmarks show **LDAC support and noise-cancellation depth** define value under $40 more reliably than brand prestige.
@@ -43,7 +42,7 @@ Consumers increasingly buy based on **battery life, codec support, latency, and 
 
 ## Analysis methodology
 
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use private commerce feeds or undisclosed seller databases.
+This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use public manufacturer listings or public review platforms.
 
 | Item | Source | Purpose |
 | --- | --- | --- |

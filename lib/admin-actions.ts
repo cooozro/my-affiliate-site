@@ -60,6 +60,13 @@ export type AutomationStatus = {
   lastPublishAt: string | null;
   stateSource: "github" | "bundle";
   healthIssues: Array<{ code: string; message: string; severity: string }>;
+  manualReviewQueue: Array<{
+    order: number;
+    slug: string;
+    issues: string[];
+    urls: { en: string; ko: string; admin: string };
+  }>;
+  lastDailyContentAuditKst: string | null;
 };
 
 function readLocalJson(filePath: string): Record<string, unknown> | null {
@@ -117,6 +124,24 @@ function countAutomationDrafts(posts: AdminPostRow[]): number {
   ).length;
 }
 
+async function loadDailyContentAudit(): Promise<Record<string, unknown> | null> {
+  const localPath = path.join(
+    process.cwd(),
+    "data",
+    "automation",
+    "daily-content-audit.json",
+  );
+
+  if (usesRemotePostStore()) {
+    const remote = await tryReadGithubJson(
+      "data/automation/daily-content-audit.json",
+    );
+    if (remote) return remote;
+  }
+
+  return readLocalJson(localPath);
+}
+
 export async function getAutomationStatus(): Promise<AutomationStatus> {
   const { state, source: stateSource } = await loadAutomationState();
   const schedule = previewPublishSchedule(state);
@@ -169,6 +194,33 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       severity: issue.severity ?? "info",
     }));
 
+  const dailyAudit = await loadDailyContentAudit();
+  const manualReviewRaw = dailyAudit?.manualReview;
+  const manualReviewQueue = Array.isArray(manualReviewRaw)
+    ? (manualReviewRaw as Array<{
+        order?: number;
+        slug: string;
+        issues?: string[];
+        urls?: { en?: string; ko?: string; admin?: string };
+      }>).map((item, index) => ({
+        order: item.order ?? index + 1,
+        slug: item.slug,
+        issues: Array.isArray(item.issues) ? item.issues : [],
+        urls: {
+          en: item.urls?.en ?? "",
+          ko: item.urls?.ko ?? "",
+          admin: item.urls?.admin ?? "https://www.aipick.shop/admin",
+        },
+      }))
+    : [];
+
+  const lastDailyContentAuditKst =
+    typeof state.lastDailyContentAuditKst === "string"
+      ? state.lastDailyContentAuditKst
+      : typeof dailyAudit?.dateKst === "string"
+        ? dailyAudit.dateKst
+        : null;
+
   return {
     mode: "publish-only",
     draftCount,
@@ -192,6 +244,8 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       typeof state.lastPublishAt === "string" ? state.lastPublishAt : null,
     stateSource,
     healthIssues,
+    manualReviewQueue,
+    lastDailyContentAuditKst,
   };
 }
 

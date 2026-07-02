@@ -13,6 +13,7 @@ import {
   logAutomationHealthResult,
   runAutomationHealthCheck,
 } from "../lib/automation-health.mjs";
+import { runDailyContentAuditIfDue } from "../lib/daily-content-audit-runner.mjs";
 import { recordTopicPick } from "../lib/topic-diversity.mjs";
 import {
   ensureNextPublishAt,
@@ -102,6 +103,7 @@ export async function publishOneDraft(options = {}) {
     if (JSON.stringify(state) !== stateBefore) {
       saveState(state);
     }
+    runDailyContentAuditIfDue(process.cwd(), { state });
     return null;
   }
 
@@ -222,6 +224,8 @@ export async function publishOneDraft(options = {}) {
   saveState(state);
 
   queueCursorDraftReplenish(slug);
+
+  runDailyContentAuditIfDue(process.cwd(), { state });
 
   return slug;
 }

@@ -49,6 +49,7 @@ jobs:
           set -euo pipefail
           LOG_FILE="$(mktemp)"
           node scripts/automation/run.mjs publish-slot | tee "$LOG_FILE"
+          node scripts/automation/run.mjs daily-audit | tee -a "$LOG_FILE" || true
           if grep -q "^Published:" "$LOG_FILE"; then
             echo "published=true" >> "$GITHUB_OUTPUT"
           else

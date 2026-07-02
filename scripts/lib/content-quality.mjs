@@ -6,6 +6,7 @@ import {
   FORMULAIC_TITLE_PATTERNS,
   MISLEADING_SOURCE_PATTERNS,
 } from "./editorial-standards.mjs";
+import { FORBIDDEN_AD_PATTERNS } from "./content-policy.mjs";
 import {
   CONTENT_PROFILES,
   MIN_EN_BODY_BYTES,
@@ -17,12 +18,7 @@ export const MIN_BODY_CHARS = 2500;
 export const MIN_DESCRIPTION_CHARS = 50;
 export const MAX_DESCRIPTION_CHARS = 160;
 
-const FORBIDDEN_PATTERNS = [
-  /<!--\s*ad-break\s*-->/i,
-  /adsense/i,
-  /googlesyndication/i,
-  /placeholder.*ad/i,
-];
+const FORBIDDEN_PATTERNS = FORBIDDEN_AD_PATTERNS;
 
 const METHODOLOGY_PATTERN =
   /##\s*(분석 방법론|Analysis methodology|Methodology)/i;

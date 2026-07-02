@@ -23,7 +23,6 @@ imageSearchKeywords:
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
 ---
-
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 가성비 무선 이어폰을 공개 코덱·ANC·배터리 데이터로 비교합니다. 벤치마크상 **LDAC 지원과 노이즈 캔슬링 깊이**가 5만 원 이하 구간에서 브랜드보다 체감 가치를 더 잘 설명합니다.

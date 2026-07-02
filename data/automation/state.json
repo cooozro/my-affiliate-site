@@ -304,5 +304,12 @@
       }
     ],
     "repairs": []
+  },
+  "lastDailyContentAuditKst": "2026-07-02",
+  "lastDailyContentAudit": {
+    "at": "2026-07-02T01:39:09.148Z",
+    "postsScanned": 14,
+    "autoRepairCount": 28,
+    "manualReviewCount": 5
   }
 }

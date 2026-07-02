@@ -12,6 +12,12 @@ import {
   listPublishedSlugs,
   resolveContentProfile,
 } from "./content-quality.mjs";
+import {
+  auditContentPolicyText,
+  auditContentPolicyTitle,
+  HANGUL_LATIN_TYPO_RE,
+  repairContentPolicyText,
+} from "./content-policy.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
@@ -27,20 +33,11 @@ export const INTEGRITY_PHASES = ["draft", "publish"];
 const INTERNAL_BLOG_LINK_RE = /]\(\/(en|ko)\/blog\/([a-z0-9][a-z0-9-]*)\)/gi;
 const PREVIEW_URL_RE = /(?:draft|preview|localhost|127\.0\.0\.1)/i;
 const EN_TEMPLATE_TITLE_RE = /^(How to|Stop|Why you|What to|When to)\b/i;
-/** Hangul syllables broken by Latin letters inside a word (e.g. 백그ra운드), not LDAC는. */
-const HANGUL_LATIN_TYPO_RE = /[\uAC00-\uD7A3]{2,}[a-zA-Z]{2,5}[\uAC00-\uD7A3]{2,}/g;
 
 const INTEGRITY_EXEMPT_SLUGS = new Set(["welcome", "adsense-seo-checklist"]);
 const MIN_RELATED_GUIDES_PUBLISH = 3;
 const MIN_TAGS_PUBLISH = 3;
 const TITLE_SIMILARITY_BLOCK = 0.82;
-
-const HANGUL_TYPO_FIXES = [
-  [/백그ra운드/gi, "백그라운드"],
-  [/background/gi, "background"],
-  [/bluetooh/gi, "bluetooth"],
-  [/airconditon/gi, "air conditioner"],
-];
 
 function isIntegrityExempt(slug, data) {
   if (INTEGRITY_EXEMPT_SLUGS.has(slug)) return true;
@@ -108,12 +105,8 @@ function kstYear() {
   );
 }
 
-function fixStringTypos(str) {
-  let out = str;
-  for (const [re, replacement] of HANGUL_TYPO_FIXES) {
-    out = out.replace(re, replacement);
-  }
-  return out.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+function fixStringTypos(str, locale = "en") {
+  return repairContentPolicyText(str, locale).text;
 }
 
 /**
@@ -125,25 +118,26 @@ export function repairPostLocale(root, slug, locale) {
 
   let { data, content } = file;
   const repairs = [];
-  const expectedLinkLocale = locale;
 
-  for (const key of ["title", "description", "coverImageAlt"]) {
+  for (const key of ["title", "description", "coverImageAlt", "coverImageAltKo"]) {
     if (typeof data[key] === "string") {
-      const fixed = fixStringTypos(data[key]);
+      const fixed = fixStringTypos(data[key], locale);
       if (fixed !== data[key]) {
         data[key] = fixed;
-        repairs.push(`${slug}/${locale}.md: fixed HTML entity/typo in ${key}`);
+        repairs.push(`${slug}/${locale}.md: policy/spelling fix in ${key}`);
       }
     }
   }
 
-  let body = content;
-  for (const [re, replacement] of HANGUL_TYPO_FIXES) {
-    if (re.test(body)) {
-      body = body.replace(re, replacement);
-      repairs.push(`${slug}/${locale}.md: fixed hangul-latin typo in body`);
-    }
+  if (policyBody.repairs.length > 0) {
+    repairs.push(
+      ...policyBody.repairs.map(
+        (r) => `${slug}/${locale}.md: ${r}`,
+      ),
+    );
   }
+
+  let body = policyBody.text;
 
   const title = String(data.title ?? "").trim();
   const h1Match = body.match(/^#\s+(.+)$/m);
@@ -268,6 +262,28 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
       bucket,
       `${label}: Korean body has hangul-latin mixed tokens (repair or fix manually)`,
     );
+  }
+
+  for (const issue of auditContentPolicyTitle(String(data.title ?? ""), locale, label)) {
+    if (issue.severity === "error") {
+      addError(bucket, issue.message);
+    } else {
+      addWarning(bucket, issue.message);
+    }
+  }
+
+  for (const issue of auditContentPolicyText(body, locale, label)) {
+    if (issue.severity === "error") {
+      addError(bucket, issue.message);
+    } else if (phase === "publish") {
+      addWarning(bucket, issue.message);
+    }
+  }
+
+  for (const issue of auditContentPolicyText(String(data.description ?? ""), locale, label)) {
+    if (issue.severity === "error") {
+      addError(bucket, issue.message);
+    }
   }
 
   if (locale === "en" && /[\uAC00-\uD7A3]{4,}/.test(String(data.title ?? ""))) {

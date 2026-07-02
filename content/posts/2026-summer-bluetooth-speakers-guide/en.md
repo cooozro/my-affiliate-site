@@ -43,7 +43,7 @@ This report compares **five value-focused portable speakers** suited to summer s
 
 ## Analysis methodology
 
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use private commerce feeds or undisclosed seller databases.
+This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use public manufacturer listings or public review platforms.
 
 | Item | Source | Purpose |
 | --- | --- | --- |

@@ -40,11 +40,12 @@ Run before commit: `npm run content:validate`
 - No keyword stuffing; write for readers first
 - Use `liveData: true` + placeholders when prices/dates must stay current (see below)
 
-Goal: indexable, high-quality informational pages — avoid thin content, duplicate locale bodies, and outdated hardcoded FX.
+## 4. Content policy automation
 
----
+- **Writing & publish gate:** `scripts/lib/content-policy.mjs` + `scripts/lib/publish-integrity.mjs`
+- **Daily full scan:** `scripts/lib/daily-content-audit-runner.mjs` (after daily 2/2 publish or KST 23:00)
+- Run manually: `npm run content:daily-audit`
 
-## Live data placeholders
 
 For posts with `liveData: true` in frontmatter, the site resolves at render time (hourly refresh):
 

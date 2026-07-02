@@ -46,7 +46,7 @@ This report ranks **five entry mechanical keyboards** by cross-checking public m
 
 ## Analysis methodology
 
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use private commerce feeds or undisclosed seller databases.
+This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use public manufacturer listings or public review platforms.
 
 | Item | Source | Purpose |
 | --- | --- | --- |

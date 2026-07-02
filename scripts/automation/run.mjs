@@ -64,6 +64,17 @@ async function main() {
       await publishOneDraft();
       break;
 
+    case "daily-audit": {
+      const { runDailyContentAuditIfDue } = await import(
+        "../lib/daily-content-audit-runner.mjs"
+      );
+      const result = runDailyContentAuditIfDue();
+      if (!result.ran) {
+        console.log(`Daily content audit skipped: ${result.reason}`);
+      }
+      break;
+    }
+
     case "refresh-covers": {
       const { spawnSync } = await import("node:child_process");
       const result = spawnSync("node", ["scripts/refresh-duplicate-covers.mjs"], {
