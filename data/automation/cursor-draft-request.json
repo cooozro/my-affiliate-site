@@ -1,24 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-gaming-consoles-scenario-guide",
-  "requestedAt": "2026-07-02T03:15:31.764Z",
-  "contentProfile": "buying-guide",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "electric-fans",
-    "category": "home-appliances",
-    "angle": "electric fans for summer rooms: airflow CFM, noise dB, and energy use vs AC",
-    "imageQuery": "electric desk fan summer",
-    "liveData": false,
-    "seasons": [
-      "summer"
-    ]
-  },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "status": "complete",
+  "completedAt": "2026-07-02T04:12:26.254Z",
+  "writtenSlug": "2026-electric-fans-buying-guide",
+  "draftCount": 2,
+  "lastError": null
 }

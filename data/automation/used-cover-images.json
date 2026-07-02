@@ -307,6 +307,21 @@
       "hash": "ed63c47fe36bad97a99cbc4fdd4de821a3d03b933294ecbb164e70de75099e19",
       "provider": "pexels",
       "registeredAt": "2026-07-02T02:06:50.426Z"
+    },
+    {
+      "slug": "2026-electric-fans-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-02T04:12:11.117Z"
+    },
+    {
+      "slug": "2026-electric-fans-buying-guide",
+      "url": "https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg",
+      "assetKey": "pixabay:3571028",
+      "hash": "44cb2426f7314b1a108b265a285f98e0af6fb4f5698d255c096e1d8d0299359f",
+      "provider": "pixabay",
+      "registeredAt": "2026-07-02T04:12:18.024Z"
     }
   ]
 }
