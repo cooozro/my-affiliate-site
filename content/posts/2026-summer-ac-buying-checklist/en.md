@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-06-28T17:36:03.000Z'
+updatedAt: '2026-07-02T12:00:00.000Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -85,6 +85,22 @@ Checklist items derive from manufacturer install guides, lease common practice, 
 | WFH nook | 9,000–10,000 | Portable OK |
 
 Prices checked against listings as of {{today}}; use {{usd_krw_rate}} for KRW context.
+
+---
+
+## After the shortlist: compare efficiency labels fairly
+
+Once install constraints eliminate whole categories, the remaining models often differ by **EER, CEER, or seasonal energy class** more than by marketing BTU peaks. Pull the same metric from each spec sheet — mixing window-unit CEER with portable EER without context leads to false “cheaper to run” conclusions. If two units sit within one BTU band, favor the label with **lower claimed dB at the fan speed you will actually use at night**, not the quietest number buried in a footnote for “sleep mode” at reduced cooling output.
+
+Photograph your window opening and sash travel before checkout. Brackets that fit “standard” double-hungs still fail on crank-out windows, sliding tracks with shallow lips, or landlord trim that blocks side panels. Keep the lease clause or building memo in the same folder as your receipt; if management later questions hardware, a dated photo set beats memory after the first heat wave.
+
+---
+
+## First-week habits that protect cooling performance
+
+Install during a mild day if you can, then run a **30-minute sealed-room test**: close doors, fit the exhaust kit, and confirm the room holds temperature without the compressor cycling every few minutes. A tissue held near hose joints should not flutter inward on single-hose portables — that pull means hot air is being drawn from other rooms and your net cooling collapses. Log the first filter check on a calendar; dust loads faster in pollen season and clogged filters show up as “weak AC” returns that are really airflow problems.
+
+If you share walls with neighbors, note **start-up times** for sleep schedules. Many units use a louder burst for the first five minutes after the compressor kicks in. Staggering smart-plug schedules or using “dry” mode only when cooling is unnecessary can keep bedroom noise inside acceptable dB without sacrificing afternoon WFH comfort.
 
 ---
 

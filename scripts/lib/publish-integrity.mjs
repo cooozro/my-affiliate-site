@@ -23,6 +23,7 @@ import {
   MAX_RELATED_GUIDE_LINKS,
   loadPublishedPostIndex,
 } from "./related-guides.mjs";
+import { repairShortEnglishBody, expandEnglishBodyIfNeeded } from "./body-length-repair.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "./content-profiles.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
@@ -168,6 +169,16 @@ export function repairPostLocale(root, slug, locale) {
     if (related.changed) {
       body = related.body;
       repairs.push(...related.repairs);
+    }
+  }
+
+  if (locale === "en" && !isIntegrityExempt(slug, data)) {
+    const expanded = expandEnglishBodyIfNeeded(body, slug, data, {
+      includeDrafts: Boolean(data.draft),
+    });
+    if (expanded.changed) {
+      body = expanded.body;
+      repairs.push(...expanded.repairs);
     }
   }
 

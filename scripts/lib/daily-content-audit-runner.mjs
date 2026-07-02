@@ -15,6 +15,7 @@ import {
   runPublishIntegrityGate,
 } from "./publish-integrity.mjs";
 import { repairAllRelatedGuides } from "./related-guides.mjs";
+import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
 import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
@@ -99,7 +100,9 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
 
     if (!result.ok && !result.exempt) {
       const issues = integrityIssuesFlat(result).filter(
-        (issue) => !issue.includes("Related guides has"),
+        (issue) =>
+          !issue.includes("Related guides has") &&
+          !issue.includes("English body too short"),
       );
       if (issues.length === 0) continue;
       manualReview.push({
@@ -150,6 +153,12 @@ export function runDailyContentAuditIfDue(root = process.cwd(), options = {}) {
   if (relatedSummary.repairs.length > 0) {
     console.log(
       `Related guides auto-repair: ${relatedSummary.changed} post(s), ${relatedSummary.repairs.length} change(s)`,
+    );
+  }
+  const lengthSummary = repairAllShortEnglishBodies(root, { includeDrafts: true });
+  if (lengthSummary.repairs.length > 0) {
+    console.log(
+      `English body auto-expand: ${lengthSummary.changed} post(s), ${lengthSummary.repairs.length} change(s)`,
     );
   }
   const report = runDailyContentAudit(root, { state });
