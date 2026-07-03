@@ -3,8 +3,7 @@ title: '폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 
 description: >-
   여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매
   가이드입니다.
-date: '2026-07-02'
-createdAt: '2026-07-02T04:12:26.254Z'
+date: '2026-07-03'
 tags:
   - 선풍기
   - 가전
@@ -14,7 +13,7 @@ tags:
 contentProfile: buying-guide
 topicId: electric-fans
 topicCluster: air-conditioning
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - electric fan
@@ -29,6 +28,8 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
+updatedAt: '2026-07-03T11:11:08.000Z'
+publishedAt: '2026-07-03T11:11:08.000Z'
 ---
 ## 편집부 개요
 

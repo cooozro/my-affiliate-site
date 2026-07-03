@@ -3,8 +3,7 @@ title: 'Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh
 description: >-
   Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise
   in dB, wattage vs window AC, and scenario picks for summer heat waves.
-date: '2026-07-02'
-createdAt: '2026-07-02T04:12:26.254Z'
+date: '2026-07-03'
 tags:
   - electric fan
   - home appliances
@@ -14,7 +13,7 @@ tags:
 contentProfile: buying-guide
 topicId: electric-fans
 topicCluster: air-conditioning
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - electric fan
@@ -29,6 +28,8 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
+updatedAt: '2026-07-03T11:11:08.000Z'
+publishedAt: '2026-07-03T11:11:08.000Z'
 ---
 ## Editorial Overview
 

@@ -1,5 +1,5 @@
 {
-  "topicIndex": 7,
+  "topicIndex": 16,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -16,12 +16,13 @@
     "action-cameras",
     "noise-cancelling-headphones",
     "gaming-consoles",
-    "electric-fans"
+    "electric-fans",
+    "coffee-machines"
   ],
-  "lastPublishAt": "2026-07-02T03:15:31.755Z",
-  "nextPublishAt": "2026-07-03T02:02:00.000Z",
-  "scheduledGapHours": 5.03,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-03T02:11:09.745Z",
+  "nextPublishAt": "2026-07-03T06:48:33.671Z",
+  "scheduledGapHours": 4.62,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-03",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-03",
@@ -173,6 +174,19 @@
         "https://www.aipick.shop/en/blog/2026-gaming-consoles-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-gaming-consoles-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-electric-fans-buying-guide",
+      "topic": {
+        "id": "electric-fans",
+        "cluster": "air-conditioning"
+      },
+      "at": "2026-07-03T02:11:09.745Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-electric-fans-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-electric-fans-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
@@ -300,6 +314,16 @@
       "category": "home-appliances",
       "cluster": "air-conditioning",
       "at": "2026-07-02T03:15:31.764Z"
+    },
+    {
+      "id": "electric-fans",
+      "cluster": "air-conditioning",
+      "at": "2026-07-03T02:11:09.747Z"
+    },
+    {
+      "id": "coffee-machines",
+      "category": "kitchen",
+      "at": "2026-07-03T02:11:09.755Z"
     }
   ],
   "formatHistory": [
@@ -314,14 +338,23 @@
     "buying-guide",
     "head-to-head",
     "scenario-guide",
-    "buying-guide"
+    "buying-guide",
+    "head-to-head"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-02T23:57:10.202Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-03T02:11:08.324Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 9min (KST 2026-07-03)",
+        "severity": "warning"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-02",
   "lastDailyContentAudit": {
