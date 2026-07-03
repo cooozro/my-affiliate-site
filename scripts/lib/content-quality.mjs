@@ -5,8 +5,8 @@ import matter from "gray-matter";
 import {
   FORMULAIC_TITLE_PATTERNS,
   MISLEADING_SOURCE_PATTERNS,
-} from "./editorial-standards.mjs";
-import { FORBIDDEN_AD_PATTERNS } from "./content-policy.mjs";
+  FORBIDDEN_AD_PATTERNS,
+} from "./guardian/index.mjs";
 import {
   auditFaqSection,
   MIN_FAQ_BY_PROFILE,

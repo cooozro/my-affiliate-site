@@ -20,7 +20,9 @@
     "automation:buffer": "node scripts/automation/run.mjs buffer",
     "automation:status": "node scripts/automation/run.mjs status",
     "automation:replenish": "node scripts/automation/run-cursor-replenish.mjs",
-    "automation:distribute": "node scripts/automation/distributor.mjs"
+    "automation:distribute": "node scripts/automation/distributor.mjs",
+    "guardian:check-boundary": "node scripts/lib/guardian/check-boundary.mjs",
+    "guardian:smoke-test": "node scripts/guardian-smoke-test.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
