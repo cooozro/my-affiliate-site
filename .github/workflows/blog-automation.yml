@@ -23,7 +23,7 @@ env:
 
 concurrency:
   group: blog-automation
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run:
@@ -32,6 +32,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -157,16 +159,7 @@ jobs:
 
       - name: Commit and push changes
         if: success() && steps.task.outputs.name != 'status'
-        run: |
-          git config user.name "blog-automation[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/posts public/images/posts data/automation/
-          if git diff --staged --quiet; then
-            echo "No content changes to commit"
-            exit 0
-          fi
-          git commit -m "chore(automation): ${{ steps.task.outputs.name }}"
-          git push
+        run: bash scripts/ci-git-push.sh "chore(automation): ${{ steps.task.outputs.name }}"
 
       - name: Trigger Vercel redeploy
         if: success() && steps.task.outputs.name != 'status'

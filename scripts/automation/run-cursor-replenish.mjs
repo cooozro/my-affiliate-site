@@ -253,6 +253,10 @@ async function replenishWithCursor(request, draftsBefore) {
     throw new Error(`Cursor agent run failed: ${result.id ?? "unknown"}`);
   }
 
+  console.log(
+    `Cursor API connection successful — agent run ${result.status} (id=${result.id ?? "n/a"})`,
+  );
+
   const updated = readCursorDraftRequest();
   let writtenSlug =
     typeof updated?.writtenSlug === "string" ? updated.writtenSlug : null;
