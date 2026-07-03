@@ -1,26 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-noise-cancelling-headphones-head-to-head",
-  "requestedAt": "2026-07-03T07:10:50.795Z",
-  "requeuedAt": "2026-07-03T18:50:04.357Z",
-  "contentProfile": "checklist",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "air-fryers",
-    "category": "kitchen",
-    "angle": "air fryer capacity, wattage, presets, and cleaning vs conventional oven",
-    "imageQuery": "air fryer kitchen countertop",
-    "liveData": false,
-    "seasons": [
-      "fall"
-    ]
-  },
-  "templatePath": "docs/templates/checklist.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-07-03T18:55:56.300Z",
+  "writtenSlug": "2026-air-fryers-checklist",
+  "draftCount": 2,
   "lastError": null
 }

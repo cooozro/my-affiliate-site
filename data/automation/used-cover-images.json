@@ -352,6 +352,21 @@
       "hash": "a0faeb2aab83203da017fa466c39a7d47b0e05bfddc4e716887e8f75d64e4cca",
       "provider": "pexels",
       "registeredAt": "2026-07-03T18:49:51.818Z"
+    },
+    {
+      "slug": "2026-air-fryers-checklist",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-03T18:55:11.861Z"
+    },
+    {
+      "slug": "2026-air-fryers-checklist",
+      "url": "https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg",
+      "assetKey": "pexels:1370082",
+      "hash": "9c410f87fec4892c4b80cfcff1933e91666d3b74f683fd0982ce5f00a7995ac5",
+      "provider": "pexels",
+      "registeredAt": "2026-07-03T18:55:18.793Z"
     }
   ]
 }
