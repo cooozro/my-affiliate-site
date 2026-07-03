@@ -12,6 +12,7 @@ import {
   auditPostForPublish,
   listPublishedSlugs,
   resolveContentProfile,
+  MAX_DESCRIPTION_CHARS,
 } from "../content-quality.mjs";
 import {
   auditContentPolicyText,
@@ -118,6 +119,16 @@ function fixStringTypos(str, locale = "en") {
   return repairContentPolicyText(str, locale).text;
 }
 
+function trimDescriptionToMetaLimit(text, max = MAX_DESCRIPTION_CHARS) {
+  const s = String(text ?? "").trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  const trimmed =
+    lastSpace > Math.floor(max * 0.5) ? cut.slice(0, lastSpace) : cut;
+  return `${trimmed.trimEnd()}…`;
+}
+
 /**
  * Auto-repair one locale file. Returns repairs applied.
  */
@@ -130,8 +141,18 @@ export function repairPostLocale(root, slug, locale) {
 
   for (const key of ["title", "description", "coverImageAlt", "coverImageAltKo"]) {
     if (typeof data[key] === "string") {
-      const fixed = fixStringTypos(data[key], locale);
-      if (fixed !== data[key]) {
+      let value = data[key];
+      if (key === "description" && value.length > MAX_DESCRIPTION_CHARS) {
+        const trimmed = trimDescriptionToMetaLimit(value);
+        if (trimmed !== value) {
+          value = trimmed;
+          repairs.push(
+            `${slug}/${locale}.md: trimmed description to ${MAX_DESCRIPTION_CHARS} chars`,
+          );
+        }
+      }
+      const fixed = fixStringTypos(value, locale);
+      if (fixed !== value) {
         data[key] = fixed;
         repairs.push(`${slug}/${locale}.md: policy/spelling fix in ${key}`);
       }
