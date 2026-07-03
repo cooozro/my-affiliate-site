@@ -19,6 +19,7 @@ export { buildBlogPostMetadata } from "@/lib/guardian/meta";
 export {
   buildBlogPostBreadcrumbs,
   buildBlogPostJsonLdGraph,
+  buildBlogPostPageJsonLd,
 } from "@/lib/guardian/json-ld";
 
 export type {
@@ -30,6 +31,7 @@ export type {
 export {
   ARTICLE_CHROME_RULES,
   splitArticleBodyForTagline,
+  splitRelatedGuidesForTagline,
   assertTaglinePlacement,
 } from "@/lib/guardian/article-chrome";
 

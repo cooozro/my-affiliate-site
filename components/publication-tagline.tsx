@@ -1,5 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
-import { publicationTagline } from "@/lib/publication-copy";
+import { getPublicationTagline } from "@/lib/guardian";
 
 type PublicationTaglineProps = {
   locale: Locale;
@@ -22,7 +22,7 @@ export function PublicationTagline({
     <p
       className={`${variant === "inline" ? inlineClass : standaloneClass} ${className}`.trim()}
     >
-      {publicationTagline[locale]}
+      {getPublicationTagline(locale)}
     </p>
   );
 }

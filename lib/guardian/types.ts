@@ -18,7 +18,7 @@ export type BlogPostGuardianInput = {
     | "content"
     | "contentProfile"
   >;
-  breadcrumbLabels: {
+  breadcrumbLabels?: {
     home: string;
     articles: string;
   };

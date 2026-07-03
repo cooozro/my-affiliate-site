@@ -2,7 +2,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
-const guardianInternalPatterns = [
+const pipelineGuardianInternalPatterns = [
   {
     group: [
       "**/guardian/editorial-standards.mjs",
@@ -15,13 +15,47 @@ const guardianInternalPatterns = [
   },
 ];
 
+const renderGuardianInternalPatterns = [
+  {
+    group: [
+      "**/lib/guardian/meta",
+      "**/lib/guardian/json-ld",
+      "**/lib/guardian/article-chrome",
+      "**/lib/guardian/publication-copy",
+      "**/lib/guardian/types",
+      "**/lib/seo/json-ld/compose",
+      "**/lib/seo/json-ld/builders/**",
+    ],
+    message: "Import render Guardian via @/lib/guardian (or deprecated shims).",
+  },
+];
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
     files: ["scripts/**/*.mjs", "scripts/**/*.js"],
     rules: {
-      "no-restricted-imports": ["error", { patterns: guardianInternalPatterns }],
+      "no-restricted-imports": [
+        "error",
+        { patterns: pipelineGuardianInternalPatterns },
+      ],
+    },
+  },
+  {
+    files: ["lib/guardian/**/*.ts", "lib/seo/json-ld/**/*.ts"],
+    rules: {
+      "no-restricted-imports": "off",
+    },
+  },
+  {
+    files: ["**/*.{ts,tsx}"],
+    ignores: ["lib/guardian/**", "lib/seo/json-ld/**"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        { patterns: renderGuardianInternalPatterns },
+      ],
     },
   },
   {
@@ -36,14 +70,14 @@ const eslintConfig = defineConfig([
       "scripts/lib/content-policy.mjs",
       "scripts/lib/publish-integrity.mjs",
       "scripts/lib/automation-guard.mjs",
+      "lib/publication-copy.ts",
+      "lib/split-article-content.ts",
     ],
     rules: {
       "no-restricted-imports": "off",
     },
   },
-  // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",

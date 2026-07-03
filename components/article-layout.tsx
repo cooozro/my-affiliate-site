@@ -3,10 +3,14 @@ import { ArticleProtection } from "@/components/article-protection";
 import { ArticleShare } from "@/components/article-share";
 import { MarkdownContent } from "@/components/markdown-content";
 import { PublicationTagline } from "@/components/publication-tagline";
+import {
+  ARTICLE_CHROME_RULES,
+  assertTaglinePlacement,
+  splitArticleBodyForTagline,
+} from "@/lib/guardian";
 import { ARTICLE_SHELL } from "@/lib/layout";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
-import { splitRelatedGuidesForTagline } from "@/lib/split-article-content";
 import { siteConfig } from "@/lib/site";
 import type { Dictionary } from "@/messages/en";
 
@@ -37,6 +41,33 @@ function formatDateTime(date: string, locale: Locale) {
   }).format(new Date(date));
 }
 
+function ShareBar({
+  placement,
+  shareUrl,
+  post,
+  shareImageUrl,
+  feedUrl,
+  shareLabels,
+}: {
+  placement: "top" | "bottom";
+  shareUrl: string;
+  post: EnrichedPost;
+  shareImageUrl?: string;
+  feedUrl: string;
+  shareLabels: Dictionary["blog"]["share"];
+}) {
+  return (
+    <ArticleShare
+      url={shareUrl}
+      title={post.title}
+      imageUrl={shareImageUrl}
+      feedUrl={feedUrl}
+      labels={shareLabels}
+      variant={placement}
+    />
+  );
+}
+
 export function ArticleLayout({
   post,
   locale,
@@ -49,9 +80,14 @@ export function ArticleLayout({
     : undefined;
   const feedUrl = `${siteConfig.url}/${locale}/feed.xml`;
 
-  const contentParts = splitRelatedGuidesForTagline(post.content, locale);
+  const contentParts = splitArticleBodyForTagline(post.content, locale);
+  if (contentParts) {
+    assertTaglinePlacement("after-related-heading");
+  }
+
   const publishedIso = post.publishedAt ?? post.date;
   const modifiedIso = post.updatedAt ?? publishedIso;
+  const sharePlacements = ARTICLE_CHROME_RULES.shareBar.placements;
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -86,14 +122,16 @@ export function ArticleLayout({
         ) : null}
       </header>
 
-      <ArticleShare
-        url={shareUrl}
-        title={post.title}
-        imageUrl={shareImageUrl}
-        feedUrl={feedUrl}
-        labels={shareLabels}
-        variant="top"
-      />
+      {sharePlacements.includes("top") ? (
+        <ShareBar
+          placement="top"
+          shareUrl={shareUrl}
+          post={post}
+          shareImageUrl={shareImageUrl}
+          feedUrl={feedUrl}
+          shareLabels={shareLabels}
+        />
+      ) : null}
 
       <ArticleProtection>
         {post.coverImage ? (
@@ -136,14 +174,16 @@ export function ArticleLayout({
         </div>
       </ArticleProtection>
 
-      <ArticleShare
-        url={shareUrl}
-        title={post.title}
-        imageUrl={shareImageUrl}
-        feedUrl={feedUrl}
-        labels={shareLabels}
-        variant="bottom"
-      />
+      {sharePlacements.includes("bottom") ? (
+        <ShareBar
+          placement="bottom"
+          shareUrl={shareUrl}
+          post={post}
+          shareImageUrl={shareImageUrl}
+          feedUrl={feedUrl}
+          shareLabels={shareLabels}
+        />
+      ) : null}
     </article>
   );
 }

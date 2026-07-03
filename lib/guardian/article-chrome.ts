@@ -75,3 +75,11 @@ export function assertTaglinePlacement(placement: TaglinePlacement): void {
     );
   }
 }
+
+/** @deprecated Use splitArticleBodyForTagline */
+export function splitRelatedGuidesForTagline(
+  content: string,
+  locale: Locale,
+): RelatedGuidesSplit | null {
+  return splitArticleBodyForTagline(content, locale);
+}

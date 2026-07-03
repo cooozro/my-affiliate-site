@@ -43,6 +43,9 @@ jobs:
       - name: Pipeline Guardian boundary check
         run: npm run guardian:check-boundary
 
+      - name: Render Guardian boundary check
+        run: npm run guardian:check-render-boundary
+
       - name: Refresh duplicate cover images
         if: github.event_name == 'push'
         env:

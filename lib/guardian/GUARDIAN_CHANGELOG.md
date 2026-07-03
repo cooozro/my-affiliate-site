@@ -1,5 +1,17 @@
 # Render Guardian Changelog
 
+## 2026-07-03 — Phase 2 migration (Steps 1–2 + ESLint boundary)
+
+**Migrated consumers:**
+
+- `app/[locale]/blog/[slug]/page.tsx` → `buildBlogPostMetadata`, `buildBlogPostPageJsonLd`
+- `components/article-layout.tsx` → `ARTICLE_CHROME_RULES`, `splitArticleBodyForTagline`
+- `components/publication-tagline.tsx` → `getPublicationTagline`
+
+**Shims:** `lib/publication-copy.ts`, `lib/split-article-content.ts`
+
+**Encapsulation:** ESLint render rules + `npm run guardian:check-render-boundary`
+
 ## 2026-07-03 — Phase 2 scaffold (plan only)
 
 **Approved:** 5-C, 6-A (blog meta), JSON-LD wrap, 11-B sequencing.

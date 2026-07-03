@@ -18,6 +18,16 @@ Placeholders for live posts: `{{today}}`, `{{today_locale}}`, `{{usd_krw_rate}}`
 
 Images: `npm run content:image` with `PEXELS_API_KEY` and/or `PIXABAY_API_KEY` (rotates by slug).
 
+## Guardian baseline (mandatory)
+
+Before writing, editing, or refactoring blog posts, SEO, or article layout:
+
+1. Read **`.cursor/rules/guardian.mdc`** and import only from `@/lib/guardian` (render) or `scripts/lib/guardian/index.mjs` (pipeline).
+2. Run `npm run guardian:check-boundary` and `npm run guardian:check-render-boundary` after guardian-related changes.
+3. If a requested change conflicts with or bypasses Guardian rules, **stop and report to the owner for approval** before committing.
+
+Changelogs: `lib/guardian/GUARDIAN_CHANGELOG.md`, `scripts/lib/guardian/GUARDIAN_CHANGELOG.md`.
+
 ## Blog automation
 
 Scheduled publishing and Google Search Console indexing via GitHub Actions. See **`docs/BLOG_AUTOMATION.md`**.

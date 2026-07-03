@@ -4,7 +4,7 @@
  */
 
 import type { Metadata } from "next";
-import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
+import { locales, ogLocales } from "@/lib/i18n/config";
 import { localizedPath } from "@/lib/i18n/paths";
 import { getPostSlugs } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";

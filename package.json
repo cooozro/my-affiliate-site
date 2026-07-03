@@ -22,7 +22,9 @@
     "automation:replenish": "node scripts/automation/run-cursor-replenish.mjs",
     "automation:distribute": "node scripts/automation/distributor.mjs",
     "guardian:check-boundary": "node scripts/lib/guardian/check-boundary.mjs",
-    "guardian:smoke-test": "node scripts/guardian-smoke-test.mjs"
+    "guardian:check-render-boundary": "node scripts/render-guardian-check.mjs",
+    "guardian:smoke-test": "node scripts/guardian-smoke-test.mjs",
+    "guardian:smoke-render": "node scripts/guardian-render-smoke.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

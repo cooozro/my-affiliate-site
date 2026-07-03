@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleLayout } from "@/components/article-layout";
 import { JsonLd } from "@/components/json-ld";
-import { locales, ogLocales, type Locale } from "@/lib/i18n/config";
+import {
+  buildBlogPostMetadata,
+  buildBlogPostPageJsonLd,
+} from "@/lib/guardian";
+import type { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
 import { enrichPost } from "@/lib/enrich-post";
-import { getAllStaticBlogParams, getPostBySlug, getPostSlugs } from "@/lib/posts";
-import {
-  buildBlogPostBreadcrumbs,
-  buildBlogPostJsonLdGraph,
-} from "@/lib/seo/json-ld/compose";
+import { getAllStaticBlogParams, getPostBySlug } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -34,44 +34,7 @@ export async function generateMetadata({
 
   try {
     const post = getPostBySlug(slug, { locale });
-    const url = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
-    const ogImage = post.coverImage
-      ? `${siteConfig.url}${post.coverImage}`
-      : undefined;
-
-    return {
-      title: post.title,
-      description: post.description,
-      openGraph: {
-        type: "article",
-        title: post.title,
-        description: post.description,
-        url,
-        locale: ogLocales[locale],
-        publishedTime: post.date,
-        modifiedTime: post.updatedAt ?? post.date,
-        tags: post.tags,
-        authors: [siteConfig.author],
-        ...(ogImage ? { images: [{ url: ogImage, alt: post.coverImageAlt }] } : {}),
-      },
-      twitter: {
-        card: ogImage ? "summary_large_image" : "summary",
-        title: post.title,
-        description: post.description,
-        ...(ogImage ? { images: [ogImage] } : {}),
-      },
-      alternates: {
-        canonical: url,
-        languages: Object.fromEntries(
-          locales
-            .filter((l) => getPostSlugs(l).includes(slug))
-            .map((l) => [
-              l,
-              `${siteConfig.url}${localizedPath(l, `/blog/${slug}`)}`,
-            ]),
-        ),
-      },
-    };
+    return buildBlogPostMetadata({ locale, slug, post });
   } catch {
     return { title: dict.blog.notFound };
   }
@@ -89,29 +52,17 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const dict = await getDictionary(locale);
-  const shareUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
-  const publishedIso = post.publishedAt ?? post.date;
-  const modifiedIso = post.updatedAt ?? publishedIso;
-  const ogImage = post.coverImage
-    ? `${siteConfig.url}${post.coverImage}`
-    : undefined;
+  const pageUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
 
-  const jsonLd = buildBlogPostJsonLdGraph({
+  const jsonLd = buildBlogPostPageJsonLd({
     locale,
     slug,
-    title: post.title,
-    description: post.description,
-    datePublished: publishedIso,
-    dateModified: modifiedIso,
-    url: shareUrl,
-    imageUrl: ogImage,
-    tags: post.tags,
-    content: post.content,
-    contentProfile: post.contentProfile,
-    breadcrumbs: buildBlogPostBreadcrumbs(locale, post.title, slug, {
+    post,
+    pageUrl,
+    breadcrumbLabels: {
       home: dict.nav.home,
       articles: dict.home.latestPosts,
-    }),
+    },
   });
 
   return (
@@ -120,7 +71,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <ArticleLayout
         post={post}
         locale={locale}
-        shareUrl={shareUrl}
+        shareUrl={pageUrl}
         shareLabels={dict.blog.share}
         dateLabels={{
           published: dict.blog.published,

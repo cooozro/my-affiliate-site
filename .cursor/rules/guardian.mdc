@@ -1,37 +1,41 @@
 ---
-description: Pipeline Guardian — approval required before changing scripts/lib/guardian
+description: Guardian modules — approval required before changing lib/guardian or scripts/lib/guardian
 globs:
+  - lib/guardian/**
   - scripts/lib/guardian/**
+  - lib/publication-copy.ts
+  - lib/split-article-content.ts
   - scripts/lib/publish-integrity.mjs
   - scripts/lib/content-policy.mjs
   - scripts/lib/editorial-standards.mjs
   - scripts/lib/automation-guard.mjs
+  - app/[locale]/blog/[slug]/page.tsx
+  - components/article-layout.tsx
 alwaysApply: false
 ---
 
-# Pipeline Guardian (Phase 1)
+# Guardian (Pipeline + Render)
 
-Protected paths: `scripts/lib/guardian/**` and their deprecated shims.
+## Pipeline (`scripts/lib/guardian/`)
+
+- Import via `scripts/lib/guardian/index.mjs` or deprecated shims.
+- Changelog: `scripts/lib/guardian/GUARDIAN_CHANGELOG.md`
+
+## Render (`lib/guardian/`)
+
+- Import via `@/lib/guardian` only (not `@/lib/guardian/meta`, etc.).
+- Changelog: `lib/guardian/GUARDIAN_CHANGELOG.md`
+- JSON-LD builders: internal — use `buildBlogPostPageJsonLd` / `buildBlogPostMetadata`.
 
 ## Before editing
 
-1. Read `scripts/lib/guardian/GUARDIAN_CHANGELOG.md`.
-2. Analyze **impact on other modules** (imports, GHA, admin publish, replenish).
-3. Present before/after summary to the owner and **wait for approval**.
-4. Do **not** commit guardian changes without approval.
-
-## Import rules
-
-- **Use:** `import { ... } from "./guardian/index.mjs"` (or `../lib/guardian/index.mjs`).
-- **Do not** import `guardian/editorial-standards.mjs`, `content-policy.mjs`, `publish-integrity.mjs`, or `automation-guard.mjs` directly from outside the guardian folder.
-- Shims at `scripts/lib/*.mjs` must remain one-line re-exports only.
+1. Read the relevant GUARDIAN_CHANGELOG.md.
+2. Analyze impact on pages, layout, automation, SEO output.
+3. **Wait for owner approval** before committing.
 
 ## After editing
 
-- Run `npm run guardian:check-boundary`
-- Run `npm run guardian:smoke-test`
-- Append entry to `GUARDIAN_CHANGELOG.md`
-
-## Phase 2 (not yet)
-
-Render guardian (`lib/guardian/`) for blog metadata, JSON-LD wrap, article chrome — separate approval.
+- `npm run guardian:check-boundary`
+- `npm run guardian:check-render-boundary`
+- `npm run guardian:smoke-test`
+- `npm run guardian:smoke-render`
