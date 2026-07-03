@@ -359,13 +359,16 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-03T08:37:38.459Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": [
-      "2026-noise-cancelling-headphones-head-to-head/en.md: publishedAt 2026-07-03T16:10:49.000Z → 2026-07-03T07:10:50.785Z",
-      "2026-noise-cancelling-headphones-head-to-head/ko.md: publishedAt 2026-07-03T16:10:49.000Z → 2026-07-03T07:10:50.785Z"
-    ]
+    "at": "2026-07-03T09:45:36.966Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 154min",
+        "severity": "warning"
+      }
+    ],
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-03",
   "lastDailyContentAudit": {
