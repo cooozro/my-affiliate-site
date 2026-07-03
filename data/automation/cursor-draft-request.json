@@ -21,5 +21,9 @@
     ]
   },
   "templatePath": "docs/templates/checklist.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastAttemptAt": "2026-07-03T14:07:37.533Z",
+  "writtenSlug": "2026-webcams-checklist",
+  "completedAt": "2026-07-03T14:07:20.000Z",
+  "lastError": "Integrity gate failed for 2026-webcams-checklist: 2026-webcams-checklist/en.md: description over 160 chars"
 }
