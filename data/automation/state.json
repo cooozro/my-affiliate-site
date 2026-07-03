@@ -359,29 +359,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-03T07:10:49.444Z",
-    "issueCount": 3,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 22min (KST 2026-07-03)",
-        "severity": "error"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 299min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-03T08:37:38.459Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "marked-slot-catch-up",
-      "2026-electric-fans-buying-guide/en.md: publishedAt 2026-07-03T11:11:08.000Z → 2026-07-03T02:11:09.745Z",
-      "2026-electric-fans-buying-guide/ko.md: publishedAt 2026-07-03T11:11:08.000Z → 2026-07-03T02:11:09.745Z"
+      "2026-noise-cancelling-headphones-head-to-head/en.md: publishedAt 2026-07-03T16:10:49.000Z → 2026-07-03T07:10:50.785Z",
+      "2026-noise-cancelling-headphones-head-to-head/ko.md: publishedAt 2026-07-03T16:10:49.000Z → 2026-07-03T07:10:50.785Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-03",
