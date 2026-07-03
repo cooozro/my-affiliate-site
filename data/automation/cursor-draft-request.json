@@ -1,25 +1,25 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-electric-fans-buying-guide",
-  "requestedAt": "2026-07-03T02:11:09.755Z",
-  "contentProfile": "head-to-head",
+  "publishedSlug": "2026-noise-cancelling-headphones-head-to-head",
+  "requestedAt": "2026-07-03T07:10:50.795Z",
+  "contentProfile": "checklist",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "coffee-machines",
-    "category": "kitchen",
-    "angle": "coffee machine types: capsule vs semi-auto vs fully automatic, milk systems, descaling",
-    "imageQuery": "espresso coffee machine kitchen",
+    "id": "webcams",
+    "category": "peripherals",
+    "angle": "webcams for remote work: resolution, autofocus, microphone quality comparison",
+    "imageQuery": "webcam video conference",
     "liveData": false,
     "seasons": [
       "fall",
-      "winter"
+      "spring"
     ]
   },
-  "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "templatePath": "docs/templates/checklist.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
 }

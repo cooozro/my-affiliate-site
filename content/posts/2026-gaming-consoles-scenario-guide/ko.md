@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T04:37:59.379Z'
+updatedAt: '2026-07-03T07:10:50.814Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## 편집부 개요
@@ -181,12 +181,11 @@ Series S는 **구독 중심·작은 TV·1080p~1440p 업스케일**에 잘 맞는
 
 ## 관련 가이드
 
-- [여름 에어컨 구매 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 콘솔·TV를 오래 켤 때 같은 공간 냉방
-- [소형 공간 공기청정기 — CADR·필터·소음·전기료](/ko/blog/2026-air-purifiers-guide) — 밀폐 냉방 시 콘솔 통풍구 먼지
-- [재택·부업용 저예산 모니터 가이드](/ko/blog/2026-budget-monitors-buying-guide) — 업무·캡처 겸용 데스크
-- [통화·출퇴근용 저예산 무선 이어폰](/ko/blog/2026-budget-wireless-earbuds-top5) — 가족 수면 방해 없는 보이스 채팅
-- [AI Pick 제품 리뷰 방법](/ko/blog/welcome) — liveData 가격·날짜 갱신 방식
-
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 밀폐 냉방 시 콘솔 통풍구 먼지
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 업무·캡처 겸용 데스크
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 콘솔·TV를 오래 켤 때 같은 공간 냉방
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 가족 수면 방해 없는 보이스 채팅
+- [제품 리뷰 방법론](/ko/blog/welcome) — liveData 가격·날짜 갱신 방식
 ## 최종 평가
 
 {{today}} 시점 콘솔 선택은 TFLOPS보다 **어디서, 어떻게 게임을 사고, 세일 시즌에 저장이 얼마나 빨리 차는지**가 핵심입니다. 여름 방학 4K TV 거실 기준이면 **Xbox Series X**가 해상도와 Game Pass를 균형 있게 맞춥니다. 소니 독점·디스크·SSD 확장이 필수면 **PS5 Slim 디스크**와 인증 M.2를 함께 예산에 넣으세요. 업스케일 4K를 받아들이면 **Xbox Series S**가 구독 중심 예산에 맞습니다. TV 다툼이 잦으면 **Switch OLED**와 microSD가 현실적인 해법입니다.

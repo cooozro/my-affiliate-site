@@ -3,8 +3,7 @@ title: 'Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC'
 description: >-
   Three budget over-ear ANC headphones compared on cancellation depth, LDAC
   codec support, weight, and comfort for long flights and hot-season commutes.
-date: '2026-07-01'
-createdAt: '2026-07-02T04:52:03.000Z'
+date: '2026-07-03'
 tags:
   - noise cancelling headphones
   - travel audio
@@ -13,7 +12,7 @@ tags:
   - budget audio
 contentProfile: head-to-head
 topicId: noise-cancelling-headphones
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-noise-cancelling-headphones-head-to-head/noise-cancelling-headphones-travel-audio-cover.jpg
@@ -29,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T12:00:00.000Z'
+updatedAt: '2026-07-03T07:10:50.815Z'
+publishedAt: '2026-07-03T16:10:49.000Z'
 ---
 ## Editorial Overview
 
@@ -133,13 +133,11 @@ With ANC on, JBL Tune 770NC claims the longest runtime in this trio — roughly 
 
 ## Related guides
 
-- [Budget wireless earbuds](/en/blog/2026-budget-wireless-earbuds-top5) — when in-ear ANC fits better than over-ears for gym or pool days
-- [Summer Bluetooth speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio once you land at the beach or park
-- [Budget power banks](/en/blog/2026-budget-power-banks-guide) — keep phones and tablets topped up during long transit days
-- [Portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool down the room you return to after travel
-
----
-
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool down the room you return to after travel
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio once you land at the beach or park
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep phones and tablets topped up during long transit days
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — when in-ear ANC fits better than over-ears for gym or pool days
 ## Final Verdict
 
 No single model wins every summer trip. **Sony WH-CH720N** balances weight and LDAC for mixed commute-and-flight weeks. **Soundcore Space Q45** is the cancellation specialist if you can handle heavier cups. **JBL Tune 770NC** stays relevant when price and battery trump codec depth.

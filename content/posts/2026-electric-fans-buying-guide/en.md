@@ -28,8 +28,8 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-07-03T11:11:08.000Z'
-publishedAt: '2026-07-03T11:11:08.000Z'
+updatedAt: '2026-07-03T07:10:50.810Z'
+publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## Editorial Overview
 
@@ -181,12 +181,11 @@ Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM ci
 
 ## Related guides
 
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — when fans are enough vs when you need refrigerant cooling
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — size AC first, then add circulation
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — when fans are enough vs when you need refrigerant cooling
 - [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — sticky heat often needs dehumidifying, not just airflow
 - [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — closed-window season also raises particulate load indoors
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — outage backup for fans and small appliances during storm season
-
 ## Five checks before you buy
 
 1. **Match fan type to room job** — Whole-room mixing favors circulators (Vornado-style); personal desk work favors compact turbo units; narrow floors favor towers. Buying a desk fan for a 25 m² studio leaves hot corners untouched.
