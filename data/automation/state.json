@@ -365,20 +365,9 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-03T16:16:30.894Z",
-    "issueCount": 2,
-    "issues": [
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 0/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 545min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-03T20:21:37.590Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-03",
