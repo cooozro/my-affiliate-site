@@ -20,12 +20,12 @@
     "coffee-machines"
   ],
   "lastPublishAt": "2026-07-03T07:10:50.785Z",
-  "nextPublishAt": "2026-07-04T01:35:00.000Z",
-  "scheduledGapHours": 4.58,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-03",
+  "nextPublishAt": "2026-07-04T01:27:00.000Z",
+  "scheduledGapHours": 4.45,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-04",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-03",
+  "writeDateKst": "2026-07-04",
   "history": [
     {
       "action": "publish",
@@ -359,12 +359,17 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-03T14:09:41.170Z",
-    "issueCount": 1,
+    "at": "2026-07-03T15:45:46.512Z",
+    "issueCount": 2,
     "issues": [
       {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 0/2",
+        "severity": "info"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 418min",
+        "message": "Cursor replenish pending 514min",
         "severity": "warning"
       }
     ],
