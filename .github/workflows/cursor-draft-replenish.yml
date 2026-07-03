@@ -66,4 +66,5 @@ jobs:
 
       - name: Commit and push draft
         if: steps.pending.outputs.needed == 'true'
-        run: bash scripts/ci-git-push.sh "chore(automation): cursor-draft-replenish"
+        run: |
+          bash scripts/ci-git-push.sh "chore(automation): cursor-draft-replenish"

@@ -159,7 +159,8 @@ jobs:
 
       - name: Commit and push changes
         if: success() && steps.task.outputs.name != 'status'
-        run: bash scripts/ci-git-push.sh "chore(automation): ${{ steps.task.outputs.name }}"
+        run: |
+          bash scripts/ci-git-push.sh "chore(automation): ${{ steps.task.outputs.name }}"
 
       - name: Trigger Vercel redeploy
         if: success() && steps.task.outputs.name != 'status'
