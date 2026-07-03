@@ -3,6 +3,7 @@
   "needed": 1,
   "publishedSlug": "2026-noise-cancelling-headphones-head-to-head",
   "requestedAt": "2026-07-03T07:10:50.795Z",
+  "requeuedAt": "2026-07-03T18:50:04.357Z",
   "contentProfile": "checklist",
   "season": "summer",
   "seasonalEvents": [
@@ -10,18 +11,16 @@
     "폭염·냉방"
   ],
   "topic": {
-    "id": "webcams",
-    "category": "peripherals",
-    "angle": "webcams for remote work: resolution, autofocus, microphone quality comparison",
-    "imageQuery": "webcam video conference",
+    "id": "air-fryers",
+    "category": "kitchen",
+    "angle": "air fryer capacity, wattage, presets, and cleaning vs conventional oven",
+    "imageQuery": "air fryer kitchen countertop",
     "liveData": false,
     "seasons": [
-      "fall",
-      "spring"
+      "fall"
     ]
   },
   "templatePath": "docs/templates/checklist.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastAttemptAt": "2026-07-03T14:07:37.533Z",
   "lastError": null
 }

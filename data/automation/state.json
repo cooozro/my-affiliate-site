@@ -1,5 +1,5 @@
 {
-  "topicIndex": 16,
+  "topicIndex": 14,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -17,7 +17,8 @@
     "noise-cancelling-headphones",
     "gaming-consoles",
     "electric-fans",
-    "coffee-machines"
+    "coffee-machines",
+    "air-fryers"
   ],
   "lastPublishAt": "2026-07-03T07:10:50.785Z",
   "nextPublishAt": "2026-07-04T01:27:00.000Z",
@@ -340,6 +341,11 @@
     {
       "id": "noise-cancelling-headphones",
       "at": "2026-07-03T07:10:50.787Z"
+    },
+    {
+      "id": "air-fryers",
+      "category": "kitchen",
+      "at": "2026-07-03T18:50:04.357Z"
     }
   ],
   "formatHistory": [

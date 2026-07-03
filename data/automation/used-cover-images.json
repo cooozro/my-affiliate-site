@@ -337,6 +337,21 @@
       "hash": "b5206d81bb8a1177bc885960f592856056e52817ccebc0317d6fb31328b81465",
       "provider": "pexels",
       "registeredAt": "2026-07-03T14:07:37.496Z"
+    },
+    {
+      "slug": "2026-webcams-checklist",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-03T18:49:46.283Z"
+    },
+    {
+      "slug": "2026-webcams-checklist",
+      "url": "https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg",
+      "assetKey": "pexels:6937666",
+      "hash": "a0faeb2aab83203da017fa466c39a7d47b0e05bfddc4e716887e8f75d64e4cca",
+      "provider": "pexels",
+      "registeredAt": "2026-07-03T18:49:51.818Z"
     }
   ]
 }
