@@ -1,5 +1,5 @@
 {
-  "topicIndex": 26,
+  "topicIndex": 28,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -19,7 +19,8 @@
     "electric-fans",
     "coffee-machines",
     "air-fryers",
-    "tablet-budget"
+    "tablet-budget",
+    "portable-ssd"
   ],
   "lastPublishAt": "2026-07-04T06:43:31.577Z",
   "nextPublishAt": "2026-07-05T02:39:00.000Z",
@@ -229,10 +230,6 @@
   ],
   "topicHistory": [
     {
-      "id": "budget-monitors",
-      "category": "displays"
-    },
-    {
       "id": "portable-ac",
       "category": "home-appliances",
       "cluster": "air-conditioning"
@@ -372,6 +369,11 @@
     {
       "id": "air-fryers",
       "at": "2026-07-04T06:43:31.581Z"
+    },
+    {
+      "id": "portable-ssd",
+      "category": "accessories",
+      "at": "2026-07-04T08:17:55.893Z"
     }
   ],
   "formatHistory": [
@@ -403,5 +405,18 @@
     "postsScanned": 18,
     "autoRepairCount": 2,
     "manualReviewCount": 0
-  }
+  },
+  "contentStrategyHistory": [
+    {
+      "writingMode": "stable",
+      "contentProfile": "explainer",
+      "topicId": "rice-cookers",
+      "toneVariant": null,
+      "slug": "2026-rice-cookers-explainer",
+      "fallbackFrom": null,
+      "fallbackReason": null,
+      "keyword": null,
+      "at": "2026-07-04T08:17:55.879Z"
+    }
+  ]
 }

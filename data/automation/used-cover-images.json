@@ -367,6 +367,21 @@
       "hash": "9c410f87fec4892c4b80cfcff1933e91666d3b74f683fd0982ce5f00a7995ac5",
       "provider": "pexels",
       "registeredAt": "2026-07-03T18:55:18.793Z"
+    },
+    {
+      "slug": "2026-rice-cookers-explainer",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-04T08:16:53.048Z"
+    },
+    {
+      "slug": "2026-rice-cookers-explainer",
+      "url": "https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg",
+      "assetKey": "pexels:4682110",
+      "hash": "c7d4e0562d1100e3dcb12f648bc9c35b73b03b5e30dc2cd8ca166e037fec8d97",
+      "provider": "pexels",
+      "registeredAt": "2026-07-04T08:17:03.115Z"
     }
   ]
 }

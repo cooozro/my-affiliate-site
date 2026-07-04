@@ -1,5 +1,6 @@
 {
   "writingMode": "benchmark",
   "note": "One-shot: next requeue after partial replenish uses B-type Serper benchmark",
-  "consumed": false
+  "consumed": true,
+  "consumedAt": "2026-07-04T08:17:55.893Z"
 }
