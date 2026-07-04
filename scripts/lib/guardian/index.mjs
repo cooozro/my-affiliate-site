@@ -50,3 +50,39 @@ export {
   formatIntegrityReport,
   integrityIssuesFlat,
 } from "./publish-integrity.mjs";
+
+export {
+  WRITING_MODES,
+  STRATEGY_WINDOW,
+  TARGET_BENCHMARK_RATIO,
+  TONE_VARIANTS,
+  pickWritingMode,
+  pickToneVariant,
+  prepareDraftStrategy,
+  recordContentStrategy,
+  formatOutlineForPrompt,
+  getContentStrategyHistory,
+  logContentStrategyEvent,
+} from "./content-strategy.mjs";
+
+export {
+  SERP_DAILY_QUOTA,
+  MAX_SERP_PAGES,
+  H2_SIMILARITY_MAX,
+  SHINGLE_OVERLAP_MAX,
+  keywordFromTopic,
+  fetchSerpResults,
+  fetchSerpPage,
+  getSerpData,
+  prepareBenchmarkOutline,
+  validateOutlineOriginality,
+  h2SequenceSimilarity,
+  shingleOverlapRatio,
+  getSerpQuotaRemaining,
+  getSerpProviderName,
+  isSerpConfigured,
+  enhanceBenchmarkKeyword,
+  filterAndRankSerpItems,
+} from "./serp-benchmark.mjs";
+
+export { getSerpProvider, listSerpProviders } from "./serp-providers.mjs";

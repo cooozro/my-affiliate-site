@@ -33,6 +33,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# automation runtime (SERP cache, quota, strategy logs)
+data/automation/serp-cache/*.json
+data/automation/serp-quota.json
+data/automation/content-strategy-log.json
+
 # vercel
 .vercel
 

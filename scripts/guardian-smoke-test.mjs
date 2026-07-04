@@ -59,6 +59,34 @@ try {
     throw new Error(`welcome draft gate unexpected: ${gate.errors.map((e) => e.message).join("; ")}`);
   }
 
+  const {
+    pickWritingMode,
+    pickToneVariant,
+    h2SequenceSimilarity,
+    shingleOverlapRatio,
+    getSerpQuotaRemaining,
+  } = await import("./lib/guardian/index.mjs");
+
+  const mockState = { contentStrategyHistory: [] };
+  const mode = pickWritingMode(mockState);
+  if (!["stable", "benchmark"].includes(mode)) {
+    throw new Error(`pickWritingMode returned invalid mode: ${mode}`);
+  }
+  const tone = pickToneVariant(mockState);
+  if (!tone) throw new Error("pickToneVariant returned empty");
+
+  const sim = h2SequenceSimilarity(["Buying guide tips"], ["Best buying guide"]);
+  if (sim < 0 || sim > 1) throw new Error("h2SequenceSimilarity out of range");
+
+  const overlap = shingleOverlapRatio("alpha beta gamma delta epsilon", [
+    "alpha beta gamma delta epsilon zeta",
+  ]);
+  if (overlap < 0 || overlap > 1) throw new Error("shingleOverlapRatio out of range");
+
+  if (typeof getSerpQuotaRemaining() !== "number") {
+    throw new Error("getSerpQuotaRemaining missing");
+  }
+
   console.log("✅ guardian/index.mjs API smoke");
 } catch (error) {
   failed += 1;

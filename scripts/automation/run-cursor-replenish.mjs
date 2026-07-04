@@ -30,6 +30,11 @@ import {
   writePost,
 } from "./posts-fs.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
+import { loadEnvFile } from "../lib/load-env.mjs";
+import {
+  formatOutlineForPrompt,
+  recordContentStrategy,
+} from "../lib/guardian/content-strategy.mjs";
 import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { listPublishedSlugs } from "../lib/content-quality.mjs";
 import {
@@ -50,12 +55,23 @@ import { getTopicFormatCoverage } from "../lib/topic-coverage.mjs";
 function buildCursorPrompt(request) {
   const topic = request.topic ?? {};
   const contentProfile = request.contentProfile ?? "buying-guide";
+  const writingMode = request.writingMode ?? "stable";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
   const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
   const reservedSlugs = reservedSlugListForPrompt().join(", ");
   const coverage = getTopicFormatCoverage();
   const roadmapPhase = getRoadmapPhase(coverage);
   const roadmapNote = describeRoadmapPhase(roadmapPhase, coverage);
+
+  const benchmarkBlock =
+    writingMode === "benchmark" && request.benchmarkOutline
+      ? `\n\n${formatOutlineForPrompt(request.benchmarkOutline)}\n`
+      : "";
+
+  const modeNote =
+    writingMode === "benchmark"
+      ? `BENCHMARK mode: follow the outline below. Paraphrase every section; zero copied sentences from SERP sources. Tone: ${request.toneVariant ?? "editorial"}.\n`
+      : `STABLE mode: follow ${templatePath} section structure exactly.\n`;
 
   return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
 
@@ -65,9 +81,11 @@ Read first:
 - scripts/lib/editorial-standards.mjs
 - data/automation/cursor-draft-request.json
 
+${modeNote}
 Write exactly ONE bilingual draft:
 - Files: content/posts/{slug}/en.md and ko.md
-- Frontmatter: draft:true, contentProfile:${contentProfile}
+- Frontmatter: draft:true, contentProfile:${contentProfile}, writingMode:${writingMode}
+${benchmarkBlock}
 - Topic id: ${topic.id ?? "see request file"} (assigned by content roadmap — do not swap to bluetooth-speakers/window-ac unless this IS the assigned topic)
 - Content roadmap phase: ${roadmapPhase} — ${roadmapNote}
 - Category: ${topic.category ?? ""}
@@ -238,7 +256,7 @@ async function replenishWithCursor(request, draftsBefore) {
   if (!apiKey) return null;
 
   console.log(
-    `Cursor replenish starting: topic=${request.topic?.id ?? "unknown"}, needed=${request.needed}`,
+    `Cursor replenish starting: topic=${request.topic?.id ?? "unknown"}, mode=${request.writingMode ?? "stable"}, needed=${request.needed}`,
   );
 
   console.log(`Node ${process.version} (Cursor local agent needs >= 22.13 for node:sqlite)`);
@@ -270,6 +288,8 @@ async function replenishWithCursor(request, draftsBefore) {
 }
 
 async function main() {
+  loadEnvFile();
+
   let request = readCursorDraftRequest();
   if (!request || request.status !== "pending") {
     console.log("No pending cursor draft request — skip");
@@ -370,6 +390,23 @@ async function main() {
     }
 
     ensureDraftCreatedAt(slug, new Date().toISOString());
+
+    const state = loadState();
+    recordContentStrategy(state, {
+      writingMode: request.writingMode ?? "stable",
+      contentProfile: request.contentProfile,
+      topicId: request.topic?.id,
+      toneVariant: request.toneVariant,
+      slug,
+      keyword: request.serpKeyword,
+      fallbackFrom: request.fallbackFrom,
+      fallbackReason: request.fallbackReason,
+    });
+    saveState(state);
+
+    console.log(
+      `Content strategy recorded: mode=${request.writingMode ?? "stable"}, slug=${slug}`,
+    );
   }
 
   const lastSlug = createdSlugs[createdSlugs.length - 1];
@@ -383,7 +420,7 @@ async function main() {
     return;
   }
 
-  requeueCursorDraftReplenish(request.publishedSlug);
+  await requeueCursorDraftReplenish(request.publishedSlug);
   console.log(
     `Partial replenish OK: ${createdSlugs.join(", ")} — buffer ${countDrafts()}/${TARGET_DRAFT_COUNT}, ${remaining} still queued`,
   );

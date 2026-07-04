@@ -227,7 +227,10 @@ export async function publishOneDraft(options = {}) {
 
   saveState(state);
 
-  queueCursorDraftReplenish(slug);
+  await queueCursorDraftReplenish(slug);
+  console.log(
+    "Hybrid content strategy queued: next draft uses A/B (stable vs Serper benchmark) automatically.",
+  );
 
   runDailyContentAuditIfDue(process.cwd(), { state });
 

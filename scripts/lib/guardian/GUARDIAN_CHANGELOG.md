@@ -31,3 +31,36 @@ Record **impact on other modules** when proposing a change.
 - Blog post metadata builder (`lib/guardian/meta.ts`)
 - JSON-LD public API wrap
 - Article chrome (share bar, publication tagline placement)
+
+## 2026-07-04 — SEO hybrid content strategy (pipeline)
+
+**Added:**
+
+| Module | Role |
+| --- | --- |
+| `content-strategy.mjs` | A/B writing mode (stable vs benchmark), 50:50 sliding window, tone rotation, strategy log |
+| `serp-providers.mjs` | Pluggable SERP backends (default: Serper.dev) |
+| `serp-benchmark.mjs` | Serper-backed search, SERP cache, outline synthesis, originality gates |
+
+**Impact:**
+
+- `cursor-draft-request.mjs` — async queue with `prepareDraftStrategy`, benchmark outline in request JSON
+- `run-cursor-replenish.mjs` — benchmark outline in Cursor prompt; records strategy on success
+- `publish-draft.mjs` — awaits async replenish queue
+- `prompts.mjs` / `generate-draft.mjs` — OpenAI fallback supports benchmark outline
+- GHA workflows — `SERPER_API_KEY` secret (replaces Google Custom Search keys)
+- `data/automation/serp-cache/`, `content-strategy-log.json` — runtime artifacts
+
+**Env:** `.env` — `SERPER_API_KEY`, optional `SERP_PROVIDER=serper`
+
+## 2026-07-04 — Serper.dev migration (SERP provider)
+
+**Changed:** `serp-benchmark.mjs` now uses `serp-providers.mjs` (default `serper`) instead of Google Custom Search JSON API (closed to new GCP projects).
+
+**Env:** `SERPER_API_KEY` replaces `AIPICK_SEARCH_API_KEY` + `GOOGLE_CX`.
+
+## 2026-07-04 — SERP editorial filter + keyword suffix
+
+**Added:** `serp-filters.mjs` — shopping-mall domain exclusion, blog/editorial priority, B-type keyword suffix (`후기`, `장단점`, etc.).
+
+**Impact:** `serp-benchmark.mjs` filters Coupang/Himart/etc.; cache stores `filterStats` + `domains`.

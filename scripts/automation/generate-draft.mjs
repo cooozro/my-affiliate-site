@@ -141,14 +141,24 @@ export async function generateDraftFromRequest(request, options = {}) {
     return null;
   }
 
-  return generateDraftForTopic(topic, contentProfile, { bypassWriteCap, state });
+  return generateDraftForTopic(topic, contentProfile, {
+    bypassWriteCap,
+    state,
+    writingMode: request.writingMode,
+    toneVariant: request.toneVariant,
+    benchmarkOutline: request.benchmarkOutline,
+  });
 }
 
 async function generateDraftForTopic(topic, contentProfile, options = {}) {
   const { bypassWriteCap = false, state: inputState } = options;
   const state = inputState ?? loadState();
   const year = new Date().getFullYear();
-  const prompt = buildGenerationPrompt(topic, year, contentProfile);
+  const prompt = buildGenerationPrompt(topic, year, contentProfile, {
+    writingMode: options.writingMode,
+    toneVariant: options.toneVariant,
+    benchmarkOutline: options.benchmarkOutline,
+  });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
   const article = await callOpenAI(prompt);

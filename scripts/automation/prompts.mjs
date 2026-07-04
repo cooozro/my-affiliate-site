@@ -1,21 +1,37 @@
 import { getTemplatePath } from "../lib/content-profiles.mjs";
 import { getCurrentSeason, getActiveSeasonalEvents } from "../lib/season-topics.mjs";
 
-export function buildGenerationPrompt(topic, year, contentProfile = "buying-guide") {
+export function buildGenerationPrompt(topic, year, contentProfile = "buying-guide", options = {}) {
   const templatePath = getTemplatePath(contentProfile);
   const season = getCurrentSeason();
   const events = getActiveSeasonalEvents()
     .map((e) => e.label)
     .join(", ");
 
+  const { writingMode = "stable", toneVariant, benchmarkOutline } = options;
+
+  const benchmarkSection =
+    writingMode === "benchmark" && benchmarkOutline
+      ? `\nBENCHMARK OUTLINE (outline-first — paraphrase all headings, never copy SERP text):\n` +
+        benchmarkOutline.sections
+          .map((s) => {
+            const h3 = (s.h3 ?? []).map((h) => `### ${h}`).join("\n");
+            return `## ${s.h2}${h3 ? `\n${h3}` : ""}`;
+          })
+          .join("\n") +
+        `\nTone variant: ${toneVariant ?? benchmarkOutline.toneVariant ?? "editorial"}\n`
+      : "";
+
   return `You are the lead editor of "AI Pick & Report", a data-driven IT review site (smartphones, gadgets, consumer electronics, home appliances).
 
 Write ONE original article about: ${topic.angle}
 Category: ${topic.category}
 Content profile: ${contentProfile}
+Writing mode: ${writingMode}
 Template: ${templatePath}
 Year context: ${year}
 Season priority (KST): ${season}${events ? ` — active events: ${events}` : ""}
+${benchmarkSection}
 
 MANDATORY RULES (violations = rejection):
 1. Google Content Guidelines: original, helpful, people-first. No copied manufacturer marketing copy. Verifiable specs with clear methodology. No clickbait. Title must match body.
