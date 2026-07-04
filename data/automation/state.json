@@ -392,13 +392,10 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T06:44:22.119Z",
+    "at": "2026-07-04T06:56:02.416Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-air-fryers-checklist/en.md: publishedAt 2026-07-04T15:43:30.000Z → 2026-07-04T06:43:31.577Z",
-      "2026-air-fryers-checklist/ko.md: publishedAt 2026-07-04T15:43:30.000Z → 2026-07-04T06:43:31.577Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-04",
   "lastDailyContentAudit": {
