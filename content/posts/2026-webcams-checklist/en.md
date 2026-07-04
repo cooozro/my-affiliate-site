@@ -3,7 +3,7 @@ title: 'Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Qual
 description: >-
   Seven checks for WFH webcams: native resolution, autofocus, mic quality, low
   light, field of view, mount fit, and USB before summer video calls.
-date: '2026-07-03'
+date: '2026-07-04'
 tags:
   - webcams
   - checklist
@@ -12,7 +12,7 @@ tags:
   - summer
 contentProfile: checklist
 topicId: webcams
-draft: true
+draft: false
 liveData: false
 coverImage: /images/posts/2026-webcams-checklist/webcams-remote-work-cover.jpg
 coverImageAlt: webcam in a home interior
@@ -26,7 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-03T18:50:04.343Z'
+updatedAt: '2026-07-04T10:56:26.000Z'
+publishedAt: '2026-07-04T10:56:26.000Z'
 ---
 ## Editorial Overview
 

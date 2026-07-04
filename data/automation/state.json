@@ -1,5 +1,5 @@
 {
-  "topicIndex": 14,
+  "topicIndex": 26,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -18,12 +18,13 @@
     "gaming-consoles",
     "electric-fans",
     "coffee-machines",
-    "air-fryers"
+    "air-fryers",
+    "tablet-budget"
   ],
-  "lastPublishAt": "2026-07-03T07:10:50.785Z",
-  "nextPublishAt": "2026-07-04T01:27:00.000Z",
-  "scheduledGapHours": 4.45,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-04T01:56:28.535Z",
+  "nextPublishAt": "2026-07-04T06:29:49.000Z",
+  "scheduledGapHours": 4.56,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-04",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-04",
@@ -200,17 +201,21 @@
         "https://www.aipick.shop/en/blog/2026-noise-cancelling-headphones-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-noise-cancelling-headphones-head-to-head"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-webcams-checklist",
+      "topic": {
+        "id": "webcams"
+      },
+      "at": "2026-07-04T01:56:28.535Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-webcams-checklist",
+        "https://www.aipick.shop/ko/blog/2026-webcams-checklist"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "power-banks",
-      "category": "accessories"
-    },
-    {
-      "id": "budget-smartphones",
-      "category": "smartphones"
-    },
     {
       "id": "mechanical-keyboards",
       "category": "peripherals"
@@ -346,6 +351,15 @@
       "id": "air-fryers",
       "category": "kitchen",
       "at": "2026-07-03T18:50:04.357Z"
+    },
+    {
+      "id": "webcams",
+      "at": "2026-07-04T01:56:28.537Z"
+    },
+    {
+      "id": "tablet-budget",
+      "category": "tablets",
+      "at": "2026-07-04T01:56:28.545Z"
     }
   ],
   "formatHistory": [
@@ -361,14 +375,23 @@
     "head-to-head",
     "scenario-guide",
     "buying-guide",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T00:17:05.949Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-04T01:56:26.626Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 29min (KST 2026-07-04)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-03",
   "lastDailyContentAudit": {
