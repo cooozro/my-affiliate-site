@@ -23,12 +23,12 @@
     "portable-ssd"
   ],
   "lastPublishAt": "2026-07-04T06:43:31.577Z",
-  "nextPublishAt": "2026-07-05T02:39:00.000Z",
-  "scheduledGapHours": 5.65,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-04",
+  "nextPublishAt": "2026-07-05T01:46:00.000Z",
+  "scheduledGapHours": 4.77,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-05",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-04",
+  "writeDateKst": "2026-07-05",
   "history": [
     {
       "action": "publish",
@@ -394,7 +394,7 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T14:51:00.334Z",
+    "at": "2026-07-04T16:34:33.467Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
