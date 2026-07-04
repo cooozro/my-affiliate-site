@@ -19,6 +19,30 @@ const REQUEST_PATH = path.join(
   "cursor-draft-request.json",
 );
 
+const FORCE_MODE_PATH = path.join(
+  process.cwd(),
+  "data",
+  "automation",
+  "force-next-writing-mode.json",
+);
+
+function consumeForceWritingMode() {
+  if (!fs.existsSync(FORCE_MODE_PATH)) return null;
+  try {
+    const data = JSON.parse(fs.readFileSync(FORCE_MODE_PATH, "utf8"));
+    if (data.consumed) return null;
+    const mode = data.writingMode;
+    if (mode !== "stable" && mode !== "benchmark") return null;
+    fs.writeFileSync(
+      FORCE_MODE_PATH,
+      `${JSON.stringify({ ...data, consumed: true, consumedAt: new Date().toISOString() }, null, 2)}\n`,
+    );
+    return mode;
+  } catch {
+    return null;
+  }
+}
+
 export function readCursorDraftRequest() {
   if (!fs.existsSync(REQUEST_PATH)) return null;
   try {
@@ -48,13 +72,18 @@ function buildInstructions(strategy, season, events) {
   return instructions;
 }
 
-async function buildQueuedRequest(publishedSlug, existing = null) {
+async function buildQueuedRequest(publishedSlug, existing = null, options = {}) {
   loadEnvFile();
 
   const state = loadState();
   const contentProfile = existing?.contentProfile ?? pickContentProfile(state);
   const topic = pickTopic(state, { contentProfile });
-  const strategy = await prepareDraftStrategy(state, topic, { contentProfile });
+  const forcedMode =
+    options.forceWritingMode ?? consumeForceWritingMode() ?? undefined;
+  const strategy = await prepareDraftStrategy(state, topic, {
+    contentProfile,
+    writingMode: forcedMode,
+  });
   saveState(state);
 
   const season = getCurrentSeason();
@@ -121,6 +150,30 @@ export async function queueCursorDraftReplenish(publishedSlug) {
       (request.fallbackReason ? ` (fallback: ${request.fallbackReason})` : ""),
   );
   return true;
+}
+
+/** Force the next queued/re-queued draft to use benchmark (B-type) Serper outline. */
+export async function queueBenchmarkReplenish(publishedSlug = null) {
+  const draftCount = countDrafts();
+  const needed = TARGET_DRAFT_COUNT - draftCount;
+  if (needed <= 0) {
+    console.log(`Draft buffer full (${draftCount}/${TARGET_DRAFT_COUNT})`);
+    return false;
+  }
+
+  const existing = readCursorDraftRequest();
+  const request = await buildQueuedRequest(
+    publishedSlug ?? existing?.publishedSlug ?? null,
+    existing,
+    { forceWritingMode: "benchmark" },
+  );
+  writeRequest(request);
+
+  console.log(
+    `Benchmark replenish queued: topic=${request.topic.id}, profile=${request.contentProfile}, ` +
+      `keyword=${request.serpKeyword ?? "n/a"}, sections=${request.benchmarkOutline?.sections?.length ?? 0}`,
+  );
+  return request;
 }
 
 export function completeCursorDraftRequest(writtenSlug) {

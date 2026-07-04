@@ -1,0 +1,5 @@
+{
+  "writingMode": "benchmark",
+  "note": "One-shot: next requeue after partial replenish uses B-type Serper benchmark",
+  "consumed": false
+}
