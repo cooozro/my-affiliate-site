@@ -394,9 +394,15 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T08:12:36.152Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-07-04T09:10:25.060Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 146min",
+        "severity": "warning"
+      }
+    ],
     "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-04",
