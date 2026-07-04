@@ -392,29 +392,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T06:43:30.368Z",
-    "issueCount": 3,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 13min (KST 2026-07-04)",
-        "severity": "error"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 287min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-04T06:44:22.119Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "marked-slot-catch-up",
-      "2026-webcams-checklist/en.md: publishedAt 2026-07-04T10:56:26.000Z → 2026-07-04T01:56:28.535Z",
-      "2026-webcams-checklist/ko.md: publishedAt 2026-07-04T10:56:26.000Z → 2026-07-04T01:56:28.535Z"
+      "2026-air-fryers-checklist/en.md: publishedAt 2026-07-04T15:43:30.000Z → 2026-07-04T06:43:31.577Z",
+      "2026-air-fryers-checklist/ko.md: publishedAt 2026-07-04T15:43:30.000Z → 2026-07-04T06:43:31.577Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-04",
