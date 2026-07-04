@@ -1,34 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-air-fryers-checklist",
-  "requestedAt": "2026-07-04T06:43:31.589Z",
-  "writingMode": "stable",
-  "contentProfile": "explainer",
-  "toneVariant": "data-driven",
-  "serpKeyword": "2026 portable SSD buying guide buying guide 분석",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.60 > 0.15",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "portable-ssd",
-    "category": "accessories",
-    "angle": "portable SSD buying guide: USB speeds, TBW endurance, and backup workflows",
-    "imageQuery": "portable ssd external drive",
-    "liveData": false,
-    "seasons": [
-      "fall",
-      "spring"
-    ]
-  },
-  "templatePath": "docs/templates/explainer.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: data-driven. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null,
-  "requeuedAt": "2026-07-04T08:17:59.871Z"
+  "status": "complete",
+  "completedAt": "2026-07-04T12:19:25.417Z",
+  "writtenSlug": "2026-portable-ssd-explainer",
+  "draftCount": 2,
+  "lastError": null
 }

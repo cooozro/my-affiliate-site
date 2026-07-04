@@ -382,6 +382,21 @@
       "hash": "c7d4e0562d1100e3dcb12f648bc9c35b73b03b5e30dc2cd8ca166e037fec8d97",
       "provider": "pexels",
       "registeredAt": "2026-07-04T08:17:03.115Z"
+    },
+    {
+      "slug": "2026-portable-ssd-explainer",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-04T12:18:18.382Z"
+    },
+    {
+      "slug": "2026-portable-ssd-explainer",
+      "url": "https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg",
+      "assetKey": "pexels:13595074",
+      "hash": "b61581b543c94ca84eb5be49b795f11b99ea5894cea06aec71be6d653cff7525",
+      "provider": "pexels",
+      "registeredAt": "2026-07-04T12:18:33.804Z"
     }
   ]
 }

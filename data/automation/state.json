@@ -423,6 +423,17 @@
       "fallbackReason": null,
       "keyword": null,
       "at": "2026-07-04T08:17:55.879Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "explainer",
+      "topicId": "portable-ssd",
+      "toneVariant": "data-driven",
+      "slug": "2026-portable-ssd-explainer",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.60 > 0.15",
+      "keyword": "2026 portable SSD buying guide buying guide 분석",
+      "at": "2026-07-04T12:19:25.414Z"
     }
   ]
 }
