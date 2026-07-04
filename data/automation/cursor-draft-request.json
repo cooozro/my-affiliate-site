@@ -1,26 +1,24 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-webcams-checklist",
-  "requestedAt": "2026-07-04T01:56:28.546Z",
-  "contentProfile": "scenario-guide",
+  "publishedSlug": "2026-air-fryers-checklist",
+  "requestedAt": "2026-07-04T06:43:31.589Z",
+  "contentProfile": "explainer",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "tablet-budget",
-    "category": "tablets",
-    "angle": "budget tablets for reading and video: display, storage, stylus support comparison",
-    "imageQuery": "tablet reading study",
-    "liveData": true,
+    "id": "rice-cookers",
+    "category": "kitchen",
+    "angle": "rice cooker guide: fuzzy logic, induction heating, and multi-cook presets",
+    "imageQuery": "electric rice cooker kitchen",
+    "liveData": false,
     "seasons": [
-      "fall",
-      "spring",
-      "winter"
+      "fall"
     ]
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
+  "templatePath": "docs/templates/explainer.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete."
 }

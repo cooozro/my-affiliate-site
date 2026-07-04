@@ -3,7 +3,7 @@ title: 'Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitche
 description: >-
   Seven air fryer checks before summer — basket liters, wattage, presets,
   nonstick coating, dishwasher parts, counter clearance, and oven overlap.
-date: '2026-07-03'
+date: '2026-07-04'
 tags:
   - air fryer
   - checklist
@@ -12,12 +12,11 @@ tags:
   - home appliances
 contentProfile: checklist
 topicId: air-fryers
-draft: true
+draft: false
 liveData: false
 coverImage: /images/posts/2026-air-fryers-checklist/air-fryer-kitchen-cover.jpg
 coverImageAlt: air fryer in a home interior
 coverImageCredit: Photo by Phenyo Deluxe / Pexels
-createdAt: '2026-07-03T19:00:00.000Z'
 coverImageAltKo: 실내의 air fryer
 imageSearchKeywords:
   - air fryer
@@ -27,7 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-03T18:55:20.997Z'
+updatedAt: '2026-07-04T06:43:31.600Z'
+publishedAt: '2026-07-04T15:43:30.000Z'
 ---
 ## Editorial Overview
 
@@ -122,11 +122,10 @@ Crisping, reheating, and small-batch roasting translate well to an air fryer. **
 ## Related guides
 
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — cooling the room where your kitchen exhaust lands
-- [Electric Fans Buying Guide](/en/blog/2026-electric-fans-buying-guide) — moving hot air away from the counter work zone
-- [Dehumidifiers Guide](/en/blog/2026-dehumidifiers-guide) — humidity when cooking steams up a closed, air-conditioned home
-- [Robot Vacuums Scenario Guide](/en/blog/2026-robot-vacuums-scenario-guide) — crumbs and oil splatter after daily snack cycles
-- [Air Purifiers Guide](/en/blog/2026-air-purifiers-guide) — smoke and odor when ventilation is limited during heat season
-
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — humidity when cooking steams up a closed, air-conditioned home
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — moving hot air away from the counter work zone
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — crumbs and oil splatter after daily snack cycles
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — smoke and odor when ventilation is limited during heat season
 ## Final Verdict
 
 Run the checklist in order: **liters and depth → wattage → temperature truth → coating → dishwasher parts → counter clearance → oven overlap**. Skipping capacity and wattage checks causes more summer frustration than choosing the wrong brand. Once your household size and electrical layout are clear, narrow models by verified specs, then use our cooling and air-quality guides if the air fryer will live in the same room you keep closed against the heat.

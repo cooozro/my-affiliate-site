@@ -26,8 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-04T10:56:26.000Z'
-publishedAt: '2026-07-04T10:56:26.000Z'
+updatedAt: '2026-07-04T06:43:31.615Z'
+publishedAt: '2026-07-04T01:56:28.535Z'
 ---
 ## 편집부 개요
 
@@ -121,12 +121,11 @@ publishedAt: '2026-07-04T10:56:26.000Z'
 
 ## 관련 가이드
 
-- [1080p vs 1440p, 예산 모니터는 패널 타입이 로고보다 중요하다](/ko/blog/2026-budget-monitors-buying-guide) — 모니터 거리와 웹캠 프레이밍 맞추기
-- [입문용 기계식 키보드, 스위치·레이아웃·내구성 비교](/ko/blog/2026-budget-mechanical-keyboards-guide) — AV 확인 후 데스크 마무리
-- [노이즈 캔슬링 헤드폰 맞대결](/ko/blog/2026-noise-cancelling-headphones-head-to-head) — 실내 소음이 내장 마이크를 이길 때
-- [예산 무선 이어buds TOP 비교](/ko/blog/2026-budget-wireless-earbuds-top5) — 노트북 이동 시 보조 마이크
 - [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 냉방 선택이 통화 소음·조명에 미치는 영향
-
+- [여름 장거리 비행용 노이즈캔슬링 헤드폰, 소니·사운드코어·JBL 맞대결](/ko/blog/2026-noise-cancelling-headphones-head-to-head) — 실내 소음이 내장 마이크를 이길 때
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 모니터 거리와 웹캠 프레이밍 맞추기
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — AV 확인 후 데스크 마무리
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 노트북 이동 시 보조 마이크
 ## 최종 평가
 
 순서는 **네이티브 해상도 → 오토포커스 → 마이크 → 저조도 → 화각 → 거치 → USB**입니다. 브랜드·할인율보다 AF와 마이크를 먼저 통과시키는 편이 매일의 불편을 줄입니다. 모니터 두께, 방 소음, 평소 조명 조건을 메모해 둔 뒤 검증된 스펙으로 모델을 좁히고, 모니터·오디오 가이드로 여름 재택 세트를 완성하세요.

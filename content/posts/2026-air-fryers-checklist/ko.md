@@ -3,7 +3,7 @@ title: '여름 주방 더위·방학 간식, 에어프라이어 용량·와트·
 description: >-
   에어프라이어 구매 전 7항목 — 바스켓 리터·와트·열, 프리셋 온도, 논스틱 코팅, 식기세척기 호환, 카운터 여유, 오븐과 역할 겹침.
   폭염·방학철 주방 사용 대비 체크리스트.
-date: '2026-07-03'
+date: '2026-07-04'
 tags:
   - 에어프라이어
   - 체크리스트
@@ -12,13 +12,12 @@ tags:
   - 가전
 contentProfile: checklist
 topicId: air-fryers
-draft: true
+draft: false
 liveData: false
 coverImage: /images/posts/2026-air-fryers-checklist/air-fryer-kitchen-cover.jpg
 coverImageAlt: 실내의 air fryer
 coverImageCredit: Photo by Phenyo Deluxe / Pexels
 coverImageAltKo: 실내의 air fryer
-createdAt: '2026-07-03T19:00:00.000Z'
 imageSearchKeywords:
   - air fryer
   - kitchen
@@ -27,6 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-04T06:43:31.601Z'
+publishedAt: '2026-07-04T15:43:30.000Z'
 ---
 ## 편집부 개요
 
@@ -120,12 +121,11 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [여름 에어컨 구매 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 주방 배기가 닿는 방 냉방
-- [선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide) — 카운터 작업대 열기 이동
-- [제습기 가이드](/ko/blog/2026-dehumidifiers-guide) — 에어컨 밀폐 상태에서 조리 습기
-- [로봇청소기 시나리오 가이드](/ko/blog/2026-robot-vacuums-scenario-guide) — 간식 후 부스러기·기름때
-- [공기청정기 가이드](/ko/blog/2026-air-purifiers-guide) — 환기 제한 시 연기·냄새
-
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 주방 배기가 닿는 방 냉방
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 에어컨 밀폐 상태에서 조리 습기
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 카운터 작업대 열기 이동
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 간식 후 부스러기·기름때
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 환기 제한 시 연기·냄새
 ## 최종 평가
 
 체크리스트 순서대로 진행하세요: **리터·깊이 → 와트 → 온도 진실성 → 코팅 → 식기세척기 → 카운터 여유 → 오븐 겹침**. 용량과 와트를 건너뛰면 브랜드보다 여름 불편이 커집니다. 가구원 수와 전기 배선이 정리되면 검증된 스펙으로 후보를 좁히고, 폭염에 문 닫아 쓰는 공간이라면 냉방·공기질 가이드로 마무리하세요.

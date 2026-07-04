@@ -21,10 +21,10 @@
     "air-fryers",
     "tablet-budget"
   ],
-  "lastPublishAt": "2026-07-04T01:56:28.535Z",
-  "nextPublishAt": "2026-07-04T06:29:49.000Z",
-  "scheduledGapHours": 4.56,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-04T06:43:31.577Z",
+  "nextPublishAt": "2026-07-05T02:39:00.000Z",
+  "scheduledGapHours": 5.65,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-04",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-04",
@@ -213,13 +213,21 @@
         "https://www.aipick.shop/en/blog/2026-webcams-checklist",
         "https://www.aipick.shop/ko/blog/2026-webcams-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-air-fryers-checklist",
+      "topic": {
+        "id": "air-fryers"
+      },
+      "at": "2026-07-04T06:43:31.577Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-air-fryers-checklist",
+        "https://www.aipick.shop/ko/blog/2026-air-fryers-checklist"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "mechanical-keyboards",
-      "category": "peripherals"
-    },
     {
       "id": "budget-monitors",
       "category": "displays"
@@ -360,6 +368,10 @@
       "id": "tablet-budget",
       "category": "tablets",
       "at": "2026-07-04T01:56:28.545Z"
+    },
+    {
+      "id": "air-fryers",
+      "at": "2026-07-04T06:43:31.581Z"
     }
   ],
   "formatHistory": [
@@ -380,23 +392,35 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T01:56:26.626Z",
-    "issueCount": 1,
+    "at": "2026-07-04T06:43:30.368Z",
+    "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 29min (KST 2026-07-04)",
+        "message": "Publish slot overdue by 13min (KST 2026-07-04)",
         "severity": "error"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 287min",
+        "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "marked-slot-catch-up",
+      "2026-webcams-checklist/en.md: publishedAt 2026-07-04T10:56:26.000Z → 2026-07-04T01:56:28.535Z",
+      "2026-webcams-checklist/ko.md: publishedAt 2026-07-04T10:56:26.000Z → 2026-07-04T01:56:28.535Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-03",
+  "lastDailyContentAuditKst": "2026-07-04",
   "lastDailyContentAudit": {
-    "at": "2026-07-03T07:10:51.131Z",
-    "postsScanned": 16,
+    "at": "2026-07-04T06:43:32.000Z",
+    "postsScanned": 18,
     "autoRepairCount": 2,
     "manualReviewCount": 0
   }
