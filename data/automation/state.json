@@ -418,18 +418,18 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-05T03:33:05.202Z",
+    "at": "2026-07-05T08:32:25.848Z",
     "issueCount": 1,
     "issues": [
       {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 299min",
+        "severity": "warning"
       }
     ],
     "repairs": [
-      "2026-rice-cookers-explainer/en.md: publishedAt 2026-07-05T11:44:07.000Z → 2026-07-05T02:44:08.822Z",
-      "2026-rice-cookers-explainer/ko.md: publishedAt 2026-07-05T11:44:07.000Z → 2026-07-05T02:44:08.822Z"
+      "2026-portable-ssd-explainer/en.md: publishedAt 2026-07-05T12:33:05.000Z → 2026-07-05T03:33:06.533Z",
+      "2026-portable-ssd-explainer/ko.md: publishedAt 2026-07-05T12:33:05.000Z → 2026-07-05T03:33:06.533Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-05",
