@@ -1,7 +1,33 @@
 {
-  "status": "complete",
-  "completedAt": "2026-07-04T12:19:25.417Z",
-  "writtenSlug": "2026-portable-ssd-explainer",
-  "draftCount": 2,
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-rice-cookers-explainer",
+  "requestedAt": "2026-07-05T02:44:08.839Z",
+  "writingMode": "stable",
+  "contentProfile": "checklist",
+  "toneVariant": "question-led",
+  "serpKeyword": "2026 budget fitness trackers buying guide 장단점",
+  "serpCachePath": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "fitness-trackers",
+    "category": "wearables",
+    "angle": "budget fitness trackers: heart rate accuracy, sleep tracking, and app ecosystem",
+    "imageQuery": "fitness tracker smartwatch",
+    "liveData": true,
+    "seasons": [
+      "spring",
+      "winter"
+    ]
+  },
+  "templatePath": "docs/templates/checklist.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: stable. Tone: question-led. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
   "lastError": null
 }

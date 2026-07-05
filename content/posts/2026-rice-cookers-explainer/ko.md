@@ -3,7 +3,7 @@ title: '퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것'
 description: >-
   퍼지 로직 마이컴, 인덕션 가열(IH), 멀티쿡 프리셋이 밥 질감·전력·여름 주방 열기에 미치는 영향을 마케팅 없이 정리합니다. 공개 스펙과
   매뉴얼 기준.
-date: '2026-07-04'
+date: '2026-07-05'
 tags:
   - 밥솥
   - 주방가전
@@ -13,7 +13,7 @@ tags:
 contentProfile: explainer
 topicId: rice-cookers
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-rice-cookers-explainer/electric-rice-cooker-kitchen-cover.jpg
@@ -28,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-04T08:17:55.875Z'
+updatedAt: '2026-07-05T11:44:07.000Z'
+publishedAt: '2026-07-05T11:44:07.000Z'
 ---
 ## 편집부 개요
 

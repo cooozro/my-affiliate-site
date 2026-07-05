@@ -1,5 +1,5 @@
 {
-  "topicIndex": 28,
+  "topicIndex": 34,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -20,12 +20,13 @@
     "coffee-machines",
     "air-fryers",
     "tablet-budget",
-    "portable-ssd"
+    "portable-ssd",
+    "fitness-trackers"
   ],
-  "lastPublishAt": "2026-07-04T06:43:31.577Z",
-  "nextPublishAt": "2026-07-05T01:46:00.000Z",
-  "scheduledGapHours": 4.77,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-05T02:44:08.822Z",
+  "nextPublishAt": "2026-07-05T08:03:06.908Z",
+  "scheduledGapHours": 5.32,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-05",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-05",
@@ -226,19 +227,21 @@
         "https://www.aipick.shop/en/blog/2026-air-fryers-checklist",
         "https://www.aipick.shop/ko/blog/2026-air-fryers-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-rice-cookers-explainer",
+      "topic": {
+        "id": "rice-cookers"
+      },
+      "at": "2026-07-05T02:44:08.822Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-rice-cookers-explainer",
+        "https://www.aipick.shop/ko/blog/2026-rice-cookers-explainer"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "portable-ac",
-      "category": "home-appliances",
-      "cluster": "air-conditioning"
-    },
-    {
-      "id": "portable-ac",
-      "category": "home-appliances",
-      "cluster": "air-conditioning"
-    },
     {
       "id": "portable-ac",
       "category": "home-appliances",
@@ -374,6 +377,15 @@
       "id": "portable-ssd",
       "category": "accessories",
       "at": "2026-07-04T08:17:55.893Z"
+    },
+    {
+      "id": "rice-cookers",
+      "at": "2026-07-05T02:44:08.826Z"
+    },
+    {
+      "id": "fitness-trackers",
+      "category": "wearables",
+      "at": "2026-07-05T02:44:08.836Z"
     }
   ],
   "formatHistory": [
@@ -390,14 +402,23 @@
     "scenario-guide",
     "buying-guide",
     "head-to-head",
-    "scenario-guide"
+    "scenario-guide",
+    "checklist"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-04T23:46:54.172Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-05T02:44:07.453Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 58min (KST 2026-07-05)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-04",
   "lastDailyContentAudit": {

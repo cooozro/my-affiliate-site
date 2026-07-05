@@ -3,7 +3,7 @@ title: 'Fuzzy Logic vs Induction: What Actually Changes Rice Cooker Results'
 description: >-
   How fuzzy-logic microcomputers, induction heating, and multi-cook presets
   change texture, energy use, and summer kitchen heat — without marketing myths.
-date: '2026-07-04'
+date: '2026-07-05'
 tags:
   - rice cooker
   - kitchen appliances
@@ -13,7 +13,7 @@ tags:
 contentProfile: explainer
 topicId: rice-cookers
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-rice-cookers-explainer/electric-rice-cooker-kitchen-cover.jpg
@@ -28,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-04T08:17:55.875Z'
+updatedAt: '2026-07-05T11:44:07.000Z'
+publishedAt: '2026-07-05T11:44:07.000Z'
 ---
 ## Editorial Overview
 
