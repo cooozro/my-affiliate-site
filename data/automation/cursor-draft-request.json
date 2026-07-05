@@ -29,5 +29,8 @@
   },
   "templatePath": "docs/templates/buying-guide.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: checklist-hook. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "lastError": "Integrity gate failed for 2026-usb-c-hubs-buying-guide: 2026-usb-c-hubs-buying-guide/en.md: description over 160 chars | 2026-usb-c-hubs-buying-guide/en.md: missing FAQ / 자주 묻는 질문 section | 2026-usb-c-hubs-buying-guide/ko.md: missing FAQ / 자주 묻는 질문 section",
+  "lastAttemptAt": "2026-07-05T08:26:32.860Z",
+  "writtenSlug": "2026-usb-c-hubs-buying-guide",
+  "completedAt": "2026-07-05T08:30:00.000Z"
 }
