@@ -1,8 +1,8 @@
 {
-  "dateKst": "2026-07-04",
-  "scannedAt": "2026-07-04T06:43:32.000Z",
-  "postsScanned": 18,
-  "autoRepairCount": 2,
+  "dateKst": "2026-07-05",
+  "scannedAt": "2026-07-05T03:33:07.013Z",
+  "postsScanned": 20,
+  "autoRepairCount": 3,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -14,6 +14,12 @@
       "slug": "2026-budget-monitors-buying-guide",
       "repairs": [
         "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
+      "slug": "2026-portable-ssd-explainer",
+      "repairs": [
+        "2026-portable-ssd-explainer/en.md: removed draft/preview URL links"
       ]
     }
   ],

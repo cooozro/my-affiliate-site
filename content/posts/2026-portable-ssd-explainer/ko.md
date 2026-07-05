@@ -3,7 +3,7 @@ title: '휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요'
 description: >-
   USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 —
   셀러 과장 없이 정리합니다.
-date: '2026-07-04'
+date: '2026-07-05'
 tags:
   - 휴대용 SSD
   - USB-C
@@ -13,13 +13,12 @@ tags:
 contentProfile: explainer
 topicId: portable-ssd
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - portable ssd
   - external drive
   - USB-C storage
-createdAt: '2026-07-04T12:16:34.367Z'
 coverImage: >-
   /images/posts/2026-portable-ssd-explainer/portable-ssd-external-drive-cover.jpg
 coverImageAlt: 실내의 portable ssd
@@ -29,6 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-05T03:33:06.570Z'
+publishedAt: '2026-07-05T12:33:05.000Z'
 ---
 ## 편집부 개요
 
@@ -155,14 +156,11 @@ NAND 종류가 계산을 바꿉니다.
 
 ## 관련 가이드
 
-- [2026 액션캠: 센서·손떨림·마운트](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행에서 SSD를 가장 빨리 채우는 4K·60 fps
-- [여행용 보조배터리: Wh·PD 와트](/ko/blog/2026-budget-power-banks-guide) — 콘센트가 부족한 야외에서 노트북·폰 충전
-- [소형 원룸 로봇청소기: 매핑·물걸레](/ko/blog/2026-robot-vacuums-scenario-guide) — 기숙사·원룸 이사 때 케이블·책상 공간과 백업 드라이브
-- [웹캠 체크리스트: 해상도·AF·프라이버시](/ko/blog/2026-webcams-checklist) — 캡처와 로컬 SSD 프로젝트 아카이브
-- [가성비 모니터: 패널·해상도·주사율](/ko/blog/2026-budget-monitors-buying-guide) — 외장 저장 4K 미리보기로 USB 대역을 쓰는 편집 환경
-
----
-
+- [여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크](/ko/blog/2026-webcams-checklist) — 캡처와 로컬 SSD 프로젝트 아카이브
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 기숙사·원룸 이사 때 케이블·책상 공간과 백업 드라이브
+- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행에서 SSD를 가장 빨리 채우는 4K·60 fps
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 외장 저장 4K 미리보기로 USB 대역을 쓰는 편집 환경
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 콘센트가 부족한 야외에서 노트북·폰 충전
 ## 핵심 정리
 
 1. **USB 속도 등급**(5 vs 10 vs 20 Gbps)은 포트·케이블·외장함이 맞을 때만 의미 있고, 아니면 못 쓰는 여유만 삽니다.

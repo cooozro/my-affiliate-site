@@ -28,8 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-05T11:44:07.000Z'
-publishedAt: '2026-07-05T11:44:07.000Z'
+updatedAt: '2026-07-05T03:33:06.574Z'
+publishedAt: '2026-07-05T02:44:08.822Z'
 ---
 ## 편집부 개요
 
@@ -150,14 +150,11 @@ publishedAt: '2026-07-05T11:44:07.000Z'
 
 ## 관련 가이드
 
-- [여름 주방 열기 전 에어프라이어 7가지 점검](/ko/blog/2026-air-fryers-checklist) — 밥솥과 같은 여름 회로·조리대 가전
-- [여름 에어컨 구매 전 7가지 점검](/ko/blog/2026-summer-ac-buying-checklist) — 증기·보온 열이 쌓이는 밀폐 주방 냉방
-- [선풍기로 여름 에어컨 요금을 줄일 수 있을까?](/ko/blog/2026-electric-fans-buying-guide) — 끓임 구간 조리 구역의 뜨거운 공기 배출
-- [소형 아파트 로봇청소기: 평면도·물걸레](/ko/blog/2026-robot-vacuums-scenario-guide) — 매일 취사 후 쌀알·부스러기
-- [습한 여름 방: 제습기 용량·dB·일일 kWh](/ko/blog/2026-dehumidifiers-guide) — 찜 프리셋·냉방 밀폐 시 습도
-
----
-
+- [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 밥솥과 같은 여름 회로·조리대 가전
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 끓임 구간 조리 구역의 뜨거운 공기 배출
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 매일 취사 후 쌀알·부스러기
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 찜 프리셋·냉방 밀폐 시 습도
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 증기·보온 열이 쌓이는 밀폐 주방 냉방
 ## 핵심 정리
 
 1. **퍼지 로직**은 클라우드 AI가 아니라 단계별 마이컴 제어이며, 단일 온도계가 부족한 현미·잡곡·죽에서 차이가 큽니다.

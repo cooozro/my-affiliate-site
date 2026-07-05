@@ -3,7 +3,7 @@ title: 'Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Work
 description: >-
   USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm
   moves, and summer editing — without seller hype.
-date: '2026-07-04'
+date: '2026-07-05'
 tags:
   - portable SSD
   - USB-C
@@ -13,13 +13,12 @@ tags:
 contentProfile: explainer
 topicId: portable-ssd
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - portable ssd
   - external drive
   - USB-C storage
-createdAt: '2026-07-04T12:16:34.367Z'
 coverImage: >-
   /images/posts/2026-portable-ssd-explainer/portable-ssd-external-drive-cover.jpg
 coverImageAlt: portable ssd in a home interior
@@ -29,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-05T02:44:07.515Z'
+updatedAt: '2026-07-05T03:33:06.868Z'
+publishedAt: '2026-07-05T12:33:05.000Z'
 ---
 ## Editorial Overview
 
@@ -156,14 +156,11 @@ Console external USB storage expands **game library capacity**; it does not repl
 
 ## Related guides
 
-- [Action Cameras in 2026: Sensor Size, Stabilization, and Accessory Mounts That Matter](/en/blog/2026-action-cameras-buying-guide) — 4K and 60 fps clips that fill SSDs fastest on summer trips
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keeping laptop and phone alive during field offloads when outlets are scarce
+- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — creator setups that pair webcam capture with local SSD project archives
 - [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — dorm and apartment moves where cable clutter and desk space compete with backup drives
-- [Webcam Checklist: Resolution, Autofocus, and Privacy Before You Stream](/en/blog/2026-webcams-checklist) — creator setups that pair webcam capture with local SSD project archives
-- [Budget Monitors: Panel Type, Resolution, and Refresh for Daily Work](/en/blog/2026-budget-monitors-buying-guide) — editing stations that stress USB bandwidth when previewing 4K from external storage
-
----
-
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — 4K and 60 fps clips that fill SSDs fastest on summer trips
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — editing stations that stress USB bandwidth when previewing 4K from external storage
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keeping laptop and phone alive during field offloads when outlets are scarce
 ## Key takeaways
 
 1. **USB speed tier** (5 vs 10 vs 20 Gbps) matters only when the port, cable, and enclosure all match — otherwise you pay for headroom you cannot use.

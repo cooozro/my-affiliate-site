@@ -23,10 +23,10 @@
     "portable-ssd",
     "fitness-trackers"
   ],
-  "lastPublishAt": "2026-07-05T02:44:08.822Z",
-  "nextPublishAt": "2026-07-05T08:03:06.908Z",
-  "scheduledGapHours": 5.32,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-05T03:33:06.533Z",
+  "nextPublishAt": "2026-07-06T02:27:00.000Z",
+  "scheduledGapHours": 5.45,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-05",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-05",
@@ -239,14 +239,21 @@
         "https://www.aipick.shop/en/blog/2026-rice-cookers-explainer",
         "https://www.aipick.shop/ko/blog/2026-rice-cookers-explainer"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-portable-ssd-explainer",
+      "topic": {
+        "id": "portable-ssd"
+      },
+      "at": "2026-07-05T03:33:06.533Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-portable-ssd-explainer",
+        "https://www.aipick.shop/ko/blog/2026-portable-ssd-explainer"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "portable-ac",
-      "category": "home-appliances",
-      "cluster": "air-conditioning"
-    },
     {
       "id": "portable-ac",
       "category": "home-appliances",
@@ -386,6 +393,10 @@
       "id": "fitness-trackers",
       "category": "wearables",
       "at": "2026-07-05T02:44:08.836Z"
+    },
+    {
+      "id": "portable-ssd",
+      "at": "2026-07-05T03:33:06.536Z"
     }
   ],
   "formatHistory": [
@@ -407,24 +418,25 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-05T02:44:07.453Z",
+    "at": "2026-07-05T03:33:05.202Z",
     "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 58min (KST 2026-07-05)",
-        "severity": "error"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-rice-cookers-explainer/en.md: publishedAt 2026-07-05T11:44:07.000Z → 2026-07-05T02:44:08.822Z",
+      "2026-rice-cookers-explainer/ko.md: publishedAt 2026-07-05T11:44:07.000Z → 2026-07-05T02:44:08.822Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-04",
+  "lastDailyContentAuditKst": "2026-07-05",
   "lastDailyContentAudit": {
-    "at": "2026-07-04T06:43:32.000Z",
-    "postsScanned": 18,
-    "autoRepairCount": 2,
+    "at": "2026-07-05T03:33:07.013Z",
+    "postsScanned": 20,
+    "autoRepairCount": 3,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [
