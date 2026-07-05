@@ -25,12 +25,12 @@
     "laptops"
   ],
   "lastPublishAt": "2026-07-05T03:33:06.533Z",
-  "nextPublishAt": "2026-07-06T02:27:00.000Z",
-  "scheduledGapHours": 5.45,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-05",
+  "nextPublishAt": "2026-07-06T02:41:00.000Z",
+  "scheduledGapHours": 5.68,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-06",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-05",
+  "writeDateKst": "2026-07-06",
   "history": [
     {
       "action": "publish",
@@ -419,12 +419,17 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-05T09:47:59.297Z",
-    "issueCount": 1,
+    "at": "2026-07-05T15:00:23.060Z",
+    "issueCount": 2,
     "issues": [
       {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 374min",
+        "message": "Cursor replenish pending 687min",
         "severity": "warning"
       }
     ],
