@@ -38,6 +38,7 @@ yarn-error.log*
 data/automation/serp-cache/*.json
 data/automation/serp-quota.json
 data/automation/content-strategy-log.json
+data/automation/seo-audit-latest.json
 
 # vercel
 .vercel

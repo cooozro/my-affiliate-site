@@ -13,7 +13,11 @@ import { topicHasAnyPost } from "../content-roadmap.mjs";
 import { getTopicFormatCoverage } from "../topic-coverage.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
 
-const AUTOMATION_SLUG_EXCLUDE = new Set(["welcome", "adsense-seo-checklist"]);
+const AUTOMATION_SLUG_EXCLUDE = new Set([
+  "welcome",
+  "adsense-seo-checklist",
+  "aipick-seo-precision-report",
+]);
 
 export function listAllPostSlugs(root = process.cwd()) {
   const postsDir = path.join(root, "content", "posts");

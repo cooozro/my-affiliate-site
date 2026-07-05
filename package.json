@@ -24,7 +24,8 @@
     "guardian:check-boundary": "node scripts/lib/guardian/check-boundary.mjs",
     "guardian:check-render-boundary": "node scripts/render-guardian-check.mjs",
     "guardian:smoke-test": "node scripts/guardian-smoke-test.mjs",
-    "guardian:smoke-render": "node scripts/guardian-render-smoke.mjs"
+    "guardian:smoke-render": "node scripts/guardian-render-smoke.mjs",
+    "seo-audit:update": "node scripts/v2/seo-audit.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

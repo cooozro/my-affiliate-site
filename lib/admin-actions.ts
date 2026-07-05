@@ -36,6 +36,7 @@ import {
 const AUTOMATION_DRAFT_EXCLUDE = new Set([
   "welcome",
   "adsense-seo-checklist",
+  "aipick-seo-precision-report",
 ]);
 
 export type AutomationStatus = {

@@ -1,0 +1,40 @@
+name: SEO audit daily
+
+# Admin-only draft: aipick-seo-precision-report (08:30 KST = 23:30 UTC)
+# Isolated from blog-automation / cursor-draft-replenish schedulers.
+
+on:
+  schedule:
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: seo-audit-daily
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.13"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Update SEO audit admin draft
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run seo-audit:update
+
+      - name: Commit and push audit draft
+        run: |
+          bash scripts/ci-git-push.sh "chore(seo-audit): daily admin SEO report"

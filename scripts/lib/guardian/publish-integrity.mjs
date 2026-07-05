@@ -44,7 +44,11 @@ const INTERNAL_BLOG_LINK_RE = /]\(\/(en|ko)\/blog\/([a-z0-9][a-z0-9-]*)\)/gi;
 const PREVIEW_URL_RE = /(?:draft|preview|localhost|127\.0\.0\.1)/i;
 const EN_TEMPLATE_TITLE_RE = /^(How to|Stop|Why you|What to|When to)\b/i;
 
-const INTEGRITY_EXEMPT_SLUGS = new Set(["welcome", "adsense-seo-checklist"]);
+const INTEGRITY_EXEMPT_SLUGS = new Set([
+  "welcome",
+  "adsense-seo-checklist",
+  "aipick-seo-precision-report",
+]);
 const MIN_RELATED_GUIDES_PUBLISH = 3;
 const MAX_RELATED_GUIDES_PUBLISH = MAX_RELATED_GUIDE_LINKS;
 const MIN_TAGS_PUBLISH = 3;
