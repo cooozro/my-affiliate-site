@@ -30,6 +30,9 @@
   },
   "templatePath": "docs/templates/buying-guide.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null,
-  "requeuedAt": "2026-07-05T09:48:10.084Z"
+  "lastError": "Integrity gate failed for 2026-laptops-buying-guide: 2026-laptops-buying-guide/en.md: description over 160 chars",
+  "requeuedAt": "2026-07-05T09:48:10.084Z",
+  "lastAttemptAt": "2026-07-05T13:01:09.237Z",
+  "writtenSlug": "2026-laptops-buying-guide",
+  "completedAt": "2026-07-05T13:05:00.000Z"
 }
