@@ -36,6 +36,7 @@ import {
   hashFile,
   loadImageRegistry,
 } from "../used-images.mjs";
+import { repairGfmTildeRanges } from "./markdown-gfm-safe.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
 
@@ -164,6 +165,14 @@ export function repairPostLocale(root, slug, locale) {
   if (policyBody.repairs.length > 0) {
     repairs.push(
       ...policyBody.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+    );
+  }
+
+  const gfmTilde = repairGfmTildeRanges(body);
+  if (gfmTilde.changed) {
+    body = gfmTilde.text;
+    repairs.push(
+      `${slug}/${locale}.md: replaced ${gfmTilde.count} ASCII tilde range(s) with en-dash (GFM strikethrough fix)`,
     );
   }
 

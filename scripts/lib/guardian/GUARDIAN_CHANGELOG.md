@@ -59,6 +59,10 @@ Record **impact on other modules** when proposing a change.
 
 **Env:** `SERPER_API_KEY` replaces `AIPICK_SEARCH_API_KEY` + `GOOGLE_CX`.
 
+## 2026-07-05 — GFM tilde range repair
+
+**Added:** `markdown-gfm-safe.mjs` — auto-replace `4~6` style ranges with en-dash in `repairPostLocale` to prevent accidental GFM strikethrough (`<del>`).
+
 ## 2026-07-04 — SERP editorial filter + keyword suffix
 
 **Added:** `serp-filters.mjs` — shopping-mall domain exclusion, blog/editorial priority, B-type keyword suffix (`후기`, `장단점`, etc.).
