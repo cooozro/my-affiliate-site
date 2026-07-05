@@ -1,38 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-portable-ssd-explainer",
-  "requestedAt": "2026-07-05T03:33:06.548Z",
-  "writingMode": "stable",
-  "contentProfile": "buying-guide",
-  "toneVariant": "scenario-first",
-  "serpKeyword": "2026 budget laptops buying guide 사용법",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.17 > 0.15",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "laptops",
-    "category": "computing",
-    "angle": "budget laptops: CPU tiers, RAM upgrade paths, display nits, and battery for students",
-    "imageQuery": "laptop desk workspace",
-    "liveData": true,
-    "seasons": [
-      "fall",
-      "spring",
-      "winter"
-    ]
-  },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Integrity gate failed for 2026-laptops-buying-guide: 2026-laptops-buying-guide/en.md: description over 160 chars",
-  "requeuedAt": "2026-07-05T09:48:10.084Z",
-  "lastAttemptAt": "2026-07-05T13:01:09.237Z",
+  "status": "complete",
+  "completedAt": "2026-07-05T15:02:25.516Z",
   "writtenSlug": "2026-laptops-buying-guide",
-  "completedAt": "2026-07-05T13:05:00.000Z"
+  "draftCount": 2,
+  "lastError": null
 }

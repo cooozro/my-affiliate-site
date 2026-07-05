@@ -442,6 +442,21 @@
       "hash": "deae0bf236700c9e76e34918ee83c19db5876f83d94ee4fe5d93c1ff4895c05a",
       "provider": "pexels",
       "registeredAt": "2026-07-05T13:01:01.541Z"
+    },
+    {
+      "slug": "2026-laptops-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-05T15:01:41.816Z"
+    },
+    {
+      "slug": "2026-laptops-buying-guide",
+      "url": "https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg",
+      "assetKey": "pexels:35745699",
+      "hash": "bde9cffbcb7c2f128b5ae4b2271349febe861b68bb13336efda0bd176199de2d",
+      "provider": "pexels",
+      "registeredAt": "2026-07-05T15:02:16.775Z"
     }
   ]
 }

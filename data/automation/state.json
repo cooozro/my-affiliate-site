@@ -475,6 +475,17 @@
       "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
       "keyword": "2026 USB-C hub buying guide for laptops buying guide 구매가이드",
       "at": "2026-07-05T09:48:06.156Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "buying-guide",
+      "topicId": "laptops",
+      "toneVariant": "scenario-first",
+      "slug": "2026-laptops-buying-guide",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.17 > 0.15",
+      "keyword": "2026 budget laptops buying guide 사용법",
+      "at": "2026-07-05T15:02:25.512Z"
     }
   ]
 }
