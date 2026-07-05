@@ -418,19 +418,16 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-05T08:32:25.848Z",
+    "at": "2026-07-05T09:47:02.993Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 299min",
+        "message": "Cursor replenish pending 373min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-portable-ssd-explainer/en.md: publishedAt 2026-07-05T12:33:05.000Z → 2026-07-05T03:33:06.533Z",
-      "2026-portable-ssd-explainer/ko.md: publishedAt 2026-07-05T12:33:05.000Z → 2026-07-05T03:33:06.533Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-05",
   "lastDailyContentAudit": {
