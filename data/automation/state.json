@@ -1,5 +1,5 @@
 {
-  "topicIndex": 34,
+  "topicIndex": 30,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -21,7 +21,8 @@
     "air-fryers",
     "tablet-budget",
     "portable-ssd",
-    "fitness-trackers"
+    "fitness-trackers",
+    "laptops"
   ],
   "lastPublishAt": "2026-07-05T03:33:06.533Z",
   "nextPublishAt": "2026-07-06T02:27:00.000Z",
@@ -255,11 +256,6 @@
   ],
   "topicHistory": [
     {
-      "id": "portable-ac",
-      "category": "home-appliances",
-      "cluster": "air-conditioning"
-    },
-    {
       "id": "bluetooth-speakers",
       "category": "audio"
     },
@@ -397,6 +393,11 @@
     {
       "id": "portable-ssd",
       "at": "2026-07-05T03:33:06.536Z"
+    },
+    {
+      "id": "laptops",
+      "category": "computing",
+      "at": "2026-07-05T09:48:06.167Z"
     }
   ],
   "formatHistory": [
@@ -458,6 +459,17 @@
       "fallbackReason": "shingle overlap 0.60 > 0.15",
       "keyword": "2026 portable SSD buying guide buying guide 분석",
       "at": "2026-07-04T12:19:25.414Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "buying-guide",
+      "topicId": "usb-c-hubs",
+      "toneVariant": "checklist-hook",
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+      "keyword": "2026 USB-C hub buying guide for laptops buying guide 구매가이드",
+      "at": "2026-07-05T09:48:06.156Z"
     }
   ]
 }

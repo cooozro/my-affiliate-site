@@ -412,6 +412,21 @@
       "hash": "05662ac366e12e94ec3c9492967fc554e4e05ad229e2aae0f3cae0c95aeacbb6",
       "provider": "pexels",
       "registeredAt": "2026-07-05T08:26:32.825Z"
+    },
+    {
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-05T09:47:32.162Z"
+    },
+    {
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "url": "https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg",
+      "assetKey": "pexels:30708285",
+      "hash": "012a2a11692713e23ecf77936c58aed0815344cc5197389c242d4e0c902c5d2d",
+      "provider": "pexels",
+      "registeredAt": "2026-07-05T09:47:51.992Z"
     }
   ]
 }
