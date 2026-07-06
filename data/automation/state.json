@@ -451,12 +451,17 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T10:21:52.183Z",
-    "issueCount": 1,
+    "at": "2026-07-06T12:28:13.429Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "homepage-featured-mismatch",
         "message": "Home featured is welcome, expected latest 2026-laptops-buying-guide",
+        "severity": "warning"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 128min",
         "severity": "warning"
       }
     ],
