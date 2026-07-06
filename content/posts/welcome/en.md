@@ -13,8 +13,10 @@ coverImageAlt: Laptop and notebook on a desk
 coverImageCredit: Photo by fauxels / Pexels
 coverImageAltKo: 책상 위 노트북과 메모
 publishedAt: '2026-06-25T08:00:00.000Z'
+draft: true
+updatedAt: '2026-07-06T05:09:49.793Z'
+createdAt: '2026-07-06T05:09:49.793Z'
 ---
-
 ## Our Review Framework
 
 AI Pick & Report publishes in-depth guides for smartphones, audio gear, and consumer electronics. Every article is built on **verifiable specifications**, pricing data, and real-world usage scenarios.
