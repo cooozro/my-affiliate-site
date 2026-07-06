@@ -29,12 +29,12 @@
     "cordless-vacuums"
   ],
   "lastPublishAt": "2026-07-06T03:36:25.166Z",
-  "nextPublishAt": "2026-07-07T01:20:00.000Z",
-  "scheduledGapHours": 4.33,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-06",
+  "nextPublishAt": "2026-07-07T01:17:00.000Z",
+  "scheduledGapHours": 4.28,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-07",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-06",
+  "writeDateKst": "2026-07-07",
   "history": [
     {
       "action": "publish",
@@ -451,9 +451,14 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T14:07:28.918Z",
-    "issueCount": 2,
+    "at": "2026-07-06T19:19:33.828Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
       {
         "code": "homepage-featured-mismatch",
         "message": "Home featured is welcome, expected latest 2026-laptops-buying-guide",
@@ -461,7 +466,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 227min",
+        "message": "Cursor replenish pending 539min",
         "severity": "warning"
       }
     ],
