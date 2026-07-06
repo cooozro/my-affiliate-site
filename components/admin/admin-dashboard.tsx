@@ -538,7 +538,7 @@ export function AdminDashboard() {
               <br />
               {automation.cursorDraftPending
                 ? "GitHub Actions가 pending 요청을 5분마다 재시도합니다 (Cursor API, PC 불필요)."
-                : "발행 후 buffer가 부족하면 GitHub Actions가 Cursor로 자동 보충합니다."}
+                : "아직 작성 요청 전이면 다음 publish-slot에서 자동 등록됩니다."}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">

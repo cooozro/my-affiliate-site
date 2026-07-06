@@ -152,6 +152,25 @@ export async function queueCursorDraftReplenish(publishedSlug) {
   return true;
 }
 
+/** Queue Cursor replenish when buffer is below target and no request is in flight. */
+export async function ensureDraftReplenishQueued(publishedSlug = null) {
+  if (process.env.AUTOMATION_MODE !== "publish-only") {
+    return false;
+  }
+
+  const draftCount = countDrafts();
+  if (draftCount >= TARGET_DRAFT_COUNT) {
+    return false;
+  }
+
+  const existing = readCursorDraftRequest();
+  if (existing?.status === "pending") {
+    return false;
+  }
+
+  return queueCursorDraftReplenish(publishedSlug);
+}
+
 /** Force the next queued/re-queued draft to use benchmark (B-type) Serper outline. */
 export async function queueBenchmarkReplenish(publishedSlug = null) {
   const draftCount = countDrafts();

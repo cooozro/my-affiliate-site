@@ -175,7 +175,7 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
   const replenishNote = cursorDraftPending
     ? `GitHub Actions가 Cursor API로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 보통 5–15분.`
     : draftCount < TARGET_DRAFT_COUNT
-      ? "임시글 버퍼 부족. 발행 시 GitHub Actions가 Cursor로 자동 보충합니다."
+      ? "임시글 1건 부족. publish-slot(약 5분마다)에서 Cursor 작성 요청이 자동 등록됩니다."
       : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
 
   const lastHealthCheck = state.lastHealthCheck as

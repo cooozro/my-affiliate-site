@@ -1,5 +1,5 @@
 {
-  "topicIndex": 16,
+  "topicIndex": 10,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -25,7 +25,8 @@
     "laptops",
     "smart-home-cameras",
     "laptops",
-    "coffee-machines"
+    "coffee-machines",
+    "cordless-vacuums"
   ],
   "lastPublishAt": "2026-07-06T03:36:25.166Z",
   "nextPublishAt": "2026-07-07T01:20:00.000Z",
@@ -283,11 +284,6 @@
   ],
   "topicHistory": [
     {
-      "id": "power-banks",
-      "category": "accessories",
-      "at": "2026-06-30T13:06:31.564Z"
-    },
-    {
       "id": "dehumidifiers",
       "category": "home-appliances",
       "cluster": "air-quality",
@@ -425,6 +421,13 @@
       "category": "kitchen",
       "taxonomyGroup": "주방가전/소형주방",
       "at": "2026-07-06T05:17:05.827Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "category": "smart-home",
+      "cluster": "floor-care",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-07-06T10:19:34.467Z"
     }
   ],
   "formatHistory": [
@@ -443,11 +446,12 @@
     "head-to-head",
     "scenario-guide",
     "checklist",
-    "buying-guide"
+    "buying-guide",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T08:21:14.668Z",
+    "at": "2026-07-06T10:19:06.044Z",
     "issueCount": 1,
     "issues": [
       {

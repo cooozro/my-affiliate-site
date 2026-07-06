@@ -7,7 +7,7 @@ import {
   writePost,
 } from "./posts-fs.mjs";
 import { maintainDraftBuffer } from "./generate-draft.mjs";
-import { queueCursorDraftReplenish } from "./cursor-draft-request.mjs";
+import { queueCursorDraftReplenish, ensureDraftReplenishQueued } from "./cursor-draft-request.mjs";
 import { inferPostTopic } from "../lib/infer-post-topic.mjs";
 import {
   logAutomationHealthResult,
@@ -102,6 +102,8 @@ export async function publishOneDraft(options = {}) {
   } catch (error) {
     console.error(`Automation health check failed (non-fatal): ${error.message}`);
   }
+
+  await ensureDraftReplenishQueued(null);
 
   if (!canPublishNow(state, force)) {
     if (JSON.stringify(state) !== stateBefore) {
