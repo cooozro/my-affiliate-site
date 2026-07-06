@@ -29,6 +29,6 @@
   },
   "templatePath": "docs/templates/scenario-guide.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Cursor agent run failed: run-1ba6cc2e-6179-42e5-b947-899c57235feb. Add OPENAI_API_KEY to GitHub Secrets as a reliable GHA fallback.",
-  "lastAttemptAt": "2026-07-06T23:05:02.788Z"
+  "lastError": "Cursor agent run failed: run-5af1d050-92f4-44f5-87cf-b204b46e7a41. Add OPENAI_API_KEY to GitHub Secrets as a reliable GHA fallback.",
+  "lastAttemptAt": "2026-07-06T23:45:04.165Z"
 }
