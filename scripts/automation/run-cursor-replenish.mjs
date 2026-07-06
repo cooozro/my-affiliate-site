@@ -119,6 +119,74 @@ function rejectReplenishOverwrite(slug, reason) {
   console.error(reason);
 }
 
+function cursorReplenishFailedBefore(request) {
+  return (
+    typeof request?.lastError === "string" &&
+    /Cursor agent/i.test(request.lastError)
+  );
+}
+
+/** CI: OpenAI writes directly to the checkout; Cursor local agent often errors in ~3s on GHA. */
+function pickReplenishProviders(request, { cursorKey, openaiKey }) {
+  const onCi = Boolean(process.env.GITHUB_ACTIONS);
+  const cursorFailed = cursorReplenishFailedBefore(request);
+  const providers = [];
+
+  if (openaiKey && (onCi || cursorFailed)) {
+    providers.push("openai");
+  }
+  if (cursorKey && !cursorFailed) {
+    providers.push("cursor");
+  }
+  if (openaiKey && !providers.includes("openai")) {
+    providers.push("openai");
+  }
+  if (cursorKey && !providers.includes("cursor")) {
+    providers.push("cursor");
+  }
+
+  return providers;
+}
+
+async function runReplenishProviders(request, draftsBefore, keys) {
+  const providers = pickReplenishProviders(request, keys);
+  const errors = [];
+
+  for (const provider of providers) {
+    try {
+      if (provider === "openai") {
+        const slugs = await replenishWithOpenAI(request);
+        if (slugs.length > 0) return slugs;
+        errors.push("OpenAI replenish returned no draft");
+        continue;
+      }
+
+      const slug = await replenishWithCursor(request, draftsBefore);
+      if (slug) return [slug];
+      errors.push("Cursor replenish returned no draft");
+    } catch (error) {
+      const message =
+        error instanceof CursorAgentError
+          ? `Cursor agent: ${error.message}`
+          : error instanceof Error
+            ? error.message
+            : String(error);
+      errors.push(message);
+      console.error(`${provider} replenish failed: ${message}`);
+    }
+  }
+
+  if (errors.length === 0) {
+    throw new Error("No replenish provider configured");
+  }
+
+  const hint =
+    keys.cursorKey && !keys.openaiKey
+      ? " Add OPENAI_API_KEY to GitHub Secrets as a reliable GHA fallback."
+      : "";
+  throw new Error(`${errors.join(" | ")}.${hint}`);
+}
+
 function refreshStaleRequestTopic(request) {
   if (!isRequestTopicStale(request)) return request;
 
@@ -320,39 +388,19 @@ async function main() {
   recordReplenishAttempt();
   const draftsBefore = new Set(listDrafts().map((d) => d.slug));
   const slugsBefore = new Set(listSlugDirs());
-  const createdSlugs = [];
+  let createdSlugs = [];
 
   try {
-    if (cursorKey) {
-      const slug = await replenishWithCursor(request, draftsBefore);
-      if (slug) createdSlugs.push(slug);
-    } else if (openaiKey) {
-      createdSlugs.push(...(await replenishWithOpenAI(request)));
-    }
+    createdSlugs = await runReplenishProviders(request, draftsBefore, {
+      cursorKey,
+      openaiKey,
+    });
   } catch (error) {
-    const message =
-      error instanceof CursorAgentError
-        ? `Cursor agent: ${error.message}`
-        : error instanceof Error
-          ? error.message
-          : String(error);
-
-    if (cursorKey && openaiKey && createdSlugs.length === 0) {
-      console.warn(`Cursor replenish failed, trying OpenAI fallback: ${message}`);
-      try {
-        createdSlugs.push(...(await replenishWithOpenAI(request)));
-      } catch (fallbackError) {
-        const fallbackMessage =
-          fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
-        recordReplenishFailure(`${message} | OpenAI fallback: ${fallbackMessage}`);
-        process.exit(2);
-      }
-    } else {
-      recordReplenishFailure(message);
-      console.error(message);
-      // Exit 0 so publish/validate steps still run; pending request retries on next cron.
-      return;
-    }
+    const message = error instanceof Error ? error.message : String(error);
+    recordReplenishFailure(message);
+    console.error(message);
+    // Exit 0 so publish/validate steps still run; pending request retries on next cron.
+    return;
   }
 
   if (createdSlugs.length === 0) {
