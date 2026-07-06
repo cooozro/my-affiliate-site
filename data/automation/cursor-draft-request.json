@@ -29,5 +29,6 @@
   },
   "templatePath": "docs/templates/scenario-guide.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "lastError": "Cursor agent run failed: run-0324c9e5-9835-405f-82e0-f54ea84c5141",
+  "lastAttemptAt": "2026-07-06T12:31:53.307Z"
 }
