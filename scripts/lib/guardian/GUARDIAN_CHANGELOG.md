@@ -4,6 +4,14 @@ All changes under `scripts/lib/guardian/` require owner approval before commit.
 
 Record **impact on other modules** when proposing a change.
 
+## 2026-07-06 — Topic inference fix (laptop duplicate draft)
+
+**Root cause:** Published `2026-laptops-buying-guide` lacked `topicId`, so coverage treated slug as topic id — `laptops` looked uncovered and a second draft was allowed.
+
+**Fixed:** `infer-post-topic.mjs` slug segment matching + laptop/usb-c/webcam rules; `topicId: laptops` on buying guide; draft gate calls `validateReplenishTopicUnique`; removed duplicate `2026-laptops-head-to-head` draft.
+
+**Impact:** `topic-coverage`, `pickTopic`, replenish validation, publish-integrity. No API breaks.
+
 ## 2026-07-06 — Korean Hanja forbidden + typo repair
 
 **Added:** `CJK_HANJA_RE`, `HANJA_AUTO_FIXES` in `content-policy.mjs` — Korean posts must use Hangul only; known Hanja auto-repaired on publish/draft save; `독찴적` → `독창적` typo fix.

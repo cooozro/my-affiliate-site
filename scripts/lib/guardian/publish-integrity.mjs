@@ -30,6 +30,7 @@ import { writeContentRepair } from "../post-updated-at.mjs";
 import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "../content-profiles.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
+import { validateReplenishTopicUnique } from "./automation-guard.mjs";
 import { wouldViolateTopicDiversity } from "../topic-diversity.mjs";
 import {
   assetKey,
@@ -439,6 +440,11 @@ function auditPostLevel(root, slug, phase, bucket, state) {
 
   if (usedByOther) {
     addError(bucket, `${slug}: cover image already used on another post (duplicate hero)`);
+  }
+
+  const topicDup = validateReplenishTopicUnique(slug, root);
+  if (!topicDup.ok) {
+    addError(bucket, topicDup.reason);
   }
 
   if (phase === "publish" && state) {

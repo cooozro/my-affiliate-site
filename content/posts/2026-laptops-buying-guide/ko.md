@@ -9,6 +9,7 @@ tags:
   - 컴퓨팅
   - 구매 가이드
 contentProfile: buying-guide
+topicId: laptops
 writingMode: stable
 draft: false
 liveData: true

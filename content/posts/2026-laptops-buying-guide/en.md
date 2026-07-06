@@ -11,6 +11,7 @@ tags:
   - computing
   - buying guide
 contentProfile: buying-guide
+topicId: laptops
 writingMode: stable
 draft: false
 liveData: true

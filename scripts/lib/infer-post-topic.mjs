@@ -2,6 +2,14 @@
  * Infer topic metadata from a post slug + frontmatter for publish diversity checks.
  */
 
+import { PRODUCT_TOPICS } from "./product-taxonomy.mjs";
+
+const TOPIC_IDS_BY_LENGTH = [...PRODUCT_TOPICS.map((t) => t.id)].sort(
+  (a, b) => b.length - a.length,
+);
+
+const TOPIC_BY_ID = new Map(PRODUCT_TOPICS.map((t) => [t.id, t]));
+
 const RULES = [
   {
     pattern: /portable.*window|window.*portable|vs-window|vs-portable/i,
@@ -111,7 +119,66 @@ const RULES = [
     category: "gaming",
     cluster: "gaming",
   },
+  {
+    pattern: /laptop/i,
+    id: "laptops",
+    category: "computing",
+    cluster: "computing",
+  },
+  {
+    pattern: /usb-c-hub|usb-c hub/i,
+    id: "usb-c-hubs",
+    category: "accessories",
+    cluster: "computing",
+  },
+  {
+    pattern: /portable-ssd|portable ssd/i,
+    id: "portable-ssd",
+    category: "storage",
+    cluster: "computing",
+  },
+  {
+    pattern: /webcam/i,
+    id: "webcams",
+    category: "peripherals",
+    cluster: "computing",
+  },
+  {
+    pattern: /rice-cooker|rice cooker/i,
+    id: "rice-cookers",
+    category: "kitchen",
+    cluster: "kitchen",
+  },
+  {
+    pattern: /air-fryer/i,
+    id: "air-fryers",
+    category: "kitchen",
+    cluster: "kitchen",
+  },
+  {
+    pattern: /coffee-machine|espresso/i,
+    id: "coffee-machines",
+    category: "kitchen",
+    cluster: "kitchen",
+  },
 ];
+
+function inferTopicIdFromSlug(slug) {
+  const normalized = String(slug ?? "").toLowerCase();
+  for (const id of TOPIC_IDS_BY_LENGTH) {
+    if (normalized.includes(id)) return id;
+  }
+  return null;
+}
+
+function topicMetaFromId(id) {
+  const topic = TOPIC_BY_ID.get(id);
+  return {
+    id,
+    category: topic?.category,
+    cluster: topic?.topicCluster ?? topic?.cluster,
+  };
+}
 
 /**
  * @param {string} slug
@@ -136,6 +203,11 @@ export function inferPostTopic(slug, data = {}) {
         cluster: rule.cluster,
       };
     }
+  }
+
+  const fromSlug = inferTopicIdFromSlug(slug);
+  if (fromSlug) {
+    return topicMetaFromId(fromSlug);
   }
 
   return {
