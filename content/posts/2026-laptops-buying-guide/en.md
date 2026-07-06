@@ -3,7 +3,7 @@ title: 'Dorm Heat, Long Lectures: Budget Laptop Specs Students Should Actually W
 description: >-
   Five budget student laptops on CPU tier, RAM upgrades, display nits, and
   battery for summer dorm and campus use.
-date: '2026-07-05'
+date: '2026-07-06'
 tags:
   - laptops
   - budget tech
@@ -12,7 +12,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 writingMode: stable
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-laptops-buying-guide/laptop-desk-workspace-student-laptop-cover.jpg
@@ -26,7 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-05T15:02:25.508Z'
+updatedAt: '2026-07-06T03:36:25.200Z'
+publishedAt: '2026-07-06T12:36:23.000Z'
 ---
 ## Editorial Overview
 
@@ -169,9 +170,8 @@ Indoor desk work often tolerates **250 nits**, but summer sun through a dorm win
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — extend your desk setup when the laptop stays closed
 - [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — typing comfort for long essay sessions
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power for library days and summer travel
-- [Portable SSDs: USB Speed, Encryption, and Backup Habits](/en/blog/2026-portable-ssd-explainer) — offload video projects when 256GB fills up
-- [Webcam Checklist: Resolution, Low Light, and Privacy Shutters](/en/blog/2026-webcams-checklist) — upgrade weak built-in cameras for hybrid classes
-
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — offload video projects when 256GB fills up
+- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — upgrade weak built-in cameras for hybrid classes
 ## Five checks before you buy
 
 1. **CPU tier** — Ryzen 5 / Core i5 minimum for tab-heavy research; Ryzen 3 / i3 save money but age faster.

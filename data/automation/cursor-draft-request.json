@@ -1,33 +1,35 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-usb-c-hubs-buying-guide",
-  "requestedAt": "2026-07-06T02:59:37.184Z",
+  "publishedSlug": "2026-laptops-buying-guide",
+  "requestedAt": "2026-07-06T03:36:25.181Z",
   "writingMode": "stable",
-  "contentProfile": "buying-guide",
-  "toneVariant": "myth-bust",
-  "serpKeyword": "2026 home IP cameras buying guide 비교",
+  "contentProfile": "head-to-head",
+  "toneVariant": "question-led",
+  "serpKeyword": "2026 budget laptops buying guide 장단점",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
-  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+  "fallbackReason": "shingle overlap 0.17 > 0.15",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "smart-home-cameras",
-    "category": "smart-home",
-    "angle": "home IP cameras: resolution, local vs cloud storage, and privacy features",
-    "imageQuery": "home security camera indoor",
-    "liveData": false,
+    "id": "laptops",
+    "category": "computing",
+    "angle": "budget laptops: CPU tiers, RAM upgrade paths, display nits, and battery for students",
+    "imageQuery": "laptop desk workspace",
+    "liveData": true,
     "seasons": [
       "fall",
-      "spring"
+      "spring",
+      "winter"
     ]
   },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: myth-bust. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastError": null,
+  "requeuedAt": "2026-07-06T03:38:47.919Z"
 }

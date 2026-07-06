@@ -1,5 +1,5 @@
 {
-  "topicIndex": 0,
+  "topicIndex": 30,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -23,12 +23,13 @@
     "portable-ssd",
     "fitness-trackers",
     "laptops",
-    "smart-home-cameras"
+    "smart-home-cameras",
+    "laptops"
   ],
-  "lastPublishAt": "2026-07-06T02:59:37.169Z",
-  "nextPublishAt": "2026-07-06T08:39:16.832Z",
-  "scheduledGapHours": 5.66,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-06T03:36:25.166Z",
+  "nextPublishAt": "2026-07-07T01:20:00.000Z",
+  "scheduledGapHours": 4.33,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-06",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-06",
@@ -265,19 +266,21 @@
         "https://www.aipick.shop/en/blog/2026-usb-c-hubs-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-laptops-buying-guide",
+      "topic": {
+        "id": "2026-laptops-buying-guide"
+      },
+      "at": "2026-07-06T03:36:25.166Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-laptops-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-laptops-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "air-purifiers",
-      "category": "home-appliances",
-      "at": "2026-06-30T08:14:31.725Z"
-    },
-    {
-      "id": "dehumidifiers",
-      "category": "home-appliances",
-      "at": "2026-06-30T10:22:14.591Z"
-    },
     {
       "id": "2026-air-purifiers-guide",
       "at": "2026-06-30T13:06:31.559Z"
@@ -410,6 +413,15 @@
       "id": "smart-home-cameras",
       "category": "smart-home",
       "at": "2026-07-06T02:59:37.180Z"
+    },
+    {
+      "id": "2026-laptops-buying-guide",
+      "at": "2026-07-06T03:36:25.169Z"
+    },
+    {
+      "id": "laptops",
+      "category": "computing",
+      "at": "2026-07-06T03:38:43.329Z"
     }
   ],
   "formatHistory": [
@@ -432,23 +444,24 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T02:59:35.258Z",
+    "at": "2026-07-06T03:36:23.515Z",
     "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 18min (KST 2026-07-06)",
-        "severity": "error"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-usb-c-hubs-buying-guide/en.md: publishedAt 2026-07-06T11:59:35.000Z → 2026-07-06T02:59:37.169Z",
+      "2026-usb-c-hubs-buying-guide/ko.md: publishedAt 2026-07-06T11:59:35.000Z → 2026-07-06T02:59:37.169Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-05",
+  "lastDailyContentAuditKst": "2026-07-06",
   "lastDailyContentAudit": {
-    "at": "2026-07-05T03:33:07.013Z",
-    "postsScanned": 20,
+    "at": "2026-07-06T03:36:25.710Z",
+    "postsScanned": 22,
     "autoRepairCount": 3,
     "manualReviewCount": 0
   },
@@ -496,6 +509,17 @@
       "fallbackReason": "shingle overlap 0.17 > 0.15",
       "keyword": "2026 budget laptops buying guide 사용법",
       "at": "2026-07-05T15:02:25.512Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "cordless-vacuums",
+      "toneVariant": "case-study",
+      "slug": "2026-cordless-vacuums-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+      "keyword": "2026 cordless stick vacuums buying guide 후기",
+      "at": "2026-07-06T03:38:43.316Z"
     }
   ]
 }

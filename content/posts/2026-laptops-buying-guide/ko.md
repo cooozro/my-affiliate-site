@@ -1,7 +1,7 @@
 ---
 title: '방학·기숙사·과제: 학생용 가성비 노트북은 CPU·RAM·nits부터 본다'
 description: CPU·RAM 확장·디스플레이 nits·배터리 기준 학생용 가성비 노트북 5종. 여름 기숙사·방학·캠퍼스 시나리오 가이드.
-date: '2026-07-05'
+date: '2026-07-06'
 tags:
   - 노트북
   - 가성비
@@ -10,7 +10,7 @@ tags:
   - 구매 가이드
 contentProfile: buying-guide
 writingMode: stable
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-laptops-buying-guide/laptop-desk-workspace-student-laptop-cover.jpg
@@ -24,7 +24,8 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-05T15:02:25.508Z'
+updatedAt: '2026-07-06T03:36:25.201Z'
+publishedAt: '2026-07-06T12:36:23.000Z'
 ---
 ## 편집부 개요
 
@@ -165,11 +166,10 @@ createdAt: '2026-07-05T15:02:25.508Z'
 ## 관련 가이드
 
 - [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 노트북 클로즈 시 데스크 확장
-- [첫 기계식 키보드? 핫스왑·스위치 타입이 체감을 좌우한다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 장문 과제 타이핑
-- [휴대용 보조배터리: Wh·PD 와트가 선택을 바꾼다](/ko/blog/2026-budget-power-banks-guide) — 도서관·방학 이동 백업 전원
-- [휴대용 SSD: USB 속도·암호화·백업](/ko/blog/2026-portable-ssd-explainer) — 256GB 부족 시 영상 과제 옮기기
-- [웹캠 체크리스트: 해상도·저조도·프라이버시](/ko/blog/2026-webcams-checklist) — 내장 카메라 업그레이드
-
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 장문 과제 타이핑
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 도서관·방학 이동 백업 전원
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 256GB 부족 시 영상 과제 옮기기
+- [여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크](/ko/blog/2026-webcams-checklist) — 내장 카메라 업그레이드
 ## 구매 전 다섯 가지 확인
 
 1. **CPU 등급** — 탭 많은 리서치는 Ryzen 5·Core i5 이상; Ryzen 3·i3는 단기 절약·장기 병목.

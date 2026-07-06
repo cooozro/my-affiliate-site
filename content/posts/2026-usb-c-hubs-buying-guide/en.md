@@ -28,8 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-06T11:59:35.000Z'
-publishedAt: '2026-07-06T11:59:35.000Z'
+updatedAt: '2026-07-06T03:36:25.208Z'
+publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
 
@@ -172,10 +172,9 @@ No — you need **HDMI 2.0 or DisplayPort Alt Mode** with sufficient bandwidth. 
 
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — pair the right hub HDMI bandwidth with your monitor resolution
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — when the laptop charges from a hub, the wall brick wattage still matters
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — storage speed through hub USB-A vs direct USB-C
 - [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — USB-A ports on hubs keep legacy keyboard dongles alive
-- [Webcam Buying Checklist for Remote Work and Streaming](/en/blog/2026-webcams-checklist) — many hubs share bandwidth with USB video devices
-- [Portable SSD Explainer: NVMe, USB 3.2, and Real Transfer Speeds](/en/blog/2026-portable-ssd-explainer) — storage speed through hub USB-A vs direct USB-C
-
+- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — many hubs share bandwidth with USB video devices
 ## Five checks before you buy
 
 1. **Match PD pass-through to your charger** — Read the laptop OEM brick label. Below 65W pass-through on a 96W machine means slow or negative charge under load.
