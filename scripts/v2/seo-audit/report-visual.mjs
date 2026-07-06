@@ -123,6 +123,9 @@ export function buildGa4SetupGuide() {
   lines.push("**값 입력 방법**");
   lines.push("");
   lines.push(
+    "0. **GCP → API 및 서비스 → 라이브러리** → `Google Analytics Data API` **사용 설정** (403 오류 시 필수)",
+  );
+  lines.push(
     "1. `GA4_PROPERTY_ID` — GA4 관리 → 속성 설정 → **속성 ID** (숫자만, 예: `123456789`)",
   );
   lines.push(
@@ -132,6 +135,9 @@ export function buildGa4SetupGuide() {
     "3. GA4 → 속성 액세스 관리 → 서비스 계정 이메일에 **뷰어(Viewer)** 권한 부여",
   );
   lines.push("");
+  lines.push(
+    "**API 활성화 링크:** [Google Analytics Data API](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com) (서비스 계정이 속한 GCP 프로젝트에서 Enable)",
+  );
   lines.push("**로컬 `.env` 예시**");
   lines.push("");
   lines.push("```");
