@@ -6,6 +6,7 @@ import {
   FORMULAIC_TITLE_PATTERNS,
   MISLEADING_SOURCE_PATTERNS,
   FORBIDDEN_AD_PATTERNS,
+  CJK_HANJA_RE,
 } from "./guardian/index.mjs";
 import {
   auditFaqSection,
@@ -98,6 +99,15 @@ function auditShared(root, slug, locale, raw, profile, options) {
     if (pattern.test(raw)) {
       issues.push(`${label}: forbidden pattern (${pattern})`);
     }
+  }
+
+  const koPolicyText = [data.title, data.description, body]
+    .filter(Boolean)
+    .join("\n");
+  if (locale === "ko" && CJK_HANJA_RE.test(koPolicyText)) {
+    issues.push(
+      `${label}: Korean content must not include Hanja/CJK ideographs — use Hangul`,
+    );
   }
 
   const minChars =

@@ -4,6 +4,12 @@ All changes under `scripts/lib/guardian/` require owner approval before commit.
 
 Record **impact on other modules** when proposing a change.
 
+## 2026-07-06 — Korean Hanja forbidden + typo repair
+
+**Added:** `CJK_HANJA_RE`, `HANJA_AUTO_FIXES` in `content-policy.mjs` — Korean posts must use Hangul only; known Hanja auto-repaired on publish/draft save; `독찴적` → `독창적` typo fix.
+
+**Impact:** `content-quality.mjs` (validate-post Hanja gate), `automation/prompts.mjs`, `publish-integrity.mjs` (existing `repairContentPolicyText` path). No breaking API changes.
+
 ## 2026-07-03 — Phase 1: Pipeline Guardian
 
 **Approved:** 1-B, 2-B, 3-C, 5-C, 6-A (deferred render), 11-B

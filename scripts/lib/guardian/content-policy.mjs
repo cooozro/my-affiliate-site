@@ -98,13 +98,48 @@ export const EN_TYPO_FIXES = [
 
 export const KO_TYPO_FIXES = [
   [/백그ra운드/gi, "백그라운드"],
+  [/독찴적/g, "독창적"],
   [/추천해요요/g, "추천해요"],
   [/있습니다다/g, "있습니다"],
   [/됩니다다/g, "됩니다"],
 ];
 
+/** CJK ideographs (Hanja) — Korean posts must use Hangul only. */
+export const CJK_HANJA_RE = /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]/;
+
+/** Known Hanja → Hangul auto-repairs (safe, word-level). */
+export const HANJA_AUTO_FIXES = [
+  [/誇大/g, "과대"],
+  [/獨創/g, "독창"],
+  [/誇張/g, "과장"],
+  [/誤字/g, "오자"],
+  [/比較/g, "비교"],
+  [/參考/g, "참고"],
+  [/價格/g, "가격"],
+  [/製品/g, "제품"],
+  [/購買/g, "구매"],
+  [/推薦/g, "추천"],
+  [/注意/g, "주의"],
+  [/方法/g, "방법"],
+  [/品質/g, "품질"],
+  [/保證/g, "보장"],
+];
+
 export const HANGUL_LATIN_TYPO_RE =
   /[\uAC00-\uD7A3]{2,}[a-zA-Z]{2,5}[\uAC00-\uD7A3]{2,}/g;
+
+function applyHanjaFixes(text) {
+  let out = text;
+  const repairs = [];
+  for (const [re, replacement] of HANJA_AUTO_FIXES) {
+    if (re.test(out)) {
+      out = out.replace(re, replacement);
+      repairs.push(`hanja fix (${re})`);
+      re.lastIndex = 0;
+    }
+  }
+  return { text: out, repairs };
+}
 
 function applyTypoFixes(text, fixes) {
   let out = text;
@@ -175,6 +210,12 @@ export function repairContentPolicyText(text, locale = "en") {
   }
 
   if (locale === "ko") {
+    const hanja = applyHanjaFixes(out);
+    out = hanja.text;
+    if (hanja.repairs.length > 0) {
+      repairs.push(`hanja fixes (${hanja.repairs.length})`);
+    }
+
     const koTypos = applyTypoFixes(out, KO_TYPO_FIXES);
     if (koTypos.applied.length > 0) {
       out = koTypos.text;
@@ -238,6 +279,17 @@ export function auditContentPolicyText(text, locale = "en", label = "") {
       severity: "error",
       policy: "spelling",
       autoFixable: true,
+    });
+  }
+
+  if (locale === "ko" && CJK_HANJA_RE.test(body)) {
+    const sample = body.match(CJK_HANJA_RE)?.[0] ?? "";
+    issues.push({
+      code: "hanja-forbidden",
+      message: `${prefix}Korean content must not include Hanja/CJK ideographs (found "${sample}") — use Hangul`,
+      severity: "error",
+      policy: "korean-style",
+      autoFixable: false,
     });
   }
 

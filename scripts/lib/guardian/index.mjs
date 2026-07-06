@@ -22,6 +22,8 @@ export {
   EN_TYPO_FIXES,
   KO_TYPO_FIXES,
   HANGUL_LATIN_TYPO_RE,
+  CJK_HANJA_RE,
+  HANJA_AUTO_FIXES,
   repairContentPolicyText,
   auditContentPolicyText,
   auditContentPolicyTitle,
