@@ -31,6 +31,7 @@ import {
   previewPublishSchedule,
   TARGET_DRAFT_COUNT,
 } from "@/lib/publish-schedule";
+import { isAdminPublishBlocked } from "@/lib/admin-only-posts";
 
 /** Internal/editorial slugs — not counted toward automation draft buffer. */
 const AUTOMATION_DRAFT_EXCLUDE = new Set([
@@ -287,6 +288,12 @@ async function validateForPublish(slug: string): Promise<string[]> {
 }
 
 export async function publishPost(slug: string) {
+  if (isAdminPublishBlocked(slug)) {
+    throw new Error(
+      "aipick-seo-precision-report는 어드민 전용 SEO 리포트입니다. 발행할 수 없습니다. Preview로만 확인하세요.",
+    );
+  }
+
   if (!slugExists(slug)) {
     throw new Error(`Post not found: ${slug}`);
   }

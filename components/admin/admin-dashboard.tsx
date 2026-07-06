@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import Link from "next/link";
+import {
+  adminPreviewLocale,
+  isAdminPublishBlocked,
+} from "@/lib/admin-only-posts";
 
 type AdminPostRow = {
   slug: string;
@@ -572,14 +576,26 @@ export function AdminDashboard() {
               </tr>
             </thead>
             <tbody>
-              {visiblePosts.map((post) => (
+              {visiblePosts.map((post) => {
+                const publishBlocked = isAdminPublishBlocked(post.slug);
+                const previewLocale = adminPreviewLocale(post);
+
+                return (
                 <tr key={post.slug} className="border-b border-border/60">
                   <td className="px-3 py-3 align-top">
                     <CoverCell post={post} imageVersion={imageVersion} />
                   </td>
                   <td className="px-3 py-3 font-mono text-xs">{post.slug}</td>
-                  <td className="px-3 py-3">{post.titleEn}</td>
                   <td className="px-3 py-3">
+                    {publishBlocked ? post.titleKo : post.titleEn}
+                  </td>
+                  <td className="px-3 py-3">
+                    {publishBlocked ? (
+                      <span className="rounded-full bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-700 dark:text-violet-300">
+                        Admin-only
+                        {!post.draft ? " · 발행됨" : ""}
+                      </span>
+                    ) : (
                     <span
                       className={`rounded-full px-2 py-1 text-xs font-medium ${
                         post.draft
@@ -589,6 +605,7 @@ export function AdminDashboard() {
                     >
                       {post.draft ? "Draft" : "Published"}
                     </span>
+                    )}
                   </td>
                   <td className="px-3 py-3 text-muted-foreground">
                     {adminWrittenDateLabel(post)}
@@ -600,13 +617,13 @@ export function AdminDashboard() {
                   <td className="px-3 py-3">
                     <div className="flex flex-wrap gap-2">
                       <Link
-                        href={`/admin/preview/${post.slug}?locale=en`}
+                        href={`/admin/preview/${post.slug}?locale=${previewLocale}`}
                         target="_blank"
                         className="rounded border border-border px-2 py-1 text-xs hover:bg-muted"
                       >
                         Preview
                       </Link>
-                      {!post.draft ? (
+                      {!post.draft && !publishBlocked ? (
                         <a
                           href={`/en/blog/${post.slug}`}
                           target="_blank"
@@ -616,7 +633,7 @@ export function AdminDashboard() {
                           Live
                         </a>
                       ) : null}
-                      {post.draft ? (
+                      {post.draft && !publishBlocked ? (
                         <button
                           type="button"
                           onClick={() => void runAction(post.slug, "publish")}
@@ -624,15 +641,16 @@ export function AdminDashboard() {
                         >
                           Publish
                         </button>
-                      ) : (
+                      ) : null}
+                      {!post.draft ? (
                         <button
                           type="button"
                           onClick={() => void runAction(post.slug, "draft")}
                           className="rounded border border-border px-2 py-1 text-xs hover:bg-muted"
                         >
-                          Draft
+                          {publishBlocked ? "Draft로 되돌리기" : "Draft"}
                         </button>
-                      )}
+                      ) : null}
                       <button
                         type="button"
                         onClick={() => void runAction(post.slug, "delete")}
@@ -677,7 +695,8 @@ export function AdminDashboard() {
                     </div>
                   </td>
                 </tr>
-              ))}
+              );
+              })}
               {visiblePosts.length === 0 ? (
                 <tr>
                   <td

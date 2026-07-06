@@ -5,7 +5,8 @@ import { enrichPost } from "@/lib/enrich-post";
 import { isValidLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
-import { getPostBySlug } from "@/lib/posts";
+import { isAdminPublishBlocked } from "@/lib/admin-only-posts";
+import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -28,9 +29,17 @@ export default async function AdminPreviewPage({
 
   const { slug } = await params;
   const { locale: localeParam } = await searchParams;
+
+  const defaultLocale = (): Locale => {
+    if (isAdminPublishBlocked(slug)) return "ko";
+    if (getPostSlugs("en").includes(slug)) return "en";
+    if (getPostSlugs("ko").includes(slug)) return "ko";
+    return "en";
+  };
+
   const locale = (localeParam && isValidLocale(localeParam)
     ? localeParam
-    : "en") as Locale;
+    : defaultLocale()) as Locale;
 
   let post;
   try {
