@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { GoogleAdSenseHead } from "@/components/google-adsense";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontClassNames } from "@/lib/fonts";
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
       className={`${fontClassNames} min-h-screen`}
     >
       <head>
+        <GoogleAdSenseHead />
         <link
           rel="alternate"
           hrefLang="en"
