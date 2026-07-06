@@ -4,15 +4,30 @@
 
 import crypto from "crypto";
 
+function kstLabel(iso) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    dateStyle: "medium",
+    timeStyle: "medium",
+  }).format(new Date(iso));
+}
+
+function maskPropertyId(id) {
+  if (!id || id.length < 4) return "(설정됨)";
+  return `${id.slice(0, 2)}…${id.slice(-2)}`;
+}
+
 async function getGoogleAccessToken(scopes) {
   const raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON?.trim();
-  if (!raw) return null;
+  if (!raw) {
+    return { token: null, error: "GOOGLE_SERVICE_ACCOUNT_JSON 미설정" };
+  }
 
   let creds;
   try {
     creds = JSON.parse(raw);
   } catch {
-    return null;
+    return { token: null, error: "GOOGLE_SERVICE_ACCOUNT_JSON JSON 파싱 실패" };
   }
 
   const now = Math.floor(Date.now() / 1000);
@@ -45,90 +60,145 @@ async function getGoogleAccessToken(scopes) {
     }),
   });
 
-  if (!response.ok) return null;
+  if (!response.ok) {
+    const body = await response.text();
+    return {
+      token: null,
+      error: `OAuth 토큰 실패 HTTP ${response.status}: ${body.slice(0, 120)}`,
+    };
+  }
   const data = await response.json();
-  return data.access_token ?? null;
+  if (!data.access_token) {
+    return { token: null, error: "OAuth 응답에 access_token 없음" };
+  }
+  return { token: data.access_token, serviceEmail: creds.client_email };
+}
+
+async function runGaReport(propertyId, token, body) {
+  const response = await fetch(
+    `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  );
+
+  if (!response.ok) {
+    const text = await response.text();
+    return { ok: false, error: `GA4 API HTTP ${response.status}: ${text.slice(0, 200)}` };
+  }
+
+  return { ok: true, data: await response.json() };
 }
 
 export async function fetchGaTrafficSummary() {
-  const propertyId = process.env.GA4_PROPERTY_ID?.trim();
-  if (!propertyId) return null;
-
-  const token = await getGoogleAccessToken([
-    "https://www.googleapis.com/auth/analytics.readonly",
-  ]);
-  if (!token) return null;
-
-  const response = await fetch(
-    `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
-        metrics: [
-          { name: "activeUsers" },
-          { name: "sessions" },
-          { name: "screenPageViews" },
-        ],
-      }),
-    },
-  );
-
-  if (!response.ok) return null;
-  const data = await response.json();
-  const values = data.rows?.[0]?.metricValues;
-  if (!values) return null;
-
-  return {
-    activeUsers7d: Number(values[0]?.value ?? 0),
-    sessions7d: Number(values[1]?.value ?? 0),
-    pageViews7d: Number(values[2]?.value ?? 0),
-  };
+  const bundle = await fetchGaReportBundle();
+  return bundle.traffic;
 }
 
-/** Top blog landing paths (7d) — proxy for keyword/page correlation. */
 export async function fetchGaTopBlogPages(limit = 8) {
-  const propertyId = process.env.GA4_PROPERTY_ID?.trim();
-  if (!propertyId) return [];
+  const bundle = await fetchGaReportBundle({ topPagesLimit: limit });
+  return bundle.topPages;
+}
 
-  const token = await getGoogleAccessToken([
+/**
+ * Full GA4 fetch with connection metadata for admin report.
+ * @param {{ topPagesLimit?: number }} [options]
+ */
+export async function fetchGaReportBundle(options = {}) {
+  const fetchedAt = new Date().toISOString();
+  const propertyId = process.env.GA4_PROPERTY_ID?.trim() ?? "";
+  const hasProperty = Boolean(propertyId);
+  const hasServiceAccount = Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON?.trim());
+
+  const meta = {
+    fetchedAt,
+    fetchedAtKst: kstLabel(fetchedAt),
+    propertyIdMasked: hasProperty ? maskPropertyId(propertyId) : null,
+    propertyConfigured: hasProperty,
+    serviceAccountConfigured: hasServiceAccount,
+    connected: false,
+    dateRange: "7daysAgo ~ today (KST 기준 GA4 집계)",
+    reportingLagNote:
+      "GA4 Data API는 실시간 스트림이 아닙니다. 일반적으로 최근 24–48시간 데이터가 확정·반영됩니다. 아래 **수집 시각**은 API 조회 시각입니다.",
+    error: null,
+    serviceEmail: null,
+  };
+
+  if (!hasProperty) {
+    meta.error = "GA4_PROPERTY_ID 미설정";
+    return { traffic: null, topPages: [], meta };
+  }
+  if (!hasServiceAccount) {
+    meta.error = "GOOGLE_SERVICE_ACCOUNT_JSON 미설정";
+    return { traffic: null, topPages: [], meta };
+  }
+
+  const { token, error: tokenError, serviceEmail } = await getGoogleAccessToken([
     "https://www.googleapis.com/auth/analytics.readonly",
   ]);
-  if (!token) return [];
+  meta.serviceEmail = serviceEmail ?? null;
 
-  const response = await fetch(
-    `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+  if (!token) {
+    meta.error = tokenError ?? "OAuth 토큰 획득 실패";
+    return { traffic: null, topPages: [], meta };
+  }
+
+  const trafficResult = await runGaReport(propertyId, token, {
+    dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
+    metrics: [
+      { name: "activeUsers" },
+      { name: "sessions" },
+      { name: "screenPageViews" },
+    ],
+  });
+
+  if (!trafficResult.ok) {
+    meta.error = trafficResult.error ?? "traffic report 실패";
+    return { traffic: null, topPages: [], meta };
+  }
+
+  const values = trafficResult.data.rows?.[0]?.metricValues;
+  const traffic = values
+    ? {
+        activeUsers7d: Number(values[0]?.value ?? 0),
+        sessions7d: Number(values[1]?.value ?? 0),
+        pageViews7d: Number(values[2]?.value ?? 0),
+      }
+    : {
+        activeUsers7d: 0,
+        sessions7d: 0,
+        pageViews7d: 0,
+      };
+
+  const limit = options.topPagesLimit ?? 8;
+  const pagesResult = await runGaReport(propertyId, token, {
+    dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
+    dimensions: [{ name: "pagePath" }],
+    metrics: [{ name: "screenPageViews" }],
+    dimensionFilter: {
+      filter: {
+        fieldName: "pagePath",
+        stringFilter: { matchType: "CONTAINS", value: "/blog/" },
       },
-      body: JSON.stringify({
-        dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
-        dimensions: [{ name: "pagePath" }],
-        metrics: [{ name: "screenPageViews" }],
-        dimensionFilter: {
-          filter: {
-            fieldName: "pagePath",
-            stringFilter: { matchType: "CONTAINS", value: "/blog/" },
-          },
-        },
-        orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
-        limit,
-      }),
     },
-  );
+    orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
+    limit,
+  });
 
-  if (!response.ok) return [];
+  const topPages = pagesResult.ok
+    ? (pagesResult.data.rows ?? []).map((row) => ({
+        path: row.dimensionValues?.[0]?.value ?? "",
+        views: Number(row.metricValues?.[0]?.value ?? 0),
+      }))
+    : [];
 
-  const data = await response.json();
-  return (data.rows ?? []).map((row) => ({
-    path: row.dimensionValues?.[0]?.value ?? "",
-    views: Number(row.metricValues?.[0]?.value ?? 0),
-  }));
+  meta.connected = true;
+  meta.error = null;
+
+  return { traffic, topPages, meta };
 }

@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T00:52:33.421Z'
+updatedAt: '2026-07-06T01:21:48.188Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 9:52
+- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:21
 - **스캔 대상:** 발행 글 19 slug / 38 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 

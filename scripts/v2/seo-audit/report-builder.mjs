@@ -25,10 +25,10 @@ function fmtPct(n) {
 
 /**
  * @param {object} analysis from runSeoAuditAnalysis
- * @param {{ traffic?: object|null, topPages?: Array }} ga
+ * @param {{ traffic?: object|null, topPages?: Array, meta?: object }} ga
  */
 export function buildSeoAuditMarkdown(analysis, ga = {}) {
-  const { traffic, topPages = [] } = ga;
+  const { traffic, topPages = [], meta } = ga;
   const lines = [];
 
   lines.push("## 편집부 개요");
@@ -85,8 +85,16 @@ export function buildSeoAuditMarkdown(analysis, ga = {}) {
 
   lines.push("## GA4 — 최근 7일 유입 (연관성 참고)");
   lines.push("");
-  if (traffic) {
-    lines.push("✅ **GA4 연결됨** — 아래 수치는 최근 7일 기준입니다.");
+  if (traffic && meta?.connected) {
+    lines.push("✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.");
+    lines.push("");
+    lines.push(`- **API 수집 시각 (KST):** ${meta.fetchedAtKst}`);
+    lines.push(`- **속성 ID:** \`${meta.propertyIdMasked}\``);
+    if (meta.serviceEmail) {
+      lines.push(`- **서비스 계정:** \`${meta.serviceEmail}\``);
+    }
+    lines.push(`- **집계 기간:** ${meta.dateRange}`);
+    lines.push(`- ⚠️ ${meta.reportingLagNote}`);
     lines.push("");
     lines.push("| 지표 | 값 |");
     lines.push("| --- | --- |");
@@ -94,6 +102,13 @@ export function buildSeoAuditMarkdown(analysis, ga = {}) {
     lines.push(`| Sessions | ${traffic.sessions7d} |`);
     lines.push(`| Page views | ${traffic.pageViews7d} |`);
     lines.push("");
+  } else if (meta?.propertyConfigured && meta?.serviceAccountConfigured) {
+    lines.push("🚨 **GA4 설정은 있으나 API 조회 실패**");
+    lines.push("");
+    lines.push(`- **시도 시각 (KST):** ${meta.fetchedAtKst}`);
+    lines.push(`- **오류:** ${meta.error ?? "unknown"}`);
+    lines.push("");
+    lines.push(...buildGa4SetupGuide());
   } else {
     lines.push(...buildGa4SetupGuide());
   }

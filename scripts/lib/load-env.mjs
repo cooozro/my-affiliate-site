@@ -41,6 +41,20 @@ export function loadEnvFile(root = process.cwd()) {
   logSearchEnvStatus();
 }
 
+/** Debug: GA4 env presence (secrets masked). */
+export function logGa4EnvStatus() {
+  const propertyId = process.env.GA4_PROPERTY_ID?.trim() ?? "";
+  const hasJson = Boolean(process.env.GOOGLE_SERVICE_ACCOUNT_JSON?.trim());
+  console.log(
+    "[load-env] GA4_PROPERTY_ID:",
+    propertyId ? maskSecret(propertyId) : "(missing)",
+  );
+  console.log(
+    "[load-env] GOOGLE_SERVICE_ACCOUNT_JSON:",
+    hasJson ? "(set)" : "(missing)",
+  );
+}
+
 function maskSecret(value, visible = 4) {
   if (!value) return "(empty)";
   if (value.length <= visible * 2) return "*".repeat(value.length);
