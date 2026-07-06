@@ -5,34 +5,30 @@
   "requestedAt": "2026-07-06T03:36:25.181Z",
   "writingMode": "stable",
   "contentProfile": "head-to-head",
-  "toneVariant": "question-led",
-  "serpKeyword": "2026 budget laptops buying guide 장단점",
+  "toneVariant": "myth-bust",
+  "serpKeyword": "2026 coffee machine types buying guide 비교",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.17 > 0.15",
+  "fallbackReason": "shingle overlap 0.32 > 0.15",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "laptops",
-    "category": "computing",
-    "angle": "budget laptops: CPU tiers, RAM upgrade paths, display nits, and battery for students",
-    "imageQuery": "laptop desk workspace",
-    "liveData": true,
+    "id": "coffee-machines",
+    "category": "kitchen",
+    "angle": "coffee machine types: capsule vs semi-auto vs fully automatic, milk systems, descaling",
+    "imageQuery": "espresso coffee machine kitchen",
+    "liveData": false,
     "seasons": [
       "fall",
-      "spring",
       "winter"
     ]
   },
   "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Integrity gate failed for 2026-laptops-head-to-head: 2026-laptops-head-to-head/en.md: description over 160 chars | 2026-laptops-head-to-head/en.md: missing FAQ / 자주 묻는 질문 section | 2026-laptops-head-to-head/ko.md: missing FAQ / 자주 묻는 질문 section",
-  "requeuedAt": "2026-07-06T03:38:47.919Z",
-  "lastAttemptAt": "2026-07-06T04:02:14.997Z",
-  "writtenSlug": "2026-laptops-head-to-head",
-  "completedAt": "2026-07-06T04:02:00.000Z"
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: myth-bust. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastError": null,
+  "requeuedAt": "2026-07-06T05:17:10.956Z"
 }

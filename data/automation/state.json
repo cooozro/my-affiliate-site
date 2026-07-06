@@ -1,5 +1,5 @@
 {
-  "topicIndex": 30,
+  "topicIndex": 16,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -24,7 +24,8 @@
     "fitness-trackers",
     "laptops",
     "smart-home-cameras",
-    "laptops"
+    "laptops",
+    "coffee-machines"
   ],
   "lastPublishAt": "2026-07-06T03:36:25.166Z",
   "nextPublishAt": "2026-07-07T01:20:00.000Z",
@@ -282,10 +283,6 @@
   ],
   "topicHistory": [
     {
-      "id": "2026-air-purifiers-guide",
-      "at": "2026-06-30T13:06:31.559Z"
-    },
-    {
       "id": "power-banks",
       "category": "accessories",
       "at": "2026-06-30T13:06:31.564Z"
@@ -422,6 +419,12 @@
       "id": "laptops",
       "category": "computing",
       "at": "2026-07-06T03:38:43.329Z"
+    },
+    {
+      "id": "coffee-machines",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/소형주방",
+      "at": "2026-07-06T05:17:05.827Z"
     }
   ],
   "formatHistory": [
@@ -444,9 +447,15 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T04:02:42.864Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-07-06T05:14:36.917Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "homepage-featured-mismatch",
+        "message": "Home featured is welcome, expected latest 2026-laptops-buying-guide",
+        "severity": "warning"
+      }
+    ],
     "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-06",
@@ -511,6 +520,17 @@
       "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
       "keyword": "2026 cordless stick vacuums buying guide 후기",
       "at": "2026-07-06T03:38:43.316Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "laptops",
+      "toneVariant": "question-led",
+      "slug": "2026-laptops-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.17 > 0.15",
+      "keyword": "2026 budget laptops buying guide 장단점",
+      "at": "2026-07-06T05:17:05.815Z"
     }
   ]
 }

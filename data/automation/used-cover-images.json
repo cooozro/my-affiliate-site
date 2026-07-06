@@ -487,6 +487,21 @@
       "hash": "34267e028f92b67be8d9491c255d9e1238115d8f204e726e7bf92d7cd773f679",
       "provider": "pexels",
       "registeredAt": "2026-07-06T04:01:43.750Z"
+    },
+    {
+      "slug": "2026-laptops-head-to-head",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-06T05:16:41.398Z"
+    },
+    {
+      "slug": "2026-laptops-head-to-head",
+      "url": "https://images.pexels.com/photos/20955062/pexels-photo-20955062.jpeg",
+      "assetKey": "pexels:20955062",
+      "hash": "a7030baec4ea1d057d0d6f6a405aca01a464e33c8d1ab37597510c15ef96826e",
+      "provider": "pexels",
+      "registeredAt": "2026-07-06T05:16:46.811Z"
     }
   ]
 }
