@@ -39,6 +39,7 @@ export default async function LocaleLayout({
     >
       <head>
         <GoogleAdSenseHead />
+        <meta name="google-adsense-account" content="ca-pub-9630508246667414" />
         <link
           rel="alternate"
           hrefLang="en"
