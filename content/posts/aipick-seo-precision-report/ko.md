@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T01:22:24.407Z'
+updatedAt: '2026-07-06T01:24:19.715Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:22
+- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:24
 - **스캔 대상:** 발행 글 19 slug / 38 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-06T01:22:24.407Z'
 
 🚨 **GA4 설정은 있으나 API 조회 실패**
 
-- **시도 시각 (KST):** 2026. 7. 6. 오전 10:22:24
+- **시도 시각 (KST):** 2026. 7. 6. 오전 10:24:19
 - **오류:** GA4 API HTTP 403: {
   "error": {
     "code": 403,
@@ -90,10 +90,12 @@ updatedAt: '2026-07-06T01:22:24.407Z'
 
 **값 입력 방법**
 
+0. **GCP → API 및 서비스 → 라이브러리** → `Google Analytics Data API` **사용 설정** (403 오류 시 필수)
 1. `GA4_PROPERTY_ID` — GA4 관리 → 속성 설정 → **속성 ID** (숫자만, 예: `123456789`)
 2. `GOOGLE_SERVICE_ACCOUNT_JSON` — GCP 서비스 계정 JSON **전체**를 한 줄로 붙여넣기
 3. GA4 → 속성 액세스 관리 → 서비스 계정 이메일에 **뷰어(Viewer)** 권한 부여
 
+**API 활성화 링크:** [Google Analytics Data API](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com) (서비스 계정이 속한 GCP 프로젝트에서 Enable)
 **로컬 `.env` 예시**
 
 ```
