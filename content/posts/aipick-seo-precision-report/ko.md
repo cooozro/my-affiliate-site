@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T01:24:19.715Z'
+updatedAt: '2026-07-06T01:39:10.962Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:24
+- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:39
 - **스캔 대상:** 발행 글 19 slug / 38 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
@@ -72,11 +72,11 @@ updatedAt: '2026-07-06T01:24:19.715Z'
 
 🚨 **GA4 설정은 있으나 API 조회 실패**
 
-- **시도 시각 (KST):** 2026. 7. 6. 오전 10:24:19
+- **시도 시각 (KST):** 2026. 7. 6. 오전 10:39:10
 - **오류:** GA4 API HTTP 403: {
   "error": {
     "code": 403,
-    "message": "Google Analytics Data API has not been used in project 676936449800 before or it is disabled. Enable it by visiting https://console.developers.google.co
+    "message": "User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/repo
 
 ### GA4 연결 가이드
 
