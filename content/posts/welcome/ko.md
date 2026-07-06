@@ -11,8 +11,10 @@ coverImageAlt: 책상 위 노트북과 메모
 coverImageCredit: Photo by fauxels / Pexels
 coverImageAltKo: 책상 위 노트북과 메모
 publishedAt: '2026-06-25T08:00:00.000Z'
+draft: true
+updatedAt: '2026-07-06T05:09:49.793Z'
+createdAt: '2026-07-06T05:09:49.793Z'
 ---
-
 ## 리뷰 프레임워크
 
 AI Pick & Report는 스마트폰, 오디오 기기, 소비자 전자제품에 대한 심층 가이드를 발행합니다. 모든 글은 **검증 가능한 스펙**, 가격 데이터, 실사용 시나리오를 기반으로 작성됩니다.
