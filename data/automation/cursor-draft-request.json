@@ -1,34 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-laptops-buying-guide",
-  "requestedAt": "2026-07-06T03:36:25.181Z",
-  "writingMode": "stable",
-  "contentProfile": "head-to-head",
-  "toneVariant": "myth-bust",
-  "serpKeyword": "2026 coffee machine types buying guide 비교",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.32 > 0.15",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "coffee-machines",
-    "category": "kitchen",
-    "angle": "coffee machine types: capsule vs semi-auto vs fully automatic, milk systems, descaling",
-    "imageQuery": "espresso coffee machine kitchen",
-    "liveData": false,
-    "seasons": [
-      "fall",
-      "winter"
-    ]
-  },
-  "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: myth-bust. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null,
-  "requeuedAt": "2026-07-06T05:17:10.956Z"
+  "status": "complete",
+  "completedAt": "2026-07-06T05:59:30.974Z",
+  "writtenSlug": "2026-coffee-machines-head-to-head",
+  "draftCount": 2,
+  "lastError": null
 }

@@ -502,6 +502,21 @@
       "hash": "a7030baec4ea1d057d0d6f6a405aca01a464e33c8d1ab37597510c15ef96826e",
       "provider": "pexels",
       "registeredAt": "2026-07-06T05:16:46.811Z"
+    },
+    {
+      "slug": "2026-coffee-machines-head-to-head",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-06T05:59:11.791Z"
+    },
+    {
+      "slug": "2026-coffee-machines-head-to-head",
+      "url": "https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg",
+      "assetKey": "pexels:19651262",
+      "hash": "f32a3cab32aafe4b27ff0f1f21fbfce6b313a3ee203648c838c6cb33768b39f4",
+      "provider": "pexels",
+      "registeredAt": "2026-07-06T05:59:14.723Z"
     }
   ]
 }

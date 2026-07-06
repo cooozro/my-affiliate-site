@@ -447,7 +447,7 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T05:41:08.133Z",
+    "at": "2026-07-06T05:57:11.524Z",
     "issueCount": 2,
     "issues": [
       {
@@ -457,7 +457,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 124min",
+        "message": "Cursor replenish pending 140min",
         "severity": "warning"
       }
     ],
@@ -536,6 +536,17 @@
       "fallbackReason": "shingle overlap 0.17 > 0.15",
       "keyword": "2026 budget laptops buying guide 장단점",
       "at": "2026-07-06T05:17:05.815Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "coffee-machines",
+      "toneVariant": "myth-bust",
+      "slug": "2026-coffee-machines-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.32 > 0.15",
+      "keyword": "2026 coffee machine types buying guide 비교",
+      "at": "2026-07-06T05:59:30.971Z"
     }
   ]
 }
