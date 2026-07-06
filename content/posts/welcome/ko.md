@@ -1,7 +1,7 @@
 ---
 title: 제품 리뷰 방법론
 description: AI Pick & Report가 스마트폰·가전·전자기기를 구조화된 데이터로 평가하는 방법을 소개합니다.
-date: '2026-06-25'
+date: '2026-07-06'
 tags:
   - 방법론
   - 기술 리뷰
@@ -10,10 +10,9 @@ coverImage: /images/posts/welcome/cover.jpg
 coverImageAlt: 책상 위 노트북과 메모
 coverImageCredit: Photo by fauxels / Pexels
 coverImageAltKo: 책상 위 노트북과 메모
-publishedAt: '2026-06-25T08:00:00.000Z'
-draft: true
-updatedAt: '2026-07-06T05:09:49.793Z'
-createdAt: '2026-07-06T05:09:49.793Z'
+publishedAt: '2026-07-06T05:14:06.874Z'
+draft: false
+updatedAt: '2026-07-06T05:14:06.874Z'
 ---
 ## 리뷰 프레임워크
 
