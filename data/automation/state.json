@@ -447,17 +447,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T05:57:11.524Z",
-    "issueCount": 2,
+    "at": "2026-07-06T05:59:57.642Z",
+    "issueCount": 1,
     "issues": [
       {
         "code": "homepage-featured-mismatch",
         "message": "Home featured is welcome, expected latest 2026-laptops-buying-guide",
-        "severity": "warning"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 140min",
         "severity": "warning"
       }
     ],
