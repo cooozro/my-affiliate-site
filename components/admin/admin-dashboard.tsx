@@ -4,8 +4,11 @@ import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import Link from "next/link";
 import {
   adminPreviewLocale,
+  isAdminPinnedPost,
   isAdminPublishBlocked,
+  isAutomationBufferDraft,
 } from "@/lib/admin-only-posts";
+import { TARGET_DRAFT_COUNT } from "@/lib/publish-schedule";
 
 type AdminPostRow = {
   slug: string;
@@ -36,6 +39,18 @@ function adminWrittenDateLabel(post: AdminPostRow): string {
     : (post.publishedAt ?? post.date);
   if (!raw) return "—";
   return raw.slice(0, 10);
+}
+
+function bufferDraftSlugs(posts: AdminPostRow[]): string[] {
+  return posts
+    .filter((post) => isAutomationBufferDraft(post))
+    .sort((a, b) => {
+      const ta = new Date(a.createdAt ?? a.date).getTime();
+      const tb = new Date(b.createdAt ?? b.date).getTime();
+      return ta - tb;
+    })
+    .slice(0, TARGET_DRAFT_COUNT)
+    .map((post) => post.slug);
 }
 
 type PostFilter = "all" | "cover-issues";
@@ -340,6 +355,7 @@ export function AdminDashboard() {
   }
 
   const coverIssueCount = posts.filter((p) => p.coverStatus !== "ok").length;
+  const pinnedBufferSlugs = bufferDraftSlugs(posts);
   const visiblePosts =
     postFilter === "cover-issues"
       ? posts.filter((p) => p.coverStatus !== "ok")
@@ -611,13 +627,21 @@ export function AdminDashboard() {
               {visiblePosts.map((post) => {
                 const publishBlocked = isAdminPublishBlocked(post.slug);
                 const previewLocale = adminPreviewLocale(post);
+                const pinned = isAdminPinnedPost(post.slug, pinnedBufferSlugs);
 
                 return (
                 <tr key={post.slug} className="border-b border-border/60">
                   <td className="px-3 py-3 align-top">
                     <CoverCell post={post} imageVersion={imageVersion} />
                   </td>
-                  <td className="px-3 py-3 font-mono text-xs">{post.slug}</td>
+                  <td className="px-3 py-3 font-mono text-xs">
+                    {pinned ? (
+                      <span className="mr-1" title="목록 상단 고정">
+                        📌
+                      </span>
+                    ) : null}
+                    {post.slug}
+                  </td>
                   <td className="px-3 py-3">
                     {publishBlocked ? post.titleKo : post.titleEn}
                   </td>

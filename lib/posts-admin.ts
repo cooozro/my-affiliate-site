@@ -3,6 +3,7 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { sortAdminPostRows } from "@/lib/admin-only-posts";
 import { listGithubDirectory, readGithubFile } from "@/lib/admin-services";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
@@ -21,25 +22,8 @@ export type AdminPostRow = {
   liveData: boolean;
 };
 
-/** Admin list sort — 작성일 only (never updatedAt). */
-export function adminPostWrittenIso(row: AdminPostRow): string {
-  if (row.draft) {
-    return row.createdAt ?? row.date;
-  }
-  return row.publishedAt ?? row.date;
-}
-
-function adminPostSortTime(row: AdminPostRow): number {
-  const t = new Date(adminPostWrittenIso(row)).getTime();
-  return Number.isNaN(t) ? 0 : t;
-}
-
 function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
-  return rows.sort((a, b) => {
-    const diff = adminPostSortTime(b) - adminPostSortTime(a);
-    if (diff !== 0) return diff;
-    return b.slug.localeCompare(a.slug);
-  });
+  return sortAdminPostRows(rows);
 }
 
 function listSlugDirs(): string[] {

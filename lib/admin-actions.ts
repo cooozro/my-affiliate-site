@@ -32,14 +32,10 @@ import {
   previewPublishSchedule,
   TARGET_DRAFT_COUNT,
 } from "@/lib/publish-schedule";
-import { isAdminPublishBlocked } from "@/lib/admin-only-posts";
-
-/** Internal/editorial slugs — not counted toward automation draft buffer. */
-const AUTOMATION_DRAFT_EXCLUDE = new Set([
-  "welcome",
-  "adsense-seo-checklist",
-  "aipick-seo-precision-report",
-]);
+import {
+  ADMIN_DRAFT_EXCLUDE,
+  isAdminPublishBlocked,
+} from "@/lib/admin-only-posts";
 
 export type AutomationStatus = {
   mode: "publish-only";
@@ -123,7 +119,7 @@ async function loadCursorDraftRequest(): Promise<Record<string, unknown> | null>
 
 function countAutomationDrafts(posts: AdminPostRow[]): number {
   return posts.filter(
-    (post) => post.draft && !AUTOMATION_DRAFT_EXCLUDE.has(post.slug),
+    (post) => post.draft && !ADMIN_DRAFT_EXCLUDE.has(post.slug),
   ).length;
 }
 
