@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T03:36:14.987Z'
+updatedAt: '2026-07-06T13:06:41.778Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오후 12:36
-- **스캔 대상:** 발행 글 20 slug / 40 locale 파일
+- **생성 시각 (KST):** 2026년 7월 6일 월요일 오후 10:06
+- **스캔 대상:** 발행 글 21 slug / 42 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -27,15 +27,15 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 | --- | --- | --- |
 | 운영 로직 상태 | **91%** | ✅ 좋음 |
 | 수익성·효율성 지표 | **98%** | ✅ 좋음 |
-| 시스템 건강도 | **100%** | ✅ 좋음 |
+| 시스템 건강도 | **99%** | ✅ 좋음 |
 
 ### 운영 로직 상태
 
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **20** slug (welcome 등 1건 제외)
-- locale 파일 **40**개 분석
+- 스캔 대상 **21** slug (welcome 등 1건 제외)
+- locale 파일 **42**개 분석
 
 ### 수익성·효율성 지표
 
@@ -47,11 +47,11 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 
 ### 시스템 건강도
 
-✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
+✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
 
-- 저품질 방어(Guardian) **100%**
+- 저품질 방어(Guardian) **99%**
 - 정책·무결성 게이트 publish phase 스캔
-- ✅ 고위험 slug 없음
+- 🚨 **수동 확인 권장 4건** — 구조 < 60% 또는 정책 이슈
 
 ---
 
@@ -63,8 +63,8 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 | ↳ 시각화 | | ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_ | |
 | JSON-LD 준비도 | **96%** | ✅ 좋음 | Article/FAQ/HowTo 스키마 전제 조건 |
 | ↳ 시각화 | | ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ | |
-| 저품질 방어 | **100%** | ✅ 좋음 | Guardian 정책·무결성 게이트 기준 |
-| ↳ 시각화 | | ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
+| 저품질 방어 | **99%** | ✅ 좋음 | Guardian 정책·무결성 게이트 기준 |
+| ↳ 시각화 | | ✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
 | 구조화 데이터 적용 가능 비율 | **100%** | ✅ 좋음 | JSON-LD 이슈 0건 EN 포스트 비율 |
 | ↳ 시각화 | | ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 7. 6. 오후 12:36:14
+- **API 수집 시각 (KST):** 2026. 7. 6. 오후 10:06:40
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -80,22 +80,22 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 12 |
-| Sessions | 50 |
-| Page views | 270 |
+| Active users | 11 |
+| Sessions | 52 |
+| Page views | 321 |
 
 ### 상위 블로그 랜딩 (7일)
 
 | 페이지 | 조회수 |
 | --- | --- |
 | `/en/blog/2026-air-purifiers-guide` | 23 |
+| `/ko/blog/welcome` | 21 |
 | `/en/blog/2026-summer-ac-buying-checklist` | 15 |
 | `/ko/blog/2026-summer-ac-buying-checklist` | 9 |
-| `/en/blog/2026-budget-wireless-earbuds-top5` | 8 |
+| `/en/blog/2026-budget-wireless-earbuds-top5` | 7 |
 | `/ko/blog/2026-gaming-consoles-scenario-guide` | 6 |
+| `/en/blog/welcome` | 5 |
 | `/ko/blog/2026-air-fryers-checklist` | 5 |
-| `/en/blog/2026-portable-vs-window-ac-head-to-head` | 4 |
-| `/en/blog/2026-summer-bluetooth-speakers-guide` | 4 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
@@ -128,13 +128,33 @@ updatedAt: '2026-07-06T03:36:14.987Z'
 
 ## 저품질 방어 스캔
 
-✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
+✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
 
 Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)로 위험 문구·게이트 실패를 탐지합니다.
 
 ### 주의 목록 (구조 < 60 또는 정책 이슈)
 
-✅ _현재 게이트 기준 고위험 slug 없음._
+> 🚨 **즉시 확인 권장 — 4건** (구조 < 60% 또는 정책·무결성 이슈)
+
+#### 🚨 2026-portable-vs-window-ac-head-to-head (`ko`)
+
+- ✅ 구조 **80%** | JSON-LD **95%** | 방어 **92%**
+- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-summer-ac-buying-checklist
+
+#### 🚨 2026-portable-vs-window-ac-head-to-head (`en`)
+
+- ✅ 구조 **90%** | JSON-LD **95%** | 방어 **92%**
+- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-summer-ac-buying-checklist
+
+#### 🚨 2026-summer-ac-buying-checklist (`en`)
+
+- ✅ 구조 **95%** | JSON-LD **100%** | 방어 **92%**
+- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-portable-vs-window-ac-head-to-head
+
+#### 🚨 2026-summer-ac-buying-checklist (`ko`)
+
+- ✅ 구조 **95%** | JSON-LD **100%** | 방어 **92%**
+- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-portable-vs-window-ac-head-to-head
 
 ## 키워드 밀도 샘플 (EN 상위 글)
 
