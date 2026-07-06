@@ -50,7 +50,7 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 
 Rotating pool in `scripts/automation/topics.mjs` (season-first via `scripts/lib/season-topics.mjs`).
 
-**Topic diversity:** `scripts/lib/topic-diversity.mjs` blocks a 3rd consecutive draft/pick with the same topic id, category, or `topicCluster` (e.g. `air-conditioning` for portable/window AC). Max **2 in a row**; history tracked in `state.json` → `topicHistory`.
+**Topic diversity:** `scripts/lib/topic-diversity.mjs` blocks a 3rd consecutive draft/pick with the same topic id, category, or `topicCluster` (e.g. `air-conditioning` for portable/window AC). Max **2 in a row**; history tracked in `state.json` → `topicHistory`. During **tier1-first-pass**, `taxonomyGroup` spread defers a product aisle that already has a post when another aisle still has zero coverage (e.g. robot vacuum published → stick vacuum deferred until `coffee-machines` etc. are written).
 
 - audio (earbuds, speakers)
 - smartphones, tablets

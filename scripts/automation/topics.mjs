@@ -21,9 +21,12 @@ import {
 } from "../lib/content-roadmap.mjs";
 import {
   filterByTopicDiversity,
+  filterByTaxonomyGroupSpread,
   getTopicHistory,
   recordTopicPick,
+  taxonomyGroupCoveragePenalty,
   wouldViolateTopicDiversity,
+  wouldViolateTaxonomyGroupSpread,
 } from "../lib/topic-diversity.mjs";
 
 export const POST_TOPICS = PRODUCT_TOPICS;
@@ -33,8 +36,14 @@ function supportsFormat(topic, contentProfile) {
   return !topic.allowedFormats || topic.allowedFormats.includes(contentProfile);
 }
 
-function sortByFreshness(candidates, coverage, clusterCoverage, recentlyUsed) {
+function sortByFreshness(candidates, coverage, clusterCoverage, recentlyUsed, roadmapPhase) {
   return [...candidates].sort((a, b) => {
+    if (roadmapPhase === "tier1-first-pass") {
+      const taxA = taxonomyGroupCoveragePenalty(a, coverage);
+      const taxB = taxonomyGroupCoveragePenalty(b, coverage);
+      if (taxA !== taxB) return taxA - taxB;
+    }
+
     const clusterA = a.topicCluster ?? a.cluster;
     const clusterB = b.topicCluster ?? b.cluster;
     const clusterUsageA = clusterA
@@ -106,9 +115,26 @@ export function pickTopic(state, options = {}) {
     coverage,
     clusterCoverage,
     recentlyUsed,
+    roadmapPhase,
   );
 
+  candidates = filterByTaxonomyGroupSpread(candidates, roadmapPhase, coverage);
   candidates = filterByTopicDiversity(candidates, topicHistory);
+
+  if (candidates.length === 0) {
+    candidates = sortByFreshness(
+      POST_TOPICS.filter(
+        (t) =>
+          formatAvailable(t) &&
+          !wouldViolateTaxonomyGroupSpread(t, roadmapPhase, coverage).blocked &&
+          !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      ),
+      coverage,
+      clusterCoverage,
+      recentlyUsed,
+      roadmapPhase,
+    );
+  }
 
   if (candidates.length === 0) {
     candidates = sortByFreshness(
@@ -120,6 +146,7 @@ export function pickTopic(state, options = {}) {
       coverage,
       clusterCoverage,
       recentlyUsed,
+      roadmapPhase,
     );
   }
 
@@ -132,6 +159,7 @@ export function pickTopic(state, options = {}) {
       coverage,
       clusterCoverage,
       new Set(),
+      roadmapPhase,
     );
   }
 
@@ -165,11 +193,13 @@ export function pickTopic(state, options = {}) {
       POST_TOPICS.filter(
         (t) =>
           formatAvailable(t) &&
+          !wouldViolateTaxonomyGroupSpread(t, roadmapPhase, coverage).blocked &&
           !wouldViolateTopicDiversity(t, topicHistory).blocked,
       ),
       coverage,
       clusterCoverage,
       recentlyUsed,
+      roadmapPhase,
     );
     if (fallback.length > 0) {
       topic = pickFromCandidates(fallback, recentlyUsed, roadmapPhase);

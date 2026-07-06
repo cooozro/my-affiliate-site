@@ -321,6 +321,14 @@ const CLUSTER_NEGATIVES = {
     "timepiece",
   ],
   "smart-home": ["earbuds", "smartphone", "keyboard", "airplane", "aircraft"],
+  "floor-care": [
+    ...GLOBAL_STOCK_NEGATIVES,
+    "robot vacuum",
+    "round vacuum",
+    "autonomous vacuum",
+    "air purifier",
+    "air conditioner",
+  ],
 };
 
 const DEFAULT_NEGATIVES = [
@@ -458,6 +466,7 @@ const CLUSTER_FORBIDDEN = {
   power: ["clock", "wristwatch", "wall clock", "alarm clock", "watch"],
   audio: ["clock", "watch", "air conditioner"],
   smartphones: ["clock", "watch", "earbuds only"],
+  "floor-care": ["robot vacuum", "airplane", "aircraft"],
 };
 
 export function negativeTagsForCluster(topicCluster, slug) {

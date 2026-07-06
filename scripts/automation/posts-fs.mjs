@@ -6,7 +6,13 @@ import {
   runPublishIntegrityGate,
 } from "../lib/publish-integrity.mjs";
 import { getPublishTopicHistory, inferPostTopic } from "../lib/infer-post-topic.mjs";
-import { wouldViolateTopicDiversity } from "../lib/topic-diversity.mjs";
+import {
+  wouldViolateTaxonomyGroupSpread,
+  wouldViolateTopicDiversity,
+} from "../lib/topic-diversity.mjs";
+import { getRoadmapPhase } from "../lib/content-roadmap.mjs";
+import { getTopicFormatCoverage } from "../lib/topic-coverage.mjs";
+import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
 import { loadState } from "./state.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
@@ -81,20 +87,29 @@ export function countDrafts() {
 
 export function pickDraftForPublish(drafts, state = loadState()) {
   const history = getPublishTopicHistory(state);
+  const roadmapPhase = getRoadmapPhase(getTopicFormatCoverage());
 
   for (const draft of drafts) {
     const { data } = readPost(draft.slug, "en");
     const topic = inferPostTopic(draft.slug, data);
+    const topicDef =
+      PRODUCT_TOPICS.find((t) => t.id === topic.id) ?? {
+        id: topic.id,
+        category: topic.category,
+        topicCluster: topic.cluster,
+      };
+
     const violation = wouldViolateTopicDiversity(
       {
         id: topic.id,
         category: topic.category,
-        topicCluster: topic.cluster,
+        topicCluster: topicDef.topicCluster ?? topic.cluster,
       },
       history,
     );
+    const taxViolation = wouldViolateTaxonomyGroupSpread(topicDef, roadmapPhase);
 
-    if (!violation.blocked) {
+    if (!violation.blocked && !taxViolation.blocked) {
       if (draft.slug !== drafts[0]?.slug) {
         console.log(
           `Publish queue: skipped earlier draft(s) — picked ${draft.slug} to avoid topic clustering (${topic.cluster ?? topic.id}).`,

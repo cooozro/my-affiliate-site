@@ -73,13 +73,13 @@ const RULES = [
     pattern: /robot-vacuum|robot-vacuums/i,
     id: "robot-vacuums",
     category: "smart-home",
-    cluster: "cleaning",
+    cluster: "floor-care",
   },
   {
     pattern: /cordless-vacuum|stick-vacuum/i,
     id: "cordless-vacuums",
     category: "smart-home",
-    cluster: "cleaning",
+    cluster: "floor-care",
   },
   {
     pattern: /keyboard/i,
