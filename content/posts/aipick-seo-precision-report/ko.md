@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T01:39:10.962Z'
+updatedAt: '2026-07-06T03:35:36.706Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오전 10:39
-- **스캔 대상:** 발행 글 19 slug / 38 locale 파일
+- **생성 시각 (KST):** 2026년 7월 6일 월요일 오후 12:35
+- **스캔 대상:** 발행 글 20 slug / 40 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -25,17 +25,17 @@ updatedAt: '2026-07-06T01:39:10.962Z'
 
 | 축 | 점수 | 상태 |
 | --- | --- | --- |
-| 운영 로직 상태 | **74%** | ⚠️ 보통 |
+| 운영 로직 상태 | **91%** | ✅ 좋음 |
 | 수익성·효율성 지표 | **98%** | ✅ 좋음 |
 | 시스템 건강도 | **100%** | ✅ 좋음 |
 
 ### 운영 로직 상태
 
-⚠️ **74%** 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ _(보통)_
+✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
-- SERP 구조·검색 의도 일치 **74%**
-- 스캔 대상 **19** slug (welcome 등 1건 제외)
-- locale 파일 **38**개 분석
+- SERP 구조·검색 의도 일치 **91%**
+- 스캔 대상 **20** slug (welcome 등 1건 제외)
+- locale 파일 **40**개 분석
 
 ### 수익성·효율성 지표
 
@@ -59,8 +59,8 @@ updatedAt: '2026-07-06T01:39:10.962Z'
 
 | 지표 | 점수 | 상태 | 설명 |
 | --- | --- | --- | --- |
-| SERP 구조·검색 의도 일치 | **74%** | ⚠️ 보통 | H2 구성, 프로필별 필수 섹션(FAQ·방법론 등) |
-| ↳ 시각화 | | ⚠️ **74%** 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ _(보통)_ | |
+| SERP 구조·검색 의도 일치 | **91%** | ✅ 좋음 | H2 구성, 프로필별 필수 섹션(FAQ·방법론 등) |
+| ↳ 시각화 | | ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_ | |
 | JSON-LD 준비도 | **96%** | ✅ 좋음 | Article/FAQ/HowTo 스키마 전제 조건 |
 | ↳ 시각화 | | ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ | |
 | 저품질 방어 | **100%** | ✅ 좋음 | Guardian 정책·무결성 게이트 기준 |
@@ -69,14 +69,6 @@ updatedAt: '2026-07-06T01:39:10.962Z'
 | ↳ 시각화 | | ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
 
 ## GA4 — 최근 7일 유입 (연관성 참고)
-
-🚨 **GA4 설정은 있으나 API 조회 실패**
-
-- **시도 시각 (KST):** 2026. 7. 6. 오전 10:39:10
-- **오류:** GA4 API HTTP 403: {
-  "error": {
-    "code": 403,
-    "message": "User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/repo
 
 ### GA4 연결 가이드
 
@@ -107,7 +99,7 @@ _이미 `blog-automation` 등에 `GOOGLE_SERVICE_ACCOUNT_JSON`이 있다면 SEO 
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
-⚠️ **74%** 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ _(보통)_
+✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 발행 EN 글의 H2 구조와 `contentProfile` 템플릿 요구(FAQ, 방법론, 체크리스트 등) 일치도를 0–100%로 산출합니다. `welcome` 등 인사말 페이지는 제외됩니다.
 
@@ -115,11 +107,11 @@ _이미 `blog-automation` 등에 `GOOGLE_SERVICE_ACCOUNT_JSON`이 있다면 SEO 
 
 | Slug | Profile | H2 | 점수 | 상태 |
 | --- | --- | --- | --- | --- |
-| 2026-air-fryers-checklist | checklist | 8 | 85% | ✅ |
-| 2026-summer-ac-buying-checklist | checklist | 10 | 85% | ✅ |
-| 2026-webcams-checklist | checklist | 8 | 85% | ✅ |
-| 2026-gaming-consoles-scenario-guide | scenario-guide | 11 | 80% | ✅ |
-| 2026-noise-cancelling-headphones-head-to-head | head-to-head | 11 | 80% | ✅ |
+| 2026-air-fryers-checklist | checklist | 8 | 95% | ✅ |
+| 2026-summer-ac-buying-checklist | checklist | 10 | 95% | ✅ |
+| 2026-webcams-checklist | checklist | 8 | 95% | ✅ |
+| 2026-action-cameras-buying-guide | buying-guide | 14 | 90% | ✅ |
+| 2026-air-purifiers-guide | buying-guide | 14 | 90% | ✅ |
 
 ## 데이터 무결성 — JSON-LD
 

@@ -56,6 +56,7 @@ function profileStructureScore(profile, h2s, body) {
   const h2Text = h2s.join(" ").toLowerCase();
   const bodyLower = body.toLowerCase();
 
+  // Core SERP skeleton (all profiles)
   if (h2s.length >= 4) score += 25;
   else if (h2s.length >= 3) score += 15;
 
@@ -65,11 +66,48 @@ function profileStructureScore(profile, h2s, body) {
   if (/faq|자주 묻는/.test(h2Text)) score += 15;
   if (/overview|개요|editorial/.test(h2Text)) score += 10;
 
+  // Profile-specific intent signals
   if (profile === "checklist" && /checklist|체크/.test(h2Text)) score += 15;
   if (profile === "head-to-head" && /vs|comparison|비교|대결/.test(bodyLower)) {
     score += 10;
   }
   if (profile === "scenario-guide" && /scenario|시나리오/.test(bodyLower)) {
+    score += 10;
+  }
+
+  // buying-guide: ranked comparison + scenario / pre-buy checks (already in live posts)
+  if (profile === "buying-guide") {
+    if (
+      /comparison|top\s*\d+|versus|ranking|matrix/.test(h2Text) ||
+      /comparison table|top 5/.test(bodyLower)
+    ) {
+      score += 10;
+    }
+    if (/scenario|use case|checks before|verdict|final/.test(h2Text)) {
+      score += 10;
+    }
+  }
+
+  // explainer: reference depth + workflow sections
+  if (profile === "explainer") {
+    if (/reference|comparison|table/.test(h2Text)) score += 10;
+    if (/workflow|how|guide|backup|takeaway/.test(h2Text) || /workflow/.test(bodyLower)) {
+      score += 10;
+    }
+  }
+
+  // head-to-head: explicit comparison H2 block
+  if (profile === "head-to-head" && /comparison|at-a-glance|versus/.test(h2Text)) {
+    score += 10;
+  }
+
+  // scenario-guide: multi-scenario H2 depth
+  if (profile === "scenario-guide" && h2s.filter((h) => /scenario/i.test(h)).length >= 3) {
+    score += 10;
+  }
+
+  // checklist: numbered step depth (HowTo signal)
+  if (profile === "checklist" && (body.match(/^\d+\.\s+/gm) ?? []).length >= 5) {
     score += 10;
   }
 
