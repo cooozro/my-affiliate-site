@@ -11,6 +11,7 @@ import {
   commitPostChanges,
   deletePostOnGithub,
   fetchGaSummary,
+  readGithubFile,
   tryReadGithubJson,
 } from "@/lib/admin-services";
 import {
@@ -366,6 +367,29 @@ export async function deletePost(slug: string) {
 
 export function getPostPreview(slug: string, locale: "en" | "ko") {
   return readPostFile(slug, locale);
+}
+
+/** Raw markdown file (frontmatter + body) for admin clipboard copy. */
+export async function getPostCopyMarkdown(
+  slug: string,
+  locale: "en" | "ko",
+): Promise<string> {
+  if (!isAdminPublishBlocked(slug)) {
+    throw new Error("Copy is only available for admin-only reports.");
+  }
+
+  const relativePath = `content/posts/${slug}/${locale}.md`;
+
+  if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
+    const { content } = await readGithubFile(relativePath);
+    return content;
+  }
+
+  const filePath = path.join(process.cwd(), relativePath);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Locale file not found: ${slug}/${locale}.md`);
+  }
+  return fs.readFileSync(filePath, "utf8");
 }
 
 export async function uploadCoverImage(

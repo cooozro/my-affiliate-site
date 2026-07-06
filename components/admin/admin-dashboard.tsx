@@ -92,6 +92,8 @@ export function AdminDashboard() {
   const [postFilter, setPostFilter] = useState<PostFilter>("all");
   const [coverApisReady, setCoverApisReady] = useState(true);
   const [coverBusy, setCoverBusy] = useState<string | null>(null);
+  const [copyDoneSlug, setCopyDoneSlug] = useState<string | null>(null);
+  const [copyBusy, setCopyBusy] = useState<string | null>(null);
   const [uploadSlug, setUploadSlug] = useState<string | null>(null);
   const [imageVersion, setImageVersion] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -160,6 +162,36 @@ export function AdminDashboard() {
   useEffect(() => {
     void loadData();
   }, []);
+
+  async function copyReportMarkdown(slug: string, locale: "en" | "ko") {
+    setCopyBusy(slug);
+    setMessage("");
+    setError("");
+
+    try {
+      const response = await fetch(
+        `/api/admin/posts/${slug}/copy?locale=${locale}`,
+        { credentials: "same-origin" },
+      );
+      const data = (await response.json()) as { text?: string; error?: string };
+
+      if (!response.ok || !data.text) {
+        setError(data.error ?? "복사에 실패했습니다.");
+        return;
+      }
+
+      await navigator.clipboard.writeText(data.text);
+      setCopyDoneSlug(slug);
+      setMessage(`리포트 전체 내용이 클립보드에 복사되었습니다. (${slug})`);
+      window.setTimeout(() => {
+        setCopyDoneSlug((current) => (current === slug ? null : current));
+      }, 2500);
+    } catch {
+      setError("클립보드 복사에 실패했습니다. 브라우저 권한을 확인하세요.");
+    } finally {
+      setCopyBusy(null);
+    }
+  }
 
   async function runAction(slug: string, action: "publish" | "draft" | "delete") {
     setMessage("");
@@ -616,6 +648,22 @@ export function AdminDashboard() {
                   </td>
                   <td className="px-3 py-3">
                     <div className="flex flex-wrap gap-2">
+                      {publishBlocked ? (
+                        <button
+                          type="button"
+                          disabled={copyBusy === post.slug}
+                          onClick={() =>
+                            void copyReportMarkdown(post.slug, previewLocale)
+                          }
+                          className="rounded border border-violet-500/40 px-2 py-1 text-xs text-violet-700 hover:bg-violet-500/10 disabled:opacity-40 dark:text-violet-300"
+                        >
+                          {copyBusy === post.slug
+                            ? "…"
+                            : copyDoneSlug === post.slug
+                              ? "복사됨"
+                              : "복사"}
+                        </button>
+                      ) : null}
                       <Link
                         href={`/admin/preview/${post.slug}?locale=${previewLocale}`}
                         target="_blank"
