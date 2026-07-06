@@ -49,17 +49,43 @@ const markdownComponents: Components = {
       {children}
     </li>
   ),
-  a: ({ children, href, ...props }) => (
-    <a
-      href={href}
-      className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
-      target={href?.startsWith("http") ? "_blank" : undefined}
-      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-      {...props}
-    >
-      {children}
-    </a>
-  ),
+  a: ({ children, href, ...props }) => {
+    if (typeof href === "string" && href.startsWith("cta-primary:")) {
+      return (
+        <a
+          href={href.slice("cta-primary:".length)}
+          className="mb-4 flex w-full max-w-md items-center justify-center rounded-xl bg-accent px-8 py-4 text-center font-sans text-base font-semibold text-white shadow-md transition hover:opacity-90 sm:mx-auto"
+          {...props}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    if (typeof href === "string" && href.startsWith("cta-secondary:")) {
+      return (
+        <a
+          href={href.slice("cta-secondary:".length)}
+          className="flex w-full max-w-md items-center justify-center rounded-xl border border-border bg-surface px-8 py-3.5 text-center font-sans text-sm font-medium text-foreground transition hover:bg-muted sm:mx-auto"
+          {...props}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <a
+        href={href}
+        className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
+        target={href?.startsWith("http") ? "_blank" : undefined}
+        rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   blockquote: ({ children, ...props }) => (
     <blockquote
       className="mb-6 border-l-4 border-accent/40 pl-5 font-serif italic text-muted-foreground"
