@@ -17,3 +17,9 @@ export const SEO_ADMIN_DRAFT_SLUGS = new Set([
 ]);
 
 export const SEO_AUDIT_REPORT_JSON = "data/automation/seo-audit-latest.json";
+
+/** Slugs skipped by SEO audit scan (greeting/editorial — not SERP benchmarks). */
+export const SEO_AUDIT_SCAN_EXCLUDE = new Set([
+  SEO_AUDIT_SLUG,
+  "welcome",
+]);

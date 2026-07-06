@@ -12,7 +12,7 @@ import {
   auditContentPolicyTitle,
 } from "../../lib/guardian/content-policy.mjs";
 import { verifyPostIntegrity } from "../../lib/guardian/publish-integrity.mjs";
-import { SEO_AUDIT_SLUG } from "./constants.mjs";
+import { SEO_AUDIT_SCAN_EXCLUDE } from "./constants.mjs";
 
 const POSTS_DIR = "content/posts";
 
@@ -162,7 +162,9 @@ function analyzePost(root, slug, locale) {
  * @param {string} [root]
  */
 export function runSeoAuditAnalysis(root = process.cwd()) {
-  const slugs = [...listPublishedSlugs(root)].filter((s) => s !== SEO_AUDIT_SLUG);
+  const allPublished = [...listPublishedSlugs(root)];
+  const excluded = allPublished.filter((s) => SEO_AUDIT_SCAN_EXCLUDE.has(s));
+  const slugs = allPublished.filter((s) => !SEO_AUDIT_SCAN_EXCLUDE.has(s));
   const posts = [];
 
   for (const slug of slugs) {
@@ -204,6 +206,7 @@ export function runSeoAuditAnalysis(root = process.cwd()) {
   return {
     generatedAt: new Date().toISOString(),
     publishedSlugCount: slugs.length,
+    excludedSlugs: excluded,
     localeScanCount: posts.length,
     averages: {
       structureIntent: avgStructure,
