@@ -1,7 +1,14 @@
 import Image from "next/image";
 import type { Components } from "react-markdown";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
+
+function markdownUrlTransform(url: string): string {
+  if (url.startsWith("cta-primary:") || url.startsWith("cta-secondary:")) {
+    return url;
+  }
+  return defaultUrlTransform(url);
+}
 
 const markdownComponents: Components = {
   h2: ({ children, ...props }) => (
@@ -186,7 +193,11 @@ export function MarkdownContent({ content, className = "" }: MarkdownContentProp
 
   return (
     <div className={`prose-custom ${className}`}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={markdownComponents}
+        urlTransform={markdownUrlTransform}
+      >
         {content}
       </ReactMarkdown>
     </div>
