@@ -1,7 +1,33 @@
 {
-  "status": "complete",
-  "completedAt": "2026-07-05T15:02:25.516Z",
-  "writtenSlug": "2026-laptops-buying-guide",
-  "draftCount": 2,
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-usb-c-hubs-buying-guide",
+  "requestedAt": "2026-07-06T02:59:37.184Z",
+  "writingMode": "stable",
+  "contentProfile": "buying-guide",
+  "toneVariant": "myth-bust",
+  "serpKeyword": "2026 home IP cameras buying guide 비교",
+  "serpCachePath": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "smart-home-cameras",
+    "category": "smart-home",
+    "angle": "home IP cameras: resolution, local vs cloud storage, and privacy features",
+    "imageQuery": "home security camera indoor",
+    "liveData": false,
+    "seasons": [
+      "fall",
+      "spring"
+    ]
+  },
+  "templatePath": "docs/templates/buying-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: myth-bust. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
   "lastError": null
 }

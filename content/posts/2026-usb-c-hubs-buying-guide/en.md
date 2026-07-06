@@ -3,7 +3,7 @@ title: 'One USB-C Port, Five Jobs: Laptop Hub PD and Port Math Before Summer Tra
 description: >-
   Five USB-C hubs for laptop travel and summer WFH: PD pass-through watts, 4K
   HDMI, port mix, and Mac/Windows compatibility without seller hype.
-date: '2026-07-05'
+date: '2026-07-06'
 tags:
   - USB-C hub
   - laptop accessories
@@ -13,7 +13,7 @@ tags:
 contentProfile: buying-guide
 writingMode: stable
 topicId: usb-c-hubs
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - usb c hub laptop
@@ -28,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-05T09:48:06.153Z'
+updatedAt: '2026-07-06T11:59:35.000Z'
+publishedAt: '2026-07-06T11:59:35.000Z'
 ---
 ## Editorial Overview
 

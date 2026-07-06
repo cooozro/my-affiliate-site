@@ -1,5 +1,5 @@
 {
-  "topicIndex": 30,
+  "topicIndex": 0,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -22,12 +22,13 @@
     "tablet-budget",
     "portable-ssd",
     "fitness-trackers",
-    "laptops"
+    "laptops",
+    "smart-home-cameras"
   ],
-  "lastPublishAt": "2026-07-05T03:33:06.533Z",
-  "nextPublishAt": "2026-07-06T02:41:00.000Z",
-  "scheduledGapHours": 5.68,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-06T02:59:37.169Z",
+  "nextPublishAt": "2026-07-06T08:39:16.832Z",
+  "scheduledGapHours": 5.66,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-06",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-06",
@@ -252,19 +253,21 @@
         "https://www.aipick.shop/en/blog/2026-portable-ssd-explainer",
         "https://www.aipick.shop/ko/blog/2026-portable-ssd-explainer"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "topic": {
+        "id": "usb-c-hubs"
+      },
+      "at": "2026-07-06T02:59:37.169Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-usb-c-hubs-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "bluetooth-speakers",
-      "category": "audio"
-    },
-    {
-      "id": "bluetooth-speakers",
-      "category": "audio",
-      "cluster": "audio",
-      "at": "2026-06-30T08:14:31.721Z"
-    },
     {
       "id": "air-purifiers",
       "category": "home-appliances",
@@ -398,6 +401,15 @@
       "id": "laptops",
       "category": "computing",
       "at": "2026-07-05T09:48:06.167Z"
+    },
+    {
+      "id": "usb-c-hubs",
+      "at": "2026-07-06T02:59:37.171Z"
+    },
+    {
+      "id": "smart-home-cameras",
+      "category": "smart-home",
+      "at": "2026-07-06T02:59:37.180Z"
     }
   ],
   "formatHistory": [
@@ -415,14 +427,23 @@
     "buying-guide",
     "head-to-head",
     "scenario-guide",
-    "checklist"
+    "checklist",
+    "buying-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-06T01:24:47.271Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-06T02:59:35.258Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 18min (KST 2026-07-06)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-05",
   "lastDailyContentAudit": {
