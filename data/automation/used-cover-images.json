@@ -487,6 +487,22 @@
       "hash": "f32a3cab32aafe4b27ff0f1f21fbfce6b313a3ee203648c838c6cb33768b39f4",
       "provider": "pexels",
       "registeredAt": "2026-07-06T05:59:14.723Z"
+    },
+    {
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "url": "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg",
+      "assetKey": "pexels:4348401",
+      "hash": "ba76f12350fc66abc23751728621184c9179dec8ae04ec19421ae4d37e60c08a",
+      "provider": "pexels",
+      "registeredAt": "2026-07-07T06:22:05.729Z"
+    },
+    {
+      "slug": "2026-summer-budget-tablets-buying-guide",
+      "url": "https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg",
+      "assetKey": "pexels:8533358",
+      "hash": "dfb711cf4125f2bce6b493dbe0699a786d228cd05a870e864a2e5ac02410d084",
+      "provider": "pexels",
+      "registeredAt": "2026-07-07T06:22:05.751Z"
     }
   ]
 }
