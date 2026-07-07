@@ -50,6 +50,101 @@ const GENERIC_TAGS = new Set([
   "checklist",
 ]);
 
+/** Season signals from title/slug/tags — drives search queries and scene rejection. */
+const SEASON_SIGNALS = {
+  summer: {
+    tokens: ["summer", "heat", "humid", "hot weather", "폭염", "여름"],
+    searchBoost: ["outdoor summer", "sunny", "warm weather", "park workout"],
+    sceneReject: [
+      "snow",
+      "snowy",
+      "winter",
+      "blizzard",
+      "ice",
+      "frozen",
+      "ski",
+      "skiing",
+      "cold weather",
+      "beanie",
+      "coat",
+      "frost",
+    ],
+  },
+  winter: {
+    tokens: ["winter", "cold", "snow", "holiday", "겨울"],
+    searchBoost: ["winter indoor", "cozy home"],
+    sceneReject: ["beach", "swimming pool", "summer heat", "tropical"],
+  },
+  spring: {
+    tokens: ["spring", "봄"],
+    searchBoost: ["spring outdoor"],
+    sceneReject: ["snow", "blizzard", "ski"],
+  },
+  fall: {
+    tokens: ["fall", "autumn", "가을"],
+    searchBoost: ["autumn"],
+    sceneReject: ["beach summer", "swimming pool"],
+  },
+};
+
+/** Per-topic defaults — applied when slug has no explicit profile. */
+export const TOPIC_IMAGE_PROFILES = {
+  "fitness-trackers": {
+    imageSearchKeywords: [
+      "fitness tracker wrist",
+      "smart band outdoor workout",
+      "wearable fitness watch",
+    ],
+    extraSearchQueries: [
+      "fitness tracker wrist sunny outdoor",
+      "smartwatch running summer park",
+      "wearable band workout trail",
+    ],
+    topicCluster: "wearables",
+    altScene: { en: "during an outdoor summer workout", ko: "여름 야외 운동" },
+    forbiddenSubjects: ["snow scene", "winter coat", "ski gear"],
+    extraNegatives: [
+      "snow",
+      "snowy",
+      "winter",
+      "blizzard",
+      "ice",
+      "ski",
+      "skiing",
+      "beanie",
+      "cold weather",
+    ],
+  },
+  "tablet-budget": {
+    imageSearchKeywords: [
+      "budget tablet",
+      "android tablet reading",
+      "tablet desk study",
+    ],
+    extraSearchQueries: [
+      "tablet reading summer travel",
+      "budget android tablet product",
+      "tablet video streaming couch",
+    ],
+    topicCluster: "tablets",
+    altScene: { en: "on a desk for reading", ko: "책상 위" },
+    forbiddenSubjects: ["laptop only", "smartphone only", "keyboard only"],
+  },
+  "window-ac": {
+    imageSearchKeywords: [
+      "window air conditioner",
+      "wall mounted AC unit",
+      "apartment cooling",
+    ],
+    extraSearchQueries: [
+      "window AC unit installed apartment",
+      "room air conditioner summer",
+    ],
+    topicCluster: "air-conditioning",
+    altScene: { en: "in a summer bedroom", ko: "여름 침실" },
+  },
+};
+
 /** Per-slug tuned keywords — avoids ambiguous stock search (e.g. air → airplane). */
 export const SLUG_IMAGE_PROFILES = {
   "2026-air-purifiers-guide": {
@@ -182,6 +277,46 @@ export const SLUG_IMAGE_PROFILES = {
     altScene: { en: "outdoors in summer", ko: "여름 야외" },
     topicCluster: "audio",
   },
+  "2026-budget-fitness-trackers-head-to-head": {
+    imageSearchKeywords: [
+      "fitness tracker wrist outdoor",
+      "smart band summer workout",
+      "wearable fitness watch",
+    ],
+    extraSearchQueries: [
+      "fitness tracker wrist sunny park",
+      "smartwatch running outdoor summer",
+      "wearable band workout trail",
+    ],
+    topicCluster: "wearables",
+    altScene: { en: "during an outdoor summer workout", ko: "여름 야외 운동" },
+    forbiddenSubjects: ["snow", "winter coat", "ski"],
+    extraNegatives: [
+      "snow",
+      "snowy",
+      "winter",
+      "blizzard",
+      "ice",
+      "ski",
+      "beanie",
+      "cold weather",
+    ],
+  },
+  "2026-summer-budget-tablets-buying-guide": {
+    imageSearchKeywords: [
+      "budget tablet",
+      "android tablet reading",
+      "tablet desk study",
+    ],
+    extraSearchQueries: [
+      "tablet reading summer travel",
+      "budget android tablet product",
+      "tablet video streaming couch",
+    ],
+    topicCluster: "tablets",
+    altScene: { en: "on a desk for reading", ko: "책상 위" },
+    forbiddenSubjects: ["laptop only", "smartphone only"],
+  },
   "2026-budget-monitors-buying-guide": {
     imageSearchKeywords: ["computer monitor", "desk monitor setup"],
     altScene: { en: "on a workspace desk", ko: "책상" },
@@ -200,6 +335,7 @@ export const SLUG_IMAGE_PROFILES = {
 export const BLOCKED_ASSET_IDS = new Set([
   "pexels:27176671",
   "pexels:35673090",
+  "pexels:6740742",
   "pixabay:6577523",
   "pixabay:8315886",
   "pixabay:560937",
@@ -223,6 +359,11 @@ export const CURATED_SLUG_ASSETS = {
   "2026-budget-power-banks-guide": [
     { provider: "pexels", assetId: 4421508, query: "power bank charging phone" },
     { provider: "pexels", assetId: 6078124, query: "portable power bank product" },
+  ],
+  "2026-budget-fitness-trackers-head-to-head": [
+    { provider: "pexels", assetId: 4348401, query: "fitness tracker wrist outdoor" },
+    { provider: "pexels", assetId: 4056535, query: "smartwatch fitness summer" },
+    { provider: "pexels", assetId: 4761012, query: "runner smartwatch outdoor" },
   ],
 };
 
@@ -321,6 +462,32 @@ const CLUSTER_NEGATIVES = {
     "timepiece",
   ],
   "smart-home": ["earbuds", "smartphone", "keyboard", "airplane", "aircraft"],
+  wearables: [
+    "earbuds",
+    "smartphone",
+    "keyboard",
+    "airplane",
+    "laptop",
+    "vacuum",
+    "air conditioner",
+    "snow",
+    "snowy",
+    "winter",
+    "blizzard",
+    "ski",
+    "ice",
+    "beanie",
+  ],
+  tablets: [
+    "earbuds",
+    "smartphone only",
+    "keyboard only",
+    "airplane",
+    "vacuum",
+    "air conditioner",
+    "snow",
+    "winter coat",
+  ],
   "floor-care": [
     ...GLOBAL_STOCK_NEGATIVES,
     "robot vacuum",
@@ -376,8 +543,39 @@ function uniqueStrings(items) {
   return out;
 }
 
-function slugProfile(slug) {
-  return slug ? SLUG_IMAGE_PROFILES[slug] ?? null : null;
+function slugProfile(slug, topicId) {
+  if (slug && SLUG_IMAGE_PROFILES[slug]) return SLUG_IMAGE_PROFILES[slug];
+  if (topicId && TOPIC_IMAGE_PROFILES[topicId]) return TOPIC_IMAGE_PROFILES[topicId];
+  if (slug?.includes("fitness-tracker")) return TOPIC_IMAGE_PROFILES["fitness-trackers"];
+  if (slug?.includes("tablet")) return TOPIC_IMAGE_PROFILES["tablet-budget"];
+  return null;
+}
+
+/**
+ * Detect editorial season from title, slug, and tags (not stripped stop-words).
+ * @param {{ title?: string, slug?: string, tags?: string[] }} input
+ * @returns {{ season: string | null, searchBoost: string[], sceneReject: string[] }}
+ */
+export function extractSeasonContext(input = {}) {
+  const blob = [
+    input.title ?? "",
+    input.slug ?? "",
+    ...(input.tags ?? []),
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  for (const [season, cfg] of Object.entries(SEASON_SIGNALS)) {
+    if (cfg.tokens.some((token) => blob.includes(token.toLowerCase()))) {
+      return {
+        season,
+        searchBoost: cfg.searchBoost,
+        sceneReject: cfg.sceneReject,
+      };
+    }
+  }
+
+  return { season: null, searchBoost: [], sceneReject: [] };
 }
 
 /**
@@ -393,7 +591,8 @@ function slugProfile(slug) {
  */
 export function deriveProductKeywords(input = {}) {
   const topic = input.topic ?? {};
-  const profile = slugProfile(input.slug);
+  const topicId = topic.id ?? input.topicId;
+  const profile = slugProfile(input.slug, topicId);
 
   const explicit = uniqueStrings([
     ...(profile?.imageSearchKeywords ?? []),
@@ -424,12 +623,24 @@ export function deriveProductKeywords(input = {}) {
  */
 export function buildSearchQueries(productKeywords, input = {}) {
   const topic = input.topic ?? {};
-  const profile = slugProfile(input.slug);
+  const topicId = topic.id ?? input.topicId;
+  const profile = slugProfile(input.slug, topicId);
+  const season = extractSeasonContext({
+    title: input.title,
+    slug: input.slug,
+    tags: input.tags,
+  });
   const primary = productKeywords.slice(0, 2).join(" ");
   const secondary = productKeywords[0] ?? "product";
 
+  const seasonQueries =
+    season.season && season.searchBoost.length > 0
+      ? season.searchBoost.map((boost) => `${secondary} ${boost}`)
+      : [];
+
   const queries = uniqueStrings([
     ...(profile?.extraSearchQueries ?? []),
+    ...seasonQueries,
     primary,
     `${secondary} product photo`,
     `${secondary} appliance`,
@@ -469,11 +680,12 @@ const CLUSTER_FORBIDDEN = {
   "floor-care": ["robot vacuum", "airplane", "aircraft"],
 };
 
-export function negativeTagsForCluster(topicCluster, slug) {
-  const profile = slugProfile(slug);
+export function negativeTagsForCluster(topicCluster, slug, seasonContext, topicId) {
+  const profile = slugProfile(slug, topicId);
   return uniqueStrings([
     ...(CLUSTER_NEGATIVES[topicCluster] ?? []),
     ...(profile?.extraNegatives ?? []),
+    ...(seasonContext?.sceneReject ?? []),
     ...DEFAULT_NEGATIVES,
   ]);
 }
@@ -483,7 +695,7 @@ export function negativeTagsForCluster(topicCluster, slug) {
  * @param {string[]} productKeywords
  * @param {string[]} negatives
  */
-export function scoreImageRelevance(text, productKeywords, negatives) {
+export function scoreImageRelevance(text, productKeywords, negatives, seasonContext) {
   const blob = String(text ?? "").toLowerCase();
   if (!blob) return 0;
 
@@ -492,6 +704,12 @@ export function scoreImageRelevance(text, productKeywords, negatives) {
   for (const negative of negatives) {
     const n = negative.toLowerCase();
     if (n.length >= 3 && blob.includes(n)) return -100;
+  }
+
+  if (seasonContext?.sceneReject) {
+    for (const term of seasonContext.sceneReject) {
+      if (blob.includes(term.toLowerCase())) return -100;
+    }
   }
 
   for (const keyword of productKeywords) {
@@ -507,6 +725,15 @@ export function scoreImageRelevance(text, productKeywords, negatives) {
     }
     if (tokenHits >= 2) score += 4;
     else if (tokenHits === 1) score += 1;
+  }
+
+  if (seasonContext?.searchBoost) {
+    for (const boost of seasonContext.searchBoost) {
+      const tokens = boost.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
+      const hits = tokens.filter((t) => blob.includes(t)).length;
+      if (hits >= 2) score += 3;
+      else if (hits === 1) score += 1;
+    }
   }
 
   if (blob.includes("air ") && !blob.includes("purifier") && !blob.includes("conditioner")) {
@@ -572,6 +799,8 @@ const CLUSTER_ALT_SCENES = {
   computing: { en: "on a workspace desk", ko: "책상" },
   power: { en: "charging a phone", ko: "스마트폰 충전" },
   "smart-home": { en: "in a home interior", ko: "실내" },
+  wearables: { en: "during an outdoor workout", ko: "야외 운동" },
+  tablets: { en: "on a desk for reading", ko: "책상 위" },
 };
 
 /**
@@ -619,7 +848,7 @@ export function altSubjectKo(productKeywords) {
 }
 
 function resolveAltScene(ctx) {
-  const profile = slugProfile(ctx.slug);
+  const profile = slugProfile(ctx.slug, ctx.topicId);
   if (profile?.altScene) return profile.altScene;
 
   const cluster =
@@ -702,7 +931,13 @@ function mapKeywordToKo(keyword) {
 export function resolveImageContext(slug, input = {}) {
   const meta = typeof input === "string" ? { imageQuery: input } : input;
   const topic = meta.topic ?? {};
-  const profile = slugProfile(slug);
+  const topicId = topic.id ?? meta.topicId;
+  const profile = slugProfile(slug, topicId);
+  const seasonContext = extractSeasonContext({
+    title: meta.title,
+    slug,
+    tags: meta.tags,
+  });
 
   const productKeywords = deriveProductKeywords({
     slug,
@@ -711,6 +946,7 @@ export function resolveImageContext(slug, input = {}) {
     imageSearchKeywords: meta.imageSearchKeywords,
     imageQuery: meta.imageQuery,
     topic,
+    topicId,
   });
 
   const topicCluster =
@@ -722,13 +958,15 @@ export function resolveImageContext(slug, input = {}) {
   return {
     slug,
     title: meta.title,
+    topicId,
     tags: meta.tags ?? [],
     productKeywords,
     primaryKeyword: primaryImageKeyword(productKeywords),
-    searchQueries: buildSearchQueries(productKeywords, { ...meta, slug }),
-    negativeTags: negativeTagsForCluster(topicCluster, slug),
+    searchQueries: buildSearchQueries(productKeywords, { ...meta, slug, topicId }),
+    negativeTags: negativeTagsForCluster(topicCluster, slug, seasonContext, topicId),
     forbiddenSubjects: forbiddenSubjectsForCluster(topicCluster, slug),
     topicCluster,
+    seasonContext,
     imageSearchKeywords: productKeywords,
   };
 }
@@ -747,5 +985,9 @@ function inferClusterFromKeywords(keywords) {
   if (blob.includes("smartphone") || blob.includes("phone")) return "smartphones";
   if (blob.includes("keyboard") || blob.includes("monitor")) return "computing";
   if (blob.includes("power bank")) return "power";
+  if (blob.includes("fitness") || blob.includes("tracker") || blob.includes("smartwatch") || blob.includes("wearable")) {
+    return "wearables";
+  }
+  if (blob.includes("tablet")) return "tablets";
   return "smart-home";
 }

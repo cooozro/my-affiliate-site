@@ -104,6 +104,7 @@ function rankText(candidates, ctx) {
         candidate.relevanceText,
         ctx.productKeywords,
         ctx.negativeTags,
+        ctx.seasonContext,
       ),
     }))
     .filter((c) => c.textScore >= TEXT_MIN_SCORE)
@@ -389,6 +390,9 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   console.log(`Image search: ${slug}`);
   console.log(`  keywords: ${ctx.productKeywords.join(" | ")}`);
   console.log(`  queries: ${ctx.searchQueries.slice(0, 4).join(" | ")}`);
+  if (ctx.seasonContext?.season) {
+    console.log(`  season: ${ctx.seasonContext.season} (scene rejects: ${ctx.seasonContext.sceneReject.slice(0, 4).join(", ")})`);
+  }
   console.log(
     `  vision: ${visionSelectionEnabled() ? `on (min ${visionMinScore()}/10)` : "off (text-only)"}`,
   );

@@ -18,19 +18,19 @@ writingMode: stable
 draft: false
 liveData: true
 coverImage: >-
-  /images/posts/2026-budget-fitness-trackers-head-to-head/fitness-tracker-smartwatch-cover.jpg
-coverImageAlt: Fitness tracker smartwatch on a wrist during an outdoor workout
-coverImageCredit: Photo by Mikhail Nilov / Pexels
-coverImageAltKo: 야외 운동 중 손목에 착용한 피트니스 트래커 스마트워치
+  /images/posts/2026-budget-fitness-trackers-head-to-head/fitness-tracker-wrist-outdoor-cover.jpg
+coverImageAlt: fitness tracker during an outdoor summer workout
+coverImageCredit: Photo by Ketut Subiyanto / Pexels
+coverImageAltKo: 여름 야외 운동의 피트니스 트래커
 imageSearchKeywords:
-  - fitness tracker smartwatch
-  - wearable fitness
-  - budget smartwatch
+  - fitness tracker wrist outdoor
+  - smart band summer workout
+  - wearable fitness watch
 coverImageProvider: pexels
-coverImageAssetId: 6740742
+coverImageAssetId: 4348401
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/6740742/pexels-photo-6740742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T04:35:40.902Z'
+  https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-07T05:15:00.000Z'
 publishedAt: '2026-07-07T13:35:39.000Z'
 ---
 ## Editorial Overview

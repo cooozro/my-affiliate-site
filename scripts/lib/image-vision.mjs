@@ -9,7 +9,7 @@ const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 8);
 const VISION_CANDIDATE_LIMIT = Number(process.env.IMAGE_VISION_CANDIDATE_LIMIT ?? 12);
 
 const REASON_REJECT_PATTERN =
-  /\b(vacuum|robot vacuum|clock|watch|wristwatch|airplane|aircraft|tablet|laptop|bedroom|wrong|unrelated)\b/i;
+  /\b(vacuum|robot vacuum|clock|watch|wristwatch|airplane|aircraft|tablet|laptop|bedroom|wrong|unrelated|snow|snowy|winter|blizzard|ice|ski|cold weather)\b/i;
 
 export function visionSelectionEnabled() {
   return Boolean(process.env.OPENAI_API_KEY?.trim());
@@ -37,18 +37,22 @@ export async function scoreImageRelevanceWithVision(imageUrl, ctx) {
 
   const negatives = (ctx.negativeTags ?? []).slice(0, 20).join(", ");
   const forbidden = (ctx.forbiddenSubjects ?? []).slice(0, 12).join(", ");
+  const seasonReject = (ctx.seasonContext?.sceneReject ?? []).slice(0, 10).join(", ");
+  const seasonLabel = ctx.seasonContext?.season ?? "none";
   const detail = ctx.detail ?? "low";
   const prompt = `You are a strict stock-photo reviewer for a product review blog cover.
 
 Article title: ${ctx.title ?? "n/a"}
+Editorial season: ${seasonLabel}
 REQUIRED visible subject: ${ctx.productLabel}
 FORBIDDEN subjects (score 0-2 if any are the main focus): ${forbidden || negatives || "wrong product, unrelated objects"}
 Also reject: ${negatives}
+${seasonReject ? `Season mismatch — score 0-3 if scene shows: ${seasonReject}` : ""}
 
 Rules:
-- Score 9-10 ONLY if the REQUIRED subject is clearly the main focus (product photo or obvious in-use scene).
-- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, bedroom without the product, or any forbidden/wrong device.
-- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank. A generic bedroom scene is NOT an air purifier cover.
+- Score 9-10 ONLY if the REQUIRED subject is clearly the main focus AND the scene matches the editorial season (e.g. summer article must NOT show snow, winter coats, or ski scenes).
+- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, bedroom without the product, snow/winter scene on a summer article, or any forbidden/wrong device.
+- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank. A snowy outdoor scene is NOT a summer fitness tracker cover.
 
 Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 
@@ -109,6 +113,7 @@ export async function verifyDownloadedImage(buffer, ctx) {
     productLabel,
     negativeTags: ctx.negativeTags,
     forbiddenSubjects: ctx.forbiddenSubjects,
+    seasonContext: ctx.seasonContext,
     detail: "high",
   });
 }
@@ -135,6 +140,7 @@ export async function rankCandidatesWithVision(candidates, ctx) {
         productLabel,
         negativeTags: ctx.negativeTags,
         forbiddenSubjects: ctx.forbiddenSubjects,
+        seasonContext: ctx.seasonContext,
         detail: "low",
       });
       ranked.push({
