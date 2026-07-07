@@ -463,19 +463,21 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-07T03:46:09.569Z",
-    "issueCount": 1,
+    "at": "2026-07-07T03:46:43.175Z",
+    "issueCount": 2,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 0min (KST 2026-07-07)",
+        "severity": "warning"
+      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 0/2",
         "severity": "info"
       }
     ],
-    "repairs": [
-      "2026-coffee-machines-head-to-head/en.md: publishedAt 2026-07-07T12:34:44.000Z → 2026-07-07T03:34:46.035Z",
-      "2026-coffee-machines-head-to-head/ko.md: publishedAt 2026-07-07T12:34:44.000Z → 2026-07-07T03:34:46.035Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-06",
   "lastDailyContentAudit": {
