@@ -91,6 +91,22 @@ type AutomationStatus = {
     urls: { en: string; ko: string; admin: string };
   }>;
   lastDailyContentAuditKst: string | null;
+  operationsBrief: {
+    reportSlug: string;
+    reportUpdatedAt: string | null;
+    publishedPostCount: number;
+    formatMix: Array<{ profile: string; count: number; ratio: number }>;
+    uniqueTopicCount: number;
+    scheduler: {
+      maxPublishPerDay: number;
+      targetDraftCount: number;
+      nextPublishAtKst: string | null;
+      scheduledGapHours: number | null;
+    };
+    exposureChannels: string[];
+    topicSelectionMethod: string[];
+    keywordMethod: string[];
+  };
 };
 
 export function AdminDashboard() {
@@ -546,6 +562,63 @@ export function AdminDashboard() {
               발행을 확인합니다.
             </p>
           )}
+          <div className="mt-4 rounded-lg border border-border/70 bg-background p-4 text-sm">
+            <p className="font-medium">운영 핵심 요약 (SEO 정밀 분석 연동)</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              대상 리포트: <code>{automation.operationsBrief.reportSlug}</code>
+              {automation.operationsBrief.reportUpdatedAt
+                ? ` · 갱신 ${new Date(automation.operationsBrief.reportUpdatedAt).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })}`
+                : ""}
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              <MetricCard
+                label="발행 글 수"
+                value={automation.operationsBrief.publishedPostCount}
+              />
+              <MetricCard
+                label="토픽 커버 수"
+                value={automation.operationsBrief.uniqueTopicCount}
+              />
+              <MetricCard
+                label="일 최대 발행"
+                value={automation.operationsBrief.scheduler.maxPublishPerDay}
+              />
+              <MetricCard
+                label="버퍼 목표"
+                value={automation.operationsBrief.scheduler.targetDraftCount}
+              />
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              스케줄: 다음 발행 {automation.operationsBrief.scheduler.nextPublishAtKst ?? "미정"} / 간격{" "}
+              {automation.operationsBrief.scheduler.scheduledGapHours ?? "—"}h
+            </p>
+            <p className="mt-3 text-xs font-medium">포맷 비율 (published)</p>
+            <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+              {automation.operationsBrief.formatMix.map((item) => (
+                <li key={item.profile}>
+                  {item.profile}: {item.count}건 ({item.ratio}%)
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-xs font-medium">주제 선정 로직</p>
+            <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+              {automation.operationsBrief.topicSelectionMethod.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="mt-3 text-xs font-medium">키워드/작성 기준</p>
+            <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+              {automation.operationsBrief.keywordMethod.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="mt-3 text-xs font-medium">노출(수집) 로직</p>
+            <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+              {automation.operationsBrief.exposureChannels.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </section>
       ) : null}
 

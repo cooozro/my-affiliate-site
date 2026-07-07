@@ -66,7 +66,110 @@ export type AutomationStatus = {
     urls: { en: string; ko: string; admin: string };
   }>;
   lastDailyContentAuditKst: string | null;
+  operationsBrief: {
+    reportSlug: string;
+    reportUpdatedAt: string | null;
+    publishedPostCount: number;
+    formatMix: Array<{ profile: string; count: number; ratio: number }>;
+    uniqueTopicCount: number;
+    scheduler: {
+      maxPublishPerDay: number;
+      targetDraftCount: number;
+      nextPublishAtKst: string | null;
+      scheduledGapHours: number | null;
+    };
+    exposureChannels: string[];
+    topicSelectionMethod: string[];
+    keywordMethod: string[];
+  };
 };
+
+async function readEnFrontmatter(
+  slug: string,
+): Promise<Record<string, unknown> | null> {
+  const relativePath = `content/posts/${slug}/en.md`;
+  try {
+    if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
+      const { content } = await readGithubFile(relativePath);
+      const matter = await import("gray-matter");
+      return matter.default(content).data as Record<string, unknown>;
+    }
+    const filePath = path.join(process.cwd(), relativePath);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf8");
+    const matter = await import("gray-matter");
+    return matter.default(raw).data as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+async function buildOperationsBrief(
+  posts: AdminPostRow[],
+  schedule: ReturnType<typeof previewPublishSchedule>,
+  state: Record<string, unknown>,
+) {
+  const published = posts.filter(
+    (post) => !post.draft && !isAdminPublishBlocked(post.slug),
+  );
+
+  const formatCounts = new Map<string, number>();
+  for (const post of published) {
+    const data = await readEnFrontmatter(post.slug);
+    const profile =
+      typeof data?.contentProfile === "string" ? data.contentProfile : "unknown";
+    formatCounts.set(profile, (formatCounts.get(profile) ?? 0) + 1);
+  }
+
+  const total = published.length || 1;
+  const formatMix = [...formatCounts.entries()]
+    .map(([profile, count]) => ({
+      profile,
+      count,
+      ratio: Math.round((count / total) * 100),
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  const uniqueTopicCount = new Set(
+    (Array.isArray(state.usedTopicIds) ? state.usedTopicIds : []).filter(
+      (v): v is string => typeof v === "string",
+    ),
+  ).size;
+
+  const reportUpdatedAt = posts.find(
+    (p) => p.slug === "aipick-seo-precision-report",
+  )?.updatedAt;
+
+  return {
+    reportSlug: "aipick-seo-precision-report",
+    reportUpdatedAt: reportUpdatedAt ?? null,
+    publishedPostCount: published.length,
+    formatMix,
+    uniqueTopicCount,
+    scheduler: {
+      maxPublishPerDay: MAX_PUBLISH_PER_DAY,
+      targetDraftCount: TARGET_DRAFT_COUNT,
+      nextPublishAtKst: schedule.nextPublishAtKst,
+      scheduledGapHours: schedule.scheduledGapHours,
+    },
+    exposureChannels: [
+      "Google Indexing API (EN/KO URL_UPDATED)",
+      "IndexNow: global + Naver + Bing",
+      "Sitemap/RSS warm fetch after publish",
+      "GHA on-push index submission (admin publish 포함)",
+    ],
+    topicSelectionMethod: [
+      "roadmap phase 기반 우선순위 (tier1 → tier2 → format rotation)",
+      "동일 topic/category/cluster 3연속 방지",
+      "taxonomy group spread로 미커버 제품군 우선",
+    ],
+    keywordMethod: [
+      "contentProfile 템플릿 기반 섹션/의도 정합성",
+      "SERP 구조 점수 + Guardian 무결성 게이트",
+      "과도한 키워드 반복보다 문제 해결형 문맥 우선",
+    ],
+  };
+}
 
 function readLocalJson(filePath: string): Record<string, unknown> | null {
   if (!fs.existsSync(filePath)) return null;
@@ -236,6 +339,7 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       : typeof dailyAudit?.dateKst === "string"
         ? dailyAudit.dateKst
         : null;
+  const operationsBrief = await buildOperationsBrief(posts, schedule, state);
 
   return {
     mode: "publish-only",
@@ -262,6 +366,7 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     healthIssues,
     manualReviewQueue,
     lastDailyContentAuditKst,
+    operationsBrief,
   };
 }
 
