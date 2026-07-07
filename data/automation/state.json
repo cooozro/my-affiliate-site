@@ -481,10 +481,10 @@
   },
   "lastDailyContentAuditKst": "2026-07-07",
   "lastDailyContentAudit": {
-    "at": "2026-07-07T04:35:41.583Z",
-    "postsScanned": 24,
-    "autoRepairCount": 3,
-    "manualReviewCount": 3
+    "at": "2026-07-07T09:07:26.828Z",
+    "postsScanned": 26,
+    "autoRepairCount": 4,
+    "manualReviewCount": 0
   },
   "contentStrategyHistory": [
     {
