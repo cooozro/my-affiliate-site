@@ -167,17 +167,30 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       ? request.lastError
       : null;
 
+  const cursorDraftPendingSinceMs =
+    cursorDraftPendingSince != null
+      ? Date.now() - new Date(cursorDraftPendingSince).getTime()
+      : null;
+  const cursorDraftPendingMinutes =
+    cursorDraftPendingSinceMs != null
+      ? Math.floor(cursorDraftPendingSinceMs / 60_000)
+      : null;
+
   const draftLabel =
     cursorDraftPending && cursorDraftNeeded > 0
       ? cursorDraftLastError
         ? `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 보충 재시도 중)`
-        : `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 작성 중)`
+        : cursorDraftPendingMinutes != null && cursorDraftPendingMinutes >= 20
+          ? `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 보충 대기 ${cursorDraftPendingMinutes}분)`
+          : `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 작성 중)`
       : `${draftCount} / ${TARGET_DRAFT_COUNT}`;
 
   const replenishNote = cursorDraftPending
     ? cursorDraftLastError
-      ? `임시글 보충이 실패해 GitHub Actions가 5분마다 재시도 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 아래 최근 실패 메시지를 확인하세요.`
-      : `GitHub Actions가 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 보통 5–15분.`
+      ? `Cursor API 보충이 실패해 GitHub Actions가 5분마다 재시도 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. OpenAI 키는 필요 없습니다 — 아래 실패 메시지를 확인하세요.`
+      : cursorDraftPendingMinutes != null && cursorDraftPendingMinutes >= 20
+        ? `임시글 보충 요청이 ${cursorDraftPendingMinutes}분째 대기 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. Cursor API 한도·GHA 스케줄 지연일 수 있습니다.`
+        : `GitHub Actions가 Cursor API로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 보통 5–20분 (한도에 따라 더 걸릴 수 있음).`
     : draftCount < TARGET_DRAFT_COUNT
       ? "임시글 1건 부족. publish-slot(약 5분마다)에서 Cursor 작성 요청이 자동 등록됩니다."
       : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";

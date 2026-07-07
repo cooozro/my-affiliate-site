@@ -119,37 +119,16 @@ function rejectReplenishOverwrite(slug, reason) {
   console.error(reason);
 }
 
-function cursorReplenishFailedBefore(request) {
-  return (
-    typeof request?.lastError === "string" &&
-    /Cursor agent/i.test(request.lastError)
-  );
-}
-
-/** CI: OpenAI writes directly to the checkout; Cursor local agent often errors in ~3s on GHA. */
-function pickReplenishProviders(request, { cursorKey, openaiKey }) {
-  const onCi = Boolean(process.env.GITHUB_ACTIONS);
-  const cursorFailed = cursorReplenishFailedBefore(request);
+/** Plan A: Cursor first. OpenAI only when CURSOR_API_KEY is absent. */
+function pickReplenishProviders({ cursorKey, openaiKey }) {
   const providers = [];
-
-  if (openaiKey && (onCi || cursorFailed)) {
-    providers.push("openai");
-  }
-  if (cursorKey && !cursorFailed) {
-    providers.push("cursor");
-  }
-  if (openaiKey && !providers.includes("openai")) {
-    providers.push("openai");
-  }
-  if (cursorKey && !providers.includes("cursor")) {
-    providers.push("cursor");
-  }
-
+  if (cursorKey) providers.push("cursor");
+  if (openaiKey) providers.push("openai");
   return providers;
 }
 
 async function runReplenishProviders(request, draftsBefore, keys) {
-  const providers = pickReplenishProviders(request, keys);
+  const providers = pickReplenishProviders(keys);
   const errors = [];
 
   for (const provider of providers) {
@@ -177,14 +156,12 @@ async function runReplenishProviders(request, draftsBefore, keys) {
   }
 
   if (errors.length === 0) {
-    throw new Error("No replenish provider configured");
+    throw new Error(
+      "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions).",
+    );
   }
 
-  const hint =
-    keys.cursorKey && !keys.openaiKey
-      ? " Add OPENAI_API_KEY to GitHub Secrets as a reliable GHA fallback."
-      : "";
-  throw new Error(`${errors.join(" | ")}.${hint}`);
+  throw new Error(errors.join(" | "));
 }
 
 function refreshStaleRequestTopic(request) {

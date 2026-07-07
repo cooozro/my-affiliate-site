@@ -43,6 +43,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Install Cursor SDK (GHA scripts only)
+        run: npm install @cursor/sdk@1.0.22 --no-save
+
       - name: Run publish slot
         id: publish
         env:
@@ -72,18 +75,39 @@ jobs:
           if grep -q "Automation health:" "$LOG_FILE"; then
             grep -E "Automation health:|ERROR \[|WARN \[" "$LOG_FILE" || true
           fi
+          if grep -q "Cursor draft replenish queued:" "$LOG_FILE"; then
+            echo "replenish_needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "replenish_needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check pending draft replenish
+        id: pending_replenish
+        run: |
+          if [ -f data/automation/cursor-draft-request.json ] && grep -q '"status": "pending"' data/automation/cursor-draft-request.json; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Cursor draft replenish
+        if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
+        continue-on-error: true
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          SERP_PROVIDER: serper
+        run: node scripts/automation/run-cursor-replenish.mjs
+
+      - name: Validate content after replenish
+        if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
+        run: npm run content:validate
 
       - name: Commit and push changes
         run: |
-          git config user.name "blog-automation[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/posts public/images/posts data/automation/
-          if git diff --staged --quiet; then
-            echo "No content changes to commit"
-            exit 0
-          fi
-          git commit -m "chore(automation): publish-slot"
-          git push
+          bash scripts/ci-git-push.sh "chore(automation): publish-slot"
 
       - name: Trigger Vercel redeploy
         if: steps.publish.outputs.published == 'true'
