@@ -1,13 +1,15 @@
 import fs from "fs";
 import path from "path";
-import { submitIndexNow } from "./indexnow.mjs";
+import { execSync } from "child_process";
+import matter from "gray-matter";
+
 import {
-  requestGoogleIndexing,
-  requestSitemapPing,
-} from "./google-indexing.mjs";
+  submitPublishedPost,
+  warmFeedAndSitemap,
+  DEFAULT_SITE_URL,
+} from "../lib/index-submission.mjs";
 import { readPost } from "./posts-fs.mjs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 const LOG_PATH = path.join(
   process.cwd(),
   "data",
@@ -24,6 +26,21 @@ const SHARE_PACK_DIR = path.join(
 function appendLog(entry) {
   fs.mkdirSync(path.dirname(LOG_PATH), { recursive: true });
   fs.appendFileSync(LOG_PATH, `${JSON.stringify(entry)}\n`, "utf8");
+}
+
+function loadDistributedSlugs() {
+  if (!fs.existsSync(LOG_PATH)) return new Set();
+  const slugs = new Set();
+  for (const line of fs.readFileSync(LOG_PATH, "utf8").split("\n")) {
+    if (!line.trim()) continue;
+    try {
+      const entry = JSON.parse(line);
+      if (entry.slug && entry.results?.some((r) => r.ok)) slugs.add(entry.slug);
+    } catch {
+      /* ignore */
+    }
+  }
+  return slugs;
 }
 
 function buildSharePack({ slug, urls, en, ko }) {
@@ -67,118 +84,126 @@ function saveSharePack(slug, pack) {
   return filePath;
 }
 
-async function pingGoogleUrls(urls) {
-  const results = [];
-  for (const url of urls) {
-    try {
-      await requestGoogleIndexing(url);
-      console.log(`Indexing requested: ${url}`);
-      results.push({ channel: "google-indexing", url, ok: true });
-    } catch (error) {
-      console.warn(`Indexing failed for ${url}: ${error.message}`);
-      results.push({
-        channel: "google-indexing",
-        url,
-        ok: false,
-        error: error.message,
-      });
-    }
-  }
-  return results;
-}
-
-async function pingIndexNow(urls) {
-  try {
-    const result = await submitIndexNow(urls, { siteUrl: SITE_URL });
-    return [{ channel: "indexnow", ok: true, ...result }];
-  } catch (error) {
-    console.warn(`IndexNow failed: ${error.message}`);
-    return [{ channel: "indexnow", ok: false, error: error.message }];
-  }
-}
-
-async function pingSitemap() {
-  try {
-    const status = await requestSitemapPing();
-    return [{ channel: "google-sitemap-ping", ok: status === 200, status }];
-  } catch (error) {
-    console.warn(`Sitemap ping failed: ${error.message}`);
-    return [
-      { channel: "google-sitemap-ping", ok: false, error: error.message },
-    ];
-  }
-}
-
-async function warmUrl(url, label) {
-  try {
-    const response = await fetch(url, {
-      headers: { "User-Agent": "AI-Pick-Distributor/1.0" },
-    });
-    console.log(`Warm ${label}: ${response.status} ${url}`);
-    return { channel: label, url, ok: response.ok, status: response.status };
-  } catch (error) {
-    console.warn(`Warm ${label} failed: ${error.message}`);
-    return { channel: label, url, ok: false, error: error.message };
-  }
-}
-
 /**
- * Run search-engine and indexer signals right after a post is published locally.
+ * Run search-engine URL submission after a post is published.
  */
-export async function distributePublishedPost(slug) {
-  const urls = {
-    en: `${SITE_URL}/en/blog/${slug}`,
-    ko: `${SITE_URL}/ko/blog/${slug}`,
-  };
-  const urlList = [urls.en, urls.ko, `${SITE_URL}/sitemap.xml`];
-
+export async function distributePublishedPost(slug, options = {}) {
   const en = readPost(slug, "en");
   const ko = readPost(slug, "ko");
-  const sharePack = buildSharePack({ slug, urls, en, ko });
-  const sharePackPath = saveSharePack(slug, sharePack);
-  console.log(`Share pack saved: ${sharePackPath}`);
 
-  const results = [
-    ...(await pingGoogleUrls([urls.en, urls.ko])),
-    ...(await pingIndexNow(urlList)),
-    ...(await pingSitemap()),
-  ];
+  if (en.data.draft === true) {
+    console.warn(`Skip distribution: ${slug} is still draft`);
+    return null;
+  }
+
+  const submission = await submitPublishedPost(slug, options);
+  const sharePackPath = saveSharePack(
+    slug,
+    buildSharePack({ slug, urls: submission.urls, en, ko }),
+  );
+  console.log(`Share pack saved: ${sharePackPath}`);
 
   const entry = {
     at: new Date().toISOString(),
     slug,
-    urls,
-    results,
+    urls: submission.urls,
+    results: submission.results,
+    okCount: submission.okCount,
     sharePackPath: path.relative(process.cwd(), sharePackPath),
   };
   appendLog(entry);
 
-  console.log(`Distribution complete for ${slug} (${results.filter((r) => r.ok).length}/${results.length} ok)`);
+  console.log(
+    `Distribution complete for ${slug} (${submission.okCount}/${submission.total} ok)`,
+  );
   return entry;
 }
 
-/**
- * After Vercel deploy, warm RSS/sitemap caches so aggregators see fresh content.
- */
 export async function warmDistributionCaches() {
-  const targets = [
-    { url: `${SITE_URL}/sitemap.xml`, label: "sitemap" },
-    { url: `${SITE_URL}/en/feed.xml`, label: "rss-en" },
-    { url: `${SITE_URL}/ko/feed.xml`, label: "rss-ko" },
-  ];
+  const results = await warmFeedAndSitemap();
+  appendLog({ at: new Date().toISOString(), action: "warm", results });
+  return results;
+}
 
-  const results = [];
-  for (const target of targets) {
-    results.push(await warmUrl(target.url, target.label));
+function slugsFromGitDiff(base = "HEAD~1", head = "HEAD") {
+  let diff = "";
+  try {
+    diff = execSync(`git diff --name-only ${base} ${head} -- content/posts`, {
+      encoding: "utf8",
+    });
+  } catch {
+    return [];
   }
 
-  appendLog({
-    at: new Date().toISOString(),
-    action: "warm",
-    results,
-  });
+  const slugs = new Set();
+  for (const line of diff.split("\n")) {
+    const match = line.match(/^content\/posts\/([^/]+)\/en\.md$/);
+    if (match) slugs.add(match[1]);
+  }
+  return [...slugs];
+}
 
-  return results;
+function listPublishedSlugs() {
+  const root = path.join(process.cwd(), "content", "posts");
+  const out = [];
+  for (const slug of fs.readdirSync(root, { withFileTypes: true })) {
+    if (!slug.isDirectory()) continue;
+    const enPath = path.join(root, slug.name, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = matter(fs.readFileSync(enPath, "utf8"));
+    if (data.draft !== true) out.push(slug.name);
+  }
+  return out.sort();
+}
+
+/**
+ * After git push: submit URLs for posts that were just published (draft→live).
+ */
+export async function distributeChangedPosts(options = {}) {
+  const candidates = options.slugs?.length
+    ? options.slugs
+    : slugsFromGitDiff(options.base, options.head);
+
+  const toSubmit = [];
+  for (const slug of candidates) {
+    const enPath = path.join(process.cwd(), "content", "posts", slug, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = matter(fs.readFileSync(enPath, "utf8"));
+    if (data.draft === true) continue;
+    toSubmit.push(slug);
+  }
+
+  if (toSubmit.length === 0) {
+    console.log("No newly published posts in this push — nothing to submit.");
+    return [];
+  }
+
+  const entries = [];
+  for (const slug of toSubmit) {
+    entries.push(await distributePublishedPost(slug, options));
+  }
+  return entries.filter(Boolean);
+}
+
+/**
+ * One-time catch-up for published posts never logged in distribution-log.jsonl.
+ */
+export async function distributeMissingPosts() {
+  const published = listPublishedSlugs();
+  const done = loadDistributedSlugs();
+  const missing = published.filter((s) => !done.has(s));
+
+  if (missing.length === 0) {
+    console.log("All published posts already have a successful distribution log entry.");
+    return [];
+  }
+
+  console.log(`Backfill index submission for ${missing.length} slug(s): ${missing.join(", ")}`);
+  const entries = [];
+  for (const slug of missing) {
+    entries.push(await distributePublishedPost(slug));
+  }
+  return entries.filter(Boolean);
 }
 
 async function main() {
@@ -186,6 +211,16 @@ async function main() {
 
   if (task === "warm") {
     await warmDistributionCaches();
+    return;
+  }
+
+  if (task === "on-push") {
+    await distributeChangedPosts();
+    return;
+  }
+
+  if (task === "backfill-missing") {
+    await distributeMissingPosts();
     return;
   }
 
@@ -199,6 +234,8 @@ async function main() {
 
   console.log(`Usage:
   node scripts/automation/distributor.mjs distribute --slug <slug>
+  node scripts/automation/distributor.mjs on-push
+  node scripts/automation/distributor.mjs backfill-missing
   node scripts/automation/distributor.mjs warm`);
   process.exit(task === "help" ? 0 : 1);
 }
@@ -209,3 +246,5 @@ if (process.argv[1]?.includes("distributor.mjs")) {
     process.exit(1);
   });
 }
+
+export { DEFAULT_SITE_URL };

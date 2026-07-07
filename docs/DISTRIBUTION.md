@@ -1,29 +1,51 @@
 # Distribution engine
 
-Post-publish signals that actually help discovery. Runs automatically from `blog-automation.yml` via `scripts/automation/distributor.mjs`.
+Post-publish **direct URL submission** (Google Indexing API + IndexNow for Bing/Naver/global).  
+Runs automatically on every `main` push that touches `content/posts/**` — including **admin manual publish**.
+
+Sitemap and RSS remain registered in Search Console / Naver; this layer asks crawlers to **fetch new URLs faster**.
 
 ## What runs on each publish
 
 | Step | Channel | Purpose |
 | --- | --- | --- |
-| Google Indexing API | Search | Request crawl/index for EN + KO URLs |
-| IndexNow | Bing, Yandex, etc. | Notify search engines of new URLs |
-| Sitemap ping | Google (legacy) | Hint sitemap refresh |
-| Share pack | Manual | `data/automation/share-packs/{slug}.json` — X/Reddit copy-paste text |
-| Warm (after deploy) | RSS + sitemap | Fetch live feeds so aggregators see fresh items |
+| Google Indexing API | `google-indexing` | URL_UPDATED for EN + KO blog URLs |
+| IndexNow (global) | `indexnow-global` | `api.indexnow.org` |
+| IndexNow (Naver) | `indexnow-naver` | `searchadvisor.naver.com/indexnow` |
+| IndexNow (Bing) | `indexnow-bing` | `bing.com/indexnow` |
+| Warm (90s after push) | sitemap + RSS | Refetch feeds for aggregators |
+| Share pack | Manual | `data/automation/share-packs/{slug}.json` |
 
-## Files
+## Modules
 
-- `scripts/automation/distributor.mjs` — orchestrator
-- `scripts/automation/indexnow.mjs` — IndexNow client
-- `public/aipickindexnow2026.txt` — IndexNow key file (must stay public)
-- `data/automation/distribution-log.jsonl` — audit log
-- `lib/feed-excerpt.ts` + `lib/feed.ts` — RSS with `content:encoded` (Editorial Overview + Final Verdict)
+| File | Role |
+| --- | --- |
+| `scripts/lib/index-submission.mjs` | Core: `submitPublishedPost()`, `warmFeedAndSitemap()` |
+| `scripts/automation/indexnow.mjs` | Multi-endpoint IndexNow (global + Naver + Bing) |
+| `scripts/automation/google-indexing.mjs` | Google Indexing API |
+| `scripts/automation/distributor.mjs` | Orchestrator, logging, share packs, git push hook |
+| `.github/workflows/url-index-submission.yml` | Auto-run on content push + manual backfill |
+| `public/aipickindexnow2026.txt` | IndexNow key verification file |
+
+## Triggers
+
+1. **GHA publish-slot** — `publish-draft.mjs` → `distributePublishedPost()` inline  
+2. **Push to `content/posts/**`** — `url-index-submission.yml` → `distributor.mjs on-push` (catches admin publish)  
+3. **Manual** — see commands below
 
 ## Local commands
 
 ```bash
-node scripts/automation/distributor.mjs distribute --slug <slug>
+# Single slug (after publish)
+npm run automation:distribute -- --slug 2026-example-post
+
+# Simulate post-push (git diff HEAD~1)
+npm run automation:index-on-push
+
+# One-time: posts never in distribution-log.jsonl (e.g. early 5 posts)
+npm run automation:index-backfill
+
+# Warm sitemap/RSS
 node scripts/automation/distributor.mjs warm
 ```
 
@@ -31,8 +53,12 @@ node scripts/automation/distributor.mjs warm
 
 | Variable | Required | Notes |
 | --- | --- | --- |
-| `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | GSC Indexing API |
+| `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | GSC Indexing API (GitHub secret) |
 | `NEXT_PUBLIC_SITE_URL` | Yes | `https://www.aipick.shop` |
 | `INDEXNOW_KEY` | Optional | Defaults to `aipickindexnow2026` |
 
-See `docs/BLOG_AUTOMATION.md` for the full publish pipeline.
+## Notes
+
+- IndexNow does **not** guarantee indexing — only notifies crawlers (same as manual “수집 요청”, but automated).  
+- Naver: IndexNow complements sitemap/RSS; official FAQ says all can be used together.  
+- Deprecated Google sitemap ping (`google.com/ping`) removed — returns 404; Indexing API + sitemap in GSC is enough.

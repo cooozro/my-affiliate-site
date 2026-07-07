@@ -1,0 +1,62 @@
+name: URL index submission
+
+# After content push (incl. admin publish): submit EN/KO URLs to Google + IndexNow (Bing, Naver).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "on-push | backfill-missing | warm"
+        required: false
+        default: "on-push"
+
+concurrency:
+  group: url-index-submission
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22.13"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Submit published URLs to search engines
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY || 'aipickindexnow2026' }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'on-push' }}"
+          node scripts/automation/distributor.mjs "$MODE"
+
+      - name: Commit distribution log
+        run: |
+          git add data/automation/distribution-log.jsonl data/automation/share-packs/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No distribution log changes"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore(automation): index submission log"
+            git push
+          fi
+
+      - name: Warm sitemap and RSS after deploy
+        if: github.event.inputs.mode != 'backfill-missing'
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.aipick.shop' }}
+        run: |
+          sleep 90
+          node scripts/automation/distributor.mjs warm
