@@ -30,12 +30,12 @@
     "fitness-trackers"
   ],
   "lastPublishAt": "2026-07-07T04:35:40.875Z",
-  "nextPublishAt": "2026-07-08T02:19:00.000Z",
-  "scheduledGapHours": 5.32,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-07",
+  "nextPublishAt": "2026-07-08T01:55:00.000Z",
+  "scheduledGapHours": 4.92,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-08",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-07",
+  "writeDateKst": "2026-07-08",
   "history": [
     {
       "action": "publish",
@@ -474,7 +474,7 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-07T11:22:51.512Z",
+    "at": "2026-07-07T18:26:15.466Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
