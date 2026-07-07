@@ -112,6 +112,75 @@ After writing posts:
 Never overwrite or edit an existing post directory. Minimize scope. Only the one NEW draft.`;
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function formatCursorRunFailure(result) {
+  const parts = [`run ${result.id ?? "unknown"}`];
+  if (typeof result.durationMs === "number") {
+    parts.push(`${Math.round(result.durationMs / 1000)}s`);
+  }
+  if (result.error?.message) {
+    parts.push(result.error.message);
+  } else if (result.error?.code) {
+    parts.push(result.error.code);
+  }
+  return parts.join(" — ");
+}
+
+function cursorRetryDelaysMs() {
+  // User accepts slow replenish; on GHA wait longer between attempts in one job.
+  if (process.env.GITHUB_ACTIONS) return [120_000, 300_000, 600_000];
+  return [30_000, 90_000];
+}
+
+function isRetryableCursorError(error) {
+  if (error instanceof CursorAgentError) {
+    return Boolean(error.isRetryable);
+  }
+  return false;
+}
+
+function isRetryableCursorRunResult(result) {
+  const msg = `${result.error?.message ?? ""} ${result.error?.code ?? ""}`.toLowerCase();
+  return /rate|limit|usage|busy|timeout|unavailable|429|503|throttl/.test(msg);
+}
+
+async function runCursorAgentOnce(request) {
+  const apiKey = process.env.CURSOR_API_KEY?.trim();
+  if (!apiKey) return null;
+
+  const prompt = buildCursorPrompt(request);
+  const model = { id: "composer-2.5" };
+  const agentOptions = {
+    apiKey,
+    model,
+    local: { cwd: process.cwd(), settingSources: [] },
+  };
+
+  await using agent = await Agent.create(agentOptions);
+  const run = await agent.send(prompt);
+
+  for await (const event of run.stream()) {
+    if (event.type === "assistant") {
+      for (const block of event.message.content) {
+        if (block.type === "text") {
+          const line = block.text.trim();
+          if (line) console.log(`[cursor] ${line.slice(0, 200)}`);
+        }
+      }
+    } else if (event.type === "tool_call") {
+      console.log(`[cursor tool] ${event.name}: ${event.status}`);
+    } else if (event.type === "status") {
+      console.log(`[cursor status] ${event.status}`);
+    }
+  }
+
+  const result = await run.wait();
+  return result;
+}
+
 function rejectReplenishOverwrite(slug, reason) {
   removeReplenishSlugArtifacts(slug);
   revertPostSlugFromGit(slug);
@@ -303,33 +372,73 @@ async function replenishWithCursor(request, draftsBefore) {
   console.log(
     `Cursor replenish starting: topic=${request.topic?.id ?? "unknown"}, mode=${request.writingMode ?? "stable"}, needed=${request.needed}`,
   );
-
   console.log(`Node ${process.version} (Cursor local agent needs >= 22.13 for node:sqlite)`);
 
-  const result = await Agent.prompt(buildCursorPrompt(request), {
-    apiKey,
-    model: { id: "composer-2.5" },
-    local: { cwd: process.cwd(), settingSources: [] },
-  });
+  const delays = cursorRetryDelaysMs();
+  let lastMessage = "unknown error";
 
-  if (result.status === "error") {
-    throw new Error(`Cursor agent run failed: ${result.id ?? "unknown"}`);
+  for (let attempt = 0; attempt <= delays.length; attempt += 1) {
+    try {
+      const result = await runCursorAgentOnce(request);
+
+      if (result.status === "error") {
+        lastMessage = `Cursor agent run failed: ${formatCursorRunFailure(result)}`;
+        const instantFail =
+          typeof result.durationMs === "number" && result.durationMs < 15_000;
+        if (instantFail) {
+          console.warn(
+            "Cursor agent ended in <15s — often usage cap or API rejection (not a slow queue). IDE chat can still work on a separate meter.",
+          );
+        }
+        if (!isRetryableCursorRunResult(result) || attempt >= delays.length) {
+          throw new Error(lastMessage);
+        }
+        const waitMs = delays[attempt];
+        console.warn(
+          `Cursor replenish retry ${attempt + 1}/${delays.length} in ${Math.round(waitMs / 1000)}s: ${lastMessage}`,
+        );
+        await sleep(waitMs);
+        continue;
+      }
+
+      console.log(
+        `Cursor agent finished ${result.status} (id=${result.id ?? "n/a"}, ${Math.round((result.durationMs ?? 0) / 1000)}s)`,
+      );
+
+      const updated = readCursorDraftRequest();
+      let writtenSlug =
+        typeof updated?.writtenSlug === "string" ? updated.writtenSlug : null;
+
+      if (!writtenSlug) {
+        const newDrafts = listDrafts().filter((d) => !draftsBefore.has(d.slug));
+        writtenSlug = newDrafts[0]?.slug ?? null;
+      }
+
+      return writtenSlug;
+    } catch (error) {
+      lastMessage =
+        error instanceof CursorAgentError
+          ? `Cursor agent: ${error.message}`
+          : error instanceof Error
+            ? error.message
+            : String(error);
+
+      const retryable = isRetryableCursorError(error);
+      const hasMoreAttempts = attempt < delays.length;
+
+      if (!retryable || !hasMoreAttempts) {
+        throw error instanceof Error ? error : new Error(lastMessage);
+      }
+
+      const waitMs = delays[attempt];
+      console.warn(
+        `Cursor replenish retry ${attempt + 1}/${delays.length} in ${Math.round(waitMs / 1000)}s: ${lastMessage}`,
+      );
+      await sleep(waitMs);
+    }
   }
 
-  console.log(
-    `Cursor API connection successful — agent run ${result.status} (id=${result.id ?? "n/a"})`,
-  );
-
-  const updated = readCursorDraftRequest();
-  let writtenSlug =
-    typeof updated?.writtenSlug === "string" ? updated.writtenSlug : null;
-
-  if (!writtenSlug) {
-    const newDrafts = listDrafts().filter((d) => !draftsBefore.has(d.slug));
-    writtenSlug = newDrafts[0]?.slug ?? null;
-  }
-
-  return writtenSlug;
+  throw new Error(lastMessage);
 }
 
 async function main() {
