@@ -17,18 +17,18 @@ draft: true
 liveData: true
 createdAt: '2026-07-07T14:05:00+09:00'
 coverImage: >-
-  /images/posts/2026-summer-budget-tablets-buying-guide/budget-tablet-reading-desk-cover.jpg
-coverImageAlt: budget tablet on a desk for reading
-coverImageCredit: Photo by cottonbro studio / Pexels
-coverImageAltKo: 책상 위 예산형 태블릿
+  /images/posts/2026-summer-budget-tablets-buying-guide/tablet-on-desk-cover.jpg
+coverImageAlt: tablet on a minimalist desk for reading
+coverImageCredit: Photo by Hanna Pad / Pexels
+coverImageAltKo: 책상 위 태블릿
 imageSearchKeywords:
   - budget tablet
   - android tablet reading
   - tablet desk study
 coverImageProvider: pexels
-coverImageAssetId: 6338558
+coverImageAssetId: 8533358
 coverImageSourceUrl: >-
-  https://images.pexels.com/photos/6338558/pexels-photo-6338558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+  https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 updatedAt: '2026-07-07T05:05:00.000Z'
 ---
 ## Editorial Overview

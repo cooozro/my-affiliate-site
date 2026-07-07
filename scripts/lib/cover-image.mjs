@@ -8,6 +8,7 @@ import {
   CURATED_SLUG_ASSETS,
   resolveImageContext,
   scoreImageRelevance,
+  passesProductAltGate,
 } from "./image-query.mjs";
 import {
   pickVisionWinner,
@@ -31,7 +32,7 @@ const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
 
 const PEXELS_PHOTO = "https://api.pexels.com/v1/photos";
-const TEXT_MIN_SCORE = 2;
+const TEXT_MIN_SCORE = 4;
 
 function isBlockedAsset(candidate) {
   return BLOCKED_ASSET_IDS.has(`${candidate.provider}:${candidate.assetId}`);
@@ -97,11 +98,15 @@ function candidateIsUsed(registry, candidate) {
 }
 
 function rankText(candidates, ctx) {
+  const anchors = ctx.requiredAnchors ?? [];
   return candidates
+    .filter((candidate) =>
+      passesProductAltGate(candidate.providerAlt ?? candidate.relevanceText, anchors),
+    )
     .map((candidate) => ({
       ...candidate,
       textScore: scoreImageRelevance(
-        candidate.relevanceText,
+        candidate.providerAlt ?? candidate.relevanceText,
         ctx.productKeywords,
         ctx.negativeTags,
         ctx.seasonContext,
@@ -132,7 +137,8 @@ async function fetchPexelsCandidates(query, apiKey, slug, queryIndex, ctx, pageO
         imageUrl,
         thumbUrl: photo.src?.medium || photo.src?.small || imageUrl,
         assetKey: assetKey("pexels", photo.id),
-        relevanceText: `${photo.alt ?? ""} ${query}`,
+        providerAlt: photo.alt ?? "",
+        relevanceText: photo.alt ?? "",
         credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
         provider: "pexels",
         assetId: photo.id,
@@ -156,7 +162,8 @@ async function fetchPexelsPhotoById(photoId, apiKey, query = "curated") {
     imageUrl,
     thumbUrl: photo.src?.medium || photo.src?.small || imageUrl,
     assetKey: assetKey("pexels", photo.id),
-    relevanceText: `${photo.alt ?? ""} ${query}`,
+    providerAlt: photo.alt ?? "",
+    relevanceText: photo.alt ?? "",
     credit: `Photo by ${photo.photographer ?? "Pexels"} / Pexels`,
     provider: "pexels",
     assetId: photo.id,
@@ -206,7 +213,8 @@ async function fetchPixabayCandidates(query, apiKey, slug, queryIndex, ctx, page
         imageUrl,
         thumbUrl: hit.previewURL || imageUrl,
         assetKey: assetKey("pixabay", hit.id),
-        relevanceText: `${hit.tags ?? ""} ${query}`,
+        providerAlt: hit.tags ?? "",
+        relevanceText: hit.tags ?? "",
         credit: `Photo by ${hit.user ?? "Pixabay"} / Pixabay`,
         provider: "pixabay",
         assetId: hit.id,
@@ -389,6 +397,7 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
 
   console.log(`Image search: ${slug}`);
   console.log(`  keywords: ${ctx.productKeywords.join(" | ")}`);
+  console.log(`  alt anchors required: ${(ctx.requiredAnchors ?? []).join(", ") || "none"}`);
   console.log(`  queries: ${ctx.searchQueries.slice(0, 4).join(" | ")}`);
   if (ctx.seasonContext?.season) {
     console.log(`  season: ${ctx.seasonContext.season} (scene rejects: ${ctx.seasonContext.sceneReject.slice(0, 4).join(", ")})`);

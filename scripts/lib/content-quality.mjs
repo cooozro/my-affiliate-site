@@ -13,6 +13,11 @@ import {
   MIN_FAQ_BY_PROFILE,
 } from "./faq-section-audit.mjs";
 import {
+  BLOCKED_ASSET_IDS,
+  passesProductAltGate,
+  resolveImageContext,
+} from "./image-query.mjs";
+import {
   CONTENT_PROFILES,
   MIN_EN_BODY_BYTES,
   MIN_KO_BODY_CHARS,
@@ -93,6 +98,28 @@ function auditShared(root, slug, locale, raw, profile, options) {
     issues.push(`${label}: cover image file not found`);
   } else if (!data.coverImageAlt?.trim()) {
     issues.push(`${label}: missing coverImageAlt`);
+  } else if (locale === "en") {
+    if (data.coverImageProvider && data.coverImageAssetId != null) {
+      const assetKey = `${data.coverImageProvider}:${data.coverImageAssetId}`;
+      if (BLOCKED_ASSET_IDS.has(assetKey)) {
+        issues.push(`${label}: cover uses blocked asset ${assetKey} — re-fetch cover`);
+      }
+    }
+    const imgCtx = resolveImageContext(slug, {
+      title: data.title,
+      tags: data.tags,
+      topicId: data.topicId,
+      imageSearchKeywords: data.imageSearchKeywords,
+    });
+    const anchors = imgCtx.requiredAnchors ?? [];
+    if (
+      anchors.length > 0 &&
+      !passesProductAltGate(data.coverImageAlt, anchors)
+    ) {
+      issues.push(
+        `${label}: coverImageAlt must mention product (${anchors.join(" | ")})`,
+      );
+    }
   }
 
   for (const pattern of FORBIDDEN_PATTERNS) {

@@ -336,6 +336,7 @@ export const BLOCKED_ASSET_IDS = new Set([
   "pexels:27176671",
   "pexels:35673090",
   "pexels:6740742",
+  "pexels:6338558",
   "pixabay:6577523",
   "pixabay:8315886",
   "pixabay:560937",
@@ -364,6 +365,11 @@ export const CURATED_SLUG_ASSETS = {
     { provider: "pexels", assetId: 4348401, query: "fitness tracker wrist outdoor" },
     { provider: "pexels", assetId: 4056535, query: "smartwatch fitness summer" },
     { provider: "pexels", assetId: 4761012, query: "runner smartwatch outdoor" },
+  ],
+  "2026-summer-budget-tablets-buying-guide": [
+    { provider: "pexels", assetId: 8533358, query: "tablet on desk minimalist" },
+    { provider: "pexels", assetId: 3645274, query: "person using tablet" },
+    { provider: "pexels", assetId: 7870426, query: "tablet workspace desk" },
   ],
 };
 
@@ -487,6 +493,15 @@ const CLUSTER_NEGATIVES = {
     "air conditioner",
     "snow",
     "winter coat",
+    "wheat",
+    "grain",
+    "sack",
+    "harvest",
+    "farmer",
+    "crop",
+    "grocery",
+    "market stall",
+    "food bag",
   ],
   "floor-care": [
     ...GLOBAL_STOCK_NEGATIVES,
@@ -690,10 +705,71 @@ export function negativeTagsForCluster(topicCluster, slug, seasonContext, topicI
   ]);
 }
 
+/** Product nouns that must appear in provider alt/tags — not inferred from search query. */
+const CLUSTER_PRODUCT_ANCHORS = {
+  wearables: ["tracker", "smartwatch", "smart band", "fitness band", "wearable", "watch"],
+  tablets: ["tablet", "ipad"],
+  computing: ["laptop", "monitor", "keyboard", "computer", "desktop"],
+  smartphones: ["smartphone", "iphone", "android phone", "mobile phone", "phone"],
+  audio: ["headphone", "earbud", "earphone", "speaker"],
+  power: ["power bank", "charger", "battery pack"],
+  "air-quality": ["air purifier", "purifier", "dehumidifier"],
+  "air-conditioning": ["air conditioner", "portable ac", "window ac", "ac unit"],
+  "floor-care": ["vacuum", "robot vacuum"],
+  "smart-home": ["camera", "smart home", "security camera"],
+};
+
 /**
- * @param {string} text
+ * Anchors that must appear in stock-photo alt/tags before a candidate is eligible.
  * @param {string[]} productKeywords
- * @param {string[]} negatives
+ * @param {string} [topicCluster]
+ */
+export function requiredProductAnchors(productKeywords, topicCluster) {
+  const blob = productKeywords.join(" ").toLowerCase();
+  const anchors = new Set();
+
+  for (const anchor of CLUSTER_PRODUCT_ANCHORS[topicCluster] ?? []) {
+    const head = anchor.split(/\s+/)[0];
+    if (blob.includes(anchor) || blob.includes(head)) anchors.add(anchor);
+  }
+
+  for (const kw of productKeywords) {
+    const lower = kw.toLowerCase();
+    if (lower.includes("tablet")) anchors.add("tablet");
+    if (lower.includes("ipad")) anchors.add("ipad");
+    if (lower.includes("laptop")) anchors.add("laptop");
+    if (lower.includes("monitor")) anchors.add("monitor");
+    if (lower.includes("keyboard")) anchors.add("keyboard");
+    if (lower.includes("smartphone") || lower.includes("phone")) anchors.add("phone");
+    if (lower.includes("earbuds") || lower.includes("earphone")) anchors.add("earbud");
+    if (lower.includes("headphone")) anchors.add("headphone");
+    if (lower.includes("speaker")) anchors.add("speaker");
+    if (lower.includes("tracker") || lower.includes("smartwatch")) anchors.add("tracker");
+    if (lower.includes("purifier")) anchors.add("purifier");
+    if (lower.includes("dehumidifier")) anchors.add("dehumidifier");
+    if (lower.includes("air conditioner") || /\bac\b/.test(lower)) anchors.add("air conditioner");
+    if (lower.includes("vacuum")) anchors.add("vacuum");
+    if (lower.includes("power bank")) anchors.add("power bank");
+    if (lower.includes("camera")) anchors.add("camera");
+  }
+
+  return [...anchors];
+}
+
+/**
+ * Hard gate: provider alt/tags must mention the product — search query is NOT counted.
+ * @param {string} providerAlt
+ * @param {string[]} anchors
+ */
+export function passesProductAltGate(providerAlt, anchors) {
+  if (!anchors?.length) return true;
+  const alt = String(providerAlt ?? "").toLowerCase().trim();
+  if (!alt) return false;
+  return anchors.some((anchor) => alt.includes(anchor.toLowerCase()));
+}
+
+/**
+ * @param {string} text — provider alt/tags only (never append search query)
  */
 export function scoreImageRelevance(text, productKeywords, negatives, seasonContext) {
   const blob = String(text ?? "").toLowerCase();
@@ -967,6 +1043,7 @@ export function resolveImageContext(slug, input = {}) {
     forbiddenSubjects: forbiddenSubjectsForCluster(topicCluster, slug),
     topicCluster,
     seasonContext,
+    requiredAnchors: requiredProductAnchors(productKeywords, topicCluster),
     imageSearchKeywords: productKeywords,
   };
 }
