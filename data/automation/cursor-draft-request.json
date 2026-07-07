@@ -29,6 +29,6 @@
   },
   "templatePath": "docs/templates/head-to-head.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Cursor agent run failed: run-c66c11e0-9f22-49d6-a194-e54343c88396",
-  "lastAttemptAt": "2026-07-07T04:12:21.789Z"
+  "lastError": "Cursor agent run failed: run-16f3a389-e978-47dc-ba2c-a19cb8a3f1da",
+  "lastAttemptAt": "2026-07-07T04:17:51.942Z"
 }
