@@ -29,7 +29,7 @@ coverImageAssetId: 4348401
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 updatedAt: '2026-07-07T05:15:00.000Z'
-publishedAt: '2026-07-07T13:35:39.000Z'
+publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## 편집부 개요
 
