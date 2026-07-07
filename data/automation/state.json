@@ -463,12 +463,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-07T04:25:54.056Z",
+    "at": "2026-07-07T04:30:11.380Z",
     "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 39min (KST 2026-07-07)",
+        "message": "Publish slot overdue by 44min (KST 2026-07-07)",
         "severity": "error"
       },
       {
