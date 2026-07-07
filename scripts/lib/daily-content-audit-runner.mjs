@@ -88,11 +88,12 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
 
   for (const slug of slugs) {
     const phase = isDraftSlug(root, slug) ? "draft" : "publish";
+    const integrityState = phase === "publish" ? null : state;
     let result;
     try {
       result = runPublishIntegrityGate(root, slug, {
         phase,
-        state,
+        state: integrityState,
         applyRepair: true,
       });
     } catch (error) {

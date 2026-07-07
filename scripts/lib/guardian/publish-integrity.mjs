@@ -442,9 +442,13 @@ function auditPostLevel(root, slug, phase, bucket, state) {
     addError(bucket, `${slug}: cover image already used on another post (duplicate hero)`);
   }
 
-  const topicDup = validateReplenishTopicUnique(slug, root);
-  if (!topicDup.ok) {
-    addError(bucket, topicDup.reason);
+  // Topic uniqueness check is for replenish/draft safety only.
+  // Applying it to all published posts creates noisy false positives in admin audit.
+  if (phase !== "publish") {
+    const topicDup = validateReplenishTopicUnique(slug, root);
+    if (!topicDup.ok) {
+      addError(bucket, topicDup.reason);
+    }
   }
 
   if (phase === "publish" && state) {
