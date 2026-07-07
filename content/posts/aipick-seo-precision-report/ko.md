@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-07-06'
+date: '2026-07-07'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-06T13:06:41.778Z'
+updatedAt: '2026-07-07T04:12:23.037Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 6일 월요일 오후 10:06
-- **스캔 대상:** 발행 글 21 slug / 42 locale 파일
+- **생성 시각 (KST):** 2026년 7월 7일 화요일 오후 1:12
+- **스캔 대상:** 발행 글 22 slug / 44 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -34,8 +34,8 @@ updatedAt: '2026-07-06T13:06:41.778Z'
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **21** slug (welcome 등 1건 제외)
-- locale 파일 **42**개 분석
+- 스캔 대상 **22** slug (welcome 등 1건 제외)
+- locale 파일 **44**개 분석
 
 ### 수익성·효율성 지표
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-06T13:06:41.778Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 7. 6. 오후 10:06:40
+- **API 수집 시각 (KST):** 2026. 7. 7. 오후 1:12:22
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -81,20 +81,20 @@ updatedAt: '2026-07-06T13:06:41.778Z'
 | 지표 | 값 |
 | --- | --- |
 | Active users | 11 |
-| Sessions | 52 |
-| Page views | 321 |
+| Sessions | 56 |
+| Page views | 332 |
 
 ### 상위 블로그 랜딩 (7일)
 
 | 페이지 | 조회수 |
 | --- | --- |
 | `/en/blog/2026-air-purifiers-guide` | 23 |
-| `/ko/blog/welcome` | 21 |
+| `/ko/blog/welcome` | 22 |
 | `/en/blog/2026-summer-ac-buying-checklist` | 15 |
 | `/ko/blog/2026-summer-ac-buying-checklist` | 9 |
 | `/en/blog/2026-budget-wireless-earbuds-top5` | 7 |
+| `/en/blog/welcome` | 6 |
 | `/ko/blog/2026-gaming-consoles-scenario-guide` | 6 |
-| `/en/blog/welcome` | 5 |
 | `/ko/blog/2026-air-fryers-checklist` | 5 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
