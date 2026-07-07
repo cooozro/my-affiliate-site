@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-07T04:12:23.037Z'
+updatedAt: '2026-07-07T10:40:35.195Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 7일 화요일 오후 1:12
-- **스캔 대상:** 발행 글 22 slug / 44 locale 파일
+- **생성 시각 (KST):** 2026년 7월 7일 화요일 오후 7:40
+- **스캔 대상:** 발행 글 23 slug / 46 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -27,15 +27,15 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 | --- | --- | --- |
 | 운영 로직 상태 | **91%** | ✅ 좋음 |
 | 수익성·효율성 지표 | **98%** | ✅ 좋음 |
-| 시스템 건강도 | **99%** | ✅ 좋음 |
+| 시스템 건강도 | **100%** | ✅ 좋음 |
 
 ### 운영 로직 상태
 
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **22** slug (welcome 등 1건 제외)
-- locale 파일 **44**개 분석
+- 스캔 대상 **23** slug (welcome 등 1건 제외)
+- locale 파일 **46**개 분석
 
 ### 수익성·효율성 지표
 
@@ -47,11 +47,11 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 
 ### 시스템 건강도
 
-✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
 
-- 저품질 방어(Guardian) **99%**
+- 저품질 방어(Guardian) **100%**
 - 정책·무결성 게이트 publish phase 스캔
-- 🚨 **수동 확인 권장 4건** — 구조 < 60% 또는 정책 이슈
+- ✅ 고위험 slug 없음
 
 ---
 
@@ -63,8 +63,8 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 | ↳ 시각화 | | ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_ | |
 | JSON-LD 준비도 | **96%** | ✅ 좋음 | Article/FAQ/HowTo 스키마 전제 조건 |
 | ↳ 시각화 | | ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ | |
-| 저품질 방어 | **99%** | ✅ 좋음 | Guardian 정책·무결성 게이트 기준 |
-| ↳ 시각화 | | ✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
+| 저품질 방어 | **100%** | ✅ 좋음 | Guardian 정책·무결성 게이트 기준 |
+| ↳ 시각화 | | ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
 | 구조화 데이터 적용 가능 비율 | **100%** | ✅ 좋음 | JSON-LD 이슈 0건 EN 포스트 비율 |
 | ↳ 시각화 | | ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ | |
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 7. 7. 오후 1:12:22
+- **API 수집 시각 (KST):** 2026. 7. 7. 오후 7:40:34
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -80,9 +80,9 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 11 |
+| Active users | 9 |
 | Sessions | 56 |
-| Page views | 332 |
+| Page views | 334 |
 
 ### 상위 블로그 랜딩 (7일)
 
@@ -128,33 +128,13 @@ updatedAt: '2026-07-07T04:12:23.037Z'
 
 ## 저품질 방어 스캔
 
-✅ **99%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
 
 Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)로 위험 문구·게이트 실패를 탐지합니다.
 
 ### 주의 목록 (구조 < 60 또는 정책 이슈)
 
-> 🚨 **즉시 확인 권장 — 4건** (구조 < 60% 또는 정책·무결성 이슈)
-
-#### 🚨 2026-portable-vs-window-ac-head-to-head (`ko`)
-
-- ✅ 구조 **80%** | JSON-LD **95%** | 방어 **92%**
-- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-summer-ac-buying-checklist
-
-#### 🚨 2026-portable-vs-window-ac-head-to-head (`en`)
-
-- ✅ 구조 **90%** | JSON-LD **95%** | 방어 **92%**
-- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-summer-ac-buying-checklist
-
-#### 🚨 2026-summer-ac-buying-checklist (`en`)
-
-- ✅ 구조 **95%** | JSON-LD **100%** | 방어 **92%**
-- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-portable-vs-window-ac-head-to-head
-
-#### 🚨 2026-summer-ac-buying-checklist (`ko`)
-
-- ✅ 구조 **95%** | JSON-LD **100%** | 방어 **92%**
-- 🚨 **이슈:** Topic "portable-ac" already has post(s): 2026-portable-vs-window-ac-head-to-head
+✅ _현재 게이트 기준 고위험 slug 없음._
 
 ## 키워드 밀도 샘플 (EN 상위 글)
 
