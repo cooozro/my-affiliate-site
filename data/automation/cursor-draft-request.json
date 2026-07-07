@@ -1,33 +1,18 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": null,
-  "requestedAt": "2026-07-07T06:07:18.740Z",
+  "status": "complete",
+  "needed": 0,
+  "publishedSlug": "2026-budget-fitness-trackers-head-to-head",
+  "requestedAt": "2026-07-07T06:30:00.000Z",
   "writingMode": "stable",
   "contentProfile": "explainer",
   "toneVariant": "case-study",
-  "serpKeyword": "2026 home IP cameras buying guide 후기",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
   "topic": {
     "id": "smart-home-cameras",
-    "category": "smart-home",
-    "angle": "home IP cameras: resolution, local vs cloud storage, and privacy features",
-    "imageQuery": "home security camera indoor",
-    "liveData": false,
-    "seasons": [
-      "fall",
-      "spring"
-    ]
+    "category": "smart-home"
   },
-  "templatePath": "docs/templates/explainer.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: case-study. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": null
+  "writtenSlug": "2026-smart-home-cameras-explainer",
+  "completedAt": "2026-07-07T06:30:00.000Z",
+  "draftCount": 2,
+  "lastError": null,
+  "completedBy": "cursor-ide-manual"
 }

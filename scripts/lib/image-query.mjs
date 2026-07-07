@@ -143,6 +143,22 @@ export const TOPIC_IMAGE_PROFILES = {
     topicCluster: "air-conditioning",
     altScene: { en: "in a summer bedroom", ko: "여름 침실" },
   },
+  "smart-home-cameras": {
+    imageSearchKeywords: [
+      "home security camera",
+      "indoor security camera",
+      "smart home camera",
+    ],
+    extraSearchQueries: [
+      "home security camera wall mount",
+      "indoor surveillance camera product",
+      "smart home security camera white",
+    ],
+    topicCluster: "smart-home",
+    altScene: { en: "in a home interior", ko: "실내" },
+    forbiddenSubjects: ["laptop only", "smartphone only", "drone aerial only"],
+    extraNegatives: ["wheat", "grain", "food", "tablet only", "laptop only"],
+  },
 };
 
 /** Per-slug tuned keywords — avoids ambiguous stock search (e.g. air → airplane). */
@@ -317,6 +333,19 @@ export const SLUG_IMAGE_PROFILES = {
     altScene: { en: "on a desk for reading", ko: "책상 위" },
     forbiddenSubjects: ["laptop only", "smartphone only"],
   },
+  "2026-smart-home-cameras-explainer": {
+    imageSearchKeywords: [
+      "home security camera",
+      "indoor security camera",
+      "smart home camera",
+    ],
+    extraSearchQueries: [
+      "home security camera wall mount",
+      "indoor surveillance camera product",
+    ],
+    topicCluster: "smart-home",
+    altScene: { en: "in a home interior", ko: "실내" },
+  },
   "2026-budget-monitors-buying-guide": {
     imageSearchKeywords: ["computer monitor", "desk monitor setup"],
     altScene: { en: "on a workspace desk", ko: "책상" },
@@ -337,6 +366,9 @@ export const BLOCKED_ASSET_IDS = new Set([
   "pexels:35673090",
   "pexels:6740742",
   "pexels:6338558",
+  "pexels:4348401",
+  "pexels:4056535",
+  "pexels:4761012",
   "pixabay:6577523",
   "pixabay:8315886",
   "pixabay:560937",
@@ -362,14 +394,18 @@ export const CURATED_SLUG_ASSETS = {
     { provider: "pexels", assetId: 6078124, query: "portable power bank product" },
   ],
   "2026-budget-fitness-trackers-head-to-head": [
-    { provider: "pexels", assetId: 4348401, query: "fitness tracker wrist outdoor" },
-    { provider: "pexels", assetId: 4056535, query: "smartwatch fitness summer" },
-    { provider: "pexels", assetId: 4761012, query: "runner smartwatch outdoor" },
+    { provider: "pexels", assetId: 6846257, query: "fitness tracker wrist vital signs" },
+    { provider: "pexels", assetId: 4379290, query: "fitness smartwatch outdoor exercise" },
+    { provider: "pexels", assetId: 4379288, query: "smartwatch fitness data wrist outdoor" },
   ],
   "2026-summer-budget-tablets-buying-guide": [
     { provider: "pexels", assetId: 8533358, query: "tablet on desk minimalist" },
     { provider: "pexels", assetId: 3645274, query: "person using tablet" },
     { provider: "pexels", assetId: 7870426, query: "tablet workspace desk" },
+  ],
+  "2026-smart-home-cameras-explainer": [
+    { provider: "pexels", assetId: 16423102, query: "home security camera indoor" },
+    { provider: "pexels", assetId: 24347621, query: "smart home security camera" },
   ],
 };
 
@@ -716,7 +752,7 @@ const CLUSTER_PRODUCT_ANCHORS = {
   "air-quality": ["air purifier", "purifier", "dehumidifier"],
   "air-conditioning": ["air conditioner", "portable ac", "window ac", "ac unit"],
   "floor-care": ["vacuum", "robot vacuum"],
-  "smart-home": ["camera", "smart home", "security camera"],
+  "smart-home": ["camera", "security camera", "cctv", "surveillance", "webcam"],
 };
 
 /**
