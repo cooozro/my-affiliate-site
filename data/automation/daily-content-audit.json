@@ -1,7 +1,7 @@
 {
-  "dateKst": "2026-07-06",
-  "scannedAt": "2026-07-06T03:36:25.710Z",
-  "postsScanned": 22,
+  "dateKst": "2026-07-07",
+  "scannedAt": "2026-07-07T04:35:41.583Z",
+  "postsScanned": 24,
   "autoRepairCount": 3,
   "autoRepairs": [
     {
@@ -23,6 +23,52 @@
       ]
     }
   ],
-  "manualReviewCount": 0,
-  "manualReview": []
+  "manualReviewCount": 3,
+  "manualReview": [
+    {
+      "order": 1,
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "phase": "publish",
+      "issues": [
+        "2026-budget-fitness-trackers-head-to-head: topic diversity — topic id \"fitness-trackers\" already 2x in a row"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-head-to-head",
+        "ko": "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-head-to-head",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-budget-fitness-trackers-head-to-head?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-budget-fitness-trackers-head-to-head?locale=ko"
+      }
+    },
+    {
+      "order": 2,
+      "slug": "2026-portable-vs-window-ac-head-to-head",
+      "phase": "publish",
+      "issues": [
+        "Topic \"portable-ac\" already has post(s): 2026-summer-ac-buying-checklist"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-portable-vs-window-ac-head-to-head",
+        "ko": "https://www.aipick.shop/ko/blog/2026-portable-vs-window-ac-head-to-head",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-portable-vs-window-ac-head-to-head?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-portable-vs-window-ac-head-to-head?locale=ko"
+      }
+    },
+    {
+      "order": 3,
+      "slug": "2026-summer-ac-buying-checklist",
+      "phase": "publish",
+      "issues": [
+        "Topic \"portable-ac\" already has post(s): 2026-portable-vs-window-ac-head-to-head"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
+        "ko": "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-summer-ac-buying-checklist?locale=ko"
+      }
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 ---
 title: '여름용 예산 피트니스 밴드, 핏빗·샤오미·어메이즈핏 맞대결'
 description: >-
-  예산형 피트니스 트래커 3종을 심박 정확도·수면 단계·GPS 방식·앱 생태계 기준으로 비교. 여름 방학 운동·여행·폭염 시즌
-  루틴에 맞는 선택 가이드.
+  예산형 피트니스 트래커 3종을 심박 정확도·수면 단계·GPS 방식·앱 생태계 기준으로 비교. 여름 방학 운동·여행·폭염 시즌 루틴에 맞는
+  선택 가이드.
 date: '2026-07-07'
 tags:
   - 피트니스 트래커
@@ -13,9 +13,8 @@ tags:
 contentProfile: head-to-head
 topicId: fitness-trackers
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-07T13:35:00+09:00'
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-head-to-head/fitness-tracker-smartwatch-cover.jpg
 coverImageAlt: 야외 운동 중 손목에 착용한 피트니스 트래커 스마트워치
@@ -29,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 6740742
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6740742/pexels-photo-6740742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T04:35:00.000Z'
+updatedAt: '2026-07-07T04:35:40.903Z'
+publishedAt: '2026-07-07T13:35:39.000Z'
 ---
 ## 편집부 개요
 
@@ -137,13 +137,11 @@ Premium은 수면 인사이트·운동 영상·일부 기록을 열어 주지만
 
 ## 관련 가이드
 
-- [여름 장거리 비행용 노이즈캐슬링 헤드폰 맞대결](/ko/blog/2026-noise-cancelling-headphones-head-to-head) — 여행 피로와 함께 보는 웨어러블 선택
-- [예산형 보조배터리 구매 가이드](/ko/blog/2026-budget-power-banks-guide) — 폰 GPS 러닝 때 배터리 보조
-- [2026 노트북 구매 가이드](/ko/blog/2026-laptops-buying-guide) — 원격 근무·운동 기록을 한 가방에
-- [여름 블루투스 스피커 가이드](/ko/blog/2026-summer-bluetooth-speakers-guide) — 실외 스트레칭 때 스피커 부담 줄이기
-
----
-
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
+- [방학·기숙사·과제: 학생용 가성비 노트북은 CPU·RAM·nits부터 본다](/ko/blog/2026-laptops-buying-guide) — 원격 근무·운동 기록을 한 가방에
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폰 GPS 러닝 때 배터리 보조
+- [여름 장거리 비행용 노이즈캔슬링 헤드폰, 소니·사운드코어·JBL 맞대결](/ko/blog/2026-noise-cancelling-headphones-head-to-head) — 여행 피로와 함께 보는 웨어러블 선택
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 실외 스트레칭 때 스피커 부담 줄이기
 ## 최종 평가
 
 ### 이런 분에게 추천

@@ -29,10 +29,10 @@
     "cordless-vacuums",
     "fitness-trackers"
   ],
-  "lastPublishAt": "2026-07-07T03:34:46.035Z",
-  "nextPublishAt": "2026-07-07T03:46:09.617Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-07T04:35:40.875Z",
+  "nextPublishAt": "2026-07-08T02:19:00.000Z",
+  "scheduledGapHours": 5.32,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-07",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-07",
@@ -293,14 +293,21 @@
         "https://www.aipick.shop/en/blog/2026-coffee-machines-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-coffee-machines-head-to-head"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "topic": {
+        "id": "fitness-trackers"
+      },
+      "at": "2026-07-07T04:35:40.875Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-head-to-head"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "bluetooth-speakers",
-      "category": "audio",
-      "at": "2026-07-01T02:07:23.162Z"
-    },
     {
       "id": "air-purifiers",
       "category": "home-appliances",
@@ -439,6 +446,10 @@
       "category": "wearables",
       "taxonomyGroup": "IT/모바일",
       "at": "2026-07-07T03:34:46.047Z"
+    },
+    {
+      "id": "fitness-trackers",
+      "at": "2026-07-07T04:35:40.878Z"
     }
   ],
   "formatHistory": [
@@ -463,28 +474,28 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-07T04:30:11.380Z",
+    "at": "2026-07-07T04:35:39.724Z",
     "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 44min (KST 2026-07-07)",
+        "message": "Publish slot overdue by 49min (KST 2026-07-07)",
         "severity": "error"
       },
       {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 0/2",
+        "message": "Draft buffer 1/2",
         "severity": "info"
       }
     ],
     "repairs": []
   },
-  "lastDailyContentAuditKst": "2026-07-06",
+  "lastDailyContentAuditKst": "2026-07-07",
   "lastDailyContentAudit": {
-    "at": "2026-07-06T03:36:25.710Z",
-    "postsScanned": 22,
+    "at": "2026-07-07T04:35:41.583Z",
+    "postsScanned": 24,
     "autoRepairCount": 3,
-    "manualReviewCount": 0
+    "manualReviewCount": 3
   },
   "contentStrategyHistory": [
     {

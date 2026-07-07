@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T12:34:44.000Z'
+updatedAt: '2026-07-07T04:35:40.909Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
@@ -135,12 +135,11 @@ publishedAt: '2026-07-07T03:34:46.035Z'
 
 ## 관련 가이드
 
-- [퍼지 로직 vs 인덕션, 밥솥 결과를 바꾸는 것은?](/ko/blog/2026-rice-cookers-explainer) — 여름 주방에서 열과 타이밍이 식사에 미치는 다른 가전 비교
-- [여름 에어컨 구매 전 7가지 점검](/ko/blog/2026-summer-ac-buying-checklist) — 보일러·오븐과 함께 돌릴 때 실내 쾌적함 유지
-- [에어프라이어 체크리스트: 용량·와트·바스켓 형태](/ko/blog/2026-air-fryers-checklist) — 커피 코너 옆 조리대·전력 트레이드오프
-- [이동식 vs 창문형 에어컨, 소형 원룸 여름 냉방](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 아침 커피와 오후 폭염이 겹칠 때 냉방 전략
-- [제습기 가이드: 탱크·커버리지·저소음](/ko/blog/2026-dehumidifiers-guide) — 해안 여름 습도·우유 보관·주방 쾌적함
-
+- [퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것](/ko/blog/2026-rice-cookers-explainer) — 여름 주방에서 열과 타이밍이 식사에 미치는 다른 가전 비교
+- [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 커피 코너 옆 조리대·전력 트레이드오프
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 아침 커피와 오후 폭염이 겹칠 때 냉방 전략
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 보일러·오븐과 함께 돌릴 때 실내 쾌적함 유지
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 해안 여름 습도·우유 보관·주방 쾌적함
 ## 최종 평가
 
 여름 주방에서 이기는 타입은 하나가 아닙니다. **네스프레소 버투오 팝+**는 열·초기비용·캡슐 생활에 맞고, **브레빌 밤비노 플러스**는 속도·우유·원두 경제의 균형, **드롱기 매그니피카 에보**는 가족 단위 원터치 우유 음료에 강합니다.
