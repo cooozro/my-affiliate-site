@@ -503,6 +503,22 @@
       "hash": "dfb711cf4125f2bce6b493dbe0699a786d228cd05a870e864a2e5ac02410d084",
       "provider": "pexels",
       "registeredAt": "2026-07-07T06:22:05.751Z"
+    },
+    {
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "url": "https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg",
+      "assetKey": "pexels:6846257",
+      "hash": "d8b8c34bfc39437a9d486a6076fd66b3dd6f9836b86b09a2b40656b4fe68813d",
+      "provider": "pexels",
+      "registeredAt": "2026-07-07T06:32:27.773Z"
+    },
+    {
+      "slug": "2026-smart-home-cameras-explainer",
+      "url": "https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg",
+      "assetKey": "pexels:16423102",
+      "hash": "ea81a4b552033dc4f25d3526f399f8927bf8a74e6754becb06daa4bbd710e677",
+      "provider": "pexels",
+      "registeredAt": "2026-07-07T06:32:27.790Z"
     }
   ]
 }
