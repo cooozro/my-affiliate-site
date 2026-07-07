@@ -1,34 +1,33 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": null,
-  "requestedAt": "2026-07-06T10:19:41.620Z",
+  "publishedSlug": "2026-coffee-machines-head-to-head",
+  "requestedAt": "2026-07-07T03:34:46.052Z",
   "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "scenario-first",
-  "serpKeyword": "2026 cordless stick vacuums buying guide 사용법",
+  "contentProfile": "head-to-head",
+  "toneVariant": "question-led",
+  "serpKeyword": "2026 budget fitness trackers buying guide 장단점",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.16 > 0.15",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "cordless-vacuums",
-    "category": "smart-home",
-    "angle": "cordless stick vacuums: suction AW, battery runtime, HEPA filters, and hardwood vs carpet",
-    "imageQuery": "cordless stick vacuum cleaner",
-    "liveData": false,
+    "id": "fitness-trackers",
+    "category": "wearables",
+    "angle": "budget fitness trackers: heart rate accuracy, sleep tracking, and app ecosystem",
+    "imageQuery": "fitness tracker smartwatch",
+    "liveData": true,
     "seasons": [
       "spring",
-      "fall"
+      "winter"
     ]
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
-  "lastError": "Cursor agent run failed: run-5af1d050-92f4-44f5-87cf-b204b46e7a41. Add OPENAI_API_KEY to GitHub Secrets as a reliable GHA fallback.",
-  "lastAttemptAt": "2026-07-06T23:45:04.165Z"
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastError": null
 }

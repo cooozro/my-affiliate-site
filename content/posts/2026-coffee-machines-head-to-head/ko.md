@@ -3,7 +3,7 @@ title: '캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르
 description: >-
   네스프레소 버투오 팝+, 브레빌 밤비노 플러스, 드롱기 매그니피카 에보를 추출 속도·우유 시스템·디스케일·여름 주방 열기 기준으로 맞대결.
   우유 거품과 유지보수 신화를 짚습니다.
-date: '2026-07-06'
+date: '2026-07-07'
 tags:
   - 커피머신
   - 주방가전
@@ -13,7 +13,7 @@ tags:
 contentProfile: head-to-head
 topicId: coffee-machines
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-coffee-machines-head-to-head/espresso-coffee-machine-kitchen-coffee-maker-cover.jpg
@@ -28,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-06T05:59:30.967Z'
+updatedAt: '2026-07-07T12:34:44.000Z'
+publishedAt: '2026-07-07T12:34:44.000Z'
 ---
 ## 편집부 개요
 

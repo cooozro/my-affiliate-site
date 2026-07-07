@@ -3,7 +3,7 @@ title: 'Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Sy
 description: >-
   Nespresso Vertuo Pop+, Breville Bambino Plus, and De'Longhi Magnifica Evo on
   brew speed, milk systems, descaling, and summer kitchen heat.
-date: '2026-07-06'
+date: '2026-07-07'
 tags:
   - coffee machines
   - kitchen appliances
@@ -13,7 +13,7 @@ tags:
 contentProfile: head-to-head
 topicId: coffee-machines
 writingMode: stable
-draft: true
+draft: false
 liveData: false
 coverImage: >-
   /images/posts/2026-coffee-machines-head-to-head/espresso-coffee-machine-kitchen-coffee-maker-cover.jpg
@@ -28,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-createdAt: '2026-07-06T05:59:30.967Z'
+updatedAt: '2026-07-07T12:34:44.000Z'
+publishedAt: '2026-07-07T12:34:44.000Z'
 ---
 ## Editorial Overview
 
