@@ -3,7 +3,7 @@ title: 'Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time'
 description: >-
   Five sub-$250 tablets compared on display, storage, stylus support, and app
   stores for summer travel reading, flight video, and school-break screen time.
-date: '2026-07-07'
+date: '2026-07-08'
 tags:
   - tablets
   - budget tech
@@ -13,11 +13,9 @@ tags:
 contentProfile: buying-guide
 topicId: tablet-budget
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-07T14:05:00+09:00'
-coverImage: >-
-  /images/posts/2026-summer-budget-tablets-buying-guide/tablet-on-desk-cover.jpg
+coverImage: /images/posts/2026-summer-budget-tablets-buying-guide/tablet-on-desk-cover.jpg
 coverImageAlt: tablet on a minimalist desk for reading
 coverImageCredit: Photo by Hanna Pad / Pexels
 coverImageAltKo: 책상 위 태블릿
@@ -29,7 +27,8 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T05:05:00.000Z'
+updatedAt: '2026-07-08T11:58:55.000Z'
+publishedAt: '2026-07-08T11:58:55.000Z'
 ---
 ## Editorial Overview
 

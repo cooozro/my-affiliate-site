@@ -1,5 +1,5 @@
 {
-  "topicIndex": 34,
+  "topicIndex": 10,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -27,12 +27,13 @@
     "laptops",
     "coffee-machines",
     "cordless-vacuums",
-    "fitness-trackers"
+    "fitness-trackers",
+    "cordless-vacuums"
   ],
-  "lastPublishAt": "2026-07-07T04:35:40.875Z",
-  "nextPublishAt": "2026-07-08T01:55:00.000Z",
-  "scheduledGapHours": 4.92,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-08T02:58:57.557Z",
+  "nextPublishAt": "2026-07-08T08:45:50.447Z",
+  "scheduledGapHours": 5.78,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-08",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-08",
@@ -305,19 +306,21 @@
         "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-head-to-head"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-budget-tablets-buying-guide",
+      "topic": {
+        "id": "tablet-budget"
+      },
+      "at": "2026-07-08T02:58:57.557Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-budget-tablets-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-budget-tablets-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "air-purifiers",
-      "category": "home-appliances",
-      "at": "2026-07-01T02:17:49.122Z"
-    },
-    {
-      "id": "robot-vacuums",
-      "category": "smart-home",
-      "at": "2026-07-01T03:17:31.021Z"
-    },
     {
       "id": "action-cameras",
       "category": "cameras",
@@ -450,6 +453,17 @@
     {
       "id": "fitness-trackers",
       "at": "2026-07-07T04:35:40.878Z"
+    },
+    {
+      "id": "tablet-budget",
+      "at": "2026-07-08T02:58:57.560Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "category": "smart-home",
+      "cluster": "floor-care",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-07-08T02:58:57.569Z"
     }
   ],
   "formatHistory": [
@@ -470,14 +484,23 @@
     "checklist",
     "buying-guide",
     "scenario-guide",
-    "head-to-head"
+    "head-to-head",
+    "buying-guide"
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-07T22:40:11.215Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-08T02:58:55.475Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 63min (KST 2026-07-08)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-07",
   "lastDailyContentAudit": {

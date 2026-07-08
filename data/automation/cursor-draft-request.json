@@ -1,18 +1,33 @@
 {
-  "status": "complete",
-  "needed": 0,
-  "publishedSlug": "2026-budget-fitness-trackers-head-to-head",
-  "requestedAt": "2026-07-07T06:30:00.000Z",
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-summer-budget-tablets-buying-guide",
+  "requestedAt": "2026-07-08T02:58:57.574Z",
   "writingMode": "stable",
-  "contentProfile": "explainer",
-  "toneVariant": "case-study",
+  "contentProfile": "buying-guide",
+  "toneVariant": "scenario-first",
+  "serpKeyword": "2026 cordless stick vacuums buying guide 사용법",
+  "serpCachePath": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
   "topic": {
-    "id": "smart-home-cameras",
-    "category": "smart-home"
+    "id": "cordless-vacuums",
+    "category": "smart-home",
+    "angle": "cordless stick vacuums: suction AW, battery runtime, HEPA filters, and hardwood vs carpet",
+    "imageQuery": "cordless stick vacuum cleaner",
+    "liveData": false,
+    "seasons": [
+      "spring",
+      "fall"
+    ]
   },
-  "writtenSlug": "2026-smart-home-cameras-explainer",
-  "completedAt": "2026-07-07T06:30:00.000Z",
-  "draftCount": 2,
-  "lastError": null,
-  "completedBy": "cursor-ide-manual"
+  "templatePath": "docs/templates/buying-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "lastError": null
 }
