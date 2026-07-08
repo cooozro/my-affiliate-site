@@ -500,23 +500,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-08T07:17:53.015Z",
-    "issueCount": 2,
-    "issues": [
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 258min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-08T07:43:13.194Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "2026-summer-budget-tablets-buying-guide/en.md: publishedAt 2026-07-08T11:58:55.000Z → 2026-07-08T02:58:57.557Z",
-      "2026-summer-budget-tablets-buying-guide/ko.md: publishedAt 2026-07-08T11:58:55.000Z → 2026-07-08T02:58:57.557Z"
+      "2026-smart-home-cameras-explainer/en.md: publishedAt 2026-07-08T16:17:53.000Z → 2026-07-08T07:17:54.698Z",
+      "2026-smart-home-cameras-explainer/ko.md: publishedAt 2026-07-08T16:17:53.000Z → 2026-07-08T07:17:54.698Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-08",

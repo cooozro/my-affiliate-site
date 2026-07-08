@@ -28,7 +28,7 @@ coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 updatedAt: '2026-07-08T07:17:54.744Z'
-publishedAt: '2026-07-08T16:17:53.000Z'
+publishedAt: '2026-07-08T07:17:54.698Z'
 ---
 ## 편집부 개요
 
