@@ -500,17 +500,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-08T21:54:54.278Z",
-    "issueCount": 2,
+    "at": "2026-07-08T23:51:56.827Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 0/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 876min",
+        "code": "draft-integrity-issues",
+        "message": "2 draft(s) have publish gate issues",
         "severity": "warning"
       }
     ],

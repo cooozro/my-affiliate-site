@@ -1,8 +1,11 @@
 ---
-title: 'Heat Wave Window AC: Five 8,000 BTU Units for Small Apartments by CEER, dB, and Daily kWh'
+title: >-
+  Heat Wave Window AC: Five 8,000 BTU Units for Small Apartments by CEER, dB,
+  and Daily kWh
 description: >-
-  Midea U-shaped, Frigidaire, LG, Haier Serenity, and GE smart window ACs compared
-  on BTU fit, CEER, sleep noise, and install footprint for summer 2026 heat waves.
+  Midea U-shaped, Frigidaire, LG, Haier Serenity, and GE smart window ACs
+  compared on BTU fit, CEER, sleep noise, and install footprint for summer 2026
+  heat waves.
 date: '2026-07-10'
 tags:
   - window AC
@@ -18,6 +21,7 @@ liveData: true
 createdAt: '2026-07-09T00:05:00.000Z'
 imageSearchKeywords:
   - window air conditioner apartment
+updatedAt: '2026-07-08T23:51:56.911Z'
 ---
 ## Editorial Overview
 
