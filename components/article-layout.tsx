@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import { ArticleProtection } from "@/components/article-protection";
 import { ArticleShare } from "@/components/article-share";
@@ -68,6 +69,22 @@ function ShareBar({
   );
 }
 
+function renderArticleBody(content: string, locale: Locale) {
+  const contentParts = splitArticleBodyForTagline(content, locale);
+  if (contentParts) {
+    assertTaglinePlacement("after-related-heading");
+    return (
+      <Fragment>
+        <MarkdownContent content={contentParts.throughHeading} />
+        <PublicationTagline locale={locale} variant="inline" />
+        <MarkdownContent content={contentParts.relatedLinks} />
+        <MarkdownContent content={contentParts.afterRelated} />
+      </Fragment>
+    );
+  }
+  return <MarkdownContent content={content} />;
+}
+
 export function ArticleLayout({
   post,
   locale,
@@ -79,11 +96,6 @@ export function ArticleLayout({
     ? `${siteConfig.url}${post.coverImage}`
     : undefined;
   const feedUrl = `${siteConfig.url}/${locale}/feed.xml`;
-
-  const contentParts = splitArticleBodyForTagline(post.content, locale);
-  if (contentParts) {
-    assertTaglinePlacement("after-related-heading");
-  }
 
   const publishedIso = post.publishedAt ?? post.date;
   const modifiedIso = post.updatedAt ?? publishedIso;
@@ -160,18 +172,7 @@ export function ArticleLayout({
           </p>
         ) : null}
 
-        <div className="article-body">
-          {contentParts ? (
-            <>
-              <MarkdownContent content={contentParts.throughHeading} />
-              <PublicationTagline locale={locale} variant="inline" />
-              <MarkdownContent content={contentParts.relatedLinks} />
-              <MarkdownContent content={contentParts.afterRelated} />
-            </>
-          ) : (
-            <MarkdownContent content={post.content} />
-          )}
-        </div>
+        <div className="article-body">{renderArticleBody(post.content, locale)}</div>
       </ArticleProtection>
 
       {sharePlacements.includes("bottom") ? (

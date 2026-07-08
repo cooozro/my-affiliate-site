@@ -38,6 +38,7 @@ import {
   loadImageRegistry,
 } from "../used-images.mjs";
 import { repairGfmTildeRanges } from "./markdown-gfm-safe.mjs";
+import { auditHelpNavFrontmatter } from "../help-nav.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
 
@@ -449,6 +450,10 @@ function auditPostLevel(root, slug, phase, bucket, state) {
     if (!topicDup.ok) {
       addError(bucket, topicDup.reason);
     }
+  }
+
+  for (const msg of auditHelpNavFrontmatter(enFile.data, slug)) {
+    addError(bucket, msg);
   }
 
   if (phase === "publish" && state) {

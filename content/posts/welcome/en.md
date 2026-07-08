@@ -72,7 +72,3 @@ We track **price trends**, firmware update notes, and recurring quality signals 
 New buying guides are published regularly as product cycles and reader needs evolve. Browse category comparisons — smartphones, audio, home tech, and more — on our [latest articles](/en) page. Bookmark this methodology page if you want a quick reminder of how those guides are researched and written.
 
 > **These review principles reflect our 2026 editorial standards and are updated regularly as technology and product lines evolve.**
-
-[Browse Latest Guides](cta-primary:/en)
-
-[Contact Us](cta-secondary:/en/contact)

@@ -1,7 +1,20 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import type { Components } from "react-markdown";
 import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { headingIdForHelpNav } from "@/lib/help-nav";
+
+function plainTextFromChildren(children: ReactNode): string {
+  if (typeof children === "string") return children;
+  if (typeof children === "number") return String(children);
+  if (Array.isArray(children)) return children.map(plainTextFromChildren).join("");
+  if (children && typeof children === "object" && "props" in children) {
+    const props = (children as { props?: { children?: ReactNode } }).props;
+    return plainTextFromChildren(props?.children ?? "");
+  }
+  return "";
+}
 
 function markdownUrlTransform(url: string): string {
   if (url.startsWith("cta-primary:") || url.startsWith("cta-secondary:")) {
@@ -11,14 +24,18 @@ function markdownUrlTransform(url: string): string {
 }
 
 const markdownComponents: Components = {
-  h2: ({ children, ...props }) => (
+  h2: ({ children, ...props }) => {
+    const anchorId = headingIdForHelpNav(plainTextFromChildren(children));
+    return (
     <h2
+      id={anchorId}
       className="mb-4 mt-10 scroll-mt-24 font-serif text-2xl font-bold leading-snug text-foreground first:mt-0"
       {...props}
     >
       {children}
     </h2>
-  ),
+    );
+  },
   h3: ({ children, ...props }) => (
     <h3
       className="mb-3 mt-8 font-serif text-xl font-semibold leading-snug text-foreground"
