@@ -3,7 +3,7 @@ title: 'Home IP Cameras Explained: Resolution, Cloud vs Local, and Summer Travel
 description: >-
   How 2K vs 4K, microSD vs cloud subscriptions, and privacy settings matter when
   monitoring an empty home during summer vacation and school break.
-date: '2026-07-07'
+date: '2026-07-08'
 tags:
   - smart home
   - security camera
@@ -13,9 +13,8 @@ tags:
 contentProfile: explainer
 topicId: smart-home-cameras
 writingMode: stable
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-07-07T15:30:00+09:00'
 coverImage: /images/posts/2026-smart-home-cameras-explainer/home-security-camera-cover.jpg
 coverImageAlt: home security camera in a home interior
 coverImageCredit: Photo by Jakub Zerdzicki / Pexels
@@ -28,7 +27,8 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-08T02:58:55.546Z'
+updatedAt: '2026-07-08T07:17:55.274Z'
+publishedAt: '2026-07-08T16:17:53.000Z'
 ---
 ## Editorial Overview
 
@@ -120,13 +120,11 @@ RTSP needs **static IPs or mDNS**, **firewall holes**, and **NVR software** that
 
 ## Related guides
 
-- [Budget power banks guide](/en/blog/2026-budget-power-banks-guide) — phone battery for alert storms on travel days
-- [Robot vacuums scenario guide](/en/blog/2026-robot-vacuums-scenario-guide) — pet motion false alerts overlapping camera zones
-- [Portable SSD explainer](/en/blog/2026-portable-ssd-explainer) — exporting clip archives before cloud retention expires
-- [Summer Bluetooth speakers guide](/en/blog/2026-summer-bluetooth-speakers-guide) — porch audio without sharing camera speaker load
-
----
-
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — exporting clip archives before cloud retention expires
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — pet motion false alerts overlapping camera zones
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — porch audio without sharing camera speaker load
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — phone battery for alert storms on travel days
 ## Final Verdict
 
 Home IP cameras are **storage and access products**, not just megapixels. For most summer travelers, **2K with microSD plus optional cloud motion backup** balances cost and recovery. Enable **MFA**, test **remote live view** on cellular before departure, and export clips you cannot afford to lose.

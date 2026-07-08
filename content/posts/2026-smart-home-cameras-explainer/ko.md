@@ -1,9 +1,9 @@
 ---
 title: '홈 IP 카메라 설명: 해상도·클라우드 vs 로컬·여름 여행 보안'
 description: >-
-  2K vs 4K, microSD vs 클라우드 구독, 프라이버시 설정이 여름 방학·휴가 중 빈집
-  모니터링에 미치는 영향을 정리한 설명 가이드.
-date: '2026-07-07'
+  2K vs 4K, microSD vs 클라우드 구독, 프라이버시 설정이 여름 방학·휴가 중 빈집 모니터링에 미치는 영향을 정리한 설명
+  가이드.
+date: '2026-07-08'
 tags:
   - 스마트홈
   - 보안 카메라
@@ -13,11 +13,9 @@ tags:
 contentProfile: explainer
 topicId: smart-home-cameras
 writingMode: stable
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-07-07T15:30:00+09:00'
-coverImage: >-
-  /images/posts/2026-smart-home-cameras-explainer/home-security-camera-cover.jpg
+coverImage: /images/posts/2026-smart-home-cameras-explainer/home-security-camera-cover.jpg
 coverImageAlt: 실내의 홈 보안 카메라
 coverImageCredit: Photo by Jakub Zerdzicki / Pexels
 coverImageAltKo: 실내의 홈 보안 카메라
@@ -29,7 +27,8 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T06:30:00.000Z'
+updatedAt: '2026-07-08T07:17:54.744Z'
+publishedAt: '2026-07-08T16:17:53.000Z'
 ---
 ## 편집부 개요
 
@@ -121,13 +120,11 @@ updatedAt: '2026-07-07T06:30:00.000Z'
 
 ## 관련 가이드
 
-- [예산형 보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide) — 여행 중 알림 폭주 대비
-- [로봇 청소기 시나리오 가이드](/ko/blog/2026-robot-vacuums-scenario-guide) — 반려동물 오탐과 카메라 존 겹침
-- [휴대용 SSD 설명](/ko/blog/2026-portable-ssd-explainer) — 클라우드 만료 전 클립 아카이브
-- [여름 블루투스 스피커 가이드](/ko/blog/2026-summer-bluetooth-speakers-guide) — 현관 오디오와 카메라 스피커 분리
-
----
-
+- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 클라우드 만료 전 클립 아카이브
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 반려동물 오탐과 카메라 존 겹침
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 현관 오디오와 카메라 스피커 분리
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 여행 중 알림 폭주 대비
 ## 최종 평가
 
 홈 IP 카메라는 **저장·접근 제품**입니다. 여름 여행객에게는 **2K + microSD + 선택적 클라우드 모션 백업**이 균형적입니다. **MFA**를 켜고, 출발 전 **셀룰러 라이브 뷰**를 테스트하세요.

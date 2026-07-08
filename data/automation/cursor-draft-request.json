@@ -1,12 +1,12 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-summer-budget-tablets-buying-guide",
-  "requestedAt": "2026-07-08T02:58:57.574Z",
+  "publishedSlug": "2026-smart-home-cameras-explainer",
+  "requestedAt": "2026-07-08T07:17:54.715Z",
   "writingMode": "stable",
-  "contentProfile": "buying-guide",
-  "toneVariant": "scenario-first",
-  "serpKeyword": "2026 cordless stick vacuums buying guide 사용법",
+  "contentProfile": "scenario-guide",
+  "toneVariant": "data-driven",
+  "serpKeyword": "2026 cordless stick vacuums buying guide 분석",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
@@ -27,7 +27,7 @@
       "fall"
     ]
   },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "templatePath": "docs/templates/scenario-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
   "lastError": null
 }

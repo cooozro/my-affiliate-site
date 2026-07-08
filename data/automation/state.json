@@ -30,10 +30,10 @@
     "fitness-trackers",
     "cordless-vacuums"
   ],
-  "lastPublishAt": "2026-07-08T02:58:57.557Z",
-  "nextPublishAt": "2026-07-08T08:45:50.447Z",
-  "scheduledGapHours": 5.78,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-08T07:17:54.698Z",
+  "nextPublishAt": "2026-07-09T01:08:00.000Z",
+  "scheduledGapHours": 4.13,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-08",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-08",
@@ -318,14 +318,21 @@
         "https://www.aipick.shop/en/blog/2026-summer-budget-tablets-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-summer-budget-tablets-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-smart-home-cameras-explainer",
+      "topic": {
+        "id": "smart-home-cameras"
+      },
+      "at": "2026-07-08T07:17:54.698Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-smart-home-cameras-explainer",
+        "https://www.aipick.shop/ko/blog/2026-smart-home-cameras-explainer"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "action-cameras",
-      "category": "cameras",
-      "at": "2026-07-01T05:30:36.267Z"
-    },
     {
       "id": "action-cameras",
       "at": "2026-07-01T07:26:12.657Z"
@@ -464,6 +471,10 @@
       "cluster": "floor-care",
       "taxonomyGroup": "생활가전/청소",
       "at": "2026-07-08T02:58:57.569Z"
+    },
+    {
+      "id": "smart-home-cameras",
+      "at": "2026-07-08T07:17:54.701Z"
     }
   ],
   "formatHistory": [
@@ -489,22 +500,28 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-08T02:58:55.475Z",
-    "issueCount": 1,
+    "at": "2026-07-08T07:17:53.015Z",
+    "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 63min (KST 2026-07-08)",
-        "severity": "error"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 258min",
+        "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-summer-budget-tablets-buying-guide/en.md: publishedAt 2026-07-08T11:58:55.000Z → 2026-07-08T02:58:57.557Z",
+      "2026-summer-budget-tablets-buying-guide/ko.md: publishedAt 2026-07-08T11:58:55.000Z → 2026-07-08T02:58:57.557Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-07",
+  "lastDailyContentAuditKst": "2026-07-08",
   "lastDailyContentAudit": {
-    "at": "2026-07-07T09:07:26.828Z",
+    "at": "2026-07-08T07:17:55.438Z",
     "postsScanned": 26,
     "autoRepairCount": 4,
     "manualReviewCount": 0

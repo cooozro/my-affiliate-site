@@ -27,8 +27,8 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-08T11:58:55.000Z'
-publishedAt: '2026-07-08T11:58:55.000Z'
+updatedAt: '2026-07-08T07:17:54.748Z'
+publishedAt: '2026-07-08T02:58:57.557Z'
 ---
 ## Editorial Overview
 
@@ -176,13 +176,11 @@ If school apps require Google Play services without workarounds, pick **Galaxy T
 
 ## Related guides
 
-- [Sub-$300 smartphones buying guide](/en/blog/2026-budget-smartphones-under-300) — pair a travel phone with offline tablet downloads
-- [Budget power banks guide](/en/blog/2026-budget-power-banks-guide) — keep tablets alive on day trips
-- [Summer Bluetooth speakers guide](/en/blog/2026-summer-bluetooth-speakers-guide) — hotel-room audio without tablet speakers
-- [Portable SSD explainer](/en/blog/2026-portable-ssd-explainer) — move large video libraries between devices
-
----
-
+- [One USB-C Port, Five Jobs: Laptop Hub PD and Port Math Before Summer Travel](/en/blog/2026-usb-c-hubs-buying-guide) — Five USB-C hubs for laptop travel and summer WFH: PD pass-through watts, 4K HDMI, port mi…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep tablets alive on day trips
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — pair a travel phone with offline tablet downloads
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — hotel-room audio without tablet speakers
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — move large video libraries between devices
 ## Final Verdict
 
 ### Who should buy
