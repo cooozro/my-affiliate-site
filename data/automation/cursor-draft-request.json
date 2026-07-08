@@ -1,33 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-smart-home-cameras-explainer",
-  "requestedAt": "2026-07-08T07:17:54.715Z",
-  "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "2026 cordless stick vacuums buying guide 분석",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "cordless-vacuums",
-    "category": "smart-home",
-    "angle": "cordless stick vacuums: suction AW, battery runtime, HEPA filters, and hardwood vs carpet",
-    "imageQuery": "cordless stick vacuum cleaner",
-    "liveData": false,
-    "seasons": [
-      "spring",
-      "fall"
-    ]
-  },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Run npm run content:validate, then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-07-08T23:50:50.099Z",
+  "writtenSlug": "2026-window-ac-buying-guide",
+  "draftCount": 2,
   "lastError": null
 }
