@@ -500,13 +500,10 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-08T07:43:13.194Z",
+    "at": "2026-07-08T09:16:35.549Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-smart-home-cameras-explainer/en.md: publishedAt 2026-07-08T16:17:53.000Z → 2026-07-08T07:17:54.698Z",
-      "2026-smart-home-cameras-explainer/ko.md: publishedAt 2026-07-08T16:17:53.000Z → 2026-07-08T07:17:54.698Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-08",
   "lastDailyContentAudit": {
