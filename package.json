@@ -15,6 +15,7 @@
     "help-nav:health": "node scripts/help-nav-health-check.mjs",
     "help-nav:rollback": "node scripts/help-nav-health-check.mjs --rollback",
     "content:image": "node scripts/fetch-cover-image.mjs",
+    "test:image-vacuum": "node scripts/test/image-query-vacuum.mjs",
     "content:refresh-duplicates": "node scripts/refresh-duplicate-covers.mjs",
     "content:refresh-post-covers": "node scripts/refresh-post-covers.mjs",
     "content:migrate-cover-alt": "node scripts/migrate-cover-alt.mjs",

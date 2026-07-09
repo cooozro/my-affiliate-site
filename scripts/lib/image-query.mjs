@@ -159,6 +159,68 @@ export const TOPIC_IMAGE_PROFILES = {
     forbiddenSubjects: ["laptop only", "smartphone only", "drone aerial only"],
     extraNegatives: ["wheat", "grain", "food", "tablet only", "laptop only"],
   },
+  "cordless-vacuums": {
+    imageSearchKeywords: [
+      "cordless stick vacuum cleaner",
+      "handheld stick vacuum hardwood",
+      "upright cordless vacuum product",
+    ],
+    extraSearchQueries: [
+      "stick vacuum cleaner product photo",
+      "cordless vacuum hardwood floor",
+      "handheld vacuum cleaner home",
+    ],
+    forbiddenSubjects: [
+      "robot vacuum",
+      "robotic vacuum",
+      "round vacuum",
+      "autonomous vacuum",
+      "robot cleaner",
+      "mop robot",
+      "vacuum robot",
+    ],
+    extraNegatives: [
+      "robot",
+      "robotic",
+      "autonomous",
+      "round",
+      "dock",
+      "docking station",
+      "irobot",
+      "roborock",
+      "roomba",
+    ],
+    topicCluster: "floor-care",
+    altScene: { en: "on a hardwood floor", ko: "마루 바닥" },
+  },
+  "robot-vacuums": {
+    imageSearchKeywords: [
+      "robot vacuum smart home",
+      "robot vacuum hardwood floor",
+      "robotic vacuum cleaner round",
+    ],
+    extraSearchQueries: [
+      "robot vacuum on hardwood",
+      "autonomous vacuum cleaner home",
+      "round robot vacuum product",
+    ],
+    forbiddenSubjects: [
+      "stick vacuum",
+      "cordless stick",
+      "handheld vacuum",
+      "upright vacuum",
+      "canister vacuum",
+    ],
+    extraNegatives: [
+      "stick vacuum",
+      "handheld",
+      "upright",
+      "cordless stick",
+      "canister",
+    ],
+    topicCluster: "floor-care",
+    altScene: { en: "on a hardwood floor", ko: "마루 바닥" },
+  },
 };
 
 /** Per-slug tuned keywords — avoids ambiguous stock search (e.g. air → airplane). */
@@ -854,6 +916,19 @@ const VACUUM_ROBOT_NEGATIVES = [
   "cordless vacuum cleaner stick",
 ];
 
+/** Provider alt must include one of these for cordless-vacuum topics. */
+const CORDLESS_STICK_ALT_MARKERS = [
+  "stick vacuum",
+  "cordless stick",
+  "handheld vacuum",
+  "upright cordless",
+  "stick cleaner",
+];
+
+/** Text-only fetch mode: higher bar when vision API is unavailable (e.g. GHA). */
+export const VACUUM_TEXT_MIN_SCORE = 8;
+export const DEFAULT_TEXT_MIN_SCORE = 6;
+
 /** @returns {'cordless' | 'robot' | null} */
 export function vacuumTopicMode(topicId, slug) {
   if (topicId === "robot-vacuums" || slug?.includes("robot-vacuum")) return "robot";
@@ -863,28 +938,10 @@ export function vacuumTopicMode(topicId, slug) {
   return null;
 }
 
-/**
- * Anchors that must appear in stock-photo alt/tags before a candidate is eligible.
- * @param {string[]} productKeywords
- * @param {string} [topicCluster]
- */
-/** Known robot-vacuum stock IDs — never use on cordless-vacuum posts. */
-export const ROBOT_VACUUM_ASSET_IDS = new Set([
-  "pexels:35147242",
-  "pexels:8566421",
-  "pexels:8566426",
-]);
-
 export function requiredProductAnchors(productKeywords, topicCluster, topicId, slug) {
   const mode = vacuumTopicMode(topicId, slug);
   if (mode === "cordless") {
-    return [
-      "stick vacuum",
-      "cordless stick",
-      "handheld vacuum",
-      "upright cordless",
-      "cordless vacuum",
-    ];
+    return [...CORDLESS_STICK_ALT_MARKERS];
   }
   if (mode === "robot") {
     return ["robot vacuum", "robotic", "robot"];
@@ -921,6 +978,13 @@ export function requiredProductAnchors(productKeywords, topicCluster, topicId, s
   return [...anchors];
 }
 
+/** Known robot-vacuum stock IDs — never use on cordless-vacuum posts. */
+export const ROBOT_VACUUM_ASSET_IDS = new Set([
+  "pexels:35147242",
+  "pexels:8566421",
+  "pexels:8566426",
+]);
+
 /**
  * Hard gate: provider alt/tags must mention the product — search query is NOT counted.
  * @param {string} providerAlt
@@ -951,14 +1015,7 @@ export function passesVacuumTypeAltGate(providerAlt, topicId, slug) {
       return false;
     }
     if (/\bround\b/.test(alt) && /\bvacuum\b/.test(alt)) return false;
-    if (passesProductAltGate(alt, ["stick vacuum", "cordless stick", "handheld vacuum"])) {
-      return true;
-    }
-    return (
-      /\bcordless\b/.test(alt) &&
-      /\bvacuum\b/.test(alt) &&
-      !/\b(robot|robotic|autonomous)\b/.test(alt)
-    );
+    return passesProductAltGate(alt, CORDLESS_STICK_ALT_MARKERS);
   }
 
   if (mode === "robot") {
@@ -980,8 +1037,10 @@ export function isRobotVacuumAsset(provider, assetId) {
 
 /**
  * @param {string} text — provider alt/tags only (never append search query)
+ * @param {string} [topicId]
+ * @param {string} [slug]
  */
-export function scoreImageRelevance(text, productKeywords, negatives, seasonContext) {
+export function scoreImageRelevance(text, productKeywords, negatives, seasonContext, topicId, slug) {
   const blob = String(text ?? "").toLowerCase();
   if (!blob) return 0;
 
@@ -990,6 +1049,17 @@ export function scoreImageRelevance(text, productKeywords, negatives, seasonCont
   for (const negative of negatives) {
     const n = negative.toLowerCase();
     if (n.length >= 3 && blob.includes(n)) return -100;
+  }
+
+  const mode = vacuumTopicMode(topicId, slug);
+  if (mode === "cordless") {
+    if (/\b(robot|robotic|autonomous|roomba|roborock|irobot)\b/.test(blob)) return -100;
+    if (passesProductAltGate(blob, CORDLESS_STICK_ALT_MARKERS)) score += 4;
+  } else if (mode === "robot") {
+    if (/\b(stick vacuum|handheld vacuum|cordless stick|upright vacuum)\b/.test(blob)) {
+      return -100;
+    }
+    if (/\b(robot vacuum|robotic vacuum|autonomous vacuum)\b/.test(blob)) score += 4;
   }
 
   if (seasonContext?.sceneReject) {

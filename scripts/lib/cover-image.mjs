@@ -12,6 +12,8 @@ import {
   passesVacuumTypeAltGate,
   isRobotVacuumAsset,
   vacuumTopicMode,
+  VACUUM_TEXT_MIN_SCORE,
+  DEFAULT_TEXT_MIN_SCORE,
 } from "./image-query.mjs";
 import {
   pickVisionWinner,
@@ -123,6 +125,8 @@ function rankText(candidates, ctx) {
         ctx.productKeywords,
         ctx.negativeTags,
         ctx.seasonContext,
+        ctx.topicId,
+        ctx.slug,
       ),
     }))
     .filter((c) => c.textScore >= TEXT_MIN_SCORE)
@@ -332,11 +336,22 @@ async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
       }
     }
   } else {
-    const strongText = pool.filter((c) => c.textScore >= 6);
-    winner = strongText[0] ?? pool[0];
-    if (winner) {
+    const vacuumMode = vacuumTopicMode(ctx.topicId, ctx.slug);
+    const minText = vacuumMode ? VACUUM_TEXT_MIN_SCORE : DEFAULT_TEXT_MIN_SCORE;
+    const strongText = pool.filter((c) => c.textScore >= minText);
+    winner = strongText[0] ?? null;
+    if (!winner && !vacuumMode && pool.length > 0) {
+      winner = pool[0];
+      console.log(
+        `  text-only weak fallback: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+      );
+    } else if (winner) {
       console.log(
         `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+      );
+    } else if (vacuumMode) {
+      console.warn(
+        `  text-only: no vacuum candidate met min score ${minText} for ${slug} — refusing weak pick`,
       );
     }
   }
@@ -434,6 +449,14 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   if (!winner) {
     console.warn(`No vision-approved image for ${slug} (min ${visionMinScore()}/10)`);
     if (lastError) console.warn(lastError.message);
+    return null;
+  }
+
+  const winnerAlt = winner.providerAlt ?? winner.relevanceText ?? "";
+  if (!passesVacuumTypeAltGate(winnerAlt, ctx.topicId, ctx.slug)) {
+    console.warn(
+      `Winner failed vacuum-type alt gate (${winner.provider}:${winner.assetId}) — aborting ${slug}`,
+    );
     return null;
   }
 

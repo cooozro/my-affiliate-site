@@ -16,6 +16,7 @@ import {
   BLOCKED_ASSET_IDS,
   passesProductAltGate,
   passesVacuumTypeAltGate,
+  isRobotVacuumAsset,
   resolveImageContext,
 } from "./image-query.mjs";
 import {
@@ -104,6 +105,14 @@ function auditShared(root, slug, locale, raw, profile, options) {
       const assetKey = `${data.coverImageProvider}:${data.coverImageAssetId}`;
       if (BLOCKED_ASSET_IDS.has(assetKey)) {
         issues.push(`${label}: cover uses blocked asset ${assetKey} — re-fetch cover`);
+      }
+      if (
+        data.topicId === "cordless-vacuums" &&
+        isRobotVacuumAsset(data.coverImageProvider, data.coverImageAssetId)
+      ) {
+        issues.push(
+          `${label}: cover asset ${assetKey} is a known robot vacuum — re-fetch stick vacuum cover`,
+        );
       }
     }
     const imgCtx = resolveImageContext(slug, {
