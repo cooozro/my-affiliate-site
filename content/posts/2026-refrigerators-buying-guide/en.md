@@ -1,9 +1,11 @@
 ---
-title: 'Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB'
+title: >-
+  Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh,
+  and dB
 description: >-
-  LG, Samsung, GE, Frigidaire, and Haier French door fridges compared on
-  cubic feet per household, Energy Star kWh, compressor noise for open kitchens,
-  and French door vs top freezer vs kimchi-fridge context for summer 2026.
+  LG, Samsung, GE, Frigidaire, and Haier French door fridges compared on cubic
+  feet per household, Energy Star kWh, compressor noise for open kitchens, and
+  French door vs top freezer vs kimchi-fridge context for summer 2026.
 date: '2026-07-11'
 tags:
   - refrigerator
@@ -19,6 +21,7 @@ liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
+updatedAt: '2026-07-09T00:23:28.249Z'
 ---
 ## Editorial Overview
 
