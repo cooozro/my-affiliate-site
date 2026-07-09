@@ -19,9 +19,18 @@ topicCluster: large-appliances
 draft: true
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-09T01:56:37.187Z'
+updatedAt: '2026-07-09T01:56:41.238Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
+coverImage: >-
+  /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
+coverImageAlt: modern refrigerator kitchen
+coverImageAltKo: modern refrigerator kitchen
+coverImageCredit: Photo by Pew Nguyen / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 36671734
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/36671734/pexels-photo-36671734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 

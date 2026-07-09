@@ -581,14 +581,37 @@
       "assetKey": null,
       "hash": null,
       "provider": null,
-      "registeredAt": "2026-07-09T01:56:34.363Z"
+      "registeredAt": "2026-07-09T01:56:41.570Z"
     },
     {
       "slug": "2026-refrigerators-buying-guide",
       "assetKey": null,
       "hash": null,
       "provider": null,
-      "registeredAt": "2026-07-09T01:56:34.371Z"
+      "registeredAt": "2026-07-09T01:56:41.576Z"
+    },
+    {
+      "slug": "2026-cordless-vacuums-scenario-guide",
+      "url": "https://images.pexels.com/photos/35147242/pexels-photo-35147242.jpeg",
+      "assetKey": "pexels:35147242",
+      "hash": "d9d1be2c51d87475a9ffe6052721555839020aabcc61b434e44e22985fce0a86",
+      "provider": "pexels",
+      "registeredAt": "2026-07-09T01:56:57.892Z"
+    },
+    {
+      "slug": "2026-refrigerators-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "provider": null,
+      "registeredAt": "2026-07-09T01:56:57.987Z"
+    },
+    {
+      "slug": "2026-refrigerators-buying-guide",
+      "url": "https://images.pexels.com/photos/36671734/pexels-photo-36671734.jpeg",
+      "assetKey": "pexels:36671734",
+      "hash": "0e06e687e5263680bfcd078b8e7fe59e84805a20d707de4178fe18caa8f3c78c",
+      "provider": "pexels",
+      "registeredAt": "2026-07-09T01:57:37.642Z"
     }
   ]
 }

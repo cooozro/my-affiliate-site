@@ -19,6 +19,15 @@ createdAt: '2026-07-09T00:20:00.000Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 updatedAt: '2026-07-09T00:23:28.258Z'
+coverImage: >-
+  /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
+coverImageAlt: modern refrigerator kitchen
+coverImageAltKo: modern refrigerator kitchen
+coverImageCredit: Photo by Pew Nguyen / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 36671734
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/36671734/pexels-photo-36671734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## 편집부 개요
 

@@ -1,8 +1,8 @@
 ---
 title: '여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오'
 description: >-
-  여름철 무선 스틱 청소기 시나리오별 추천 — 창문 닫은 냉방 먼지, 휴가 전후 청소, 반려
-  털, 방학 생활 먼지까지 제조사 공개 스펙 기준 편집부 비교.
+  여름철 무선 스틱 청소기 시나리오별 추천 — 창문 닫은 냉방 먼지, 휴가 전후 청소, 반려 털, 방학 생활 먼지까지 제조사 공개 스펙 기준
+  편집부 비교.
 date: '2026-07-10'
 createdAt: '2026-07-09T00:00:00.000Z'
 tags:
@@ -18,6 +18,15 @@ liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
+coverImage: >-
+  /images/posts/2026-cordless-vacuums-scenario-guide/cordless-stick-vacuum-cleaner-cordless-vacuum-ha-cover.jpg
+coverImageAlt: 실내의 무선 청소기
+coverImageAltKo: 실내의 무선 청소기
+coverImageCredit: Photo by Andrey Matveev / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 35147242
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/35147242/pexels-photo-35147242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## 편집부 개요
 
