@@ -19,7 +19,7 @@ topicCluster: large-appliances
 draft: true
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-09T02:02:12.839Z'
+updatedAt: '2026-07-09T03:45:33.181Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 coverImage: >-

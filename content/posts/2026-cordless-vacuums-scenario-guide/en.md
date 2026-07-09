@@ -21,7 +21,7 @@ liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
-updatedAt: '2026-07-09T02:02:12.809Z'
+updatedAt: '2026-07-09T03:45:33.151Z'
 coverImage: >-
   /images/posts/2026-cordless-vacuums-scenario-guide/cordless-stick-vacuum-cleaner-cordless-vacuum-ha-cover.jpg
 coverImageAlt: cordless vacuum in a home interior
