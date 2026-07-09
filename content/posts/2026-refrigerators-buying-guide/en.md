@@ -22,7 +22,6 @@ createdAt: '2026-07-09T00:20:00.000Z'
 updatedAt: '2026-07-09T00:45:00.000Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
-updatedAt: '2026-07-09T00:23:28.249Z'
 ---
 ## Editorial Overview
 
