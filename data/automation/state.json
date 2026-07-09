@@ -500,13 +500,13 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T01:45:29.242Z",
+    "at": "2026-07-09T01:52:37.259Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 3min (KST 2026-07-09)",
-        "severity": "warning"
+        "message": "Publish slot overdue by 10min (KST 2026-07-09)",
+        "severity": "error"
       },
       {
         "code": "draft-integrity-issues",
@@ -519,9 +519,7 @@
         "severity": "error"
       }
     ],
-    "repairs": [
-      "marked-slot-catch-up"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-08",
   "lastDailyContentAudit": {
@@ -610,7 +608,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-09T01:45:29.426Z",
+    "at": "2026-07-09T01:52:37.447Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-cordless-vacuums-scenario-guide",
