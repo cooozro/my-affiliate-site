@@ -21,13 +21,13 @@ liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
-updatedAt: '2026-07-09T03:51:46.832Z'
+updatedAt: '2026-07-09T04:12:46.017Z'
 coverImage: >-
   /images/posts/2026-cordless-vacuums-scenario-guide/cordless-stick-vacuum-cleaner-cover.jpg
 coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
-coverImageSourceUrl: https://unsplash.com/photos/tmw-sC48Rb8
+coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
 ---
 ## Editorial Overview
 

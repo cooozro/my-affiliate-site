@@ -32,8 +32,8 @@
     "bidets"
   ],
   "lastPublishAt": "2026-07-09T03:51:48.683Z",
-  "nextPublishAt": "2026-07-09T09:13:30.452Z",
-  "scheduledGapHours": 5.36,
+  "nextPublishAt": "2026-07-09T04:12:45.995Z",
+  "scheduledGapHours": 0,
   "publishCountToday": 1,
   "publishDateKst": "2026-07-09",
   "writeCountToday": 0,
@@ -517,18 +517,18 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T03:51:46.672Z",
+    "at": "2026-07-09T04:12:45.901Z",
     "issueCount": 2,
     "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 129min (KST 2026-07-09)",
-        "severity": "error"
-      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
       }
     ],
     "repairs": []
@@ -620,11 +620,10 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-09T03:45:33.201Z",
+    "at": "2026-07-09T04:12:46.043Z",
     "reason": "integrity-gate",
     "triedSlugs": [
-      "2026-cordless-vacuums-scenario-guide",
-      "2026-refrigerators-buying-guide"
+      "2026-cordless-vacuums-scenario-guide"
     ]
   }
 }
