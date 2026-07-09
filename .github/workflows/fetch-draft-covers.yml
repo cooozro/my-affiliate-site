@@ -1,6 +1,7 @@
 name: Fetch missing draft covers
 
 # Runs when drafts are pushed without coverImage; uses GitHub Secrets (PEXELS/PIXABAY).
+# Git pushes serialize via concurrency group git-write-main (shared with publish-slot).
 
 on:
   workflow_dispatch:
