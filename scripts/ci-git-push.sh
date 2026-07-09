@@ -17,10 +17,24 @@ fi
 
 git commit -m "$COMMIT_MSG"
 
+# Fast path when workflows are serialized (no concurrent writers).
+if git push origin HEAD:main; then
+  echo "git push OK (fast path)"
+  exit 0
+fi
+
 attempt=1
 while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
-  echo "git push attempt ${attempt}/${MAX_ATTEMPTS}"
-  if git pull --rebase origin main && git push origin HEAD:main; then
+  echo "git push attempt ${attempt}/${MAX_ATTEMPTS} (sync + rebase)"
+  git fetch origin main
+  if git rebase origin/main; then
+    :
+  else
+    echo "rebase conflict — merging origin/main instead"
+    git rebase --abort || true
+    git merge origin/main --no-edit
+  fi
+  if git push origin HEAD:main; then
     echo "git push OK"
     exit 0
   fi
