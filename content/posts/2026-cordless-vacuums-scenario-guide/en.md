@@ -21,7 +21,7 @@ liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
-updatedAt: '2026-07-09T00:23:28.208Z'
+updatedAt: '2026-07-09T00:45:00.000Z'
 ---
 ## Editorial Overview
 
