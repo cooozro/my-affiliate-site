@@ -620,6 +620,20 @@
       "hash": "d3a21d9d3458f90188afa5ec83daa33c95cae9fc61ea1c6982583c6c4cd55159",
       "provider": null,
       "registeredAt": "2026-07-09T04:12:46.744Z"
+    },
+    {
+      "slug": "2026-bidets-checklist",
+      "assetKey": null,
+      "hash": "6ded6fb749b68c7e21ec3ac32884eb0b1b6dcbed31761d1b7ac1b2e9d103a97c",
+      "provider": null,
+      "registeredAt": "2026-07-09T07:43:21.084Z"
+    },
+    {
+      "slug": "2026-water-purifiers-buying-guide",
+      "assetKey": null,
+      "hash": "c4315ec2497b7f52aef454ba1300be04509686d4457eca58825a5f2a81e14597",
+      "provider": null,
+      "registeredAt": "2026-07-09T07:43:21.109Z"
     }
   ]
 }
