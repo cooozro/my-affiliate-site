@@ -529,13 +529,10 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T07:43:23.773Z",
+    "at": "2026-07-09T10:40:52.969Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-cordless-vacuums-scenario-guide/en.md: publishedAt 2026-07-09T14:23:26.000Z → 2026-07-09T05:23:27.620Z",
-      "2026-cordless-vacuums-scenario-guide/ko.md: publishedAt 2026-07-09T14:23:26.000Z → 2026-07-09T05:23:27.620Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-09",
   "lastDailyContentAudit": {
