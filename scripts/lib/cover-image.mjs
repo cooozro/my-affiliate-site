@@ -9,6 +9,9 @@ import {
   resolveImageContext,
   scoreImageRelevance,
   passesProductAltGate,
+  passesVacuumTypeAltGate,
+  isRobotVacuumAsset,
+  vacuumTopicMode,
 } from "./image-query.mjs";
 import {
   pickVisionWinner,
@@ -34,12 +37,17 @@ const PIXABAY_SEARCH = "https://pixabay.com/api/";
 const PEXELS_PHOTO = "https://api.pexels.com/v1/photos";
 const TEXT_MIN_SCORE = 4;
 
-function isBlockedAsset(candidate) {
-  return BLOCKED_ASSET_IDS.has(`${candidate.provider}:${candidate.assetId}`);
+function isBlockedAsset(candidate, ctx) {
+  const key = `${candidate.provider}:${candidate.assetId}`;
+  if (BLOCKED_ASSET_IDS.has(key)) return true;
+  if (vacuumTopicMode(ctx?.topicId, ctx?.slug) === "cordless" && isRobotVacuumAsset(candidate.provider, candidate.assetId)) {
+    return true;
+  }
+  return false;
 }
 
-function filterBlocked(candidates) {
-  return candidates.filter((c) => !isBlockedAsset(c));
+function filterBlocked(candidates, ctx) {
+  return candidates.filter((c) => !isBlockedAsset(c, ctx));
 }
 
 /** Stable numeric hash from slug (provider pick + result offset). */
@@ -101,7 +109,12 @@ function rankText(candidates, ctx) {
   const anchors = ctx.requiredAnchors ?? [];
   return candidates
     .filter((candidate) =>
-      passesProductAltGate(candidate.providerAlt ?? candidate.relevanceText, anchors),
+      passesProductAltGate(candidate.providerAlt ?? candidate.relevanceText, anchors) &&
+      passesVacuumTypeAltGate(
+        candidate.providerAlt ?? candidate.relevanceText,
+        ctx.topicId,
+        ctx.slug,
+      ),
     )
     .map((candidate) => ({
       ...candidate,
@@ -183,7 +196,7 @@ async function fetchCuratedCandidates(slug) {
     if (entry.provider !== "pexels") continue;
     try {
       const candidate = await fetchPexelsPhotoById(entry.assetId, apiKey, entry.query ?? "curated");
-      if (!isBlockedAsset(candidate)) out.push(candidate);
+      if (!isBlockedAsset(candidate, { topicId: slug.includes("cordless-vacuum") ? "cordless-vacuums" : undefined, slug })) out.push(candidate);
     } catch (error) {
       console.warn(`Curated pexels:${entry.assetId} failed: ${error.message}`);
     }
@@ -287,7 +300,7 @@ async function collectCandidatePool(slug, ctx, registry, options) {
   }
 
   const ranked = rankText(dedupeCandidates(raw), ctx);
-  const unused = filterBlocked(ranked).filter((c) => !candidateIsUsed(registry, c));
+  const unused = filterBlocked(ranked, ctx).filter((c) => !candidateIsUsed(registry, c));
 
   return { pool: unused, lastError };
 }

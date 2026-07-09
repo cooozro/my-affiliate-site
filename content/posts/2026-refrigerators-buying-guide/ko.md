@@ -1,9 +1,9 @@
 ---
 title: '여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다'
 description: >-
-  LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종을 가구당 용량, 에너지 라벨 kWh, 오픈 주방 소음, 프렌치
-  도어·상냉장·김치냉장고 맥락으로 비교한 2026년 구매 가이드입니다.
-date: '2026-07-11'
+  LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매
+  가이드.
+date: '2026-07-09'
 tags:
   - 냉장고
   - 가전
@@ -13,12 +13,11 @@ tags:
 contentProfile: buying-guide
 topicId: refrigerators
 topicCluster: large-appliances
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-07-09T00:20:00.000Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
-updatedAt: '2026-07-09T00:23:28.258Z'
+updatedAt: '2026-07-09T03:51:46.000Z'
 coverImage: >-
   /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
 coverImageAlt: modern refrigerator kitchen
@@ -28,6 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 36671734
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/36671734/pexels-photo-36671734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-09T03:51:46.000Z'
 ---
 ## 편집부 개요
 
@@ -160,6 +160,20 @@ coverImageSourceUrl: >-
 | 김치냉장고 옆 주력 냉장고(국내) | Samsung RF28T5001SR | LG LRFXS2503S |
 
 ---
+
+## 자주 묻는 질문
+
+### 1–2인 가구, 여름철 실제로 필요한 용량은?
+
+주 1회 장보기·음료 냉장 기준이면 **총 14–20 cu ft**가 현실적입니다 — 매장 28 cu ft 전시 모델이 정답은 아닙니다. Haier QJS15HYRFS(14.5 cu ft)는 갤리형·카운터 깊이에 맞고, 3–4인·밀프렙이 많으면 Samsung RF28T5001SR 28 cu ft 식품실이 유리합니다. 빈 선반만 큰 냉장고도 여름 누진 요금에 압축기는 돌아갑니다.
+
+### 오픈 주방·거실 옆 — 소음(dB)은 어떻게 보나?
+
+스펙 dB는 **상대 비교**용입니다. LG LRFXS2503S·Haier QJS15HYRFS는 **38 dB급**, Frigidaire FRFS2823AD는 **41 dB** — 아일랜드 식탁에서 재택 시 들릴 수 있습니다. 결제 전 압축기 가동 위치와 좌석 거리를 확인하고, 부분 칸막이·팬트리 벽이 배지만큼 중요할 때가 많습니다.
+
+### 김치냉장고와 주력 냉장고 — 용량은 어떻게 나누나?
+
+**김치 전용**은 발효 온도, **주력 냉장고**는 우유·과일·음료용으로 **역할을 분리**하세요. 김치 용량을 주력 cu ft에서 빼지 마세요. 본 가이드는 북미형 프렌치 도어 주력 모델이며, 국내에서는 Samsung RF28T5001SR·LG LRFXS2503S를 김치냉장고 옆 주력으로 많이 둡니다.
 
 ## 관련 가이드
 

@@ -3,10 +3,9 @@ title: >-
   Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh,
   and dB
 description: >-
-  LG, Samsung, GE, Frigidaire, and Haier French door fridges compared on cubic
-  feet per household, Energy Star kWh, compressor noise for open kitchens, and
-  French door vs top freezer vs kimchi-fridge context for summer 2026.
-date: '2026-07-11'
+  Five French-door fridges compared by cu ft per household, Energy Star kWh,
+  open-kitchen noise in dB, and layout picks for summer 2026.
+date: '2026-07-09'
 tags:
   - refrigerator
   - home appliances
@@ -16,10 +15,10 @@ tags:
 contentProfile: buying-guide
 topicId: refrigerators
 topicCluster: large-appliances
-draft: true
+draft: false
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-09T03:45:33.181Z'
+updatedAt: '2026-07-09T03:51:46.000Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 coverImage: >-
@@ -31,6 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: 36671734
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/36671734/pexels-photo-36671734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-09T03:51:46.000Z'
 ---
 ## Editorial Overview
 
@@ -163,6 +163,20 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 | Korean home adding main fridge beside kimchi unit | Samsung RF28T5001SR | LG LRFXS2503S |
 
 ---
+
+## FAQ
+
+### How many cubic feet does a 1–2 person summer household actually need?
+
+Plan **14–20 cu ft total** when you shop weekly and keep drinks cold through heat season — not the 28 cu ft showroom default. Haier QJS15HYRFS at 14.5 cu ft targets galley kitchens where a counter-depth line matters more than door drama. If you batch-cook for three or four people, Samsung RF28T5001SR’s 28 cu ft fresh zone pays for itself; empty shelf space in an oversized box still spins the compressor on tiered summer rates.
+
+### Open kitchen next to the living room — which dB class is realistic?
+
+Treat published dB as a **comparison hint**, not a lab reading at your sofa. LG LRFXS2503S and Haier QJS15HYRFS claim **38 dB class** operation; Frigidaire FRFS2823AD lists **41 dB** — audible across an island if you WFH beside the fridge. Before checkout, map where you sit during compressor cycles; partial cabinetry or a pantry return wall often beats chasing the quietest badge alone.
+
+### Kimchi fridge plus main refrigerator — how do Korean buyers size the main unit?
+
+Pair a **dedicated kimchi unit** for fermentation zones with a separate main fridge for milk, produce, and drinks — do not subtract kimchi cubic feet from your fresh-food target. This guide compares North American French-door mains; Samsung RF28T5001SR and LG LRFXS2503S are typical “primary fridge” picks beside a kimchi box in Korean apartments.
 
 ## Related guides
 

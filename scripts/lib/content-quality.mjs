@@ -15,6 +15,7 @@ import {
 import {
   BLOCKED_ASSET_IDS,
   passesProductAltGate,
+  passesVacuumTypeAltGate,
   resolveImageContext,
 } from "./image-query.mjs";
 import {
@@ -118,6 +119,11 @@ function auditShared(root, slug, locale, raw, profile, options) {
     ) {
       issues.push(
         `${label}: coverImageAlt must mention product (${anchors.join(" | ")})`,
+      );
+    }
+    if (!passesVacuumTypeAltGate(data.coverImageAlt, data.topicId, slug)) {
+      issues.push(
+        `${label}: coverImageAlt mismatches vacuum type (stick vs robot)`,
       );
     }
   }

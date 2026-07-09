@@ -1,5 +1,5 @@
 {
-  "topicIndex": 10,
+  "topicIndex": 12,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -28,12 +28,13 @@
     "coffee-machines",
     "cordless-vacuums",
     "fitness-trackers",
-    "cordless-vacuums"
+    "cordless-vacuums",
+    "bidets"
   ],
-  "lastPublishAt": "2026-07-08T07:17:54.698Z",
-  "nextPublishAt": "2026-07-09T01:42:00.000Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-09T03:51:48.683Z",
+  "nextPublishAt": "2026-07-09T09:13:30.452Z",
+  "scheduledGapHours": 5.36,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-09",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-09",
@@ -330,18 +331,22 @@
         "https://www.aipick.shop/en/blog/2026-smart-home-cameras-explainer",
         "https://www.aipick.shop/ko/blog/2026-smart-home-cameras-explainer"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-refrigerators-buying-guide",
+      "topic": {
+        "id": "refrigerators",
+        "cluster": "large-appliances"
+      },
+      "at": "2026-07-09T03:51:48.683Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-refrigerators-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-refrigerators-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "action-cameras",
-      "at": "2026-07-01T07:26:12.657Z"
-    },
-    {
-      "id": "noise-cancelling-headphones",
-      "category": "audio",
-      "at": "2026-07-01T07:26:12.667Z"
-    },
     {
       "id": "robot-vacuums",
       "at": "2026-07-02T01:23:32.019Z"
@@ -475,6 +480,17 @@
     {
       "id": "smart-home-cameras",
       "at": "2026-07-08T07:17:54.701Z"
+    },
+    {
+      "id": "refrigerators",
+      "cluster": "large-appliances",
+      "at": "2026-07-09T03:51:48.689Z"
+    },
+    {
+      "id": "bidets",
+      "category": "home-appliances",
+      "taxonomyGroup": "생활가전/위생",
+      "at": "2026-07-09T03:51:48.705Z"
     }
   ],
   "formatHistory": [
@@ -496,27 +512,23 @@
     "buying-guide",
     "scenario-guide",
     "head-to-head",
-    "buying-guide"
+    "buying-guide",
+    "checklist"
   ],
-  "roadmapPhase": "tier1-first-pass",
+  "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T03:45:33.021Z",
-    "issueCount": 3,
+    "at": "2026-07-09T03:51:46.672Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 123min (KST 2026-07-09)",
+        "message": "Publish slot overdue by 129min (KST 2026-07-09)",
         "severity": "error"
       },
       {
         "code": "draft-integrity-issues",
-        "message": "2 draft(s) have publish gate issues",
+        "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
-        "severity": "error"
       }
     ],
     "repairs": []

@@ -51,8 +51,9 @@ ${seasonReject ? `Season mismatch — score 0-3 if scene shows: ${seasonReject}`
 
 Rules:
 - Score 9-10 ONLY if the REQUIRED subject is clearly the main focus AND the scene matches the editorial season (e.g. summer article must NOT show snow, winter coats, or ski scenes).
-- Score 0-2 if you see vacuum cleaner, robot vacuum, clock, wristwatch, airplane, bedroom without the product, snow/winter scene on a summer article, or any forbidden/wrong device.
-- A cordless stick vacuum is NOT an air purifier. A wall clock is NOT a power bank. A snowy outdoor scene is NOT a summer fitness tracker cover.
+- Score 0-2 if you see the wrong vacuum type: a round autonomous robot vacuum when REQUIRED is a cordless stick/handheld vacuum, or an upright stick vacuum when REQUIRED is a robot vacuum.
+- Score 0-2 if you see clock, wristwatch, airplane, bedroom without the product, snow/winter scene on a summer article, or any forbidden/wrong device.
+- A cordless stick vacuum is NOT a robot vacuum (round puck on floor). A robot vacuum is NOT a stick/upright handheld unit.
 
 Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 
