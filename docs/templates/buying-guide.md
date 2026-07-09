@@ -12,9 +12,10 @@ See also: `docs/CONTENT_STANDARDS.md`, `scripts/lib/editorial-standards.mjs`.
 4. **TOP 5 comparison table**
 5. **Product sections** (`## 1. Model name`)
 6. **Scenario matrix**
-7. **Related guides** / **관련 가이드**
-8. **Five checks before you buy** (numbered list, ≥3 items)
-9. **Final Verdict** / **최종 평가** — Who should buy / Who should skip tables
+7. **FAQ** / **자주 묻는 질문** — ≥3 `###` Q&A pairs (buying-specific; not template filler)
+8. **Related guides** / **관련 가이드**
+9. **Five checks before you buy** (numbered list, ≥3 items)
+10. **Final Verdict** / **최종 평가** — Who should buy / Who should skip tables
 
 ## Product section
 

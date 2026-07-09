@@ -142,3 +142,24 @@ export function validatePostFiles(slug, options = {}) {
 
   return integrityIssuesFlat(result);
 }
+
+/**
+ * Draft buffer gate — same checks as publish (FAQ, description, cover, profile)
+ * without topic-diversity / format-streak blocks reserved for live publish.
+ */
+export function validateDraftPublishReady(slug, options = {}) {
+  return validatePostFiles(slug, {
+    phase: "draft",
+    applyRepair: options.applyRepair !== false,
+  });
+}
+
+/** Throws when a draft would fail the next publish integrity gate. */
+export function assertDraftPublishReady(slug, options = {}) {
+  const issues = validateDraftPublishReady(slug, options);
+  if (issues.length > 0) {
+    throw new Error(
+      `Draft "${slug}" is not publish-ready:\n${issues.map((i) => `  • ${i}`).join("\n")}`,
+    );
+  }
+}

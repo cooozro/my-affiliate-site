@@ -27,6 +27,7 @@ import {
   listSlugDirs,
   readPost,
   validatePostFiles,
+  validateDraftPublishReady,
   writePost,
 } from "./posts-fs.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
@@ -100,14 +101,17 @@ Follow ${templatePath} for section structure.
 
 Content requirements (each locale):
 - Meet minimum length for profile ${contentProfile}
+- Meta description **50–160 characters** (frontmatter \`description\`)
+- **FAQ section** (\`## FAQ\` EN / \`## 자주 묻는 질문\` KO) with ≥3 \`###\` Q&A pairs — required for publish gate
 - Analysis methodology table (editorial sources only — no seller API claims)
 - Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these published slugs: ${publishedSlugs}
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:
-1. Set data/automation/cursor-draft-request.json to status "complete" with writtenSlug and completedAt
-2. Keep draft:true — do not publish
-3. Do not git commit (CI commits)
+1. Run \`node scripts/check-integrity.mjs {slug} --draft --repair\` — must pass with zero errors before marking complete
+2. Set data/automation/cursor-draft-request.json to status "complete" with writtenSlug and completedAt
+3. Keep draft:true — do not publish
+4. Do not git commit (CI commits)
 
 Never overwrite or edit an existing post directory. Minimize scope. Only the one NEW draft.`;
 }
@@ -510,10 +514,7 @@ async function main() {
     }
 
     await ensureCoverImage(slug, request.topic);
-    const issues = validatePostFiles(slug, {
-      phase: "draft",
-      applyRepair: true,
-    });
+    const issues = validateDraftPublishReady(slug);
     if (issues.length > 0) {
       removeReplenishSlugArtifacts(slug);
       recordReplenishFailure(

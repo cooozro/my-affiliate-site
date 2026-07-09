@@ -15,8 +15,9 @@ Use for **`contentProfile: head-to-head`**. Compare **2–3 models** in depth (n
 5. **## 1. Model A** — Strengths, Weaknesses, **Analysis takeaway**, Verdict
 6. **## 2. Model B** (and optional **## 3. Model C**)
 7. **Scenario winners** / **시나리오별 승자** — table: Scenario | Winner | Why
-8. **Related guides** / **관련 가이드**
-9. **Final Verdict** / **최종 평가** — Who should buy / Who should skip tables
+8. **FAQ** / **자주 묻는 질문** — ≥3 `###` Q&A pairs
+9. **Related guides** / **관련 가이드**
+10. **Final Verdict** / **최종 평가** — Who should buy / Who should skip tables
 
 ## Rules
 

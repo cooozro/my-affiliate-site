@@ -3,9 +3,8 @@ title: >-
   Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break
   Messes
 description: >-
-  Scenario picks for cordless stick vacuums in summer — closed-window AC dust,
-  vacation quick cleans, pet shedding, and school-break clutter using public
-  manufacturer specs only.
+  Summer stick vacuums by scenario — AC dust, travel resets, pet shedding, and
+  school-break crumbs from public specs only.
 date: '2026-07-10'
 createdAt: '2026-07-09T00:00:00.000Z'
 tags:
@@ -167,6 +166,20 @@ All recommended picks at a glance. Prices are reference MSRP listings; street pr
 | School-break clutter | **Tineco A10 Hero** | ~$199 | Up to 25 min max | Lightweight quick grabs | ~2.5 kg |
 
 ---
+
+## FAQ
+
+### Does a cordless stick vacuum replace a robot when AC runs all summer?
+
+No — they complement each other. A robot handles daily hard-floor dust while windows stay closed; a stick covers stairs, upholstery, car mats, and quick noon crumbs when school break keeps kids home. If you already run a robot on 90% of floors, keep the stick for the 10% robots cannot reach rather than buying a second full-size plug-in unit.
+
+### How much runtime do I need for a pre-vacation whole-home reset?
+
+Plan **40–60 minutes of Eco or Auto runtime** across two battery swaps for a 2–3 bedroom apartment, or one long-runtime model like Shark Stratos on a single charge. Boost mode drains cells in under 15 minutes on most brands — reserve it for mats and entryways, not every hallway pass the night before you leave.
+
+### Are HEPA stick vacuums worth it in sealed, air-conditioned rooms?
+
+Yes when anyone in the household has pollen or dust sensitivity. Whole-machine HEPA exhaust matters more when outdoor air never refreshes the space. Rinse or replace filters on OEM summer intervals; clogged HEPA media drops suction quietly long before the battery fails.
 
 ## Related guides
 

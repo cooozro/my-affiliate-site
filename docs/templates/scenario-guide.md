@@ -17,8 +17,9 @@ Use for **`contentProfile: scenario-guide`**. **Use-case first**, products embed
    - **Runner-up** (optional)
    - Short comparison table if useful
 5. **Quick comparison table** — all recommended picks in one view
-6. **Related guides** / **관련 가이드**
-7. **Final Verdict** / **최종 평가** — summary paragraph + optional buy/skip table
+6. **FAQ** / **자주 묻는 질문** — ≥3 `###` question/answer pairs (scenario-specific; not template filler)
+7. **Related guides** / **관련 가이드**
+8. **Final Verdict** / **최종 평가** — summary paragraph + optional buy/skip table
 
 ## Rules
 

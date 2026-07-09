@@ -16,8 +16,9 @@ Use for **`contentProfile: checklist`**. Fast, actionable pre-purchase checks.
    - **Why it matters** (2–3 sentences with a concrete example)
    - **Red flag** (what to avoid, 1–2 sentences)
 5. **Quick reference table** — optional spec thresholds
-6. **Related guides** / **관련 가이드**
-7. **Final Verdict** / **최종 평가** — 1–2 paragraphs summarizing priority order
+6. **FAQ** / **자주 묻는 질문** — ≥3 `###` Q&A pairs
+7. **Related guides** / **관련 가이드**
+8. **Final Verdict** / **최종 평가** — 1–2 paragraphs summarizing priority order
 
 ## Rules
 

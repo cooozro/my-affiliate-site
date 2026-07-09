@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { countDrafts } from "./posts-fs.mjs";
+import { countDrafts, assertDraftPublishReady } from "./posts-fs.mjs";
 import { pickTopic } from "./topics.mjs";
 import { loadState, saveState } from "./state.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
@@ -68,7 +68,10 @@ function buildInstructions(strategy, season, events) {
       "Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. ";
   }
 
-  instructions += "Run npm run content:validate, then set status to complete.";
+  instructions +=
+    'Publish-ready before complete: description 50–160 chars (en+ko), "## FAQ" / "## 자주 묻는 질문" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. ' +
+    'Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. ' +
+    'Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.';
   return instructions;
 }
 
@@ -196,6 +199,9 @@ export async function queueBenchmarkReplenish(publishedSlug = null) {
 }
 
 export function completeCursorDraftRequest(writtenSlug) {
+  if (writtenSlug) {
+    assertDraftPublishReady(writtenSlug);
+  }
   writeRequest({
     status: "complete",
     completedAt: new Date().toISOString(),
