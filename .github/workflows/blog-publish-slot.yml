@@ -1,6 +1,7 @@
 name: Blog publish slot
 
 # Fast publish-only cron — separate from slow Cursor replenish so slots are not blocked.
+# Also fetches missing draft cover images before the single git push.
 on:
   push:
     branches: [main]

@@ -32,7 +32,13 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
   else
     echo "rebase conflict — merging origin/main instead"
     git rebase --abort || true
-    git merge origin/main --no-edit
+    if ! git merge origin/main --no-edit; then
+      echo "merge conflict — soft reset onto origin/main and recommit"
+      git merge --abort || true
+      git reset --soft origin/main
+      git add content/posts public/images/posts data/automation/
+      git commit -m "$COMMIT_MSG"
+    fi
   fi
   if git push origin HEAD:main; then
     echo "git push OK"
