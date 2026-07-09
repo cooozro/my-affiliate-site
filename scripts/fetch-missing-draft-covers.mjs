@@ -6,7 +6,7 @@
 
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import { spawnSync } from "child_process";
 import matter from "gray-matter";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
@@ -50,15 +50,34 @@ if (missing.length === 0) {
   process.exit(0);
 }
 
+if (!process.env.PEXELS_API_KEY && !process.env.PIXABAY_API_KEY) {
+  console.error("Missing PEXELS_API_KEY and PIXABAY_API_KEY in environment.");
+  process.exit(1);
+}
+
 console.log(`Fetching covers for ${missing.length} draft(s): ${missing.join(", ")}`);
+
+let failed = false;
 
 for (const slug of missing) {
   const query = defaultQuery(slug);
   console.log(`\n→ ${slug} (query: ${query})`);
-  execSync(
-    `node scripts/fetch-cover-image.mjs --slug=${slug} --query=${JSON.stringify(query)} --locale=all`,
+  const result = spawnSync(
+    process.execPath,
+    [
+      "scripts/fetch-cover-image.mjs",
+      `--slug=${slug}`,
+      `--query=${query}`,
+      "--locale=all",
+    ],
     { stdio: "inherit", env: process.env },
   );
+  if (result.status !== 0) {
+    failed = true;
+    console.error(`Failed to fetch cover for ${slug}`);
+  }
 }
+
+if (failed) process.exit(1);
 
 console.log("\nDone.");

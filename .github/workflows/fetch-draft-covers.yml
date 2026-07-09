@@ -41,3 +41,4 @@ jobs:
 
       - name: Commit and push cover updates
         run: bash scripts/ci-git-push.sh "chore(content): fetch draft cover images"
+        if: success()
