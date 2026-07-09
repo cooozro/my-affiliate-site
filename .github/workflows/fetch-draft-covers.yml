@@ -40,4 +40,5 @@ jobs:
         run: npm run content:validate
 
       - name: Commit and push cover updates
-        run: bash scripts/ci-git-push.sh "chore(content): fetch draft cover images"
+        run: |
+          bash scripts/ci-git-push.sh "chore(content): fetch draft cover images"
