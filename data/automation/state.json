@@ -34,10 +34,10 @@
   "lastPublishAt": "2026-07-09T05:23:27.620Z",
   "nextPublishAt": "2026-07-10T02:51:00.000Z",
   "scheduledGapHours": 5.85,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-09",
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-10",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-09",
+  "writeDateKst": "2026-07-10",
   "history": [
     {
       "action": "publish",
@@ -529,7 +529,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T10:40:52.969Z",
+    "at": "2026-07-09T17:32:41.029Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
