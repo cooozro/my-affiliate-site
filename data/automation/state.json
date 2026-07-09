@@ -32,7 +32,7 @@
   ],
   "lastPublishAt": "2026-07-08T07:17:54.698Z",
   "nextPublishAt": "2026-07-09T01:42:00.000Z",
-  "scheduledGapHours": 4.7,
+  "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-09",
   "writeCountToday": 0,
@@ -500,16 +500,28 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T01:40:24.605Z",
-    "issueCount": 1,
+    "at": "2026-07-09T01:45:29.242Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 3min (KST 2026-07-09)",
+        "severity": "warning"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "2 draft(s) have publish gate issues",
         "severity": "warning"
+      },
+      {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
+        "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-08",
   "lastDailyContentAudit": {
@@ -596,5 +608,13 @@
       "keyword": "2026 coffee machine types buying guide 비교",
       "at": "2026-07-06T05:59:30.971Z"
     }
-  ]
+  ],
+  "lastPublishSkipReason": {
+    "at": "2026-07-09T01:45:29.426Z",
+    "reason": "integrity-gate",
+    "triedSlugs": [
+      "2026-cordless-vacuums-scenario-guide",
+      "2026-refrigerators-buying-guide"
+    ]
+  }
 }
