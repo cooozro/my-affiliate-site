@@ -1,0 +1,43 @@
+name: Fetch missing draft covers
+
+# Runs when drafts are pushed without coverImage; uses GitHub Secrets (PEXELS/PIXABAY).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**/en.md"
+      - "content/posts/**/ko.md"
+      - ".github/workflows/fetch-draft-covers.yml"
+
+concurrency:
+  group: fetch-draft-covers
+  cancel-in-progress: true
+
+jobs:
+  covers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22.13"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch covers for drafts missing coverImage
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: node scripts/fetch-missing-draft-covers.mjs
+
+      - name: Validate content
+        run: npm run content:validate
+
+      - name: Commit and push cover updates
+        run: bash scripts/ci-git-push.sh "chore(content): fetch draft cover images"
