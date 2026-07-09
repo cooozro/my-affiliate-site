@@ -5,8 +5,7 @@ title: >-
 description: >-
   Summer stick vacuums by scenario — AC dust, travel resets, pet shedding, and
   school-break crumbs from public specs only.
-date: '2026-07-10'
-createdAt: '2026-07-09T00:00:00.000Z'
+date: '2026-07-09'
 tags:
   - cordless vacuum
   - stick vacuum
@@ -15,18 +14,19 @@ tags:
   - pet hair
 contentProfile: scenario-guide
 topicId: cordless-vacuums
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
-updatedAt: '2026-07-09T05:23:01.349Z'
+updatedAt: '2026-07-09T05:23:16.167Z'
 coverImage: >-
   /images/posts/2026-cordless-vacuums-scenario-guide/cordless-stick-vacuum-cleaner-cover.jpg
 coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
+publishedAt: '2026-07-09T14:23:14.000Z'
 ---
 ## Editorial Overview
 
@@ -184,9 +184,10 @@ Yes when anyone in the household has pollen or dust sensitivity. Whole-machine H
 ## Related guides
 
 - [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — automate daily dust while AC runs; use a stick for stairs and furniture
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — cut particle load when windows stay closed all summer
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — Five French-door fridges compared by cu ft per household, Energy Star kWh, open-kitchen n…
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — seal and cool the same rooms you vacuum on closed-window days
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — cut particle load when windows stay closed all summer
 ## Final Verdict
 
 Cordless stick vacuums earn their closet space in summer when **indoor air never refreshes** and mess frequency spikes. For sealed, air-conditioned apartments with allergy sensitivity, **Dyson V15 Detect** justifies its premium with HEPA exhaust and laser-guided hard-floor dust. **Shark Stratos** is the pragmatic whole-home pick before and after travel when runtime and flex reach matter. Pet owners facing heat-season shedding should look at **Bissell ICONpet** tooling before paying extra for generalist flagships. **Tineco A10 Hero** solves the school-break problem: light enough for midday crumbs without dragging out a heavy main unit.

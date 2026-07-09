@@ -31,10 +31,10 @@
     "cordless-vacuums",
     "bidets"
   ],
-  "lastPublishAt": "2026-07-09T03:51:48.683Z",
-  "nextPublishAt": "2026-07-09T04:12:49.728Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-09T05:23:16.127Z",
+  "nextPublishAt": "2026-07-10T01:07:00.000Z",
+  "scheduledGapHours": 4.12,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-09",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-09",
@@ -344,13 +344,21 @@
         "https://www.aipick.shop/en/blog/2026-refrigerators-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-refrigerators-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-cordless-vacuums-scenario-guide",
+      "topic": {
+        "id": "cordless-vacuums"
+      },
+      "at": "2026-07-09T05:23:16.127Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-cordless-vacuums-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-cordless-vacuums-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "robot-vacuums",
-      "at": "2026-07-02T01:23:32.019Z"
-    },
     {
       "id": "gaming-consoles",
       "category": "gaming",
@@ -491,6 +499,10 @@
       "category": "home-appliances",
       "taxonomyGroup": "생활가전/위생",
       "at": "2026-07-09T03:51:48.705Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "at": "2026-07-09T05:23:16.130Z"
     }
   ],
   "formatHistory": [
@@ -517,22 +529,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T05:23:01.237Z",
-    "issueCount": 4,
+    "at": "2026-07-09T05:23:14.406Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
         "message": "Publish slot overdue by 70min (KST 2026-07-09)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
         "severity": "error"
       },
       {
@@ -543,11 +545,11 @@
     ],
     "repairs": []
   },
-  "lastDailyContentAuditKst": "2026-07-08",
+  "lastDailyContentAuditKst": "2026-07-09",
   "lastDailyContentAudit": {
-    "at": "2026-07-08T07:17:55.438Z",
-    "postsScanned": 26,
-    "autoRepairCount": 4,
+    "at": "2026-07-09T05:23:16.949Z",
+    "postsScanned": 28,
+    "autoRepairCount": 8,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [
@@ -630,7 +632,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-09T05:23:01.371Z",
+    "at": "2026-07-09T05:06:42.484Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-cordless-vacuums-scenario-guide"

@@ -1,9 +1,7 @@
 ---
 title: '여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오'
-description: >-
-  여름 무선 스틱 청소기 시나리오 — 냉방 먼지, 휴가 전후 청소, 반려 털, 방학 생활 먼지를 공개 스펙 기준으로 비교.
-date: '2026-07-10'
-createdAt: '2026-07-09T00:00:00.000Z'
+description: '여름 무선 스틱 청소기 시나리오 — 냉방 먼지, 휴가 전후 청소, 반려 털, 방학 생활 먼지를 공개 스펙 기준으로 비교.'
+date: '2026-07-09'
 tags:
   - 무선청소기
   - 스틱청소기
@@ -12,7 +10,7 @@ tags:
   - 반려동물
 contentProfile: scenario-guide
 topicId: cordless-vacuums
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
@@ -22,7 +20,9 @@ coverImage: >-
 coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
-coverImageSourceUrl: https://unsplash.com/photos/tmw-sC48Rb8
+coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
+updatedAt: '2026-07-09T05:23:16.496Z'
+publishedAt: '2026-07-09T14:23:14.000Z'
 ---
 ## 편집부 개요
 
@@ -180,9 +180,10 @@ Tineco는 A10 Hero 본체를 **약 2.5kg**, **맥스 모드 최대 25분**으로
 ## 관련 가이드
 
 - [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 에어컨 가동 중 일상 먼지는 로봇, 계단·가구는 스틱으로 보완
-- [좁은 방 공기청정기: CADR·필터·소음·전기요금 체크](/ko/blog/2026-air-purifiers-guide) — 여름 내내 창문 닫을 때 입자 부하 줄이기
-- [여름 에어컨 사기 전 7가지 점검](/ko/blog/2026-summer-ac-buying-checklist) — 창문 닫은 날 청소하는 같은 공간 냉방 점검
-
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문 닫은 날 청소하는 같은 공간 냉방 점검
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 여름 내내 창문 닫을 때 입자 부하 줄이기
 ## 최종 평가
 
 무선 스틱 청소기는 **실내 공기가 갱신되지 않고** 먼지 빈도가 늘어나는 여름에 수납 공간 값어치를 합니다. 냉방 밀실·알레르기 민감 가정엔 헤파 배기와 레이저 하드플로어 가이드가 있는 **Dyson V15 Detect**가 프리미엄 값을 만듭니다. 휴가 전후 한 번에 집 전체를 돌릴 땐 사용 시간과 플렉스가 있는 **Shark Stratos**가 실용적입니다. 더위 털갈이 반려 가정은 범용 플래그십보다 **Bissell ICONpet** 펫 툴부터 보세요. 방학 낮 부스러기는 무거운 본체 대신 **Tineco A10 Hero**로 해결합니다.

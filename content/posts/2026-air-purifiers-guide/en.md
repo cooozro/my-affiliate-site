@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-02T15:30:00.000Z'
+updatedAt: '2026-07-09T05:23:16.158Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -172,6 +172,8 @@ Look for sleep-mode ratings around 27 dB or lower if the unit will run all night
 ## Related guides
 
 - [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — Five French-door fridges compared by cu ft per household, Energy Star kWh, open-kitchen n…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — seal and cool the room first; purifiers complement closed-window cooling
 - [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — match room size before adding filtration load
 ## Five checks before you buy

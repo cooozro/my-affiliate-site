@@ -1,8 +1,8 @@
 {
-  "dateKst": "2026-07-08",
-  "scannedAt": "2026-07-08T07:17:55.438Z",
-  "postsScanned": 26,
-  "autoRepairCount": 4,
+  "dateKst": "2026-07-09",
+  "scannedAt": "2026-07-09T05:23:16.949Z",
+  "postsScanned": 28,
+  "autoRepairCount": 8,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -11,9 +11,23 @@
       ]
     },
     {
+      "slug": "2026-air-purifiers-guide",
+      "repairs": [
+        "2026-air-purifiers-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-air-purifiers-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
       "slug": "2026-budget-monitors-buying-guide",
       "repairs": [
         "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
+      "slug": "2026-cordless-vacuums-scenario-guide",
+      "repairs": [
+        "2026-cordless-vacuums-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-cordless-vacuums-scenario-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     },
     {

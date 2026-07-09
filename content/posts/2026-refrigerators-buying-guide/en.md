@@ -18,7 +18,7 @@ topicCluster: large-appliances
 draft: false
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-09T03:51:46.000Z'
+updatedAt: '2026-07-09T05:23:16.176Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 coverImage: >-
@@ -180,10 +180,11 @@ Pair a **dedicated kimchi unit** for fermentation zones with a separate main fri
 
 ## Related guides
 
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
 - [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — counter appliances that share summer circuits with your fridge compressor cycles
-- [Fuzzy Logic vs Induction: What Actually Changes Rice Cooker Results](/en/blog/2026-rice-cookers-explainer) — another daily kitchen appliance where heat timing shapes meals beside cold storage
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
 - [Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Systems](/en/blog/2026-coffee-machines-head-to-head) — morning heat load next to the refrigerator in open-plan layouts
-
+- [Fuzzy Logic vs Induction: What Actually Changes Rice Cooker Results](/en/blog/2026-rice-cookers-explainer) — another daily kitchen appliance where heat timing shapes meals beside cold storage
 ## Five checks before you buy
 
 1. **Size cubic feet to people, not showroom walls** — Rule of thumb: plan **4–6 cu ft fresh food per adult** for weekly shopping; a 1–2 person home often wastes electricity above 20 cu ft unless you batch-cook. Haier QJS15HYRFS exists because oversized units run compressors for empty air.

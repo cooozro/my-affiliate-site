@@ -1,138 +1,33 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-refrigerators-buying-guide",
-  "requestedAt": "2026-07-09T03:51:56.051Z",
-  "writingMode": "benchmark",
-  "contentProfile": "checklist",
-  "toneVariant": "question-led",
-  "serpKeyword": "2026 bidet seat guide buying guide 장단점",
-  "serpCachePath": "C:\\Users\\구주형 메인컴\\my-affiliate-site\\data\\automation\\serp-cache\\2026-bidet-seat-guide-buying-guide-장단점.json",
-  "benchmarkOutline": {
-    "contentProfile": "checklist",
-    "toneVariant": "question-led",
-    "introAngle": "question-led framing for bidet seat guide: water pressure, drying, install fit, and energy use",
-    "conclusionAngle": "Actionable next steps without hype",
-    "sections": [
-      {
-        "h2": "Pre-purchase checklist",
-        "h3": [
-          "Must-check specs",
-          "Red flags to skip"
-        ]
-      },
-      {
-        "h2": "What you need to know: Everything You Need to Know When Buying a Bidet",
-        "h3": [
-          "Key factors: Traditional Bidets",
-          "Handheld Bidet Sprayers"
-        ]
-      },
-      {
-        "h2": "Key factors: Types of Bidets",
-        "h3": [
-          "Bidet Attachments for Toilets",
-          "Key factors: Bidet Toilet Seats"
-        ]
-      },
-      {
-        "h2": "Analysis methodology",
-        "h3": [
-          "Sources we use",
-          "How we compare models"
-        ]
-      },
-      {
-        "h2": "Bidet Add-Ons",
-        "h3": [
-          "Key factors: Bidet Costs",
-          "Water Pressure"
-        ]
-      },
-      {
-        "h2": "Key factors: Factors To Consider When Choosing a Bidet",
-        "h3": [
-          "Bidet Comfort",
-          "Key factors: Custom Bidet Adjustability"
-        ]
-      },
-      {
-        "h2": "Popular Bidet Features & Extras",
-        "h3": [
-          "Key factors: Non-Electric compared with Electric Bidets",
-          "Ease of Use"
-        ]
-      }
-    ],
-    "keyword": "2026 bidet seat guide buying guide 장단점",
-    "baseKeyword": "2026 bidet seat guide buying guide",
-    "serpSources": [
-      {
-        "title": "The 5 Best Bidets for 2026 | Top Toilet Bidet - YouTube",
-        "url": "https://www.youtube.com/watch?v=vjxjyrMhqTQ"
-      },
-      {
-        "title": "Bidet Buying Guide - Ferguson Home",
-        "url": "https://www.fergusonhome.com/bidet-buying-guide/a17743?srsltid=AfmBOorD40WoZ-gGBi3Lfwgw0Ddm01BJvxYfP8NFvDWw0MV1ee2H-6A-"
-      },
-      {
-        "title": "The Ultimate Bidet Guide 2026: Smart vs. Seat vs. Manual - VOVO EU",
-        "url": "https://vovo-eu.com/de/blogs/nachrichten/ultimate-guide-choosing-perfect-bidet-home?srsltid=AfmBOor-SLiUczPRVvUnza8FSDkOt4d83Gg3eTRQlyK-OOZ6isPMgYQU"
-      },
-      {
-        "title": "2026 Best Toilet Seat Bidet Heated Reviews and Buying Guide?",
-        "url": "https://www.oulutoilet.com/blog/2026-best-toilet-seat-bidet-reviews-and-buying-guide/"
-      },
-      {
-        "title": "Best Bidet Toilet Australia: Top Picks for 2026 - MyHomeware",
-        "url": "https://www.myhomeware.com.au/blogs/smart-bathroom/best-bidet-toilet-australia?srsltid=AfmBOopEJojx08eYcu5KADdT0436PXYU1Wi1oTn9f2HMm4mRtmGs1AeF"
-      },
-      {
-        "title": "26 Years of Latest Bidet Recommendation Buying Guide! - YouTube",
-        "url": "https://www.youtube.com/watch?v=EmZ1z91XEIE"
-      },
-      {
-        "title": "2026 Top Best Bidet Toilet Seat Comparison & Buying Tips - HOROW",
-        "url": "https://horow.com/blogs/guide/2026-top-best-bidet-toilet-seat-comparison-buying-tips?srsltid=AfmBOor6bzar05soDN0peKTzqi7G86pAUnNtXHfHyFwhb_-qWh9BBeMl"
-      },
-      {
-        "title": "Heated Toilet Seats in Australia: Complete Buyer's Guide 2026",
-        "url": "https://bidetaustralia.com.au/heated-toilet-seats-in-australia-complete-buyers-guide-2026/?srsltid=AfmBOooXdnjp-kaoL1F-Vfh33Og48JhT0FF-U0BqhG4OxAsElnhx9L3t"
-      },
-      {
-        "title": "Smart vs Non-Electric Bidet Seats Australia (2026 Guide)",
-        "url": "https://www.bathroomaustralia.com.au/blogs/news/smart-vs-non-electric-bidet-seats-australia-2026-guide?srsltid=AfmBOooBn1KwcNlvpUeo3DVpbO989AX8-73jSJs4hA3NlR-CbZ1ZbUCq"
-      },
-      {
-        "title": "Best Bidet Seat Buying Guide: Features, Comfort, and Value - Lafeme",
-        "url": "https://lafeme.com.au/best-bidet-seat-buying-guide-features-comfort-and-value/"
-      }
-    ],
-    "validatedAt": "2026-07-09T03:51:56.043Z",
-    "h2Similarity": 0.6208616780045352,
-    "shingleOverlap": 0.09090909090909091,
-    "serpCachePath": "C:\\Users\\구주형 메인컴\\my-affiliate-site\\data\\automation\\serp-cache\\2026-bidet-seat-guide-buying-guide-장단점.json",
-    "fromCache": false
-  },
-  "fallbackFrom": null,
-  "fallbackReason": null,
+  "publishedSlug": "2026-cordless-vacuums-scenario-guide",
+  "requestedAt": "2026-07-09T05:23:16.144Z",
+  "writingMode": "stable",
+  "contentProfile": "scenario-guide",
+  "toneVariant": "scenario-first",
+  "serpKeyword": "2026 TV buying guide buying guide 사용법",
+  "serpCachePath": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "bidets",
-    "category": "home-appliances",
-    "angle": "bidet seat guide: water pressure, drying, install fit, and energy use",
-    "imageQuery": "bidet toilet seat bathroom",
-    "liveData": false,
+    "id": "television",
+    "category": "large-appliances",
+    "angle": "TV buying guide: OLED vs QLED, size for room distance, HDMI 2.1, and smart OS",
+    "imageQuery": "smart TV living room OLED",
+    "liveData": true,
     "seasons": [
       "spring",
-      "summer"
+      "fall"
     ]
   },
-  "templatePath": "docs/templates/checklist.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: benchmark. Tone: question-led. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Run npm run content:validate, then set status to complete.",
+  "templatePath": "docs/templates/scenario-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

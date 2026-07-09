@@ -17,7 +17,7 @@ draft: false
 liveData: false
 imageSearchKeywords:
   - modern refrigerator kitchen
-updatedAt: '2026-07-09T03:51:46.000Z'
+updatedAt: '2026-07-09T05:23:16.177Z'
 coverImage: >-
   /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
 coverImageAlt: modern refrigerator kitchen
@@ -177,10 +177,11 @@ publishedAt: '2026-07-09T03:51:46.000Z'
 
 ## 관련 가이드
 
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
 - [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 냉장고 압축기와 같은 여름 회로·조리대 가전
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르는 법](/ko/blog/2026-coffee-machines-head-to-head) — 오픈형 주방에서 아침 발열 부하
 - [퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것](/ko/blog/2026-rice-cookers-explainer) — 냉장 보관 옆 매일 쓰는 가열 가전
-- [캡슐·반자동·풀오토, 여름 주방 열과 우유 시스템](/ko/blog/2026-coffee-machines-head-to-head) — 오픈형 주방에서 아침 발열 부하
-
 ## 구매 전 다섯 가지 확인
 
 1. **용량은 인원 기준** — 성인 **식품실 4–6 cu ft**를 주간 장보기 기준으로 잡으세요. 1–2인이 20 cu ft 이상이면 빈 공간 냉각만 늘어납니다.
