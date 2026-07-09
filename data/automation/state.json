@@ -31,9 +31,9 @@
     "cordless-vacuums",
     "bidets"
   ],
-  "lastPublishAt": "2026-07-09T05:23:16.127Z",
-  "nextPublishAt": "2026-07-10T01:07:00.000Z",
-  "scheduledGapHours": 4.12,
+  "lastPublishAt": "2026-07-09T05:23:27.620Z",
+  "nextPublishAt": "2026-07-10T02:51:00.000Z",
+  "scheduledGapHours": 5.85,
   "publishCountToday": 2,
   "publishDateKst": "2026-07-09",
   "writeCountToday": 0,
@@ -351,7 +351,7 @@
       "topic": {
         "id": "cordless-vacuums"
       },
-      "at": "2026-07-09T05:23:16.127Z",
+      "at": "2026-07-09T05:23:27.620Z",
       "urls": [
         "https://www.aipick.shop/en/blog/2026-cordless-vacuums-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-cordless-vacuums-scenario-guide"
@@ -502,7 +502,7 @@
     },
     {
       "id": "cordless-vacuums",
-      "at": "2026-07-09T05:23:16.130Z"
+      "at": "2026-07-09T05:23:27.625Z"
     }
   ],
   "formatHistory": [
@@ -529,7 +529,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T05:23:14.406Z",
+    "at": "2026-07-09T05:23:25.956Z",
     "issueCount": 2,
     "issues": [
       {
@@ -547,7 +547,7 @@
   },
   "lastDailyContentAuditKst": "2026-07-09",
   "lastDailyContentAudit": {
-    "at": "2026-07-09T05:23:16.949Z",
+    "at": "2026-07-09T05:23:28.529Z",
     "postsScanned": 28,
     "autoRepairCount": 8,
     "manualReviewCount": 0

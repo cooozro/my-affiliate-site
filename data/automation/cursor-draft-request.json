@@ -2,11 +2,11 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": "2026-cordless-vacuums-scenario-guide",
-  "requestedAt": "2026-07-09T05:23:16.144Z",
+  "requestedAt": "2026-07-09T05:23:27.641Z",
   "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "scenario-first",
-  "serpKeyword": "2026 TV buying guide buying guide 사용법",
+  "contentProfile": "head-to-head",
+  "toneVariant": "data-driven",
+  "serpKeyword": "2026 TV buying guide buying guide 분석",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
@@ -27,7 +27,7 @@
       "fall"
     ]
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: scenario-first. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: stable. Tone: data-driven. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }
