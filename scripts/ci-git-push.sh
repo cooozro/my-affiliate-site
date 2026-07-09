@@ -3,7 +3,7 @@
 set -euo pipefail
 
 COMMIT_MSG="${1:?commit message required}"
-MAX_ATTEMPTS="${2:-3}"
+MAX_ATTEMPTS="${2:-6}"
 
 git config user.name "blog-automation[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -24,8 +24,8 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
     echo "git push OK"
     exit 0
   fi
-  echo "git push failed (attempt ${attempt}), retrying in 8s..."
-  sleep 8
+  echo "git push failed (attempt ${attempt}), retrying in 15s..."
+  sleep 15
   attempt=$((attempt + 1))
 done
 

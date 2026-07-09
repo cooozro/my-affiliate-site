@@ -99,6 +99,15 @@ jobs:
         if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
         run: npm run content:validate
 
+      - name: Fetch missing draft covers
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: node scripts/fetch-missing-draft-covers.mjs
+
+      - name: Validate content after cover fetch
+        run: npm run content:validate
+
       - name: Commit and push changes
         run: |
           bash scripts/ci-git-push.sh "chore(automation): publish-slot"
