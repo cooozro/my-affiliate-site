@@ -12,8 +12,8 @@ on:
       - ".github/workflows/fetch-draft-covers.yml"
 
 concurrency:
-  group: fetch-draft-covers
-  cancel-in-progress: true
+  group: git-write-main
+  cancel-in-progress: false
 
 jobs:
   covers:
