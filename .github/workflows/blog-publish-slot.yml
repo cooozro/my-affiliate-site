@@ -19,8 +19,8 @@ env:
   AUTOMATION_MODE: publish-only
 
 concurrency:
-  group: blog-publish-slot
-  cancel-in-progress: true
+  group: git-write-main
+  cancel-in-progress: false
 
 jobs:
   publish:
