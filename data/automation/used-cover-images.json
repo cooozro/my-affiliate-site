@@ -649,6 +649,22 @@
       "hash": "2a1b0f510b6d07151ddcdea7c70c6bd9fc872a0936beb136f4663150d32a5f7b",
       "provider": null,
       "registeredAt": "2026-07-10T07:11:42.350Z"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-scenario-guide",
+      "url": "https://images.pexels.com/photos/5824496/pexels-photo-5824496.jpeg",
+      "assetKey": "pexels:5824496",
+      "hash": "9e39e15bbf722f54a17002fb7444b1098722d72e505ca51a0df2fc7a75038141",
+      "provider": "pexels",
+      "registeredAt": "2026-07-10T13:20:06.922Z"
+    },
+    {
+      "slug": "2026-under-300-cross-category-buying-guide",
+      "url": "https://www.pexels.com/photo/4158/",
+      "assetKey": null,
+      "hash": "d00136975dd20cde981881cb0ddeacec10d03e66dd8f09dea6ada97a319bf0f8",
+      "provider": null,
+      "registeredAt": "2026-07-10T13:20:06.925Z"
     }
   ]
 }
