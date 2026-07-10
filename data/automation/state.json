@@ -1,5 +1,5 @@
 {
-  "topicIndex": 12,
+  "topicIndex": 17,
   "usedTopicIds": [
     "budget-monitors",
     "wireless-earbuds",
@@ -29,12 +29,13 @@
     "cordless-vacuums",
     "fitness-trackers",
     "cordless-vacuums",
-    "bidets"
+    "bidets",
+    "induction-cooktops"
   ],
-  "lastPublishAt": "2026-07-09T05:23:27.620Z",
-  "nextPublishAt": "2026-07-10T02:51:00.000Z",
-  "scheduledGapHours": 5.85,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-10T05:25:29.985Z",
+  "nextPublishAt": "2026-07-10T10:40:00.097Z",
+  "scheduledGapHours": 5.24,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-10",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-10",
@@ -356,18 +357,21 @@
         "https://www.aipick.shop/en/blog/2026-cordless-vacuums-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-cordless-vacuums-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-bidets-checklist",
+      "topic": {
+        "id": "bidets"
+      },
+      "at": "2026-07-10T05:25:29.985Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-bidets-checklist",
+        "https://www.aipick.shop/ko/blog/2026-bidets-checklist"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "gaming-consoles",
-      "category": "gaming",
-      "at": "2026-07-02T01:23:32.029Z"
-    },
-    {
-      "id": "gaming-consoles",
-      "at": "2026-07-02T03:15:31.757Z"
-    },
     {
       "id": "electric-fans",
       "category": "home-appliances",
@@ -503,10 +507,19 @@
     {
       "id": "cordless-vacuums",
       "at": "2026-07-09T05:23:27.625Z"
+    },
+    {
+      "id": "bidets",
+      "at": "2026-07-10T05:25:29.989Z"
+    },
+    {
+      "id": "induction-cooktops",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/조리",
+      "at": "2026-07-10T05:25:30.000Z"
     }
   ],
   "formatHistory": [
-    "head-to-head",
     "scenario-guide",
     "explainer",
     "checklist",
@@ -525,14 +538,23 @@
     "scenario-guide",
     "head-to-head",
     "buying-guide",
-    "checklist"
+    "checklist",
+    "explainer"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-09T22:46:29.727Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-10T05:25:27.960Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 154min (KST 2026-07-10)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-09",
   "lastDailyContentAudit": {

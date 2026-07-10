@@ -1,8 +1,11 @@
 ---
-title: 'Bidet Seat Checklist: Water Pressure, Dry Mode, and Toilet Fit for Humid Summer Homes'
+title: >-
+  Bidet Seat Checklist: Water Pressure, Dry Mode, and Toilet Fit for Humid
+  Summer Homes
 description: >-
-  Seven bidet-seat checks before summer guests arrive — bowl fit, water pressure,
-  drying wattage, GFCI outlet, nozzle hygiene, and humidity-safe controls.
+  Seven bidet-seat checks before summer guests arrive — bowl fit, water
+  pressure, drying wattage, GFCI outlet, nozzle hygiene, and humidity-safe
+  controls.
 date: '2026-07-10'
 tags:
   - bidet
@@ -12,8 +15,7 @@ tags:
   - home appliances
 contentProfile: checklist
 topicId: bidets
-draft: true
-createdAt: '2026-07-09T07:35:00.000Z'
+draft: false
 coverImage: /images/posts/2026-bidets-checklist/modern-bathroom-toilet-seat-cover.jpg
 coverImageAlt: modern bathroom with a toilet seat cover
 coverImageAltKo: 현대적인 욕실의 변기 시트 커버
@@ -22,6 +24,8 @@ imageSearchKeywords:
   - bidet
   - toilet seat
   - bathroom
+updatedAt: '2026-07-10T14:25:28.000Z'
+publishedAt: '2026-07-10T14:25:28.000Z'
 ---
 ## Editorial Overview
 

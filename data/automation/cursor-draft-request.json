@@ -1,8 +1,32 @@
 {
-  "status": "complete",
-  "completedAt": "2026-07-09T07:41:45.197Z",
-  "writtenSlug": "2026-bidets-checklist",
-  "draftCount": 3,
-  "lastError": null,
-  "note": "Buffer full (3/2); cleared after manual bidets + water-purifiers replenish."
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-bidets-checklist",
+  "requestedAt": "2026-07-10T05:25:30.004Z",
+  "writingMode": "stable",
+  "contentProfile": "explainer",
+  "toneVariant": "case-study",
+  "serpKeyword": "2026 portable vs built-in induction buying guide 후기",
+  "serpCachePath": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "topic": {
+    "id": "induction-cooktops",
+    "category": "kitchen",
+    "angle": "portable vs built-in induction: watt zones, pan compatibility, and safety locks",
+    "imageQuery": "induction cooktop kitchen",
+    "liveData": false,
+    "seasons": [
+      "fall"
+    ]
+  },
+  "templatePath": "docs/templates/explainer.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: case-study. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "lastError": null
 }

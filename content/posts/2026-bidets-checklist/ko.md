@@ -1,8 +1,8 @@
 ---
 title: '습한 여름·방학 손님철, 비데 시트는 수압·건조·변기 규격부터 확인한다'
 description: >-
-  비데 시트 구매 전 7항목 — 변기 형태·볼트 간격, 급수·T밸브, 수압·분사 조절, 건조·히팅 와트,
-  GFCI 콘센트, 노즐 위생, 습기 환경 조작부. 에어컨 밀실·방학 손님 대비 체크리스트.
+  비데 시트 구매 전 7항목 — 변기 형태·볼트 간격, 급수·T밸브, 수압·분사 조절, 건조·히팅 와트, GFCI 콘센트, 노즐 위생, 습기
+  환경 조작부. 에어컨 밀실·방학 손님 대비 체크리스트.
 date: '2026-07-10'
 tags:
   - 비데
@@ -12,8 +12,7 @@ tags:
   - 가전
 contentProfile: checklist
 topicId: bidets
-draft: true
-createdAt: '2026-07-09T07:35:00.000Z'
+draft: false
 coverImage: /images/posts/2026-bidets-checklist/modern-bathroom-toilet-seat-cover.jpg
 coverImageAlt: 현대적인 욕실의 변기 시트 커버
 coverImageCredit: Photo by Curology / Unsplash
@@ -22,6 +21,8 @@ imageSearchKeywords:
   - bidet
   - toilet seat
   - bathroom
+updatedAt: '2026-07-10T14:25:28.000Z'
+publishedAt: '2026-07-10T14:25:28.000Z'
 ---
 ## 편집부 개요
 
