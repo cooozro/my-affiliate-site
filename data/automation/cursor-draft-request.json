@@ -1,32 +1,10 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-television-buying-guide",
-  "requestedAt": "2026-07-10T11:32:02.346Z",
-  "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "question-led",
-  "serpKeyword": null,
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": null,
-  "fallbackReason": null,
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "window-ac",
-    "category": "home-appliances",
-    "angle": "window and wall-mounted air conditioners: BTU per room size, install constraints, and efficiency labels",
-    "imageQuery": "window air conditioner apartment",
-    "liveData": true,
-    "seasons": [
-      "summer"
-    ]
-  },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: question-led. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
-  "lastError": null
+  "status": "complete",
+  "completedAt": "2026-07-10T13:30:00.000Z",
+  "writtenSlug": "2026-under-300-cross-category-buying-guide",
+  "draftCount": 2,
+  "needed": 0,
+  "note": "Buffer: meta benchmark drafts — solo-apartment + under-300 cross-category (replaced single-product window-ac/earbuds).",
+  "writingMode": "benchmark",
+  "contentPlan": "meta"
 }

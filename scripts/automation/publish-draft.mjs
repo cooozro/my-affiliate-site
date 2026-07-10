@@ -1,5 +1,7 @@
 import { distributePublishedPost } from "./distributor.mjs";
 import {
+  countPublishedOnKstDate,
+  isDraftScheduledForFuture,
   listDrafts,
   pickDraftForPublish,
   readPost,
@@ -44,6 +46,16 @@ function canPublishNow(state, force = false) {
   ensureNextPublishAt(state);
 
   if (force) return true;
+
+  const actualToday = countPublishedOnKstDate();
+  if (actualToday >= MAX_PUBLISH_PER_DAY) {
+    state.publishCountToday = actualToday;
+    console.log(
+      `Daily publish limit reached (${actualToday} live post(s) today KST, max ${MAX_PUBLISH_PER_DAY})`,
+    );
+    return false;
+  }
+  state.publishCountToday = Math.max(state.publishCountToday ?? 0, actualToday);
 
   if (state.publishCountToday > 0 && state.lastPublishAt) {
     const minGapMs = MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
@@ -158,6 +170,15 @@ export async function publishOneDraft(options = {}) {
     }
 
     tried.add(picked.slug);
+
+    if (isDraftScheduledForFuture(picked.slug)) {
+      const { data } = readPost(picked.slug, "en");
+      console.log(
+        `Publish skipped: ${picked.slug} scheduled for ${String(data.date).slice(0, 10)} (future KST slot)`,
+      );
+      continue;
+    }
+
     const issues = validatePostFiles(picked.slug, {
       phase: "publish",
       state,

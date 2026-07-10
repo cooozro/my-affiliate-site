@@ -86,8 +86,10 @@ ${modeNote}
 Write exactly ONE bilingual draft:
 - Files: content/posts/{slug}/en.md and ko.md
 - Frontmatter: draft:true, contentProfile:${contentProfile}, writingMode:${writingMode}
+${request.contentPlan === "meta" ? `- CROSS-CATEGORY META ANGLE: ${request.contentAngle ?? "see request"} — cover anchor categories: ${(topic.anchorTopicIds ?? []).join(", ")}. NOT a single-product article.\n` : ""}
 ${benchmarkBlock}
-- Topic id: ${topic.id ?? "see request file"} (assigned by content roadmap — do not swap to bluetooth-speakers/window-ac unless this IS the assigned topic)
+- Topic id: ${topic.id ?? "see request file"} (assigned by content plan — do not swap to another product unless this IS the assigned plan)
+- Content plan: ${request.contentPlan ?? "product"}${request.slugHint ? `; suggested slug: ${request.slugHint}` : ""}
 - Content roadmap phase: ${roadmapPhase} — ${roadmapNote}
 - Category: ${topic.category ?? ""}
 - Angle: ${topic.angle ?? ""}

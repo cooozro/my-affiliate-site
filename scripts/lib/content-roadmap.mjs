@@ -119,7 +119,10 @@ export function describeRoadmapPhase(phase, coverage) {
     const missing = PRODUCT_TOPICS.filter(
       (t) => !topicHasAnyPost(t.id, coverage),
     ).map((t) => t.id);
-    return `Full taxonomy first pass (${missing.length} topics without any post)`;
+    return `Full taxonomy first pass (${missing.length} topics without any post) + meta angles`;
   }
-  return "Format rotation (new topic×format pairs only)";
+  if (phase === "format-rotation") {
+    return "Format rotation (new topic×format pairs + cross-category meta angles)";
+  }
+  return "Content roadmap";
 }

@@ -35,8 +35,29 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
     if ! git merge origin/main --no-edit; then
       echo "merge conflict — soft reset onto origin/main and recommit"
       git merge --abort || true
+      STATE_BACKUP=""
+      if [ -f data/automation/state.json ]; then
+        STATE_BACKUP="$(mktemp)"
+        cp data/automation/state.json "$STATE_BACKUP"
+      fi
       git reset --soft origin/main
       git add content/posts public/images/posts data/automation/
+      if [ -n "$STATE_BACKUP" ] && [ -f "$STATE_BACKUP" ]; then
+        node -e "
+          const fs = require('fs');
+          const ours = JSON.parse(fs.readFileSync(process.env.STATE_BACKUP, 'utf8'));
+          const path = 'data/automation/state.json';
+          let theirs = {};
+          try { theirs = JSON.parse(fs.readFileSync(path, 'utf8')); } catch {}
+          const merged = { ...theirs, ...ours };
+          merged.history = (ours.history?.length ?? 0) >= (theirs.history?.length ?? 0) ? ours.history : theirs.history;
+          merged.topicHistory = (ours.topicHistory?.length ?? 0) >= (theirs.topicHistory?.length ?? 0) ? ours.topicHistory : theirs.topicHistory;
+          merged.usedTopicIds = (ours.usedTopicIds?.length ?? 0) >= (theirs.usedTopicIds?.length ?? 0) ? ours.usedTopicIds : theirs.usedTopicIds;
+          merged.formatHistory = (ours.formatHistory?.length ?? 0) >= (theirs.formatHistory?.length ?? 0) ? ours.formatHistory : theirs.formatHistory;
+          fs.writeFileSync(path, JSON.stringify(merged, null, 2) + '\n');
+        " STATE_BACKUP="$STATE_BACKUP"
+      fi
+      git add data/automation/state.json
       git commit -m "$COMMIT_MSG"
     fi
   fi

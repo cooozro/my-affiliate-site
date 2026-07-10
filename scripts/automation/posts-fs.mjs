@@ -13,7 +13,7 @@ import {
 import { getRoadmapPhase } from "../lib/content-roadmap.mjs";
 import { getTopicFormatCoverage } from "../lib/topic-coverage.mjs";
 import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
-import { loadState } from "./state.mjs";
+import { kstDateString, loadState } from "./state.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -83,6 +83,30 @@ export function listDrafts() {
 
 export function countDrafts() {
   return listDrafts().length;
+}
+
+/** Count live (non-draft) posts whose KST publish day matches `dateKst`. */
+export function countPublishedOnKstDate(dateKst = kstDateString()) {
+  let count = 0;
+  for (const slug of listSlugDirs()) {
+    const enPath = path.join(POSTS_DIR, slug, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = readPost(slug, "en");
+    if (data.draft) continue;
+    const pubKst = data.publishedAt
+      ? kstDateString(new Date(data.publishedAt))
+      : String(data.date ?? "").slice(0, 10);
+    if (pubKst === dateKst) count++;
+  }
+  return count;
+}
+
+/** True when frontmatter `date` is a future KST calendar day (scheduled slot). */
+export function isDraftScheduledForFuture(slug) {
+  const { data } = readPost(slug, "en");
+  const scheduled = String(data.date ?? "").slice(0, 10);
+  const today = kstDateString();
+  return Boolean(scheduled && scheduled > today);
 }
 
 export function pickDraftForPublish(drafts, state = loadState()) {

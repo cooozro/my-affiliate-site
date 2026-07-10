@@ -104,7 +104,9 @@ export function recordContentStrategy(state, entry) {
 export async function prepareDraftStrategy(state, topic, options = {}) {
   const contentProfile = options.contentProfile ?? pickContentProfile(state);
   const toneVariant = pickToneVariant(state);
-  let writingMode = options.writingMode ?? pickWritingMode(state);
+  let writingMode =
+    options.writingMode ??
+    (topic.isMetaAngle ? "benchmark" : pickWritingMode(state));
   let outline = null;
   let keyword = null;
   let fallbackFrom = null;
@@ -117,6 +119,20 @@ export async function prepareDraftStrategy(state, topic, options = {}) {
       outline = result.outline;
       keyword = result.keyword;
       serpCachePath = result.outline.serpCachePath ?? null;
+    } else if (topic.isMetaAngle && topic.metaAngle?.benchmarkOutline) {
+      outline = {
+        ...topic.metaAngle.benchmarkOutline,
+        toneVariant,
+        keyword: topic.searchKeyword ?? result.keyword,
+        serpSources: [],
+        h2Similarity: 0,
+        shingleOverlap: 0,
+        embedded: true,
+      };
+      keyword = topic.searchKeyword ?? result.keyword;
+      console.log(
+        `Benchmark outline: embedded meta-angle structure (${topic.metaAngle.id}; SERP fallback)`,
+      );
     } else {
       fallbackFrom = "benchmark";
       fallbackReason = result.reason ?? "benchmark outline failed";

@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { countDrafts, assertDraftPublishReady } from "./posts-fs.mjs";
-import { pickTopic } from "./topics.mjs";
+import { pickContentPlan, describeContentPlanMix } from "../lib/pick-content-plan.mjs";
+import { isMetaTopicId } from "../lib/content-angles.mjs";
 import { loadState, saveState } from "./state.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 import { getTemplatePath, pickContentProfile } from "../lib/content-profiles.mjs";
@@ -52,7 +53,7 @@ export function readCursorDraftRequest() {
   }
 }
 
-function buildInstructions(strategy, season, events) {
+function buildInstructions(strategy, season, events, plan = null) {
   const { contentProfile, writingMode, toneVariant } = strategy;
   const templatePath = getTemplatePath(contentProfile);
   const eventLabel = events.map((e) => e.label).join(", ") || "none";
@@ -62,6 +63,15 @@ function buildInstructions(strategy, season, events) {
     `Writing mode: ${writingMode}. Tone: ${toneVariant}. ` +
     `Follow ${templatePath} and docs/CONTENT_STANDARDS.md. ` +
     `Season priority: ${season}; active events: ${eventLabel}. `;
+
+  if (plan?.kind === "meta" && plan.angle) {
+    instructions +=
+      `CROSS-CATEGORY ANGLE (${plan.angle.type}): ${plan.angle.label.en} / ${plan.angle.label.ko}. ` +
+      `Cover multiple product categories in ONE article — anchor categories: ${plan.angle.anchorTopicIds.join(", ")}. ` +
+      `Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. ` +
+      `Suggested slug: ${plan.slugHint ?? "2026-" + plan.angle.slugStem + "-" + contentProfile}. ` +
+      `Frontmatter: contentAngle: ${plan.angle.id}, topicId: meta-${plan.angle.id}. `;
+  }
 
   if (writingMode === "benchmark" && strategy.outline) {
     instructions +=
@@ -79,10 +89,18 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
   loadEnvFile();
 
   const state = loadState();
-  const contentProfile = existing?.contentProfile ?? pickContentProfile(state);
-  const topic = pickTopic(state, { contentProfile });
+  const plan = pickContentPlan(state, {
+    contentProfile: existing?.contentProfile,
+    forceMeta: options.forceMeta,
+    forceProduct: options.forceProduct,
+  });
+  const contentProfile = plan.contentProfile ?? pickContentProfile(state);
+  const topic = plan.topic;
+  console.log(`Content plan: ${describeContentPlanMix(state)}`);
   const forcedMode =
-    options.forceWritingMode ?? consumeForceWritingMode() ?? undefined;
+    options.forceWritingMode ??
+    consumeForceWritingMode() ??
+    (plan.kind === "meta" ? "benchmark" : undefined);
   const strategy = await prepareDraftStrategy(state, topic, {
     contentProfile,
     writingMode: forcedMode,
@@ -109,6 +127,9 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
     fallbackReason: strategy.fallbackReason,
     season,
     seasonalEvents: events.map((e) => e.label),
+    contentPlan: plan.kind,
+    contentAngle: plan.angle?.id ?? null,
+    slugHint: plan.slugHint ?? null,
     topic: {
       id: topic.id,
       category: topic.category,
@@ -116,9 +137,11 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
       imageQuery: topic.imageQuery,
       liveData: topic.liveData,
       seasons: topic.seasons,
+      anchorTopicIds: topic.anchorTopicIds ?? null,
+      isMetaAngle: Boolean(topic.isMetaAngle),
     },
     templatePath,
-    instructions: buildInstructions(strategy, season, events),
+    instructions: buildInstructions(strategy, season, events, plan),
     lastError: null,
   };
 }
@@ -148,7 +171,7 @@ export async function queueCursorDraftReplenish(publishedSlug) {
   writeRequest(request);
 
   console.log(
-    `Cursor draft replenish queued: ${needed} needed, topic=${request.topic.id}, ` +
+    `Cursor draft replenish queued: ${needed} needed, plan=${request.contentPlan ?? "product"}, topic=${request.topic.id}, ` +
       `profile=${request.contentProfile}, mode=${request.writingMode}, season=${request.season}` +
       (request.fallbackReason ? ` (fallback: ${request.fallbackReason})` : ""),
   );

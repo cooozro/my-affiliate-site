@@ -8,6 +8,7 @@ tags:
   - TWS
   - 오디오 리뷰
 contentProfile: buying-guide
+topicId: 2026-budget-wireless-earbuds-top5
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-wireless-earbuds-top5/wireless-earbuds-true-wireless-earphones-cover.jpg

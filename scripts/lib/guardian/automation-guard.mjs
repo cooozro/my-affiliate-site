@@ -12,6 +12,7 @@ import { listPublishedSlugs } from "../content-quality.mjs";
 import { topicHasAnyPost } from "../content-roadmap.mjs";
 import { getTopicFormatCoverage } from "../topic-coverage.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
+import { isMetaTopicId } from "../content-angles.mjs";
 
 const AUTOMATION_SLUG_EXCLUDE = new Set([
   "welcome",
@@ -110,6 +111,7 @@ export function removeReplenishSlugArtifacts(slug, root = process.cwd()) {
 export function isRequestTopicStale(request, root = process.cwd()) {
   const topicId = request?.topic?.id;
   if (!topicId || typeof topicId !== "string") return false;
+  if (isMetaTopicId(topicId) || request.contentPlan === "meta") return false;
   const coverage = getTopicFormatCoverage(root);
   return topicHasAnyPost(topicId, coverage);
 }

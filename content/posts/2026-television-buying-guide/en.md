@@ -25,7 +25,7 @@ coverImageAlt: smart TV in a living room setup for summer sports and streaming
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
 updatedAt: '2026-07-10T11:32:02.385Z'
-publishedAt: '2026-07-10T20:32:00.000Z'
+publishedAt: '2026-07-10T11:32:02.328Z'
 ---
 ## Editorial Overview
 

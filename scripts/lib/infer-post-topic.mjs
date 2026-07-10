@@ -185,6 +185,14 @@ function topicMetaFromId(id) {
  * @param {{ title?: string, tags?: string[], topicId?: string, topicCluster?: string }} [data]
  */
 export function inferPostTopic(slug, data = {}) {
+  if (data.contentAngle) {
+    return {
+      id: `meta-${data.contentAngle}`,
+      category: data.category ?? "cross-cutting",
+      cluster: data.topicCluster,
+    };
+  }
+
   if (data.topicId) {
     return {
       id: data.topicId,
