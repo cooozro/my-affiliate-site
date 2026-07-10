@@ -174,7 +174,7 @@ export function repairPostLocale(root, slug, locale) {
     );
   }
 
-  const gfmTilde = repairGfmTildeRanges(body);
+  const gfmTilde = repairGfmTildeRanges(body, { locale });
   if (gfmTilde.changed) {
     body = gfmTilde.text;
     repairs.push(

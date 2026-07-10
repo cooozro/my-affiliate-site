@@ -64,11 +64,11 @@ publishedAt: '2026-07-08T02:58:57.557Z'
 
 | 순위 | 모델 | 가격(USD) | 디스플레이 | RAM/저장 | 배터리 | 스토어 | 리뷰 | TBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Samsung Galaxy Tab A9+** | ~$219 | 11" 90Hz LCD | 4GB/64GB | 7,040mAh | Google Play | 4.5 | **9.0** |
-| 2 | **Lenovo Tab M11** | ~$199 | 11" 90Hz LCD | 4GB/128GB | 7,040mAh | Google Play | 4.4 | **8.8** |
-| 3 | **Amazon Fire Max 11** | ~$229 | 11" 60Hz LCD | 4GB/64GB | 7,550mAh | Amazon | 4.3 | **8.5** |
-| 4 | **TCL Tab 10 NXTPAPER** | ~$179 | 10.4" NXTPAPER | 4GB/64GB | 8,000mAh | Google Play | 4.2 | **8.4** |
-| 5 | **Samsung Galaxy Tab A8** | ~$159 | 10.5" 60Hz LCD | 3GB/32GB | 7,040mAh | Google Play | 4.3 | **8.0** |
+| 1 | **Samsung Galaxy Tab A9+** | 약 $219 | 11" 90Hz LCD | 4GB/64GB | 7,040mAh | Google Play | 4.5 | **9.0** |
+| 2 | **Lenovo Tab M11** | 약 $199 | 11" 90Hz LCD | 4GB/128GB | 7,040mAh | Google Play | 4.4 | **8.8** |
+| 3 | **Amazon Fire Max 11** | 약 $229 | 11" 60Hz LCD | 4GB/64GB | 7,550mAh | Amazon | 4.3 | **8.5** |
+| 4 | **TCL Tab 10 NXTPAPER** | 약 $179 | 10.4" NXTPAPER | 4GB/64GB | 8,000mAh | Google Play | 4.2 | **8.4** |
+| 5 | **Samsung Galaxy Tab A8** | 약 $159 | 10.5" 60Hz LCD | 3GB/32GB | 7,040mAh | Google Play | 4.3 | **8.0** |
 
 ---
 

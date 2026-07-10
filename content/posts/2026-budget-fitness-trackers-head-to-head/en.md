@@ -42,7 +42,7 @@ publishedAt: '2026-07-07T04:35:40.875Z'
 
 When school break shifts sleep schedules and outdoor runs move to dawn or indoor treadmills, a sub-$100 band is often the first wearable people buy. The myth we hear most: **any tracker with a green LED is equally accurate**. In practice, optical heart rate drifts when wrist tension changes in humidity, sleep staging algorithms disagree on REM boundaries, and some apps lock advanced metrics behind subscriptions.
 
-This head-to-head compares **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses ~{{usd_krw_rate}} KRW per USD (~{{krw:49.99}} for a ~$50 band tier).
+This head-to-head compares **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses {{usd_krw_rate}} KRW per USD ({{krw:49.99}} for a $50 band tier).
 
 ---
 
@@ -66,9 +66,9 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 | Model | MSRP (USD) | Display | GPS | Sleep stages | SpO2 | Battery (typical) | App |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Fitbit Inspire 3** | ~$99 | Color AMOLED | Phone-assisted | Yes (Premium insights) | Yes | ~6–7 days | Fitbit / Google |
-| **Xiaomi Smart Band 9** | ~$49 | AMOLED 1200 nits | Phone-assisted | Yes (basic) | Yes | ~16–21 days | Mi Fitness |
-| **Amazfit Band 7** | ~$49 | AMOLED | Phone-assisted | Yes | Yes | ~18 days | Zepp |
+| **Fitbit Inspire 3** | about $99 | Color AMOLED | Phone-assisted | Yes (Premium insights) | Yes | about 6–7 days | Fitbit / Google |
+| **Xiaomi Smart Band 9** | about $49 | AMOLED 1200 nits | Phone-assisted | Yes (basic) | Yes | about 16–21 days | Mi Fitness |
+| **Amazfit Band 7** | about $49 | AMOLED | Phone-assisted | Yes | Yes | about 18 days | Zepp |
 
 ---
 
@@ -115,7 +115,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 | Sleep consistency during irregular summer break hours | **Fitbit Inspire 3** | Clearer nightly staging narrative; mature wind-down prompts |
 | Two-week vacation without a charger | **Xiaomi Smart Band 9** | Longest typical battery in this trio |
 | Gym treadmill + many sport profiles | **Amazfit Band 7** | Broad workout list in Zepp; readable AMOLED |
-| Lowest upfront cost under ~{{krw:49.99}} | **Xiaomi Smart Band 9** | Frequent street pricing near $40–50 |
+| Lowest upfront cost under {{krw:49.99}} | **Xiaomi Smart Band 9** | Frequent street pricing near $40–50 |
 | iPhone user who hates subscriptions | **Xiaomi Smart Band 9** | Fewer paid gates than Fitbit Premium path |
 | Humid outdoor walks (HR stability) | **Fitbit Inspire 3** | Generally steadier optical HR when worn snug |
 

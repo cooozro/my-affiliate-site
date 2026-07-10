@@ -65,7 +65,7 @@ We compute a **Summer Humidity Index (SHI)** per model: appropriate DOE pint cap
 | **Tank capacity (L)** | Internal bucket before auto-shutoff | Larger tanks mean fewer midnight dumps; continuous drain is better for basements |
 | **Continuous drain / pump** | Hose gravity drain or built-in pump to sink | Essential for vacation weeks and unfinished basements |
 | **Rated wattage (W)** | Nameplate draw when compressor runs | 500–700 W typical; multiply by runtime hours for daily kWh |
-| **Sleep / low fan dB** | Manufacturer noise at lowest setting | Under ~48 dB suits bedroom adjacency; above ~52 dB feels like a window AC on low |
+| **Sleep / low fan dB** | Manufacturer noise at lowest setting | Under about 48 dB suits bedroom adjacency; above about 52 dB feels like a window AC on low |
 
 ---
 
@@ -75,11 +75,11 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 | Rank | Model | Price (USD) | DOE pints/day | Tank | Drain | Rated W | Low fan dB | Daily cost (est.) | Review | SHI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Frigidaire Gallery FFAP5033W1** | $279 | 35 | 16 pt (7.6 L) | Pump + hose | 530 | 47 | ~$0.64 | 4.6 | **9.1** |
-| 2 | **Midea MAD50S1QWT** | $249 | 35 | 16 pt (7.6 L) | Hose + pump opt. | 510 | 46 | ~$0.61 | 4.5 | **9.0** |
-| 3 | **hOmeLabs HME020031N** | $199 | 35 | 14 pt (6.6 L) | Hose | 520 | 50 | ~$0.62 | 4.4 | **8.7** |
-| 4 | **Honeywell TP50WKN** | $229 | 32 | 14 pt (6.6 L) | Hose | 540 | 51 | ~$0.65 | 4.3 | **8.4** |
-| 5 | **GoveeLife Smart 50 Pint** | $219 | 34 | 15 pt (7.1 L) | Hose | 500 | 48 | ~$0.60 | 4.2 | **8.3** |
+| 1 | **Frigidaire Gallery FFAP5033W1** | $279 | 35 | 16 pt (7.6 L) | Pump + hose | 530 | 47 | about $0.64 | 4.6 | **9.1** |
+| 2 | **Midea MAD50S1QWT** | $249 | 35 | 16 pt (7.6 L) | Hose + pump opt. | 510 | 46 | about $0.61 | 4.5 | **9.0** |
+| 3 | **hOmeLabs HME020031N** | $199 | 35 | 14 pt (6.6 L) | Hose | 520 | 50 | about $0.62 | 4.4 | **8.7** |
+| 4 | **Honeywell TP50WKN** | $229 | 32 | 14 pt (6.6 L) | Hose | 540 | 51 | about $0.65 | 4.3 | **8.4** |
+| 5 | **GoveeLife Smart 50 Pint** | $219 | 34 | 15 pt (7.1 L) | Hose | 500 | 48 | about $0.60 | 4.2 | **8.3** |
 
 ---
 

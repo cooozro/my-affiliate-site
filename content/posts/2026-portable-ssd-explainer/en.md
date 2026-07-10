@@ -117,10 +117,10 @@ Speed and TBW only matter inside a workflow that survives lost bags and fried po
 
 | Interface / tier | Typical sustained seq. read | Best for | Weak spots | Summer travel note |
 | --- | --- | --- | --- | --- |
-| **USB 3.2 Gen 1 (5 Gbps)** | ~400–550 MB/s | Documents, light photo backup | Slow 4K dumps, old cables | OK for short trips with small cards |
-| **USB 3.2 Gen 2 (10 Gbps) NVMe** | ~900–1,050 MB/s | Nightly camera offloads, laptop clones | Needs 10 Gbps port + cable | Sweet spot for vacation editing laptops |
-| **USB 3.2 Gen 2x2 (20 Gbps)** | ~1,500–1,800 MB/s | Large library moves between desktops | Fewer compatible ports | Overkill for most travel kits |
-| **USB4 / TB3 (40 Gbps)** | ~2,500+ MB/s peak | Pro video editors, multi-TB migrations | Cost, heat, cable matching | Use desk setup; not hot-car storage |
+| **USB 3.2 Gen 1 (5 Gbps)** | about 400–550 MB/s | Documents, light photo backup | Slow 4K dumps, old cables | OK for short trips with small cards |
+| **USB 3.2 Gen 2 (10 Gbps) NVMe** | about 900–1,050 MB/s | Nightly camera offloads, laptop clones | Needs 10 Gbps port + cable | Sweet spot for vacation editing laptops |
+| **USB 3.2 Gen 2x2 (20 Gbps)** | about 1,500–1,800 MB/s | Large library moves between desktops | Fewer compatible ports | Overkill for most travel kits |
+| **USB4 / TB3 (40 Gbps)** | about 2,500+ MB/s peak | Pro video editors, multi-TB migrations | Cost, heat, cable matching | Use desk setup; not hot-car storage |
 | **QLC archive drive** | Gen-dependent | Cheap cold storage | Lower TBW, slower sustained writes | Store duplicates, not daily scratch |
 | **TLC performance drive** | Gen-dependent | Incremental backups, active projects | Price per TB | Pair with cloud offsite before move day |
 

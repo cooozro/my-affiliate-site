@@ -68,7 +68,7 @@ We compute a **Summer Airflow Index (SAI)** per model: higher effective CFM for 
 | Term | What it means | Summer note |
 | --- | --- | --- |
 | **CFM (high speed)** | Volume of air moved per minute at max setting | Higher CFM helps whole-room mixing; desk fans trade CFM for aim |
-| **dB(A) at low speed** | Manufacturer noise at sleep-friendly setting | Under ~45 dB suits bed-adjacent use; above ~52 dB feels like HVAC on low |
+| **dB(A) at low speed** | Manufacturer noise at sleep-friendly setting | Under about 45 dB suits bed-adjacent use; above about 52 dB feels like HVAC on low |
 | **Rated wattage (W)** | Nameplate draw at listed speed | Typical fan: 35–75 W; window AC often 500–1,200 W when cooling |
 | **Oscillation / tilt** | Sweep angle and head adjust | Fixed aim circulators (Vornado-style) need placement; oscillating towers cover width |
 | **Air circulator vs fan** | Focused jet vs broad sweep | Circulators mix room air; standard fans push a local breeze |
@@ -81,21 +81,21 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 | Rank | Model | Price (USD) | CFM (high) | Low speed dB | Rated W | Oscillation | Daily cost (est.) | Review | SAI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Vornado 660** | $99 | 584 | 39 | 58 | Fixed aim | ~$0.07 | 4.7 | **9.2** |
-| 2 | **Rowenta VU5670 Turbo Silence** | $129 | 410 | 35 | 55 | 90° | ~$0.07 | 4.5 | **9.0** |
-| 3 | **Honeywell HT-900 TurboForce** | $18 | 185 | 41 | 35 | 90° tilt | ~$0.04 | 4.4 | **8.8** |
-| 4 | **Lasko Wind Curve T42951** | $65 | 336 | 48 | 45 | 90° sweep | ~$0.05 | 4.3 | **8.5** |
-| 5 | **Dreo Nomad One DR-HTF007S** | $79 | 348 | 44 | 42 | 90° + app | ~$0.05 | 4.4 | **8.4** |
+| 1 | **Vornado 660** | $99 | 584 | 39 | 58 | Fixed aim | about $0.07 | 4.7 | **9.2** |
+| 2 | **Rowenta VU5670 Turbo Silence** | $129 | 410 | 35 | 55 | 90° | about $0.07 | 4.5 | **9.0** |
+| 3 | **Honeywell HT-900 TurboForce** | $18 | 185 | 41 | 35 | 90° tilt | about $0.04 | 4.4 | **8.8** |
+| 4 | **Lasko Wind Curve T42951** | $65 | 336 | 48 | 45 | 90° sweep | about $0.05 | 4.3 | **8.5** |
+| 5 | **Dreo Nomad One DR-HTF007S** | $79 | 348 | 44 | 42 | 90° + app | about $0.05 | 4.4 | **8.4** |
 
 ---
 
 ## 1. Vornado 660 Whole Room Air Circulator
 
-**Strengths:** Highest CFM in the group (584 claimed at high), deep pitch blade moves air up to ~30 m per Vornado spec, 39 dB low setting among strong circulators, 5-year limited warranty, stable base for WFH desk edge placement.
+**Strengths:** Highest CFM in the group (584 claimed at high), deep pitch blade moves air up to about 30 m per Vornado spec, 39 dB low setting among strong circulators, 5-year limited warranty, stable base for WFH desk edge placement.
 
 **Weaknesses:** No oscillation — placement and aim matter; 66 dB at high speed is too loud for sleep; premium price vs basic desk fans; aesthetic is industrial, not living-room subtle.
 
-**Analysis takeaway:** For most buyers, this translates to **pushing AC-cooled air through a closed bedroom door zone** — run the window unit on a timer, then let the 660 mix stratified layers for two hours at ~7 cents/day instead of leaving the compressor on all night.
+**Analysis takeaway:** For most buyers, this translates to **pushing AC-cooled air through a closed bedroom door zone** — run the window unit on a timer, then let the 660 mix stratified layers for two hours at about 7 cents/day instead of leaving the compressor on all night.
 
 **Verdict:** Best **whole-room air mixing and AC assist** pick when you can aim the jet down a hallway or across the bed diagonal.
 
@@ -115,7 +115,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## 3. Honeywell HT-900 TurboForce
 
-**Strengths:** Lowest upfront cost, 35 W draw yields ~4 cents/day in our model, compact 11-inch footprint for nightstands and dorm bunks, wall-mount option frees desk space, surprisingly strong local breeze for the size.
+**Strengths:** Lowest upfront cost, 35 W draw yields about 4 cents/day in our model, compact 11-inch footprint for nightstands and dorm bunks, wall-mount option frees desk space, surprisingly strong local breeze for the size.
 
 **Weaknesses:** 185 CFM will not mix a whole studio — it cools **you**, not the room; no remote; plastic housing can resonate at speed 3; cord is short for center-room placement.
 
@@ -127,7 +127,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## 4. Lasko Wind Curve T42951
 
-**Strengths:** 42-inch tower fits tight corners, 336 CFM class for the footprint, remote and 7-hour timer, widespread retail availability during heat-season stock crunches, ~$0.05/day estimated draw.
+**Strengths:** 42-inch tower fits tight corners, 336 CFM class for the footprint, remote and 7-hour timer, widespread retail availability during heat-season stock crunches, about $0.05/day estimated draw.
 
 **Weaknesses:** 48 dB low speed is audible in silent bedrooms; ionizer button adds confusion (often unused); filter grille collects dust — needs monthly wipe; not as focused as Vornado for long-throw mixing.
 

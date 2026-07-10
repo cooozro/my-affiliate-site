@@ -139,7 +139,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ## 5. Haier QJS15HYRFS Counter-Depth Four-Door Refrigerator
 
-**Strengths:** Counter-depth 28-inch width aligns flush with standard 24-inch cabinets for clean sightlines from the sofa, 14.5 cu ft total fits 1–2 person summer households without empty cold zones, lowest kWh here at 479 kWh/year (~$72 annual at reference rate), 37 dB class claim suits open-plan studios, dual freezer drawers separate ice cream from frozen meals.
+**Strengths:** Counter-depth 28-inch width aligns flush with standard 24-inch cabinets for clean sightlines from the sofa, 14.5 cu ft total fits 1–2 person summer households without empty cold zones, lowest kWh here at 479 kWh/year (about $72 annual at reference rate), 37 dB class claim suits open-plan studios, dual freezer drawers separate ice cream from frozen meals.
 
 **Weaknesses:** Not Energy Star certified per Haier Energy Guide listings; no factory ice maker on base SKU — field-ready only; 9.4 cu ft fresh zone cannot host large-party platters; four-door seals need periodic alignment checks; smaller US service footprint vs LG or GE.
 
@@ -190,7 +190,7 @@ Pair a **dedicated kimchi unit** for fermentation zones with a separate main fri
 1. **Size cubic feet to people, not showroom walls** — Rule of thumb: plan **4–6 cu ft fresh food per adult** for weekly shopping; a 1–2 person home often wastes electricity above 20 cu ft unless you batch-cook. Haier QJS15HYRFS exists because oversized units run compressors for empty air.
 2. **Read the Energy Guide, not the badge alone** — Energy Star helps, but compare **kWh/year** directly. A non-star 479 kWh counter-depth can beat an old 800 kWh top freezer even when the star label is missing.
 3. **Map noise to your floor plan** — If the dining table sits within 4 m of the fridge, prioritize 38 dB class claims (LG, Haier) over the loudest 41 dB Gallery tier; add cabinet panels or partial walls before blaming the motor.
-4. **Confirm depth: standard vs counter** — Standard-depth French doors extend ~34–36 inches and swallow island walkways; counter-depth like Haier QJS15HYRFS trades ~10 cu ft for sightlines — measure twice including door swing into a summer-screened patio door.
+4. **Confirm depth: standard vs counter** — Standard-depth French doors extend about 34–36 inches and swallow island walkways; counter-depth like Haier QJS15HYRFS trades about 10 cu ft for sightlines — measure twice including door swing into a summer-screened patio door.
 5. **Separate kimchi storage from main-fridge math (KR buyers)** — A kimchi specialty unit handles fermentation zones; do not subtract its cubic feet from the fresh-food target for milk, produce, and drinks. Pair formats instead of one oversized do-everything box.
 
 ---

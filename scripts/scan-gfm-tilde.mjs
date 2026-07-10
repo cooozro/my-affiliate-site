@@ -58,10 +58,10 @@ for (const slug of fs.readdirSync(POSTS)) {
     }
 
     if (repair) {
-      const { text, changed, count } = repairGfmTildeRanges(content);
+      const { text, changed, count } = repairGfmTildeRanges(content, { locale });
       if (changed) {
         fs.writeFileSync(file, matter.stringify(text, data));
-        console.log(`Repaired ${slug}/${locale}.md (${count} tilde ranges)`);
+        console.log(`Repaired ${slug}/${locale}.md (${count} tilde patterns)`);
       }
     }
   }

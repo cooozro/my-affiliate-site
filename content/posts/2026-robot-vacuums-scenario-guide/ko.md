@@ -120,7 +120,7 @@ eufy는 X10 Pro Omni에 **8,000 Pa 흡입**과 올인원 스테이션(패드 세
 | 요소 | eufy X10 Pro Omni | Shark Matrix Plus 2-in-1 |
 | --- | --- | --- |
 | 패드 관리 | 도크 세척·건조 | 사용자 건조 |
-| 공시 흡입 | 8,000 Pa | ~5,000 Pa(샤크 마케팅) |
+| 공시 흡입 | 8,000 Pa | 약 5,000 Pa(샤크 마케팅) |
 | 가격대 | 프리미엄 | 중가 |
 | 습기 시즌 | 도크 사이클 시 낮음 | 패드 교체 잦음 |
 
@@ -131,7 +131,7 @@ eufy는 X10 Pro Omni에 **8,000 Pa 흡입**과 올인원 스테이션(패드 세
 **이 상황에서 중요한 점**
 
 - **구역 청소** — 아이·재택 장비 배치가 매일 바뀌면 공장 초기화 없이 맵 편집이 되어야 합니다.
-- **야간 소음** — AC fan과 겹치는 late run은 ~65 dB 이하가 현실적.
+- **야간 소음** — AC fan과 겹치는 late run은 약 65 dB 이하가 현실적.
 - **기능 대비 가격** — 옴니 스테이션 없이도 매핑을 원하는 경우.
 
 **추천: Shark Matrix Plus 2-in-1 RV2610WA** (약 $449 / ~{{krw:449}})
@@ -145,7 +145,7 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 | 매핑 | LiDAR, 존 편집 | 스마트 맵 + vision |
 | 도크 | 자가 비움, 패드 세척 없음 | Clean Base |
 | clutter 강점 | 존 + 가격 | 장애물 알림 |
-| 소음(대표 스펙) | ~60 dB max | ~60 dB max |
+| 소음(대표 스펙) | 약 60 dB max | 약 60 dB max |
 
 ---
 
@@ -155,10 +155,10 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 
 | 시나리오 | 추천 | 가격(USD) | 매핑 | 공시 흡입 | 물걸레 | 자동 비움 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 좁은 원룸 | **Roborock Q7 Max+** | ~$449 | LiDAR | 5,500 Pa | 추가 패드 | 예 |
-| 반려 털 | **Roomba Combo j5+** | ~$499 | Vision+맵 | Pa 미표기(iRobot) | 라이트 콤보 | 예 |
-| 습한 여름 mop | **eufy X10 Pro Omni** | ~$799 | LiDAR | 8,000 Pa | 세척·건조 도크 | 예 |
-| clutter 투룸 | **Shark Matrix Plus 2-in-1** | ~$449 | LiDAR | ~5,000 Pa | Sonic mop | 예 |
+| 좁은 원룸 | **Roborock Q7 Max+** | 약 $449 | LiDAR | 5,500 Pa | 추가 패드 | 예 |
+| 반려 털 | **Roomba Combo j5+** | 약 $499 | Vision+맵 | Pa 미표기(iRobot) | 라이트 콤보 | 예 |
+| 습한 여름 mop | **eufy X10 Pro Omni** | 약 $799 | LiDAR | 8,000 Pa | 세척·건조 도크 | 예 |
+| clutter 투룸 | **Shark Matrix Plus 2-in-1** | 약 $449 | LiDAR | 약 5,000 Pa | Sonic mop | 예 |
 
 ---
 

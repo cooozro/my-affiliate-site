@@ -70,7 +70,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 - **Thermals and fan noise** — sealed rooms with window AC can push console exhaust heat back toward the couch.
 - **HDMI 2.1 features** — 120 Hz and VRR help action titles during long break-week sessions.
 
-**Recommended pick: Xbox Series X** (~$499 / ~{{krw:499}})
+**Recommended pick: Xbox Series X** (about $499 / ~{{krw:499}})
 
 Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and support for 4K up to 120 fps with VRR on compatible TVs. The Series X is the straightforward pick when the primary use is a 65-inch living-room display, siblings take turns on the same profile, and you want the largest Game Pass catalog on the most capable Xbox hardware.
 
@@ -93,7 +93,7 @@ Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and s
 - **M.2 SSD expansion** — summer sale season fills internal storage fast; Sony publishes a compatibility list for approved drives.
 - **Disc resale** — physical editions still matter if you rotate games during a short break window.
 
-**Recommended pick: PlayStation 5 Slim — Disc Edition** (~$499 / ~{{krw:499}})
+**Recommended pick: PlayStation 5 Slim — Disc Edition** (about $499 / ~{{krw:499}})
 
 Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 slot for certified NVMe expansion. The disc edition plays UHD Blu-ray and lets you buy, lend, or resell physical copies of flagship exclusives. If your household debates *which* story-driven game to finish before school resumes, PlayStation’s first-party lineup is still the anchor.
 
@@ -104,7 +104,7 @@ Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 s
 | Storage | 1 TB, M.2 expandable | 1 TB, M.2 expandable |
 | Disc / resale | Yes | No |
 | Exclusive focus | Sony first-party | Same library, digital-only purchases |
-| Reference price | ~$499 | ~$449 |
+| Reference price | about $499 | about $449 |
 
 ---
 
@@ -116,7 +116,7 @@ Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 s
 - **Digital-only footprint** — no disc drive means smaller hardware cost but no used-game market.
 - **Storage pressure** — 512 GB fills quickly if you install several Game Pass titles at once.
 
-**Recommended pick: Xbox Series S** (~$299 / ~{{krw:299}})
+**Recommended pick: Xbox Series S** (about $299 / ~{{krw:299}})
 
 The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 GB internal storage and no optical drive. Pair it with Game Pass Ultimate (listed around **$29.99/month / ~{{krw:29.99}}** on Microsoft’s US storefront as of {{today_locale}}) and you rotate dozens of titles during break without buying each release outright. Best when the TV is 55 inches or smaller, or when you prioritize subscription value over native 4K pixels.
 
@@ -124,7 +124,7 @@ The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 G
 
 | Factor | Xbox Series S + Game Pass | PS5 Digital + PS Plus Extra |
 | --- | --- | --- |
-| Hardware entry | ~$299 | ~$449 |
+| Hardware entry | about $299 | about $449 |
 | Subscription model | Game Pass catalog rotation | Extra/Premium game catalogs |
 | 4K honesty | Upscaled | Native 4K capable |
 | Best for | Try-many-games households | PlayStation exclusives without discs |
@@ -139,7 +139,7 @@ The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 G
 - **Local multiplayer on one screen** — siblings can share the handheld in tabletop mode.
 - **Storage microSD** — eShop sales stack up; internal 64 GB is not enough alone.
 
-**Recommended pick: Nintendo Switch OLED** (~$349 / ~{{krw:349}})
+**Recommended pick: Nintendo Switch OLED** (about $349 / ~{{krw:349}})
 
 Nintendo specifies a **7-inch OLED panel**, 64 GB internal storage (expandable via microSD), and dock output up to **1080p** on a TV — not 4K, but the point is portability when the main display is busy. Tabletop mode with Joy-Con works well for younger players during afternoon heat when everyone stays indoors. First-party titles like *Mario Kart* and *Zelda* remain break-season staples.
 
@@ -160,10 +160,10 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 | Scenario | Recommended pick | Price (USD) | Storage | Max TV output | Subscription angle |
 | --- | --- | --- | --- | --- | --- |
-| 4K couch marathon | **Xbox Series X** | ~$499 | 1 TB | 4K up to 120 Hz | Game Pass Ultimate |
-| Exclusives + SSD | **PS5 Slim (Disc)** | ~$499 | 1 TB + M.2 | 4K up to 120 Hz | PS Plus tiers |
-| Budget subscription | **Xbox Series S** | ~$299 | 512 GB | 1440p → 4K upscale | Game Pass Ultimate |
-| Portable bedroom | **Switch OLED** | ~$349 | 64 GB + microSD | 1080p docked | Nintendo Switch Online |
+| 4K couch marathon | **Xbox Series X** | about $499 | 1 TB | 4K up to 120 Hz | Game Pass Ultimate |
+| Exclusives + SSD | **PS5 Slim (Disc)** | about $499 | 1 TB + M.2 | 4K up to 120 Hz | PS Plus tiers |
+| Budget subscription | **Xbox Series S** | about $299 | 512 GB | 1440p → 4K upscale | Game Pass Ultimate |
+| Portable bedroom | **Switch OLED** | about $349 | 64 GB + microSD | 1080p docked | Nintendo Switch Online |
 
 ---
 

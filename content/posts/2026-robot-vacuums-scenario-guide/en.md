@@ -69,7 +69,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 - **LiDAR mapping** — bump-and-turn robots miss corners in L-shaped studios.
 - **Cliff and threshold handling** — bathroom lips and balcony tracks should not trap the unit.
 
-**Recommended pick: Roborock Q7 Max+** (~$449 / ~{{krw:449}} with auto-empty dock)
+**Recommended pick: Roborock Q7 Max+** (about $449 / ~{{krw:449}} with auto-empty dock)
 
 Roborock publishes **5,500 Pa max suction** and PreciSense LiDAR mapping on the Q7 Max line. The dock auto-empties into a bag rated for weeks in a solo studio, which matters when you are away during summer trips. Multi-floor maps help if your studio has a raised sleeping nook.
 
@@ -92,7 +92,7 @@ Roborock publishes **5,500 Pa max suction** and PreciSense LiDAR mapping on the 
 - **Obstacle recognition** — summer means more shoes, leashes, and pet bowls on the floor.
 - **Auto-empty frequency** — pet households fill bins in 1–2 runs without a dock.
 
-**Recommended pick: iRobot Roomba Combo j5+** (~$499 / ~{{krw:499}} with Clean Base)
+**Recommended pick: iRobot Roomba Combo j5+** (about $499 / ~{{krw:499}} with Clean Base)
 
 iRobot rates the j5 line for **pet hair pickup** with a multi-surface rubber brush and PrecisionVision obstacle avoidance (documented to steer around cords and pet waste alerts in app release notes). The j5+ bundle adds auto-empty — critical when fur clumps during shedding season overlapping summer AC months.
 
@@ -115,7 +115,7 @@ iRobot rates the j5 line for **pet hair pickup** with a multi-surface rubber bru
 - **Dock wash/dry cycle** — stagnant mop pads smell within days above 28 °C indoor dew point.
 - **Water tank access** — tight kitchens make refilling awkward if the dock is wedged in a corner.
 
-**Recommended pick: eufy X10 Pro Omni** (~$799 / ~{{krw:799}})
+**Recommended pick: eufy X10 Pro Omni** (about $799 / ~{{krw:799}})
 
 eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one station that washes and dries mop pads — the maintenance task renters forget until smell appears. Mop lift is spec-listed for crossing carpets up to common pile heights. Pair with a dehumidifier strategy in the same room if you mop daily during monsoon-heavy weeks.
 
@@ -124,7 +124,7 @@ eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one stati
 | Factor | eufy X10 Pro Omni | Shark Matrix Plus 2-in-1 |
 | --- | --- | --- |
 | Pad care | Wash + dry in dock | User removes and air-dries |
-| Rated suction | 8,000 Pa | ~5,000 Pa (Shark marketing) |
+| Rated suction | 8,000 Pa | about 5,000 Pa (Shark marketing) |
 | Price tier | Premium | Mid |
 | Humid-season risk | Lower if dock cycle runs | Higher without daily pad swap |
 
@@ -135,10 +135,10 @@ eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one stati
 **What matters here**
 
 - **Zone cleaning** — kids and WFH gear shift daily; remapping should not require factory reset.
-- **Noise at night** — late runs while AC fan is already audible should stay under ~65 dB.
+- **Noise at night** — late runs while AC fan is already audible should stay under about 65 dB.
 - **Value per feature** — you may want mapping without paying for a full omni station.
 
-**Recommended pick: Shark Matrix Plus 2-in-1 RV2610WA** (~$449 / ~{{krw:449}})
+**Recommended pick: Shark Matrix Plus 2-in-1 RV2610WA** (about $449 / ~{{krw:449}})
 
 Shark’s Matrix line advertises **LiDAR mapping with room zones**, 60-day self-empty on the base bundle, and a 2-in-1 vacuum-mop pad for hard floors. It is the pragmatic pick when furniture layout changes weekly but you still want app-drawn no-go lines around play mats and desk chairs.
 
@@ -149,7 +149,7 @@ Shark’s Matrix line advertises **LiDAR mapping with room zones**, 60-day self-
 | Mapping | LiDAR, zone edit | Smart maps + vision |
 | Dock | Self-empty, no pad wash | Clean Base |
 | Best clutter skill | Zones + price | Obstacle alerts |
-| Noise (typical spec) | ~60 dB max | ~60 dB max |
+| Noise (typical spec) | about 60 dB max | about 60 dB max |
 
 ---
 
@@ -159,10 +159,10 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 | Scenario | Recommended pick | Price (USD) | Mapping | Rated suction | Mop | Auto-empty |
 | --- | --- | --- | --- | --- | --- | --- |
-| Compact studio | **Roborock Q7 Max+** | ~$449 | LiDAR | 5,500 Pa | Add-on pad | Yes |
-| Pet hair floors | **Roomba Combo j5+** | ~$499 | Vision + map | Not Pa-rated (iRobot) | Light combo | Yes |
-| Humid-summer mop | **eufy X10 Pro Omni** | ~$799 | LiDAR | 8,000 Pa | Wash/dry dock | Yes |
-| Cluttered 1BR | **Shark Matrix Plus 2-in-1** | ~$449 | LiDAR | ~5,000 Pa | Sonic mop | Yes |
+| Compact studio | **Roborock Q7 Max+** | about $449 | LiDAR | 5,500 Pa | Add-on pad | Yes |
+| Pet hair floors | **Roomba Combo j5+** | about $499 | Vision + map | Not Pa-rated (iRobot) | Light combo | Yes |
+| Humid-summer mop | **eufy X10 Pro Omni** | about $799 | LiDAR | 8,000 Pa | Wash/dry dock | Yes |
+| Cluttered 1BR | **Shark Matrix Plus 2-in-1** | about $449 | LiDAR | about 5,000 Pa | Sonic mop | Yes |
 
 ---
 

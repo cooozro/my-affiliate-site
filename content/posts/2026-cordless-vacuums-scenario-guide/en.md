@@ -66,7 +66,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 - **Fine-particle detection** — summer indoor dust includes skin flakes, textile fibers, and outdoor pollen that settled before you shut the windows.
 - **Sealed bin emptying** — dumping a dry bin indoors without a puff of dust defeats the purpose on allergy-heavy weeks.
 
-**Recommended pick: Dyson V15 Detect** (~$749 MSRP, often discounted)
+**Recommended pick: Dyson V15 Detect** (about $749 MSRP, often discounted)
 
 Dyson documents **up to 240 AW suction** on the V15 Detect with a piezo sensor that counts and sizes particles, adjusting power automatically. The whole-machine HEPA filtration is rated to capture 99.99% of particles down to 0.3 microns per Dyson test methodology — relevant when your AC fan runs eight or more hours daily and never pulls fresh outdoor air. The Laser Slim Fluffy cleaner head highlights dust on hard floors that overhead light misses in dim, cooled rooms.
 
@@ -77,7 +77,7 @@ Dyson documents **up to 240 AW suction** on the V15 Detect with a piezo sensor t
 | Rated suction | Up to 240 AW | Up to 210 W (Samsung spec) |
 | Filtration | Whole-machine HEPA | Multi-layer fine dust filter |
 | Dust feedback | LCD particle count | LED bar on select heads |
-| Weight (body) | ~3.1 kg / 6.8 lb | ~2.6 kg / 5.7 lb |
+| Weight (body) | about 3.1 kg / 6.8 lb | about 2.6 kg / 5.7 lb |
 | Summer note | Laser head shows AC-settled dust | Easier one-hand carry upstairs |
 
 ---
@@ -90,7 +90,7 @@ Dyson documents **up to 240 AW suction** on the V15 Detect with a piezo sensor t
 - **Wall dock or stand** — a charged unit ready by the suitcase beats hunting for a plug after a long drive home.
 - **Crevice and mattress tools** — hotel sand in sofa seams and car seat crumbs should not require a second appliance.
 
-**Recommended pick: Shark Stratos** (~$499 MSRP)
+**Recommended pick: Shark Stratos** (about $499 MSRP)
 
 Shark lists the Stratos cordless line with **up to 60 minutes runtime** in Eco mode on a single charge (per Shark battery spec under ideal conditions) and **PowerFins HairPro brush roll** designed for multi-surface pickup. The Clean Sense IQ feature adjusts suction when debris load increases — useful for the heavy pre-trip pass when you pull furniture away from walls for the first time in weeks. Shark includes a flex wand and pet multi-tool in most bundles, covering baseboards and upholstery before you leave.
 
@@ -102,7 +102,7 @@ Shark lists the Stratos cordless line with **up to 60 minutes runtime** in Eco m
 | Brush roll | PowerFins HairPro | High Torque + Laser Fluffy heads |
 | Dock included | Freestanding / wall mount varies by SKU | Wall dock common |
 | Best vacation task | Whole-floor sweep | Fine dust on hard floors |
-| Weight | ~3.4 kg / 7.5 lb | ~3.1 kg / 6.8 lb |
+| Weight | about 3.4 kg / 7.5 lb | about 3.1 kg / 6.8 lb |
 
 ---
 
@@ -114,7 +114,7 @@ Shark lists the Stratos cordless line with **up to 60 minutes runtime** in Eco m
 - **Large bin or easy empty** — pet households fill 0.5 L bins mid-session without warning.
 - **Motorized mini brush** — upholstery and pet beds collect more hair when pets stay indoors to avoid midday heat.
 
-**Recommended pick: Bissell ICONpet** (~$399 MSRP)
+**Recommended pick: Bissell ICONpet** (about $399 MSRP)
 
 Bissell markets the ICONpet series with a **tangle-free brush roll** and **Hair Eraser motorized pet tool** for stairs and furniture. Bissell publishes **up to 50 minutes runtime** on standard mode and a 0.6 L dirt tank — larger than many budget sticks and helpful when a golden retriever blows coat in June. The sealed HEPA Allergen System is documented on Bissell spec sheets for trapping pet dander that AC vents recirculate.
 
@@ -124,7 +124,7 @@ Bissell markets the ICONpet series with a **tangle-free brush roll** and **Hair 
 | --- | --- | --- |
 | Pet tooling | Hair Eraser motorized brush | Pet multi-tool |
 | Brush roll | Tangle-free roll | PowerFins HairPro |
-| Bin volume | 0.6 L | ~0.7 L (model dependent) |
+| Bin volume | 0.6 L | about 0.7 L (model dependent) |
 | Rated runtime | Up to 50 min | Up to 60 min |
 | Summer note | Daily fur lines on hard floors | Longer runtime for whole home |
 
@@ -136,9 +136,9 @@ Bissell markets the ICONpet series with a **tangle-free brush roll** and **Hair 
 
 - **Lightweight body** — stairs to kids' rooms multiple times a day add up when the unit lives on a hook in the laundry closet.
 - **Quick bin release** — cereal and craft debris should not require a three-step disassembly between video calls.
-- **Acceptable noise** — nap-time cleanup while AC hums in the background needs under ~75 dB at arm's length.
+- **Acceptable noise** — nap-time cleanup while AC hums in the background needs under about 75 dB at arm's length.
 
-**Recommended pick: Tineco A10 Hero** (~$199 MSRP)
+**Recommended pick: Tineco A10 Hero** (about $199 MSRP)
 
 Tineco lists the A10 Hero at **about 2.5 kg / 5.5 lb body weight** with **up to 25 minutes runtime** on max mode — shorter than premium sticks but enough for a 40 m² play zone sweep. The 0.6 L dustbin uses a one-button empty mechanism documented in Tineco manuals. At this price tier, you can keep the A10 Hero on a charger in the kitchen for crumbs while a heavier unit handles weekly deep passes.
 
@@ -146,11 +146,11 @@ Tineco lists the A10 Hero at **about 2.5 kg / 5.5 lb body weight** with **up to 
 
 | Factor | Tineco A10 Hero | Samsung Jet 60 |
 | --- | --- | --- |
-| Body weight | ~2.5 kg / 5.5 lb | ~2.6 kg / 5.7 lb |
+| Body weight | about 2.5 kg / 5.5 lb | about 2.6 kg / 5.7 lb |
 | Max runtime (rated) | Up to 25 min | Up to 40 min |
 | Price tier | Budget | Mid-range |
 | Best clutter task | Quick hard-floor pickup | Mixed floor deep clean |
-| Noise (typical) | ~72 dB | ~74 dB |
+| Noise (typical) | about 72 dB | about 74 dB |
 
 ---
 
@@ -160,10 +160,10 @@ All recommended picks at a glance. Prices are reference MSRP listings; street pr
 
 | Scenario | Recommended pick | Price (USD) | Rated runtime | Key summer strength | Weight (body) |
 | --- | --- | --- | --- | --- | --- |
-| AC-sealed dust | **Dyson V15 Detect** | ~$749 | Up to 60 min Eco | HEPA + laser fine dust | ~3.1 kg |
-| Vacation reset | **Shark Stratos** | ~$499 | Up to 60 min Eco | Long runtime, flex wand | ~3.4 kg |
-| Pet shedding | **Bissell ICONpet** | ~$399 | Up to 50 min | Tangle-free roll + pet tool | ~3.2 kg |
-| School-break clutter | **Tineco A10 Hero** | ~$199 | Up to 25 min max | Lightweight quick grabs | ~2.5 kg |
+| AC-sealed dust | **Dyson V15 Detect** | about $749 | Up to 60 min Eco | HEPA + laser fine dust | about 3.1 kg |
+| Vacation reset | **Shark Stratos** | about $499 | Up to 60 min Eco | Long runtime, flex wand | about 3.4 kg |
+| Pet shedding | **Bissell ICONpet** | about $399 | Up to 50 min | Tangle-free roll + pet tool | about 3.2 kg |
+| School-break clutter | **Tineco A10 Hero** | about $199 | Up to 25 min max | Lightweight quick grabs | about 2.5 kg |
 
 ---
 

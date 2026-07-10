@@ -65,7 +65,7 @@ We compute a **Small-Room Air Index (SRAI)** per model: appropriate CADR for roo
 | **True HEPA (H13/H14)** | Captures ≥99.97% of 0.3 µm particles | Baseline for allergy-sensitive bedrooms |
 | **Carbon / activated charcoal** | Adsorbs odors and VOCs | Helpful near kitchens; replace on schedule, not “forever” |
 | **Washable pre-filter** | Traps large dust before HEPA | Cuts HEPA spend if you rinse monthly |
-| **Sleep / low fan dB** | Manufacturer noise at lowest speed | Under ~27 dB is bedroom-friendly; above ~50 dB competes with conversation |
+| **Sleep / low fan dB** | Manufacturer noise at lowest speed | Under about 27 dB is bedroom-friendly; above about 50 dB competes with conversation |
 
 ---
 
@@ -75,11 +75,11 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 | Rank | Model | Price (USD) | Smoke CADR | Room claim | Filter type | Sleep noise | Filter $/yr (est.) | Review | SRAI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Levoit Core 300S** | $99 | 141 cfm | 219 sq ft | H13 HEPA + carbon | 24 dB | ~$45 | 4.7 | **9.0** |
-| 2 | **Winix 5500-2** | $160 | 246 cfm | 360 sq ft | Washable pre + HEPA + washable carbon | 27 dB | ~$35 | 4.6 | **8.9** |
-| 3 | **Blueair Blue Pure 511** | $99 | 125 cfm | 180 sq ft | Particle + carbon mesh | 41 dB | ~$80 | 4.5 | **8.5** |
-| 4 | **Honeywell HPA100** | $120 | 100 cfm | 155 sq ft | True HEPA | 50 dB | ~$50 | 4.4 | **8.2** |
-| 5 | **IKEA FÖRNUFTIG** | $55 | — | ~107 sq ft | Particle (+ optional carbon) | 39 dB | ~$20 | 4.3 | **8.0** |
+| 1 | **Levoit Core 300S** | $99 | 141 cfm | 219 sq ft | H13 HEPA + carbon | 24 dB | about $45 | 4.7 | **9.0** |
+| 2 | **Winix 5500-2** | $160 | 246 cfm | 360 sq ft | Washable pre + HEPA + washable carbon | 27 dB | about $35 | 4.6 | **8.9** |
+| 3 | **Blueair Blue Pure 511** | $99 | 125 cfm | 180 sq ft | Particle + carbon mesh | 41 dB | about $80 | 4.5 | **8.5** |
+| 4 | **Honeywell HPA100** | $120 | 100 cfm | 155 sq ft | True HEPA | 50 dB | about $50 | 4.4 | **8.2** |
+| 5 | **IKEA FÖRNUFTIG** | $55 | — | about 107 sq ft | Particle (+ optional carbon) | 39 dB | about $20 | 4.3 | **8.0** |
 
 ---
 
@@ -181,7 +181,7 @@ Look for sleep-mode ratings around 27 dB or lower if the unit will run all night
 1. **Size CADR to the room** — Divide square footage by 4.8 for a minimum smoke CADR target. A 120 sq ft bedroom needs roughly 25+ cfm minimum; all picks here except bare-minimum HPA100 exceed that with headroom.
 2. **Count filter types** — True HEPA handles particles; carbon handles odors. If you cook in the same space, skip HEPA-only models without a carbon stage.
 3. **Check sleep-mode dB** — Manufacturer specs above 45 dB at low fan often feel intrusive next to a bed. Prefer ≤27 dB if the unit runs overnight with AC.
-4. **Estimate annual cost** — Add filter MSRP × expected changes per year plus ~$15–25 electricity for 8 h/day medium fan. A cheap unit with $80/year filters can cost more than a $160 Winix over three years.
+4. **Estimate annual cost** — Add filter MSRP × expected changes per year plus about $15–25 electricity for 8 h/day medium fan. A cheap unit with $80/year filters can cost more than a $160 Winix over three years.
 5. **Plan placement with AC** — Do not block return vents or sit the purifier behind curtains. Leave 30 cm clearance on intake sides for steady CADR.
 
 ---

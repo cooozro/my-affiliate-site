@@ -132,7 +132,7 @@ It depends on your priority. IH shortens the active boil and improves edge-to-ce
 
 ### Four of us eat rice daily: which pot size (in uncooked cups) actually fits?
 
-Rating labels use **uncooked rice cups** (~180 ml each, not US measuring cups). A **5.5-cup** class usually covers four people with side portions or one meal plus modest leftovers; step to **10-cup** when you batch-cook for lunch boxes all week. During school break, an oversized pot wastes counter depth and cleaning time — match the number to how often you cook fresh versus chill and reheat. Mixed rice with beans needs headroom above plain white volume.
+Rating labels use **uncooked rice cups** (about 180 ml each, not US measuring cups). A **5.5-cup** class usually covers four people with side portions or one meal plus modest leftovers; step to **10-cup** when you batch-cook for lunch boxes all week. During school break, an oversized pot wastes counter depth and cleaning time — match the number to how often you cook fresh versus chill and reheat. Mixed rice with beans needs headroom above plain white volume.
 
 ### Summer meal prep — can steam presets replace our air fryer for snacks?
 

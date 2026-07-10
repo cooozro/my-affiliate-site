@@ -19,6 +19,7 @@ import {
   ensureNextPublishAt,
   formatKst,
   MAX_PUBLISH_PER_DAY,
+  MIN_PUBLISH_GAP_HOURS,
   reconcileOverduePublishSlot,
   reconcilePublishSchedule,
   reconcileStaleCatchUpSlot,
@@ -43,6 +44,18 @@ function canPublishNow(state, force = false) {
   ensureNextPublishAt(state);
 
   if (force) return true;
+
+  if (state.publishCountToday > 0 && state.lastPublishAt) {
+    const minGapMs = MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
+    const sinceLast = Date.now() - new Date(state.lastPublishAt).getTime();
+    if (sinceLast < minGapMs) {
+      const needMin = Math.ceil((minGapMs - sinceLast) / 60_000);
+      console.log(
+        `Publish skipped: only ${Math.floor(sinceLast / 60_000)}min since last publish (need ${MIN_PUBLISH_GAP_HOURS}h+ gap, ~${needMin}min left)`,
+      );
+      return false;
+    }
+  }
 
   if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) {
     console.log(`Daily publish limit reached (${MAX_PUBLISH_PER_DAY}/day KST)`);

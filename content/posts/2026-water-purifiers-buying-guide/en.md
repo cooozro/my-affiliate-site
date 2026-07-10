@@ -79,11 +79,11 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 | Rank | Model | Price (USD) | Format | Filter life (rated) | Annual filter (est.) | Install (est.) | TDS change | Flow (claim) | Review | SHI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Aquasana AQ-5300+** | $199 | Under-sink | 600 gal / 6 mo | ~$160 | $0–$250 | Moderate (carbon) | 0.72 GPM | 4.5 | **9.2** |
-| 2 | **PUR FM-3700B** | $45 | Faucet mount | 100 gal / ~3 mo | ~$100 | $0 | Low (carbon) | On tap | 4.3 | **9.0** |
-| 3 | **Brita Hub** | $299 | Countertop connected | 100 gal / ~4 mo | ~$90 | $0 | Low (carbon) | 0.5 GPM dispense | 4.2 | **8.8** |
-| 4 | **Coway Aquamega 200C** | $479 | Countertop RO | 500 gal / ~12 mo | ~$90 | $0 | High (RO) | 0.5 GPM | 4.4 | **8.7** |
-| 5 | **Bluewater Kitchen Station 1** | $699 | Countertop RO | 528 gal / ~12 mo | ~$120 | $0 | High (RO) | 0.6 GPM | 4.3 | **8.5** |
+| 1 | **Aquasana AQ-5300+** | $199 | Under-sink | 600 gal / 6 mo | about $160 | $0–$250 | Moderate (carbon) | 0.72 GPM | 4.5 | **9.2** |
+| 2 | **PUR FM-3700B** | $45 | Faucet mount | 100 gal / about 3 mo | about $100 | $0 | Low (carbon) | On tap | 4.3 | **9.0** |
+| 3 | **Brita Hub** | $299 | Countertop connected | 100 gal / about 4 mo | about $90 | $0 | Low (carbon) | 0.5 GPM dispense | 4.2 | **8.8** |
+| 4 | **Coway Aquamega 200C** | $479 | Countertop RO | 500 gal / about 12 mo | about $90 | $0 | High (RO) | 0.5 GPM | 4.4 | **8.7** |
+| 5 | **Bluewater Kitchen Station 1** | $699 | Countertop RO | 528 gal / about 12 mo | about $120 | $0 | High (RO) | 0.6 GPM | 4.3 | **8.5** |
 
 ---
 
@@ -103,7 +103,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Strengths:** Lowest upfront price in the group, tool-free click-on mount fits many standard faucets, MineralClear filter claims NSF 42/53 lead reduction, vertical space only — ideal for rental galley kitchens, instant filtered flow for pasta pots and sports bottles, LED filter change light reduces guesswork during heavy summer use.
 
-**Weaknesses:** 100-gallon cartridge life burns fast when four people hydrate — budget ~$100/year in filters; adds weight to faucet neck — some pull-down sprayers incompatible; carbon does not slash TDS on a meter; plastic housing can crack if overtightened during reinstall after moving.
+**Weaknesses:** 100-gallon cartridge life burns fast when four people hydrate — budget about $100/year in filters; adds weight to faucet neck — some pull-down sprayers incompatible; carbon does not slash TDS on a meter; plastic housing can crack if overtightened during reinstall after moving.
 
 **Analysis takeaway:** For most buyers, this translates to **filtered water tonight for under $50 checkout** — sensible when counter space is zero and you only need chlorine taste gone before iced tea season.
 
@@ -115,7 +115,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Strengths:** Connects to most faucets via included adapter — filtered dispense without under-sink surgery, 100-gallon Longlast+ filter class per Brita documentation, app filter reminders and usage tracking, 0.5 GPM dispense rate fills bottles faster than pitcher pouring, compact tower fits beside many microwave shelves, NSF 42/53 on supported cartridges.
 
-**Weaknesses:** $299 unit cost plus ~$90/year filters trails PUR on first-year math; hose to faucet is visible — aesthetic compromise in open kitchens; does not reduce TDS like RO; requires nearby outlet for internal pump; adapter fit fails on some designer faucet shapes per owner reviews.
+**Weaknesses:** $299 unit cost plus about $90/year filters trails PUR on first-year math; hose to faucet is visible — aesthetic compromise in open kitchens; does not reduce TDS like RO; requires nearby outlet for internal pump; adapter fit fails on some designer faucet shapes per owner reviews.
 
 **Analysis takeaway:** For most buyers, this translates to **pitcher convenience with push-button volume** when you want Brita-brand cartridges but refuse to refill a 27-cup tank ten times a day during camp-and-pool weeks.
 
@@ -127,7 +127,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Strengths:** Tankless RO reduces TDS aggressively for taste-sensitive drinkers and moderate hard-water feeds, 500-gallon composite filter life per Coway spec lowers swap frequency vs faucet mounts, dual dispense (ambient + optional cold line on some bundles), 1:1 waste ratio class claim among better RO efficiency tiers, no under-sink plumbing, NSF 42/58 on listed configurations.
 
-**Weaknesses:** $479 upfront and counter footprint ~16 inches wide; RO waste water line must route to sink bucket or drain clip; slower 0.5 GPM vs Aquasana faucet; requires power outlet; mineral-stripped taste not for everyone — some owners remineralize manually.
+**Weaknesses:** $479 upfront and counter footprint about 16 inches wide; RO waste water line must route to sink bucket or drain clip; slower 0.5 GPM vs Aquasana faucet; requires power outlet; mineral-stripped taste not for everyone — some owners remineralize manually.
 
 **Analysis takeaway:** For most buyers, this translates to **bottled-water TDS readings from a plug-in box** when your zip code publishes high hardness each August and carbon alone leaves chalky ice cubes.
 
@@ -139,7 +139,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Strengths:** Premium Swedish-design countertop RO with 0.6 GPM dispense, SuperiorOsmosis marketing targets PFAS-class concerns with public whitepapers, 528-gallon filter capacity per Bluewater spec, stainless wrap suits open kitchens visible from living rooms, Wi-Fi filter tracking on supported SKUs, strong TDS reduction without under-sink install.
 
-**Weaknesses:** $699 street price highest here; proprietary filters ~$120/year; larger depth than Coway — measure counter overhang near dishwasher door; RO waste water handling same as other countertop RO units; overkill if municipal supply already soft and low TDS.
+**Weaknesses:** $699 street price highest here; proprietary filters about $120/year; larger depth than Coway — measure counter overhang near dishwasher door; RO waste water handling same as other countertop RO units; overkill if municipal supply already soft and low TDS.
 
 **Analysis takeaway:** For most buyers, this translates to **design-forward RO for entertaining kitchens** where guests refill glasses all summer and you want appliance aesthetics to match a 2026 refrigerator facade.
 
@@ -174,7 +174,7 @@ Usually **not much** — carbon targets chlorine, lead class contaminants, and t
 
 ### How much should I budget for filters during a hot summer?
 
-Assume **2× winter water consumption** June–August. PUR FM-3700B at 100 gallons per cartridge may need swaps every 10–12 weeks for a family of four (~$100/year). Aquasana’s 600-gallon block often lasts the rated six months unless you irrigate houseplants from the filtered faucet. RO composites on Coway and Bluewater stretch toward **annual swaps** — factor $90–$120 on top of electricity for the pump.
+Assume **2× winter water consumption** June–August. PUR FM-3700B at 100 gallons per cartridge may need swaps every 10–12 weeks for a family of four (about $100/year). Aquasana’s 600-gallon block often lasts the rated six months unless you irrigate houseplants from the filtered faucet. RO composites on Coway and Bluewater stretch toward **annual swaps** — factor $90–$120 on top of electricity for the pump.
 
 ### Is professional install worth it for under-sink filters?
 

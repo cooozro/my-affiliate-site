@@ -63,9 +63,9 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 | Model | Type | MSRP (USD) | Heat-up | Milk system | Grinder | Descaling |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Nespresso Vertuo Pop+** | Capsule | ~$129 | ~25 s | None (Aeroccino optional) | N/A (pods) | Rinse + descale kit |
-| **Breville Bambino Plus** | Semi-auto | ~$499 | ~3 s (ThermoJet) | Auto steam wand | External required | Manual + tablet cycles |
-| **De'Longhi Magnifica Evo** | Fully automatic | ~$699 | ~40 s full cycle | LatteCrema Hot/Cold | Built-in conical | Guided auto program |
+| **Nespresso Vertuo Pop+** | Capsule | about $129 | about 25 s | None (Aeroccino optional) | N/A (pods) | Rinse + descale kit |
+| **Breville Bambino Plus** | Semi-auto | about $499 | about 3 s (ThermoJet) | Auto steam wand | External required | Manual + tablet cycles |
+| **De'Longhi Magnifica Evo** | Fully automatic | about $699 | about 40 s full cycle | LatteCrema Hot/Cold | Built-in conical | Guided auto program |
 
 ---
 
@@ -112,7 +112,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 | Smallest kitchen heat footprint | **Nespresso Vertuo Pop+** | Short brew, no steam boiler for every cup |
 | Iced latte on humid afternoons | **Breville Bambino Plus** | Fast shot over ice + auto-steamed cold milk prep |
 | Family of three, school-break mornings | **De'Longhi Magnifica Evo** | One-touch milk drinks without re-grinding per cup |
-| Lowest upfront spend | **Nespresso Vertuo Pop+** | ~$129 MSRP vs $499–$699 rivals |
+| Lowest upfront spend | **Nespresso Vertuo Pop+** | about $129 MSRP vs $499–$699 rivals |
 | Lowest per-cup cost (daily habit) | **Breville Bambino Plus** | Whole beans beat Vertuo pods at volume |
 | Easiest descaling reminders | **De'Longhi Magnifica Evo** | On-machine guided cycles |
 | Renters with tiny counters | **Nespresso Vertuo Pop+** or **Bambino Plus** | Both fit tighter layouts than Evo |
