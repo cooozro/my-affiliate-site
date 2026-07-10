@@ -21,7 +21,8 @@ import {
   TARGET_DRAFT_COUNT,
 } from "../lib/publish-schedule.mjs";
 import { readCursorDraftRequest } from "./cursor-draft-request.mjs";
-import { loadState } from "./state.mjs";
+import { loadState, resetDailyCounters, saveState } from "./state.mjs";
+import { runAutomationHealthCheck } from "../lib/automation-health.mjs";
 
 const task = (process.argv[2] ?? "status").trim() || "status";
 const publishOnly = process.env.AUTOMATION_MODE === "publish-only";
@@ -119,20 +120,37 @@ async function main() {
 
     case "status": {
       const state = loadState();
+      resetDailyCounters(state);
       const drafts = listDrafts();
+      const health = runAutomationHealthCheck({ state, drafts });
+      if (health.stateChanged) saveState(state);
+
+      const nowMs = Date.now();
+      const nextMs = state.nextPublishAt
+        ? new Date(state.nextPublishAt).getTime()
+        : null;
+      const overdueMinutes =
+        nextMs != null && nextMs <= nowMs && state.publishCountToday < MAX_PUBLISH_PER_DAY
+          ? Math.floor((nowMs - nextMs) / 60_000)
+          : 0;
+
       console.log(JSON.stringify({
         task,
         mode: publishOnly ? "publish-only" : "full",
         draftCount: countDrafts(),
         targetDraftCount: TARGET_DRAFT_COUNT,
         drafts: drafts.map((d) => ({ slug: d.slug, createdAt: d.createdAt })),
+        publishDateKst: state.publishDateKst,
         writeCountToday: state.writeCountToday,
         publishCountToday: state.publishCountToday,
         maxPublishPerDay: MAX_PUBLISH_PER_DAY,
         lastPublishAt: state.lastPublishAt,
         nextPublishAt: state.nextPublishAt,
         nextPublishAtKst: state.nextPublishAt ? formatKst(state.nextPublishAt) : null,
+        overdueMinutes,
         scheduledGapHours: state.scheduledGapHours,
+        lastPublishSkipReason: state.lastPublishSkipReason ?? null,
+        healthIssues: health.issues?.map((i) => i.message) ?? [],
         replenishNote: publishOnly
           ? "Publish 후 buffer < 2이면 GHA에서 Cursor SDK로 draft 자동 보충 (CURSOR_API_KEY 필요)."
           : null,

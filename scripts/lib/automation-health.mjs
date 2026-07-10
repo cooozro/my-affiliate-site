@@ -84,11 +84,14 @@ export function runAutomationHealthCheck(options = {}) {
       severity: overdueMin >= OVERDUE_WARN_MS / 60_000 ? "error" : "warning",
     });
 
-    if (state.scheduledGapHours !== 0) {
-      state.scheduledGapHours = 0;
+    state.scheduledGapHours = 0;
+    if (overdueMin >= 15) {
+      state.nextPublishAt = now.toISOString();
+      repairs.push("forced-catch-up-slot");
+    } else {
       repairs.push("marked-slot-catch-up");
-      stateChanged = true;
     }
+    stateChanged = true;
   }
 
   if (reconcileStaleCatchUpSlot(state, now)) {

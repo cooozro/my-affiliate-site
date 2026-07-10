@@ -3,6 +3,9 @@ name: Blog automation
 on:
   push:
     branches: [main]
+  schedule:
+    # Backup publish check when publish-slot cron is delayed (lightweight path skips guardian on schedule)
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       task:
@@ -43,9 +46,11 @@ jobs:
       - run: npm ci
 
       - name: Pipeline Guardian boundary check
+        if: github.event_name != 'schedule'
         run: npm run guardian:check-boundary
 
       - name: Render Guardian boundary check
+        if: github.event_name != 'schedule'
         run: npm run guardian:check-render-boundary
 
       - name: Refresh duplicate cover images

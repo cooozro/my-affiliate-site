@@ -34,7 +34,7 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 
 `data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
 
-**GitHub cron reliability:** Scheduled workflows can be delayed or skipped on low-traffic repos. This project uses (1) hourly backup crons, (2) a `main` push trigger, and (3) catch-up logic when a slot is overdue by 15+ minutes.
+**GitHub cron reliability:** Scheduled workflows can be delayed or skipped on low-traffic repos. Mitigations: (1) `blog-publish-slot.yml` every **15 minutes** plus hourly backstop, (2) `blog-automation.yml` every **30 minutes** as backup, (3) `main` push trigger, (4) catch-up logic when a slot is overdue 15+ minutes.
 
 **Writing** is done in **Cursor** (`draft: true`). GitHub Actions only publishes and requests Google indexing.
 
