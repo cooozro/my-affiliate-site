@@ -634,6 +634,21 @@
       "hash": "c4315ec2497b7f52aef454ba1300be04509686d4457eca58825a5f2a81e14597",
       "provider": null,
       "registeredAt": "2026-07-09T07:43:21.109Z"
+    },
+    {
+      "slug": "2026-television-buying-guide",
+      "assetKey": null,
+      "hash": "0f395447fb6020f507da0013b871f74fcad34145cef70be041f8abaea92329a3",
+      "provider": null,
+      "registeredAt": "2026-07-10T07:11:42.349Z"
+    },
+    {
+      "slug": "2026-washing-machines-scenario-guide",
+      "url": "https://unsplash.com/photos/symelidevhs",
+      "assetKey": null,
+      "hash": "2a1b0f510b6d07151ddcdea7c70c6bd9fc872a0936beb136f4663150d32a5f7b",
+      "provider": null,
+      "registeredAt": "2026-07-10T07:11:42.350Z"
     }
   ]
 }

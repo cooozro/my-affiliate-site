@@ -2,31 +2,31 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": "2026-washing-machines-scenario-guide",
-  "requestedAt": "2026-07-10T07:11:11.602Z",
+  "requestedAt": "2026-07-10T07:11:46.907Z",
   "writingMode": "stable",
-  "contentProfile": "buying-guide",
-  "toneVariant": "question-led",
-  "serpKeyword": null,
+  "contentProfile": "explainer",
+  "toneVariant": "checklist-hook",
+  "serpKeyword": "2026 space heaters buying guide 구매가이드",
   "serpCachePath": null,
   "benchmarkOutline": null,
-  "fallbackFrom": null,
-  "fallbackReason": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
   "season": "summer",
   "seasonalEvents": [
     "여름·방학",
     "폭염·냉방"
   ],
   "topic": {
-    "id": "humidifiers",
+    "id": "space-heaters",
     "category": "home-appliances",
-    "angle": "humidifier types: ultrasonic vs evaporative, tank size, and mold prevention",
-    "imageQuery": "ultrasonic humidifier bedroom",
+    "angle": "space heaters: ceramic vs oil-filled, tip-over protection, and room sizing",
+    "imageQuery": "portable space heater room",
     "liveData": false,
     "seasons": [
       "winter"
     ]
   },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: question-led. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/explainer.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: checklist-hook. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }
