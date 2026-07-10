@@ -32,9 +32,9 @@
     "bidets",
     "induction-cooktops"
   ],
-  "lastPublishAt": "2026-07-10T05:30:46.043Z",
-  "nextPublishAt": "2026-07-11T01:10:00.000Z",
-  "scheduledGapHours": 4.17,
+  "lastPublishAt": "2026-07-10T05:30:48.298Z",
+  "nextPublishAt": "2026-07-11T02:33:00.000Z",
+  "scheduledGapHours": 5.55,
   "publishCountToday": 2,
   "publishDateKst": "2026-07-10",
   "writeCountToday": 0,
@@ -377,7 +377,7 @@
         "id": "water-purifiers",
         "cluster": "kitchen-appliances"
       },
-      "at": "2026-07-10T05:30:46.043Z",
+      "at": "2026-07-10T05:30:48.298Z",
       "urls": [
         "https://www.aipick.shop/en/blog/2026-water-purifiers-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-water-purifiers-buying-guide"
@@ -528,7 +528,7 @@
     {
       "id": "water-purifiers",
       "cluster": "kitchen-appliances",
-      "at": "2026-07-10T05:30:46.047Z"
+      "at": "2026-07-10T05:30:48.302Z"
     }
   ],
   "formatHistory": [
@@ -555,7 +555,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-10T05:30:44.290Z",
+    "at": "2026-07-10T05:30:46.596Z",
     "issueCount": 1,
     "issues": [
       {
@@ -571,7 +571,7 @@
   },
   "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {
-    "at": "2026-07-10T05:30:47.089Z",
+    "at": "2026-07-10T05:30:49.352Z",
     "postsScanned": 30,
     "autoRepairCount": 10,
     "manualReviewCount": 0

@@ -2,11 +2,11 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": "2026-water-purifiers-buying-guide",
-  "requestedAt": "2026-07-10T05:30:46.064Z",
+  "requestedAt": "2026-07-10T05:30:48.319Z",
   "writingMode": "stable",
-  "contentProfile": "buying-guide",
-  "toneVariant": "checklist-hook",
-  "serpKeyword": "2026 humidifier types buying guide 구매가이드",
+  "contentProfile": "scenario-guide",
+  "toneVariant": "data-driven",
+  "serpKeyword": "2026 washer buying guide buying guide 분석",
   "serpCachePath": null,
   "benchmarkOutline": null,
   "fallbackFrom": "benchmark",
@@ -17,16 +17,16 @@
     "폭염·냉방"
   ],
   "topic": {
-    "id": "humidifiers",
-    "category": "home-appliances",
-    "angle": "humidifier types: ultrasonic vs evaporative, tank size, and mold prevention",
-    "imageQuery": "ultrasonic humidifier bedroom",
+    "id": "washing-machines",
+    "category": "large-appliances",
+    "angle": "washer buying guide: drum vs top-load, capacity kg, noise, and smart cycles",
+    "imageQuery": "front load washing machine laundry",
     "liveData": false,
     "seasons": [
-      "winter"
+      "spring"
     ]
   },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: stable. Tone: checklist-hook. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/scenario-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

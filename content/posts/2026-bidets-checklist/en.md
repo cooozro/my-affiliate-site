@@ -24,7 +24,7 @@ imageSearchKeywords:
   - bidet
   - toilet seat
   - bathroom
-updatedAt: '2026-07-10T05:30:46.080Z'
+updatedAt: '2026-07-10T05:30:48.337Z'
 publishedAt: '2026-07-10T05:25:29.985Z'
 ---
 ## Editorial Overview
