@@ -555,13 +555,11 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-10T05:48:09.103Z",
+    "at": "2026-07-10T07:09:22.440Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-water-purifiers-buying-guide/en.md: publishedAt 2026-07-10T14:30:46.000Z → 2026-07-10T05:30:48.298Z",
-      "2026-water-purifiers-buying-guide/ko.md: publishedAt 2026-07-10T14:30:46.000Z → 2026-07-10T05:30:48.298Z"
-    ]
+    "repairs": []
+  },
   },
   "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {

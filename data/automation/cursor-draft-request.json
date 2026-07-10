@@ -1,32 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-water-purifiers-buying-guide",
-  "requestedAt": "2026-07-10T05:30:48.319Z",
-  "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "2026 washer buying guide buying guide 분석",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "topic": {
-    "id": "washing-machines",
-    "category": "large-appliances",
-    "angle": "washer buying guide: drum vs top-load, capacity kg, noise, and smart cycles",
-    "imageQuery": "front load washing machine laundry",
-    "liveData": false,
-    "seasons": [
-      "spring"
-    ]
-  },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-07-10T07:09:22.440Z",
+  "writtenSlug": "2026-washing-machines-scenario-guide",
+  "draftCount": 2,
   "lastError": null
 }
