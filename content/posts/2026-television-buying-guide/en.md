@@ -5,7 +5,7 @@ title: >-
 description: >-
   Five TVs compared for summer sports glare, HDMI 2.1 gaming, and HDR brightness
   with AC-on viewing. OLED vs mini-LED picks.
-date: '2026-07-12'
+date: '2026-07-10'
 tags:
   - television
   - smart TV
@@ -14,8 +14,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 topicId: television
-draft: true
-createdAt: '2026-07-10T07:06:00.000Z'
+draft: false
 liveData: true
 imageSearchKeywords:
   - smart TV
@@ -25,7 +24,8 @@ coverImage: /images/posts/2026-television-buying-guide/smart-tv-living-room-cove
 coverImageAlt: smart TV in a living room setup for summer sports and streaming
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
-updatedAt: '2026-07-10T07:07:05.694Z'
+updatedAt: '2026-07-10T11:32:02.385Z'
+publishedAt: '2026-07-10T20:32:00.000Z'
 ---
 ## Editorial Overview
 
@@ -181,12 +181,11 @@ Mid-year clearance on **LG C4, Samsung S90D, and TCL QM8** often beats launch pr
 
 ## Related guides
 
-- [School-Break Couch Gaming: Which Console Fits Storage, Exclusives, and 4K Output?](/en/blog/2026-gaming-consoles-scenario-guide) — match your console HDMI output to the TV ports you actually have free
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — second-screen streaming when the main TV is on sports
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — desk gaming display picks that complement a living-room HDMI 2.1 set
-- [Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC](/en/blog/2026-noise-cancelling-headphones-head-to-head) — quiet late-night viewing when roommates sleep
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio when the living-room TV stays on AC
-
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — desk gaming display picks that complement a living-room HDMI 2.1 set
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — second-screen streaming when the main TV is on sports
+- [Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC](/en/blog/2026-noise-cancelling-headphones-head-to-head) — quiet late-night viewing when roommates sleep
+- [School-Break Couch Gaming: Which Console Fits Storage, Exclusives, and 4K Output?](/en/blog/2026-gaming-consoles-scenario-guide) — match your console HDMI output to the TV ports you actually have free
 ## Five checks before you buy
 
 1. **Count HDMI 2.1 devices** — PS5, Xbox, PC, and soundbar eARC each need a plan; two-port TVs force a switch or 4K 60 Hz compromise.

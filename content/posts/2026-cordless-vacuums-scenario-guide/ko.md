@@ -21,7 +21,7 @@ coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
-updatedAt: '2026-07-10T05:30:48.764Z'
+updatedAt: '2026-07-10T11:32:02.775Z'
 publishedAt: '2026-07-09T05:23:27.620Z'
 ---
 ## 편집부 개요
@@ -181,7 +181,7 @@ Tineco는 A10 Hero 본체를 **약 2.5kg**, **맥스 모드 최대 25분**으로
 
 - [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 에어컨 가동 중 일상 먼지는 로봇, 계단·가구는 스틱으로 보완
 - [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
-- [여름 주방·오픈형 평면, 1–4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
 - [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문 닫은 날 청소하는 같은 공간 냉방 점검
 - [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 여름 내내 창문 닫을 때 입자 부하 줄이기
 ## 최종 평가

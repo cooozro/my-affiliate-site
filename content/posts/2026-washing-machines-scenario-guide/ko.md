@@ -21,8 +21,8 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
-updatedAt: '2026-07-10T16:11:45.000Z'
-publishedAt: '2026-07-10T16:11:45.000Z'
+updatedAt: '2026-07-10T11:32:03.294Z'
+publishedAt: '2026-07-10T07:11:46.885Z'
 ---
 ## 편집부 개요
 
@@ -185,12 +185,11 @@ Bosch는 800 시리즈 WAW285에 **EcoSilence 모터 10년 보증**, 세탁 **47
 
 ## 관련 가이드
 
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 실내 건조가 필수일 때 세탁실 제습기와 환기 드럼 세탁기를 함께 고려
-- [여름 주방·오픈형 평면, 1–4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — 탈수 소음이 문제인 밀폐 냉방 실은 주방 가전 소음도 함께 봐야 합니다
 - [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 세탁기로 가는 진흙·모래는 현관·바닥에서 먼저 시작합니다
-- [2026 여름 주방용 정수기 5종 — 상판형·싱크대 하부 설치, 필터 교체 비용, TDS 저감, 무더위 수분 보충 시나리오별 추천](/ko/blog/2026-water-purifiers-buying-guide) — 더위에 수분 보충이 늘면 주방·세탁 업그레이드를 같은 효율 체크리스트로 보세요
-- [여름 비데 구매 전 7가지 체크](/ko/blog/2026-bidets-checklist) — 실내 세탁 습기는 비데 설치 환기 계획과 겹칩니다
-
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 실내 건조가 필수일 때 세탁실 제습기와 환기 드럼 세탁기를 함께 고려
+- [습한 여름·방학 손님철, 비데 시트는 수압·건조·변기 규격부터 확인한다](/ko/blog/2026-bidets-checklist) — 실내 세탁 습기는 비데 설치 환기 계획과 겹칩니다
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — 탈수 소음이 문제인 밀폐 냉방 실은 주방 가전 소음도 함께 봐야 합니다
+- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 더위에 수분 보충이 늘면 주방·세탁 업그레이드를 같은 효율 체크리스트로 보세요
 ## 최종 평가
 
 전면형 세탁기는 **습기로 실외 건조가 막히고**, **방학으로 오염도가 늘고**, **냉방 밀실 벽이 탈수 소음을 키울 때** 여름에 가치가 큽니다. 실내 건조 냄새 주간엔 **GE GFW550SSNWW** UltraFresh 환기·Microban이 핵심입니다. 진흙·유니폼은 **Whirlpool WFW5620HW** Load & Go·얼룩 프리셋이 실용적입니다. 토요일 하루에 침구와 일주일치를 비우려면 **Samsung WF53BB8700AVUS** 용량·Super Speed를 보세요. 침실과 벽을 공유하는 세탁실엔 **Bosch WAW285H2UC** 탈수 소음을 직접 들어보고 예산형을 고르세요.

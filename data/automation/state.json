@@ -3,10 +3,10 @@
   "usedTopicIds": [
     "space-heaters"
   ],
-  "lastPublishAt": "2026-07-10T07:11:46.885Z",
-  "nextPublishAt": "2026-07-10T11:17:55.288Z",
-  "scheduledGapHours": 4.1,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-10T11:32:02.328Z",
+  "nextPublishAt": "2026-07-11T02:51:00.000Z",
+  "scheduledGapHours": 5.85,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-10",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-10",
@@ -22,13 +22,45 @@
         "https://www.aipick.shop/en/blog/2026-washing-machines-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-washing-machines-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-television-buying-guide",
+      "topic": {
+        "id": "television"
+      },
+      "at": "2026-07-10T11:32:02.328Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-television-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-television-buying-guide"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-07-10T07:11:45.405Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-10T11:32:00.658Z",
+    "issueCount": 3,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 14min (KST 2026-07-10)",
+        "severity": "error"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 260min",
+        "severity": "warning"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up",
+      "2026-washing-machines-scenario-guide/en.md: publishedAt 2026-07-10T16:11:45.000Z → 2026-07-10T07:11:46.885Z",
+      "2026-washing-machines-scenario-guide/ko.md: publishedAt 2026-07-10T16:11:45.000Z → 2026-07-10T07:11:46.885Z"
+    ]
   },
   "topicHistory": [
     {
@@ -40,10 +72,21 @@
       "category": "home-appliances",
       "taxonomyGroup": "계절가전/난방·가습",
       "at": "2026-07-10T07:11:46.902Z"
+    },
+    {
+      "id": "television",
+      "at": "2026-07-10T11:32:02.332Z"
     }
   ],
   "formatHistory": [
     "explainer"
   ],
-  "roadmapPhase": "tier2-first-pass"
+  "roadmapPhase": "tier2-first-pass",
+  "lastDailyContentAuditKst": "2026-07-10",
+  "lastDailyContentAudit": {
+    "at": "2026-07-10T11:32:03.391Z",
+    "postsScanned": 32,
+    "autoRepairCount": 12,
+    "manualReviewCount": 0
+  }
 }
