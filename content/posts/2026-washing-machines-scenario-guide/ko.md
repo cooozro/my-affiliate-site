@@ -1,10 +1,7 @@
 ---
 title: '여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음'
-description: >-
-  여름 세탁기 시나리오 — 습한 실내 건조, 방학 운동복·흙얼룩, 휴가 전 일괄 세탁, 에어컨
-  실내 소음을 공개 스펙 기준으로 비교합니다.
-date: '2026-07-11'
-createdAt: '2026-07-10T07:05:00.000Z'
+description: '여름 세탁기 시나리오 — 습한 실내 건조, 방학 운동복·흙얼룩, 휴가 전 일괄 세탁, 에어컨 실내 소음을 공개 스펙 기준으로 비교합니다.'
+date: '2026-07-10'
 tags:
   - 세탁기
   - 세탁
@@ -13,7 +10,7 @@ tags:
   - 전면형
 contentProfile: scenario-guide
 topicId: washing-machines
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - front load washing machine
@@ -24,6 +21,8 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
+updatedAt: '2026-07-10T16:11:10.000Z'
+publishedAt: '2026-07-10T16:11:10.000Z'
 ---
 ## 편집부 개요
 

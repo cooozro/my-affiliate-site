@@ -5,8 +5,7 @@ title: >-
 description: >-
   Summer washing machines by scenario — humid indoor laundry, sports mud loads,
   vacation prep, and AC apartment noise from public specs only.
-date: '2026-07-11'
-createdAt: '2026-07-10T07:05:00.000Z'
+date: '2026-07-10'
 tags:
   - washing machine
   - laundry
@@ -15,7 +14,7 @@ tags:
   - front load
 contentProfile: scenario-guide
 topicId: washing-machines
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - front load washing machine
@@ -26,6 +25,8 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
+updatedAt: '2026-07-10T16:11:10.000Z'
+publishedAt: '2026-07-10T16:11:10.000Z'
 ---
 ## Editorial Overview
 
