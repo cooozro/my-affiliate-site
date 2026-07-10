@@ -32,10 +32,10 @@
     "bidets",
     "induction-cooktops"
   ],
-  "lastPublishAt": "2026-07-10T05:25:29.985Z",
-  "nextPublishAt": "2026-07-10T10:40:00.097Z",
-  "scheduledGapHours": 5.24,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-10T05:30:46.043Z",
+  "nextPublishAt": "2026-07-11T01:10:00.000Z",
+  "scheduledGapHours": 4.17,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-10",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-10",
@@ -369,15 +369,22 @@
         "https://www.aipick.shop/en/blog/2026-bidets-checklist",
         "https://www.aipick.shop/ko/blog/2026-bidets-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-water-purifiers-buying-guide",
+      "topic": {
+        "id": "water-purifiers",
+        "cluster": "kitchen-appliances"
+      },
+      "at": "2026-07-10T05:30:46.043Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-water-purifiers-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-water-purifiers-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "electric-fans",
-      "category": "home-appliances",
-      "cluster": "air-conditioning",
-      "at": "2026-07-02T03:15:31.764Z"
-    },
     {
       "id": "electric-fans",
       "cluster": "air-conditioning",
@@ -517,6 +524,11 @@
       "category": "kitchen",
       "taxonomyGroup": "주방가전/조리",
       "at": "2026-07-10T05:25:30.000Z"
+    },
+    {
+      "id": "water-purifiers",
+      "cluster": "kitchen-appliances",
+      "at": "2026-07-10T05:30:46.047Z"
     }
   ],
   "formatHistory": [
@@ -543,24 +555,25 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-10T05:25:27.960Z",
+    "at": "2026-07-10T05:30:44.290Z",
     "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 154min (KST 2026-07-10)",
-        "severity": "error"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-bidets-checklist/en.md: publishedAt 2026-07-10T14:25:28.000Z → 2026-07-10T05:25:29.985Z",
+      "2026-bidets-checklist/ko.md: publishedAt 2026-07-10T14:25:28.000Z → 2026-07-10T05:25:29.985Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-09",
+  "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {
-    "at": "2026-07-09T05:23:28.529Z",
-    "postsScanned": 28,
-    "autoRepairCount": 8,
+    "at": "2026-07-10T05:30:47.089Z",
+    "postsScanned": 30,
+    "autoRepairCount": 10,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [
