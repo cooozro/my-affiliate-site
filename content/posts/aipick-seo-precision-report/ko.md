@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-10T10:38:28.997Z'
+updatedAt: '2026-07-10T13:22:37.047Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 10일 금요일 오후 7:38
-- **스캔 대상:** 발행 글 30 slug / 60 locale 파일
+- **생성 시각 (KST):** 2026년 7월 10일 금요일 오후 10:22
+- **스캔 대상:** 발행 글 31 slug / 62 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -34,8 +34,8 @@ updatedAt: '2026-07-10T10:38:28.997Z'
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **30** slug (welcome 등 1건 제외)
-- locale 파일 **60**개 분석
+- 스캔 대상 **31** slug (welcome 등 1건 제외)
+- locale 파일 **62**개 분석
 
 ### 수익성·효율성 지표
 
@@ -70,32 +70,32 @@ updatedAt: '2026-07-10T10:38:28.997Z'
 
 ## GA4 — 최근 7일 유입 (연관성 참고)
 
-✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
+### GA4 연결 가이드
 
-- **API 수집 시각 (KST):** 2026. 7. 10. 오후 7:38:28
-- **속성 ID:** `54…28`
-- **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
-- **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
-- ⚠️ GA4 Data API는 실시간 스트림이 아닙니다. 일반적으로 최근 24–48시간 데이터가 확정·반영됩니다. 아래 **수집 시각**은 API 조회 시각입니다.
+> ⚠️ **현재 GA4 미연결** — 아래 위치에 Secret/환경변수를 등록하면 자동 집계됩니다.
 
-| 지표 | 값 |
-| --- | --- |
-| Active users | 11 |
-| Sessions | 57 |
-| Page views | 209 |
+| 용도 | 설정 위치 | 변수명 |
+| --- | --- | --- |
+| **매일 SEO 리포트** (08:30 KST) | GitHub → repo → **Settings → Secrets → Actions** | `GA4_PROPERTY_ID`, `GOOGLE_SERVICE_ACCOUNT_JSON` |
+| **어드민 대시보드** GA 위젯 | Vercel → Project → **Settings → Environment Variables** | 동일 |
+| **로컬 테스트** (`npm run seo-audit:update`) | 프로젝트 루트 **`.env`** (git 제외) | 동일 |
 
-### 상위 블로그 랜딩 (7일)
+**값 입력 방법**
 
-| 페이지 | 조회수 |
-| --- | --- |
-| `/ko/blog/2026-air-purifiers-guide` | 39 |
-| `/ko/blog/welcome` | 22 |
-| `/en/blog/welcome` | 6 |
-| `/ko/blog/2026-air-fryers-checklist` | 5 |
-| `/ko/blog/2026-budget-fitness-trackers-head-to-head` | 4 |
-| `/en/blog/2026-air-fryers-checklist` | 2 |
-| `/en/blog/2026-air-purifiers-guide` | 2 |
-| `/en/blog/2026-bidets-checklist` | 2 |
+0. **GCP → API 및 서비스 → 라이브러리** → `Google Analytics Data API` **사용 설정** (403 오류 시 필수)
+1. `GA4_PROPERTY_ID` — GA4 관리 → 속성 설정 → **속성 ID** (숫자만, 예: `123456789`)
+2. `GOOGLE_SERVICE_ACCOUNT_JSON` — GCP 서비스 계정 JSON **전체**를 한 줄로 붙여넣기
+3. GA4 → 속성 액세스 관리 → 서비스 계정 이메일에 **뷰어(Viewer)** 권한 부여
+
+**API 활성화 링크:** [Google Analytics Data API](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com) (서비스 계정이 속한 GCP 프로젝트에서 Enable)
+**로컬 `.env` 예시**
+
+```
+GA4_PROPERTY_ID=123456789
+GOOGLE_SERVICE_ACCOUNT_JSON={"type":"service_account","project_id":"...","private_key":"..."}
+```
+
+_이미 `blog-automation` 등에 `GOOGLE_SERVICE_ACCOUNT_JSON`이 있다면 SEO audit도 동일 Secret을 재사용합니다. `GA4_PROPERTY_ID`만 추가하면 됩니다._
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
