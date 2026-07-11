@@ -36,8 +36,8 @@
     "television"
   ],
   "lastPublishAt": "2026-07-11T08:43:17.656Z",
-  "nextPublishAt": "2026-07-11T13:20:57.644Z",
-  "scheduledGapHours": 4.63,
+  "nextPublishAt": "2026-07-11T08:44:40.514Z",
+  "scheduledGapHours": 0,
   "publishCountToday": 1,
   "publishDateKst": "2026-07-11",
   "writeCountToday": 0,
@@ -597,7 +597,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T08:43:32.883Z",
+    "at": "2026-07-11T08:44:40.409Z",
     "issueCount": 2,
     "issues": [
       {
