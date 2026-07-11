@@ -36,7 +36,7 @@
     "television"
   ],
   "lastPublishAt": "2026-07-11T08:43:17.656Z",
-  "nextPublishAt": "2026-07-11T08:44:40.514Z",
+  "nextPublishAt": "2026-07-11T09:12:38.397Z",
   "scheduledGapHours": 0,
   "publishCountToday": 1,
   "publishDateKst": "2026-07-11",
@@ -597,9 +597,14 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T08:44:40.409Z",
-    "issueCount": 2,
+    "at": "2026-07-11T09:12:38.397Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 27min (KST 2026-07-11)",
+        "severity": "error"
+      },
       {
         "code": "draft-future-display-date",
         "message": "Buffer draft(s) have future frontmatter date — ignored at publish; use publishAfter only to defer",
@@ -611,7 +616,9 @@
         "severity": "info"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "forced-catch-up-slot"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {
