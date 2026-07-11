@@ -36,8 +36,8 @@
     "television"
   ],
   "lastPublishAt": "2026-07-10T11:32:02.328Z",
-  "nextPublishAt": "2026-07-11T02:31:00.000Z",
-  "scheduledGapHours": 5.52,
+  "nextPublishAt": "2026-07-11T07:02:07.192Z",
+  "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-11",
   "writeCountToday": 0,
@@ -596,10 +596,18 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-10T23:16:54.939Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-11T07:02:07.192Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish slot overdue by 271min (KST 2026-07-11)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "forced-catch-up-slot"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {
@@ -686,5 +694,13 @@
       "keyword": "2026 coffee machine types buying guide 비교",
       "at": "2026-07-06T05:59:30.971Z"
     }
-  ]
+  ],
+  "lastPublishSkipReason": {
+    "at": "2026-07-11T07:02:07.277Z",
+    "reason": "integrity-gate",
+    "triedSlugs": [
+      "2026-solo-apartment-home-essentials-scenario-guide",
+      "2026-under-300-cross-category-buying-guide"
+    ]
+  }
 }
