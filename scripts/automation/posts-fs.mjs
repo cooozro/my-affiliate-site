@@ -101,12 +101,28 @@ export function countPublishedOnKstDate(dateKst = kstDateString()) {
   return count;
 }
 
-/** True when frontmatter `date` is a future KST calendar day (scheduled slot). */
-export function isDraftScheduledForFuture(slug) {
+/**
+ * True when draft has an explicit deferral (`publishAfter` / `scheduledPublishDate`).
+ * Plain frontmatter `date` on drafts is display-only — publish overwrites it at go-live.
+ */
+export function isDraftDeferred(slug) {
   const { data } = readPost(slug, "en");
-  const scheduled = String(data.date ?? "").slice(0, 10);
+  if (!data.draft) return false;
+  const deferred = data.publishAfter ?? data.scheduledPublishDate ?? null;
+  if (!deferred) return false;
+  const scheduled = String(deferred).slice(0, 10);
   const today = kstDateString();
   return Boolean(scheduled && scheduled > today);
+}
+
+/** @deprecated Use isDraftDeferred — kept for imports during transition */
+export function isDraftScheduledForFuture(slug) {
+  return isDraftDeferred(slug);
+}
+
+/** Drafts eligible for the next publish slot (not explicitly deferred). */
+export function countPublishableDrafts(drafts = listDrafts()) {
+  return drafts.filter((d) => !isDraftDeferred(d.slug)).length;
 }
 
 export function pickDraftForPublish(drafts, state = loadState()) {

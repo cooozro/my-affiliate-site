@@ -1,7 +1,8 @@
 import { distributePublishedPost } from "./distributor.mjs";
 import {
   countPublishedOnKstDate,
-  isDraftScheduledForFuture,
+  countPublishableDrafts,
+  isDraftDeferred,
   listDrafts,
   pickDraftForPublish,
   readPost,
@@ -155,6 +156,8 @@ export async function publishOneDraft(options = {}) {
 
   const tried = new Set();
   let slug = null;
+  let deferredSkipped = 0;
+  let integritySkipped = 0;
 
   while (!slug) {
     const candidates = drafts.filter((d) => !tried.has(d.slug));
@@ -171,11 +174,13 @@ export async function publishOneDraft(options = {}) {
 
     tried.add(picked.slug);
 
-    if (isDraftScheduledForFuture(picked.slug)) {
+    if (isDraftDeferred(picked.slug)) {
       const { data } = readPost(picked.slug, "en");
+      const deferField = data.publishAfter ?? data.scheduledPublishDate;
       console.log(
-        `Publish skipped: ${picked.slug} scheduled for ${String(data.date).slice(0, 10)} (future KST slot)`,
+        `Publish skipped: ${picked.slug} deferred until ${String(deferField).slice(0, 10)} (publishAfter)`,
       );
+      deferredSkipped += 1;
       continue;
     }
 
@@ -186,6 +191,7 @@ export async function publishOneDraft(options = {}) {
     });
 
     if (issues.length > 0) {
+      integritySkipped += 1;
       console.error(
         `Integrity gate blocked ${picked.slug} — trying next draft (${issues.length} issue(s)):`,
       );
@@ -199,13 +205,29 @@ export async function publishOneDraft(options = {}) {
   }
 
   if (!slug) {
-    console.log(
-      `Publish skipped: ${tried.size} draft(s) failed integrity gate — fix drafts or wait for replenish.`,
-    );
+    const publishable = countPublishableDrafts(drafts);
+    let reason = "integrity-gate";
+    let detail =
+      `${tried.size} draft(s) failed checks — fix drafts or wait for replenish.`;
+
+    if (deferredSkipped > 0 && integritySkipped === 0 && deferredSkipped === tried.size) {
+      reason = "all-deferred";
+      detail = `${deferredSkipped} draft(s) have publishAfter in the future — none eligible today.`;
+    } else if (publishable === 0 && drafts.length > 0 && deferredSkipped === 0) {
+      reason = "no-publishable-drafts";
+      detail = `${drafts.length} draft(s) in buffer but none pass publish checks.`;
+    } else if (integritySkipped > 0) {
+      detail = `${integritySkipped} draft(s) failed integrity gate.`;
+    }
+
+    console.log(`Publish skipped: ${detail}`);
     state.lastPublishSkipReason = {
       at: new Date().toISOString(),
-      reason: "integrity-gate",
+      reason,
       triedSlugs: [...tried],
+      deferredSkipped,
+      integritySkipped,
+      publishableCount: publishable,
     };
     saveState(state);
     return null;

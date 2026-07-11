@@ -34,6 +34,8 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 
 `data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
 
+**Draft frontmatter dates:** Buffer drafts should use `createdAt` for admin sort. Plain `date` on drafts is **display-only** — `publish-draft.mjs` overwrites it at go-live. Do **not** set future `date` on buffer drafts (that used to block the scheduler). To defer publication, set `publishAfter: YYYY-MM-DD` explicitly.
+
 **GitHub cron reliability:** Scheduled workflows can be delayed or skipped on low-traffic repos. Mitigations: (1) `blog-publish-slot.yml` every **15 minutes** plus hourly backstop, (2) `main` push trigger, (3) catch-up logic when a slot is overdue 15+ minutes, (4) **4h minimum gap** enforced in `publish-draft.mjs` even if two workflows run in parallel.
 
 **Do not** add a second scheduled publish workflow — `blog-automation.yml` only runs publish on `push` / manual dispatch (shares `git-write-main` lock with publish-slot).

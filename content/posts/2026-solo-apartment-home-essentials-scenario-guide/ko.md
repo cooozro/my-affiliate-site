@@ -1,9 +1,9 @@
 ---
-title: '1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소'
+title: 1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소
 description: >-
-  원룸·투룸 1인 가구를 위한 교차 카테고리 추천 — 선풍기, 공기청정기, 무선 이어버드, 에어프라이어,
-  로봇청소기를 여름 밀폐 생활과 좁은 평면에 맞춰 비교합니다.
-date: '2026-07-12'
+  원룸·투룸 1인 가구를 위한 교차 카테고리 추천 — 선풍기, 공기청정기, 무선 이어버드, 에어프라이어, 로봇청소기를 여름 밀폐 생활과 좁은
+  평면에 맞춰 비교합니다.
+date: '2026-07-11'
 tags:
   - 1인 가구
   - 원룸
@@ -14,9 +14,8 @@ contentProfile: scenario-guide
 contentAngle: solo-apartment-essentials
 topicId: meta-solo-apartment-essentials
 topicCluster: household-solo
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-10T13:00:00.000Z'
 coverImage: >-
   /images/posts/2026-solo-apartment-home-essentials-scenario-guide/small-apartment-living-room-essentials-cover.jpg
 coverImageAlt: 일상 필수품이 있는 소형 아파트 거실
@@ -30,6 +29,8 @@ imageSearchKeywords:
   - small apartment
   - studio essentials
   - compact home
+updatedAt: '2026-07-11T08:43:16.000Z'
+publishedAt: '2026-07-11T08:43:16.000Z'
 ---
 ## 편집부 개요
 

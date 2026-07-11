@@ -4,7 +4,7 @@ description: >-
   Solo apartment picks across fans, purifiers, earbuds, fryers, and robot
   vacuums — five sealed-window summer scenarios for studio and one-bedroom
   layouts.
-date: '2026-07-12'
+date: '2026-07-11'
 tags:
   - solo apartment
   - home essentials
@@ -15,9 +15,8 @@ contentProfile: scenario-guide
 contentAngle: solo-apartment-essentials
 topicId: meta-solo-apartment-essentials
 topicCluster: household-solo
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-10T13:00:00.000Z'
 coverImage: >-
   /images/posts/2026-solo-apartment-home-essentials-scenario-guide/small-apartment-living-room-essentials-cover.jpg
 coverImageAlt: compact living room in a small apartment with everyday essentials
@@ -31,7 +30,8 @@ imageSearchKeywords:
   - small apartment
   - studio essentials
   - compact home
-updatedAt: '2026-07-10T12:24:27.076Z'
+updatedAt: '2026-07-11T08:43:16.000Z'
+publishedAt: '2026-07-11T08:43:16.000Z'
 ---
 ## Editorial Overview
 

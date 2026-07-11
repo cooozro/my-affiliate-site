@@ -35,10 +35,10 @@
     "space-heaters",
     "television"
   ],
-  "lastPublishAt": "2026-07-10T11:32:02.328Z",
-  "nextPublishAt": "2026-07-11T08:39:38.554Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-11T08:43:17.656Z",
+  "nextPublishAt": "2026-07-11T13:20:57.644Z",
+  "scheduledGapHours": 4.63,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-11",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-11",
@@ -409,28 +409,23 @@
         "https://www.aipick.shop/en/blog/2026-television-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-television-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-solo-apartment-home-essentials-scenario-guide",
+      "topic": {
+        "id": "meta-solo-apartment-essentials",
+        "category": "cross-cutting",
+        "cluster": "household-solo"
+      },
+      "at": "2026-07-11T08:43:17.656Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "electric-fans",
-      "cluster": "air-conditioning",
-      "at": "2026-07-03T02:11:09.747Z"
-    },
-    {
-      "id": "coffee-machines",
-      "category": "kitchen",
-      "at": "2026-07-03T02:11:09.755Z"
-    },
-    {
-      "id": "noise-cancelling-headphones",
-      "at": "2026-07-03T07:10:50.787Z"
-    },
-    {
-      "id": "air-fryers",
-      "category": "kitchen",
-      "at": "2026-07-03T18:50:04.357Z"
-    },
     {
       "id": "webcams",
       "at": "2026-07-04T01:56:28.537Z"
@@ -570,10 +565,15 @@
     {
       "id": "television",
       "at": "2026-07-10T11:32:02.332Z"
+    },
+    {
+      "id": "meta-solo-apartment-essentials",
+      "category": "cross-cutting",
+      "cluster": "household-solo",
+      "at": "2026-07-11T08:43:17.663Z"
     }
   ],
   "formatHistory": [
-    "checklist",
     "buying-guide",
     "explainer",
     "head-to-head",
@@ -592,22 +592,26 @@
     "checklist",
     "explainer",
     "scenario-guide",
-    "buying-guide"
+    "buying-guide",
+    "explainer"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T08:39:38.554Z",
-    "issueCount": 1,
+    "at": "2026-07-11T08:43:32.883Z",
+    "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 81min (KST 2026-07-11)",
-        "severity": "error"
+        "code": "draft-future-display-date",
+        "message": "Buffer draft(s) have future frontmatter date — ignored at publish; use publishAfter only to defer",
+        "severity": "warning"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
       }
     ],
-    "repairs": [
-      "forced-catch-up-slot"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-10",
   "lastDailyContentAudit": {
@@ -696,11 +700,18 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-11T08:39:38.704Z",
+    "at": "2026-07-11T08:41:54.172Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-solo-apartment-home-essentials-scenario-guide",
       "2026-under-300-cross-category-buying-guide"
     ]
-  }
+  },
+  "metaAngleHistory": [
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-07-11T08:43:17.676Z"
+    }
+  ]
 }

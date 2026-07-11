@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { validatePostFiles } from "../automation/posts-fs.mjs";
+import { validatePostFiles, countPublishableDrafts, isDraftDeferred, readPost } from "../automation/posts-fs.mjs";
 import { kstDateString, loadState, resetDailyCounters } from "../automation/state.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import {
@@ -100,7 +100,24 @@ export function runAutomationHealthCheck(options = {}) {
   }
 
   const blockedDrafts = [];
+  const deferredDrafts = [];
+  const misleadingFutureDates = [];
   for (const draft of drafts) {
+    if (isDraftDeferred(draft.slug)) {
+      deferredDrafts.push(draft.slug);
+      continue;
+    }
+    const { data } = readPost(draft.slug, "en");
+    const displayDate = String(data.date ?? "").slice(0, 10);
+    const todayKstForDraft = kstDateString();
+    if (
+      data.draft &&
+      displayDate > todayKstForDraft &&
+      !data.publishAfter &&
+      !data.scheduledPublishDate
+    ) {
+      misleadingFutureDates.push({ slug: draft.slug, date: displayDate });
+    }
     try {
       const draftIssues = validatePostFiles(draft.slug, {
         phase: "publish",
@@ -131,9 +148,41 @@ export function runAutomationHealthCheck(options = {}) {
     });
   }
 
+  if (misleadingFutureDates.length > 0) {
+    issues.push({
+      code: "draft-future-display-date",
+      message:
+        "Buffer draft(s) have future frontmatter date — ignored at publish; use publishAfter only to defer",
+      slugs: misleadingFutureDates,
+      severity: "warning",
+    });
+  }
+
   if (
     drafts.length > 0 &&
-    blockedDrafts.length === drafts.length &&
+    deferredDrafts.length === drafts.length &&
+    underDailyCap &&
+    nextAt != null &&
+    nextAt <= nowMs
+  ) {
+    issues.push({
+      code: "all-drafts-deferred",
+      message: `All ${drafts.length} buffer draft(s) have publishAfter in the future — slot cannot publish`,
+      slugs: deferredDrafts,
+      severity: "error",
+    });
+  } else if (deferredDrafts.length > 0 && countPublishableDrafts(drafts) === 0) {
+    issues.push({
+      code: "no-publishable-drafts",
+      message: `No publishable drafts (${deferredDrafts.length} deferred)`,
+      severity: "warning",
+    });
+  }
+
+  if (
+    drafts.length > 0 &&
+    blockedDrafts.length === countPublishableDrafts(drafts) &&
+    countPublishableDrafts(drafts) > 0 &&
     underDailyCap &&
     nextAt != null &&
     nextAt <= nowMs
