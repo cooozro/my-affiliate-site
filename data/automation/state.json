@@ -35,10 +35,10 @@
     "space-heaters",
     "television"
   ],
-  "lastPublishAt": "2026-07-11T08:43:17.656Z",
-  "nextPublishAt": "2026-07-11T11:32:53.227Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-11T13:27:19.499Z",
+  "nextPublishAt": "2026-07-12T01:21:00.000Z",
+  "scheduledGapHours": 4.35,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-11",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-11",
@@ -423,13 +423,23 @@
         "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-under-300-cross-category-buying-guide",
+      "topic": {
+        "id": "meta-under-300-cross-category",
+        "category": "cross-cutting",
+        "cluster": "price-tier-300"
+      },
+      "at": "2026-07-11T13:27:19.499Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-under-300-cross-category-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-under-300-cross-category-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "webcams",
-      "at": "2026-07-04T01:56:28.537Z"
-    },
     {
       "id": "tablet-budget",
       "category": "tablets",
@@ -571,6 +581,12 @@
       "category": "cross-cutting",
       "cluster": "household-solo",
       "at": "2026-07-11T08:43:17.663Z"
+    },
+    {
+      "id": "meta-under-300-cross-category",
+      "category": "cross-cutting",
+      "cluster": "price-tier-300",
+      "at": "2026-07-11T13:27:19.504Z"
     }
   ],
   "formatHistory": [
@@ -597,12 +613,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T11:32:53.227Z",
+    "at": "2026-07-11T13:27:17.698Z",
     "issueCount": 4,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 45min (KST 2026-07-11)",
+        "message": "Publish slot overdue by 114min (KST 2026-07-11)",
         "severity": "error"
       },
       {
@@ -617,7 +633,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 169min",
+        "message": "Cursor replenish pending 283min",
         "severity": "warning"
       }
     ],
@@ -625,10 +641,10 @@
       "forced-catch-up-slot"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-10",
+  "lastDailyContentAuditKst": "2026-07-11",
   "lastDailyContentAudit": {
-    "at": "2026-07-10T11:32:03.391Z",
-    "postsScanned": 32,
+    "at": "2026-07-11T13:27:20.777Z",
+    "postsScanned": 34,
     "autoRepairCount": 12,
     "manualReviewCount": 0
   },

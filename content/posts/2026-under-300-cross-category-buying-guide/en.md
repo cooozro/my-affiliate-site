@@ -1,9 +1,11 @@
 ---
-title: 'Under $300 Across Categories: What Each Product Type Delivers at the Same Price'
+title: >-
+  Under $300 Across Categories: What Each Product Type Delivers at the Same
+  Price
 description: >-
   Cross-aisle comparison at a $300 ceiling — monitors, fans, power banks,
   speakers, and purifiers ranked by what the category offers per dollar.
-date: '2026-07-13'
+date: '2026-07-11'
 tags:
   - budget
   - cross category
@@ -15,9 +17,8 @@ contentAngle: under-300-cross-category
 topicId: meta-under-300-cross-category
 topicCluster: price-tier-300
 writingMode: benchmark
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-10T13:05:00.000Z'
 imageSearchKeywords:
   - budget gadgets
   - home tech desk
@@ -27,7 +28,8 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-07-10T13:05:00.000Z'
+updatedAt: '2026-07-11T13:27:19.568Z'
+publishedAt: '2026-07-11T22:27:17.000Z'
 ---
 ## Editorial Overview
 
@@ -162,12 +164,11 @@ No — use this to **choose the aisle**, then read the dedicated guide for that 
 
 ## Related guides
 
-- [Budget Monitors Buying Guide](/en/blog/2026-budget-monitors-buying-guide) — panel deep dive after you pick display
-- [Electric Fans by CFM and kWh](/en/blog/2026-electric-fans-buying-guide) — airflow math after you pick comfort
-- [Budget Power Banks Guide](/en/blog/2026-budget-power-banks-guide) — Wh and airline limits
-- [Summer Bluetooth Speakers](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio detail
-- [Air Purifiers Guide](/en/blog/2026-air-purifiers-guide) — CADR sizing after you pick air quality
-
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — airflow math after you pick comfort
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — CADR sizing after you pick air quality
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio detail
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — panel deep dive after you pick display
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Wh and airline limits
 ## Five checks before you buy at this tier
 
 1. **Name your top two daily pains** — eyes, heat, air, travel, or audio — before choosing one $300 SKU.

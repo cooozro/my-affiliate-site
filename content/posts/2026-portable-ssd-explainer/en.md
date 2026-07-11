@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-10T11:32:02.950Z'
+updatedAt: '2026-07-11T13:27:20.208Z'
 publishedAt: '2026-07-05T03:33:06.533Z'
 ---
 ## Editorial Overview
