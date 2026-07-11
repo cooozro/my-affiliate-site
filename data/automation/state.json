@@ -613,32 +613,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T13:27:17.698Z",
-    "issueCount": 4,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 114min (KST 2026-07-11)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-future-display-date",
-        "message": "Buffer draft(s) have future frontmatter date — ignored at publish; use publishAfter only to defer",
-        "severity": "warning"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 283min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-11T14:38:12.069Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "forced-catch-up-slot"
+      "2026-under-300-cross-category-buying-guide/en.md: publishedAt 2026-07-11T22:27:17.000Z → 2026-07-11T13:27:19.499Z",
+      "2026-under-300-cross-category-buying-guide/ko.md: publishedAt 2026-07-11T22:27:17.000Z → 2026-07-11T13:27:19.499Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-11",

@@ -29,7 +29,7 @@ coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
 updatedAt: '2026-07-11T13:27:19.568Z'
-publishedAt: '2026-07-11T22:27:17.000Z'
+publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## Editorial Overview
 
