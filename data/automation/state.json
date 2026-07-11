@@ -596,12 +596,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T07:21:35.618Z",
+    "at": "2026-07-11T07:22:36.122Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 3min (KST 2026-07-11)",
+        "message": "Publish slot overdue by 4min (KST 2026-07-11)",
         "severity": "warning"
       }
     ],
@@ -696,7 +696,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-11T07:21:35.768Z",
+    "at": "2026-07-11T07:22:36.276Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-solo-apartment-home-essentials-scenario-guide",
