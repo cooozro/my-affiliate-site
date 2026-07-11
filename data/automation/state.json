@@ -36,7 +36,7 @@
     "television"
   ],
   "lastPublishAt": "2026-07-10T11:32:02.328Z",
-  "nextPublishAt": "2026-07-11T07:18:31.385Z",
+  "nextPublishAt": "2026-07-11T08:39:38.554Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-11",
@@ -596,17 +596,17 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-11T07:22:36.122Z",
+    "at": "2026-07-11T08:39:38.554Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 4min (KST 2026-07-11)",
-        "severity": "warning"
+        "message": "Publish slot overdue by 81min (KST 2026-07-11)",
+        "severity": "error"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "forced-catch-up-slot"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-10",
@@ -696,7 +696,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-11T07:22:36.276Z",
+    "at": "2026-07-11T08:39:38.704Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-solo-apartment-home-essentials-scenario-guide",
