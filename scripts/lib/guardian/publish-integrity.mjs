@@ -35,6 +35,7 @@ import { wouldViolateTopicDiversity } from "../topic-diversity.mjs";
 import {
   assetKey,
   hashFile,
+  hashImageContentFile,
   loadImageRegistry,
 } from "../used-images.mjs";
 import { repairGfmTildeRanges } from "./markdown-gfm-safe.mjs";
@@ -425,6 +426,8 @@ function auditPostLevel(root, slug, phase, bucket, state) {
     ? path.join(root, "public", String(enFile.data.coverImage).replace(/^\//, ""))
     : null;
   const hash = coverPath && fs.existsSync(coverPath) ? hashFile(coverPath) : null;
+  const contentHash =
+    coverPath && fs.existsSync(coverPath) ? hashImageContentFile(coverPath) : null;
   const key =
     enFile.data.coverImageProvider && enFile.data.coverImageAssetId
       ? assetKey(enFile.data.coverImageProvider, enFile.data.coverImageAssetId)
@@ -434,13 +437,18 @@ function auditPostLevel(root, slug, phase, bucket, state) {
     (e) =>
       e.slug !== slug &&
       ((hash && e.hash === hash) ||
+        (contentHash &&
+          (e.contentHash === contentHash || e.hash === contentHash)) ||
         (key && e.assetKey === key) ||
         (enFile.data.coverImageSourceUrl &&
           e.url === String(enFile.data.coverImageSourceUrl).split("?")[0].toLowerCase())),
   );
 
   if (usedByOther) {
-    addError(bucket, `${slug}: cover image already used on another post (duplicate hero)`);
+    addError(
+      bucket,
+      `${slug}: cover image already used on another post (duplicate hero — same file, asset, or visual content)`,
+    );
   }
 
   // Topic uniqueness check is for replenish/draft safety only.

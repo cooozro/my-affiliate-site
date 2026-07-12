@@ -26,6 +26,7 @@ import {
 import {
   assetKey,
   hashBuffer,
+  hashImageContent,
   isImageUsed,
   loadImageRegistry,
   registerUsedImage,
@@ -486,8 +487,13 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
       }
     }
 
-    if (isImageUsed(registry, { hash: downloaded.hash })) {
-      console.warn(`Downloaded hash already used — aborting ${slug}`);
+    if (
+      isImageUsed(registry, {
+        hash: downloaded.hash,
+        contentHash: hashImageContent(downloaded.buffer),
+      })
+    ) {
+      console.warn(`Downloaded image already used (file or visual content) — aborting ${slug}`);
       fs.unlinkSync(
         path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
       );
@@ -499,6 +505,7 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
       url: winner.imageUrl,
       assetKey: winner.assetKey,
       hash: downloaded.hash,
+      contentHash: hashImageContent(downloaded.buffer),
       provider: winner.provider,
     });
     saveImageRegistry(registry);

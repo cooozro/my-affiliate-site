@@ -7,7 +7,10 @@ on:
     paths:
       - "scripts/lib/cover-image.mjs"
       - "scripts/lib/image-query.mjs"
+      - "scripts/lib/used-images.mjs"
+      - "scripts/lib/guardian/publish-integrity.mjs"
       - "scripts/refresh-duplicate-covers.mjs"
+      - "scripts/fetch-missing-draft-covers.mjs"
       - ".github/workflows/refresh-cover-images.yml"
 
 permissions:

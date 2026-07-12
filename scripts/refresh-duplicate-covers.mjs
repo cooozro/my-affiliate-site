@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Re-fetch covers for posts that share the same image file hash.
+ * Re-fetch covers for posts that share the same hero image (file hash OR visual content hash).
  * Usage: npm run content:refresh-duplicates
  */
 
@@ -12,6 +12,7 @@ import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
 import { isPublishedSlug } from "./lib/automation-guard.mjs";
 import {
   hashFile,
+  hashImageContentFile,
   loadImageRegistry,
   saveImageRegistry,
   syncImageRegistryFromPosts,
@@ -24,7 +25,8 @@ function coverFilePath(coverImage) {
 }
 
 function findDuplicateCoverSlugs() {
-  const byHash = new Map();
+  const byFileHash = new Map();
+  const byContentHash = new Map();
 
   for (const slug of fs.readdirSync(POSTS_DIR)) {
     const enPath = path.join(POSTS_DIR, slug, "en.md");
@@ -36,26 +38,35 @@ function findDuplicateCoverSlugs() {
     const filePath = coverFilePath(data.coverImage);
     if (!fs.existsSync(filePath)) continue;
 
-    const hash = hashFile(filePath);
-    if (!hash) continue;
+    const fileHash = hashFile(filePath);
+    const contentHash = hashImageContentFile(filePath);
 
-    const list = byHash.get(hash) ?? [];
-    list.push(slug);
-    byHash.set(hash, list);
+    if (fileHash) {
+      const list = byFileHash.get(fileHash) ?? [];
+      list.push(slug);
+      byFileHash.set(fileHash, list);
+    }
+    if (contentHash) {
+      const list = byContentHash.get(contentHash) ?? [];
+      list.push(slug);
+      byContentHash.set(contentHash, list);
+    }
   }
 
-  const duplicates = [];
-  for (const slugs of byHash.values()) {
-    if (slugs.length > 1) duplicates.push(...slugs);
+  const duplicates = new Set();
+  for (const slugs of byFileHash.values()) {
+    if (slugs.length > 1) for (const s of slugs) duplicates.add(s);
+  }
+  for (const slugs of byContentHash.values()) {
+    if (slugs.length > 1) for (const s of slugs) duplicates.add(s);
   }
 
-  return [...new Set(duplicates)].sort();
+  return [...duplicates].sort();
 }
 
-function clearRegistryHashes(hashes) {
+function clearRegistryForSlug(slug) {
   const registry = loadImageRegistry();
-  const blocked = new Set(hashes);
-  registry.entries = registry.entries.filter((entry) => !entry.hash || !blocked.has(entry.hash));
+  registry.entries = registry.entries.filter((entry) => entry.slug !== slug);
   saveImageRegistry(registry);
 }
 
@@ -76,10 +87,8 @@ async function refreshSlug(slug) {
 
   const oldCover = data.coverImage;
   const oldPath = oldCover ? coverFilePath(oldCover) : null;
-  const oldHash = oldPath && fs.existsSync(oldPath) ? hashFile(oldPath) : null;
-  if (oldHash) {
-    clearRegistryHashes([oldHash]);
-  }
+
+  clearRegistryForSlug(slug);
 
   const meta = await fetchCoverImage(slug, imageContext, { forceRefresh: true });
   if (!meta) {
@@ -127,26 +136,18 @@ async function main() {
     return;
   }
 
-  const duplicateHashes = new Set();
-  for (const slug of slugs) {
-    const { data } = matter(
-      fs.readFileSync(path.join(POSTS_DIR, slug, "en.md"), "utf8"),
-    );
-    if (!data.coverImage) continue;
-    const filePath = coverFilePath(data.coverImage);
-    if (!fs.existsSync(filePath)) continue;
-    const hash = hashFile(filePath);
-    if (hash) duplicateHashes.add(hash);
-  }
-  clearRegistryHashes([...duplicateHashes]);
+  console.log(
+    `Refreshing ${slugs.length} post(s) with duplicate covers (file or visual content):`,
+  );
+  console.log(slugs.join(", "));
 
-  console.log(`Refreshing ${slugs.length} post(s) with duplicate covers...`);
   let failed = 0;
   for (const slug of slugs) {
     const ok = await refreshSlug(slug);
     if (!ok) failed += 1;
   }
 
+  syncImageRegistryFromPosts();
   const remaining = findDuplicateCoverSlugs();
   if (remaining.length > 0) {
     console.error(`Duplicate covers remain for: ${remaining.join(", ")}`);
