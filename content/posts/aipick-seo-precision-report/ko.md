@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-12T07:41:58.913Z'
+updatedAt: '2026-07-12T09:25:10.712Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 12일 일요일 오후 4:41
+- **생성 시각 (KST):** 2026년 7월 12일 일요일 오후 6:25
 - **스캔 대상:** 발행 글 33 slug / 66 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-12T07:41:58.913Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 7. 12. 오후 4:41:58
+- **API 수집 시각 (KST):** 2026. 7. 12. 오후 6:25:09
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -80,9 +80,9 @@ updatedAt: '2026-07-12T07:41:58.913Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 15 |
-| Sessions | 61 |
-| Page views | 215 |
+| Active users | 16 |
+| Sessions | 63 |
+| Page views | 217 |
 
 ### 상위 블로그 랜딩 (7일)
 
@@ -91,7 +91,7 @@ updatedAt: '2026-07-12T07:41:58.913Z'
 | `/ko/blog/2026-air-purifiers-guide` | 39 |
 | `/ko/blog/welcome` | 22 |
 | `/en/blog/welcome` | 6 |
-| `/en/blog/2026-budget-wireless-earbuds-top5` | 4 |
+| `/en/blog/2026-budget-wireless-earbuds-top5` | 5 |
 | `/ko/blog/2026-budget-fitness-trackers-head-to-head` | 4 |
 | `/en/blog/2026-air-purifiers-guide` | 2 |
 | `/en/blog/2026-bidets-checklist` | 2 |
