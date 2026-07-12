@@ -613,13 +613,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-12T07:49:39.343Z",
+    "at": "2026-07-12T07:50:37.039Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 19min (KST 2026-07-12)",
-        "severity": "error"
+        "message": "Publish slot overdue by 0min (KST 2026-07-12)",
+        "severity": "warning"
       },
       {
         "code": "draft-integrity-issues",
@@ -633,7 +633,7 @@
       }
     ],
     "repairs": [
-      "forced-catch-up-slot"
+      "marked-slot-catch-up"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-11",
