@@ -36,12 +36,12 @@
     "television"
   ],
   "lastPublishAt": "2026-07-11T13:27:19.499Z",
-  "nextPublishAt": "2026-07-12T11:44:30.390Z",
+  "nextPublishAt": "2026-07-12T15:36:45.883Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
-  "publishDateKst": "2026-07-12",
+  "publishDateKst": "2026-07-13",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-12",
+  "writeDateKst": "2026-07-13",
   "history": [
     {
       "action": "publish",
@@ -613,28 +613,16 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-12T11:44:30.390Z",
-    "issueCount": 3,
+    "at": "2026-07-12T15:36:45.869Z",
+    "issueCount": 1,
     "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 139min (KST 2026-07-12)",
-        "severity": "error"
-      },
       {
         "code": "draft-integrity-issues",
         "message": "2 draft(s) have publish gate issues",
         "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
-        "severity": "error"
       }
     ],
-    "repairs": [
-      "forced-catch-up-slot"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-11",
   "lastDailyContentAudit": {
