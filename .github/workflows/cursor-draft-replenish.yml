@@ -9,13 +9,15 @@ on:
     paths:
       - "data/automation/cursor-draft-request.json"
   schedule:
-    - cron: "*/5 * * * *"
+    # Backup only — primary replenish runs inside blog-publish-slot.yml.
+    # Do not use */5 here: Cursor agent runs often exceed 15min; frequent cron + cancel killed jobs.
+    - cron: "*/15 * * * *"
     - cron: "0 * * * *"
   workflow_dispatch:
 
 concurrency:
   group: cursor-draft-replenish
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   replenish:

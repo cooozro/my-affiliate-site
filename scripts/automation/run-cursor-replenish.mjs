@@ -447,6 +447,31 @@ async function replenishWithCursor(request, draftsBefore) {
   throw new Error(lastMessage);
 }
 
+const REPLENISH_LOCK_MS = 45 * 60 * 1000;
+
+function tryAcquireReplenishLock() {
+  const state = loadState();
+  const lockedAt = state.replenishLockAt
+    ? new Date(state.replenishLockAt).getTime()
+    : null;
+  if (lockedAt != null && Date.now() - lockedAt < REPLENISH_LOCK_MS) {
+    const ageMin = Math.floor((Date.now() - lockedAt) / 60_000);
+    console.log(
+      `Replenish lock active (${ageMin}min) — another run is likely in progress, skip`,
+    );
+    return false;
+  }
+  state.replenishLockAt = new Date().toISOString();
+  saveState(state);
+  return true;
+}
+
+function releaseReplenishLock() {
+  const state = loadState();
+  delete state.replenishLockAt;
+  saveState(state);
+}
+
 async function main() {
   loadEnvFile();
 
@@ -456,53 +481,56 @@ async function main() {
     return;
   }
 
-  request = refreshStaleRequestTopic(request);
-  saveCursorDraftRequest({ ...request, status: "pending" });
-
-  if (countDrafts() >= TARGET_DRAFT_COUNT) {
-    completeCursorDraftRequest(null);
-    console.log(`Draft buffer already full (${countDrafts()}/${TARGET_DRAFT_COUNT})`);
+  if (!tryAcquireReplenishLock()) {
     return;
   }
-
-  const openaiKey = process.env.OPENAI_API_KEY?.trim();
-  const cursorKey = process.env.CURSOR_API_KEY?.trim();
-  if (!cursorKey && !openaiKey) {
-    const message =
-      "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions). " +
-      "Create at https://cursor.com/dashboard/integrations — chat/IDE keys are not auto-synced.";
-    recordReplenishFailure(message);
-    console.error(message);
-    // Exit 0 so publish/validate steps still run; pending request retries on next cron.
-    return;
-  }
-
-  recordReplenishAttempt();
-  const draftsBefore = new Set(listDrafts().map((d) => d.slug));
-  const slugsBefore = new Set(listSlugDirs());
-  let createdSlugs = [];
 
   try {
-    createdSlugs = await runReplenishProviders(request, draftsBefore, {
-      cursorKey,
-      openaiKey,
-    });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    recordReplenishFailure(message);
-    console.error(message);
-    // Exit 0 so publish/validate steps still run; pending request retries on next cron.
-    return;
-  }
+    request = refreshStaleRequestTopic(request);
+    saveCursorDraftRequest({ ...request, status: "pending" });
 
-  if (createdSlugs.length === 0) {
-    const message = "Replenish finished but no new draft was created.";
-    recordReplenishFailure(message);
-    console.error(message);
-    return;
-  }
+    if (countDrafts() >= TARGET_DRAFT_COUNT) {
+      completeCursorDraftRequest(null);
+      console.log(`Draft buffer already full (${countDrafts()}/${TARGET_DRAFT_COUNT})`);
+      return;
+    }
 
-  for (const slug of createdSlugs) {
+    const openaiKey = process.env.OPENAI_API_KEY?.trim();
+    const cursorKey = process.env.CURSOR_API_KEY?.trim();
+    if (!cursorKey && !openaiKey) {
+      const message =
+        "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions). " +
+        "Create at https://cursor.com/dashboard/integrations — chat/IDE keys are not auto-synced.";
+      recordReplenishFailure(message);
+      console.error(message);
+      return;
+    }
+
+    recordReplenishAttempt();
+    const draftsBefore = new Set(listDrafts().map((d) => d.slug));
+    const slugsBefore = new Set(listSlugDirs());
+    let createdSlugs = [];
+
+    try {
+      createdSlugs = await runReplenishProviders(request, draftsBefore, {
+        cursorKey,
+        openaiKey,
+      });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      recordReplenishFailure(message);
+      console.error(message);
+      return;
+    }
+
+    if (createdSlugs.length === 0) {
+      const message = "Replenish finished but no new draft was created.";
+      recordReplenishFailure(message);
+      console.error(message);
+      return;
+    }
+
+    for (const slug of createdSlugs) {
     const slugCheck = validateReplenishWrittenSlug(slug, slugsBefore);
     if (!slugCheck.ok) {
       rejectReplenishOverwrite(slug, slugCheck.reason);
@@ -561,6 +589,9 @@ async function main() {
   console.log(
     `Partial replenish OK: ${createdSlugs.join(", ")} — buffer ${countDrafts()}/${TARGET_DRAFT_COUNT}, ${remaining} still queued`,
   );
+  } finally {
+    releaseReplenishLock();
+  }
 }
 
 main().catch((error) => {
