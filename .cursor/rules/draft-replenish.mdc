@@ -15,7 +15,9 @@ When `data/automation/cursor-draft-request.json` has `"status": "pending"`:
 3. Set frontmatter `createdAt` to the current ISO timestamp (actual 작성일 for admin sort). On **drafts**, set `date` to **today's KST calendar day** (or omit) — publish automation overwrites `date` at go-live. Do **not** set future `date` on buffer drafts; use `publishAfter: YYYY-MM-DD` only when explicitly deferring publication.
 4. Set frontmatter `contentProfile` to match the request (buying-guide | head-to-head | scenario-guide | explainer | checklist).
 5. Use `scripts/lib/editorial-standards.mjs` — no fake seller API claims. **Season-first:** frame the angle for current KST season/events in the request.
-6. Add cover image via **`npm run content:image -- --slug={slug}`** (or `scripts/fetch-cover-image.mjs` with `--force` when replacing). Requires `PEXELS_API_KEY` and/or `PIXABAY_API_KEY` — **never copy** `coverImage` files or frontmatter from another post. Copying bypasses duplicate detection (visual content hash) and is forbidden.
+6. **Cover image** — never copy another post's cover file or frontmatter.
+   - **Local keys set** (`.env`): `npm run content:image -- --slug={slug}`
+   - **No local keys** (normal): leave `coverImage` empty → `git push` → GitHub Actions **"Fetch missing draft covers"** runs with repo Secrets → `git pull` → unique cover committed. Or trigger that workflow manually in GitHub Actions.
 7. **Publish-ready gate (mandatory):** description 50–160 chars in **both** locales; `## FAQ` / `## 자주 묻는 질문` with ≥3 `###` Q&A pairs (see `MIN_FAQ_BY_PROFILE` in `scripts/lib/faq-section-audit.mjs`); cover on disk; full profile template sections.
 8. Run `npm run content:integrity:repair` (all drafts) or `node scripts/check-integrity.mjs {slug} --draft --repair` — **zero errors** required. `npm run content:validate` does **not** audit drafts.
 9. Update the request file: `"status": "complete"`, `writtenSlug`, `completedAt` — only after step 8 passes (`completeCursorDraftRequest` enforces the gate).

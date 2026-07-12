@@ -17,6 +17,7 @@ import {
   saveImageRegistry,
   syncImageRegistryFromPosts,
 } from "./lib/used-images.mjs";
+import { ensureImageApiEnv, printImageApiKeyHelp } from "./lib/image-api-env.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -124,8 +125,9 @@ async function refreshSlug(slug) {
 }
 
 async function main() {
+  ensureImageApiEnv();
   if (availableImageProviders().length === 0) {
-    console.error("Missing PEXELS_API_KEY and/or PIXABAY_API_KEY");
+    printImageApiKeyHelp();
     process.exit(1);
   }
 

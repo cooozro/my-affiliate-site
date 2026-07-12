@@ -18,6 +18,7 @@ import {
   pickImageProvider,
 } from "./lib/cover-image.mjs";
 import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
+import { ensureImageApiEnv, printImageApiKeyHelp } from "./lib/image-api-env.mjs";
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "content", "posts");
@@ -69,6 +70,7 @@ function coverAlreadyExists(slug, coverImage) {
 }
 
 async function main() {
+  ensureImageApiEnv();
   const { slug, query, locale, provider, force } = parseArgs(process.argv.slice(2));
 
   if (!slug) {
@@ -79,9 +81,7 @@ async function main() {
   }
 
   if (availableImageProviders().length === 0) {
-    console.error(
-      "Missing PEXELS_API_KEY and PIXABAY_API_KEY. Add at least one to .env.local",
-    );
+    printImageApiKeyHelp();
     process.exit(1);
   }
 

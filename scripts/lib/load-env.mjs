@@ -6,14 +6,8 @@ import path from "path";
 
 let loaded = false;
 
-export function loadEnvFile(root = process.cwd()) {
-  if (loaded) return;
-
-  const envPath = path.join(root, ".env");
-  if (!fs.existsSync(envPath)) {
-    loaded = true;
-    return;
-  }
+function applyEnvFile(envPath) {
+  if (!fs.existsSync(envPath)) return;
 
   const text = fs.readFileSync(envPath, "utf8");
   for (const line of text.split(/\r?\n/)) {
@@ -36,6 +30,14 @@ export function loadEnvFile(root = process.cwd()) {
       process.env[key] = value;
     }
   }
+}
+
+export function loadEnvFile(root = process.cwd()) {
+  if (loaded) return;
+
+  // .env then .env.local (first wins — do not override shell env)
+  applyEnvFile(path.join(root, ".env"));
+  applyEnvFile(path.join(root, ".env.local"));
 
   loaded = true;
   logSearchEnvStatus();

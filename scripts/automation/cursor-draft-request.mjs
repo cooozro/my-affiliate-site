@@ -80,6 +80,7 @@ function buildInstructions(strategy, season, events, plan = null) {
 
   instructions +=
     'Publish-ready before complete: description 50–160 chars (en+ko), "## FAQ" / "## 자주 묻는 질문" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. ' +
+    'Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA "Fetch missing draft covers" run (repo Secrets), then git pull. ' +
     'Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. ' +
     'Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. ' +
     'Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.';

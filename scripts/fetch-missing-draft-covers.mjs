@@ -13,6 +13,7 @@ import {
   hashImageContentFile,
   syncImageRegistryFromPosts,
 } from "./lib/used-images.mjs";
+import { ensureImageApiEnv, printImageApiKeyHelp } from "./lib/image-api-env.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 const SKIP_SLUGS = new Set(["adsense-seo-checklist", "aipick-seo-precision-report"]);
@@ -91,6 +92,7 @@ function defaultQuery(slug) {
 }
 
 syncImageRegistryFromPosts();
+ensureImageApiEnv();
 
 const missing = listDraftSlugsMissingCover();
 const duplicateDrafts = findDuplicateCoverSlugs().filter((slug) => {
@@ -108,7 +110,7 @@ if (targets.length === 0) {
 }
 
 if (!process.env.PEXELS_API_KEY && !process.env.PIXABAY_API_KEY) {
-  console.error("Missing PEXELS_API_KEY and PIXABAY_API_KEY in environment.");
+  printImageApiKeyHelp();
   process.exit(1);
 }
 
