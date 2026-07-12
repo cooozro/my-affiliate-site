@@ -613,13 +613,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-12T04:22:48.380Z",
+    "at": "2026-07-12T04:29:19.442Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 130min (KST 2026-07-12)",
-        "severity": "error"
+        "message": "Publish slot overdue by 6min (KST 2026-07-12)",
+        "severity": "warning"
       },
       {
         "code": "low-draft-buffer",
@@ -628,12 +628,12 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 895min",
+        "message": "Cursor replenish pending 901min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "forced-catch-up-slot"
+      "marked-slot-catch-up"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-11",
