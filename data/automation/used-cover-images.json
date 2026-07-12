@@ -665,6 +665,20 @@
       "hash": "d00136975dd20cde981881cb0ddeacec10d03e66dd8f09dea6ada97a319bf0f8",
       "provider": null,
       "registeredAt": "2026-07-10T13:20:06.925Z"
+    },
+    {
+      "slug": "2026-family-3-5-home-essentials-scenario-guide",
+      "assetKey": null,
+      "hash": "8183fb1af98df0cc91de99dd0dbaeffc51a946f869da63cf013e123746128c9d",
+      "provider": null,
+      "registeredAt": "2026-07-12T05:23:23.994Z"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "assetKey": null,
+      "hash": "10bba369d8bfb336dbb0b05f6c805213d0e6975984339e006f34ba678537edf6",
+      "provider": null,
+      "registeredAt": "2026-07-12T05:23:24.000Z"
     }
   ]
 }
