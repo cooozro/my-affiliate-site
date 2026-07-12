@@ -669,16 +669,36 @@
     {
       "slug": "2026-family-3-5-home-essentials-scenario-guide",
       "assetKey": null,
-      "hash": "8183fb1af98df0cc91de99dd0dbaeffc51a946f869da63cf013e123746128c9d",
+      "hash": null,
+      "contentHash": null,
       "provider": null,
-      "registeredAt": "2026-07-12T05:23:23.994Z"
+      "registeredAt": "2026-07-12T08:18:33.967Z"
+    },
+    {
+      "slug": "2026-family-3-5-home-essentials-scenario-guide",
+      "url": "https://pixabay.com/get/g2e3af0ff4283dc9f584bc2886af7ac0e1d0e6eacf0e439c8177aaf69f2ae937c1852045eb1394c59ad6cbd06e51773a207066aba8e2926f6d701ee0d76f22097_1280.jpg",
+      "assetKey": "pixabay:7244468",
+      "hash": "d51ec2f714206d0ef81fbfe41b4197dbd534ecf3f5826bc5fc002969f21ed1e5",
+      "contentHash": "d51ec2f714206d0ef81fbfe41b4197dbd534ecf3f5826bc5fc002969f21ed1e5",
+      "provider": "pixabay",
+      "registeredAt": "2026-07-12T08:18:53.510Z"
     },
     {
       "slug": "2026-solo-apartment-home-essentials-checklist-guide",
       "assetKey": null,
-      "hash": "10bba369d8bfb336dbb0b05f6c805213d0e6975984339e006f34ba678537edf6",
+      "hash": null,
+      "contentHash": null,
       "provider": null,
-      "registeredAt": "2026-07-12T05:23:24.000Z"
+      "registeredAt": "2026-07-12T08:18:53.561Z"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "url": "https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg",
+      "assetKey": "pexels:10024297",
+      "hash": "b056fe9862479db4813a223c44ae5cc842079e111a4e6539d5e5d2626f310584",
+      "contentHash": "b056fe9862479db4813a223c44ae5cc842079e111a4e6539d5e5d2626f310584",
+      "provider": "pexels",
+      "registeredAt": "2026-07-12T08:19:09.975Z"
     }
   ]
 }

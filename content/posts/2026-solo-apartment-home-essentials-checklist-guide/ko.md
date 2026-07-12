@@ -1,8 +1,8 @@
 ---
 title: '1인 아파트 필수 가전 체크리스트: 여름 입주 전 교차 카테고리 7가지 점검'
 description: >-
-  1인 아파트 교차 카테고리 7항목 — 선풍기·공기청정기·무선 이어폰·에어프라이어·로봇청소기,
-  밀폐 냉방 여름 전 점검. 스튜디오·원룸 회로·발코니 제약 포함.
+  1인 아파트 교차 카테고리 7항목 — 선풍기·공기청정기·무선 이어폰·에어프라이어·로봇청소기, 밀폐 냉방 여름 전 점검. 스튜디오·원룸
+  회로·발코니 제약 포함.
 date: '2026-07-12'
 createdAt: '2026-07-12T05:10:00.000Z'
 tags:
@@ -19,14 +19,19 @@ writingMode: benchmark
 draft: true
 liveData: true
 coverImage: >-
-  /images/posts/2026-solo-apartment-home-essentials-checklist-guide/solo-apartment-checklist-cover.jpg
-coverImageAlt: 일상 필수품이 있는 소형 아파트 거실
-coverImageAltKo: 일상 필수품이 있는 소형 아파트 거실
+  /images/posts/2026-solo-apartment-home-essentials-checklist-guide/small-apartment-studio-essentials-cover.jpg
+coverImageAlt: small apartment
+coverImageAltKo: small apartment
 imageSearchKeywords:
   - small apartment
   - studio essentials
   - compact home
   - solo living
+coverImageCredit: Photo by Ron Lach / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 10024297
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## 편집부 개요
 

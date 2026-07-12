@@ -21,15 +21,20 @@ writingMode: benchmark
 draft: true
 liveData: true
 coverImage: >-
-  /images/posts/2026-solo-apartment-home-essentials-checklist-guide/solo-apartment-checklist-cover.jpg
-coverImageAlt: compact living room in a small apartment with everyday essentials
-coverImageAltKo: 일상 필수품이 있는 소형 아파트 거실
+  /images/posts/2026-solo-apartment-home-essentials-checklist-guide/small-apartment-studio-essentials-cover.jpg
+coverImageAlt: small apartment
+coverImageAltKo: small apartment
 imageSearchKeywords:
   - small apartment
   - studio essentials
   - compact home
   - solo living
 updatedAt: '2026-07-12T05:07:02.668Z'
+coverImageCredit: Photo by Ron Lach / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 10024297
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 

@@ -21,12 +21,17 @@ draft: true
 liveData: true
 createdAt: '2026-07-12T05:15:00.000Z'
 coverImage: >-
-  /images/posts/2026-family-3-5-home-essentials-scenario-guide/family-home-essentials-cover.jpg
-coverImageAlt: family living room with everyday home appliances
-coverImageAltKo: 가족 거실과 일상 가전
+  /images/posts/2026-family-3-5-home-essentials-scenario-guide/family-living-room-home-appliances-cover.jpg
+coverImageAlt: family living room home
+coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
 updatedAt: '2026-07-12T05:07:02.851Z'
+coverImageCredit: Photo by Surprising_Media / Pixabay
+coverImageProvider: pixabay
+coverImageAssetId: 7244468
+coverImageSourceUrl: >-
+  https://pixabay.com/get/g2e3af0ff4283dc9f584bc2886af7ac0e1d0e6eacf0e439c8177aaf69f2ae937c1852045eb1394c59ad6cbd06e51773a207066aba8e2926f6d701ee0d76f22097_1280.jpg
 ---
 ## Editorial Overview
 
