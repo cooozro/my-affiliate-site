@@ -127,12 +127,22 @@ function formatCursorRunFailure(result) {
   if (typeof result.durationMs === "number") {
     parts.push(`${Math.round(result.durationMs / 1000)}s`);
   }
+  if (result.error?.code) {
+    parts.push(`code=${result.error.code}`);
+  }
   if (result.error?.message) {
     parts.push(result.error.message);
-  } else if (result.error?.code) {
-    parts.push(result.error.code);
+  }
+  if (result.status) {
+    parts.push(`status=${result.status}`);
   }
   return parts.join(" — ");
+}
+
+function failReplenish(message, extra = {}) {
+  recordReplenishFailure(message, extra);
+  console.error(`REPLENISH_FAILED: ${message}`);
+  process.exitCode = 1;
 }
 
 function cursorRetryDelaysMs() {
@@ -501,8 +511,7 @@ async function main() {
       const message =
         "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions). " +
         "Create at https://cursor.com/dashboard/integrations — chat/IDE keys are not auto-synced.";
-      recordReplenishFailure(message);
-      console.error(message);
+      failReplenish(message, { reason: "missing-api-key" });
       return;
     }
 
@@ -518,15 +527,17 @@ async function main() {
       });
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      recordReplenishFailure(message);
-      console.error(message);
+      failReplenish(message, {
+        reason: "provider-error",
+        provider: cursorKey ? "cursor" : "openai",
+      });
       return;
     }
 
     if (createdSlugs.length === 0) {
-      const message = "Replenish finished but no new draft was created.";
-      recordReplenishFailure(message);
-      console.error(message);
+      failReplenish("Replenish finished but no new draft was created.", {
+        reason: "no-draft-output",
+      });
       return;
     }
 
@@ -547,10 +558,12 @@ async function main() {
     const issues = validateDraftPublishReady(slug);
     if (issues.length > 0) {
       removeReplenishSlugArtifacts(slug);
-      recordReplenishFailure(
-        `Integrity gate failed for ${slug}: ${issues.slice(0, 3).join(" | ")}`,
-      );
-      console.error(`Integrity gate failed for ${slug}`);
+      const detail = issues.slice(0, 5).join(" | ");
+      failReplenish(`Integrity gate failed for ${slug}: ${detail}`, {
+        reason: "integrity-gate",
+        slug,
+        issues: issues.slice(0, 8),
+      });
       return;
     }
 
@@ -591,6 +604,9 @@ async function main() {
   );
   } finally {
     releaseReplenishLock();
+  }
+  if (process.exitCode) {
+    process.exit(process.exitCode);
   }
 }
 

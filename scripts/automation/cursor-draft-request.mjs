@@ -272,14 +272,20 @@ export function recordReplenishAttempt() {
   });
 }
 
-export function recordReplenishFailure(message) {
+export function recordReplenishFailure(message, extra = {}) {
   const existing = readCursorDraftRequest();
   if (!existing) return;
+  const at = new Date().toISOString();
   writeRequest({
     ...existing,
     status: "pending",
-    lastError: message,
-    lastAttemptAt: new Date().toISOString(),
+    lastError: String(message).slice(0, 2000),
+    lastAttemptAt: at,
+    lastFailure: {
+      at,
+      message: String(message).slice(0, 2000),
+      ...extra,
+    },
   });
   console.error(`Draft replenish failed (will retry): ${message}`);
 }

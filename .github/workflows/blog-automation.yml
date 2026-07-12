@@ -139,7 +139,7 @@ jobs:
 
       - name: Cursor draft replenish
         if: success() && steps.task.outputs.name != 'status' && steps.task.outputs.name != 'refresh-post-covers' && (steps.automation.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
-        continue-on-error: true
+        id: replenish
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_VISION_MODEL: gpt-4o-mini

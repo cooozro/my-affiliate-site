@@ -1,124 +1,14 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-under-300-cross-category-buying-guide",
-  "requestedAt": "2026-07-11T13:27:19.520Z",
-  "writingMode": "benchmark",
-  "contentProfile": "checklist",
-  "toneVariant": "checklist-hook",
-  "serpKeyword": "single person apartment essential appliances buying guide 2026",
-  "serpCachePath": null,
-  "benchmarkOutline": {
-    "sections": [
-      {
-        "h2": "Who this cross-category guide is for",
-        "h3": [
-          "Studio vs one-bedroom floor plans",
-          "What one person actually uses daily",
-          "Summer closed-window living constraints"
-        ]
-      },
-      {
-        "h2": "Scenario: Cooling and airflow without central AC",
-        "h3": [
-          "Window vs portable vs fan-only tradeoffs",
-          "Recommended category pick with model example",
-          "Runner-up when install rules block hardware"
-        ]
-      },
-      {
-        "h2": "Scenario: Air quality in a sealed small space",
-        "h3": [
-          "CADR fit for 15–25 m²",
-          "Filter cost per year",
-          "Noise at sleep speed"
-        ]
-      },
-      {
-        "h2": "Scenario: Desk tech and commute audio",
-        "h3": [
-          "WFH webcam and hub basics",
-          "Earbuds for transit sweat",
-          "Power bank sizing"
-        ]
-      },
-      {
-        "h2": "Scenario: Meals without a full kitchen lineup",
-        "h3": [
-          "Air fryer vs rice cooker footprint",
-          "Circuit load beside a fan or AC"
-        ]
-      },
-      {
-        "h2": "Scenario: Floor care with minimal storage",
-        "h3": [
-          "Robot vs stick for studio clutter",
-          "Dock size and maintenance"
-        ]
-      },
-      {
-        "h2": "Quick cross-category comparison table",
-        "h3": [
-          "Category",
-          "Best solo pick",
-          "Skip if"
-        ]
-      },
-      {
-        "h2": "FAQ",
-        "h3": [
-          "Can one fan replace AC in a studio?",
-          "Which two categories to buy first on a tight budget?",
-          "How many amps does a solo apartment circuit share?"
-        ]
-      },
-      {
-        "h2": "Final Verdict",
-        "h3": [
-          "Buy if",
-          "Skip if"
-        ]
-      }
-    ],
-    "toneVariant": "checklist-hook",
-    "keyword": "single person apartment essential appliances buying guide 2026",
-    "serpSources": [],
-    "h2Similarity": 0,
-    "shingleOverlap": 0,
-    "embedded": true
-  },
-  "fallbackFrom": null,
-  "fallbackReason": null,
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "contentPlan": "meta",
-  "contentAngle": "solo-apartment-essentials",
-  "slugHint": "2026-solo-apartment-home-essentials-checklist-guide",
-  "topic": {
-    "id": "meta-solo-apartment-essentials",
-    "category": "cross-cutting",
-    "angle": "Cross-category starter essentials for one-person apartments: compact cooling, air quality, desk tech, and quick meals without full-size appliance sprawl",
-    "imageQuery": "small apartment living room essentials",
-    "liveData": true,
-    "seasons": [
-      "summer",
-      "spring",
-      "fall",
-      "winter"
-    ],
-    "anchorTopicIds": [
-      "electric-fans",
-      "air-purifiers",
-      "air-fryers",
-      "wireless-earbuds",
-      "robot-vacuums"
-    ],
-    "isMetaAngle": true
-  },
-  "templatePath": "docs/templates/checklist.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: benchmark. Tone: checklist-hook. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (household-type): Single-person apartment / 1인 가구. Cover multiple product categories in ONE article — anchor categories: electric-fans, air-purifiers, air-fryers, wireless-earbuds, robot-vacuums. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-solo-apartment-home-essentials-checklist-guide. Frontmatter: contentAngle: solo-apartment-essentials, topicId: meta-solo-apartment-essentials. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
-  "lastError": null
+  "status": "complete",
+  "completedAt": "2026-07-12T05:30:00.000Z",
+  "writtenSlug": "2026-family-3-5-home-essentials-scenario-guide",
+  "draftCount": 2,
+  "needed": 0,
+  "note": "IDE manual replenish (benchmark B only): solo-apartment checklist + family 3-5 scenario-guide. Monitoring benchmark quality before GHA API reliance.",
+  "lastError": null,
+  "previousRequest": {
+    "topic": "meta-solo-apartment-essentials",
+    "contentProfile": "checklist",
+    "writingMode": "benchmark"
+  }
 }

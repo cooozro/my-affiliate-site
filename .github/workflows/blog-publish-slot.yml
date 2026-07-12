@@ -92,7 +92,7 @@ jobs:
 
       - name: Cursor draft replenish
         if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
-        continue-on-error: true
+        id: replenish
         env:
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -101,8 +101,15 @@ jobs:
           SERP_PROVIDER: serper
         run: node scripts/automation/run-cursor-replenish.mjs
 
+      - name: Verify replenish when still pending
+        if: steps.pending_replenish.outputs.needed == 'true' && steps.replenish.outcome == 'failure'
+        run: |
+          echo "::error::Cursor draft replenish step failed — see logs above"
+          node -e "try{const r=require('./data/automation/cursor-draft-request.json');console.error('lastError:',r.lastError||'(none)');console.error('lastFailure:',JSON.stringify(r.lastFailure||null));}catch(e){console.error(e.message)}"
+          exit 1
+
       - name: Validate content after replenish
-        if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
+        if: success() && (steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
         run: npm run content:validate
 
       - name: Fetch missing draft covers
