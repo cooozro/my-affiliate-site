@@ -36,7 +36,7 @@
     "television"
   ],
   "lastPublishAt": "2026-07-11T13:27:19.499Z",
-  "nextPublishAt": "2026-07-12T04:22:48.380Z",
+  "nextPublishAt": "2026-07-12T05:18:34.734Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-12",
@@ -613,13 +613,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-12T04:29:19.442Z",
+    "at": "2026-07-12T05:18:34.734Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 6min (KST 2026-07-12)",
-        "severity": "warning"
+        "message": "Publish slot overdue by 55min (KST 2026-07-12)",
+        "severity": "error"
       },
       {
         "code": "low-draft-buffer",
@@ -628,12 +628,12 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 901min",
+        "message": "Cursor replenish pending 951min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "forced-catch-up-slot"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-11",
