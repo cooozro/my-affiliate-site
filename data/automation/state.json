@@ -623,17 +623,17 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T11:20:42.916Z",
+    "at": "2026-07-13T11:30:58.103Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 38min (KST 2026-07-13)",
+        "message": "Publish slot overdue by 10min (KST 2026-07-13)",
         "severity": "error"
       }
     ],
     "repairs": [
-      "forced-catch-up-slot"
+      "marked-slot-catch-up"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-11",
