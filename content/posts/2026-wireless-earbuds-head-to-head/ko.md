@@ -1,8 +1,6 @@
 ---
 title: '여름 출퇴근 TWS: Sony WF-C700N vs 갤럭시 버즈3 vs 사운드코어 리버티 4 NC'
-description: >-
-  2026년 예산형 무선 이어버드 3종을 ANC 깊이, LDAC·AAC 코덱, ANC 켠 배터리,
-  무더위 출퇴근·이동에 맞춰 비교합니다.
+description: '2026년 예산형 무선 이어버드 3종을 ANC 깊이, LDAC·AAC 코덱, ANC 켠 배터리, 무더위 출퇴근·이동에 맞춰 비교합니다.'
 date: '2026-07-13'
 tags:
   - 무선 이어폰
@@ -20,6 +18,15 @@ imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones
   - ANC earbuds
+coverImage: >-
+  /images/posts/2026-wireless-earbuds-head-to-head/wireless-earbuds-true-wireless-earphones-cover.jpg
+coverImageAlt: 책상 위의 무선 이어폰
+coverImageAltKo: 책상 위의 무선 이어폰
+coverImageCredit: Photo by Ketut Subiyanto / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 4560166
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## 편집부 개요
 

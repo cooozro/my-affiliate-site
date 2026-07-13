@@ -20,6 +20,15 @@ imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones
   - ANC earbuds
+coverImage: >-
+  /images/posts/2026-wireless-earbuds-head-to-head/wireless-earbuds-true-wireless-earphones-cover.jpg
+coverImageAlt: wireless earbuds on a desk
+coverImageAltKo: 책상 위의 무선 이어폰
+coverImageCredit: Photo by Ketut Subiyanto / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 4560166
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 
