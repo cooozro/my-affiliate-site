@@ -6,7 +6,9 @@ import { pickTopic } from "../automation/topics.mjs";
 import { getTopicFormatCoverage } from "./topic-coverage.mjs";
 import { getRoadmapPhase, tier1FirstPassComplete } from "./content-roadmap.mjs";
 import { getTopicHistory } from "./topic-diversity.mjs";
-import { pickContentProfile } from "./content-profiles.mjs";
+import { getPublishTopicHistory } from "./infer-post-topic.mjs";
+import { wouldViolateTopicDiversity } from "./topic-diversity.mjs";
+import { pickContentProfile, CONTENT_PROFILES } from "./content-profiles.mjs";
 import { getCurrentSeason } from "./season-topics.mjs";
 import {
   listMetaAnglesForSeason,
@@ -44,6 +46,15 @@ function recentSingleProductStreak(state) {
     streak += 1;
   }
   return streak;
+}
+
+/** Meta angles publish as cross-cutting — blocked after 2 consecutive same category. */
+export function metaPublishWouldViolateDiversity(state) {
+  const history = getPublishTopicHistory(state);
+  return wouldViolateTopicDiversity(
+    { id: "meta-angle", category: "cross-cutting" },
+    history,
+  ).blocked;
 }
 
 /**
@@ -134,7 +145,17 @@ export function pickContentPlan(state, options = {}) {
     !options.forceProduct &&
     (options.forceMeta || shouldPickMetaAngle(state, coverage));
 
-  if (useMeta) {
+  if (useMeta && !options.forceMeta && metaPublishWouldViolateDiversity(state)) {
+    console.log(
+      "Content plan: skipping meta angle — cross-cutting already 2x in publish queue (product topic required)",
+    );
+  }
+
+  if (
+    useMeta &&
+    !options.forceMeta &&
+    !metaPublishWouldViolateDiversity(state)
+  ) {
     const meta = pickMetaAngle(state, { contentProfile });
     return {
       kind: "meta",
@@ -145,11 +166,24 @@ export function pickContentPlan(state, options = {}) {
     };
   }
 
-  const topic = pickTopic(state, { contentProfile });
-  console.log(
-    `Product topic picked: ${topic.id} (roadmap: ${phase})`,
-  );
-  return { kind: "product", topic, contentProfile };
+  const preferredProfile = contentProfile ?? pickContentProfile(state);
+  const profilesToTry = [
+    preferredProfile,
+    ...CONTENT_PROFILES.filter((p) => p !== preferredProfile),
+  ];
+
+  let lastError = null;
+  for (const profile of profilesToTry) {
+    try {
+      const topic = pickTopic(state, { contentProfile: profile });
+      console.log(`Product topic picked: ${topic.id} (roadmap: ${phase}, profile: ${profile})`);
+      return { kind: "product", topic, contentProfile: profile };
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError ?? new Error(`No product topics available in roadmap phase ${phase}`);
 }
 
 export function describeContentPlanMix(state) {

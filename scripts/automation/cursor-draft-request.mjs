@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { countDrafts, assertDraftPublishReady } from "./posts-fs.mjs";
+import { countDrafts, assertDraftPublishReady, validateDraftPublishEligible, countPublishEligibleDrafts, listDrafts } from "./posts-fs.mjs";
 import { pickContentPlan, describeContentPlanMix } from "../lib/pick-content-plan.mjs";
 import { isMetaTopicId } from "../lib/content-angles.mjs";
 import { loadState, saveState } from "./state.mjs";
@@ -92,7 +92,7 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
 
   const state = loadState();
   const plan = pickContentPlan(state, {
-    contentProfile: existing?.contentProfile,
+    contentProfile: options.forceProduct ? undefined : existing?.contentProfile,
     forceMeta: options.forceMeta,
     forceProduct: options.forceProduct,
   });
@@ -154,10 +154,15 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
 export async function queueCursorDraftReplenish(publishedSlug) {
   const draftCount = countDrafts();
   const needed = TARGET_DRAFT_COUNT - draftCount;
+  const publishEligible = countPublishEligibleDrafts();
 
   if (needed <= 0) {
+    if (publishEligible === 0 && draftCount > 0) {
+      return queuePublishUnblockReplenish("buffer-full-no-publish-eligible");
+    }
+
     const existing = readCursorDraftRequest();
-    if (existing?.status === "pending") {
+    if (existing?.status === "pending" && !existing.unblockReason) {
       writeRequest({
         status: "complete",
         completedAt: new Date().toISOString(),
@@ -178,6 +183,48 @@ export async function queueCursorDraftReplenish(publishedSlug) {
       (request.fallbackReason ? ` (fallback: ${request.fallbackReason})` : ""),
   );
   return true;
+}
+
+/**
+ * Queue a product-topic draft when the buffer is full but nothing can publish
+ * (e.g. consecutive cross-cutting meta drafts after a meta publish streak).
+ */
+export async function queuePublishUnblockReplenish(reason = "topic-diversity") {
+  const existing = readCursorDraftRequest();
+  if (existing?.status === "pending") {
+    console.log(`Publish unblock skipped: replenish already pending (${existing.unblockReason ?? "buffer"})`);
+    return false;
+  }
+
+  const request = await buildQueuedRequest(
+    existing?.publishedSlug ?? null,
+    existing,
+    { forceProduct: true },
+  );
+  request.needed = 1;
+  request.unblockReason = reason;
+  request.note =
+    `Publish unblock (${reason}): product topic required — buffer may exceed ${TARGET_DRAFT_COUNT} until slot clears`;
+  writeRequest(request);
+
+  console.log(
+    `Publish unblock replenish queued: reason=${reason}, topic=${request.topic.id}, profile=${request.contentProfile}`,
+  );
+  return request;
+}
+
+/** When publish slot is due but no draft passes publish-phase gates, queue product replenish. */
+export async function ensurePublishableDraftBuffer() {
+  const drafts = listDrafts();
+  if (drafts.length === 0) {
+    return ensureDraftReplenishQueued(null);
+  }
+
+  if (countPublishEligibleDrafts(drafts) > 0) {
+    return false;
+  }
+
+  return queuePublishUnblockReplenish("no-publish-eligible-drafts");
 }
 
 /** Queue Cursor replenish when buffer is below target and no request is in flight. */
@@ -226,6 +273,12 @@ export async function queueBenchmarkReplenish(publishedSlug = null) {
 export function completeCursorDraftRequest(writtenSlug) {
   if (writtenSlug) {
     assertDraftPublishReady(writtenSlug);
+    const publishIssues = validateDraftPublishEligible(writtenSlug);
+    if (publishIssues.length > 0) {
+      throw new Error(
+        `Draft "${writtenSlug}" would fail publish slot:\n${publishIssues.map((i) => `  • ${i}`).join("\n")}`,
+      );
+    }
   }
   writeRequest({
     status: "complete",

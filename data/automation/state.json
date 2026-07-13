@@ -1,10 +1,6 @@
 {
-  "topicIndex": 20,
+  "topicIndex": 22,
   "usedTopicIds": [
-    "budget-monitors",
-    "wireless-earbuds",
-    "budget-smartphones",
-    "portable-ac",
     "window-ac",
     "air-purifiers",
     "dehumidifiers",
@@ -33,7 +29,8 @@
     "induction-cooktops",
     "washing-machines",
     "space-heaters",
-    "television"
+    "television",
+    "wireless-earbuds"
   ],
   "lastPublishAt": "2026-07-11T13:27:19.499Z",
   "nextPublishAt": "2026-07-13T08:08:16.938Z",
@@ -441,11 +438,6 @@
   ],
   "topicHistory": [
     {
-      "id": "tablet-budget",
-      "category": "tablets",
-      "at": "2026-07-04T01:56:28.545Z"
-    },
-    {
       "id": "air-fryers",
       "at": "2026-07-04T06:43:31.581Z"
     },
@@ -587,10 +579,15 @@
       "category": "cross-cutting",
       "cluster": "price-tier-300",
       "at": "2026-07-11T13:27:19.504Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "category": "audio",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-07-13T08:12:44.171Z"
     }
   ],
   "formatHistory": [
-    "buying-guide",
     "explainer",
     "head-to-head",
     "scenario-guide",
@@ -609,26 +606,27 @@
     "explainer",
     "scenario-guide",
     "buying-guide",
-    "explainer"
+    "explainer",
+    "head-to-head"
   ],
-  "roadmapPhase": "tier2-first-pass",
+  "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T08:08:16.938Z",
+    "at": "2026-07-13T08:12:49.323Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 24min (KST 2026-07-13)",
+        "message": "Publish slot overdue — publish blocked by topic diversity until product draft lands",
         "severity": "error"
       },
       {
-        "code": "draft-integrity-issues",
-        "message": "2 draft(s) have publish gate issues",
-        "severity": "warning"
+        "code": "draft-topic-diversity-blocked",
+        "message": "2 draft(s) blocked by topic diversity (not content defects)",
+        "severity": "error"
       },
       {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
+        "code": "all-drafts-topic-diversity-blocked",
+        "message": "Every buffer draft is blocked by topic diversity — queue product-topic replenish",
         "severity": "error"
       }
     ],

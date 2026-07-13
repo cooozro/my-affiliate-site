@@ -162,6 +162,31 @@ export function pickDraftForPublish(drafts, state = loadState()) {
   return null;
 }
 
+/** Publish-slot eligibility (includes topic diversity / taxonomy spread). */
+export function getDraftPublishEligibility(slug, state = loadState()) {
+  if (isDraftDeferred(slug)) {
+    return { eligible: false, blockers: ["deferred until publishAfter"] };
+  }
+
+  const issues = validatePostFiles(slug, {
+    phase: "publish",
+    state,
+    applyRepair: false,
+  });
+  return { eligible: issues.length === 0, blockers: issues };
+}
+
+export function countPublishEligibleDrafts(drafts = listDrafts(), state = loadState()) {
+  return drafts.filter((d) => getDraftPublishEligibility(d.slug, state).eligible).length;
+}
+
+/** True when every non-deferred draft fails publish-phase gates (diversity or integrity). */
+export function allDraftsPublishBlocked(drafts = listDrafts(), state = loadState()) {
+  const active = drafts.filter((d) => !isDraftDeferred(d.slug));
+  if (active.length === 0) return false;
+  return countPublishEligibleDrafts(active, state) === 0;
+}
+
 /**
  * Run publish integrity gate. Returns blocking issue messages (empty = pass).
  * @param {string} slug
@@ -202,4 +227,10 @@ export function assertDraftPublishReady(slug, options = {}) {
       `Draft "${slug}" is not publish-ready:\n${issues.map((i) => `  • ${i}`).join("\n")}`,
     );
   }
+}
+
+/** Publish-slot blockers (topic diversity, taxonomy spread, strict integrity). */
+export function validateDraftPublishEligible(slug, options = {}) {
+  const state = options.state ?? loadState();
+  return getDraftPublishEligibility(slug, state).blockers;
 }

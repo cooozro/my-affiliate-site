@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { validatePostFiles, countPublishableDrafts, isDraftDeferred, readPost } from "../automation/posts-fs.mjs";
+import { validatePostFiles, countPublishableDrafts, countPublishEligibleDrafts, isDraftDeferred, readPost } from "../automation/posts-fs.mjs";
 import { kstDateString, loadState, resetDailyCounters } from "../automation/state.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import {
@@ -137,14 +137,21 @@ export function runAutomationHealthCheck(options = {}) {
   }
 
   if (blockedDrafts.length > 0) {
+    const diversityOnly = blockedDrafts.every((b) =>
+      b.issues.every((issue) => issue.includes("topic diversity")),
+    );
     issues.push({
-      code: "draft-integrity-issues",
-      message: `${blockedDrafts.length} draft(s) have publish gate issues`,
+      code: diversityOnly
+        ? "draft-topic-diversity-blocked"
+        : "draft-integrity-issues",
+      message: diversityOnly
+        ? `${blockedDrafts.length} draft(s) blocked by topic diversity (not content defects)`
+        : `${blockedDrafts.length} draft(s) have publish gate issues`,
       blockedDrafts: blockedDrafts.map((b) => ({
         slug: b.slug,
         issues: b.issues.slice(0, 5),
       })),
-      severity: "warning",
+      severity: diversityOnly ? "error" : "warning",
     });
   }
 
@@ -183,14 +190,21 @@ export function runAutomationHealthCheck(options = {}) {
     drafts.length > 0 &&
     blockedDrafts.length === countPublishableDrafts(drafts) &&
     countPublishableDrafts(drafts) > 0 &&
+    countPublishEligibleDrafts(drafts, state) === 0 &&
     underDailyCap &&
     nextAt != null &&
     nextAt <= nowMs
   ) {
+    const diversityOnly = blockedDrafts.every((b) =>
+      b.issues.every((issue) => issue.includes("topic diversity")),
+    );
     issues.push({
-      code: "all-drafts-blocked-at-slot",
-      message:
-        "Every queued draft failed integrity — publish cannot proceed until drafts are repaired",
+      code: diversityOnly
+        ? "all-drafts-topic-diversity-blocked"
+        : "all-drafts-blocked-at-slot",
+      message: diversityOnly
+        ? "Every buffer draft is blocked by topic diversity — queue product-topic replenish"
+        : "Every queued draft failed publish gates — repair drafts or replenish",
       severity: "error",
     });
   }

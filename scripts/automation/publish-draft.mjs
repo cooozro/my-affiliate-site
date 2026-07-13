@@ -2,6 +2,7 @@ import { distributePublishedPost } from "./distributor.mjs";
 import {
   countPublishedOnKstDate,
   countPublishableDrafts,
+  countPublishEligibleDrafts,
   isDraftDeferred,
   listDrafts,
   pickDraftForPublish,
@@ -10,7 +11,11 @@ import {
   writePost,
 } from "./posts-fs.mjs";
 import { maintainDraftBuffer } from "./generate-draft.mjs";
-import { queueCursorDraftReplenish, ensureDraftReplenishQueued } from "./cursor-draft-request.mjs";
+import {
+  queueCursorDraftReplenish,
+  ensureDraftReplenishQueued,
+  ensurePublishableDraftBuffer,
+} from "./cursor-draft-request.mjs";
 import { inferPostTopic } from "../lib/infer-post-topic.mjs";
 import {
   logAutomationHealthResult,
@@ -130,6 +135,7 @@ export async function publishOneDraft(options = {}) {
   }
 
   await ensureDraftReplenishQueued(null);
+  await ensurePublishableDraftBuffer();
 
   if (!canPublishNow(state, force)) {
     if (JSON.stringify(state) !== stateBefore) {
@@ -158,6 +164,7 @@ export async function publishOneDraft(options = {}) {
   let slug = null;
   let deferredSkipped = 0;
   let integritySkipped = 0;
+  let diversitySkipped = 0;
 
   while (!slug) {
     const candidates = drafts.filter((d) => !tried.has(d.slug));
@@ -165,11 +172,11 @@ export async function publishOneDraft(options = {}) {
 
     const picked = pickDraftForPublish(candidates, state);
     if (!picked) {
+      diversitySkipped = candidates.filter((d) => !isDraftDeferred(d.slug)).length;
       console.log(
-        "Publish skipped: every queued draft violates topic diversity (max 2 consecutive same topic/category/cluster).",
+        `Publish skipped: every queued draft violates topic diversity (max 2 consecutive same topic/category/cluster).`,
       );
-      saveState(state);
-      return null;
+      break;
     }
 
     tried.add(picked.slug);
@@ -206,16 +213,22 @@ export async function publishOneDraft(options = {}) {
 
   if (!slug) {
     const publishable = countPublishableDrafts(drafts);
+    const publishEligible = countPublishEligibleDrafts(drafts, state);
     let reason = "integrity-gate";
     let detail =
       `${tried.size} draft(s) failed checks — fix drafts or wait for replenish.`;
 
-    if (deferredSkipped > 0 && integritySkipped === 0 && deferredSkipped === tried.size) {
+    if (diversitySkipped > 0 && integritySkipped === 0) {
+      reason = "topic-diversity";
+      detail = `${diversitySkipped} draft(s) blocked by topic diversity — product-topic replenish required.`;
+      await ensurePublishableDraftBuffer();
+    } else if (deferredSkipped > 0 && integritySkipped === 0 && deferredSkipped === tried.size) {
       reason = "all-deferred";
       detail = `${deferredSkipped} draft(s) have publishAfter in the future — none eligible today.`;
-    } else if (publishable === 0 && drafts.length > 0 && deferredSkipped === 0) {
-      reason = "no-publishable-drafts";
-      detail = `${drafts.length} draft(s) in buffer but none pass publish checks.`;
+    } else if (publishEligible === 0 && drafts.length > 0 && deferredSkipped === 0) {
+      reason = "no-publish-eligible-drafts";
+      detail = `${drafts.length} draft(s) in buffer but none pass publish slot gates.`;
+      await ensurePublishableDraftBuffer();
     } else if (integritySkipped > 0) {
       detail = `${integritySkipped} draft(s) failed integrity gate.`;
     }
@@ -227,7 +240,9 @@ export async function publishOneDraft(options = {}) {
       triedSlugs: [...tried],
       deferredSkipped,
       integritySkipped,
+      diversitySkipped,
       publishableCount: publishable,
+      publishEligibleCount: publishEligible,
     };
     saveState(state);
     return null;
