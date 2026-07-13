@@ -32,10 +32,10 @@
     "television",
     "wireless-earbuds"
   ],
-  "lastPublishAt": "2026-07-11T13:27:19.499Z",
-  "nextPublishAt": "2026-07-13T08:08:16.938Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-13T08:28:51.576Z",
+  "nextPublishAt": "2026-07-13T14:24:34.297Z",
+  "scheduledGapHours": 5.93,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-13",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-13",
@@ -434,13 +434,21 @@
         "https://www.aipick.shop/en/blog/2026-under-300-cross-category-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-under-300-cross-category-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-wireless-earbuds-head-to-head",
+      "topic": {
+        "id": "wireless-earbuds"
+      },
+      "at": "2026-07-13T08:28:51.576Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-wireless-earbuds-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-wireless-earbuds-head-to-head"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "air-fryers",
-      "at": "2026-07-04T06:43:31.581Z"
-    },
     {
       "id": "portable-ssd",
       "category": "accessories",
@@ -585,6 +593,10 @@
       "category": "audio",
       "taxonomyGroup": "IT/모바일",
       "at": "2026-07-13T08:12:44.171Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "at": "2026-07-13T08:28:51.585Z"
     }
   ],
   "formatHistory": [
@@ -611,28 +623,10 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T08:12:49.323Z",
-    "issueCount": 3,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue — publish blocked by topic diversity until product draft lands",
-        "severity": "error"
-      },
-      {
-        "code": "draft-topic-diversity-blocked",
-        "message": "2 draft(s) blocked by topic diversity (not content defects)",
-        "severity": "error"
-      },
-      {
-        "code": "all-drafts-topic-diversity-blocked",
-        "message": "Every buffer draft is blocked by topic diversity — queue product-topic replenish",
-        "severity": "error"
-      }
-    ],
-    "repairs": [
-      "forced-catch-up-slot"
-    ]
+    "at": "2026-07-13T08:29:16.283Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-11",
   "lastDailyContentAudit": {

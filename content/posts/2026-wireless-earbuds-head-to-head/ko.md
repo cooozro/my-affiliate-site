@@ -11,9 +11,8 @@ tags:
 contentProfile: head-to-head
 topicId: wireless-earbuds
 writingMode: benchmark
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-13T08:30:00.000Z'
 imageSearchKeywords:
   - wireless earbuds
   - true wireless earphones
@@ -27,6 +26,8 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-13T08:28:50.000Z'
+publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## 편집부 개요
 
