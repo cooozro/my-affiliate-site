@@ -33,7 +33,7 @@
     "wireless-earbuds"
   ],
   "lastPublishAt": "2026-07-13T08:28:51.576Z",
-  "nextPublishAt": "2026-07-13T10:42:02.142Z",
+  "nextPublishAt": "2026-07-13T11:20:42.916Z",
   "scheduledGapHours": 0,
   "publishCountToday": 1,
   "publishDateKst": "2026-07-13",
@@ -623,12 +623,12 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T10:42:02.142Z",
+    "at": "2026-07-13T11:20:42.916Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 71min (KST 2026-07-13)",
+        "message": "Publish slot overdue by 38min (KST 2026-07-13)",
         "severity": "error"
       }
     ],
