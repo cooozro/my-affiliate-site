@@ -170,6 +170,7 @@ export function ensureNextPublishAt(state) {
   reconcilePublishSchedule(state);
   reconcileOverduePublishSlot(state);
   reconcileStaleCatchUpSlot(state);
+  reconcilePublishSlotWithGap(state);
 
   if (state.nextPublishAt) return;
 
@@ -203,4 +204,39 @@ export function formatKst(isoString) {
     minute: "2-digit",
     hour12: false,
   }).format(new Date(isoString));
+}
+
+/** Earliest time allowed for the next publish (slot AND min gap after last publish). */
+export function minGapPublishAt(state) {
+  if (!state.lastPublishAt || !(state.publishCountToday > 0)) return null;
+  return new Date(
+    new Date(state.lastPublishAt).getTime() +
+      MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000,
+  );
+}
+
+export function getPublishReadyAt(state, from = new Date()) {
+  const candidates = [from.getTime()];
+  if (state.nextPublishAt) {
+    candidates.push(new Date(state.nextPublishAt).getTime());
+  }
+  const gapAt = minGapPublishAt(state);
+  if (gapAt) candidates.push(gapAt.getTime());
+  return new Date(Math.max(...candidates));
+}
+
+/** Keep nextPublishAt aligned when health catch-up races ahead of the 4h gap. */
+export function reconcilePublishSlotWithGap(state, from = new Date()) {
+  if (!state.nextPublishAt) return false;
+
+  const ready = getPublishReadyAt(state, from);
+  const nextMs = new Date(state.nextPublishAt).getTime();
+  if (nextMs >= ready.getTime()) return false;
+
+  state.nextPublishAt = ready.toISOString();
+  state.scheduledGapHours = Math.max(
+    state.scheduledGapHours ?? MIN_PUBLISH_GAP_HOURS,
+    MIN_PUBLISH_GAP_HOURS,
+  );
+  return true;
 }

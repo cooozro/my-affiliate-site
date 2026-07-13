@@ -26,10 +26,12 @@ import { recordTopicPick } from "../lib/topic-diversity.mjs";
 import {
   ensureNextPublishAt,
   formatKst,
+  getPublishReadyAt,
   MAX_PUBLISH_PER_DAY,
   MIN_PUBLISH_GAP_HOURS,
   reconcileOverduePublishSlot,
   reconcilePublishSchedule,
+  reconcilePublishSlotWithGap,
   reconcileStaleCatchUpSlot,
   scheduleNextPublishAfterSuccess,
   TARGET_DRAFT_COUNT,
@@ -46,7 +48,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 
 function canPublishNow(state, force = false) {
   resetDailyCounters(state);
-  if (reconcilePublishSchedule(state) || reconcileOverduePublishSlot(state) || reconcileStaleCatchUpSlot(state)) {
+  if (reconcilePublishSchedule(state) || reconcileOverduePublishSlot(state) || reconcileStaleCatchUpSlot(state) || reconcilePublishSlotWithGap(state)) {
     saveState(state);
   }
   ensureNextPublishAt(state);
@@ -63,37 +65,35 @@ function canPublishNow(state, force = false) {
   }
   state.publishCountToday = Math.max(state.publishCountToday ?? 0, actualToday);
 
-  if (state.publishCountToday > 0 && state.lastPublishAt) {
-    const minGapMs = MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000;
-    const sinceLast = Date.now() - new Date(state.lastPublishAt).getTime();
-    if (sinceLast < minGapMs) {
-      const needMin = Math.ceil((minGapMs - sinceLast) / 60_000);
-      console.log(
-        `Publish skipped: only ${Math.floor(sinceLast / 60_000)}min since last publish (need ${MIN_PUBLISH_GAP_HOURS}h+ gap, ~${needMin}min left)`,
-      );
-      return false;
-    }
-  }
-
   if (state.publishCountToday >= MAX_PUBLISH_PER_DAY) {
     console.log(`Daily publish limit reached (${MAX_PUBLISH_PER_DAY}/day KST)`);
     return false;
   }
 
-  const nextAt = new Date(state.nextPublishAt).getTime();
   const now = Date.now();
-  if (now < nextAt) {
-    const waitMin = Math.ceil((nextAt - now) / 60000);
+  const readyAt = getPublishReadyAt(state).getTime();
+  if (now < readyAt) {
+    const waitMin = Math.ceil((readyAt - now) / 60_000);
+    const gapAt = state.lastPublishAt
+      ? new Date(state.lastPublishAt).getTime() +
+        MIN_PUBLISH_GAP_HOURS * 60 * 60 * 1000
+      : 0;
+    const slotPast =
+      state.nextPublishAt && new Date(state.nextPublishAt).getTime() <= now;
+    const gapWaiting = gapAt > now && slotPast;
     console.log(
-      `Publish skipped: next random slot in ${waitMin}min (KST ${formatKst(state.nextPublishAt)})`,
+      gapWaiting
+        ? `Publish skipped: slot due but ${MIN_PUBLISH_GAP_HOURS}h gap after last publish (~${waitMin}min left, KST ${formatKst(new Date(readyAt).toISOString())})`
+        : `Publish skipped: next slot in ${waitMin}min (KST ${formatKst(new Date(readyAt).toISOString())})`,
     );
     return false;
   }
 
-  const overdueMin = Math.floor((now - nextAt) / 60000);
+  const nextAt = new Date(state.nextPublishAt).getTime();
+  const overdueMin = Math.floor((now - Math.min(nextAt, readyAt)) / 60_000);
   if (overdueMin >= 1) {
     console.log(
-      `Catch-up publish: slot was due ${overdueMin}min ago (KST ${formatKst(state.nextPublishAt)}).`,
+      `Catch-up publish: ready ${overdueMin}min after scheduled slot (KST ${formatKst(state.nextPublishAt)}).`,
     );
   }
 

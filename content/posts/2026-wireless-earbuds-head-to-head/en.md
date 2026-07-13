@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-13T08:28:50.000Z'
+updatedAt: '2026-07-13T12:14:05.648Z'
 publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## Editorial Overview
@@ -135,12 +135,11 @@ Sony WF-C700N offers mature two-device multipoint with predictable AAC on iPhone
 
 ## Related guides
 
-- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — wider value field beyond this three-way commute focus
 - [Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC](/en/blog/2026-noise-cancelling-headphones-head-to-head) — over-ear option when in-ear seal fails on flights
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — wider value field beyond this three-way commute focus
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — shared listening once you leave the commute
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — case charging on long transit days
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — cool down the apartment you return to after outdoor commutes
-
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — case charging on long transit days
 ## Final Verdict
 
 No single bud wins every summer commute. **Sony WF-C700N** balances LDAC and Sony tuning for cross-platform weeks. **Samsung Galaxy Buds3** rewards Galaxy owners with IP57 and SSC. **Soundcore Liberty 4 NC** maximizes ANC and battery per dollar.

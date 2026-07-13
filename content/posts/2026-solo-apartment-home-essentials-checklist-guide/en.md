@@ -5,8 +5,7 @@ title: >-
 description: >-
   Seven cross-category checks for solo apartments — fans, purifiers, earbuds,
   air fryers, and robot vacs before sealed-window summer living.
-date: '2026-07-12'
-createdAt: '2026-07-12T05:10:00.000Z'
+date: '2026-07-13'
 tags:
   - solo apartment
   - home essentials
@@ -18,7 +17,7 @@ contentAngle: solo-apartment-essentials
 topicId: meta-solo-apartment-essentials
 topicCluster: household-solo
 writingMode: benchmark
-draft: true
+draft: false
 liveData: true
 coverImage: >-
   /images/posts/2026-solo-apartment-home-essentials-checklist-guide/small-apartment-studio-essentials-cover.jpg
@@ -29,12 +28,13 @@ imageSearchKeywords:
   - studio essentials
   - compact home
   - solo living
-updatedAt: '2026-07-12T05:07:02.668Z'
+updatedAt: '2026-07-13T12:14:05.638Z'
 coverImageCredit: Photo by Ron Lach / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 10024297
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-13T12:13:57.000Z'
 ---
 ## Editorial Overview
 
@@ -146,11 +146,10 @@ In many North American and Korean studio layouts, **one 15 A kitchen circuit** f
 ## Related guides
 
 - [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — scenario picks when you want model-level examples after this checklist
-- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — deeper CFM tables for cooling without central AC
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — annual filter math for 15–25 m² sealed rooms
 - [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — seven fryer-specific checks after footprint and circuit mapping
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — deeper CFM tables for cooling without central AC
 - [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — when fan-only airflow is not enough
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — annual filter math for 15–25 m² sealed rooms
 ## Final Verdict
 
 Run the checklist in order: **floor plan zones → cooling path → CADR fit → commute audio → fryer watts → dock clearance → circuit map → ongoing filters and bags**. Skipping layout and amp checks causes more solo-apartment regret than choosing the wrong brand within a category.

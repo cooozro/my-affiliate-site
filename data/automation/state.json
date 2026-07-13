@@ -32,10 +32,10 @@
     "television",
     "wireless-earbuds"
   ],
-  "lastPublishAt": "2026-07-13T08:28:51.576Z",
-  "nextPublishAt": "2026-07-13T11:43:43.856Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-13T12:13:58.578Z",
+  "nextPublishAt": "2026-07-14T01:29:00.000Z",
+  "scheduledGapHours": 4.48,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-13",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-13",
@@ -446,14 +446,23 @@
         "https://www.aipick.shop/en/blog/2026-wireless-earbuds-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-wireless-earbuds-head-to-head"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "topic": {
+        "id": "meta-solo-apartment-essentials",
+        "category": "cross-cutting",
+        "cluster": "household-solo"
+      },
+      "at": "2026-07-13T12:13:58.578Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-checklist-guide",
+        "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-checklist-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "portable-ssd",
-      "category": "accessories",
-      "at": "2026-07-04T08:17:55.893Z"
-    },
     {
       "id": "rice-cookers",
       "at": "2026-07-05T02:44:08.826Z"
@@ -597,6 +606,12 @@
     {
       "id": "wireless-earbuds",
       "at": "2026-07-13T08:28:51.585Z"
+    },
+    {
+      "id": "meta-solo-apartment-essentials",
+      "category": "cross-cutting",
+      "cluster": "household-solo",
+      "at": "2026-07-13T12:13:58.587Z"
     }
   ],
   "formatHistory": [
@@ -623,23 +638,15 @@
   ],
   "roadmapPhase": "tier1-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T11:43:43.856Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish slot overdue by 23min (KST 2026-07-13)",
-        "severity": "error"
-      }
-    ],
-    "repairs": [
-      "forced-catch-up-slot"
-    ]
+    "at": "2026-07-13T12:14:18.782Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": []
   },
-  "lastDailyContentAuditKst": "2026-07-11",
+  "lastDailyContentAuditKst": "2026-07-13",
   "lastDailyContentAudit": {
-    "at": "2026-07-11T13:27:20.777Z",
-    "postsScanned": 34,
+    "at": "2026-07-13T12:14:07.828Z",
+    "postsScanned": 37,
     "autoRepairCount": 12,
     "manualReviewCount": 0
   },

@@ -17,6 +17,8 @@ import {
 } from "./post-timestamps.mjs";
 import {
   MAX_PUBLISH_PER_DAY,
+  getPublishReadyAt,
+  reconcilePublishSlotWithGap,
   reconcileStaleCatchUpSlot,
   TARGET_DRAFT_COUNT,
 } from "./publish-schedule.mjs";
@@ -73,25 +75,38 @@ export function runAutomationHealthCheck(options = {}) {
 
   const todayKst = kstDateString(now);
   const underDailyCap = state.publishCountToday < MAX_PUBLISH_PER_DAY;
+  const readyAt = getPublishReadyAt(state, now);
+  const readyMs = readyAt.getTime();
   const nextAt =
     state.nextPublishAt != null ? new Date(state.nextPublishAt).getTime() : null;
 
-  if (underDailyCap && nextAt != null && nextAt <= nowMs) {
-    const overdueMin = Math.floor((nowMs - nextAt) / 60_000);
+  if (reconcilePublishSlotWithGap(state, now)) {
+    repairs.push("aligned-slot-with-min-gap");
+    stateChanged = true;
+  }
+
+  if (underDailyCap && readyMs <= nowMs) {
+    const slotMs = nextAt ?? readyMs;
+    const overdueMin = Math.floor((nowMs - slotMs) / 60_000);
     issues.push({
       code: "overdue-publish-slot",
-      message: `Publish slot overdue by ${overdueMin}min (KST ${todayKst})`,
+      message: `Publish ready but no post went live (${overdueMin}min past slot, KST ${todayKst})`,
       severity: overdueMin >= OVERDUE_WARN_MS / 60_000 ? "error" : "warning",
     });
-
-    state.scheduledGapHours = 0;
-    if (overdueMin >= 15) {
-      state.nextPublishAt = now.toISOString();
-      repairs.push("forced-catch-up-slot");
-    } else {
-      repairs.push("marked-slot-catch-up");
-    }
+    repairs.push("marked-slot-catch-up");
     stateChanged = true;
+  } else if (
+    underDailyCap &&
+    nextAt != null &&
+    nextAt <= nowMs &&
+    readyMs > nowMs
+  ) {
+    const waitMin = Math.ceil((readyMs - nowMs) / 60_000);
+    issues.push({
+      code: "publish-gap-wait",
+      message: `Slot passed; waiting ${waitMin}min for 4h gap after last publish (KST ${todayKst})`,
+      severity: "info",
+    });
   }
 
   if (reconcileStaleCatchUpSlot(state, now)) {
