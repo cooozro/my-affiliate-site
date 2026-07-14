@@ -25,7 +25,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-07-14T03:03:54.000Z'
+updatedAt: '2026-07-14T07:23:04.424Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468
@@ -250,11 +250,10 @@ For many **25–30 m² open living-dining zones**, **246 cfm smoke CADR** exceed
 ## Related guides
 
 - [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — full French-door comparison beyond the RF28T5001SR pick
-- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — humid indoor drying and spin-noise scenarios
 - [Closed Windows, Bright Rooms: Five TVs for Summer Sports, Streaming, and HDMI 2.1 Gaming](/en/blog/2026-television-buying-guide) — OLED vs mini-LED deep dive when glare patterns differ
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — bedroom-sized units to pair with living-room CADR
+- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — humid indoor drying and spin-noise scenarios
 - [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — Dyson and Bissell alternates when weight or pet hair dominates
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — bedroom-sized units to pair with living-room CADR
 ## Final Verdict
 
 Three- to five-person households fail when every category buys **features without capacity**. Match appliances to school-break reality: **fresh cubic feet** for batch groceries, **washer drum volume and cycle throughput** for daily mud, **sustained HDR** for shared daytime TV, **living-zone CADR** for sealed AC weeks, and **cordless pickup plus optional robot scheduling** for foot traffic that robots alone cannot navigate.

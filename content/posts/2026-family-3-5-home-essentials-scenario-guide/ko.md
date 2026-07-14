@@ -23,7 +23,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-07-14T03:03:54.000Z'
+updatedAt: '2026-07-14T07:23:05.100Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468
@@ -236,12 +236,11 @@ Samsung은 **총 28.0 cu ft**, **신선 19.4 cu ft**를 공시합니다. Twin Co
 
 ## 관련 가이드
 
-- [여름 주방·오픈형 평면, 1–4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — RF28T5001SR 너머 프렌치 도어 5종
-- [여름 세탁기 시나리오 — 습기·스포츠·방학·저소음 아파트](/ko/blog/2026-washing-machines-scenario-guide) — 실내 건조·탈수 소음
-- [창문 닫고 밝은 거실, 여름 스포츠·스트리밍·HDMI 2.1 TV 5종](/ko/blog/2026-television-buying-guide) — OLED vs 미니 LED 심화
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — RF28T5001SR 너머 프렌치 도어 5종
+- [창문 닫고 시원하게: 여름 스포츠·스트리밍·HDMI 2.1 게이밍 TV 5선](/ko/blog/2026-television-buying-guide) — OLED vs 미니 LED 심화
+- [여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음](/ko/blog/2026-washing-machines-scenario-guide) — 실내 건조·탈수 소음
+- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — Dyson·Bissell 대안
 - [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실용 보조 유닛
-- [여름 무선 스틱 청소기 — 밀폐·반려·방학 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — Dyson·Bissell 대안
-
 ## 최종 평가
 
 3–5인 가구는 **기능만 사고 용량을 놓칠 때** 실패합니다. 방학 현실에 맞추세요: **신선 cu ft**, **드럼·사이클 처리량**, **낮 HDR**, **거실 청정량**, **스틱 즉시 줍기 + 선택적 로봇**.

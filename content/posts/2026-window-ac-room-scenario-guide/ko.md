@@ -11,14 +11,13 @@ tags:
 contentProfile: scenario-guide
 topicId: window-ac
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-14T03:10:00.000Z'
 imageSearchKeywords:
   - window air conditioner
   - apartment cooling
   - wall air conditioner
-updatedAt: '2026-07-14T03:05:16.269Z'
+updatedAt: '2026-07-14T07:23:04.452Z'
 coverImage: >-
   /images/posts/2026-window-ac-room-scenario-guide/window-air-conditioner-apartment-cooling-cover.jpg
 coverImageAlt: 원룸의 창문형 에어컨
@@ -28,6 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 37189731
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37189731/pexels-photo-37189731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-14T16:23:02.000Z'
 ---
 ## 편집부 개요
 
@@ -139,12 +139,11 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 에어컨](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 고정 섀시를 쓰기 어려울 때
-- [여름 에어컨 구매 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — BTU·설치·소음·효율
-- [선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide) — AC 끄거나 드라이 모드일 때 순환
-- [제습기 가이드](/ko/blog/2026-dehumidifiers-guide) — 시원함만으로 부족한 꿉꿉한 밤
-- [여름 블루투스 스피커 가이드](/ko/blog/2026-summer-bluetooth-speakers-guide) — 방 식힌 뒤 야외 청취
-
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 고정 섀시를 쓰기 어려울 때
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — AC 끄거나 드라이 모드일 때 순환
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 시원함만으로 부족한 꿉꿉한 밤
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 방 식힌 뒤 야외 청취
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — BTU·설치·소음·효율
 ## 최종 평가
 
 창문형은 중앙 냉방이 없는 폭염 아파트에서 여전히 유효합니다. BTU·임대 가능 키트·수면 소음을 세트로 보고, 샷시가 부적절하면 이동식 대결로 넘어가세요.
