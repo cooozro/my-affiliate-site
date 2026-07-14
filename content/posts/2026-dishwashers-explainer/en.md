@@ -20,7 +20,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-14T09:15:00.000Z'
+updatedAt: '2026-07-14T12:00:19.239Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: built-in dishwasher in a kitchen
@@ -104,7 +104,7 @@ On heat-wave nights with AC running, **delay start + AutoRelease** spreads eveni
 | --- | --- | --- | --- |
 | Place settings | 14 (IEC) | 6 (countertop) | 14 |
 | dB(A) | 44 (Eco) | 52 | 42 (Eco) |
-| Water L (Eco) | ~9.5 | ~6.5 | ~10.2 |
+| Water L (Eco) | about 9.5 | about 6.5 | about 10.2 |
 | Install | Built-in 24" | Counter / portable | Built-in |
 | Summer note | Third rack, quiet | Renters, 1–2 person | AutoRelease dry |
 

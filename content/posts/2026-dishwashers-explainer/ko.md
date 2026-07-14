@@ -18,7 +18,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-14T09:15:00.000Z'
+updatedAt: '2026-07-14T12:00:19.251Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
@@ -102,7 +102,7 @@ Bosch SHPM65Z55N은 **14 place setting**, **3rd rack**을 공개합니다. 3–5
 | --- | --- | --- | --- |
 | 플레이스 | 14 (IEC) | 6 (카운터) | 14 |
 | dB(A) | 44 (에코) | 52 | 42 (에코) |
-| 물 L (에코) | ~9.5 | ~6.5 | ~10.2 |
+| 물 L (에코) | 약 9.5 | 약 6.5 | 약 10.2 |
 | 설치 | 빌트인 24" | 카운터·이동 | 빌트인 |
 | 여름 메모 | 3rd rack·조용 | 임대·1–2인 | AutoRelease |
 
