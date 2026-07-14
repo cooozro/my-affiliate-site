@@ -724,6 +724,64 @@
       "contentHash": "8c91a15fd31c6341f320d4c0b601ae307732f5bbfa929517bc07ecda0512c2c6",
       "provider": "pexels",
       "registeredAt": "2026-07-13T08:26:27.427Z"
+    },
+    {
+      "slug": "2026-dishwashers-explainer",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-14T03:07:44.784Z"
+    },
+    {
+      "slug": "2026-window-ac-room-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-14T03:07:44.806Z"
+    },
+    {
+      "slug": "2026-dishwashers-explainer",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-14T03:07:44.937Z"
+    },
+    {
+      "slug": "2026-window-ac-room-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-14T03:07:44.957Z"
+    },
+    {
+      "slug": "2026-dishwashers-explainer",
+      "url": "https://images.pexels.com/photos/5900798/pexels-photo-5900798.jpeg",
+      "assetKey": "pexels:5900798",
+      "hash": "338e67a362fa28d6bebad0dee7f4185aaea081db57d08df065b5dceb42ff4674",
+      "contentHash": "338e67a362fa28d6bebad0dee7f4185aaea081db57d08df065b5dceb42ff4674",
+      "provider": "pexels",
+      "registeredAt": "2026-07-14T03:07:51.970Z"
+    },
+    {
+      "slug": "2026-window-ac-room-scenario-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-14T03:07:52.091Z"
+    },
+    {
+      "slug": "2026-window-ac-room-scenario-guide",
+      "url": "https://images.pexels.com/photos/37189731/pexels-photo-37189731.jpeg",
+      "assetKey": "pexels:37189731",
+      "hash": "1a0a5be306a387c98fd2bdc6f046eac885fb428a352b60a7b7622b827eb13e7f",
+      "contentHash": "1a0a5be306a387c98fd2bdc6f046eac885fb428a352b60a7b7622b827eb13e7f",
+      "provider": "pexels",
+      "registeredAt": "2026-07-14T03:08:07.336Z"
     }
   ]
 }

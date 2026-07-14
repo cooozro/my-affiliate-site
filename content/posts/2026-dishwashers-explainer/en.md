@@ -20,6 +20,15 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
+coverImage: >-
+  /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
+coverImageAlt: dishwasher kitchen in a home interior
+coverImageAltKo: 실내의 dishwasher kitchen
+coverImageCredit: Photo by Curtis Adams / Pexels
+coverImageProvider: pexels
+coverImageAssetId: 5900798
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/5900798/pexels-photo-5900798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 
