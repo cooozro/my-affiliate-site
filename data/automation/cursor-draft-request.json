@@ -1,37 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-family-3-5-home-essentials-scenario-guide",
-  "requestedAt": "2026-07-14T03:04:00.674Z",
-  "writingMode": "stable",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "window air conditioner 분석",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "shingle overlap 0.24 > 0.15",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "contentPlan": "product",
-  "contentAngle": null,
-  "slugHint": null,
-  "topic": {
-    "id": "window-ac",
-    "category": "home-appliances",
-    "angle": "window and wall-mounted air conditioners: BTU per room size, install constraints, and efficiency labels",
-    "imageQuery": "window air conditioner apartment",
-    "liveData": true,
-    "seasons": [
-      "summer"
-    ],
-    "anchorTopicIds": null,
-    "isMetaAngle": false
-  },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: stable. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-07-14T03:09:28.129Z",
+  "writtenSlug": "2026-window-ac-room-scenario-guide",
+  "draftCount": 2,
   "lastError": null
 }
