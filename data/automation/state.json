@@ -669,18 +669,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-14T07:23:02.577Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (19min past slot, KST 2026-07-14)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-14T07:24:24.865Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-window-ac-room-scenario-guide/en.md: publishedAt 2026-07-14T16:23:02.000Z → 2026-07-14T07:23:04.352Z",
+      "2026-window-ac-room-scenario-guide/ko.md: publishedAt 2026-07-14T16:23:02.000Z → 2026-07-14T07:23:04.352Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-14",

@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 37189731
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37189731/pexels-photo-37189731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-publishedAt: '2026-07-14T16:23:02.000Z'
+publishedAt: '2026-07-14T07:23:04.352Z'
 ---
 ## Editorial Overview
 
