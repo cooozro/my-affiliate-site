@@ -31,11 +31,15 @@ export const PROFILE_TEMPLATE_PATHS = {
 export const PROFILE_MIN_BODY_CHARS = {
   "buying-guide": 2500,
   "head-to-head": 2500,
-  "scenario-guide": 2500,
+  /** Scenario guides need named picks per use case — longer than generic floor. */
+  "scenario-guide": 4500,
   explainer: 2500,
   checklist: 2500,
   editorial: 800,
 };
+
+/** Minimum characters inside each ## Scenario / ## 시나리오 section body. */
+export const MIN_SCENARIO_SECTION_CHARS = 400;
 
 /** Publish gate: Korean body character count (not a ratio to English). */
 export const MIN_KO_BODY_CHARS = 2500;

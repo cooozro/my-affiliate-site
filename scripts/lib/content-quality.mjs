@@ -23,6 +23,7 @@ import {
   CONTENT_PROFILES,
   MIN_EN_BODY_BYTES,
   MIN_KO_BODY_CHARS,
+  MIN_SCENARIO_SECTION_CHARS,
   PROFILE_MIN_BODY_CHARS,
 } from "./content-profiles.mjs";
 
@@ -45,7 +46,43 @@ const WHO_SHOULD_SKIP_PATTERN =
 const CONCLUSION_PATTERN = /##\s*(결론|Conclusion)/i;
 const SCENARIO_PATTERN =
   /##\s*(Scenario:\s|시나리오:\s)/i;
+const SCENARIO_HEADER_RE = /^##\s*(Scenario:|시나리오:)/;
 const PRODUCT_SECTION_PATTERN = /^##\s*\d+\.\s+/gm;
+/** OEM-style model token e.g. FHWW083WBE, MAW08V1QWT, SHPM65Z55N */
+const OEM_MODEL_CODE_RE = /\b[A-Z][A-Za-z0-9]{1,}[0-9][A-Za-z0-9-]{2,}\b/;
+const RECOMMENDED_PICK_LINE_RE =
+  /\*\*(Recommended pick|Recommended|추천|추천:)[^*\n]*\*\*/i;
+
+function extractScenarioSections(body) {
+  const sections = [];
+  let current = null;
+  for (const line of body.split("\n")) {
+    if (SCENARIO_HEADER_RE.test(line)) {
+      if (current !== null) sections.push(current.trim());
+      current = "";
+    } else if (current !== null) {
+      current += `${line}\n`;
+    }
+  }
+  if (current !== null) sections.push(current.trim());
+  return sections;
+}
+
+function scenarioSectionHasNamedProduct(sectionBody) {
+  const pickLine = sectionBody.match(RECOMMENDED_PICK_LINE_RE)?.[0] ?? "";
+  if (!pickLine) return false;
+
+  const inner = pickLine.replace(/^\*\*/, "").replace(/\*\*$/, "");
+  const afterLabel = inner
+    .replace(/^(Recommended pick|Recommended|추천|추천:)\s*:?\s*/i, "")
+    .trim();
+  if (afterLabel.length < 6) return false;
+
+  if (OEM_MODEL_CODE_RE.test(afterLabel)) return true;
+  if (/\d/.test(afterLabel)) return true;
+  if (/(?:[A-Za-z][A-Za-z0-9]*\s+){1,}[A-Za-z]/.test(afterLabel)) return true;
+  return false;
+}
 
 function hasCoverImage(root, data) {
   if (!data.coverImage) return false;
@@ -242,12 +279,26 @@ function auditHeadToHead(body, label) {
 function auditScenarioGuide(body, label) {
   const issues = [];
 
-  const scenarios = (body.match(
-    new RegExp(SCENARIO_PATTERN.source, "gi"),
-  ) ?? []).length;
-  if (scenarios < 3) {
-    issues.push(`${label}: scenario-guide needs at least 3 scenario sections (found ${scenarios})`);
+  const scenarioSections = extractScenarioSections(body);
+  if (scenarioSections.length < 3) {
+    issues.push(
+      `${label}: scenario-guide needs at least 3 scenario sections (found ${scenarioSections.length})`,
+    );
   }
+
+  scenarioSections.forEach((section, index) => {
+    const n = index + 1;
+    if (section.length < MIN_SCENARIO_SECTION_CHARS) {
+      issues.push(
+        `${label}: scenario section ${n} too short (${section.length} chars, min ${MIN_SCENARIO_SECTION_CHARS})`,
+      );
+    }
+    if (!scenarioSectionHasNamedProduct(section)) {
+      issues.push(
+        `${label}: scenario section ${n} missing named product recommendation (see docs/templates/scenario-guide.md)`,
+      );
+    }
+  });
 
   if (!/\|.+\|/.test(body)) {
     issues.push(`${label}: missing comparison table`);
