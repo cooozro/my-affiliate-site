@@ -1,7 +1,7 @@
 name: Blog publish slot
 
 # Fast publish-only cron — separate from slow Cursor replenish so slots are not blocked.
-# Also fetches missing draft cover images before the single git push.
+# Publish+commit always runs before replenish so a Cursor API failure cannot block go-live.
 on:
   push:
     branches: [main]
@@ -81,6 +81,27 @@ jobs:
             echo "replenish_needed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Fetch missing draft covers
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: node scripts/fetch-missing-draft-covers.mjs
+
+      - name: Validate content after cover fetch
+        run: npm run content:validate
+
+      - name: Commit and push publish changes
+        id: commit_publish
+        run: |
+          bash scripts/ci-git-push.sh "chore(automation): publish-slot"
+
+      - name: Trigger Vercel redeploy
+        if: steps.publish.outputs.published == 'true'
+        continue-on-error: true
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: node scripts/trigger-vercel-deploy.mjs
+
       - name: Check pending draft replenish
         id: pending_replenish
         run: |
@@ -101,33 +122,14 @@ jobs:
           SERP_PROVIDER: serper
         run: node scripts/automation/run-cursor-replenish.mjs
 
-      - name: Verify replenish when still pending
-        if: steps.pending_replenish.outputs.needed == 'true' && steps.replenish.outcome == 'failure'
-        run: |
-          echo "::error::Cursor draft replenish step failed — see logs above"
-          node -e "try{const r=require('./data/automation/cursor-draft-request.json');console.error('lastError:',r.lastError||'(none)');console.error('lastFailure:',JSON.stringify(r.lastFailure||null));}catch(e){console.error(e.message)}"
-          exit 1
-
-      - name: Validate content after replenish
+      - name: Commit and push replenish drafts
         if: success() && (steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
-        run: npm run content:validate
-
-      - name: Fetch missing draft covers
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: node scripts/fetch-missing-draft-covers.mjs
-
-      - name: Validate content after cover fetch
-        run: npm run content:validate
-
-      - name: Commit and push changes
         run: |
-          bash scripts/ci-git-push.sh "chore(automation): publish-slot"
+          bash scripts/ci-git-push.sh "chore(content): cursor draft replenish"
 
-      - name: Trigger Vercel redeploy
-        if: steps.publish.outputs.published == 'true'
-        continue-on-error: true
-        env:
-          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
-        run: node scripts/trigger-vercel-deploy.mjs
+      - name: Report replenish failure without blocking publish
+        if: always() && steps.pending_replenish.outputs.needed == 'true' && steps.replenish.outcome == 'failure'
+        run: |
+          echo "::error::Cursor draft replenish failed AFTER publish commit — fill buffer via IDE or fix CURSOR_API_KEY"
+          node -e "try{const r=require('./data/automation/cursor-draft-request.json');console.error('lastError:',r.lastError||'(none)');console.error('lastFailure:',JSON.stringify(r.lastFailure||null,null,2));}catch(e){console.error(e.message)}"
+          exit 1

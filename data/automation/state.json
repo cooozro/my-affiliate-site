@@ -1,8 +1,6 @@
 {
-  "topicIndex": 22,
+  "topicIndex": 18,
   "usedTopicIds": [
-    "window-ac",
-    "air-purifiers",
     "dehumidifiers",
     "power-banks",
     "window-ac",
@@ -30,15 +28,17 @@
     "washing-machines",
     "space-heaters",
     "television",
-    "wireless-earbuds"
+    "wireless-earbuds",
+    "window-ac",
+    "dishwashers"
   ],
-  "lastPublishAt": "2026-07-13T12:13:58.578Z",
-  "nextPublishAt": "2026-07-14T01:29:00.000Z",
-  "scheduledGapHours": 4.48,
-  "publishCountToday": 2,
-  "publishDateKst": "2026-07-13",
+  "lastPublishAt": "2026-07-14T03:03:55.993Z",
+  "nextPublishAt": "2026-07-14T09:02:39.167Z",
+  "scheduledGapHours": 5.98,
+  "publishCountToday": 1,
+  "publishDateKst": "2026-07-14",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-13",
+  "writeDateKst": "2026-07-14",
   "history": [
     {
       "action": "publish",
@@ -460,22 +460,23 @@
         "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-checklist-guide",
         "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-checklist-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-family-3-5-home-essentials-scenario-guide",
+      "topic": {
+        "id": "meta-family-3-5-person",
+        "category": "cross-cutting",
+        "cluster": "household-family"
+      },
+      "at": "2026-07-14T03:03:55.993Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-family-3-5-home-essentials-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-family-3-5-home-essentials-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "rice-cookers",
-      "at": "2026-07-05T02:44:08.826Z"
-    },
-    {
-      "id": "fitness-trackers",
-      "category": "wearables",
-      "at": "2026-07-05T02:44:08.836Z"
-    },
-    {
-      "id": "portable-ssd",
-      "at": "2026-07-05T03:33:06.536Z"
-    },
     {
       "id": "laptops",
       "category": "computing",
@@ -612,11 +613,28 @@
       "category": "cross-cutting",
       "cluster": "household-solo",
       "at": "2026-07-13T12:13:58.587Z"
+    },
+    {
+      "id": "meta-family-3-5-person",
+      "category": "cross-cutting",
+      "cluster": "household-family",
+      "at": "2026-07-14T03:03:56.003Z"
+    },
+    {
+      "id": "window-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning",
+      "taxonomyGroup": "계절가전/냉방",
+      "at": "2026-07-14T03:03:56.045Z"
+    },
+    {
+      "id": "dishwashers",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/소형주방",
+      "at": "2026-07-14T03:05:44.876Z"
     }
   ],
   "formatHistory": [
-    "explainer",
-    "head-to-head",
     "scenario-guide",
     "buying-guide",
     "head-to-head",
@@ -634,14 +652,35 @@
     "scenario-guide",
     "buying-guide",
     "explainer",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide",
+    "explainer"
   ],
-  "roadmapPhase": "tier1-first-pass",
+  "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-13T12:14:18.782Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-14T03:03:54.571Z",
+    "issueCount": 3,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (1min past slot, KST 2026-07-14)",
+        "severity": "warning"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 889min",
+        "severity": "warning"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-13",
   "lastDailyContentAudit": {

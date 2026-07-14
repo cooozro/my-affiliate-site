@@ -6,8 +6,19 @@
 
 import fs from "fs";
 import path from "path";
-import { Agent, CursorAgentError } from "@cursor/sdk";
 import { fetchCoverImage } from "./fetch-image.mjs";
+
+/** Lazy-load so a missing SDK never crashes the process before lastError is recorded. */
+async function loadCursorSdk() {
+  try {
+    return await import("@cursor/sdk");
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : String(error);
+    throw new Error(
+      `@cursor/sdk not available (${detail}). GHA must run: npm install @cursor/sdk@1.0.22 --no-save`,
+    );
+  }
+}
 import { resolveImageContext, buildCoverAlts } from "../lib/image-query.mjs";
 import {
   completeCursorDraftRequest,
@@ -152,10 +163,7 @@ function cursorRetryDelaysMs() {
 }
 
 function isRetryableCursorError(error) {
-  if (error instanceof CursorAgentError) {
-    return Boolean(error.isRetryable);
-  }
-  return false;
+  return Boolean(error?.isRetryable);
 }
 
 function isRetryableCursorRunResult(result) {
@@ -167,6 +175,7 @@ async function runCursorAgentOnce(request) {
   const apiKey = process.env.CURSOR_API_KEY?.trim();
   if (!apiKey) return null;
 
+  const { Agent } = await loadCursorSdk();
   const prompt = buildCursorPrompt(request);
   const model = { id: "composer-2.5" };
   const agentOptions = {
@@ -230,12 +239,10 @@ async function runReplenishProviders(request, draftsBefore, keys) {
       errors.push("Cursor replenish returned no draft");
     } catch (error) {
       const message =
-        error instanceof CursorAgentError
-          ? `Cursor agent: ${error.message}`
-          : error instanceof Error
-            ? error.message
-            : String(error);
-      errors.push(message);
+        error instanceof Error
+          ? error.message
+          : String(error);
+      errors.push(provider === "cursor" ? `Cursor: ${message}` : message);
       console.error(`${provider} replenish failed: ${message}`);
     }
   }
@@ -433,11 +440,9 @@ async function replenishWithCursor(request, draftsBefore) {
       return writtenSlug;
     } catch (error) {
       lastMessage =
-        error instanceof CursorAgentError
+        error instanceof Error
           ? `Cursor agent: ${error.message}`
-          : error instanceof Error
-            ? error.message
-            : String(error);
+          : String(error);
 
       const retryable = isRetryableCursorError(error);
       const hasMoreAttempts = attempt < delays.length;
