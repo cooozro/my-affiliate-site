@@ -692,13 +692,10 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-15T07:27:45.666Z",
+    "at": "2026-07-15T07:29:58.756Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-clothes-dryers-buying-guide/en.md: publishedAt 2026-07-15T15:38:54.000Z → 2026-07-15T06:38:55.823Z",
-      "2026-clothes-dryers-buying-guide/ko.md: publishedAt 2026-07-15T15:38:54.000Z → 2026-07-15T06:38:55.823Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-15",
   "lastDailyContentAudit": {
