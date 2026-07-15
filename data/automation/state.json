@@ -681,28 +681,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-15T01:08:28.884Z",
-    "issueCount": 3,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (3min past slot, KST 2026-07-15)",
-        "severity": "warning"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1065min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-07-15T01:55:08.946Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-dishwashers-explainer/en.md: publishedAt 2026-07-15T10:08:29.000Z → 2026-07-15T01:08:30.765Z",
+      "2026-dishwashers-explainer/ko.md: publishedAt 2026-07-15T10:08:29.000Z → 2026-07-15T01:08:30.765Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-14",
