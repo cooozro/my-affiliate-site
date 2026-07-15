@@ -14,14 +14,13 @@ tags:
 contentProfile: buying-guide
 topicId: clothes-dryers
 writingMode: stable
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-07-15T01:46:00.000Z'
 imageSearchKeywords:
   - clothes dryer laundry room
   - laundry dryer appliance
   - heat pump dryer
-updatedAt: '2026-07-15T01:50:39.666Z'
+updatedAt: '2026-07-15T06:38:55.891Z'
 coverImage: >-
   /images/posts/2026-clothes-dryers-buying-guide/clothes-dryer-laundry-room-laundry-dryer-applian-cover.jpg
 coverImageAlt: clothes dryer laundry room in a home interior
@@ -31,6 +30,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 2290940
 coverImageSourceUrl: >-
   https://pixabay.com/get/gb16f43c24b53d7070d3ebd6ce599ba1991b13d74ffe2e9dc3240569f073795d1993c6326531131a31d07b51f4d0396eed98dcf94f822e4f64a46efc95c40598a_1280.jpg
+publishedAt: '2026-07-15T15:38:54.000Z'
 ---
 ## Editorial Overview
 
@@ -166,12 +166,11 @@ Humidity and overloading leave moisture in thick folds. Use Sensor Dry, clean th
 
 ## Related guides
 
-- [Summer Washing Machines Scenario Guide](/en/blog/2026-washing-machines-scenario-guide) — humid indoor wash routines that feed the dryer
-- [Dehumidifiers Guide](/en/blog/2026-dehumidifiers-guide) — cut room moisture so laundry finishes faster
+- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — humid indoor wash routines that feed the dryer
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — circulate air in laundry closets between cycles
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — cut room moisture so laundry finishes faster
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — sealed AC apartments and laundry closet heat
-- [Family 3–5 Home Essentials Scenario Guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — household laundry volume context
-- [Electric Fans Buying Guide](/en/blog/2026-electric-fans-buying-guide) — circulate air in laundry closets between cycles
-
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — household laundry volume context
 ## Five checks before you buy
 
 1. Confirm **vent path or heat-pump / ventless** allowance in your lease and local code.

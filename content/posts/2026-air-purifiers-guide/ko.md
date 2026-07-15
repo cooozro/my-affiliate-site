@@ -19,7 +19,7 @@ coverImageAlt: 작은 침실의 HEPA 공기청정기
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-14T07:23:04.576Z'
+updatedAt: '2026-07-15T06:38:56.055Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier

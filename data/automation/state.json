@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-15T01:08:30.765Z",
-  "nextPublishAt": "2026-07-15T06:05:09.190Z",
-  "scheduledGapHours": 4.94,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-15T06:38:55.823Z",
+  "nextPublishAt": "2026-07-16T01:09:00.000Z",
+  "scheduledGapHours": 4.15,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-15",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-15",
@@ -498,14 +498,21 @@
         "https://www.aipick.shop/en/blog/2026-dishwashers-explainer",
         "https://www.aipick.shop/ko/blog/2026-dishwashers-explainer"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-clothes-dryers-buying-guide",
+      "topic": {
+        "id": "clothes-dryers"
+      },
+      "at": "2026-07-15T06:38:55.823Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-clothes-dryers-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-clothes-dryers-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "smart-home-cameras",
-      "category": "smart-home",
-      "at": "2026-07-06T02:59:37.180Z"
-    },
     {
       "id": "2026-laptops-buying-guide",
       "at": "2026-07-06T03:36:25.169Z"
@@ -655,6 +662,10 @@
     {
       "id": "dishwashers",
       "at": "2026-07-15T01:08:30.769Z"
+    },
+    {
+      "id": "clothes-dryers",
+      "at": "2026-07-15T06:38:55.828Z"
     }
   ],
   "formatHistory": [
@@ -681,19 +692,25 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-15T01:55:08.946Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-07-15T06:38:53.955Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (33min past slot, KST 2026-07-15)",
+        "severity": "error"
+      }
+    ],
     "repairs": [
-      "2026-dishwashers-explainer/en.md: publishedAt 2026-07-15T10:08:29.000Z → 2026-07-15T01:08:30.765Z",
-      "2026-dishwashers-explainer/ko.md: publishedAt 2026-07-15T10:08:29.000Z → 2026-07-15T01:08:30.765Z"
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-14",
+  "lastDailyContentAuditKst": "2026-07-15",
   "lastDailyContentAudit": {
-    "at": "2026-07-14T07:23:06.002Z",
-    "postsScanned": 39,
-    "autoRepairCount": 14,
+    "at": "2026-07-15T06:38:57.714Z",
+    "postsScanned": 41,
+    "autoRepairCount": 20,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [

@@ -17,7 +17,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-15T10:08:29.000Z'
+updatedAt: '2026-07-15T06:38:56.553Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
@@ -141,12 +141,11 @@ Bosch SHPM65Z55N은 **14 place setting**, **3rd rack**을 공개합니다. 3–5
 
 ## 관련 가이드
 
-- [3–5인 가정 필수품 시나리오](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 다인 가구 주방 부하
-- [에어프라이어 체크리스트](/ko/blog/2026-air-fryers-checklist) — 기름진 식기를 남기는 저열 조리
-- [커피머신 비교](/ko/blog/2026-coffee-machines-head-to-head) — 싱크 근처 또 다른 물 사용
-- [전기밥솥 해설](/ko/blog/2026-rice-cookers-explainer) — 손설거지가 필요한 끈적한 조리도구
-- [정수기 구매 가이드](/ko/blog/2026-water-purifiers-buying-guide) — 경수 지역에서 세척기 급수
-
+- [퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것](/ko/blog/2026-rice-cookers-explainer) — 손설거지가 필요한 끈적한 조리도구
+- [캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르는 법](/ko/blog/2026-coffee-machines-head-to-head) — 싱크 근처 또 다른 물 사용
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 다인 가구 주방 부하
+- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 경수 지역에서 세척기 급수
+- [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 기름진 식기를 남기는 저열 조리
 ## 핵심 정리
 
 1. 플레이스 세팅은 **표준 적재 시험**이지 냄비 보증이 아닙니다 — 3rd rack·하단 높이를 확인하세요.

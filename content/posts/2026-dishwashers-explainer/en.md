@@ -19,7 +19,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-15T10:08:29.000Z'
+updatedAt: '2026-07-15T06:38:55.897Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: built-in dishwasher in a kitchen
@@ -143,12 +143,11 @@ Eco lengthens time to keep energy scores low. On heat-wave nights, Auto plus **A
 
 ## Related guides
 
-- [Family 3–5 Home Essentials Scenario Guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — kitchen load context for multi-person households
-- [Air Fryers Checklist](/en/blog/2026-air-fryers-checklist) — low-heat cooking that still creates greasy dishes
-- [Coffee Machines Head-to-Head](/en/blog/2026-coffee-machines-head-to-head) — another countertop water load near the sink
-- [Rice Cookers Explainer](/en/blog/2026-rice-cookers-explainer) — sticky cookware that often needs hand-wash
-- [Water Purifiers Buying Guide](/en/blog/2026-water-purifiers-buying-guide) — feed dishwashers cleaner water in hard-water cities
-
+- [Fuzzy Logic vs Induction: What Actually Changes Rice Cooker Results](/en/blog/2026-rice-cookers-explainer) — sticky cookware that often needs hand-wash
+- [Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Systems](/en/blog/2026-coffee-machines-head-to-head) — another countertop water load near the sink
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — kitchen load context for multi-person households
+- [Heat-Season Hydration: Five Water Purifiers by Countertop Fit, Filter Life, TDS, and Install Cost](/en/blog/2026-water-purifiers-buying-guide) — feed dishwashers cleaner water in hard-water cities
+- [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — low-heat cooking that still creates greasy dishes
 ## Key takeaways
 
 1. Treat place settings as a **standardized packing test** — check third rack and bottom-rack height for pots.

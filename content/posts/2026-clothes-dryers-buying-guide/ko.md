@@ -11,14 +11,13 @@ tags:
 contentProfile: buying-guide
 topicId: clothes-dryers
 writingMode: stable
-draft: true
+draft: false
 liveData: false
-createdAt: '2026-07-15T01:46:00.000Z'
 imageSearchKeywords:
   - clothes dryer laundry room
   - laundry dryer appliance
   - heat pump dryer
-updatedAt: '2026-07-15T01:50:39.694Z'
+updatedAt: '2026-07-15T06:38:56.388Z'
 coverImage: >-
   /images/posts/2026-clothes-dryers-buying-guide/clothes-dryer-laundry-room-laundry-dryer-applian-cover.jpg
 coverImageAlt: 실내의 clothes dryer laundry room
@@ -28,6 +27,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 2290940
 coverImageSourceUrl: >-
   https://pixabay.com/get/gb16f43c24b53d7070d3ebd6ce599ba1991b13d74ffe2e9dc3240569f073795d1993c6326531131a31d07b51f4d0396eed98dcf94f822e4f64a46efc95c40598a_1280.jpg
+publishedAt: '2026-07-15T15:38:54.000Z'
 ---
 ## 편집부 개요
 
@@ -163,12 +163,11 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [여름 세탁기 시나리오 가이드](/ko/blog/2026-washing-machines-scenario-guide) — 건조기로 이어지는 습한 실내 세탁
-- [제습기 가이드](/ko/blog/2026-dehumidifiers-guide) — 실내 습도를 낮춰 건조 시간 단축
-- [여름 에어컨 구매 체크리스트](/ko/blog/2026-summer-ac-buying-checklist) — 밀폐 AC 아파트와 세탁실 열기
-- [3–5인 가정 필수품 시나리오](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 가구 빨래량 맥락
-- [선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide) — 사이클 사이 세탁실 공기 순환
-
+- [여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음](/ko/blog/2026-washing-machines-scenario-guide) — 건조기로 이어지는 습한 실내 세탁
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 사이클 사이 세탁실 공기 순환
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 실내 습도를 낮춰 건조 시간 단축
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 밀폐 AC 아파트와 세탁실 열기
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 가구 빨래량 맥락
 ## 사기 전 5가지 체크
 
 1. 임대·규정에서 **배기 경로 또는 히트펌프/무배기** 허용을 확인하세요.
