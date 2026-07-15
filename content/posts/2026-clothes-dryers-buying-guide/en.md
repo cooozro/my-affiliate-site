@@ -30,7 +30,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 2290940
 coverImageSourceUrl: >-
   https://pixabay.com/get/gb16f43c24b53d7070d3ebd6ce599ba1991b13d74ffe2e9dc3240569f073795d1993c6326531131a31d07b51f4d0396eed98dcf94f822e4f64a46efc95c40598a_1280.jpg
-publishedAt: '2026-07-15T15:38:54.000Z'
+publishedAt: '2026-07-15T06:38:55.823Z'
 ---
 ## Editorial Overview
 

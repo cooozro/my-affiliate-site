@@ -692,18 +692,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-15T06:38:53.955Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (33min past slot, KST 2026-07-15)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-15T07:27:45.666Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-clothes-dryers-buying-guide/en.md: publishedAt 2026-07-15T15:38:54.000Z → 2026-07-15T06:38:55.823Z",
+      "2026-clothes-dryers-buying-guide/ko.md: publishedAt 2026-07-15T15:38:54.000Z → 2026-07-15T06:38:55.823Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-15",
