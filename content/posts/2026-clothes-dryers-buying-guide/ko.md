@@ -19,6 +19,15 @@ imageSearchKeywords:
   - laundry dryer appliance
   - heat pump dryer
 updatedAt: '2026-07-15T01:50:39.694Z'
+coverImage: >-
+  /images/posts/2026-clothes-dryers-buying-guide/clothes-dryer-laundry-room-laundry-dryer-applian-cover.jpg
+coverImageAlt: 실내의 clothes dryer laundry room
+coverImageAltKo: 실내의 clothes dryer laundry room
+coverImageCredit: Photo by Peggy_Marco / Pixabay
+coverImageProvider: pixabay
+coverImageAssetId: 2290940
+coverImageSourceUrl: >-
+  https://pixabay.com/get/gb16f43c24b53d7070d3ebd6ce599ba1991b13d74ffe2e9dc3240569f073795d1993c6326531131a31d07b51f4d0396eed98dcf94f822e4f64a46efc95c40598a_1280.jpg
 ---
 ## 편집부 개요
 

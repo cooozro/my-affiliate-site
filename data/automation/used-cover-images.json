@@ -782,6 +782,64 @@
       "contentHash": "1a0a5be306a387c98fd2bdc6f046eac885fb428a352b60a7b7622b827eb13e7f",
       "provider": "pexels",
       "registeredAt": "2026-07-14T03:08:07.336Z"
+    },
+    {
+      "slug": "2026-clothes-dryers-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-15T01:51:51.892Z"
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-15T01:51:51.904Z"
+    },
+    {
+      "slug": "2026-clothes-dryers-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-15T01:51:52.045Z"
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-15T01:51:52.054Z"
+    },
+    {
+      "slug": "2026-clothes-dryers-buying-guide",
+      "url": "https://pixabay.com/get/gb16f43c24b53d7070d3ebd6ce599ba1991b13d74ffe2e9dc3240569f073795d1993c6326531131a31d07b51f4d0396eed98dcf94f822e4f64a46efc95c40598a_1280.jpg",
+      "assetKey": "pixabay:2290940",
+      "hash": "d664d01aa2b780e9806ec1dfbb80d7d5c4704033687503658e6778628d1f44ba",
+      "contentHash": "d664d01aa2b780e9806ec1dfbb80d7d5c4704033687503658e6778628d1f44ba",
+      "provider": "pixabay",
+      "registeredAt": "2026-07-15T01:52:07.521Z"
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-15T01:52:07.626Z"
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "url": "https://images.pexels.com/photos/8093961/pexels-photo-8093961.jpeg",
+      "assetKey": "pexels:8093961",
+      "hash": "644f7321e240f7423e3c9736f2a9b9b53664997ad6c6a53aa6f52382aeac7410",
+      "contentHash": "644f7321e240f7423e3c9736f2a9b9b53664997ad6c6a53aa6f52382aeac7410",
+      "provider": "pexels",
+      "registeredAt": "2026-07-15T01:52:22.100Z"
     }
   ]
 }
