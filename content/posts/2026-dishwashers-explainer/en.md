@@ -3,7 +3,7 @@ title: 'Dishwasher Place Settings, dB, and Liters: What the Specs Actually Mean'
 description: >-
   Explains dishwasher place settings, noise ratings, and water liters per cycle
   so compact and built-in buyers can compare summer kitchen loads honestly.
-date: '2026-07-14'
+date: '2026-07-15'
 tags:
   - dishwashers
   - kitchen appliances
@@ -13,14 +13,13 @@ tags:
 contentProfile: explainer
 topicId: dishwashers
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-14T03:20:00.000Z'
 imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-14T12:00:19.239Z'
+updatedAt: '2026-07-15T10:08:29.000Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: built-in dishwasher in a kitchen
@@ -30,6 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 5900798
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/5900798/pexels-photo-5900798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-15T10:08:29.000Z'
 ---
 ## Editorial Overview
 

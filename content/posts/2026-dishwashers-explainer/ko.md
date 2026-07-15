@@ -1,7 +1,7 @@
 ---
 title: '식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하는 것'
 description: '콤팩트·빌트인 식기세척기의 플레이스 세팅, 소음(dB), 사이클당 물 사용량(L)을 비교할 때 헷갈리는 스펙을 정리합니다.'
-date: '2026-07-14'
+date: '2026-07-15'
 tags:
   - 식기세척기
   - 주방가전
@@ -11,14 +11,13 @@ tags:
 contentProfile: explainer
 topicId: dishwashers
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-14T03:20:00.000Z'
 imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-14T12:00:19.251Z'
+updatedAt: '2026-07-15T10:08:29.000Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
@@ -28,6 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 5900798
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/5900798/pexels-photo-5900798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-15T10:08:29.000Z'
 ---
 ## 편집부 개요
 

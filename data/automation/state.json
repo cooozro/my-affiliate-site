@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-14T07:23:04.352Z",
-  "nextPublishAt": "2026-07-15T01:05:00.000Z",
-  "scheduledGapHours": 4.08,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-15T01:08:30.765Z",
+  "nextPublishAt": "2026-07-15T06:05:09.190Z",
+  "scheduledGapHours": 4.94,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-15",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-15",
@@ -486,13 +486,21 @@
         "https://www.aipick.shop/en/blog/2026-window-ac-room-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-window-ac-room-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-dishwashers-explainer",
+      "topic": {
+        "id": "dishwashers"
+      },
+      "at": "2026-07-15T01:08:30.765Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-dishwashers-explainer",
+        "https://www.aipick.shop/ko/blog/2026-dishwashers-explainer"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "usb-c-hubs",
-      "at": "2026-07-06T02:59:37.171Z"
-    },
     {
       "id": "smart-home-cameras",
       "category": "smart-home",
@@ -643,10 +651,13 @@
     {
       "id": "window-ac",
       "at": "2026-07-14T07:23:04.357Z"
+    },
+    {
+      "id": "dishwashers",
+      "at": "2026-07-15T01:08:30.769Z"
     }
   ],
   "formatHistory": [
-    "scenario-guide",
     "buying-guide",
     "head-to-head",
     "scenario-guide",
@@ -665,13 +676,19 @@
     "explainer",
     "head-to-head",
     "scenario-guide",
-    "explainer"
+    "explainer",
+    "checklist"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-14T23:38:22.395Z",
-    "issueCount": 2,
+    "at": "2026-07-15T01:08:28.884Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (3min past slot, KST 2026-07-15)",
+        "severity": "warning"
+      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
@@ -679,11 +696,14 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 975min",
+        "message": "Cursor replenish pending 1065min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-14",
   "lastDailyContentAudit": {
@@ -784,6 +804,11 @@
       "id": "family-3-5-person",
       "type": "household-type",
       "at": "2026-07-11T08:43:17.676Z"
+    },
+    {
+      "id": "solo-apartment-essentials",
+      "type": "household-type",
+      "at": "2026-07-15T01:08:30.781Z"
     }
   ]
 }
