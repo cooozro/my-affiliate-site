@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-07-14'
+date: '2026-07-15'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-07-14T07:21:43.480Z'
+updatedAt: '2026-07-15T07:25:23.651Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 7월 14일 화요일 오후 4:21
-- **스캔 대상:** 발행 글 36 slug / 72 locale 파일
+- **생성 시각 (KST):** 2026년 7월 15일 수요일 오후 4:25
+- **스캔 대상:** 발행 글 39 slug / 78 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -34,8 +34,8 @@ updatedAt: '2026-07-14T07:21:43.480Z'
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **36** slug (welcome 등 1건 제외)
-- locale 파일 **72**개 분석
+- 스캔 대상 **39** slug (welcome 등 1건 제외)
+- locale 파일 **78**개 분석
 
 ### 수익성·효율성 지표
 
@@ -72,7 +72,7 @@ updatedAt: '2026-07-14T07:21:43.480Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 7. 14. 오후 4:21:42
+- **API 수집 시각 (KST):** 2026. 7. 15. 오후 4:25:22
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -81,21 +81,21 @@ updatedAt: '2026-07-14T07:21:43.480Z'
 | 지표 | 값 |
 | --- | --- |
 | Active users | 14 |
-| Sessions | 58 |
-| Page views | 142 |
+| Sessions | 54 |
+| Page views | 138 |
 
 ### 상위 블로그 랜딩 (7일)
 
 | 페이지 | 조회수 |
 | --- | --- |
-| `/ko/blog/2026-air-purifiers-guide` | 39 |
-| `/en/blog/2026-budget-wireless-earbuds-top5` | 4 |
-| `/en/blog/2026-air-purifiers-guide` | 2 |
+| `/ko/blog/2026-air-purifiers-guide` | 24 |
+| `/ko/blog/2026-window-ac-room-scenario-guide` | 14 |
+| `/en/blog/2026-budget-wireless-earbuds-top5` | 3 |
 | `/en/blog/2026-bidets-checklist` | 2 |
 | `/en/blog/2026-water-purifiers-buying-guide` | 2 |
 | `/ko/blog/2026-solo-apartment-home-essentials-scenario-guide` | 2 |
-| `/ko/blog/2026-summer-bluetooth-speakers-guide` | 2 |
 | `/ko/blog/2026-washing-machines-scenario-guide` | 2 |
+| `/ko/blog/2026-water-purifiers-buying-guide` | 2 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
