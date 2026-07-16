@@ -704,28 +704,18 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-16T02:44:50.875Z",
-    "issueCount": 3,
+    "at": "2026-07-16T02:55:56.210Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (92min past slot, KST 2026-07-16)",
-        "severity": "error"
-      },
-      {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
+        "message": "Draft buffer 0/2",
         "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1205min",
-        "severity": "warning"
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-induction-cooktops-buying-guide/en.md: publishedAt 2026-07-16T11:44:51.000Z → 2026-07-16T02:44:53.000Z",
+      "2026-induction-cooktops-buying-guide/ko.md: publishedAt 2026-07-16T11:44:51.000Z → 2026-07-16T02:44:53.000Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-15",
