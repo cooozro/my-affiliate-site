@@ -72,11 +72,11 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 Dyson documents **up to 240 AW suction** on the V15 Detect with a piezo sensor that counts and sizes particles, adjusting power automatically. From an editorial value lens, when AC runs eight-plus hours and never pulls outdoor air, whole-machine HEPA (99.99% of 0.3-micron particles per Dyson’s test) matters before the watt headline. The Laser Slim Fluffy cleaner head highlights dust on hard floors that overhead light misses in dim, cooled rooms.
 
-**Editorial read:** Whole-machine HEPA and 240 AW cut **recirculated dust labor** in AC-sealed eight-hour homes, but $749 upfront and 3.1 kg add carry and upgrade friction on stairs.
-
-**Review concern:** Short boost runtime forces double charging in large whole-home passes, and rivals without laser feedback show less visible fine-dust proof.
-
 **Runner-up:** Samsung Jet 60 — strong suction and a lighter body, but no laser particle sizing; better if you prioritize weight over dust telemetry.
+
+**Editorial read:** $749 with 240 AW and whole-machine HEPA pays off in **AC-sealed rooms run eight-plus hours**, but budget **~$25–40/year in filters and brush wear** into three-year total cost.
+
+**Review concern:** Without laser feedback, buyers who expected **visible fine-dust proof** sometimes regret the premium versus a mid-tier stick.
 
 | Factor | Dyson V15 Detect | Samsung Jet 60 |
 | --- | --- | --- |
@@ -100,11 +100,11 @@ Dyson documents **up to 240 AW suction** on the V15 Detect with a piezo sensor t
 
 Shark lists the Stratos cordless line with **up to 60 minutes runtime** in Eco mode on a single charge (per Shark battery spec under ideal conditions) and **PowerFins HairPro brush roll** designed for multi-surface pickup. On pre-trip nights when you finally pull furniture off the walls, Clean Sense IQ adjusting to debris load feels more practical than chasing max Boost for the whole house. Shark includes a flex wand and pet multi-tool in most bundles, covering baseboards and upholstery before you leave.
 
-**Editorial read:** Sixty-minute eco mode and PowerFins shorten **pre-vacation whole-home sweeps**, but a 3.4 kg body demands dedicated dock or wall space after travel.
-
-**Review concern:** Fine-dust tooling trails Dyson on hard floors, and SKU-dependent dock bundles can break charge-location planning.
-
 **Runner-up:** Dyson V15 Detect — stronger fine-dust tooling, but shorter max runtime in Boost; plan two charge cycles for large homes.
+
+**Editorial read:** $499 Stratos with ~60-minute Eco runtime and a flex wand fits **pre-trip whole-home sweeps in 2–3 rooms on one charge**, but the 3.4 kg body needs **stairs and wall-dock space** planned first.
+
+**Review concern:** Boost-only cleaning in large homes means **15-minute dead batteries and 3–4 hours of charging** the night before you leave.
 
 | Factor | Shark Stratos | Dyson V15 Detect |
 | --- | --- | --- |
@@ -128,11 +128,11 @@ Shark lists the Stratos cordless line with **up to 60 minutes runtime** in Eco m
 
 Bissell markets the ICONpet series with a **tangle-free brush roll** and **Hair Eraser motorized pet tool** for stairs and furniture. Bissell publishes **up to 50 minutes runtime** on standard mode and a 0.6 L dirt tank — larger than many budget sticks and helpful when a golden retriever blows coat in June. The sealed HEPA Allergen System is documented on Bissell spec sheets for trapping pet dander that AC vents recirculate.
 
-**Editorial read:** Tangle-free rolls and a 0.6 L bin cut **daily summer shedding** on floors and upholstery, but fifty-minute rated runtime may fall short versus sixty-minute rivals in large homes.
-
-**Review concern:** Pet-tool upholstery passes clog and smell fast without maintenance, and dumping the sealed bin indoors can release allergen clouds.
-
 **Runner-up:** Shark Stratos — excellent hair pickup on floors, but the ICONpet mini tool package is more pet-focused at a lower price tier.
+
+**Editorial read:** $399 ICONpet with a 0.6 L bin and tangle-free roll cuts **daily summer-shed lines on hard floors**, but **HEPA and roll upkeep (~$15–30/year)** belongs in three-year ownership math.
+
+**Review concern:** Long hair on mixed carpet can still mean **weekly roll cleanups (~10 minutes)** that shrink the rated 50-minute runtime feel.
 
 | Factor | Bissell ICONpet | Shark Stratos |
 | --- | --- | --- |
@@ -161,6 +161,10 @@ Tineco lists the A10 Hero at **about 2.5 kg / 5.5 lb body weight** with **up to 
 **Review concern:** Suction and filter life trail premium rivals during heavy crumb and pet weeks, and ~72 dB limits use during toddler naps.
 
 **Runner-up:** Samsung Jet 60 — more power for whole-home work, but heavier for a child to avoid on stairs; assign midday duty to the lighter Tineco.
+
+**Editorial read:** $199 A10 Hero at ~2.5 kg and ~25-minute max runtime fits **school-break crumbs and three to four stair trips daily** with low carry fatigue, but weekly deep cleans still need a heavier unit.
+
+**Review concern:** A 40 m²+ play zone on max mode often means **mid-pass dead batteries and two charge cycles** between video calls.
 
 | Factor | Tineco A10 Hero | Samsung Jet 60 |
 | --- | --- | --- |
