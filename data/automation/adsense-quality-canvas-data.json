@@ -1,0 +1,431 @@
+{
+  "stats": {
+    "counted": 34,
+    "avg": 88,
+    "hidden": 6,
+    "bands": {
+      "B": 1,
+      "A": 33
+    },
+    "priorities": {
+      "P4": 1,
+      "P5": 33
+    },
+    "generatedAt": "2026-07-16T07:02:48.444Z",
+    "prevAvg": 67
+  },
+  "rows": [
+    {
+      "slug": "2026-family-3-5-home-essentials-scenario-guide",
+      "title": "3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공",
+      "total": 100,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7929,
+      "models": 5,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-refrigerators-buying-guide",
+      "title": "여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kW",
+      "total": 100,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7933,
+      "models": 5,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-washing-machines-scenario-guide",
+      "title": "여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세",
+      "total": 100,
+      "band": "A",
+      "priority": "P5",
+      "ko": 8650,
+      "models": 11,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-clothes-dryers-buying-guide",
+      "title": "히트펌프 vs 배기형 건조기: 습한 여름 실내 빨래를 위한",
+      "total": 95,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5760,
+      "models": 5,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "title": "습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기",
+      "total": 95,
+      "band": "A",
+      "priority": "P5",
+      "ko": 10490,
+      "models": 4,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-electric-fans-buying-guide",
+      "title": "폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다",
+      "total": 95,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7022,
+      "models": 4,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "title": "여름 장거리 비행용 노이즈캔슬링 헤드폰, 소니·사운드코어·",
+      "total": 95,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7190,
+      "models": 1,
+      "profile": "head-to-head",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-television-buying-guide",
+      "title": "창문 닫고 시원하게: 여름 스포츠·스트리밍·HDMI 2.1",
+      "total": 95,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7052,
+      "models": 3,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-action-cameras-buying-guide",
+      "title": "여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르",
+      "total": 92,
+      "band": "A",
+      "priority": "P5",
+      "ko": 9258,
+      "models": 1,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "title": "여름 이동·방학 WFH, USB-C 허브는 PD 통과·포트",
+      "total": 92,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7239,
+      "models": 2,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-air-purifiers-guide",
+      "title": "폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 ",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 9701,
+      "models": 1,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-monitors-buying-guide",
+      "title": "가성비 모니터, 1080p·1440p보다 패널 타입이 먼저",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6264,
+      "models": 3,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "title": "이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5043,
+      "models": 3,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-robot-vacuums-scenario-guide",
+      "title": "원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7037,
+      "models": 1,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-scenario-guide",
+      "title": "1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7883,
+      "models": 1,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "title": "수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과",
+      "total": 90,
+      "band": "A",
+      "priority": "P5",
+      "ko": 8677,
+      "models": 1,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-water-purifiers-buying-guide",
+      "title": "무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크",
+      "total": 89,
+      "band": "A",
+      "priority": "P5",
+      "ko": 8632,
+      "models": 2,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-mechanical-keyboards-guide",
+      "title": "첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6657,
+      "models": 0,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-smartphones-under-300",
+      "title": "30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7269,
+      "models": 0,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-coffee-machines-head-to-head",
+      "title": "캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르는 법",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5980,
+      "models": 1,
+      "profile": "head-to-head",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "title": "여름·방학 실내 게임 — 저장·독점·4K에 맞는 콘솔 시나",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6912,
+      "models": 2,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-laptops-buying-guide",
+      "title": "방학·기숙사·과제: 학생용 가성비 노트북은 CPU·RAM·",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6923,
+      "models": 2,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-portable-vs-window-ac-head-to-head",
+      "title": "이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 4621,
+      "models": 3,
+      "profile": "head-to-head",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-window-ac-room-scenario-guide",
+      "title": "창문형 에어컨 방별 가이드: 원룸·아이방·폭염 수면",
+      "total": 87,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5939,
+      "models": 4,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-cordless-vacuums-scenario-guide",
+      "title": "여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청",
+      "total": 85,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7086,
+      "models": 0,
+      "profile": "scenario-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-summer-ac-buying-checklist",
+      "title": "여름 에어컨 사기 전 7가지 체크",
+      "total": 85,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5144,
+      "models": 3,
+      "profile": "checklist",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-bidets-checklist",
+      "title": "습한 여름·방학 손님철, 비데 시트는 수압·건조·변기 규격",
+      "total": 82,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5795,
+      "models": 3,
+      "profile": "checklist",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-power-banks-guide",
+      "title": "비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬",
+      "total": 82,
+      "band": "A",
+      "priority": "P5",
+      "ko": 7119,
+      "models": 0,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-wireless-earbuds-top5",
+      "title": "5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 ",
+      "total": 82,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6874,
+      "models": 0,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "title": "여름용 예산 피트니스 밴드, 핏빗·샤오미·어메이즈핏 맞대결",
+      "total": 80,
+      "band": "A",
+      "priority": "P5",
+      "ko": 5804,
+      "models": 0,
+      "profile": "head-to-head",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "title": "1인 아파트 필수 가전 체크리스트: 여름 입주 전 교차 카",
+      "total": 80,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6807,
+      "models": 0,
+      "profile": "checklist",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-summer-budget-tablets-buying-guide",
+      "title": "여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임",
+      "total": 80,
+      "band": "A",
+      "priority": "P5",
+      "ko": 6277,
+      "models": 0,
+      "profile": "buying-guide",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-dishwashers-explainer",
+      "title": "식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하",
+      "total": 75,
+      "band": "A",
+      "priority": "P5",
+      "ko": 4921,
+      "models": 3,
+      "profile": "explainer",
+      "action": "유지"
+    },
+    {
+      "slug": "2026-wireless-earbuds-head-to-head",
+      "title": "여름 출퇴근 TWS: Sony WF-C700N vs 갤럭시",
+      "total": 74,
+      "band": "B",
+      "priority": "P4",
+      "ko": 4356,
+      "models": 1,
+      "profile": "head-to-head",
+      "action": "다듬기"
+    }
+  ],
+  "hidden": [
+    {
+      "slug": "2026-air-fryers-checklist",
+      "total": 47,
+      "band": "C",
+      "title": "여름 주방 더위·방학 간식, 에어프라이어 용량·와트"
+    },
+    {
+      "slug": "2026-portable-ssd-explainer",
+      "total": 65,
+      "band": "B",
+      "title": "휴대용 SSD, USB 속도·TBW·백업은 이렇게 "
+    },
+    {
+      "slug": "2026-rice-cookers-explainer",
+      "total": 55,
+      "band": "C",
+      "title": "퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 "
+    },
+    {
+      "slug": "2026-smart-home-cameras-explainer",
+      "total": 31,
+      "band": "D",
+      "title": "홈 IP 카메라 설명: 해상도·클라우드 vs 로컬·"
+    },
+    {
+      "slug": "2026-under-300-cross-category-buying-guide",
+      "total": 61,
+      "band": "B",
+      "title": "30만 원대 교차 비교: 같은 가격대에서 카테고리마"
+    },
+    {
+      "slug": "2026-webcams-checklist",
+      "total": 59,
+      "band": "C",
+      "title": "여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마"
+    }
+  ]
+}

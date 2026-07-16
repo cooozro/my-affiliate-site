@@ -16,9 +16,9 @@ const PICK = /\*\*(추천|Recommended pick)[:：]?[^*\n]*\*\*/gi;
 const SCENARIO = /^##\s*(시나리오:|Scenario:)/gim;
 const PRODUCT_H2 = /^##\s*\d+\.\s+/gm;
 const EXPERIENCE =
-  /(직접\s*(써|사용|설치|측정|비교|표|맞춰|Narrow|좁혀)|형님이\s*(직접|골라|표를)|지난\s*(주|주말|토요일|일요일)|hands-on|I\s+tested|we\s+tested|our\s+lab|After\s+(lining|checking|re-checking)|Last\s+(Saturday|Sunday|week)|With\s+my\s+own\s+money|table-checked)/i;
+  /(편집부\s*(현장\s*검증|분석|교차\s*검증)|공개\s*스펙\s*(교차\s*검증|재검토)|교차\s*검증한\s*결과|field\s*check|cross-check|cross-checked|Editorial\s*finding|editorial\s*field|After\s+cross-checking|this\s+report)/i;
 const WHY =
-  /(왜\s*(사|고르|추천)|가성비|패스|비추|Who should skip|Analysis takeaway|분석 요약|내\s*돈)/i;
+  /(왜\s*(사|고르|추천)|가성비|패스|비추|Who should skip|Analysis takeaway|분석 요약|실제\s*구매\s*기준|cost-effectiveness|편집부\s*한줄평|Editorial note)/i;
 
 function isNoindex(data) {
   if (data.noindex === true || data.noindex === "true") return true;
@@ -78,8 +78,8 @@ function scorePost(slug) {
   else if (brandsKo.size >= 1) specScore += 2;
   if (picks >= 3 || products >= 3) specScore += 7;
   else if (picks >= 1 || products >= 1) specScore += 3;
-  // Named shortlist section (P2 inject)
-  if (/형님이 골라 본 대표 모델|Models I’d actually shortlist|Models I'd actually shortlist/.test(koBody + enBody)) {
+  // Named shortlist section
+  if (/편집부가 선정한 대표 모델|Models this report shortlists/.test(koBody + enBody)) {
     specScore = Math.min(30, specScore + 5);
   }
 
@@ -105,7 +105,7 @@ function scorePost(slug) {
   if (picks === 0 && products === 0 && scenarios === 0) {
     flags.push("no-named-sections");
   }
-  if (!hasExp) flags.push("no-hands-on-signal");
+  if (!hasExp) flags.push("no-editorial-signal");
   if (koChars >= 4500 && modelCount >= 3 && hasWhy) flags.push("strong-candidate");
   if (angle || String(topicId).startsWith("meta-")) flags.push("meta-angle");
   if (noindex) flags.push("noindex");
