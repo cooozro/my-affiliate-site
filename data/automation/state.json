@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-15T06:38:55.823Z",
-  "nextPublishAt": "2026-07-16T01:12:00.000Z",
-  "scheduledGapHours": 4.2,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-16T02:44:53.000Z",
+  "nextPublishAt": "2026-07-16T07:11:42.406Z",
+  "scheduledGapHours": 4.45,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-16",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-16",
@@ -510,13 +510,21 @@
         "https://www.aipick.shop/en/blog/2026-clothes-dryers-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-clothes-dryers-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-induction-cooktops-buying-guide",
+      "topic": {
+        "id": "induction-cooktops"
+      },
+      "at": "2026-07-16T02:44:53.000Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-induction-cooktops-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-induction-cooktops-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "2026-laptops-buying-guide",
-      "at": "2026-07-06T03:36:25.169Z"
-    },
     {
       "id": "laptops",
       "category": "computing",
@@ -666,10 +674,13 @@
     {
       "id": "clothes-dryers",
       "at": "2026-07-15T06:38:55.828Z"
+    },
+    {
+      "id": "induction-cooktops",
+      "at": "2026-07-16T02:44:53.004Z"
     }
   ],
   "formatHistory": [
-    "buying-guide",
     "head-to-head",
     "scenario-guide",
     "buying-guide",
@@ -688,13 +699,19 @@
     "head-to-head",
     "scenario-guide",
     "explainer",
-    "checklist"
+    "checklist",
+    "head-to-head"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-16T00:11:45.907Z",
-    "issueCount": 2,
+    "at": "2026-07-16T02:44:50.875Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (92min past slot, KST 2026-07-16)",
+        "severity": "error"
+      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
@@ -702,11 +719,14 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1052min",
+        "message": "Cursor replenish pending 1205min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-15",
   "lastDailyContentAudit": {
@@ -812,6 +832,11 @@
       "id": "solo-apartment-essentials",
       "type": "household-type",
       "at": "2026-07-15T01:08:30.781Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-07-16T02:44:53.017Z"
     }
   ]
 }

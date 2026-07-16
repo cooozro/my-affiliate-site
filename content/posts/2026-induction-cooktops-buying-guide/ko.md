@@ -1,7 +1,7 @@
 ---
 title: '이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지'
 description: '이동식·빌트인 인덕션을 화력(W), 팬 호환, 잠금, 여름 주방 열기 기준으로 비교합니다. 공개 스펙만 사용합니다.'
-date: '2026-07-15'
+date: '2026-07-16'
 tags:
   - 인덕션
   - 주방가전
@@ -11,14 +11,13 @@ tags:
 contentProfile: buying-guide
 topicId: induction-cooktops
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-15T01:47:00.000Z'
 imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-07-15T01:50:39.958Z'
+updatedAt: '2026-07-16T11:44:51.000Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: 실내의 induction cooktop kitchen
@@ -28,6 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8093961
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8093961/pexels-photo-8093961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-16T11:44:51.000Z'
 ---
 ## 편집부 개요
 

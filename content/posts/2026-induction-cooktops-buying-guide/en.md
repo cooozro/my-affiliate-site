@@ -3,7 +3,7 @@ title: 'Portable vs Built-In Induction: Five Cooktops for Cooler Summer Kitchens
 description: >-
   Portable and built-in induction cooktops compared on watt zones, pan fit,
   safety locks, and summer kitchen heat — public specs only.
-date: '2026-07-15'
+date: '2026-07-16'
 tags:
   - induction cooktop
   - kitchen appliances
@@ -13,14 +13,13 @@ tags:
 contentProfile: buying-guide
 topicId: induction-cooktops
 writingMode: stable
-draft: true
+draft: false
 liveData: true
-createdAt: '2026-07-15T01:47:00.000Z'
 imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-07-15T01:50:39.931Z'
+updatedAt: '2026-07-16T11:44:51.000Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: induction cooktop kitchen in a home interior
@@ -30,6 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8093961
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8093961/pexels-photo-8093961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-07-16T11:44:51.000Z'
 ---
 ## Editorial Overview
 
