@@ -83,9 +83,11 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Analysis takeaway:** With a **standard double-hung window**, this is the quietest sleep and the lowest estimated daily electricity use in our comparison — often the right pick when the lease allows window hardware.
 
-**Review concern:** Casement windows, high-rise removal, and lease restore clauses can add **adapter cost and end-of-lease labor** that the sticker price hides.
+**Verdict:** Best **set-and-forget summer cooling** when installation is allowed.
 
-**Verdict:** Best **set-and-forget summer## 2. Midea MAP10S1TBL (10,000 BTU single-hose portable)
+---
+
+## 2. Midea MAP10S1TBL (10,000 BTU single-hose portable)
 
 **Strengths:** No window bracket; rolls between rooms; 10,000 BTU label suits studio corners; often on promotion in {{today}} seasonal sales.
 
@@ -97,9 +99,11 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Analysis takeaway:** A **temporary fix for one small room** — not a whole-apartment solution — especially when you cannot drill or block a window long term.
 
-**Review concern:** A loose vent seal pulls **warm outdoor air back inside**, forcing longer compressor runs and higher bills regardless of the BTU label.
+**Verdict:** Best **rental-friendly quick cool-down** for ≤15 m² if you accept higher running cost.
 
-**Verdict:** Best **rental-friendly quick cool-down** for ## 3. LG LP1419IVSM (14,000 BTU dual-hose portable)
+---
+
+## 3. LG LP1419IVSM (14,000 BTU dual-hose portable)
 
 **Strengths:** Dual-hose layout reduces negative pressure and improves real-world BTU delivery; 14,000 BTU headroom for combined living/sleep areas; dehumidify mode helps humid summers.
 
@@ -111,9 +115,15 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Analysis takeaway:** When you **cannot install window units** but need more than a bedroom corner cooled, dual-hose portables are the efficiency sweet spot within the portable category.
 
-**Review concern:** Sloppy balcony-door sealing **erases most of the efficiency gap** over window AC while keeping the highest upfront price in this trio.
+**Verdict:** Best **high-capacity portable** when window AC is off the table.
 
-**Verdict:** Best **high-capacity portablere window** | Quietest, best efficiency per watt |
+---
+
+## Scenario winners
+
+| Scenario | Winner | Why |
+| --- | --- | --- |
+| Bedroom ≤15 m², window allowed | **Frigidaire window** | Quietest, best efficiency per watt |
 | Rental with strict window rules | **Midea single-hose** | Lowest hassle; acceptable for short heat waves |
 | Open studio 20–25 m², no window kit | **LG dual-hose** | Higher effective BTU; less warm-air recirculation |
 | Need to move unit between rooms weekly | **Midea single-hose** | Lighter workflow than dual-hose sealing |

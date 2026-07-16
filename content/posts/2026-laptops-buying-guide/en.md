@@ -93,8 +93,6 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Analysis takeaway:** In my book that means **twenty tabs without swap panic** and **readable screens during summer study by the window**.
 
-**Review concern:** Soldered memory plus uncooled dorm heat above 30°C can **throttle compile and video-call workloads** when fan noise becomes the limiting factor.
-
 **Verdict:** Top p## 2. Acer Aspire 5 A515-58
 
 **Strengths:** Core i5-1335U solid for spreadsheets and light editing, **one free SODIMM slot** to reach 16GB cheaply, 50Wh battery, full-size keyboard with numeric pad.
@@ -107,8 +105,6 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Analysis takeaway:** That is the **lowest-friction RAM upgrade path** if you add an 8GB module after back-to-school sales.
 
-**Review concern:** Running heavy multitasking on 8GB until you upgrade invites **swap lag and fan noise** during the busiest weeks of the semester.
-
 **Verdict:** Best **upgrade## 3. ASUS Vivobook Go 15 E1504FA
 
 **Strengths:** Lowest list price in the set, 16GB soldered, Ryzen 5 7520U efficient for notes and streaming, lightweight for summer travel between home and campus.
@@ -120,8 +116,6 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 **Review concern:** Soldered 16GB and 250 nits together **limit media or design pivots** late in a four-year program without buying again.
 
 **Analysis takeaway:** A **light 16GB carry laptop for break travel** — pair with a PD power bank for library marathons.
-
-**Review concern:** 42Wh and soldered RAM mean **no upgrade and no outlet-free marathons** unless you carry backup power every day.
 
 **Verdict:** **Lightest 16GB entry** when weight beats maximum runtime.
 
@@ -137,8 +131,6 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Analysis takeaway:** Add RAM and an external SSD and you get a **recognizable campus repair path** for media courses.
 
-**Review concern:** Keeping video projects on 256GB alone **fills storage and backup time** faster than essay-only workloads.
-
 **Verdict:** Solid **HP ecosystem** pick when local service matte## 5. Dell Inspiron 15 3535
 
 **Strengths:** Ryzen 5 7520U value, **open RAM slot**, 512GB storage default, balanced weight, Dell student pricing windows in late summer.
@@ -150,8 +142,6 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 **Review concern:** In **30°C+ uncooled dorms**, compile loads plus fan noise feel worse than IdeaPad’s 300 nits and 47Wh combo.
 
 **Analysis takeaway:** **AMD efficiency plus room to grow RAM** without jumping to premium ultrabooks.
-
-**Review concern:** Until you add RAM, 8GB and 250 nits struggle when **heat and compile loads stack** on uncooled summer desks.
 
 **Verdict:** **Balanced AMD value** when upgrade path and stor | IdeaPad Slim 3 | Vivobook Go 15 |
 | All-day library without outlets | IdeaPad Slim 3 | Acer Aspire 5 |
