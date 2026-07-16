@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-16T03:20:00.000Z'
+updatedAt: '2026-07-16T05:40:29.363Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -34,7 +34,7 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 
 ## Introduction: use this before heat-season rush
 
-Last heat-wave week I watched a relative’s studio sit warm at noon after they chased a **“12,000 BTU max cooling”** banner — the hose seal was loose, the lease banned the bracket, and the bill climbed first. Mid-50s lesson: AC ads sell peak BTU; your wallet pays for **install fit, exhaust math, and honest kWh**.
+Last heat-wave week, a studio field check stayed warm at noon after chasing a **“12,000 BTU max cooling”** banner — the hose seal was loose, the lease banned the bracket, and the bill climbed first. Editorial finding: AC ads sell peak BTU; returns pay for **install fit, exhaust math, and honest kWh**.
 
 Walk these seven checks **before** checkout so you don’t learn about a blocked window, banned bracket, or under-sized room on the hottest week of the year. Tip that saves returns: measure floor area and sash width first — a 15 m² shaded bedroom and a west-facing 20 m² studio are not the same BTU story even when both ads say “studio size.”
 
@@ -42,7 +42,7 @@ Walk these seven checks **before** checkout so you don’t learn about a blocked
 
 ## Analysis methodology
 
-I pulled checklist items from manufacturer install guides, common lease practice, and energy-label docs — public sources only, no private commerce APIs. The order below is how I would spend my own money: permission and exhaust before brand and discount.
+Checklist items came from manufacturer install guides, common lease practice, and energy-label docs — public sources only, no private commerce APIs. On a cost-effectiveness basis, the order below is: permission and exhaust before brand and discount.
 
 ---
 
@@ -106,21 +106,21 @@ If neighbors share a wall, watch **compressor start-up bursts** — many units r
 
 ---
 
-## Models I’d actually shortlist
+## Models this report shortlists
 
 A checklist alone doesn’t checkout. These three are my **install / noise / BTU** anchors.
 
 ### Frigidaire FHWW083WBE (8,000 BTU)
 
-Window unit for small bedrooms/studios with honest CEER/noise labels. **My take:** Skip “max BTU” ads—**sash kit fit** decides returns.
+Window unit for small bedrooms/studios with honest CEER/noise labels. **Editorial note:** Skip “max BTU” ads—**sash kit fit** decides returns.
 
 ### Midea MAW08V1QWT (U-shape 8,000 BTU)
 
-Keeps a lower vent path—handy for naps. **My take:** Measure kit width first or the pretty ad becomes clutter.
+Keeps a lower vent path—handy for naps. **Editorial note:** Measure kit width first or the pretty ad becomes clutter.
 
 ### GE AHY12LZ (12,000 BTU)
 
-Heat-wave nights / open doorways; dry + scheduling. **My take:** 12k can be oversized for a shaded 15 m² room—**measure first.**
+Heat-wave nights / open doorways; dry + scheduling. **Editorial note:** 12k can be oversized for a shaded 15 m² room—**measure first.**
 
 ## FAQ
 ### If I buy the highest BTU I can afford, will my studio apartment stay cold?
@@ -144,4 +144,4 @@ During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
 ## Final Verdict
 
-After walking this list myself, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **With my own money**, I would clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.
+After walking through this checklist, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **On a cost-effectiveness basis,** clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.

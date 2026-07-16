@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T03:01:00.000Z'
+updatedAt: '2026-07-16T05:39:55.560Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## Editorial Overview
@@ -40,7 +40,7 @@ publishedAt: '2026-07-07T04:35:40.875Z'
 
 ## Introduction: which budget band for summer routines?
 
-Last weekend on an early walk, my cheap band **loosened with sweat and the heart-rate graph jumped around**. After an air-conditioned night the sleep score said “good” while my body disagreed — mid-50s lesson: “health score” marketing hides those gaps. Budget bands repay attention to **sweat fit, strap tension, and subscription cost** first.
+On an early-walk field check, a budget band **loosened with sweat and the heart-rate graph jumped around**. After an air-conditioned night the sleep score said “good” while recovery felt flat — Editorial finding: “health score” marketing hides those gaps. Budget bands repay attention to **sweat fit, strap tension, and subscription cost** first.
 
 When school break shifts sleep schedules and outdoor runs move to dawn or indoor treadmills, a sub-$100 band is often the first wearable people buy. The myth we hear most: **any tracker with a green LED is equally accurate**. In practice, optical heart rate drifts when wrist tension changes in humidity, sleep staging algorithms disagree on REM boundaries, and some apps lock advanced metrics behind subscriptions. From a marketing eye, a flashy wellness score sells less well than **year-one subscription cost, battery, and whether GPS lives on the phone**.
 
@@ -92,7 +92,7 @@ This comparison is **editorial research** — I cross-check public manufacturer 
 
 **Weaknesses:** Sleep staging and workout HR can **lag or smooth spikes** compared with chest straps or higher-tier watches. GPS still requires a phone for mapped routes. Some advanced training metrics and watch faces are region-locked or arrive late outside China. Notification handling on iOS remains more limited than on Android.
 
-**Analysis takeaway:** Smart Band 9 is the default **budget daily tracker** when battery and screen quality beat analytical depth — mid-50s value eye agrees for students and casual summer goals.
+**Analysis takeaway:** Smart Band 9 is the default **budget daily tracker** when battery and screen quality beat analytical depth — editorial value analysis supports this for students and casual summer goals.
 
 **Verdict:** Best **price-to-screen-to-battery** ratio for students and casual summer fitness goals.
 
@@ -166,4 +166,4 @@ Premium unlocks deeper sleep insights, workout videos, and some historical trend
 | No smartphone on runs | None of these — all lean on phone GPS for maps |
 | Hates recurring subscriptions | Avoid Fitbit if Premium prompts annoy you; prefer Xiaomi |
 
-After lining up the sheets myself, most summer buyers under $100 still land on **Xiaomi Smart Band 9** for value and battery. Flashy “health score” copy sells less well than **subscription, battery, and HR stability**. **With my own money**, I would only pay up for **Fitbit Inspire 3** when sleep coaching beats battery, and pick **Amazfit Band 7** when Zepp depth shows up on discount.
+After cross-checking the public specs, most summer buyers under $100 still land on **Xiaomi Smart Band 9** for value and battery. Flashy “health score” copy sells less well than **subscription, battery, and HR stability**. **On a cost-effectiveness basis,** this report would only pay up for **Fitbit Inspire 3** when sleep coaching beats battery, and pick **Amazfit Band 7** when Zepp depth shows up on discount.

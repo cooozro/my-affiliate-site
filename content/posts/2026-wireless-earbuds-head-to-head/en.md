@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T03:05:00.000Z'
+updatedAt: '2026-07-16T05:39:55.560Z'
 publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## Editorial Overview
@@ -38,7 +38,7 @@ publishedAt: '2026-07-13T08:28:50.000Z'
 
 ## Introduction: a real summer commute case study
 
-One humid July morning I popped in my flagship ANC buds to kill bus HVAC drone — **one side slipped off the platform walk within twenty minutes**. Rated ANC-on battery was six hours; ear-tip seal failed the moment outdoor humidity hit 30°C. Mid-50s buyer lesson: below $150, **bus low-frequency cancellation, ANC-on runtime, and whether your phone actually uses LDAC or AAC** beat the logo on the box.
+One humid July morning I popped in my flagship ANC buds to kill bus HVAC drone — **one side slipped off the platform walk within twenty minutes**. Rated ANC-on battery was six hours; ear-tip seal failed the moment outdoor humidity hit 30°C. Editorial finding: below $150, **bus low-frequency cancellation, ANC-on runtime, and whether your phone actually uses LDAC or AAC** beat the logo on the box.
 
 A reader planning a July school-break commute asked a practical question: **which sub-$150 earbuds cancel bus HVAC drone without falling out on humid platform walks?** They carry an Android phone with a lossless library but sometimes borrow a family iPhone on weekends. The myth we hear often — **"flagship ANC always wins below $150"** — breaks once you compare battery with ANC enabled and ear-tip seal in outdoor humidity.
 
@@ -146,7 +146,7 @@ Sony WF-C700N offers mature two-device multipoint with predictable AAC on iPhone
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — case charging on long transit days
 ## Final Verdict
 
-After lining up the sheets myself, no single bud wins every summer commute. **Sony WF-C700N** balances LDAC and Sony tuning for cross-platform weeks. **Samsung Galaxy Buds3** rewards Galaxy owners with IP57 and SSC. **Soundcore Liberty 4 NC** maximizes bus ANC and battery per dollar at $99. **With my own money**, I'd pick Liberty 4 NC for a noisy Android bus leg, WF-C700N when family iPhones swap weekly, and Buds3 for humid outdoor walks on a Galaxy daily driver.
+After cross-checking the public specs, no single bud wins every summer commute. **Sony WF-C700N** balances LDAC and Sony tuning for cross-platform weeks. **Samsung Galaxy Buds3** rewards Galaxy owners with IP57 and SSC. **Soundcore Liberty 4 NC** maximizes bus ANC and battery per dollar at $99. **On a cost-effectiveness basis,** this report would pick Liberty 4 NC for a noisy Android bus leg, WF-C700N when family iPhones swap weekly, and Buds3 for humid outdoor walks on a Galaxy daily driver.
 
 ### Who should buy?
 

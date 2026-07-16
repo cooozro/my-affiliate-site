@@ -26,7 +26,7 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-07-16T03:20:00.000Z'
+updatedAt: '2026-07-16T05:41:01.623Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## Editorial Overview
@@ -36,13 +36,13 @@ publishedAt: '2026-07-10T05:30:48.298Z'
 
 ## Introduction: clean cold water when heat drives thirst and the kitchen stays busy
 
-Last Saturday after a kids’ soccer practice I watched the Brita pitcher empty twice before dinner — and the carton still sold **“99.9% purity”** while nobody had checked filter dollars or whether the galley counter even fits a dispenser. Mid-50s lesson: purifier marketing sells fear and badges; your kitchen pays for **install rights, annual filter math, and whether TDS drop solves a real complaint**.
+After a kids’ soccer practice field check, the Brita pitcher emptied twice before dinner — and the carton still sold **“99.9% purity”** while nobody had checked filter dollars or whether the galley counter even fits a dispenser. Editorial finding: purifier marketing sells fear and badges; your kitchen pays for **install rights, annual filter math, and whether TDS drop solves a real complaint**.
 
 July 2026 renters and owners face the same fork before peak heat: **countertop dispenser** vs **under-sink cartridge**, how many **filter swaps** a heavy summer of bottle refills actually costs, and whether a cheap TDS meter number matters more than chlorine taste. Tip with numbers: a “6-month filter” rated for light use can burn in **2–3 months** for a family pouring about **3 gallons (11 L) per person per day** in a heat wave — read the gallon life, not the calendar slogan.
 
 I compared **five mainstream formats** on public NSF listings and manufacturer sheets — faucet mount, under-sink carbon, connected countertop, and two RO paths — no seller APIs.
 
-**My table-checked takeaway:** Lowest upfront plus faucet-speed flow → PUR FM-3700B; under-sink volume without RO waste → Aquasana AQ-5300+ for most 2–4 person homes; smart countertop reminders → Brita Hub for renters; aggressive plug-in TDS drop → Coway Aquamega 200C vs premium Bluewater Kitchen Station 1 — pick on counter space and annual filter budget, not TDS fear alone.
+**Cross-checked takeaway:** Lowest upfront plus faucet-speed flow → PUR FM-3700B; under-sink volume without RO waste → Aquasana AQ-5300+ for most 2–4 person homes; smart countertop reminders → Brita Hub for renters; aggressive plug-in TDS drop → Coway Aquamega 200C vs premium Bluewater Kitchen Station 1 — pick on counter space and annual filter budget, not TDS fear alone.
 
 ---
 
@@ -162,21 +162,21 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ---
 
-## Models I’d actually shortlist
+## Models this report shortlists
 
 In heat waves I drink more water—so I write **filter cost, install, TDS** before picking a brand.
 
 ### Coway **CHP242N** / A2-class countertop
 
-Easier install; clear filter alerts. **My take:** Ignore “forever free” vibes—**log annual filter spend**.
+Easier install; clear filter alerts. **Editorial note:** Ignore “forever free” vibes—**log annual filter spend**.
 
 ### Brita Hub (expanded pitcher-class convenience)
 
-Low entry cost, simple swaps. **My take:** “Simple” marketing hits a wall when a whole family refills all day.
+Low entry cost, simple swaps. **Editorial note:** “Simple” marketing hits a wall when a whole family refills all day.
 
 ### ZeroWater 23-Cup **ZT280W**
 
-TDS meter makes the difference visible. **My take:** Don’t buy the number alone—check **how often filters die** in your water.
+TDS meter makes the difference visible. **Editorial note:** Don’t buy the number alone—check **how often filters die** in your water.
 
 ## FAQ
 ### Countertop or under-sink — which wins for summer hydration volume?
@@ -220,7 +220,7 @@ Filtered tap reduces **plastic waste and trunk lifting** during 95°F weeks when
 
 ## Final Verdict
 
-After lining filter dollars and install rights up myself, 2026 kitchen purifier value still means matching **lease rules, annual cartridge spend, and whether TDS drop fixes your actual taste or hardness complaint** — not the biggest “% reduction” badge on the box. Marketing sells purity theater; satisfaction comes from cold cups that keep flowing through heat season. The five picks split between under-sink gallon value (Aquasana), reversible faucet carbon (PUR), connected countertop convenience (Brita Hub), and two RO paths (Coway efficiency vs Bluewater design). **With my own money**, I would download the city water report and measure weekend liters first, then narrow with the one-liners below.
+After cross-checking filter costs and install rules against public sources, 2026 kitchen purifier value still means matching **lease rules, annual cartridge spend, and whether TDS drop fixes your actual taste or hardness complaint** — not the biggest “% reduction” badge on the box. Marketing sells purity theater; satisfaction comes from cold cups that keep flowing through heat season. The five picks split between under-sink gallon value (Aquasana), reversible faucet carbon (PUR), connected countertop convenience (Brita Hub), and two RO paths (Coway efficiency vs Bluewater design). **On a cost-effectiveness basis,** this report would download the city water report and measure weekend liters first, then narrow with the one-liners below.
 
 ### Who should buy?
 

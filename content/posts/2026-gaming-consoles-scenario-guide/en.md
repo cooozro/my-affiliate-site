@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T03:15:00.000Z'
+updatedAt: '2026-07-16T05:39:55.560Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
@@ -39,13 +39,13 @@ publishedAt: '2026-07-02T03:15:31.755Z'
 
 ## Introduction: who this guide is for
 
-On a school-break weekend last month, the living-room TV stayed occupied while a patch **spun for half a day** beside me. From a mid-50s buyer seat, teraflops marketing matters less than **where you play, how you buy games, and how fast storage fills**. This guide is for households planning a console before or during summer break—kids home longer, roommates sharing a 4K TV, or solo players stacking a digital library on seasonal sales.
+On a school-break weekend last month, the living-room TV stayed occupied while a patch **spun for half a day** beside me. From an editorial value lens, teraflops marketing matters less than **where you play, how you buy games, and how fast storage fills**. This guide is for households planning a console before or during summer break—kids home longer, roommates sharing a 4K TV, or solo players stacking a digital library on seasonal sales.
 
 Launch ads and “Pro” copy lead with performance numbers while burying patch sizes, subscription months, and storage-expansion cost. **Value** is the path that fits your scenario—not the highest-spec box. You might care about **100 GB patch speed**, whether *Spider-Man* or *Starfield* is platform-exclusive, or if Game Pass beats buying discs one by one.
 
 We compare four mainstream 2026 console paths across four indoor scenarios. Reference prices reflect OEM and major US storefront listings as of {{today}}; KRW equivalents use {{usd_krw_rate}} (~{{krw:499}} for a disc-based flagship bundle, ~{{krw:29.99}} per month for a top-tier subscription tier).
 
-**My table-checked takeaway:** living-room 4K + Game Pass → Xbox Series X; exclusive stories + expandable SSD → PS5 Slim (Disc); subscription-first budget → Xbox Series S; portable bedroom when the TV is contested → Switch OLED.
+**Cross-checked takeaway:** living-room 4K + Game Pass → Xbox Series X; exclusive stories + expandable SSD → PS5 Slim (Disc); subscription-first budget → Xbox Series S; portable bedroom when the TV is contested → Switch OLED.
 
 ---
 
@@ -169,21 +169,21 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 ---
 
-## Models I’d actually shortlist
+## Models this report shortlists
 
 Before school-break couch wars, shortlist on **storage, exclusives, and 4K**.
 
 ### PlayStation 5 Slim (**CFI2000** class)
 
-Balanced exclusives and media apps; slim saves space. **My take:** Don’t jump to “Pro” marketing—ask if you even own a 4K TV.
+Balanced exclusives and media apps; slim saves space. **Editorial note:** Don’t jump to “Pro” marketing—ask if you even own a 4K TV.
 
 ### Xbox Series X (1882)
 
-Storage, backward compat, Game Pass value. **My take:** “Most powerful” on the box matters less than **which games you’ll actually play via subscription**.
+Storage, backward compat, Game Pass value. **Editorial note:** “Most powerful” on the box matters less than **which games you’ll actually play via subscription**.
 
 ### Nintendo Switch OLED (**HEG001**)
 
-Travel and party play. **My take:** Skip the graphics race—value is **hours on the sofa or in the car**.
+Travel and party play. **Editorial note:** Skip the graphics race—value is **hours on the sofa or in the car**.
 
 ## FAQ
 ### Will my console overheat if I play 4K all day with the windows closed and AC on?
@@ -207,7 +207,7 @@ Series S fits **subscription-first buyers, smaller TVs, and upscaled 4K** — no
 - [How We Review Tech Products](/en/blog/welcome) — how we score products and update live price placeholders
 ## Final Verdict
 
-After matching the scenarios myself, {{today}} console value still means **where you play, how you buy games, and how fast storage fills during sale season**—not raw teraflops marketing. **With my own money**, I would lock play location and purchase style first. For most families on a 4K living-room TV through summer break, **Xbox Series X** balances native resolution with Game Pass. Story buyers who want discs and Sony-only releases should default to **PS5 Slim (Disc)** and budget an approved M.2 before the next 80 GB patch. Tight budgets with a rotating library fit **Xbox Series S** if you accept upscaled 4K. When the living-room TV is contested, **Switch OLED** keeps peace—buy a microSD on day one.
+After cross-checking the public scenarios, {{today}} console value still means **where you play, how you buy games, and how fast storage fills during sale season**—not raw teraflops marketing. **On a cost-effectiveness basis,** this report would lock play location and purchase style first. For most families on a 4K living-room TV through summer break, **Xbox Series X** balances native resolution with Game Pass. Story buyers who want discs and Sony-only releases should default to **PS5 Slim (Disc)** and budget an approved M.2 before the next 80 GB patch. Tight budgets with a rotating library fit **Xbox Series S** if you accept upscaled 4K. When the living-room TV is contested, **Switch OLED** keeps peace—buy a microSD on day one.
 
 | Buy if… | Skip if… |
 | --- | --- |

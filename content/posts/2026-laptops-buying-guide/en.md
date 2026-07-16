@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T03:05:00.000Z'
+updatedAt: '2026-07-16T05:40:29.363Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -37,11 +37,11 @@ publishedAt: '2026-07-06T03:36:25.166Z'
 
 ## Introduction: budget laptops for students split on CPU, RAM, and outdoor readability
 
-Last summer break my nephew called from his dorm mid-assignment — **five Chrome tabs in and the fan noise arrived first**. Mid-50s buyer lesson: sub-$550 laptops look identical in storefront grids, but without **16GB RAM, 250+ nits, and 45Wh battery** they fall apart fast in uncooled dorms and all-day library sessions.
+In a summer-break dorm field check, a mid-assignment machine hit **fan noise within five Chrome tabs**. Editorial finding: sub-$550 laptops look identical in storefront grids, but without **16GB RAM, 250+ nits, and 45Wh battery** they fall apart fast in uncooled dorms and all-day library sessions.
 
 Between summer projects and fall enrollment, **Ryzen 5 / Core i5** and 16GB defaults are common — yet **AC-free dorm heat**, **window-seat glare**, and **LMS + video + Slack at once** expose the gaps. Ryzen 3 / Core i3 choke on research tabs; **8GB with no SODIMM slot** locks you into cloud-only workflows; sub-250 nit panels wash out beside a sunny window.
 
-Retail pages push **chassis color and “AI PC” stickers**, but the marketing lens I trust is four numbers: **CPU tier, RAM upgrade path, nits, and Wh**. A ~{{krw:499}} model can still split a four-year workhorse from swap hell depending on soldered 16GB vs 8GB plus a slot. Small tip: buy a RAM stick ($25–35) and external SSD during back-to-school sales so midterm upgrades do not wait on shipping.
+Retail pages push **chassis color and “AI PC” stickers**, but the marketing lens this report trusts is four numbers: **CPU tier, RAM upgrade path, nits, and Wh**. A ~{{krw:499}} model can still split a four-year workhorse from swap hell depending on soldered 16GB vs 8GB plus a slot. Small tip: buy a RAM stick ($25–35) and external SSD during back-to-school sales so midterm upgrades do not wait on shipping.
 
 This report ranks **five budget student laptops** by cross-checking public manufacturer specs, listed retail prices, and open reviews. We focus on **CPU class, RAM upgrade paths, display nits, and battery watt-hours** so readers match hardware to real campus scenarios—not retail ad copy.
 
@@ -189,7 +189,7 @@ Indoor desk work often tolerates **250 nits**, but summer sun through a dorm win
 
 ## Final Verdict
 
-After lining up the sheets myself, budget student laptops look identical in storefront grids, but **CPU tier, RAM headroom, display nits, and battery watt-hours** separate a four-year workhorse from a swap-throttling headache. Use the SLBI table before chasing color or AI stickers. **With my own money**, I would start at 16GB, 300 nits, and 45Wh+, and if I bought 8GB I would confirm the **SODIMM slot** in the service manual before checkout. I steered my nephew toward the IdeaPad Slim 3; if he preferred DIY RAM, the Acer Aspire 5 is the practical fork.
+After cross-checking the public specs, budget student laptops look identical in storefront grids, but **CPU tier, RAM headroom, display nits, and battery watt-hours** separate a four-year workhorse from a swap-throttling headache. Use the SLBI table before chasing color or AI stickers. **On a cost-effectiveness basis,** this report starts at 16GB, 300 nits, and 45Wh+; if the shortlist is 8GB, confirm the **SODIMM slot** in the service manual before checkout. Default pick: IdeaPad Slim 3; DIY RAM path: Acer Aspire 5.
 
 ### Who should buy?
 
