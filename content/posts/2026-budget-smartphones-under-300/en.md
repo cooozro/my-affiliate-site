@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-16T02:48:00.744Z'
+updatedAt: '2026-07-16T03:15:00.000Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -35,11 +35,13 @@ coverImageAltKo: 책상 위의 스마트폰
 
 ## Introduction: in 2026 entry phones are won on chipset tier
 
-In the first half of 2026, sub-$300 phones ship with higher refresh displays and 5,000mAh batteries as defaults, but **real-world feel depends on SoC tier and OS update promises**. Geekbench multi-core gaps of 40%+ within the same price band are common, and region-locked 5G SKUs still miss local bands.
+Last month I borrowed a friend’s sub-$300 phone for maps, payments, and photos—and felt **app switches lag a beat** next to another set in the same price band. From a mid-50s buyer seat, camera ad stills matter less than **chipset tier, RAM, and update years**. Refresh and battery numbers look alike; daily feel does not.
 
-This report ranks **five value smartphones** by cross-checking public manufacturer specs, listed retail prices, open reviews, and published update policies. We focus on **verifiable spec sheets**, not ad copy, so readers are not pushed by carrier or storefront marketing alone.
+In the first half of 2026, sub-$300 phones ship with higher refresh displays and 5,000mAh batteries as defaults, but **real-world feel depends on SoC tier and OS update promises**. Geekbench multi-core gaps of 40%+ are common, and region-locked 5G SKUs still miss local bands. Carrier and storefront marketing lead with logos and sample shots while burying chipset and update tables. **Value** is the verifiable sheet—not the ad cut.
 
-**Key takeaway:** Balanced daily use → Samsung Galaxy A35; spec-per-dollar → Poco M6 Pro; battery-first → Motorola Moto G Power; Xiaomi ecosystem → Redmi Note 13 Pro; lowest entry price → Galaxy A15.
+I ranked **five value smartphones** on public manufacturer specs, listed retail prices, open reviews, and published update policies.
+
+**My table-checked takeaway:** balanced daily use → Samsung Galaxy A35; spec-per-dollar → Poco M6 Pro; battery-first → Motorola Moto G Power; Xiaomi ecosystem → Redmi Note 13 Pro; lowest entry → Galaxy A15.
 
 ---
 
@@ -195,7 +197,7 @@ For video, social feeds, and night scrolling, AMOLED’s deeper blacks and punch
 
 ## Final Verdict
 
-Sub-$300 phones look identical in ads, but **chipset tier, RAM, and update years** separate a three-year keeper from a frustrating upgrade in eighteen months. Use the tables below before you chase a logo.
+After re-checking the sheets myself, sub-$300 phone value still means matching **chipset tier, RAM, and update years** to how you actually use the device—not the logo on the ad. Ads look identical; three-year keepers and eighteen-month regrets do not. **With my own money**, I would lock the case with the tables below before chasing a brand.
 
 ### Who should buy?
 

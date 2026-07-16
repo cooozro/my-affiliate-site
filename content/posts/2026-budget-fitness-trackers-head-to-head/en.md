@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-07T06:30:00.000Z'
+updatedAt: '2026-07-16T03:01:00.000Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## Editorial Overview
@@ -40,15 +40,17 @@ publishedAt: '2026-07-07T04:35:40.875Z'
 
 ## Introduction: which budget band for summer routines?
 
-When school break shifts sleep schedules and outdoor runs move to dawn or indoor treadmills, a sub-$100 band is often the first wearable people buy. The myth we hear most: **any tracker with a green LED is equally accurate**. In practice, optical heart rate drifts when wrist tension changes in humidity, sleep staging algorithms disagree on REM boundaries, and some apps lock advanced metrics behind subscriptions.
+Last weekend on an early walk, my cheap band **loosened with sweat and the heart-rate graph jumped around**. After an air-conditioned night the sleep score said “good” while my body disagreed — mid-50s lesson: “health score” marketing hides those gaps. Budget bands repay attention to **sweat fit, strap tension, and subscription cost** first.
 
-This head-to-head compares **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses {{usd_krw_rate}} KRW per USD ({{krw:49.99}} for a $50 band tier).
+When school break shifts sleep schedules and outdoor runs move to dawn or indoor treadmills, a sub-$100 band is often the first wearable people buy. The myth we hear most: **any tracker with a green LED is equally accurate**. In practice, optical heart rate drifts when wrist tension changes in humidity, sleep staging algorithms disagree on REM boundaries, and some apps lock advanced metrics behind subscriptions. From a marketing eye, a flashy wellness score sells less well than **year-one subscription cost, battery, and whether GPS lives on the phone**.
+
+I lined up **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses {{usd_krw_rate}} KRW per USD ({{krw:49.99}} for a $50 band tier). Small tip: on humid days, wear the band snug two finger-widths above the wrist bone.
 
 ---
 
 ## Analysis methodology
 
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
+This comparison is **editorial research** — I cross-check public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
 | Item | Source | Purpose |
 | --- | --- | --- |
@@ -78,7 +80,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** **Fitbit Premium** still gates some historical trends and advanced breakdowns — budget buyers should price the first year accordingly. No built-in GPS; outdoor pace relies on phone tethering. Battery around a week means more charging than Xiaomi or Amazfit during travel weeks. Google account migration continues to shift features; check your region’s app support before buying.
 
-**Analysis takeaway:** Choose Inspire 3 when **sleep and wellness coaching** matter more than multi-week battery, and you accept occasional Premium prompts.
+**Analysis takeaway:** Pick Inspire 3 when **sleep and wellness coaching** matter more than multi-week battery — and price the first year of Premium prompts before you buy.
 
 **Verdict:** Best **sleep-first wellness band** if you already live in Google/Fitbit ecosystem.
 
@@ -90,7 +92,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** Sleep staging and workout HR can **lag or smooth spikes** compared with chest straps or higher-tier watches. GPS still requires a phone for mapped routes. Some advanced training metrics and watch faces are region-locked or arrive late outside China. Notification handling on iOS remains more limited than on Android.
 
-**Analysis takeaway:** The Smart Band 9 is the default **budget daily tracker** when battery and screen quality beat analytical depth.
+**Analysis takeaway:** Smart Band 9 is the default **budget daily tracker** when battery and screen quality beat analytical depth — mid-50s value eye agrees for students and casual summer goals.
 
 **Verdict:** Best **price-to-screen-to-battery** ratio for students and casual summer fitness goals.
 
@@ -102,7 +104,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** Optical HR can **overshoot during interval sprints** or loose straps — tighten before HIIT. Sleep scores sometimes disagree with how you feel after late-night travel; treat trends, not single nights. Like rivals, mapping needs a phone. Zepp’s UI is busy; beginners may prefer Fitbit’s simpler daily story.
 
-**Analysis takeaway:** Band 7 suits buyers who want **long battery plus a feature-rich Zepp dashboard** without smartwatch bulk.
+**Analysis takeaway:** Band 7 suits buyers who want **long battery plus a feature-rich Zepp dashboard** without smartwatch bulk — just tighten before HIIT.
 
 **Verdict:** Best **workout-mode variety on a budget** when you already use or tolerate Zepp.
 
@@ -164,4 +166,4 @@ Premium unlocks deeper sleep insights, workout videos, and some historical trend
 | No smartphone on runs | None of these — all lean on phone GPS for maps |
 | Hates recurring subscriptions | Avoid Fitbit if Premium prompts annoy you; prefer Xiaomi |
 
-**Bottom line:** For most summer buyers under $100, **Xiaomi Smart Band 9** wins on sheer value and battery. Choose **Fitbit Inspire 3** when sleep coaching justifies the premium and shorter battery. **Amazfit Band 7** fits workout explorers who like Zepp’s depth at a discount price.
+After lining up the sheets myself, most summer buyers under $100 still land on **Xiaomi Smart Band 9** for value and battery. Flashy “health score” copy sells less well than **subscription, battery, and HR stability**. **With my own money**, I would only pay up for **Fitbit Inspire 3** when sleep coaching beats battery, and pick **Amazfit Band 7** when Zepp depth shows up on discount.

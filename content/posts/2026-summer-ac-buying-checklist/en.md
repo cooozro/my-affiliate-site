@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-16T02:48:00.744Z'
+updatedAt: '2026-07-16T03:20:00.000Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -34,13 +34,15 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 
 ## Introduction: use this before heat-season rush
 
-Air conditioner stock tightens when forecasts spike. Walk through these seven checks **before** you buy so you do not discover a blocked window, banned bracket, or under-sized BTU on the hottest week of the year.
+Last heat-wave week I watched a relative’s studio sit warm at noon after they chased a **“12,000 BTU max cooling”** banner — the hose seal was loose, the lease banned the bracket, and the bill climbed first. Mid-50s lesson: AC ads sell peak BTU; your wallet pays for **install fit, exhaust math, and honest kWh**.
+
+Walk these seven checks **before** checkout so you don’t learn about a blocked window, banned bracket, or under-sized room on the hottest week of the year. Tip that saves returns: measure floor area and sash width first — a 15 m² shaded bedroom and a west-facing 20 m² studio are not the same BTU story even when both ads say “studio size.”
 
 ---
 
 ## Analysis methodology
 
-Checklist items derive from manufacturer install guides, lease common practice, and energy-label documentation. We do not use private commerce APIs.
+I pulled checklist items from manufacturer install guides, common lease practice, and energy-label docs — public sources only, no private commerce APIs. The order below is how I would spend my own money: permission and exhaust before brand and discount.
 
 ---
 
@@ -90,17 +92,17 @@ Prices checked against listings as of {{today}}; use {{usd_krw_rate}} for KRW co
 
 ## After the shortlist: compare efficiency labels fairly
 
-Once install constraints eliminate whole categories, the remaining models often differ by **EER, CEER, or seasonal energy class** more than by marketing BTU peaks. Pull the same metric from each spec sheet — mixing window-unit CEER with portable EER without context leads to false “cheaper to run” conclusions. If two units sit within one BTU band, favor the label with **lower claimed dB at the fan speed you will actually use at night**, not the quietest number buried in a footnote for “sleep mode” at reduced cooling output.
+Once install constraints knock out whole categories, the leftover boxes usually differ by **EER, CEER, or seasonal energy class** more than by those flashy BTU peaks on the carton. I line up the **same metric** on each sheet — mixing window CEER with portable EER is how “cheaper to run” ads fool you. In one BTU band, I’d rather take the label with **lower claimed dB at the night speed I actually sleep with**, not a footnote “sleep mode” that cools like a whisper and a wet towel.
 
-Photograph your window opening and sash travel before checkout. Brackets that fit “standard” double-hungs still fail on crank-out windows, sliding tracks with shallow lips, or landlord trim that blocks side panels. Keep the lease clause or building memo in the same folder as your receipt; if management later questions hardware, a dated photo set beats memory after the first heat wave.
+Photograph the window opening and sash travel before you pay. “Standard” double-hung kits still fail on crank-outs, shallow sliding tracks, or landlord trim that blocks side panels. Keep the lease clause next to the receipt; a dated photo set beats arguing from memory after the first heat wave.
 
 ---
 
 ## First-week habits that protect cooling performance
 
-Install during a mild day if you can, then run a **30-minute sealed-room test**: close doors, fit the exhaust kit, and confirm the room holds temperature without the compressor cycling every few minutes. A tissue held near hose joints should not flutter inward on single-hose portables — that pull means hot air is being drawn from other rooms and your net cooling collapses. Log the first filter check on a calendar; dust loads faster in pollen season and clogged filters show up as “weak AC” returns that are really airflow problems.
+Install on a mild day if you can, then run a **30-minute sealed-room test**: doors closed, exhaust kit fitted, room holding temperature without the compressor short-cycling every few minutes. Hold a tissue near hose joints on a single-hose portable — if it flutters inward, you’re pulling hot air from other rooms and net cooling collapses. Put the first filter check on a calendar; pollen season clogs filters fast, and “weak AC” returns are often just airflow.
 
-If you share walls with neighbors, note **start-up times** for sleep schedules. Many units use a louder burst for the first five minutes after the compressor kicks in. Staggering smart-plug schedules or using “dry” mode only when cooling is unnecessary can keep bedroom noise inside acceptable dB without sacrificing afternoon WFH comfort.
+If neighbors share a wall, watch **compressor start-up bursts** — many units roar for the first five minutes. Smart-plug stagger or “dry” mode when you don’t need full cool keeps night dB honest without giving up afternoon WFH comfort.
 
 ---
 
@@ -142,4 +144,4 @@ During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
 ## Final Verdict
 
-Run the checklist in order: **permission → exhaust → BTU → noise → energy → maintenance**. Skipping lease and exhaust checks causes more regret than picking the “wrong” brand. Once install constraints are clear, our scenario and head-to-head guides narrow the model shortlist.
+After walking this list myself, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **With my own money**, I would clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.

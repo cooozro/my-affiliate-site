@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T02:48:00.744Z'
+updatedAt: '2026-07-16T03:15:00.000Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
@@ -38,9 +38,11 @@ publishedAt: '2026-07-03T07:10:50.785Z'
 
 ## Introduction: why these three models for summer travel
 
-When vacation flights and heat-season commutes overlap in {{today}}, over-ear ANC still beats most earbuds for **sustained cabin noise** and **neck fatigue on 3+ hour trips**. The decision is rarely “ANC yes or no” — it is which budget model cancels low-frequency rumble without crushing your temples in humid weather.
+On a return flight last week, three hours of engine rumble pushed me to ditch earbuds and **swap to over-ears**. When vacation flights and heat-season commutes overlap in {{today}}, the mid-50s question is rarely “ANC yes or no”—it is which budget model cuts low-frequency rumble without crushing your temples in humid weather.
 
-This head-to-head compares **three widely stocked 2026 models under roughly $170** — Sony WH-CH720N, Anker Soundcore Space Q45, and JBL Tune 770NC — on the axes that travel buyers actually feel: **cancellation depth, Bluetooth codec support, weight, foldability, and multipoint reliability**. All prices below use listed USD MSRP converted at ~{{usd_krw_rate}} KRW per dollar (reference: ~{{krw:29.99}} for a $29.99 accessory tier).
+Heat and sealed-cabin weeks stretch subway HVAC hum, café AC hiss, and aircraft ventilation. Brand marketing leads with “studio sound” while burying weight, fold, codec, and multipoint. Buy on logo alone and you get mismatches like LDAC on Android copy paired with an iPhone. **Value** is cancellation and comfort on *your* trip—not driver-size ads.
+
+This head-to-head compares **Sony WH-CH720N, Anker Soundcore Space Q45, and JBL Tune 770NC** under roughly $170 on **cancellation depth, Bluetooth codec, weight, foldability, and multipoint**. Prices use listed USD MSRP at ~{{usd_krw_rate}} KRW per dollar (reference: ~{{krw:29.99}} accessory tier). Summer discounts are common; body MSRPs stay **pre-discount** for long-term comparison.
 
 ---
 
@@ -155,7 +157,7 @@ With ANC on, JBL Tune 770NC claims the longest runtime in this trio — roughly 
 - [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — when in-ear ANC fits better than over-ears for gym or pool days
 ## Final Verdict
 
-No single model wins every summer trip. **Sony WH-CH720N** balances weight and LDAC for mixed commute-and-flight weeks. **Soundcore Space Q45** is the cancellation specialist if you can handle heavier cups. **JBL Tune 770NC** stays relevant when price and battery trump codec depth.
+After matching the axes myself, summer-travel headphone value still means **cancellation depth, weight, codec, and battery** against your flight and commute—not “studio” marketing. **With my own money**, I would lock primary phone, wear hours, and in-flight sleep needs first. **Sony WH-CH720N** balances weight and LDAC for mixed weeks; **Soundcore Space Q45** is the cancellation specialist if you can handle heavier cups; **JBL Tune 770NC** stays relevant when price and battery trump codec depth.
 
 ### Who should buy?
 

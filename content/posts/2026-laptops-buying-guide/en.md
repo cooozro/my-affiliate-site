@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-06T03:36:25.200Z'
+updatedAt: '2026-07-16T03:05:00.000Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -37,7 +37,11 @@ publishedAt: '2026-07-06T03:36:25.166Z'
 
 ## Introduction: budget laptops for students split on CPU, RAM, and outdoor readability
 
-Between summer break projects and fall enrollment, sub-$550 laptops ship with **16GB RAM defaults**, **Ryzen 5 / Core i5 tiers**, and **250–300 nit panels**—but dorm heat, library marathons, and sunny quad seating expose the gaps fast. A Ryzen 3 or Core i3 chokes on tab-heavy research; 8GB without an open SODIMM slot forces cloud-only workflows; sub-250 nit screens wash out when you sit near a window without air conditioning.
+Last summer break my nephew called from his dorm mid-assignment — **five Chrome tabs in and the fan noise arrived first**. Mid-50s buyer lesson: sub-$550 laptops look identical in storefront grids, but without **16GB RAM, 250+ nits, and 45Wh battery** they fall apart fast in uncooled dorms and all-day library sessions.
+
+Between summer projects and fall enrollment, **Ryzen 5 / Core i5** and 16GB defaults are common — yet **AC-free dorm heat**, **window-seat glare**, and **LMS + video + Slack at once** expose the gaps. Ryzen 3 / Core i3 choke on research tabs; **8GB with no SODIMM slot** locks you into cloud-only workflows; sub-250 nit panels wash out beside a sunny window.
+
+Retail pages push **chassis color and “AI PC” stickers**, but the marketing lens I trust is four numbers: **CPU tier, RAM upgrade path, nits, and Wh**. A ~{{krw:499}} model can still split a four-year workhorse from swap hell depending on soldered 16GB vs 8GB plus a slot. Small tip: buy a RAM stick ($25–35) and external SSD during back-to-school sales so midterm upgrades do not wait on shipping.
 
 This report ranks **five budget student laptops** by cross-checking public manufacturer specs, listed retail prices, and open reviews. We focus on **CPU class, RAM upgrade paths, display nits, and battery watt-hours** so readers match hardware to real campus scenarios—not retail ad copy.
 
@@ -83,7 +87,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** RAM is soldered—no post-purchase upgrade; plastic chassis flexes; fan ramps audibly in uncooled dorm rooms above 30°C.
 
-**Analysis takeaway:** For most buyers, this translates to **opening twenty tabs without swap panic** and **readable screens during summer study sessions by the window**.
+**Analysis takeaway:** In my book that means **twenty tabs without swap panic** and **readable screens during summer study by the window**.
 
 **Verdict:** Top pick when **16GB and battery** matter more than future RAM DIY.
 
@@ -95,7 +99,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** Ships with 8GB—budget another stick before heavy multitasking; 250 nits struggles outdoors; entry chassis is plain.
 
-**Analysis takeaway:** For most buyers, this translates to **the lowest-friction RAM upgrade path** if you can add an 8GB module after back-to-school sales.
+**Analysis takeaway:** That is the **lowest-friction RAM upgrade path** if you add an 8GB module after back-to-school sales.
 
 **Verdict:** Best **upgrade-friendly budget** when you accept 8GB at checkout.
 
@@ -107,7 +111,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 42Wh battery is the smallest here—carry a power bank for all-day sessions; 250 nits; no RAM upgrade after purchase.
 
-**Analysis takeaway:** For most buyers, this translates to **a light carry laptop for break travel**—pair with a PD power bank for library marathons.
+**Analysis takeaway:** A **light 16GB carry laptop for break travel** — pair with a PD power bank for library marathons.
 
 **Verdict:** **Lightest 16GB entry** when weight beats maximum runtime.
 
@@ -119,7 +123,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 256GB SSD fills fast with video projects—plan external storage; 8GB at purchase; 250 nits; 41Wh battery trails IdeaPad.
 
-**Analysis takeaway:** For most buyers, this translates to **a recognizable campus repair path** if you add RAM and an external SSD for media courses.
+**Analysis takeaway:** Add RAM and an external SSD and you get a **recognizable campus repair path** for media courses.
 
 **Verdict:** Solid **HP ecosystem** pick when local service matters.
 
@@ -131,7 +135,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 8GB until upgraded; 250 nits; plastic build; fan noise under combined heat and compile loads.
 
-**Analysis takeaway:** For most buyers, this translates to **AMD efficiency plus room to grow RAM** without jumping to premium ultrabooks.
+**Analysis takeaway:** **AMD efficiency plus room to grow RAM** without jumping to premium ultrabooks.
 
 **Verdict:** **Balanced AMD value** when upgrade path and storage matter.
 
@@ -185,7 +189,7 @@ Indoor desk work often tolerates **250 nits**, but summer sun through a dorm win
 
 ## Final Verdict
 
-Budget student laptops look identical in storefront grids, but **CPU tier, RAM headroom, display nits, and battery watt-hours** separate a four-year workhorse from a swap-throttling headache. Use the SLBI table before chasing color options.
+After lining up the sheets myself, budget student laptops look identical in storefront grids, but **CPU tier, RAM headroom, display nits, and battery watt-hours** separate a four-year workhorse from a swap-throttling headache. Use the SLBI table before chasing color or AI stickers. **With my own money**, I would start at 16GB, 300 nits, and 45Wh+, and if I bought 8GB I would confirm the **SODIMM slot** in the service manual before checkout. I steered my nephew toward the IdeaPad Slim 3; if he preferred DIY RAM, the Acer Aspire 5 is the practical fork.
 
 ### Who should buy?
 

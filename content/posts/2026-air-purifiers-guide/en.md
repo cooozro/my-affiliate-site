@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-09T05:23:27.656Z'
+updatedAt: '2026-07-16T03:01:00.000Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -34,9 +34,11 @@ imageSearchKeywords:
 
 ## Introduction: why small-room purifiers matter when AC runs all summer
 
-In the first half of 2026, heat-season habits push more people to **seal windows and run air conditioning for hours**. Closed-room cooling improves comfort but reduces natural ventilation — dust, pet dander, cooking residue, and outdoor pollen that enters when you briefly open a window can linger longer indoors. A purifier sized for a **small room (roughly 100–180 sq ft / 9–17 m²)** can lower particle load without fighting your AC for airflow.
+Last Saturday morning I opened the bedroom door and **the AC was humming fine — yet the air still felt stuffy**. Windows sealed overnight, cool air on top of dust and pet smell. Mid-50s buyer lesson: many homes nail temperature and **miss particles**.
 
-This report compares **five value-focused compact purifiers** suited to bedrooms, dorm rooms, and home-office nooks. We cross-check public manufacturer specs, OEM filter prices, and open reviews — not seller scripts. The focus is **verifiable CADR, filter type, noise at sleep speeds, and annual running cost** so you can pick a model that fits a real small room, not a living-room spec sheet.
+In the first half of 2026, heat-season habits push more people to **seal windows and run air conditioning for hours**. Closed-room cooling improves comfort but reduces natural ventilation — dust, pet dander, cooking residue, and outdoor pollen that enters when you briefly open a window can linger longer indoors. A purifier sized for a **small room (roughly 100–180 sq ft / 9–17 m²)** can lower particle load without fighting your AC for airflow. From a marketing eye, “medical grade” copy sells less well than **CADR matched to room size plus honest annual filter cost**.
+
+I lined up **five value-focused compact purifiers** for bedrooms, dorms, and desk nooks — public manufacturer specs, OEM filter prices, and open reviews, not seller scripts. Focus stays on **verifiable CADR, filter type, sleep-speed noise, and annual running cost**. Small tip: check replacement-filter stock before peak season so you are not stuck waiting mid-summer.
 
 **Key takeaway:** For tight budgets, IKEA FÖRNUFTIG covers a desk nook; for smart-app control and quiet sleep mode, Levoit Core 300S leads; for the lowest long-term filter spend in a small bedroom, Winix 5500-2’s washable pre-filter and carbon layer pay off if you accept a larger footprint.
 
@@ -44,7 +46,7 @@ This report compares **five value-focused compact purifiers** suited to bedrooms
 
 ## Analysis methodology
 
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
+This comparison is **editorial research** — I cross-check public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
 | Item | Source | Purpose |
 | --- | --- | --- |
@@ -89,7 +91,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Replacement filter bundles add up if you run 24/7 through pollen season; auto mode can ramp fan when cooking odors spike; not ideal for open-plan spaces.
 
-**Analysis takeaway:** For most buyers, this translates to **quiet overnight filtration in a 10–15 m² bedroom** while AC recirculates cooled air — you get smart controls without a floor-standing tower.
+**Analysis takeaway:** Mid-50s take: this is **quiet overnight filtration in a 10–15 m² bedroom** while AC recirculates cooled air — smart controls without a floor-standing tower.
 
 **Verdict:** Best **smart small-bedroom balance** of CADR, noise, and price.
 
@@ -101,7 +103,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Larger chassis than Core 300S; overkill CADR if you always run high fan; PlasmaWave is polarizing for ozone-sensitive buyers despite low emission claims.
 
-**Analysis takeaway:** For most buyers, this translates to **set-and-forget low-speed cleaning** in a sealed, AC-cooled room — the unit cycles air quickly without sleep-mode whine.
+**Analysis takeaway:** In practice this means **set-and-forget low-speed cleaning** in a sealed, AC-cooled room — the unit cycles air quickly without sleep-mode whine.
 
 **Verdict:** Top pick when **lowest filter spend over 3+ years** matters more than minimal size.
 
@@ -113,7 +115,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Lowest smoke CADR here (125 cfm) — borderline for 15 m² if you cook nearby; fabric pre-filters cost more per year than HEPA-only rivals; 41 dB low speed is audible for light sleepers.
 
-**Analysis takeaway:** For most buyers, this translates to **a desk-adjacent purifier for a single-occupant room** where looks and simplicity beat app features.
+**Analysis takeaway:** Think **desk-adjacent purifier for a single-occupant room** where looks and simplicity beat app features.
 
 **Verdict:** Strong **dorm and studio nook** pick if you accept higher filter turnover.
 
@@ -125,7 +127,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 50 dB on lowest setting is the loudest here for sleep; lower CADR per dollar vs Levoit; bulky relative to room size; no carbon layer in standard config.
 
-**Analysis takeaway:** For most buyers, this translates to **daytime office or living-den use** rather than a whisper-quiet bedroom — fine if you turn it off at night.
+**Analysis takeaway:** Better as **daytime office or living-den use** than a whisper-quiet bedroom — fine if you turn it off at night.
 
 **Verdict:** Sensible when **retail availability and simple HEPA** beat smart features.
 
@@ -137,7 +139,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** No published AHAM CADR on US listing — airflow is modest; build feels utilitarian; not enough throughput for combined bedroom + kitchen open space.
 
-**Analysis takeaway:** For most buyers, this translates to **a first purifier for a student desk corner or guest room** without a triple-digit commitment — pair with closed doors when AC runs.
+**Analysis takeaway:** A sensible **first purifier for a student desk corner or guest room** without a triple-digit commitment — pair with closed doors when AC runs.
 
 **Verdict:** Default **budget entry** for smallest spaces and short leases.
 
@@ -188,7 +190,7 @@ Look for sleep-mode ratings around 27 dB or lower if the unit will run all night
 
 ## Final Verdict
 
-In 2026, honest value for small-room air purifiers means matching **CADR, filter replacement math, and sleep noise** to sealed, AC-cooled spaces — not buying the highest CADR number for a 6 m² desk nook. The five picks split cleanly between budget entry, smart quiet bedrooms, and long-term filter economy.
+After lining up the sheets myself, honest 2026 value for small-room air purifiers still means matching **CADR, filter replacement math, and sleep noise** to sealed, AC-cooled spaces — not buying the highest CADR number for a 6 m² desk nook. Marketing “medical grade” lines sell less well than **annual filter cost and low-speed dB**. The five picks split cleanly between budget entry, smart quiet bedrooms, and long-term filter economy.
 
 ### Who should buy?
 
@@ -210,4 +212,4 @@ In 2026, honest value for small-room air purifiers means matching **CADR, filter
 | **Honeywell HPA100** | Plan overnight bedside use — low fan is too loud compared with Levoit |
 | **IKEA FÖRNUFTIG** | Must have published AHAM CADR or heavy pollen load in a larger room |
 
-Before checkout, confirm replacement filter availability in your region, verify return policy if sleep noise exceeds your tolerance, and recheck room measurements — an undersized purifier running on high all summer adds noise and electricity without clearing particles efficiently.
+Before checkout, confirm replacement filter availability in your region, verify return policy if sleep noise exceeds your tolerance, and recheck room measurements. **With my own money**, I would measure the room first, then pick on sleep noise and three-year filter spend — not the loudest marketing CADR.

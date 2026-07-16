@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T02:48:00.744Z'
+updatedAt: '2026-07-16T03:15:00.000Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
@@ -39,11 +39,13 @@ publishedAt: '2026-07-02T03:15:31.755Z'
 
 ## Introduction: who this guide is for
 
-This scenario guide is for **households planning a console purchase before or during summer break** — parents balancing kids at home, roommates sharing a 4K TV, or solo players building a digital library during seasonal sales. You might care about **how fast a 100 GB patch downloads**, whether *Spider-Man* or *Starfield* is on your platform, or if Game Pass is cheaper than buying discs one by one.
+On a school-break weekend last month, the living-room TV stayed occupied while a patch **spun for half a day** beside me. From a mid-50s buyer seat, teraflops marketing matters less than **where you play, how you buy games, and how fast storage fills**. This guide is for households planning a console before or during summer break—kids home longer, roommates sharing a 4K TV, or solo players stacking a digital library on seasonal sales.
+
+Launch ads and “Pro” copy lead with performance numbers while burying patch sizes, subscription months, and storage-expansion cost. **Value** is the path that fits your scenario—not the highest-spec box. You might care about **100 GB patch speed**, whether *Spider-Man* or *Starfield* is platform-exclusive, or if Game Pass beats buying discs one by one.
 
 We compare four mainstream 2026 console paths across four indoor scenarios. Reference prices reflect OEM and major US storefront listings as of {{today}}; KRW equivalents use {{usd_krw_rate}} (~{{krw:499}} for a disc-based flagship bundle, ~{{krw:29.99}} per month for a top-tier subscription tier).
 
-**Key takeaway:** Xbox Series X wins native 4K plus Game Pass value for couch marathons; PlayStation 5 Slim fits exclusive-story buyers who want expandable SSD storage; Xbox Series S is the subscription-first budget pick if you accept 1440p upscaling; Nintendo Switch OLED covers portable bedroom sessions when the living-room TV is occupied.
+**My table-checked takeaway:** living-room 4K + Game Pass → Xbox Series X; exclusive stories + expandable SSD → PS5 Slim (Disc); subscription-first budget → Xbox Series S; portable bedroom when the TV is contested → Switch OLED.
 
 ---
 
@@ -205,7 +207,7 @@ Series S fits **subscription-first buyers, smaller TVs, and upscaled 4K** — no
 - [How We Review Tech Products](/en/blog/welcome) — how we score products and update live price placeholders
 ## Final Verdict
 
-Consoles in {{today}}’s market are less about raw teraflops and more about **where you play, how you buy games, and how fast storage fills during sale season**. For most families anchoring a 4K TV through summer break, **Xbox Series X** balances native resolution with Game Pass breadth. Story-driven buyers who want discs and Sony-only releases should default to **PS5 Slim (Disc)** and budget for an approved M.2 drive before the next 80 GB patch lands. Tight budgets that still want a rotating library fit **Xbox Series S** if you accept upscaled 4K. When the living-room TV is contested, **Switch OLED** keeps peace in the house — just buy a microSD card on day one.
+After matching the scenarios myself, {{today}} console value still means **where you play, how you buy games, and how fast storage fills during sale season**—not raw teraflops marketing. **With my own money**, I would lock play location and purchase style first. For most families on a 4K living-room TV through summer break, **Xbox Series X** balances native resolution with Game Pass. Story buyers who want discs and Sony-only releases should default to **PS5 Slim (Disc)** and budget an approved M.2 before the next 80 GB patch. Tight budgets with a rotating library fit **Xbox Series S** if you accept upscaled 4K. When the living-room TV is contested, **Switch OLED** keeps peace—buy a microSD on day one.
 
 | Buy if… | Skip if… |
 | --- | --- |

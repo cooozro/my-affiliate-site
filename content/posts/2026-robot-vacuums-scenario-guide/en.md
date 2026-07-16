@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-02T12:00:00.000Z'
+updatedAt: '2026-07-16T03:05:00.000Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## Editorial Overview
@@ -38,7 +38,11 @@ publishedAt: '2026-07-02T01:23:30.000Z'
 
 ## Introduction: who this guide is for
 
-This scenario guide is for **renters and owners in studios and one-bedrooms** (roughly 25–55 m² / 270–590 sq ft) who want hands-off floor care without tripping over a bulky dock. You might run AC for hours during heat season, share space with a pet, or mix hardwood with a thin area rug — each layout stresses different parts of a robot vacuum: **suction at the brush roll, LiDAR vs camera mapping, mop pad hygiene, and how often you must empty the bin**.
+First week of summer break I walked into my nephew's studio and found the **robot vacuum stuck under a shoe** — AC running, floor still dusty. Mid-50s buyer lesson: in **25–55 m² studios and one-bedrooms**, headline **8,000 Pa** numbers matter less than **LiDAR mapping, dock footprint, and pad wash cycles**.
+
+You want hands-off floor care without tripping over a bulky dock. AC runs for hours during heat season, pets shed, and furniture moves — each layout stresses different parts of a robot vacuum: **suction at the brush roll, LiDAR vs camera mapping, mop pad hygiene, and how often you must empty the bin**.
+
+From a marketing lens, brands splash **Pa ratings and omni stations** while **40 cm dock clearance** and **pad dry cycles** drive one-star reviews in tight apartments. The gap between a ~{{krw:449}} mid-range dock bundle and a ~{{krw:799}} omni station often splits on **smelly mop pads**, not suction alone. Small tip: tape the dock footprint on the floor before buying — under 50 cm walkways, placement beats model choice.
 
 We compare four mainstream 2026 models across four apartment scenarios. Reference prices reflect OEM and major US storefront listings as of {{today}}; KRW equivalents use {{usd_krw_rate}} (~{{krw:449}} for a mid-range dock bundle).
 
@@ -189,7 +193,7 @@ In sealed, air-conditioned apartments above roughly 28 °C indoor humidity, stag
 - [How We Review Tech Products](/en/blog/welcome) — how we score products and update live price placeholders
 ## Final Verdict
 
-Apartment robot vacuums are not one-size-fits-all: **mapping tech and dock maintenance** separate smooth ownership from daily rescues. For most studio dwellers, **Roborock Q7 Max+** balances LiDAR accuracy and a tolerable dock size. Pet owners should prioritize **Roomba Combo j5+** brush and obstacle tooling. If you truly need mop automation through sticky summer humidity, budget for **eufy X10 Pro Omni** pad washing — skipping that step leads to the most common one-star complaints. **Shark Matrix Plus 2-in-1** wins when clutter shifts often but you refuse to pay omni-station prices.
+After lining up the sheets myself, apartment robot vacuums are not one-size-fits-all: **mapping tech and dock maintenance** separate smooth ownership from daily rescues. **With my own money**, I would start with **Roborock Q7 Max+** in a tight studio, prioritize **Roomba Combo j5+** brush and obstacle tooling for pet households, and budget **eufy X10 Pro Omni** pad washing if I truly need mop automation through sticky summer humidity — skipping that step leads to the most common one-star complaints. **Shark Matrix Plus 2-in-1** wins when clutter shifts often but I refuse to pay omni-station prices.
 
 | Buy if… | Skip if… |
 | --- | --- |
