@@ -74,11 +74,15 @@ Retail pages lead with **5.0 cu ft and Energy Star** marketing badges, but in hu
 
 GE documents the **UltraFresh Vent System with OdorBlock** on the GFW550 line: the washer pulls fresh air through the drum between cycles to limit stagnant moisture, paired with **Microban antimicrobial technology** on key wet-touch surfaces per GE spec sheets. The **4.8 cu ft stainless drum** accepts king comforters that never fully dry on a rack in humid weeks. GE lists **up to 1,300 RPM max spin** on this series, which matters when your only drying option is a vented dryer running alongside a window AC that never opens.
 
-**Runner-up:** LG WM4000HWA — strong TurboWash 360 and Allergiene steam, but no dedicated post-wash vent path; wipe the gasket weekly in peak humidity.
-
 **Editorial read:** **4.8 cu ft** and **1,300 RPM** spin cut dryer kWh when you air-dry indoors; UltraFresh Vent delays **musty towel comeback** at 65% indoor RH. Three-year TCO hinges on gasket and filter wipes (**~$20–30/year**).
 
-**Review concern:** Without a vent path, gasket mold shows first in peak humidity—confirm **220 V drain and footprint** before the return window closes.
+**Review concern:** Without a dedicated vent path, gasket mold shows first in peak humidity—confirm **220 V drain and footprint** before the return window closes.
+
+**Runner-up:** LG WM4000HWA — strong TurboWash 360 and Allergiene steam, but no dedicated post-wash vent path; wipe the gasket weekly in peak humidity.
+
+**Editorial read:** TurboWash 360 and steam are strong on mixed daily speed, but humidity season relies on manual gasket maintenance.
+
+**Review concern:** Neglecting gasket upkeep makes biofilm TCO worse versus GE Vent in summer sweat and towel loads.
 
 | Factor | GE GFW550SSNWW | LG WM4000HWA |
 | --- | --- | --- |
@@ -102,11 +106,15 @@ GE documents the **UltraFresh Vent System with OdorBlock** on the GFW550 line: t
 
 Whirlpool publishes **Load & Go XL dispenser** (up to 40 loads of detergent per fill on OEM guidance) and **Intuitive Touch Controls** with preset paths for **Stain Treat**, **Quick Wash**, and **Steam Clean** on the WFW5620 series. The **4.5 cu ft drum** fits two kids' soccer kits plus towels in one pass. Whirlpool's **Adaptive Wash technology** adjusts water and agitation from soil sensors — useful when one child brings back wet clay and another only needs a rinse for swim practice. Steam Clean runs documented at **about 20 minutes** for drum maintenance between muddy weeks.
 
-**Runner-up:** Samsung WF45T6000AW — VRT Plus spin isolation and Super Speed on lighter soil, but smaller 4.5 cu ft drum and no Load & Go bulk dispenser.
-
 **Editorial read:** Load & Go XL **40-load** dosing saves detergent math on daily school-break laundry; Stain Treat targets **overnight muddy shorts** in humid baskets. **~$899** and 4.5 cu ft are fair three-year throughput—king bedding still splits.
 
-**Review concern:** Mud and sunscreen residue speed gasket grime; dispenser clogs are a year-two maintenance item.
+**Review concern:** Mud and sunscreen residue speed gasket grime in humid weeks; dispenser clogs are a year-two maintenance item.
+
+**Runner-up:** Samsung WF45T6000AW — VRT Plus spin isolation and Super Speed on lighter soil, but smaller 4.5 cu ft drum and no Load & Go bulk dispenser.
+
+**Editorial read:** VRT Plus and Super Speed fit light-soil fast cycles, but no Load & Go bulk dispenser can add detergent time on daily mud patterns.
+
+**Review concern:** No dispenser and **4.5 cu ft** make it easy to overestimate sports-season peak throughput.
 
 | Factor | Whirlpool WFW5620HW | Samsung WF45T6000AW |
 | --- | --- | --- |
@@ -130,11 +138,15 @@ Whirlpool publishes **Load & Go XL dispenser** (up to 40 loads of detergent per 
 
 Samsung's Bespoke **WF53BB8700** line lists a **5.3 cu ft drum** — among the largest consumer front-load footprints in 2026 US listings — with **AI OptiWash** soil detection and **Super Speed** wash completing a full load in **28 minutes** per Samsung cycle documentation (normal soil, manufacturer test conditions). **Steam Sanitize** and **Allergiene** cycles address bedding before you zip the suitcases. Wi-Fi status alerts let you queue the next load while packing toiletries in the next room.
 
-**Runner-up:** LG WM5500HVA — TurboWash 360 and 5.0 cu ft class capacity, but slightly smaller drum than the Samsung Bespoke flagship.
-
 **Editorial read:** **5.3 cu ft** and **28-minute Super Speed** cut **cycle count = power and time** the weekend before vacation—over three summers, one-pass capacity beats an extra 0.8 cu ft on paper.
 
 **Review concern:** Half-filled large drums thump on light spins—run a full load and max spin inside the return window before travel week.
+
+**Runner-up:** LG WM5500HVA — TurboWash 360 and 5.0 cu ft class capacity, but slightly smaller drum than the Samsung Bespoke flagship.
+
+**Editorial read:** TurboWash 360 and **5.0 cu ft** are fine for mixed clothes and towels the same day, but a smaller drum than the flagship means longer pile-up time.
+
+**Review concern:** **5.0 cu ft** can add split cycles for two-week batch laundry, raising weekend time cost.
 
 | Factor | Samsung WF53BB8700AVUS | LG WM5500HVA |
 | --- | --- | --- |
@@ -158,11 +170,15 @@ Samsung's Bespoke **WF53BB8700** line lists a **5.3 cu ft drum** — among the l
 
 Bosch documents the **EcoSilence motor** with **10-year warranty** on the 800 Series WAW285 line, rated at **47 dBA** wash and **72 dBA** spin in EU test methodology translated to US spec sheets — among the quieter mainstream front-loads in 2026 listings. **ActiveWater Plus** adjusts intake for small midday loads so the machine does not overfill and thump on half-empty spins. **SpeedPerfect** shortens cycles without disabling the low-vibration drum mount. In a studio where the laundry closet shares a wall with the bedroom, that noise delta versus budget 75+ dBA spin ratings is the difference between a 10 p.m. towel run and waiting until morning.
 
-**Runner-up:** LG WM4000HWA — AI Direct Drive and reasonable noise, but spin peaks are typically louder than Bosch 800 Series in third-party sound tests.
-
-**Editorial read:** **47/72 dBA** EcoSilence fits **10 p.m. towel cycles** through a bedroom wall; **1,400 RPM** spin shortens indoor dry time and summer dryer kWh. The **2.2 cu ft compact** drum trades capacity for smaller install vibration.
+**Editorial read:** **47/72 dBA** EcoSilence fits **10 p.m. towel cycles** through a bedroom wall; **1,400 RPM** spin shortens indoor dry time and lowers summer dryer kWh.
 
 **Review concern:** **72 dBA** spin still travels on light apartment floors—level the laundry pan and confirm drain slope before install day.
+
+**Runner-up:** LG WM4000HWA — AI Direct Drive and reasonable noise, but spin peaks are typically louder than Bosch 800 Series in third-party sound tests.
+
+**Editorial read:** AI Direct Drive and TurboWash are good value when laundry is isolated from the bedroom, but spin peak noise TCO can be worse than Bosch for shared-wall closets.
+
+**Review concern:** LG versus **$1,299** Bosch only saves upfront cost when quiet spin is not mandatory for the layout.
 
 | Factor | Bosch WAW285H2UC | LG WM4000HWA |
 | --- | --- | --- |
