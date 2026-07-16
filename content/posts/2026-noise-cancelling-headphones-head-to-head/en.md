@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-03T07:10:50.815Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
@@ -117,8 +117,23 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+On planes I trust **fit, app updates, battery** more than ANC number ads.
+
+### Sony WH-1000XM5
+
+ANC/app ecosystem baseline. **My take:** “Best in class” loses to **cushions that match your head**.
+
+### Soundcore Space One
+
+Honest ANC per dollar. **My take:** Skip logo tax—**~30-hour real use** is the value.
+
+### Bose QuietComfort Ultra
+
+Comfort and isolation feel strong. **My take:** Pricey—but **less flight fatigue** is thrift, not hype.
+
+## FAQ
 ### Eight-hour flight: does the lighter Sony or heavier Q45 tire my neck more?
 
 Walking through hot airport terminals, the 192 g Sony WH-CH720N clearly wins on neck and ear fatigue. The Space Q45 cancels engine rumble more aggressively, but 295 g and stronger clamp force show up after a few hours. If you mostly wear them seated and take them off after landing, Q45's depth may be worth the weight for naps. For "terminal walks plus full cabin time," lighter usually means fewer regrets. Try both in a store for fifteen minutes — the difference is obvious fast.

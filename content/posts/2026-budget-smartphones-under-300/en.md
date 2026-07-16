@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-02T15:30:00.000Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -147,8 +147,23 @@ Snapshot as of {{today}}.
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+Sub-$300 shelves love flashy specs. I filter on **update years, chipset, charging**.
+
+### Google Pixel 8a (GKV4X class)
+
+Honest camera story and update policy. **My take:** Skip AI ad lines—ask **how many OS years** you get.
+
+### Samsung Galaxy A35 5G (SM-A356)
+
+AMOLED and service network. **My take:** Ignore “flagship-like” adjectives—check **RAM/storage you’ll live with**.
+
+### Motorola Moto G Power 2025
+
+Battery-first marketing. **My take:** Long standby is fine—still weigh **camera and updates**.
+
+## FAQ
 ### How much RAM do I need in a sub-$300 phone?
 
 For everyday use in 2026, treat **6GB as the practical floor**. Messaging, banking, and YouTube in the background will choke a 4GB phone with frequent app reloads. The Galaxy A35 and Moto G Power ship with 6GB; the Poco M6 Pro and Redmi Note 13 Pro step up to 8GB/256GB for heavier multitasking and mobile games. If you edit clips or keep many apps alive, 8GB feels noticeably smoother. The Galaxy A15 at 4GB works as a gift or light-use phone — just know the ceiling arrives sooner.

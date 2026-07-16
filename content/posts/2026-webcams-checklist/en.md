@@ -26,8 +26,10 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-04T06:43:31.614Z'
+updatedAt: '2026-07-16T02:45:13.501Z'
 publishedAt: '2026-07-04T01:56:28.535Z'
+noindex: true
+robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 

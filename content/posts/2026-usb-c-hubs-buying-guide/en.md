@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-06T03:36:25.208Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
@@ -152,8 +152,23 @@ Reference prices checked July 2026; USD list values before discounts.
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+Hub ads love port counts. I care about **PD passthrough watts, video, heat**.
+
+### Anker 555 USB-C Hub (A8254 class)
+
+Balanced ports and brand trust. **My take:** “8-in-1” numbers lose to **whether laptop charging watts drop**.
+
+### Ugreen Revodok Pro 210
+
+Strong port mix per dollar. **My take:** Cheap hubs look thrifty until **4K stutter and heat** tax your time.
+
+### CalDigit TS4
+
+High-power docking baseline. **My take:** Pricey on paper—**daily dock users** often find it thrifty.
+
+## FAQ
 ### My laptop has one USB-C port — how much PD pass-through do I actually need?
 
 Start with your OEM charger wattage: 45W for many ultrabooks, 65W for 14" pros, 96W–140W for 16" workstations. The hub must pass **at least that wattage minus 5–15W** for its own circuitry and downstream ports. A 45W Air-class machine is fine on Anker’s 85W path; a 96W MacBook Pro under full compile load wants 100W-class pass-through (Satechi V2, Ugreen 209) or a dock like CalDigit TS4. If the laptop battery drains while plugged through the hub, the pass-through rating is too low or the cable lacks an e-marker for high watts.

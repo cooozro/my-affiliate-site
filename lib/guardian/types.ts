@@ -17,6 +17,7 @@ export type BlogPostGuardianInput = {
     | "coverImageAlt"
     | "content"
     | "contentProfile"
+    | "noindex"
   >;
   breadcrumbLabels?: {
     home: string;

@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-03T07:10:50.813Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
@@ -167,8 +167,23 @@ All recommended picks at a glance. Prices are reference listings as of {{today_l
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+Before school-break couch wars, shortlist on **storage, exclusives, and 4K**.
+
+### PlayStation 5 Slim (**CFI2000** class)
+
+Balanced exclusives and media apps; slim saves space. **My take:** Don’t jump to “Pro” marketing—ask if you even own a 4K TV.
+
+### Xbox Series X (1882)
+
+Storage, backward compat, Game Pass value. **My take:** “Most powerful” on the box matters less than **which games you’ll actually play via subscription**.
+
+### Nintendo Switch OLED (**HEG001**)
+
+Travel and party play. **My take:** Skip the graphics race—value is **hours on the sofa or in the car**.
+
+## FAQ
 ### Will my console overheat if I play 4K all day with the windows closed and AC on?
 
 Sealed, air-conditioned rooms **trap heat around the TV stand**, so consoles can run hotter and louder than in an open layout. Leave **10–15 cm of clearance** behind and beside the unit — blocking vents shows up as fan noise and frame drops before warranty issues do. Don’t aim the AC vent directly at the console either. Series X and PS5 both handle summer sessions fine when airflow is planned, not an afterthought.

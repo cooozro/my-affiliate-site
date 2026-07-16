@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-15T06:38:55.957Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview
@@ -147,8 +147,23 @@ Reference prices from OEM and major US storefront listings (July 2026).
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+Travel footage splits on **shake, waterproofing, battery**. These are my anchors.
+
+### GoPro HERO13 Black
+
+Widest mount ecosystem. **My take:** Resolution ads matter less than **battery and subscription pressure**.
+
+### DJI Osmo Action 5 Pro
+
+Screens and stabilization punch above price. **My take:** Skip “cinematic” copy—test **underwater/bike** reality.
+
+### Insta360 Ace Pro 2
+
+Wide FOV and editing apps. **My take:** Sample reels aren’t the cost—**file size and edit time** are.
+
+## FAQ
 ### Do I really need an action cam, or is my phone enough?
 
 Your phone can absolutely capture great travel clips — and for casual handheld shots, it often does. Action cameras earn their place when your hands are busy (scooters, bikes, snorkel masks) or when you need a camera that mounts somewhere and keeps rolling. Native waterproofing and electronic stabilization mean fewer ruined clips in splashy, bumpy moments. If this is your first buy, a budget pick like the AKASO Brave 8 is a low-stress way to learn; upgrade to GoPro or DJI when mounts and depth ratings start to matter more.

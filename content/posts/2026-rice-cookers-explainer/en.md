@@ -28,8 +28,10 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-06T03:36:25.205Z'
+updatedAt: '2026-07-16T02:45:13.501Z'
 publishedAt: '2026-07-05T02:44:08.822Z'
+noindex: true
+robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 

@@ -26,8 +26,10 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-04T06:43:31.600Z'
+updatedAt: '2026-07-16T02:45:13.501Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
+noindex: true
+robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 

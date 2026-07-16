@@ -28,7 +28,7 @@ imageSearchKeywords:
   - studio essentials
   - compact home
   - solo living
-updatedAt: '2026-07-13T12:14:05.638Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 coverImageCredit: Photo by Ron Lach / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 10024297
@@ -127,8 +127,23 @@ Treat brand prestige as a tiebreaker after footprint, CADR fit, and circuit maps
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+Studios fall for “buy everything” kits. I pick three that fit **circuit, noise, storage**.
+
+### Vornado 660
+
+Mixes air when AC is sealed. **My take:** Skip “hurricane wind” ads—judge **comfort per kWh**.
+
+### Levoit Core 300S
+
+Small-room CADR and app schedules. **My take:** Log **real filter prices**, not subscription nudges.
+
+### Cosori Pro LE 5-Qt
+
+Less kitchen heat than an oven. **My take:** “Oil-free” copy matters less than **cleanup time and smell**.
+
+## FAQ
 ### Studio renters: when is a circulator enough without window AC?
 
 A whole-room circulator helps when outdoor highs stay in the low 30s °C and you can run mechanical cooling part-time or sleep with a brief dawn window open. It mixes hot air trapped near the ceiling and makes 26–27 °C feel workable at a desk. It does **not** replace refrigerant cooling when humidity and outdoor heat stack for a full week — that is when portable or window options per lease rules matter. Think of the fan as the first layer that cuts AC hours and tiered-bill spikes on {{today}} heat waves, not the only layer through peak summer.

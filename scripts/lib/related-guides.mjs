@@ -66,15 +66,29 @@ export function loadPublishedPostIndex(root) {
       if (!fs.existsSync(filePath)) continue;
       const { data } = matter(fs.readFileSync(filePath, "utf8"));
       if (locale === "en") {
+        const robots = String(data.robots ?? "").toLowerCase();
+        if (
+          data.noindex === true ||
+          data.noindex === "true" ||
+          /\bnoindex\b/.test(robots)
+        ) {
+          // Quarantined for AdSense quality — keep slug valid for links, skip related picks
+          continue;
+        }
         entry.titleEn = String(data.title ?? slug);
         entry.descriptionEn = String(data.description ?? "");
         entry.tags = Array.isArray(data.tags) ? data.tags : [];
         entry.topic = inferPostTopic(slug, data);
         entry.publishedAt = data.publishedAt ?? data.date ?? null;
+        entry.noindex = false;
       } else {
         entry.titleKo = String(data.title ?? slug);
         entry.descriptionKo = String(data.description ?? "");
       }
+    }
+    if (!entry.topic && !entry.publishedAt && entry.titleEn === slug) {
+      // EN was skipped (noindex) — do not offer as related guide
+      continue;
     }
     index.set(slug, entry);
   }

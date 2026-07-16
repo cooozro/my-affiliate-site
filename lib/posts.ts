@@ -19,6 +19,8 @@ export type PostMeta = {
   coverImageCredit?: string;
   liveData?: boolean;
   draft?: boolean;
+  /** Frontmatter noindex / robots — hidden from sitemap, RSS, homepage, related picks. */
+  noindex?: boolean;
   publishedAt?: string;
   contentProfile?:
     | "buying-guide"
@@ -107,12 +109,24 @@ function parsePostFile(slug: string, locale: Locale): Post {
       : undefined,
     liveData: Boolean(data.liveData),
     draft: Boolean(data.draft),
+    noindex: isNoindexFrontmatter(data),
     publishedAt: data.publishedAt ? String(data.publishedAt) : undefined,
     contentProfile: data.contentProfile
       ? String(data.contentProfile)
       : undefined,
     content: content.trim(),
   };
+}
+
+/** True when post must not appear in public lists / sitemap (AdSense quality quarantine). */
+export function isNoindexFrontmatter(data: Record<string, unknown>): boolean {
+  if (data.noindex === true || data.noindex === "true") return true;
+  const robots = String(data.robots ?? "").toLowerCase();
+  return /\bnoindex\b/.test(robots);
+}
+
+export function isPublicListPost(meta: Pick<PostMeta, "draft" | "noindex">): boolean {
+  return !meta.draft && !meta.noindex;
 }
 
 function getAllSlugDirs(): string[] {
@@ -156,13 +170,14 @@ function postSortTime(meta: PostMeta): number {
 
 export function getAllPosts(
   locale: Locale,
-  options?: { includeDrafts?: boolean },
+  options?: { includeDrafts?: boolean; includeNoindex?: boolean },
 ): PostMeta[] {
   return getPostSlugs(locale, options)
     .map((slug) => {
       const { content: _content, ...meta } = parsePostFile(slug, locale);
       return meta;
     })
+    .filter((meta) => options?.includeNoindex || isPublicListPost(meta))
     .sort((a, b) => {
       const diff = postSortTime(b) - postSortTime(a);
       if (diff !== 0) return diff;
@@ -172,7 +187,7 @@ export function getAllPosts(
 
 export function getHomePosts(
   locale: Locale,
-  options?: { includeDrafts?: boolean },
+  options?: { includeDrafts?: boolean; includeNoindex?: boolean },
 ): HomePost[] {
   const otherLocale: Locale = locale === "en" ? "ko" : "en";
 
@@ -190,6 +205,7 @@ export function getHomePosts(
         searchText: buildSearchText(post, sibling),
       };
     })
+    .filter((meta) => options?.includeNoindex || isPublicListPost(meta))
     .sort((a, b) => {
       const diff = postSortTime(b) - postSortTime(a);
       if (diff !== 0) return diff;

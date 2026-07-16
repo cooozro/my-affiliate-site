@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: 여름 침실의 이동식 에어컨
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-02T04:37:59.377Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -92,8 +92,23 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 
 ---
 
-## 자주 묻는 질문
+## 형님이 골라 본 대표 모델
 
+체크리스트만으로는 결제가 안 되더라고요. 아래 세 모델은 **설치·소음·BTU**를 같이 볼 때 기준점으로 씁니다.
+
+### Frigidaire FHWW083WBE (8,000 BTU)
+
+작은 침실·원룸용 창문형입니다. CEER·소음이 공개 표에 잘 잡혀 있어요. **형님 한줄평:** ‘최대 BTU’ 광고보다 **창틀 키트가 맞는지**가 반품을 가릅니다.
+
+### Midea MAW08V1QWT (U자형 8,000 BTU)
+
+창 하단 환기가 남는 U자형이라 낮잠·환기에 유리합니다. **형님 한줄평:** 키트 폭을 재기 전에 사면, 예쁜 광고가 짐이 됩니다.
+
+### GE AHY12LZ (12,000 BTU)
+
+폭염 밤·개방형 침실용. 드라이·예약이 있습니다. **형님 한줄평:** 15㎡ 그늘방에 12k는 과할 수 있어요—**면적부터 재세요.**
+
+## 자주 묻는 질문
 ### 원룸인데 BTU 숫자만 크게 사면 무조건 시원한 건가요?
 
 아니에요. BTU는 **방 크기·층고·햇빛**에 맞아야 의미가 있습니다. 천장이 높거나 서향·옥상이면 같은 면적이라도 용량을 한 단계 올려야 해요. 반대로 과하게 크면 켜자마자 꺼졌다 켜졌다 하며 **습도만 불쾌**해질 수 있습니다. 구매 전에 자 줄로 바닥 면적과 층고를 재고, 체크리스트 1·4번을 같이 보시면 ‘원룸용’ 문구에 속지 않습니다.

@@ -15,7 +15,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: 책상 위의 기계식 키보드
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-02T15:30:00.000Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -148,8 +148,23 @@ coverImageAltKo: 책상 위의 기계식 키보드
 
 ---
 
-## 자주 묻는 질문
+## 형님이 골라 본 대표 모델
 
+첫 기계식은 ‘축 이름’ 광고에 속기 쉽습니다. **핫스왑·소음·배열**만 보세요.
+
+### Keychron V1 Max
+
+맥/윈 겸용·무선이 실용적입니다. **형님 한줄평:** RGB 쇼보다 **키감 샘플을 매장에서 눌러 보는 게** 마케팅을 이깁니다.
+
+### Logitech G Pro X (14-inch TKL류)
+
+스위치 교체·브랜드 AS가 편합니다. **형님 한줄평:** ‘프로 게이밍’ 포장보다 **사무실 소음 민원**을 생각하세요.
+
+### Epomaker TH80
+
+가격 대비 구성이 넉넉한 편입니다. **형님 한줄평:** 저가 풀옵션은 매력적이지만, **QC·AS**를 꼭 확인하세요.
+
+## 자주 묻는 질문
 ### 첫 기계식 키보드, 핫스왑이 꼭 필요할까요?
 
 꼭 필수는 아니지만, 2026년 입문용 시장에서는 핫스왑이 거의 기본에 가깝습니다. Redragon K552처럼 납땜식 모델은 저렴하지만 스위치를 바꾸려면 키보드 전체를 갈아야 해요. 핫스왑 보드는 스위치만 교체하면 되니, 적축이 맞지 않을 때 비용 부담이 훨씬 적습니다. Keychron C3나 RK84처럼 5만 원대에서도 핫스왑을 제공하므로, '일단 써보고 나중에 손볼 수 있는' 첫 구매가 현실적입니다. 커스텀 취미까지 생각한다면 Akko 5075B도 같은 이유로 후보에 올립니다.

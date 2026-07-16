@@ -26,7 +26,7 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-07-10T05:30:48.365Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## Editorial Overview
@@ -162,8 +162,23 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+In heat waves I drink more water—so I write **filter cost, install, TDS** before picking a brand.
+
+### Coway **CHP242N** / A2-class countertop
+
+Easier install; clear filter alerts. **My take:** Ignore “forever free” vibes—**log annual filter spend**.
+
+### Brita Hub (expanded pitcher-class convenience)
+
+Low entry cost, simple swaps. **My take:** “Simple” marketing hits a wall when a whole family refills all day.
+
+### ZeroWater 23-Cup **ZT280W**
+
+TDS meter makes the difference visible. **My take:** Don’t buy the number alone—check **how often filters die** in your water.
+
+## FAQ
 ### Countertop or under-sink — which wins for summer hydration volume?
 
 **Under-sink (Aquasana AQ-5300+)** wins when you own the cabinet and fill large pitchers ten times a week — flow stays on tap without counter clutter. **Countertop (Brita Hub, Coway, Bluewater)** wins when drilling is forbidden or you want RO TDS drop without a plumber. For light solo hydration, **PUR FM-3700B** avoids both footprint and install entirely.

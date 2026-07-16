@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: 책상 위의 스마트폰
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-02T15:30:00.000Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -147,8 +147,23 @@ coverImageAltKo: 책상 위의 스마트폰
 
 ---
 
-## 자주 묻는 질문
+## 형님이 골라 본 대표 모델
 
+30만 원대는 ‘싸 보이는 스펙’이 많아요. **업데이트 연수·칩셋·충전**만 보면 선택이 단순해집니다.
+
+### Google Pixel 8a (GKV4X류)
+
+카메라·업데이트 정책이 솔직한 편입니다. **형님 한줄평:** 광고의 AI 문구보다 **몇 년 OS 지원인지**가 실속입니다.
+
+### Samsung Galaxy A35 5G (SM-A356)
+
+AMOLED·브랜드 AS가 강점입니다. **형님 한줄평:** ‘플래그십급’ 수식어에 혹하지 말고, **램·저장 실사용**을 보세요.
+
+### Motorola Moto G Power 2025
+
+배터리 마케팅이 큽니다. **형님 한줄평:** 대기 시간 자랑은 좋지만, **카메라·업데이트**가 약한지 같이 따지세요.
+
+## 자주 묻는 질문
 ### 30만 원대 폰 살 때 RAM은 최소 몇 GB면 될까요?
 
 2026년 일상 사용 기준으로 **6GB 이상**을 권장합니다. 카카오톡·유튜브·은행 앱을 동시에 켜 두면 4GB 모델은 백그라운드 앱이 자주 종료돼요. Galaxy A35나 Moto G Power는 6GB, Poco M6 Pro·Redmi Note 13 Pro는 8GB/256GB 구성이라 멀티태스킹 여유가 있습니다. 게임·영상 편집을 자주 한다면 8GB가 체감 차이가 큽니다. 부모님·청소년용 카톡·유튜브 전용이라면 Galaxy A15(4GB)도 가능하지만, 본인 일상폰으로 2–3년 쓸 계획이면 6GB부터 보세요.

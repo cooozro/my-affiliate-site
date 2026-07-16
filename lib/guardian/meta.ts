@@ -21,9 +21,14 @@ export function buildBlogPostMetadata(
   const publishedIso = post.publishedAt ?? post.date;
   const modifiedIso = post.updatedAt ?? publishedIso;
 
+  const robotsValue = post.noindex
+      ? { index: false, follow: false }
+      : undefined;
+
   return {
     title: post.title,
     description: post.description,
+    ...(robotsValue ? { robots: robotsValue } : {}),
     openGraph: {
       type: "article",
       title: post.title,

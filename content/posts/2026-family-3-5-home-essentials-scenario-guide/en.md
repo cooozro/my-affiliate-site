@@ -40,13 +40,13 @@ publishedAt: '2026-07-14T03:03:54.000Z'
 
 ## Who this cross-category guide is for
 
-This scenario guide is for **families of three to five** in apartments and suburban homes (roughly 60–120 m² / 650–1,300 sq ft) who upgrade appliances in the same season but rarely compare **shared constraints**: whether the fridge survives a watermelon-and-meal-prep weekend without stacking, whether the washer clears muddy sports kits before the next school day, whether one TV serves afternoon sports glare and evening co-op sessions, whether a purifier matches a sealed living room with four bodies home all day, and whether floor care should be a cordless stick, a robot, or both.
+On a school-break weekend I visited a home with two kids plus grandparents overlapping — and watched **fridge, washer, TV, purifier, and vacuum** hit their limits in the same afternoon. Mid-50s buyer lesson: stacking category “best of” lists fails when **shared constraints** are ignored.
 
-We cover **five anchor categories** in one article — refrigerators, washing machines, televisions, air purifiers, and cordless vacuums — because family households buy them together during heat season but often chase unrelated “best of” lists. This benchmark outline prioritizes **capacity over smart gimmicks, laundry throughput over a single Energy Star sticker, shared-screen brightness over bezel thinness, room-matched CADR over medical-grade slogans, and daily pickup speed over automation hype**.
+This scenario guide is for **families of three to five** (roughly 60–120 m²) who upgrade in the same season: whether the fridge survives watermelon-and-meal-prep weekends, whether the washer clears muddy kits before school, whether one TV handles afternoon sports glare and evening co-op, whether a purifier matches a sealed living room with four bodies home, and whether floors need a cordless stick, a robot, or both.
 
-Reference prices reflect OEM and major US storefront listings as of July 2026; confirm promos before checkout.
+We cover five anchors — refrigerators, washers, TVs, purifiers, cordless vacuums — prioritizing **capacity, laundry throughput, shared-screen brightness, room-matched CADR, and daily pickup over automation hype**. Prices reflect July 2026 OEM / major storefront listings.
 
-**Key takeaway:** Stock summer groceries in a **Samsung RF28T5001SR** French door; clear school-break laundry on **Samsung WF53BB8700AVUS** Super Speed cycles; keep afternoon sports legible on **TCL QM8** mini-LED; filter recirculated living-room air with **Winix 5500-2**; grab crumbs between robot runs with **Shark Stratos** — add a LiDAR robot only if your floor plan leaves a dock lane clear.
+**My table-checked takeaway:** summer groceries → **Samsung RF28T5001SR**; school-break laundry → **Samsung WF53BB8700AVUS**; afternoon sports → **TCL QM8**; living-room air → **Winix 5500-2**; crumbs between robot runs → **Shark Stratos** — add LiDAR only if a dock lane stays clear.
 
 ### Three-person vs five-person daily load
 
@@ -256,7 +256,7 @@ For many **25–30 m² open living-dining zones**, **246 cfm smoke CADR** exceed
 - [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — bedroom-sized units to pair with living-room CADR
 ## Final Verdict
 
-Three- to five-person households fail when every category buys **features without capacity**. Match appliances to school-break reality: **fresh cubic feet** for batch groceries, **washer drum volume and cycle throughput** for daily mud, **sustained HDR** for shared daytime TV, **living-zone CADR** for sealed AC weeks, and **cordless pickup plus optional robot scheduling** for foot traffic that robots alone cannot navigate.
+After lining the five axes up myself, three- to five-person homes fail when every category buys **features without capacity**. Match school-break reality: **fresh cubic feet**, **washer throughput**, **daytime HDR**, **living-zone CADR**, and **cordless pickup plus optional robot**. Marketing “whole-home” lines fade next to **throughput and filter / electricity budgets**. **With my own money**, I would lock household size and floor plan first, then narrow category by category.
 
 | Buy if… | Skip if… |
 | --- | --- |

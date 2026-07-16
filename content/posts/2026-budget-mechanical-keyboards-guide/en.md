@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: mechanical keyboard on a desk
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-02T15:30:00.000Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -150,8 +150,23 @@ Prices are reference USD list values.
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+First mechanical buys get lost in switch-name ads. Filter **hot-swap, noise, layout**.
+
+### Keychron V1 Max
+
+Mac/Win friendly wireless. **My take:** RGB shows lose to **trying switches in a store**.
+
+### Logitech G Pro X (TKL class)
+
+Swappable switches and service. **My take:** “Pro gaming” packaging—ask about **office noise complaints**.
+
+### Epomaker TH80
+
+Loaded features per dollar. **My take:** Cheap “full option” kits need a hard look at **QC and warranty**.
+
+## FAQ
 ### Do I need hot-swap for my first mechanical keyboard?
 
 Not strictly — but in 2026 it is close to the entry-level default. Soldered boards like the Redragon K552 are cheap, yet swapping switches means replacing the whole keyboard. Hot-swap sockets let you change only the switches, which is a gentler path if linear reds feel too light or too heavy after a week. Models like the Keychron C3 and Royal Kludge RK84 bring hot-swap down to the $45–$50 band. If you might grow into custom keycaps later, the Akko 5075B follows the same logic.

@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-02T04:37:59.378Z'
+updatedAt: '2026-07-16T02:48:00.744Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -104,8 +104,23 @@ If you share walls with neighbors, note **start-up times** for sleep schedules. 
 
 ---
 
-## FAQ
+## Models I’d actually shortlist
 
+A checklist alone doesn’t checkout. These three are my **install / noise / BTU** anchors.
+
+### Frigidaire FHWW083WBE (8,000 BTU)
+
+Window unit for small bedrooms/studios with honest CEER/noise labels. **My take:** Skip “max BTU” ads—**sash kit fit** decides returns.
+
+### Midea MAW08V1QWT (U-shape 8,000 BTU)
+
+Keeps a lower vent path—handy for naps. **My take:** Measure kit width first or the pretty ad becomes clutter.
+
+### GE AHY12LZ (12,000 BTU)
+
+Heat-wave nights / open doorways; dry + scheduling. **My take:** 12k can be oversized for a shaded 15 m² room—**measure first.**
+
+## FAQ
 ### If I buy the highest BTU I can afford, will my studio apartment stay cold?
 
 Not necessarily. BTU has to match **room volume, ceiling height, and sun exposure** — not just marketing labels. Top-floor or west-facing windows often need a step up from a shaded bedroom rating. Oversizing can short-cycle the compressor and leave the room clammy instead of comfortable. Measure floor area and ceiling height first; items 1 and 4 in the checklist exist so you don’t trust “studio size” slogans alone.
