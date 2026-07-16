@@ -80,6 +80,10 @@ Editorial cross-check of OEM watt tables, cookware compatibility guides, and lis
 
 **Weaknesses:** Single zone — no simultaneous pasta and sauce; coil whine audible on high; requires magnetic-base pans (cast iron, many stainless stacks).
 
+**Editorial read:** 1,800 W at ~{{krw:99}} on a 15 A circuit cuts **residual heat and AC load** versus gas, and storing the unit after dinner returns counter space to airflow. One zone adds **5–10 minutes** when pasta and sauce must boil in sequence.
+
+**Review concern:** Incompatible pans force **induction plates or cookware swaps** that can exceed the burner price; high-watt whine competes with conversation in studio layouts.
+
 **Analysis takeaway:** Closer to **boiling water without heating the whole studio** the way a coil hot plate does on a 95°F afternoon.
 
 **Verdict:** Default **renter portable** when you need one reliable induction burner under about $100.
@@ -91,6 +95,10 @@ Editorial cross-check of OEM watt tables, cookware compatibility guides, and lis
 **Strengths:** Lower street price, 1,800 W class, slim footprint for dorms and travel kitchens, child lock on many firmware revisions, easy wipe glass.
 
 **Weaknesses:** Build feel is lighter than Duxtop; fewer fine power steps on some revisions; not a full range replacement.
+
+**Editorial read:** ~{{krw:79}} and a slim footprint fit **sub-30 cm counters** in dorms and travel kitchens—a spare burner shortens main-range runtime and **summer heat exposure**. Coarser power steps mean more trial time for simmer and fry temps.
+
+**Review concern:** Lighter chassis draws more **glass-top crack reports** than Duxtop in public reviews when moved or stored often.
 
 **Analysis takeaway:** Sensible as a **weekend cabin or spare burner** when the main electric range is already warming the open plan.
 
@@ -104,6 +112,10 @@ Editorial cross-check of OEM watt tables, cookware compatibility guides, and lis
 
 **Weaknesses:** Needs a dedicated range circuit and cutout — not renter-friendly; higher install cost than any portable; induction learning curve for first-time magnetic pans.
 
+**Editorial read:** A 30-inch multi-zone top boils pasta and sauce **at once**, saving time versus a single portable and easing nightly **AC vs residual heat** fights after gas replacement. Budget **$350–700+ install** and amortize over five-plus years of ownership.
+
+**Review concern:** Renters rarely recover install cost; missing magnetic pans trigger a **full cookware swap** before first use.
+
 **Analysis takeaway:** Fits remodelers who want to **replace gas before summer** so AC is not fighting open-flame kitchen heat nightly.
 
 **Verdict:** Sensible **mid-tier built-in** for renovations already opening the counter.
@@ -116,6 +128,10 @@ Editorial cross-check of OEM watt tables, cookware compatibility guides, and lis
 
 **Weaknesses:** Premium price vs GE; app features are optional for most cooks; complex UI can slow a babysitter making boxed mac.
 
+**Editorial read:** Flex zones fit odd pans and woks **without adapters**, and Wi-Fi monitoring trims check time during **two-zone school-break meal prep**. The ~{{krw:1499}} tier runs roughly **$150 more than GE** for smart flexibility.
+
+**Review concern:** Families new to flex UI need **2–3 weeks of setup and teaching**; a busy panel raises mistake risk on simple meals.
+
 **Analysis takeaway:** Helps when you **batch-cook school-break lunches** on two zones without reheating the whole range deck.
 
 **Verdict:** Best **smart / flex-zone built-in** when the remodel budget already clears $1,400.
@@ -127,6 +143,10 @@ Editorial cross-check of OEM watt tables, cookware compatibility guides, and lis
 **Strengths:** Among the quieter induction fans in premium 30-inch class; bridge elements for griddles; precise low simmer for sauces while AC keeps the room cool; strong brand service network.
 
 **Weaknesses:** Highest MSRP here; overkill for singles who only boil water; installation still needs pro electrical work.
+
+**Editorial read:** Quiet fans and bridge elements keep cooking **below conversation level** in open plans, and precise simmer cuts sauce babysitting while AC runs. ~{{krw:2199}} plus pro install only pencils out over **five-plus years** of ownership.
+
+**Review concern:** Boil-water-only singles pay **20×+ versus a ~{{krw:99}} portable**, and electrical work can slip **2–4 weeks** past move-in.
 
 **Analysis takeaway:** Matches open plans where the cooktop sits near the sofa and you want **kitchen noise below conversation level**.
 

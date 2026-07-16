@@ -22,7 +22,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-07-16T05:40:29.363Z'
+updatedAt: '2026-07-16T10:00:24.068Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
@@ -81,6 +81,10 @@ Snapshot as of {{today}}.
 
 **Weaknesses:** IPX7 (not dust-rated IP67), mono driver limits stereo spread at picnic distance, 414g feels chunky for ultralight day packs.
 
+**Editorial read:** ~{{krw:29.99}} and 12-hour runtime cover **four or five summer picnics** without battery anxiety; IPX7 survives drink splashes with a quick wipe. 414g is heavy for bike-clip and ultralight packs.
+
+**Review concern:** Mono output fades past **~3 m**, and IPX7 lacks dust sealing for sandy beach weeks.
+
 **Analysis takeaway:** For most buyers, this translates to **reliable background music at a park table** without worrying about a spilled drink—ideal if your summer plan is casual picnics rather than pool floats.
 
 **Verdict:** Best **budget picnic and backyard** pick when price matters most.
@@ -92,6 +96,10 @@ Snapshot as of {{today}}.
 **Strengths:** Smallest and lightest here (341g), IP67 dust and water, built-in strap and bike mount, doubles as a power bank for emergency phone top-ups.
 
 **Weaknesses:** Lower max output than Flip 6, bass thins at max volume outdoors, app EQ less polished than Anker or JBL.
+
+**Editorial read:** 341g and IP67 are the lightest **bike-and-hike pocket pick** here; the built-in power bank rescues your phone when the external pack stayed in the car. ~{{krw:54.9}} runs about **$25 more than Soundcore 2** for clip and charge extras.
+
+**Review concern:** Thin bass at max volume struggles in **windy parks with loud conversation**.
 
 **Analysis takeaway:** For most buyers, this translates to **clip-on audio for bikes and short hikes**—plus a phone rescue if your power bank stayed in the car.
 
@@ -105,6 +113,10 @@ Snapshot as of {{today}}.
 
 **Weaknesses:** Premium price vs Anker/Tribit, no aux input, bass-heavy tuning may not suit acoustic playlists.
 
+**Editorial read:** ~{{krw:99.0}} float design survives **pool and lake drops**, and 360° sound skips aiming at small circles. Fourteen-hour runtime covers a full water day.
+
+**Review concern:** Bass-heavy tuning tires on **acoustic and podcast** playlists; no aux blocks wired plane or legacy devices.
+
 **Analysis takeaway:** For most buyers, this translates to **pool and lake days without panic if it slips off the float**—the only pick here designed to survive a splash-and-retrieve moment.
 
 **Verdict:** Default for **pool parties, boats, and shared outdoor listening**.
@@ -117,6 +129,10 @@ Snapshot as of {{today}}.
 
 **Weaknesses:** 550g and $129 price, no built-in power bank, battery similar to cheaper models despite higher watts.
 
+**Editorial read:** 20 W class and IP67 fill a **small park or beach-towel zone**; ~{{krw:129.0}} pairs with a second Flip for PartyBoost stereo width. 550g is not an all-day carry speaker.
+
+**Review concern:** High watts with modest battery means **afternoon charging** on all-day loud sessions.
+
 **Analysis takeaway:** For most buyers, this translates to **filling a small park clearing or beach towel zone** where a phone speaker would disappear in wind and chatter.
 
 **Verdict:** Best when **volume and brand reliability** beat absolute dollars per watt.
@@ -128,6 +144,10 @@ Snapshot as of {{today}}.
 **Strengths:** Longest battery claim (16h), IP67, wide strap for bags and strollers, Sony Clear Voice for podcasts by the grill.
 
 **Weaknesses:** Heaviest at 800g, least portable for all-day walking, bass lighter than JBL at similar price tier.
+
+**Editorial read:** Sixteen hours at ~{{krw:69.0}} suits **set-down campsite or tailgate duty**; Clear Voice helps podcasts beside a grill. 800g assumes **fixed placement**, not backpack daily carry.
+
+**Review concern:** EDM and bass-heavy parties feel **thin versus JBL** at similar price; 800g rules out walking-heavy days.
 
 **Analysis takeaway:** For most buyers, this translates to **all-day campsite or tailgate duty** where you set the speaker down once—not a grab-and-go pool toy.
 

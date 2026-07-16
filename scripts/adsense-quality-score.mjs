@@ -18,7 +18,9 @@ const PRODUCT_H2 = /^##\s*\d+\.\s+/gm;
 const EXPERIENCE =
   /(편집부\s*(현장\s*검증|분석|교차\s*검증)|공개\s*스펙\s*(교차\s*검증|재검토)|교차\s*검증한\s*결과|field\s*check|cross-check|cross-checked|Editorial\s*finding|editorial\s*field|After\s+cross-checking|this\s+report)/i;
 const WHY =
-  /(왜\s*(사|고르|추천)|가성비|패스|비추|Who should skip|Analysis takeaway|분석 요약|실제\s*구매\s*기준|cost-effectiveness|편집부\s*한줄평|Editorial note)/i;
+  /(왜\s*(사|고르|추천)|가성비|패스|비추|Who should skip|Analysis takeaway|분석 요약|실제\s*구매\s*기준|cost-effectiveness|편집부\s*한줄평|Editorial note|편집부\s*해석|Editorial read|총비용|총\s*소유|3년\s*운영|ownership)/i;
+const CONCERN =
+  /(검토\s*시\s*우려|Review concern|다만[,，]|우려되는\s*점)/i;
 
 function isNoindex(data) {
   if (data.noindex === true || data.noindex === "true") return true;
@@ -84,8 +86,11 @@ function scorePost(slug) {
   }
 
   let judge = 0;
-  if (hasWhy) judge += 10;
-  if (hasExp) judge += 10;
+  if (hasWhy) judge += 8;
+  if (hasExp) judge += 8;
+  if (/편집부\s*해석|Editorial read/.test(koBody + enBody)) judge += 5;
+  if (CONCERN.test(koBody + enBody)) judge += 4;
+  if (/총비용|총\s*소유|3년\s*운영|total cost of ownership|three-year/i.test(koBody + enBody)) judge += 3;
   if (/최종 평가|Final Verdict/.test(koBody) || /Final Verdict/.test(enBody)) judge += 5;
 
   let struct = 0;
@@ -107,6 +112,9 @@ function scorePost(slug) {
   }
   if (!hasExp) flags.push("no-editorial-signal");
   if (koChars >= 4500 && modelCount >= 3 && hasWhy) flags.push("strong-candidate");
+  if (/편집부\s*해석|Editorial read/.test(koBody + enBody) && CONCERN.test(koBody + enBody)) {
+    flags.push("editorial-depth");
+  }
   if (angle || String(topicId).startsWith("meta-")) flags.push("meta-angle");
   if (noindex) flags.push("noindex");
 

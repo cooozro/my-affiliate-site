@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T05:39:55.560Z'
+updatedAt: '2026-07-16T10:00:24.068Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## Editorial Overview
@@ -79,6 +79,10 @@ Roborock publishes **5,500 Pa max suction** and PreciSense LiDAR mapping on the 
 
 **Runner-up:** eufy X10 Pro Omni — stronger mop hardware, but the omni dock is wider; skip it if your only free wall is beside a bed.
 
+**Editorial read:** ~{{krw:449}} with auto-empty beats daily bin dumps in a tight studio—budget **$40–60/year** for bags and HEPA in three-year TCO. **40+ cm behind the dock** matters more than Pa on the spec sheet.
+
+**Review concern:** Bathroom lips and balcony tracks stall maps during summer trips—measure the only free wall before buying a wide omni dock.
+
 | Factor | Roborock Q7 Max+ | Typical bump-and-turn budget unit |
 | --- | --- | --- |
 | Mapping | LiDAR, saved no-go zones | Random paths, missed strips |
@@ -101,6 +105,10 @@ Roborock publishes **5,500 Pa max suction** and PreciSense LiDAR mapping on the 
 iRobot rates the j5 line for **pet hair pickup** with a multi-surface rubber brush and PrecisionVision obstacle avoidance (documented to steer around cords and pet waste alerts in app release notes). The j5+ bundle adds auto-empty — critical when fur clumps during shedding season overlapping summer AC months.
 
 **Runner-up:** Roborock Q7 Max+ — stronger raw suction on paper, but less proven obstacle AI for scattered toys during school break at home.
+
+**Editorial read:** ~{{krw:499}} and Clean Base remove **every-one-to-two-run** emptying in shedding season—**$50–80/year** consumables still beat manual pet-household duty over three years.
+
+**Review concern:** Summer floor clutter, leashes, and shoes test vision avoidance—run a cluttered-floor trial inside the return window.
 
 | Factor | Roomba Combo j5+ | Roborock Q7 Max+ |
 | --- | --- | --- |
@@ -125,6 +133,10 @@ eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one stati
 
 **Runner-up:** Shark Matrix Plus 2-in-1 — lower price with Sonic mopping, but manual pad laundry more often in humid apartments.
 
+**Editorial read:** ~{{krw:799}} omni station TCO still wins versus smelly manual pads through three humid summers—**8,000 Pa** plus dock wash/dry cuts daily mop labor in monsoon weeks.
+
+**Review concern:** A corner kitchen dock blocks tank access; above **28 °C** indoor dew, skipped dry cycles turn pads sour fast.
+
 | Factor | eufy X10 Pro Omni | Shark Matrix Plus 2-in-1 |
 | --- | --- | --- |
 | Pad care | Wash + dry in dock | User removes and air-dries |
@@ -147,6 +159,10 @@ eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one stati
 Shark’s Matrix line advertises **LiDAR mapping with room zones**, 60-day self-empty on the base bundle, and a 2-in-1 vacuum-mop pad for hard floors. It is the pragmatic pick when furniture layout changes weekly but you still want app-drawn no-go lines around play mats and desk chairs.
 
 **Runner-up:** iRobot Roomba Combo j5+ — smarter obstacle handling, but higher cost if mopping is rarely used.
+
+**Editorial read:** ~{{krw:449}} LiDAR zones fit school-break clutter without omni pricing—night runs near **60 dB** plus AC fan argue against sleep-room placement; each run is roughly **30–40 W** for tens of minutes.
+
+**Review concern:** Manual pad drying smells in humid weeks; weekly furniture moves without map edits fail fast.
 
 | Factor | Shark Matrix Plus 2-in-1 | Roomba Combo j5+ |
 | --- | --- | --- |

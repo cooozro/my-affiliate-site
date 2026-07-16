@@ -92,6 +92,10 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** Absolute peak brightness trails QD-OLED and mini-LED — score bugs and hockey ice can look dim if sunlight leaks around curtains; glossy screen shows lamp reflections when ceiling spots aim at the panel; OLED burn-in remains a theoretical risk for static news tickers — vary content during all-day CNN loops; 65-inch pricing climbs faster than 55-inch sweet spot.
 
+**Editorial read:** Four HDMI 2.1 ports can drop a **$40–80 switch** from three-year TCO. OLED draw often lands **$15–25/year** at four hours daily—usually below mini-LED flagships. Light-controlled rooms and curtains are the real install requirement.
+
+**Review concern:** Gloss and side-window glare show up in afternoon sports first—test static UI habits inside the burn-in return window.
+
 **Analysis takeaway:** Two consoles plus Dolby Vision streaming on one TV? **Four HDMI 2.1 ports** remove the cable-swapping headache that ruins a Sunday doubleheader — that is the LG C4’s practical edge, not showroom black levels alone.
 
 **Verdict:** Best **OLED value and port layout** for mixed sports, streaming, and HDMI 2.1 gaming in a light-controlled room.
@@ -103,6 +107,10 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 **Strengths:** QD-OLED delivers higher color volume and peak HDR punch than WOLED in Samsung’s published measurements; Gaming Hub aggregates cloud and local titles; four HDMI 2.1 inputs with 4K 120 Hz and AMD FreeSync Premium Pro; Object Tracking Sound+ on select sizes reduces need for a soundbar during quick MLB watch parties; Tizen app roster covers domestic Korean streamers and global services.
 
 **Weaknesses:** Tizen ads in the home row annoy purists; no Dolby Vision support — HDR10+ and HDR10 only, which matters for some streaming catalogs; price premium over LG C4 for similar inch class; reflections still visible on QD-OLED glass when side windows face the panel.
+
+**Editorial read:** Brighter QD-OLED fits **daytime jersey color**; HDR10+ lock-in touches three years of streaming and disc libraries. A 65-inch premium belongs in TCO with **mount and dedicated-circuit** install costs.
+
+**Review concern:** No Dolby Vision matters on some Netflix and Apple TV+ titles—side-window reflections beat showroom demos in real living rooms.
 
 **Analysis takeaway:** Curtains drawn but you want vivid jersey colors during World Cup replays? Samsung S90D’s QD-OLED path is the brighter OLED bet — just accept **HDR10+ ecosystem lock-in** before checkout.
 
@@ -116,6 +124,10 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** Blooming around bright subtitles on dark scenes — noticeable during letterboxed films; viewing angles narrower than OLED for wide sectional couches; build and speaker quality average — budget for a soundbar; firmware updates slower than LG or Samsung tier-one support in some regions.
 
+**Editorial read:** Mini-LED **65-inch value** still wins three-year TCO even after a **$200–400 soundbar**. Sustained highlight fits **AC-on, curtains-closed afternoon sports**; power often runs **$20–35/year** depending on brightness settings.
+
+**Review concern:** Letterbox bloom hurts film-heavy households; thin service networks slow panel-variance exchanges.
+
 **Analysis takeaway:** Afternoon baseball with partial glare? Mini-LED fireworks beat perfect blacks here — you trade letterbox bloom for **sustained highlight punch and a much lower 65-inch invoice**.
 
 **Verdict:** Best **mini-LED value** when closed windows still leak daylight and sports HDR matters more than OLED black levels.
@@ -128,6 +140,10 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** Quality control variance — some units show dirty-screen effect or uneven dimming zones per owner forums; brand resale and service network thinner than Samsung or LG in parts of the US; onboard audio serviceable but thin for outdoor-stadium mixes; smart TV update policy shorter than tier-one OEM promises.
 
+**Editorial read:** **Nits per dollar** targets bright-room sports; a budget 65-inch keeps **three-year watch-plus-power** well below flagship invoices. Gray-slide checks in the return window are cheap insurance against QC lottery.
+
+**Review concern:** Dirty screen and zone unevenness are the top complaints after returns close—confirm firmware support length before checkout.
+
 **Analysis takeaway:** I’d call this **max nits per won for sports and variety with AC windows shut** — check uniform gray slides in the return window; QC variance is the real marketing gap.
 
 **Verdict:** Top **budget bright-room HDR** pick when price caps hard below premium OLED.
@@ -139,6 +155,10 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 **Strengths:** Sony XR Processor trounces budget rivals on motion handling — soccer panning and tennis serves look natural without soap-opera smoothing when configured correctly; full-array local dimming with good anti-reflection coating for east-facing afternoon glare; Google TV plus Sony picture presets; Acoustic Multi-Audio uses panel as supplementary tweeter; only two HDMI 2.1 ports but eARC on a third for soundbars.
 
 **Weaknesses:** Only **two** full HDMI 2.1 ports — PC plus one console fits; third device needs 4K 60 Hz or external switch; peak brightness below mini-LED flagships; higher price than Hisense U8 for similar inch class without OLED contrast; 120 Hz panel — not 144 Hz for high-refresh PC tweakers.
+
+**Editorial read:** Sony motion fits **sports without OLED burn-in worry**; two HDMI 2.1 ports mean budget **$50–100 for a switch** in three-year TCO. A 120 Hz full-array panel usually draws less than mini-LED flagships at the same inch class.
+
+**Review concern:** PC plus console plus soundbar at full 2.1 spec exhausts ports fast—confirm wall mount, cable runs, and circuit before install day.
 
 **Analysis takeaway:** I’d call this **Sony motion clarity for sports without OLED burn-in anxiety** — count HDMI 2.1 sources first; two ports is not three, no matter what the bezel ad implies.
 

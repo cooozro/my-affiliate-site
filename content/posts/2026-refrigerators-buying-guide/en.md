@@ -95,6 +95,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 39 dB operating claim is audible in silent open kitchens; 36-inch width needs careful island clearance; door bins flex under heavy gallon jugs in some owner reviews; Wi-Fi features vary by sub-SKU — confirm before checkout.
 
+**Editorial read:** **725 kWh/year** is about **$109/year** at our reference rate—electricity alone crosses $1,000 over ten years. **28 cu ft / 19.4 cu ft fresh** cuts summer shopping trips and door-open losses; **36-inch width** and island clearance are install gates first.
+
+**Review concern:** **39 dB** carries in open kitchens during homework hours; water-filter and ice-line leaks hit year-two TCO.
+
 **Analysis takeaway:** Think **watermelon tray plus a week of beverages** without vertical stacking — and about $109/year at our reference rate. For a primary family fridge through heat season, that is the practical win, not the Wi-Fi badge.
 
 **Verdict:** Best **capacity-per-dollar French door** pick when standard depth and 28 cu ft are allowed by the floor plan.
@@ -106,6 +110,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 **Strengths:** Linear Cooling and Door Cooling+ reduce warm spots after frequent door opens during school-break snacking, 688 kWh/year beats several 28 cu ft rivals, PrintProof stainless resists summer handprints, SmartThinQ diagnostics on supported units, 38 dB published operating noise class among the quietest full-size picks here.
 
 **Weaknesses:** 25.5 cu ft total is smaller than Samsung and Frigidaire in this list; premium price vs Gallery-tier competitors; ice maker kit sometimes sold separately depending on channel; tall door bins need leveling for even seal.
+
+**Editorial read:** **688 kWh/year** and **38 dB** suit a three-person open kitchen—saved kWh and quieter operation beat two empty cubic feet over three years. Budget **+$80–150** if the ice kit is separate.
+
+**Review concern:** Five-person meal-prep headroom is tight; bad door seal and leveling show up as temperature drift after summer door traffic.
 
 **Analysis takeaway:** If you are three people, not five, and the sofa is ten steps from the open kitchen, **stable temps and lower kWh** beat squeezing in two extra cubic feet you will never fill.
 
@@ -119,6 +127,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 40 dB claim is mid-pack — may carry in studio-loft layouts; water dispenser models add filter cost and leak-point maintenance; interior plastic trim can crack if bins are forced during heavy Costco runs.
 
+**Editorial read:** **702 kWh/year** TwinChill under **$2,000 street** runs about **$105/year** in electricity—water filters (**$30–50 every six months**) add **$180–300** over three years.
+
+**Review concern:** Dispenser lines and clogged filters are year-two service items; **40 dB** competes with TV audio in studio lofts.
+
 **Analysis takeaway:** I’d call this **reliable twin-zone cooling under $2,000 street** — a sweet spot when you’re upgrading from a roaring top freezer before summer peak rates, not chasing showroom height.
 
 **Verdict:** Balanced **GE ecosystem** choice when you want TwinChill and fingerprint steel without Samsung or LG premiums.
@@ -131,6 +143,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 41 dB operating claim is the loudest in the table — noticeable if the living room shares one air volume with the kitchen; Gallery handles feel less premium than LG; ice maker noise spikes during fill cycles in some reviews; less app integration than LG ThinQ or Samsung SmartThings.
 
+**Editorial read:** **27.8 cu ft** at **722 kWh/year** (~**$108/year**) maximizes shelf per dollar—**41 dB** needs a partial wall or dishwasher noise mask in open plans over three summers.
+
+**Review concern:** Shared living-kitchen air makes **41 dB** the top WFH annoyance; ice fill cycles clash with late-night snack runs.
+
 **Analysis takeaway:** I’d call this **max cubic feet per checkout dollar** when you can tuck the fridge behind a partial wall — Gallery marketing is quieter than the 41 dB claim in an open kitchen.
 
 **Verdict:** Value **volume leader** for four-person households that prioritize shelf space over whisper-quiet open kitchens.
@@ -142,6 +158,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 **Strengths:** Counter-depth 28-inch width aligns flush with standard 24-inch cabinets for clean sightlines from the sofa, 14.5 cu ft total fits 1–2 person summer households without empty cold zones, lowest kWh here at 479 kWh/year (about $72 annual at reference rate), 37 dB class claim suits open-plan studios, dual freezer drawers separate ice cream from frozen meals.
 
 **Weaknesses:** Not Energy Star certified per Haier Energy Guide listings; no factory ice maker on base SKU — field-ready only; 9.4 cu ft fresh zone cannot host large-party platters; four-door seals need periodic alignment checks; smaller US service footprint vs LG or GE.
+
+**Editorial read:** **479 kWh/year (~$72/year)** saves **$35–40 annually** versus cooling empty shelves in a 28 cu ft tower—counter-depth **28-inch** width preserves galley sight lines. Three-year TCO favors right-sized cooling over capacity ads.
+
+**Review concern:** Four-door seal drift becomes condensation and noise after heavy summer door use; couples forcing 28 cu ft pay to chill air, not food.
 
 **Analysis takeaway:** I’d call this **built-in look and lower annual kWh** when a full 28 cu ft tower would dominate a galley and cool empty shelves all summer — capacity ads don’t pay the bill.
 

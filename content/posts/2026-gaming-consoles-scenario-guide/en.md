@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T05:39:55.560Z'
+updatedAt: '2026-07-16T10:05:00.000Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
@@ -76,6 +76,10 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and support for 4K up to 120 fps with VRR on compatible TVs. The Series X is the straightforward pick when the primary use is a 65-inch living-room display, siblings take turns on the same profile, and you want the largest Game Pass catalog on the most capable Xbox hardware.
 
+**Editorial read:** 1 TB and native 4K 120 Hz keep **headroom for 80 GB+ patches**, while Game Pass Ultimate at ~{{krw:29.99}}/month often beats buying two or three discs during an eight-week break. The larger chassis buys **thermal and fan-noise margin** versus Series S in a sealed AC room.
+
+**Review concern:** Without **10–15 cm clearance** behind the unit, frame drops show up before warranty issues—and sale-season installs can still force **M.2 expansion budget**.
+
 **Runner-up:** PlayStation 5 Slim (Disc Edition) — equally strong 4K output and a UHD Blu-ray drive, but first-party exclusives rather than Game Pass breadth drive the value equation here.
 
 | Factor | Xbox Series X | Xbox Series S |
@@ -98,6 +102,10 @@ Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and s
 **Recommended pick: PlayStation 5 Slim — Disc Edition** (about $499 / ~{{krw:499}})
 
 Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 slot for certified NVMe expansion. The disc edition plays UHD Blu-ray and lets you buy, lend, or resell physical copies of flagship exclusives. If your household debates *which* story-driven game to finish before school resumes, PlayStation’s first-party lineup is still the anchor.
+
+**Editorial read:** M.2 expansion and disc resale cut **80 GB patch wait time** when the built-in 1 TB fills during summer sales—physical rotation avoids subscription if you rotate titles. Budget **~$75–110** for a certified SSD add-on.
+
+**Review concern:** Sony exclusives justify the box, but mixing discs plus subscriptions can **cost more than a Series X + Game Pass path** if breadth matters more than first-party stories.
 
 **Runner-up:** Xbox Series X — stronger subscription value, but fewer Sony-only franchises on the platform.
 
@@ -122,6 +130,10 @@ Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 s
 
 The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 GB internal storage and no optical drive. Pair it with Game Pass Ultimate (listed around **$29.99/month / ~{{krw:29.99}}** on Microsoft’s US storefront as of {{today_locale}}) and you rotate dozens of titles during break without buying each release outright. Best when the TV is 55 inches or smaller, or when you prioritize subscription value over native 4K pixels.
 
+**Editorial read:** A {{krw:299}} console plus monthly subscription lowers **three-year TCO** on a bedroom or secondary TV versus a flagship box—no disc drive trades used-game savings for **install-and-delete time**. 512 GB needs a **weekly cleanup routine** with three or four Game Pass installs.
+
+**Review concern:** If the goal is a 65-inch native 4K living-room marathon, Series S often leads to an **X or PS5 upgrade within 18 months**.
+
 **Runner-up:** PlayStation 5 Digital Edition — solid hardware, but PlayStation Plus tiers do not mirror Game Pass’s day-one first-party volume.
 
 | Factor | Xbox Series S + Game Pass | PS5 Digital + PS Plus Extra |
@@ -144,6 +156,10 @@ The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 G
 **Recommended pick: Nintendo Switch OLED** (about $349 / ~{{krw:349}})
 
 Nintendo specifies a **7-inch OLED panel**, 64 GB internal storage (expandable via microSD), and dock output up to **1080p** on a TV — not 4K, but the point is portability when the main display is busy. Tabletop mode with Joy-Con works well for younger players during afternoon heat when everyone stays indoors. First-party titles like *Mario Kart* and *Zelda* remain break-season staples.
+
+**Editorial read:** At {{krw:349}}, handheld 720p avoids a **second TV purchase** when the living-room display is contested—add a 128 GB microSD to cut eShop install wait time. Docked 1080p keeps **picture and space expectations** separate from a 4K couch setup.
+
+**Review concern:** ~3-hour battery life means a **charger or dock anchor** for all-day play; if you only want cross-platform AAA in 4K, Switch becomes a **second console**, not the only box.
 
 **Runner-up:** Steam Deck or handheld PC — more flexible, but higher price, fan noise, and shorter battery for younger users.
 

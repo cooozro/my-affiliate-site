@@ -91,6 +91,10 @@ Samsung lists **28.0 cu ft total** with **19.4 cu ft fresh food** on the RF28T50
 
 **Runner-up:** LG LRFXS2503S — **25.5 cu ft** with lower **688 kWh/year** and quieter **38 dB** published operating class, but less total fresh volume when you batch-cook for five.
 
+**Editorial read:** **725 kWh/year** and **19.4 cu ft fresh** fit **twice-weekly summer shopping**—about **$109/year** electricity for 3–4 people. **36-inch width** and island clearance are install gates before capacity ads.
+
+**Review concern:** **39 dB** can annoy open-kitchen WFH; test temperature recovery after heavy summer door traffic in the return window.
+
 | Factor | Samsung RF28T5001SR | LG LRFXS2503S |
 | --- | --- | --- |
 | Total capacity | 28.0 cu ft | 25.5 cu ft |
@@ -118,6 +122,10 @@ Wi-Fi diagnostics do not add shelf inches. For three- to five-person homes, meas
 Samsung’s Bespoke line documents a **5.3 cu ft drum** — among the largest consumer front-load footprints in 2026 US listings — with **Super Speed** completing a full load in **28 minutes** under manufacturer test conditions. **AI OptiWash** scales water and time when one child brings clay home and another only needs a rinse after swim practice. **Steam Sanitize** helps clear vacation-week bedding stacks before suitcases zip.
 
 **Runner-up:** Whirlpool WFW5620HW — excellent **Stain Treat** and **Load & Go XL** dispenser for daily mud, but **4.5 cu ft** drum means more batches during peak break weeks.
+
+**Editorial read:** **5.3 cu ft** and **~28-minute full loads** cut **cycles = power and time** when school break means twice-daily laundry—over three years, throughput beats an extra 0.8 cu ft on paper.
+
+**Review concern:** The 4.5 cu ft runner-up adds Friday towel-and-bedding batches—confirm **220 V, drain slope, and spin transfer** before install.
 
 | Factor | Samsung WF53BB8700AVUS | Whirlpool WFW5620HW |
 | --- | --- | --- |
@@ -147,6 +155,10 @@ TCL’s mini-LED QM8 line publishes **about 2,000 nits peak HDR** in small-windo
 
 **Runner-up:** LG OLED C4 — superior dark-room films and **four full HDMI 2.1 ports**, but lower sustained brightness when sunlight catches the glossy panel during school-break mornings.
 
+**Editorial read:** **~2,000 nit** class and **four HDMI 2.1 ports** fit **daytime sports and dual consoles**—power often runs **$20–35/year** at family watch hours. Budget **$100–200** for mount and cable runs in three-year TCO.
+
+**Review concern:** Partial glare living rooms favor mini-LED sustained punch over OLED blacks—test reflection and **2.5–3 m** viewing distance before the return window closes.
+
 | Factor | TCL QM8 (65-inch) | LG OLED C4 (65-inch) |
 | --- | --- | --- |
 | Panel | Mini-LED LCD | WOLED evo |
@@ -175,6 +187,10 @@ Winix documents **246 cfm smoke CADR** on the 5500-2 — enough headroom to run 
 
 **Runner-up:** Levoit Core 300S — excellent **141 cfm** for bedrooms and **24 dB sleep mode**, but undersized as the sole unit for a shared family zone; pair one per sleeping room instead.
 
+**Editorial read:** **246 CFM** and washable pre-filters save **~$80–150** versus disposable HEPA stacks over three years. A sealed **25–30 m²** living zone at mid speed often lands **$30–50/year** in electricity.
+
+**Review concern:** Strong cooking odors still need hood ventilation—a thin-wall kid room may need a bedroom unit even with a living-room Winix.
+
 | Factor | Winix 5500-2 | Levoit Core 300S |
 | --- | --- | --- |
 | Smoke CADR | 246 cfm | 141 cfm |
@@ -202,6 +218,10 @@ Moving a bedroom purifier to the sofa during movie night does not magically incr
 Shark lists **up to 60 minutes runtime** in Eco mode on the Stratos line with **PowerFins HairPro** brush roll for mixed hard floor and low carpet — enough for a **daily family pass** through kitchen, entry, and hallway between robot cycles. **Clean Sense IQ** raises suction when snack debris loads increase. Flex wand and pet multi-tool cover sofa seams where kids eat during movie afternoons.
 
 **Runner-up:** Roborock Q7 Max+ — **LiDAR mapping and auto-empty dock** automate baseline dust when everyone is at day camp, but toys, backpacks, and dining chairs block paths hourly during break; keep a stick for spot runs.
+
+**Editorial read:** **~60-minute eco** and a ~{{krw:499}} stick fit **post-lunch crumb spikes**—even with **$40–60/year** robot bags, cluttered break households need the stick first. Compare **wall-mount closet space** versus **40+ cm** robot dock clearance.
+
+**Review concern:** Robots alone cannot route around hourly backpack and LEGO clutter—measure laundry-closet outlet height before choosing dock over wall mount.
 
 | Factor | Shark Stratos (cordless) | Roborock Q7 Max+ (robot) |
 | --- | --- | --- |

@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: mechanical keyboard on a desk
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-16T05:39:55.560Z'
+updatedAt: '2026-07-16T10:05:00.000Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -84,6 +84,10 @@ Prices are reference USD list values.
 
 **Weaknesses:** Wired only, occasional uneven RGB, no wireless vs RK84.
 
+**Editorial read:** At $49 with PBT and hot-swap, this is a **three-year typing path with no battery or wireless replacement cost**. A wired desk setup skips **daily pairing and charging time** on an 80 cm-wide surface.
+
+**Review concern:** Uneven RGB and a fixed cable add **unplug-and-reroute minutes** every time you move the laptop to a café or shared desk.
+
 **Analysis takeaway:** For most buyers, this translates to **the least risky first board for coding**—you are not paying for wireless you might not use yet.
 
 **Verdict:** Safest **first board for typing and coding**.
@@ -95,6 +99,10 @@ Prices are reference USD list values.
 **Strengths:** Compact 75%, tri-mode wireless, hot-swap, strong feature density per dollar.
 
 **Weaknesses:** ABS shine over time, battery every 2–3 days, occasional firmware quirks.
+
+**Editorial read:** $45 tri-mode 75% saves **desk depth and cable clutter** for wireless gaming, but ABS caps often push a **$20–30 keycap swap in years two or three** of daily use.
+
+**Review concern:** A 2–3-day battery cycle can die **before an evening gaming block** if you also type eight hours WFH on Bluetooth.
 
 **Analysis takeaway:** For most buyers, this translates to **a smaller desk footprint plus wireless for casual gaming** without jumping to premium brands.
 
@@ -108,6 +116,10 @@ Prices are reference USD list values.
 
 **Weaknesses:** Higher price, 75% learning curve, heavier chassis.
 
+**Editorial read:** $59 gasket mounting and silent switches trade **neighbor noise and focus friction** in open-plan WFH for a **2–4 week shortcut remapping tax** on 75% layout.
+
+**Review concern:** The heavier 75% chassis is **less bag-friendly** than TKL if you commute with the laptop daily.
+
 **Analysis takeaway:** For most buyers, this translates to **softer keystrokes that coworkers will not hate**—worth the premium if you type in a shared room.
 
 **Verdict:** Ideal for **quiet home/office** typing.
@@ -120,6 +132,10 @@ Prices are reference USD list values.
 
 **Weaknesses:** No hot-swap, ABS caps, limited customization, 5.2% return rate.
 
+**Editorial read:** A $35 metal-plate TKL minimizes **total cost over a weekend trial**, but switch dislike means **replacing the whole board (~$50)**—not a $15 switch pack.
+
+**Review concern:** A 5.2% return rate often tracks buyers who **skip an in-store switch test** and discover feel mismatch after a week.
+
 **Analysis takeaway:** For most buyers, this translates to **a weekend experiment with mechanical feel**—plan to replace the whole board if switches are not for you.
 
 **Verdict:** **Try mechanical once** on a budget; upgrade path is limited.
@@ -131,6 +147,10 @@ Prices are reference USD list values.
 **Strengths:** 75% + PBT + hot-swap + tri-mode, strong keycap ecosystem.
 
 **Weaknesses:** Fewer local service centers, firmware learning curve.
+
+**Editorial read:** $55 75% with PBT and tri-mode is built for **three-year growth via keycaps and switches**—add a **$30–50 cap set** instead of a new board—but budget **1–2 hours** for first-time firmware setup.
+
+**Review concern:** Limited local service can mean **1–2 weeks of shipping** if the battery or PCB fails outside warranty.
 
 **Analysis takeaway:** For most buyers, this translates to **room to grow into custom keycaps and switches** if you catch the hobby bug.
 

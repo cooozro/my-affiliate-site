@@ -83,6 +83,10 @@ Reference prices as listed mid-2026. Heat-pump models trade cycle length for low
 
 **Weaknesses:** Higher upfront price; cycles often run longer than vented peers; 4.2 cu ft is smaller than 7+ cu ft family vented drums — plan two cycles for king bedding.
 
+**Editorial read:** Heat-pump kWh stays lower on **daily summer runs**, so three years of peak-season laundry can claw back **$150–250** versus vented electrics at our reference rate. A 4.2 cu ft drum means **two cycles for king bedding**—queue time, not sticker price, often sets real TCO in tight closets.
+
+**Review concern:** Confirm ventless install meets local code and condensate routing before checkout; school-break bulk loads expose long-cycle frustration fast.
+
 **Analysis takeaway:** When the washer already runs daily and outdoor drying is impossible, this is closer to **paying more once so summer dryer electricity stays down**.
 
 **Verdict:** Best **heat-pump / low-kWh** pick for humid sealed apartments that can wait for longer cycles.
@@ -94,6 +98,10 @@ Reference prices as listed mid-2026. Heat-pump models trade cycle length for low
 **Strengths:** **7.5 cu ft** drum clears vacation-week towel and bedding stacks; Sensor Dry / AI Dry paths cut guesswork on mixed cotton loads; widely stocked during heat-season appliance runs; pairs cleanly with matching Samsung front-load washers.
 
 **Weaknesses:** Needs a legal exterior vent — blocked vents cause lint heat risk; vented electrics draw more kWh than heat pumps on all-day summer schedules; steam packages vary by exact SKU.
+
+**Editorial read:** **7.5 cu ft** buys one-and-done time after swim practice; vented summer kWh often runs **$80–120/year above** a heat pump at our reference rate—over three years, check whether the $500 upfront gap still wins against duct condition and blockage history.
+
+**Review concern:** Blocked or reverse-vented ducts are lint-fire and humidity risks—inspect the exterior hood and cleaning interval before install day.
 
 **Analysis takeaway:** After swim practice, one large load beats **three half-full cycles on a compact heat pump** in real kitchens.
 
@@ -107,6 +115,10 @@ Reference prices as listed mid-2026. Heat-pump models trade cycle length for low
 
 **Weaknesses:** Still a vented electric energy profile; steam adds water and slight cycle length; premium vs GE entry models without matching heat-pump savings.
 
+**Editorial read:** Steam trades **iron time and cord kWh** for a bit more water and cycle length—felt most when shirts sit damp in an AC-sealed laundry closet. Vented summer draw still hits peak rates; three-year steam pad cost is minor next to vent energy.
+
+**Review concern:** Steam-line leaks and scale build show up in year two—buying without a legal vent path flips install cost into TCO.
+
 **Analysis takeaway:** In an AC-sealed laundry closet, the win you feel is **fewer ironing sessions** when clothes sit damp for hours.
 
 **Verdict:** Best **steam + sensor** balance for households that hate wrinkles more than they chase heat-pump ROI.
@@ -119,6 +131,10 @@ Reference prices as listed mid-2026. Heat-pump models trade cycle length for low
 
 **Weaknesses:** Fewer premium quiet / steam features; vented kWh costs add up in daily summer use; cosmetic finish is basic vs Bespoke-tier competitors.
 
+**Editorial read:** Lowest sticker here means **humid laundry dry this week**; 7.4 cu ft still clears family towels in one pass. Daily summer vented runs can cost **$60–100/year more** than heat-pump class over three years—right when immediate install beats long-run savings.
+
+**Review concern:** Budget vented units often fail the **thin-wall night cycle** test—confirm vent path and dedicated circuit before the return window closes.
+
 **Analysis takeaway:** Practical pick when you need **humid laundry dry this week** instead of waiting on heat-pump budget approval.
 
 **Verdict:** Sensible **budget vented** entry when the vent path already exists.
@@ -130,6 +146,10 @@ Reference prices as listed mid-2026. Heat-pump models trade cycle length for low
 **Strengths:** 8.0 cu ft class capacity for bulky summer bedding; Perfect Steam and LuxCare moisture sensing; Electrolux publishes competitive sound claims for laundry closets beside bedrooms; reverse tumble reduces tangles on sheets.
 
 **Weaknesses:** Higher price than GE/Samsung mid-tier; still needs venting; features can overwhelm buyers who only need Sensor Dry.
+
+**Editorial read:** **8.0 cu ft** and quieter published specs fit **bedroom-adjacent laundry closets**—one large evening load avoids peak-hour double runs. Three-year TCO gains come from fewer “wait until morning” queues, not heat-pump kWh.
+
+**Review concern:** Vibration through shared floors can exceed dB claims on paper—measure duct length and 220 V circuit before committing beside a sleep room.
 
 **Analysis takeaway:** Fits evening cycles when AC already hums and you **do not want to wake a light sleeper** through a thin laundry-closet wall.
 

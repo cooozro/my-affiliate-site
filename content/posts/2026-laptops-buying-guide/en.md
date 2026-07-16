@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T05:40:29.363Z'
+updatedAt: '2026-07-16T10:00:24.068Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -87,35 +87,43 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** RAM is soldered—no post-purchase upgrade; plastic chassis flexes; fan ramps audibly in uncooled dorm rooms above 30°C.
 
+**Editorial read:** 16GB, 300 nits, and 47Wh at {{krw:499}} spread to roughly **$125/year over four years of study** with no RAM stick or external SSD add-ons for twenty-tab workloads.
+
+**Review concern:** Soldered RAM means **no upgrade path**—video or VM-heavy majors may force a full replacement (~$400–500) before graduation.
+
 **Analysis takeaway:** In my book that means **twenty tabs without swap panic** and **readable screens during summer study by the window**.
 
-**Verdict:** Top pick when **16GB and battery** matter more than future RAM DIY.
+**Review concern:** Soldered memory plus uncooled dorm heat above 30°C can **throttle compile and video-call workloads** when fan noise becomes the limiting factor.
 
----
-
-## 2. Acer Aspire 5 A515-58
+**Verdict:** Top p## 2. Acer Aspire 5 A515-58
 
 **Strengths:** Core i5-1335U solid for spreadsheets and light editing, **one free SODIMM slot** to reach 16GB cheaply, 50Wh battery, full-size keyboard with numeric pad.
 
 **Weaknesses:** Ships with 8GB—budget another stick before heavy multitasking; 250 nits struggles outdoors; entry chassis is plain.
 
+**Editorial read:** {{krw:449}} with one open SODIMM slot is the **lowest three-year TCO upgrade path**—add an ~$25–35 8GB stick after back-to-school sales for 16GB and a 50Wh library day.
+
+**Review concern:** 250 nits fades quickly on **30+ minutes at a sunny window or outdoor table**, which matters if you study outside in summer.
+
 **Analysis takeaway:** That is the **lowest-friction RAM upgrade path** if you add an 8GB module after back-to-school sales.
 
-**Verdict:** Best **upgrade-friendly budget** when you accept 8GB at checkout.
+**Review concern:** Running heavy multitasking on 8GB until you upgrade invites **swap lag and fan noise** during the busiest weeks of the semester.
 
----
-
-## 3. ASUS Vivobook Go 15 E1504FA
+**Verdict:** Best **upgrade## 3. ASUS Vivobook Go 15 E1504FA
 
 **Strengths:** Lowest list price in the set, 16GB soldered, Ryzen 5 7520U efficient for notes and streaming, lightweight for summer travel between home and campus.
 
 **Weaknesses:** 42Wh battery is the smallest here—carry a power bank for all-day sessions; 250 nits; no RAM upgrade after purchase.
 
+**Editorial read:** {{krw:429}} at ~1.4 kg trims **carry weight and upfront cost** for break travel, but 42Wh effectively assumes a **~$20–30 PD power bank** for six-hour library blocks.
+
+**Review concern:** Soldered 16GB and 250 nits together **limit media or design pivots** late in a four-year program without buying again.
+
 **Analysis takeaway:** A **light 16GB carry laptop for break travel** — pair with a PD power bank for library marathons.
 
-**Verdict:** **Lightest 16GB entry** when weight beats maximum runtime.
+**Review concern:** 42Wh and soldered RAM mean **no upgrade and no outlet-free marathons** unless you carry backup power every day.
 
----
+**Verdict:** **Lightest 16GB entry** when weight beats maximum runtime.
 
 ## 4. HP Laptop 15-fd0123dx
 
@@ -123,29 +131,29 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 256GB SSD fills fast with video projects—plan external storage; 8GB at purchase; 250 nits; 41Wh battery trails IdeaPad.
 
+**Editorial read:** {{krw:479}} with an open RAM slot and familiar HP support helps **campus repair paths**, but 256GB and 41Wh push **~$50–70 external SSD plus a PD bank** into three-year operating cost.
+
+**Review concern:** Running **video edits or multiple VMs on 8GB out of the box** triggers swap and fan noise until you add RAM.
+
 **Analysis takeaway:** Add RAM and an external SSD and you get a **recognizable campus repair path** for media courses.
 
-**Verdict:** Solid **HP ecosystem** pick when local service matters.
+**Review concern:** Keeping video projects on 256GB alone **fills storage and backup time** faster than essay-only workloads.
 
----
-
-## 5. Dell Inspiron 15 3535
+**Verdict:** Solid **HP ecosystem** pick when local service matte## 5. Dell Inspiron 15 3535
 
 **Strengths:** Ryzen 5 7520U value, **open RAM slot**, 512GB storage default, balanced weight, Dell student pricing windows in late summer.
 
 **Weaknesses:** 8GB until upgraded; 250 nits; plastic build; fan noise under combined heat and compile loads.
 
+**Editorial read:** {{krw:459}} with 512GB and an open RAM slot pairs **AMD efficiency and storage headroom**, but 8GB and 250 nits assume **a post-sale RAM stick (~$25–35) and mostly indoor use**.
+
+**Review concern:** In **30°C+ uncooled dorms**, compile loads plus fan noise feel worse than IdeaPad’s 300 nits and 47Wh combo.
+
 **Analysis takeaway:** **AMD efficiency plus room to grow RAM** without jumping to premium ultrabooks.
 
-**Verdict:** **Balanced AMD value** when upgrade path and storage matter.
+**Review concern:** Until you add RAM, 8GB and 250 nits struggle when **heat and compile loads stack** on uncooled summer desks.
 
----
-
-## Scenario matrix
-
-| Use case | First pick | Second pick |
-| --- | --- | --- |
-| Hot dorm, no AC (noise + heat) | IdeaPad Slim 3 | Vivobook Go 15 |
+**Verdict:** **Balanced AMD value** when upgrade path and stor | IdeaPad Slim 3 | Vivobook Go 15 |
 | All-day library without outlets | IdeaPad Slim 3 | Acer Aspire 5 |
 | Outdoor / bright window seating | IdeaPad Slim 3 | HP Laptop 15 |
 | Cheapest 16GB out of box | Vivobook Go 15 | IdeaPad Slim 3 |

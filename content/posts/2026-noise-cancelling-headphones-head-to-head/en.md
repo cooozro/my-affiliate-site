@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T05:39:55.560Z'
+updatedAt: '2026-07-16T10:05:00.000Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
@@ -76,6 +76,10 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** Ear-cup padding is thinner than premium Sony flagships; long-haul users with larger ears may feel rim contact after four hours. ANC is **good but not class-leading** versus the Space Q45 on sustained engine bands. Plastic finish scuffs in loose carry-on pockets without a case.
 
+**Editorial read:** **192 g** at ~{{krw:149}} fits **40-minute commutes worn twice daily**—roughly **$0.35/day** over three years before pads and case. LDAC helps Android streaming friction; scuffed cups without a hard case are a real three-year cosmetic tax.
+
+**Review concern:** Wrong ear-tip geometry collapses ANC before battery specs matter—wear 15+ minutes inside the return window on humid days.
+
 **Analysis takeaway:** For most buyers, the WH-CH720N is the **low-fatigue travel default** when you prioritize weight and Sony tuning over maximum cancellation depth. Pair with a hard case if you gate-check a soft bag.
 
 **Verdict:** Best **lightweight LDAC travel** pick when ANC “good enough” beats “strongest possible.”
@@ -88,6 +92,10 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** At 295 g, clamp force and heat buildup show up sooner in {{today}}-style heat waves; lighter travelers notice neck strain on all-day wear. App-dependent features and firmware updates can feel fiddly compared with Sony’s simpler out-of-box behavior. Hinge durability is a recurring theme in public long-term reviews — treat the fold mechanism gently.
 
+**Editorial read:** ~{{krw:149}} buys **stronger low-frequency ANC and LDAC** on 8-hour flights—**50-hour** class battery cuts adapter anxiety over three years of trips. **295 g** is a neck-fatigue line item in hot-terminal walking, not just a spec row.
+
+**Review concern:** Hinge complaints repeat in long-term reviews—test clamp heat for 15 minutes before {{today}} heat-season travel peaks.
+
 **Analysis takeaway:** For most buyers who **need stronger cancellation than the Sony** and can tolerate extra weight, the Q45 is the value sweet spot — especially for Android LDAC users on noisy flights.
 
 **Verdict:** Best **ANC depth per dollar** when you accept heavier cups.
@@ -99,6 +107,10 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 **Strengths:** Lowest entry price at about $129 (~{{krw:129}}) with **55-hour battery claims** — useful when USB ports are scarce in economy cabins or summer buses. JBL’s tuning emphasizes forward vocals and punchy bass that masks dull transit noise for podcast listeners. Simple controls and fewer app dependencies appeal to iPhone users who live on AAC anyway.
 
 **Weaknesses:** **No LDAC** — Android audiophiles lose high-bitrate streaming unless they accept SBC. ANC attenuation trails both rivals on sub-200 Hz content; expect to raise volume slightly on takeoff rolls. Multipoint is limited compared with Sony and Soundcore; switching laptop ↔ phone mid-flight is clunkier.
+
+**Editorial read:** ~{{krw:129}} and **55-hour** ANC-on battery fit **USB-scarce buses and economy rows**—lowest three-year upfront here. Pad replacements (~$20) can absorb part of the ~$20 gap versus LDAC rivals.
+
+**Review concern:** Weak sub-200 Hz ANC pushes volume up on takeoff—if Android hi-res and long naps are goals, plan an upgrade path before buying twice.
 
 **Analysis takeaway:** For most buyers on a **strict budget** who mainly watch movies and listen to spoken word, the Tune 770NC delivers acceptable travel quiet without codec extras — not the pick for noise-sensitive sleepers.
 

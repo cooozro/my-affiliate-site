@@ -95,6 +95,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** No oscillation — placement and aim matter; 66 dB at high speed is too loud for sleep; premium price vs basic desk fans; aesthetic is industrial, not living-room subtle.
 
+**Editorial read:** 58 W for eight hours is about **7 cents/day**—a fraction of a **900 W window AC** on the same meter. **584 CFM** mixing is where three-year TCO pays off: cold layers reach bedroom corners without running the compressor all night.
+
+**Review concern:** Fixed aim fails if hallway placement is wrong; **66 dB** high speed is not a sleep-room setting.
+
 **Analysis takeaway:** Run the window unit on a timer, then let the 660 mix stratified layers for two hours at about **7 cents/day** instead of leaving the compressor on all night — that is AC assist in practice, not marketing “whole room cooling.”
 
 **Verdict:** Best **whole-room air mixing and AC assist** pick when you can aim the jet down a hallway or across the bed diagonal.
@@ -106,6 +110,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 **Strengths:** Quietest low-speed dB in the table (35 dB claimed), five-speed pedestal with remote, slim footprint for narrow apartment layouts, 410 CFM class airflow for medium rooms, stable oscillation without wobble in most owner reviews.
 
 **Weaknesses:** Highest price here; assembly and base click-in steps trip impatient unboxers; remote uses CR2025 — keep a spare for August; not a substitute for AC in humid 95°F+ weeks alone.
+
+**Editorial read:** **35 dB** low speed sits near refrigerator hum—speed 2–3 after midnight while AC cycles off fits light sleepers. 55 W at eight hours is about **7 cents/day**; ~120 summer nights over three years land near **$25 total** fan electricity.
+
+**Review concern:** Alone in humid 95°F weeks it cannot replace AC; wobbly base assembly is a top return reason—measure pedestal height and sweep clearance first.
 
 **Analysis takeaway:** Speed 2–3 overnight while the AC cycles off after midnight — **35 dB** stays below typical refrigerator hum in published tests, which is the Rowenta’s sleep-room edge.
 
@@ -119,6 +127,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 185 CFM will not mix a whole studio — it cools **you**, not the room; no remote; plastic housing can resonate at speed 3; cord is short for center-room placement.
 
+**Editorial read:** **35 W** yields about **4 cents/day**—face-level breeze at 78°F central AC without adding **900 W** to the meter. Three-year dorm desk TCO stays near **$15–20/year** in electricity, lowest in this list.
+
+**Review concern:** Whole-room cooling expectations fail here; a short cord locks you to outlet placement beside the desk.
+
 **Analysis takeaway:** Central AC at 78°F and you want airflow on your face without another **900 W** on the meter? The HT-900 is a **personal breeze** for laptop work — about 4 cents/day, not whole-room refrigeration.
 
 **Verdict:** Default **budget desk and dorm** option — pair with a tower or circulator for shared spaces.
@@ -131,6 +143,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 48 dB low speed is audible in silent bedrooms; ionizer button adds confusion (often unused); filter grille collects dust — needs monthly wipe; not as focused as Vornado for long-throw mixing.
 
+**Editorial read:** **45 W** at about **5 cents/day**; tower footprint tucks beside a dresser without blocking the **only window-AC exhaust**. Three-year TCO saves buying a second circulator when floor space is zero.
+
+**Review concern:** **48 dB** annoys light sleepers; dusty grilles and ionizer confusion add summer maintenance time.
+
 **Analysis takeaway:** I’d call this **cooling a narrow studio’s sleep side** without blocking the only window-AC exhaust — tower tucks beside the dresser, not the “whole room” promise on the box.
 
 **Verdict:** Sensible **tower value** when floor space is zero and oscillation beats fixed aim.
@@ -142,6 +158,10 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 **Strengths:** App schedules and fan curves, 42 W average in spec band, 348 CFM class, 12-hour timer, horizontal and vertical oscillation, firmware adds “natural breeze” patterns for kids’ rooms.
 
 **Weaknesses:** App setup required for best features; Wi-Fi chip adds a few watts on standby; newer track record vs Lasko/Honeywell legacy lines; tower still needs clearance for sweep.
+
+**Editorial read:** **42 W** plus app curves for **midnight ramp-down** while the window AC keeps its thermostat—about **5 cents/day** active use. Smart-home households already running summer schedules absorb standby draw in three-year TCO.
+
+**Review concern:** Router reboots and outages blank schedules; confirm swing clearance against curtains and furniture before install.
 
 **Analysis takeaway:** I’d call this **phone ramp-down after bedtime** while the window AC keeps its own thermostat — saves a midnight walk across a hot room, which app ads never mention.
 

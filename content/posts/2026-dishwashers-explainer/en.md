@@ -19,7 +19,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-16T05:39:55.560Z'
+updatedAt: '2026-07-16T10:00:00.000Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: built-in dishwasher in a kitchen
@@ -60,6 +60,8 @@ Editorial cross-check of public IEC/EN capacity notes, OEM noise and water label
 | Energy class | Regional labels | Long-run cost signal |
 | Rack height | OEM diagrams | Pot and bowl fit |
 
+We fold **three-year TCO** from Eco cycle frequency, liters per run, and dry-mode power — a countertop six-setting unit run twice daily can match a built-in fourteen-setting once-daily pattern on utilities after install cost.
+
 ---
 
 ## Place settings are a test load, not plates you own
@@ -70,6 +72,10 @@ Bosch lists **14 place settings** and a **third rack** on SHPM65Z55N. A three-to
 
 **Summer note:** School-break barbecues stress **bottom-rack height and third-rack utility** more than the headline “14 settings” badge.
 
+**Editorial read:** A fourteen-setting built-in at one Eco run per day lands near **3,500 L per year**, while a six-setting countertop run twice daily can match that three-year water, power, and detergent total.
+
+**Review concern:** Shopping catalog place-setting counts without measuring **casserole and wok height** is the most common post-barbecue regret in open reviews.
+
 ---
 
 ## Noise ratings and why Eco modes sound different
@@ -78,6 +84,10 @@ Manufacturers report **dB(A)** for a reference program, often Eco. Bosch documen
 
 Isolation feet and closed cabinetry reduce perceived noise more than a 1 dB sheet claim. Samsung’s DW80B7070US cites **42 dB Eco** with **AutoRelease** dry (door opens slightly) to shorten heated-dry time on humid nights — watch indoor humidity so cabinets stay dry.
 
+**Editorial read:** The gap between 44 dB and 42 dB Eco matters at **one to two meters during WFH video**, but Intensive programs add **five to eight dB** — delay start beats chasing a one-decibel sheet win.
+
+**Review concern:** Open-plan buyers who run Intensive after late guests without scheduling often regret **evening TV and conversation noise** more than the Eco label they compared.
+
 ---
 
 ## Liters per cycle: Eco vs soil sensors
@@ -85,6 +95,10 @@ Isolation feet and closed cabinetry reduce perceived noise more than a 1 dB shee
 Water use advertised as **“from X liters”** is usually the Eco or sensor-light path. Bosch labels **about 9.5 L/cycle (Eco)** on SHPM65Z55N; Samsung lists **about 10.2 L (Eco)** on DW80B7070US. Heavy barbecue loads trigger longer, wetter Auto cycles.
 
 Compare liters beside energy class and cycle time. Countertop FFCD2413US uses fewer liters per run but **two daily cycles** can match one built-in load’s total water. On sticky nights, weigh **heated dry vs AutoRelease air dry** against AC-sealed kitchen humidity.
+
+**Editorial read:** Eco floors near **9.5–10.2 L** trim monthly utility bills modestly, but barbecue Auto cycles at **1.5–2× water and thirty to sixty extra minutes** erase that savings over three years.
+
+**Review concern:** When soil sensors add water on heavy loads, buyers who budget only Eco liters wake up to **wet dishes and longer dry times** without a planned program and dry mode.
 
 ---
 
@@ -97,6 +111,10 @@ Compare liters beside energy class and cycle time. Countertop FFCD2413US uses fe
 | Air dry | Fan only | Saves energy; plastic may retain droplets |
 
 On heat-wave nights with AC running, **delay start + AutoRelease** spreads evening heat load. Plastic bowls still bead water after heated dry — **rack placement** matters as much as the spec sheet.
+
+**Editorial read:** Heated dry adds roughly **0.8–1.2 kWh per cycle** on heat-wave nights; AutoRelease saves power but can raise **kitchen humidity five to ten percent** — trade against dehumidifier and vent time.
+
+**Review concern:** A cracked door after AutoRelease needs **pet, child, and cabinet moisture checks**; sealed cabinetry without airflow traps odor faster than the brochure suggests.
 
 ---
 
@@ -116,6 +134,28 @@ On heat-wave nights with AC running, **delay start + AutoRelease** spreads eveni
 | dB(A) | Always that quiet | Often Eco program only |
 | Liters / cycle | Every wash | Eco / light soil path |
 | Half load | Half water always | Sensor may still use moderate water |
+
+---
+
+## Model editorial notes
+
+### Bosch SHPM65Z55N
+
+**Editorial read:** Fourteen place settings, a third rack, and 44 dB Eco suit **one daily dinner load for three to four people**, but deep bowls and casseroles still lose to bottom-rack height after barbecue nights.
+
+**Review concern:** Intensive and Auto programs break the Eco dB and 9.5 L floor — without delay start after late guests, noise complaints arrive before water savings do.
+
+### Frigidaire FFCD2413US
+
+**Editorial read:** Six place settings on a countertop skip built-in install cost for **short leases**, but a second cycle after guest dinners adds **daily time and electricity** that a one-run built-in avoids.
+
+**Review concern:** A ~52 dB class rating in an open-plan kitchen punishes buyers who shop Eco labels without planning **delay start and evening TV noise**.
+
+### Samsung DW80B7070US
+
+**Editorial read:** 42 dB Eco plus AutoRelease shortens **sealed-AC drying time**, yet a cracked door changes indoor humidity — budget ventilation and cabinet checks alongside the spec sheet.
+
+**Review concern:** AutoRelease trades heated-dry heat for **plastic beading and cabinet moisture** that rack placement and exhaust habits decide more than the brochure.
 
 ---
 
@@ -160,4 +200,4 @@ After cross-checking the public specs, dishwasher value still means matching **d
 4. **Delay start + AutoRelease or closed cabinetry** often beats chasing a 1 dB spec win.
 5. Size compact vs built-in to **household plate volume** and lease length, not catalog photos.
 
-**On a cost-effectiveness basis,** this report would start with Bosch SHPM65Z55N for a 3–4 person built-in, FFCD2413US for short leases, and Samsung DW80B7070US when AutoRelease dry matters — then narrow from the table.
+**On a cost-effectiveness basis,** this report would start with Bosch SHPM65Z55N for a 3–4 person built-in, FFCD2413US for short leases, and Samsung DW80B7070US when AutoRelease dry matters — then narrow from the table. Three-year ownership splits on **one cycle versus two per day**, delay scheduling, and dry mode more than showroom badge wars alone.

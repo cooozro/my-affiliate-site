@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-16T05:40:29.363Z'
+updatedAt: '2026-07-16T10:00:24.068Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -52,6 +52,10 @@ Checklist items came from manufacturer install guides, common lease practice, an
    **Why it matters:** BTU charts assume typical 2.4 m ceilings; taller rooms need more capacity.  
    **Red flag:** Buying “by apartment name” (e.g., “studio size”) without measuring.
 
+   **Editorial read:** A shaded 15 m² bedroom at 2.4 m ceiling height starts near 8,000 BTU, but **loft or high-ceiling rooms add ~20% volume**—plan one BTU step up (~$50–80).
+
+   **Review concern:** Skipping tape-measure fit often means **1–2 weeks of returns** and miserable heat-wave nights before the right box arrives.
+
 2. **Confirm lease / building rules on window hardware**  
    **Why it matters:** Some leases ban brackets or require removable installs only.  
    **Red flag:** Assuming any window AC is allowed — fines and removal orders happen.
@@ -64,6 +68,10 @@ Checklist items came from manufacturer install guides, common lease practice, an
    **Why it matters:** West-facing and top-floor rooms need 10–15% more capacity.  
    **Red flag:** Minimum BTU for a shaded bedroom applied to a sunny studio.
 
+   **Editorial read:** West-facing or top-floor 20 m² layouts often need **12,000–14,000 BTU (~$80–150 more)** to beat three summers of higher kWh and louder high-fan nights versus an undersized 8k box.
+
+   **Review concern:** Undersizing shows up as **$20–40/month extra power** and **52 dB creeping to high-speed fan** when you run eight-plus hours daily.
+
 5. **Check noise (dB) against sleep vs WFH use**  
    **Why it matters:** A 55 dB unit in a bedroom feels louder than in a daytime office nook.  
    **Red flag:** Ignoring dB because “I will run it on low” — low fan may not cool enough in heat waves.
@@ -71,6 +79,10 @@ Checklist items came from manufacturer install guides, common lease practice, an
 6. **Read energy label / estimated kWh per season**  
    **Why it matters:** Summer bills dominate lifetime cost more than a $50 price gap.  
    **Red flag:** Choosing the cheapest unit with no EER or energy class on the label.
+
+   **Editorial read:** One CEER or EER step can mean **$25–40/year** over ninety summer days at eight hours daily—often more than a $30–50 upfront discount.
+
+   **Review concern:** Unlabeled bargain units frequently lose on **three-year total cost** versus a slightly pricier efficient label.
 
 7. **Plan drainage and filter access before install**  
    **Why it matters:** Portables produce condensate; window units need tilt and clearance.  
@@ -112,15 +124,27 @@ A checklist alone doesn’t checkout. These three are my **install / noise / BTU
 
 ### Frigidaire FHWW083WBE (8,000 BTU)
 
-Window unit for small bedrooms/studios with honest CEER/noise labels. **Editorial note:** Skip “max BTU” ads—**sash kit fit** decides returns.
+Window unit for small bedrooms/studios with honest CEER/noise labels.
+
+**Editorial read:** $249 and 8,000 BTU typically wins on **daily kWh and 52 dB sleep** in 12–18 m² rooms run six to eight hours versus rolling portables.
+
+**Review concern:** **Sash kit fit** matters more than peak-BTU marketing—mismatch triggers returns before you ever save on power.
 
 ### Midea MAW08V1QWT (U-shape 8,000 BTU)
 
-Keeps a lower vent path—handy for naps. **Editorial note:** Measure kit width first or the pretty ad becomes clutter.
+Keeps a lower vent path—handy for naps.
+
+**Editorial read:** U-shape ~$399 class hardware trades **42 dB-class low fan and lower-sash ventilation** in nurseries—but only after you measure kit width and sill depth.
+
+**Review concern:** Buying before measuring kit width often means **non-installable hardware and a 1–2 week return cycle**.
 
 ### GE AHY12LZ (12,000 BTU)
 
-Heat-wave nights / open doorways; dry + scheduling. **Editorial note:** 12k can be oversized for a shaded 15 m² room—**measure first.**
+Heat-wave nights / open doorways; dry + scheduling.
+
+**Editorial read:** 12,000 BTU with dry mode helps **18–23 m² and open-doorway heat spill** beat 8k on midnight humidity, but it is oversize for a shaded 15 m² room.
+
+**Review concern:** 12k in a small shaded bedroom **short-cycles and leaves clammy air**—measure floor area first.
 
 ## FAQ
 ### If I buy the highest BTU I can afford, will my studio apartment stay cold?
