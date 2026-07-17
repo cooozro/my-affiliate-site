@@ -733,13 +733,10 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T07:29:47.358Z",
+    "at": "2026-07-17T07:34:34.311Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-family-3-5-home-essentials-buying-guide/en.md: publishedAt 2026-07-17T15:29:58.000Z → 2026-07-17T06:30:01.360Z",
-      "2026-family-3-5-home-essentials-buying-guide/ko.md: publishedAt 2026-07-17T15:29:58.000Z → 2026-07-17T06:30:01.360Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-17",
   "lastDailyContentAudit": {
