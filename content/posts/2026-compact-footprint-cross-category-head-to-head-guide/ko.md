@@ -1,10 +1,7 @@
 ---
 title: '컴팩트 풋프린트 대결: 이동식 AC·제습기·에어프라이어·로봇 도크'
-description: >-
-  원룸·소형 임대 기준 — 이동식 AC, 제습기, 에어프라이어, 밥솥, 로봇 도크의 깊이·폭·배기 여유를
-  교차 비교합니다.
+description: '원룸·소형 임대 기준 — 이동식 AC, 제습기, 에어프라이어, 밥솥, 로봇 도크의 깊이·폭·배기 여유를 교차 비교합니다.'
 date: '2026-07-17'
-createdAt: '2026-07-17T02:12:00.000Z'
 tags:
   - 컴팩트 가전
   - 원룸
@@ -17,7 +14,7 @@ topicId: meta-compact-footprint-appliances
 topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: question-led
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - compact appliances small kitchen
@@ -32,7 +29,8 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T02:20:00.000Z'
+updatedAt: '2026-07-17T11:23:35.000Z'
+publishedAt: '2026-07-17T11:23:35.000Z'
 ---
 ## 편집부 개요
 

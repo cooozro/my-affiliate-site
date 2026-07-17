@@ -6,7 +6,6 @@ description: >-
   Small-apartment depth, width, and vent-clearance comparison across portable
   AC, dehumidifier, air fryer, rice cooker, and robot dock for summer heat.
 date: '2026-07-17'
-createdAt: '2026-07-17T02:12:00.000Z'
 tags:
   - compact appliances
   - small apartment
@@ -19,7 +18,7 @@ topicId: meta-compact-footprint-appliances
 topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: question-led
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - compact appliances small kitchen
@@ -34,7 +33,8 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T02:21:30.000Z'
+updatedAt: '2026-07-17T11:23:35.000Z'
+publishedAt: '2026-07-17T11:23:35.000Z'
 ---
 ## Editorial Overview
 

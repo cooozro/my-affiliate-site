@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-16T02:44:53.000Z",
-  "nextPublishAt": "2026-07-17T00:46:47.318Z",
-  "scheduledGapHours": 4,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-17T02:23:36.986Z",
+  "nextPublishAt": "2026-07-17T06:56:42.964Z",
+  "scheduledGapHours": 4.55,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-17",
   "writeCountToday": 1,
   "writeDateKst": "2026-07-17",
@@ -522,14 +522,23 @@
         "https://www.aipick.shop/en/blog/2026-induction-cooktops-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-induction-cooktops-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-compact-footprint-cross-category-head-to-head-guide",
+      "topic": {
+        "id": "meta-compact-footprint-appliances",
+        "category": "cross-cutting",
+        "cluster": "capacity-tier"
+      },
+      "at": "2026-07-17T02:23:36.986Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-compact-footprint-cross-category-head-to-head-guide",
+        "https://www.aipick.shop/ko/blog/2026-compact-footprint-cross-category-head-to-head-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "laptops",
-      "category": "computing",
-      "at": "2026-07-06T03:38:43.329Z"
-    },
     {
       "id": "coffee-machines",
       "category": "kitchen",
@@ -678,10 +687,15 @@
     {
       "id": "induction-cooktops",
       "at": "2026-07-16T02:44:53.004Z"
+    },
+    {
+      "id": "meta-compact-footprint-appliances",
+      "category": "cross-cutting",
+      "cluster": "capacity-tier",
+      "at": "2026-07-17T02:23:36.991Z"
     }
   ],
   "formatHistory": [
-    "scenario-guide",
     "buying-guide",
     "head-to-head",
     "scenario-guide",
@@ -700,27 +714,23 @@
     "explainer",
     "checklist",
     "head-to-head",
-    "buying-guide"
+    "buying-guide",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T00:46:47.243Z",
-    "issueCount": 3,
+    "at": "2026-07-17T02:23:35.130Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (93min past slot, KST 2026-07-17)",
+        "message": "Publish ready but no post went live (96min past slot, KST 2026-07-17)",
         "severity": "error"
       },
       {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 0/2",
+        "message": "Draft buffer 1/2",
         "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1321min",
-        "severity": "warning"
       }
     ],
     "repairs": [
@@ -842,6 +852,11 @@
       "id": "family-3-5-person",
       "type": "household-type",
       "at": "2026-07-17T02:21:57.904Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-07-17T02:23:37.005Z"
     }
   ]
 }
