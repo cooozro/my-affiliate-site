@@ -733,21 +733,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T06:29:58.478Z",
-    "issueCount": 2,
-    "issues": [
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 239min",
-        "severity": "warning"
-      }
-    ],
-    "repairs": []
+    "at": "2026-07-17T07:29:47.358Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": [
+      "2026-family-3-5-home-essentials-buying-guide/en.md: publishedAt 2026-07-17T15:29:58.000Z → 2026-07-17T06:30:01.360Z",
+      "2026-family-3-5-home-essentials-buying-guide/ko.md: publishedAt 2026-07-17T15:29:58.000Z → 2026-07-17T06:30:01.360Z"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-17",
   "lastDailyContentAudit": {
