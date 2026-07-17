@@ -857,6 +857,15 @@
       "contentHash": "5632bbf13e784aa3afb15d1b8a79cc382c81800635e1c80417d4c35e776e6cad",
       "provider": "pexels",
       "registeredAt": "2026-07-17T02:21:27.395Z"
+    },
+    {
+      "slug": "2026-family-3-5-home-essentials-buying-guide",
+      "url": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
+      "assetKey": "pexels:1643383",
+      "hash": "d51ee747b93ec8142ca009936b677a9b3f0c63e08882ff3ff4d65bfcb75ccb78",
+      "contentHash": "d51ee747b93ec8142ca009936b677a9b3f0c63e08882ff3ff4d65bfcb75ccb78",
+      "provider": "pexels",
+      "registeredAt": "2026-07-17T02:25:25.415Z"
     }
   ]
 }
