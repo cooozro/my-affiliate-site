@@ -18,7 +18,7 @@ topicCluster: large-appliances
 draft: false
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:02.666Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 coverImage: >-
@@ -159,7 +159,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Not Energy Star certified per Haier Energy Guide listings; no factory ice maker on base SKU — field-ready only; 9.4 cu ft fresh zone cannot host large-party platters; four-door seals need periodic alignment checks; smaller US service footprint vs LG or GE.
 
-**Editorial read:** **479 kWh/year (~$72/year)** saves **$35–40 annually** versus cooling empty shelves in a 28 cu ft tower—counter-depth **28-inch** width preserves galley sight lines. Three-year TCO favors right-sized cooling over capacity ads.
+**Editorial read:** **479 kWh/year (about $72/year)** saves **$35–40 annually** versus cooling empty shelves in a 28 cu ft tower—counter-depth **28-inch** width preserves galley sight lines. Three-year TCO favors right-sized cooling over capacity ads.
 
 **Review concern:** Four-door seal drift becomes condensation and noise after heavy summer door use; couples forcing 28 cu ft pay to chill air, not food.
 
@@ -200,11 +200,11 @@ Pair a **dedicated kimchi unit** for fermentation zones with a separate main fri
 
 ## Related guides
 
+- [Heat-Season Hydration: Five Water Purifiers by Countertop Fit, Filter Life, TDS, and Install Cost](/en/blog/2026-water-purifiers-buying-guide) — Five water purifiers for summer kitchens — countertop vs under-sink install, filter repla…
 - [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
-- [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — counter appliances that share summer circuits with your fridge compressor cycles
 - [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
 - [Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Systems](/en/blog/2026-coffee-machines-head-to-head) — morning heat load next to the refrigerator in open-plan layouts
-- [Fuzzy Logic vs Induction: What Actually Changes Rice Cooker Results](/en/blog/2026-rice-cookers-explainer) — another daily kitchen appliance where heat timing shapes meals beside cold storage
 ## Five checks before you buy
 
 1. **Size cubic feet to people, not showroom walls** — Rule of thumb: plan **4–6 cu ft fresh food per adult** for weekly shopping; a 1–2 person home often wastes electricity above 20 cu ft unless you batch-cook. Haier QJS15HYRFS exists because oversized units run compressors for empty air.

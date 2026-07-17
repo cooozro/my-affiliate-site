@@ -22,7 +22,7 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:02.137Z'
 publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## Editorial Overview
@@ -153,7 +153,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Newer track record vs Frigidaire/Honeywell; hose-only drain (no built-in pump); app required for advanced schedules; customer service response times vary in public reviews.
 
-**Editorial read:** **500 W** is the lowest rated draw here—pair a Govee hygrometer and run only above RH threshold for **~$25–35/summer** partial duty. Three-year kWh savings beat buying continuous “always on” marketing.
+**Editorial read:** **500 W** is the lowest rated draw here—pair a Govee hygrometer and run only above RH threshold for **about $25–35/summer** partial duty. Three-year kWh savings beat buying continuous “always on” marketing.
 
 **Review concern:** Basements that need pump lift are the wrong buy with hose-only drain—confirm app noise and Wi-Fi standby heat beside a sleep room.
 

@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-17T02:23:36.986Z",
-  "nextPublishAt": "2026-07-17T06:56:42.964Z",
-  "scheduledGapHours": 4.55,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-17T06:30:01.360Z",
+  "nextPublishAt": "2026-07-18T02:00:00.000Z",
+  "scheduledGapHours": 5,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-17",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-17",
@@ -536,15 +536,23 @@
         "https://www.aipick.shop/en/blog/2026-compact-footprint-cross-category-head-to-head-guide",
         "https://www.aipick.shop/ko/blog/2026-compact-footprint-cross-category-head-to-head-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-family-3-5-home-essentials-buying-guide",
+      "topic": {
+        "id": "meta-family-3-5-person",
+        "category": "cross-cutting",
+        "cluster": "household-family"
+      },
+      "at": "2026-07-17T06:30:01.360Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-family-3-5-home-essentials-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-family-3-5-home-essentials-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "coffee-machines",
-      "category": "kitchen",
-      "taxonomyGroup": "주방가전/소형주방",
-      "at": "2026-07-06T05:17:05.827Z"
-    },
     {
       "id": "cordless-vacuums",
       "category": "smart-home",
@@ -693,6 +701,12 @@
       "category": "cross-cutting",
       "cluster": "capacity-tier",
       "at": "2026-07-17T02:23:36.991Z"
+    },
+    {
+      "id": "meta-family-3-5-person",
+      "category": "cross-cutting",
+      "cluster": "household-family",
+      "at": "2026-07-17T06:30:01.365Z"
     }
   ],
   "formatHistory": [
@@ -719,25 +733,27 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T02:29:17.797Z",
-    "issueCount": 1,
+    "at": "2026-07-17T06:29:58.478Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
         "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 239min",
+        "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-compact-footprint-cross-category-head-to-head-guide/en.md: publishedAt 2026-07-17T11:23:35.000Z → 2026-07-17T02:23:36.986Z",
-      "2026-compact-footprint-cross-category-head-to-head-guide/ko.md: publishedAt 2026-07-17T11:23:35.000Z → 2026-07-17T02:23:36.986Z"
-    ]
+    "repairs": []
   },
-  "lastDailyContentAuditKst": "2026-07-15",
+  "lastDailyContentAuditKst": "2026-07-17",
   "lastDailyContentAudit": {
-    "at": "2026-07-15T06:38:57.714Z",
-    "postsScanned": 41,
-    "autoRepairCount": 20,
+    "at": "2026-07-17T06:30:03.683Z",
+    "postsScanned": 43,
+    "autoRepairCount": 54,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [

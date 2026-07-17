@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T11:23:35.000Z'
+updatedAt: '2026-07-17T06:30:01.431Z'
 publishedAt: '2026-07-17T02:23:36.986Z'
 ---
 ## 편집부 개요
@@ -242,14 +242,11 @@ publishedAt: '2026-07-17T02:23:36.986Z'
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 AC 헤드투헤드](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 호스 vs 창틀 설치
-- [제습기 구매 가이드](/ko/blog/2026-dehumidifiers-guide) — DOE 파인트·물통·배수
-- [로봇청소기 시나리오 가이드](/ko/blog/2026-robot-vacuums-scenario-guide) — 평면별 도크 풋프린트
-- [1인 원룸 필수 가전 시나리오](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 전체 우선순위
-- [무선 스틱 청소기 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 걸이 수납·런타임
-
----
-
+- [1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 전체 우선순위
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 호스 vs 창틀 설치
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 평면별 도크 풋프린트
+- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 걸이 수납·런타임
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — DOE 파인트·물통·배수
 ## 최종 평가
 
 컴팩트 여름 거주는 **용량보다 기하학**이 먼저입니다. 편집부 기준: 폭염 3개월 동안 포기할 사각형을 정한 뒤, 마케팅 배지가 아니라 **기온·습도·조리열·바닥 먼지** 중 가장 큰 일상 마찰을 지우는 카테고리에 배정하세요.

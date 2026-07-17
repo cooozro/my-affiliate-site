@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:01.500Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview
@@ -83,7 +83,7 @@ Reference prices from OEM and major US storefront listings (July 2026).
 
 **Weaknesses:** Premium price versus AKASO, shorter native depth than DJI Action 5 Pro, battery life drops in 5.3K modes on hot trail days.
 
-**Editorial read:** Spread ~{{krw:399}} over three active-travel summers and you land near **$130/year** before spare batteries and mounts (~$60–80/year)—still cheaper than weak EIS clips, but 5.3K heat soak can make **two battery swaps per day** your real operating cost on 95°F trail days.
+**Editorial read:** Spread ~{{krw:399}} over three active-travel summers and you land near **$130/year** before spare batteries and mounts (about $60–80/year)—still cheaper than weak EIS clips, but 5.3K heat soak can make **two battery swaps per day** your real operating cost on 95°F trail days.
 
 **Review concern:** Ten-meter native depth is not a snorkel-main itinerary without a housing plan; confirm backpack pocket space for dual batteries and a hub before checkout.
 
@@ -131,7 +131,7 @@ Reference prices from OEM and major US storefront listings (July 2026).
 
 **Weaknesses:** Only 5 m native waterproofing—needs pod or case for real swim days, smaller sensor struggles in dim indoor transit, $399 bundle price rivals full-size flagships.
 
-**Editorial read:** The 39 g module fits **walking tours and theme-park POV**; the ~{{krw:399}} pod bundle matches full-size pricing but lowers drop-loss risk. Budget **one spare pod (~$70)** in three-year TCO—without it, runtime collapses to 20–30 minutes.
+**Editorial read:** The 39 g module fits **walking tours and theme-park POV**; the ~{{krw:399}} pod bundle matches full-size pricing but lowers drop-loss risk. Budget **one spare pod (about $70)** in three-year TCO—without it, runtime collapses to 20–30 minutes.
 
 **Review concern:** Five-meter native depth is not a swim-first summer plan; hat and pendant angles vary by head shape—wear it 30 minutes before the return window closes.
 

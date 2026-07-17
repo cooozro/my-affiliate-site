@@ -28,7 +28,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:02.235Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## Editorial Overview
@@ -111,7 +111,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Highest price here; assembly and base click-in steps trip impatient unboxers; remote uses CR2025 — keep a spare for August; not a substitute for AC in humid 95°F+ weeks alone.
 
-**Editorial read:** **35 dB** low speed sits near refrigerator hum—speed 2–3 after midnight while AC cycles off fits light sleepers. 55 W at eight hours is about **7 cents/day**; ~120 summer nights over three years land near **$25 total** fan electricity.
+**Editorial read:** **35 dB** low speed sits near refrigerator hum—speed 2–3 after midnight while AC cycles off fits light sleepers. 55 W at eight hours is about **7 cents/day**; about 120 summer nights over three years land near **$25 total** fan electricity.
 
 **Review concern:** Alone in humid 95°F weeks it cannot replace AC; wobbly base assembly is a top return reason—measure pedestal height and sweep clearance first.
 

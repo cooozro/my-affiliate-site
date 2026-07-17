@@ -6,7 +6,6 @@ description: >-
   Capacity-first picks for 3–5 person homes — fridge cu ft, washer drum, TV
   size, bedroom CADR, and stick runtime for summer school-break load.
 date: '2026-07-17'
-createdAt: '2026-07-17T02:25:00.000Z'
 tags:
   - family appliances
   - capacity
@@ -19,7 +18,7 @@ topicId: meta-family-3-5-person
 topicCluster: household-family
 writingMode: benchmark
 toneVariant: question-led
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - family living room home appliances
@@ -34,7 +33,8 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T02:25:25.566Z'
+updatedAt: '2026-07-17T06:30:01.440Z'
+publishedAt: '2026-07-17T15:29:58.000Z'
 ---
 ## Editorial Overview
 
@@ -211,14 +211,11 @@ Tape the **install envelope** — fridge depth past counters, washer vibration c
 
 ## Related guides
 
-- [Family 3–5 essentials scenario guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — layout-first scenarios
-- [Refrigerators buying guide](/en/blog/2026-refrigerators-buying-guide) — kWh and fresh cu ft detail
-- [Washing machines scenario guide](/en/blog/2026-washing-machines-scenario-guide) — drum and cycle tradeoffs
-- [Air purifiers guide](/en/blog/2026-air-purifiers-guide) — CADR and filter TCO
-- [Cordless vacuums scenario guide](/en/blog/2026-cordless-vacuums-scenario-guide) — stick runtime by task
-
----
-
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — layout-first scenarios
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — kWh and fresh cu ft detail
+- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — stick runtime by task
+- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — drum and cycle tradeoffs
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — CADR and filter TCO
 ## Five checks before you buy
 
 1. Count **people × summer drink liters** before trusting fridge total cu ft ads.  

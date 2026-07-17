@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: portable air conditioner in an apartment room
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:02.618Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -77,9 +77,9 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** Requires suitable window sill and install kit; not viable for floor-to-ceiling or casement windows without adapters; removal each autumn is awkward in high-rise units.
 
-**Editorial read:** $249, 8,000 BTU, and CEER 12.1 typically beat single-hose portables on **daily kWh and 52 dB sleep noise** in a 12–18 m² room run eight hours—three summers of power often erase the ~$130 upfront gap versus a $379 portable.
+**Editorial read:** $249, 8,000 BTU, and CEER 12.1 typically beat single-hose portables on **daily kWh and 52 dB sleep noise** in a 12–18 m² room run eight hours—three summers of power often erase the about $130 upfront gap versus a $379 portable.
 
-**Review concern:** Sash or bracket mismatch triggers **return-shipping days and landlord restore fees (~$50–100)** before you ever save on electricity.
+**Review concern:** Sash or bracket mismatch triggers **return-shipping days and landlord restore fees (about $50–100)** before you ever save on electricity.
 
 **Analysis takeaway:** With a **standard double-hung window**, this is the quietest sleep and the lowest estimated daily electricity use in our comparison — often the right pick when the lease allows window hardware.
 
@@ -109,7 +109,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** Highest upfront price; still bulkier and louder than window AC at equal comfort; two hoses complicate balcony-door sealing.
 
-**Editorial read:** $549 dual-hose 14,000 BTU is the portable sweet spot for **20–25 m² open studios when window hardware is banned**, but the ~$300 premium only pays back over **three summers of all-day runtime** versus single-hose.
+**Editorial read:** $549 dual-hose 14,000 BTU is the portable sweet spot for **20–25 m² open studios when window hardware is banned**, but the about $300 premium only pays back over **three summers of all-day runtime** versus single-hose.
 
 **Review concern:** Failed balcony-door sealing on two hoses can **waste 1–2 hours of setup and leak heat**, shrinking the gap versus a cheaper single-hose Midea.
 

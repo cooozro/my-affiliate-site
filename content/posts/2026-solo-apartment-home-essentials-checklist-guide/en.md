@@ -28,7 +28,7 @@ imageSearchKeywords:
   - studio essentials
   - compact home
   - solo living
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-07-17T06:30:02.926Z'
 coverImageCredit: Photo by Ron Lach / Pexels
 coverImageProvider: pexels
 coverImageAssetId: 10024297
@@ -165,7 +165,7 @@ Small-room CADR and app schedules. **Editorial note:** Log **real filter prices*
 
 Less kitchen heat than an oven. **Editorial note:** “Oil-free” copy matters less than **cleanup time and smell**.
 
-**Editorial read:** A 5-quart, ~1,400 W basket suits **one-to-two-person meals**, but ten-minute preheat plus fifteen-minute cleanup can erase oven heat savings as **daily time friction**.
+**Editorial read:** A 5-quart, about 1,400 W basket suits **one-to-two-person meals**, but ten-minute preheat plus fifteen-minute cleanup can erase oven heat savings as **daily time friction**.
 
 **Review concern:** Stacking microwave and fryer preheat on one **15 A kitchen loop** often trips breakers the first week you cook at home.
 
@@ -187,7 +187,7 @@ In many North American and Korean studio layouts, **one 15 A kitchen circuit** f
 ## Related guides
 
 - [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — scenario picks when you want model-level examples after this checklist
-- [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — seven fryer-specific checks after footprint and circuit mapping
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — deeper CFM tables for cooling without central AC
 - [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — when fan-only airflow is not enough
 - [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — annual filter math for 15–25 m² sealed rooms

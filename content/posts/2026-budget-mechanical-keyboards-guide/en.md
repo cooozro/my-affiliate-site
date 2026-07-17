@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: mechanical keyboard on a desk
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:01.734Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -132,7 +132,7 @@ Prices are reference USD list values.
 
 **Weaknesses:** No hot-swap, ABS caps, limited customization, 5.2% return rate.
 
-**Editorial read:** A $35 metal-plate TKL minimizes **total cost over a weekend trial**, but switch dislike means **replacing the whole board (~$50)**—not a $15 switch pack.
+**Editorial read:** A $35 metal-plate TKL minimizes **total cost over a weekend trial**, but switch dislike means **replacing the whole board (about $50)**—not a $15 switch pack.
 
 **Review concern:** A 5.2% return rate often tracks buyers who **skip an in-store switch test** and discover feel mismatch after a week.
 

@@ -25,7 +25,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:01.449Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## 편집부 개요
@@ -176,11 +176,11 @@ publishedAt: '2026-07-06T03:36:25.166Z'
 
 ## 관련 가이드
 
+- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
 - [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 노트북 클로즈 시 데스크 확장
 - [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 장문 과제 타이핑
 - [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 도서관·방학 이동 백업 전원
-- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 256GB 부족 시 영상 과제 옮기기
-- [여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크](/ko/blog/2026-webcams-checklist) — 내장 카메라 업그레이드
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 ## 구매 전 다섯 가지 확인
 
 1. **CPU 등급** — 탭 많은 리서치는 Ryzen 5·Core i5 이상; Ryzen 3·i3는 단기 절약·장기 병목.

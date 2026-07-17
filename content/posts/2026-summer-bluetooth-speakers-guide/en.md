@@ -22,7 +22,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:03.169Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
@@ -83,7 +83,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** ~{{krw:29.99}} and 12-hour runtime cover **four or five summer picnics** without battery anxiety; IPX7 survives drink splashes with a quick wipe. 414g is heavy for bike-clip and ultralight packs.
 
-**Review concern:** Mono output fades past **~3 m**, and IPX7 lacks dust sealing for sandy beach weeks.
+**Review concern:** Mono output fades past **about 3 m**, and IPX7 lacks dust sealing for sandy beach weeks.
 
 **Analysis takeaway:** For most buyers, this translates to **reliable background music at a park table** without worrying about a spilled drink—ideal if your summer plan is casual picnics rather than pool floats.
 

@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:01.596Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -91,7 +91,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Replacement filter bundles add up if you run 24/7 through pollen season; auto mode can ramp fan when cooking odors spike; not ideal for open-plan spaces.
 
-**Editorial read:** ~{{krw:99}} plus ~$45/year filters land near **$234 three-year TCO** (unit, filters, power) for a sealed 15 m² bedroom; 24 dB sleep mode stays tolerable beside running AC. 141 cfm is thin for open-plan living.
+**Editorial read:** ~{{krw:99}} plus about $45/year filters land near **$234 three-year TCO** (unit, filters, power) for a sealed 15 m² bedroom; 24 dB sleep mode stays tolerable beside running AC. 141 cfm is thin for open-plan living.
 
 **Review concern:** 24/7 pollen-season runs stack **$45+ yearly filters**, and auto mode can **spike fan noise** when cooking odors hit at night.
 
@@ -107,7 +107,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Larger chassis than Core 300S; overkill CADR if you always run high fan; PlasmaWave is polarizing for ozone-sensitive buyers despite low emission claims.
 
-**Editorial read:** ~{{krw:160}} plus ~$35/year filters and washable pre-filters reach **~$265 three-year TCO**—strong long-run math; 246 cfm clears small rooms on **speeds 1–2**. The larger footprint needs **~30 cm² floor space** beside a nightstand.
+**Editorial read:** ~{{krw:160}} plus about $35/year filters and washable pre-filters reach **about $265 three-year TCO**—strong long-run math; 246 cfm clears small rooms on **speeds 1–2**. The larger footprint needs **about 30 cm² floor space** beside a nightstand.
 
 **Review concern:** Ozone-sensitive buyers should **disable PlasmaWave**; always-high fan wastes **power and noise** in sealed AC rooms.
 
@@ -123,9 +123,9 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Lowest smoke CADR here (125 cfm) — borderline for 15 m² if you cook nearby; fabric pre-filters cost more per year than HEPA-only rivals; 41 dB low speed is audible for light sleepers.
 
-**Editorial read:** ~{{krw:99}} plus ~$80/year fabric filters hit **~$339 three-year TCO**—higher than Winix but the cylinder and one-button UI cut **roommate setting fights**. 125 cfm struggles when a kitchen shares air with a 15 m² room.
+**Editorial read:** ~{{krw:99}} plus about $80/year fabric filters hit **about $339 three-year TCO**—higher than Winix but the cylinder and one-button UI cut **roommate setting fights**. 125 cfm struggles when a kitchen shares air with a 15 m² room.
 
-**Review concern:** ~$80/year filters add **$70+ versus Levoit/Winix over three years**; 41 dB low speed blocks **overnight bedroom use** for light sleepers.
+**Review concern:** about $80/year filters add **$70+ versus Levoit/Winix over three years**; 41 dB low speed blocks **overnight bedroom use** for light sleepers.
 
 **Analysis takeaway:** Think **desk-adjacent purifier for a single-occupant room** where looks and simplicity beat app features.
 
@@ -139,7 +139,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** 50 dB on lowest setting is the loudest here for sleep; lower CADR per dollar vs Levoit; bulky relative to room size; no carbon layer in standard config.
 
-**Editorial read:** ~{{krw:120}} plus ~$50/year widely stocked filters reach **~$270 three-year TCO**; mechanical dials need **zero Wi-Fi setup** in flaky-rental offices. Fifty-decibel low speed pushes a **daytime-only timer** pattern.
+**Editorial read:** ~{{krw:120}} plus about $50/year widely stocked filters reach **about $270 three-year TCO**; mechanical dials need **zero Wi-Fi setup** in flaky-rental offices. Fifty-decibel low speed pushes a **daytime-only timer** pattern.
 
 **Review concern:** Lower CADR per dollar means **longer clean times** at the same room size; no carbon layer adds **odor/VOC filter spend** if cooking smells matter.
 
@@ -155,7 +155,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** No published AHAM CADR on US listing — airflow is modest; build feels utilitarian; not enough throughput for combined bedroom + kitchen open space.
 
-**Editorial read:** ~{{krw:55}} plus ~$6.5 particle filters land near **$75 three-year TCO**—lowest entry and running cost; wall mount frees **floor path** in a 6 m² room. Missing AHAM CADR leaves little headroom beside an open kitchen.
+**Editorial read:** ~{{krw:55}} plus about $6.5 particle filters land near **$75 three-year TCO**—lowest entry and running cost; wall mount frees **floor path** in a 6 m² room. Missing AHAM CADR leaves little headroom beside an open kitchen.
 
 **Review concern:** Conservative airflow often triggers an **early upgrade** in open plans or pet homes; regional IKEA filter stock can **delay replacements**.
 

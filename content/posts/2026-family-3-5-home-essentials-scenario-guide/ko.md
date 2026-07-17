@@ -23,7 +23,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:02.338Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468
@@ -87,7 +87,7 @@ publishedAt: '2026-07-14T03:03:54.000Z'
 
 Samsung은 **총 28.0 cu ft**, **신선 19.4 cu ft**를 공시합니다. Twin Cooling Plus로 냉동 습도와 채소칸을 분리해 수박 반쪽과 도시락이 같은 선반을 공유하는 방학철에 유리합니다. Energy Star **725 kWh/년**, 지문 방지 스테인리스가 손자국에 강합니다.
 
-**편집부 해석:** 725 kWh/년·19.4 cu ft 신선은 방학 **주 2회 장보기**에 맞고, 연 전기 **~$109**에 3–4인 음료·간식 cu ft를 확보합니다. 36인치 폭·아일랜드 통로는 설치가 스펙보다 먼저입니다.
+**편집부 해석:** 725 kWh/년·19.4 cu ft 신선은 방학 **주 2회 장보기**에 맞고, 연 전기 **약 $109**에 3–4인 음료·간식 cu ft를 확보합니다. 36인치 폭·아일랜드 통로는 설치가 스펙보다 먼저입니다.
 
 **검토 시 우려:** 오픈 주방·재택에서 39 dB는 거슬릴 수 있습니다. 여름 문 개폐가 잦으면 트윈 쿨링이 없는 구형 대비 온도 회복을 반품 기간에 확인하세요.
 

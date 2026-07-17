@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:02.505Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
@@ -108,7 +108,7 @@ This comparison is **editorial research** cross-checking public manufacturer spe
 
 **Weaknesses:** **No LDAC** — Android audiophiles lose high-bitrate streaming unless they accept SBC. ANC attenuation trails both rivals on sub-200 Hz content; expect to raise volume slightly on takeoff rolls. Multipoint is limited compared with Sony and Soundcore; switching laptop ↔ phone mid-flight is clunkier.
 
-**Editorial read:** ~{{krw:129}} and **55-hour** ANC-on battery fit **USB-scarce buses and economy rows**—lowest three-year upfront here. Pad replacements (~$20) can absorb part of the ~$20 gap versus LDAC rivals.
+**Editorial read:** ~{{krw:129}} and **55-hour** ANC-on battery fit **USB-scarce buses and economy rows**—lowest three-year upfront here. Pad replacements (about $20) can absorb part of the about $20 gap versus LDAC rivals.
 
 **Review concern:** Weak sub-200 Hz ANC pushes volume up on takeoff—if Android hi-res and long naps are goals, plan an upgrade path before buying twice.
 
@@ -141,7 +141,7 @@ ANC/app ecosystem baseline. **Editorial note:** “Best in class” loses to **c
 
 ### Soundcore Space One
 
-Honest ANC per dollar. **Editorial note:** Skip logo tax—**~30-hour real use** is the value.
+Honest ANC per dollar. **Editorial note:** Skip logo tax—**about 30-hour real use** is the value.
 
 ### Bose QuietComfort Ultra
 

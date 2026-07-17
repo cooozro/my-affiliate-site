@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:02.454Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -89,7 +89,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Editorial read:** 16GB, 300 nits, and 47Wh at {{krw:499}} spread to roughly **$125/year over four years of study** with no RAM stick or external SSD add-ons for twenty-tab workloads.
 
-**Review concern:** Soldered RAM means **no upgrade path**—video or VM-heavy majors may force a full replacement (~$400–500) before graduation.
+**Review concern:** Soldered RAM means **no upgrade path**—video or VM-heavy majors may force a full replacement (about $400–500) before graduation.
 
 **Analysis takeaway:** In my book that means **twenty tabs without swap panic** and **readable screens during summer study by the window**.
 
@@ -99,7 +99,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** Ships with 8GB—budget another stick before heavy multitasking; 250 nits struggles outdoors; entry chassis is plain.
 
-**Editorial read:** {{krw:449}} with one open SODIMM slot is the **lowest three-year TCO upgrade path**—add an ~$25–35 8GB stick after back-to-school sales for 16GB and a 50Wh library day.
+**Editorial read:** {{krw:449}} with one open SODIMM slot is the **lowest three-year TCO upgrade path**—add an about $25–35 8GB stick after back-to-school sales for 16GB and a 50Wh library day.
 
 **Review concern:** 250 nits fades quickly on **30+ minutes at a sunny window or outdoor table**, which matters if you study outside in summer.
 
@@ -111,7 +111,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 42Wh battery is the smallest here—carry a power bank for all-day sessions; 250 nits; no RAM upgrade after purchase.
 
-**Editorial read:** {{krw:429}} at ~1.4 kg trims **carry weight and upfront cost** for break travel, but 42Wh effectively assumes a **~$20–30 PD power bank** for six-hour library blocks.
+**Editorial read:** {{krw:429}} at about 1.4 kg trims **carry weight and upfront cost** for break travel, but 42Wh effectively assumes a **about $20–30 PD power bank** for six-hour library blocks.
 
 **Review concern:** Soldered 16GB and 250 nits together **limit media or design pivots** late in a four-year program without buying again.
 
@@ -125,7 +125,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 256GB SSD fills fast with video projects—plan external storage; 8GB at purchase; 250 nits; 41Wh battery trails IdeaPad.
 
-**Editorial read:** {{krw:479}} with an open RAM slot and familiar HP support helps **campus repair paths**, but 256GB and 41Wh push **~$50–70 external SSD plus a PD bank** into three-year operating cost.
+**Editorial read:** {{krw:479}} with an open RAM slot and familiar HP support helps **campus repair paths**, but 256GB and 41Wh push **about $50–70 external SSD plus a PD bank** into three-year operating cost.
 
 **Review concern:** Running **video edits or multiple VMs on 8GB out of the box** triggers swap and fan noise until you add RAM.
 
@@ -137,7 +137,7 @@ Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
 
 **Weaknesses:** 8GB until upgraded; 250 nits; plastic build; fan noise under combined heat and compile loads.
 
-**Editorial read:** {{krw:459}} with 512GB and an open RAM slot pairs **AMD efficiency and storage headroom**, but 8GB and 250 nits assume **a post-sale RAM stick (~$25–35) and mostly indoor use**.
+**Editorial read:** {{krw:459}} with 512GB and an open RAM slot pairs **AMD efficiency and storage headroom**, but 8GB and 250 nits assume **a post-sale RAM stick (about $25–35) and mostly indoor use**.
 
 **Review concern:** In **30°C+ uncooled dorms**, compile loads plus fan noise feel worse than IdeaPad’s 300 nits and 47Wh combo.
 
@@ -170,11 +170,11 @@ Indoor desk work often tolerates **250 nits**, but summer sun through a dorm win
 
 ## Related guides
 
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — extend your desk setup when the laptop stays closed
 - [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — typing comfort for long essay sessions
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power for library days and summer travel
-- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — offload video projects when 256GB fills up
-- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — upgrade weak built-in cameras for hybrid classes
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
 ## Five checks before you buy
 
 1. **CPU tier** — Ryzen 5 / Core i5 minimum for tab-heavy research; Ryzen 3 / i3 save money but age faster.

@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:01.428Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
@@ -164,8 +164,8 @@ publishedAt: '2026-07-07T03:34:46.035Z'
 
 ## 관련 가이드
 
-- [퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것](/ko/blog/2026-rice-cookers-explainer) — 여름 주방에서 열과 타이밍이 식사에 미치는 다른 가전 비교
-- [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 커피 코너 옆 조리대·전력 트레이드오프
+- [이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지](/ko/blog/2026-induction-cooktops-buying-guide) — 이동식·빌트인 인덕션을 화력(W), 팬 호환, 잠금, 여름 주방 열기 기준으로 비교합니다. 공개 스펙만 사용합니다.
+- [식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하는 것](/ko/blog/2026-dishwashers-explainer) — 콤팩트·빌트인 식기세척기의 플레이스 세팅, 소음(dB), 사이클당 물 사용량(L)을 비교할 때 헷갈리는 스펙을 정리합니다.
 - [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 아침 커피와 오후 폭염이 겹칠 때 냉방 전략
 - [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 보일러·오븐과 함께 돌릴 때 실내 쾌적함 유지
 - [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 해안 여름 습도·우유 보관·주방 쾌적함

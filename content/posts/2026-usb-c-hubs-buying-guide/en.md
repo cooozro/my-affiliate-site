@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:03.359Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
@@ -102,7 +102,7 @@ Reference prices checked July 2026; USD list values before discounts.
 
 **Editorial read:** ~{{krw:79.99}}, 100W, and 4K60 support a **one-cable school-break desk**; slim aluminum saves pocket space versus plastic bricks. One USB-A means a **second hub** if keyboard and dongle must stay attached.
 
-**Review concern:** The ~$30 premium over Anker/Ugreen is hard to justify without **extra USB-A or Ethernet**.
+**Review concern:** The about $30 premium over Anker/Ugreen is hard to justify without **extra USB-A or Ethernet**.
 
 **Analysis takeaway:** I’d call this **minimal desk clutter for school-break WFH** — one cable to monitor and charger, one USB-A for a mouse dongle, less marketing fluff than a fat dock.
 
@@ -205,11 +205,11 @@ No — you need **HDMI 2.0 or DisplayPort Alt Mode** with sufficient bandwidth. 
 
 ## Related guides
 
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
+- [Portable vs Built-In Induction: Five Cooktops for Cooler Summer Kitchens](/en/blog/2026-induction-cooktops-buying-guide) — Portable and built-in induction cooktops compared on watt zones, pan fit, safety locks, a…
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — pair the right hub HDMI bandwidth with your monitor resolution
 - [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — when the laptop charges from a hub, the wall brick wattage still matters
-- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — storage speed through hub USB-A vs direct USB-C
 - [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — USB-A ports on hubs keep legacy keyboard dongles alive
-- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — many hubs share bandwidth with USB video devices
 ## Five checks before you buy
 
 1. **Match PD pass-through to your charger** — Read the laptop OEM brick label. Below 65W pass-through on a 96W machine means slow or negative charge under load.

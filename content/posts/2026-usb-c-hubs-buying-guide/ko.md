@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:01.464Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## 편집부 개요
@@ -203,11 +203,11 @@ PD·4K HDMI·USB-A 저장을 동시에 쓰면 PMIC 부하가 커지고, 실내 3
 
 ## 관련 가이드
 
+- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
+- [이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지](/ko/blog/2026-induction-cooktops-buying-guide) — 이동식·빌트인 인덕션을 화력(W), 팬 호환, 잠금, 여름 주방 열기 기준으로 비교합니다. 공개 스펙만 사용합니다.
 - [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 허브 HDMI 대역과 모니터 해상도 맞추기
 - [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 허브 경유 충전도 벽면 어댑터 와트가 좌우
-- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 허브 USB-A vs 노트북 직결 속도 차
 - [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 허브 USB-A로 구형 동글 키보드 유지
-- [여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크](/ko/blog/2026-webcams-checklist) — USB 영상 장치와 허브 대역 공유
 ## 구매 전 다섯 가지 확인
 
 1. **PD 통과 = 충전기 와트** — OEM 벽돌 라벨 확인. 96W 노트북에 65W 통과는 고부하 시 방전.

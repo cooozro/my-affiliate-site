@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-07-17T06:30:01.689Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## Editorial Overview
@@ -112,7 +112,7 @@ This comparison is **editorial research** — I cross-check public manufacturer 
 
 **Weaknesses:** Optical HR can **overshoot during interval sprints** or loose straps — tighten before HIIT. Sleep scores sometimes disagree with how you feel after late-night travel; treat trends, not single nights. Like rivals, mapping needs a phone. Zepp’s UI is busy; beginners may prefer Fitbit’s simpler daily story.
 
-**Editorial read:** Zepp’s workout breadth and ~18-day battery suit **gym-and-travel hybrids**, but pre-HIIT strap checks and app tweaks add one to two minutes of daily friction.
+**Editorial read:** Zepp’s workout breadth and about 18-day battery suit **gym-and-travel hybrids**, but pre-HIIT strap checks and app tweaks add one to two minutes of daily friction.
 
 **Review concern:** Repeated HR overshoot in intervals or sweat breaks zone training trust, and Zepp’s busy UI often triggers **first-week setup abandonment** for beginners.
 

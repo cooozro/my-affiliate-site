@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:01.871Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -83,7 +83,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** Four-year security patches spread {{krw:279}} to roughly **$70/year over a four-year keep**—aligned with banking and payment app requirements. IP67 and 120Hz AMOLED cut **commute and outdoor worry time**, but 6GB RAM reloads background apps when you keep three or more open.
 
-**Review concern:** Weak GPU becomes noticeable within **18–24 months** if mobile gaming is daily—the ~$80 premium over A15 may not pay back for gamers or editors.
+**Review concern:** Weak GPU becomes noticeable within **18–24 months** if mobile gaming is daily—the about $80 premium over A15 may not pay back for gamers or editors.
 
 **Analysis takeaway:** For most buyers, this translates to **a phone you can keep four years without security anxiety**—smooth for social and video, but not a heavy mobile gaming rig.
 
@@ -129,7 +129,7 @@ Snapshot as of {{today}}.
 
 **Weaknesses:** Slightly pricier than Poco, watch global ROM region, no IP rating.
 
-**Editorial read:** 67W charging refills 5,100mAh to **~80% in about 45 minutes** before a commute, and Mi Home tie-in saves setup time if you already own Xiaomi gear. The small premium over Poco buys camera and charging upgrades.
+**Editorial read:** 67W charging refills 5,100mAh to **about 80% in about 45 minutes** before a commute, and Mi Home tie-in saves setup time if you already own Xiaomi gear. The small premium over Poco buys camera and charging upgrades.
 
 **Review concern:** Global ROM region mismatches can add **1–2 hours of initial setup** for OTA and store delays; no IP rating raises replacement risk for outdoor summer use.
 

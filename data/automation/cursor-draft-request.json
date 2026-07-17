@@ -1,66 +1,37 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-compact-footprint-cross-category-head-to-head-guide",
-  "requestedAt": "2026-07-17T02:30:00.000Z",
-  "writingMode": "benchmark",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "compact apartment appliance layout scenarios summer",
+  "publishedSlug": "2026-family-3-5-home-essentials-buying-guide",
+  "requestedAt": "2026-07-17T06:30:01.398Z",
+  "writingMode": "stable",
+  "contentProfile": "checklist",
+  "toneVariant": "scenario-first",
+  "serpKeyword": "2026 electric blankets and heated mattress pads buying guide 사용법",
   "serpCachePath": null,
-  "benchmarkOutline": {
-    "sections": [
-      {
-        "h2": "Scenario: Studio with one free wall",
-        "h3": ["Hose vs dehumidifier tower", "Stick hang storage"]
-      },
-      {
-        "h2": "Scenario: Galley kitchen counters under 55 cm",
-        "h3": ["Air fryer vs mini cooker rotation", "Rear vent clearance"]
-      },
-      {
-        "h2": "Scenario: School-break crumbs without a robot dock",
-        "h3": ["Closet wand length", "Bin empty frequency"]
-      },
-      {
-        "h2": "Scenario: Closed-window humidity with portable AC already installed",
-        "h3": ["Tank empties vs continuous drain", "Shared breaker load"]
-      },
-      { "h2": "FAQ" },
-      { "h2": "Final Verdict" }
-    ],
-    "toneVariant": "data-driven",
-    "keyword": "compact apartment appliance layout scenarios summer",
-    "serpSources": [],
-    "h2Similarity": 0,
-    "shingleOverlap": 0,
-    "embedded": true
-  },
-  "fallbackFrom": null,
-  "fallbackReason": null,
+  "benchmarkOutline": null,
+  "fallbackFrom": "benchmark",
+  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
   "season": "summer",
-  "seasonalEvents": ["여름·방학", "폭염·냉방"],
-  "contentPlan": "meta",
-  "contentAngle": "compact-footprint-appliances",
-  "slugHint": "2026-compact-footprint-cross-category-scenario-guide",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "contentPlan": "product",
+  "contentAngle": null,
+  "slugHint": null,
   "topic": {
-    "id": "meta-compact-footprint-appliances",
-    "category": "cross-cutting",
-    "angle": "Layout scenarios for compact footprint when one wall and short counters are already claimed by cooling or cooking gear",
-    "imageQuery": "compact appliances small kitchen",
+    "id": "electric-blankets",
+    "category": "home-appliances",
+    "angle": "electric blankets and heated mattress pads: safety certifications, timers, and wash care",
+    "imageQuery": "electric blanket bed winter",
     "liveData": false,
-    "seasons": ["summer", "spring"],
-    "anchorTopicIds": [
-      "portable-ac",
-      "air-fryers",
-      "dehumidifiers",
-      "robot-vacuums",
-      "rice-cookers"
+    "seasons": [
+      "winter"
     ],
-    "isMetaAngle": true
+    "anchorTopicIds": null,
+    "isMetaAngle": false
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Suggested slug MUST be 2026-compact-footprint-cross-category-scenario-guide (do NOT reuse the published head-to-head slug). Follow docs/templates/scenario-guide.md, Stage 13 editorial depth (편집부 해석/검토 시 우려), and docs/CONTENT_STANDARDS.md. Season: summer. Integrity --draft --repair must pass before complete.",
-  "lastError": null,
-  "note": "Manual slug fix: published H2H already exists; scenario companion fills buffer 1/2 after daily write cap."
+  "templatePath": "docs/templates/checklist.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: stable. Tone: scenario-first. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "lastError": null
 }

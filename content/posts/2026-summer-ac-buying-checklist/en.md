@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-07-17T06:30:03.123Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -52,7 +52,7 @@ Checklist items came from manufacturer install guides, common lease practice, an
    **Why it matters:** BTU charts assume typical 2.4 m ceilings; taller rooms need more capacity.  
    **Red flag:** Buying “by apartment name” (e.g., “studio size”) without measuring.
 
-   **Editorial read:** A shaded 15 m² bedroom at 2.4 m ceiling height starts near 8,000 BTU, but **loft or high-ceiling rooms add ~20% volume**—plan one BTU step up (~$50–80).
+   **Editorial read:** A shaded 15 m² bedroom at 2.4 m ceiling height starts near 8,000 BTU, but **loft or high-ceiling rooms add about 20% volume**—plan one BTU step up (about $50–80).
 
    **Review concern:** Skipping tape-measure fit often means **1–2 weeks of returns** and miserable heat-wave nights before the right box arrives.
 
@@ -68,7 +68,7 @@ Checklist items came from manufacturer install guides, common lease practice, an
    **Why it matters:** West-facing and top-floor rooms need 10–15% more capacity.  
    **Red flag:** Minimum BTU for a shaded bedroom applied to a sunny studio.
 
-   **Editorial read:** West-facing or top-floor 20 m² layouts often need **12,000–14,000 BTU (~$80–150 more)** to beat three summers of higher kWh and louder high-fan nights versus an undersized 8k box.
+   **Editorial read:** West-facing or top-floor 20 m² layouts often need **12,000–14,000 BTU (about $80–150 more)** to beat three summers of higher kWh and louder high-fan nights versus an undersized 8k box.
 
    **Review concern:** Undersizing shows up as **$20–40/month extra power** and **52 dB creeping to high-speed fan** when you run eight-plus hours daily.
 
@@ -134,7 +134,7 @@ Window unit for small bedrooms/studios with honest CEER/noise labels.
 
 Keeps a lower vent path—handy for naps.
 
-**Editorial read:** U-shape ~$399 class hardware trades **42 dB-class low fan and lower-sash ventilation** in nurseries—but only after you measure kit width and sill depth.
+**Editorial read:** U-shape about $399 class hardware trades **42 dB-class low fan and lower-sash ventilation** in nurseries—but only after you measure kit width and sill depth.
 
 **Review concern:** Buying before measuring kit width often means **non-installable hardware and a 1–2 week return cycle**.
 

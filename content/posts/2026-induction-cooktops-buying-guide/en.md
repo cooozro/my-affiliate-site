@@ -19,7 +19,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:01.446Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: induction cooktop kitchen in a home interior
@@ -185,12 +185,11 @@ Often no — two high draws can trip a 15–20 A shared circuit. Use separate ci
 
 ## Related guides
 
-- [Rice Cookers Explainer](/en/blog/2026-rice-cookers-explainer) — another sealed-kitchen heat source on summer nights
-- [Air Fryers Checklist](/en/blog/2026-air-fryers-checklist) — low-oil cooking that still adds counter heat
-- [Coffee Machines Head-to-Head](/en/blog/2026-coffee-machines-head-to-head) — morning watt draw near the same outlet
-- [Family 3–5 Home Essentials Scenario Guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — multi-burner household demand
-- [Refrigerators Buying Guide](/en/blog/2026-refrigerators-buying-guide) — open-kitchen heat and appliance noise together
-
+- [Closed Windows, Bright Rooms: Five TVs for Summer Sports, Streaming, and HDMI 2.1 Gaming](/en/blog/2026-television-buying-guide) — Five TVs compared for summer sports glare, HDMI 2.1 gaming, and HDR brightness with AC-on…
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — open-kitchen heat and appliance noise together
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
+- [Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Systems](/en/blog/2026-coffee-machines-head-to-head) — morning watt draw near the same outlet
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — multi-burner household demand
 ## Five checks before you buy
 
 1. Verify **magnetic pan** compatibility before returning the box.

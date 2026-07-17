@@ -1,26 +1,54 @@
 {
-  "dateKst": "2026-07-15",
-  "scannedAt": "2026-07-15T06:38:57.714Z",
-  "postsScanned": 41,
-  "autoRepairCount": 20,
+  "dateKst": "2026-07-17",
+  "scannedAt": "2026-07-17T06:30:03.683Z",
+  "postsScanned": 43,
+  "autoRepairCount": 54,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
       "repairs": [
-        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links"
+        "2026-action-cameras-buying-guide/en.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links",
+        "2026-action-cameras-buying-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
       ]
     },
     {
       "slug": "2026-air-purifiers-guide",
       "repairs": [
+        "2026-air-purifiers-guide/en.md: replaced 10 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-air-purifiers-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-air-purifiers-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     },
     {
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "repairs": [
+        "2026-budget-fitness-trackers-head-to-head/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-budget-mechanical-keyboards-guide",
+      "repairs": [
+        "2026-budget-mechanical-keyboards-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
       "slug": "2026-budget-monitors-buying-guide",
       "repairs": [
+        "2026-budget-monitors-buying-guide/en.md: replaced 5 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
+      "slug": "2026-budget-power-banks-guide",
+      "repairs": [
+        "2026-budget-power-banks-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-budget-smartphones-under-300",
+      "repairs": [
+        "2026-budget-smartphones-under-300/en.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
       ]
     },
     {
@@ -31,24 +59,78 @@
       ]
     },
     {
+      "slug": "2026-coffee-machines-head-to-head",
+      "repairs": [
+        "2026-coffee-machines-head-to-head/en.md: replaced 4 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
       "slug": "2026-cordless-vacuums-scenario-guide",
       "repairs": [
+        "2026-cordless-vacuums-scenario-guide/en.md: replaced 8 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-cordless-vacuums-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-cordless-vacuums-scenario-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     },
     {
+      "slug": "2026-dehumidifiers-guide",
+      "repairs": [
+        "2026-dehumidifiers-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
       "slug": "2026-dishwashers-explainer",
       "repairs": [
+        "2026-dishwashers-explainer/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-dishwashers-explainer/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-dishwashers-explainer/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     },
     {
+      "slug": "2026-electric-fans-buying-guide",
+      "repairs": [
+        "2026-electric-fans-buying-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-family-3-5-home-essentials-buying-guide",
+      "repairs": [
+        "2026-family-3-5-home-essentials-buying-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-family-3-5-home-essentials-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
       "slug": "2026-family-3-5-home-essentials-scenario-guide",
       "repairs": [
-        "2026-family-3-5-home-essentials-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-family-3-5-home-essentials-scenario-guide/en.md: replaced 4 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-family-3-5-home-essentials-scenario-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-family-3-5-home-essentials-scenario-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "repairs": [
+        "2026-gaming-consoles-scenario-guide/en.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-induction-cooktops-buying-guide",
+      "repairs": [
+        "2026-induction-cooktops-buying-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-induction-cooktops-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
+      "slug": "2026-laptops-buying-guide",
+      "repairs": [
+        "2026-laptops-buying-guide/en.md: replaced 6 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "repairs": [
+        "2026-noise-cancelling-headphones-head-to-head/en.md: replaced 3 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-noise-cancelling-headphones-head-to-head/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
       ]
     },
     {
@@ -58,14 +140,66 @@
       ]
     },
     {
+      "slug": "2026-portable-vs-window-ac-head-to-head",
+      "repairs": [
+        "2026-portable-vs-window-ac-head-to-head/en.md: replaced 3 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-refrigerators-buying-guide",
+      "repairs": [
+        "2026-refrigerators-buying-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-refrigerators-buying-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
       "slug": "2026-smart-home-cameras-explainer",
       "repairs": [
         "2026-smart-home-cameras-explainer/en.md: removed draft/preview URL links"
       ]
     },
     {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "repairs": [
+        "2026-solo-apartment-home-essentials-checklist-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-solo-apartment-home-essentials-checklist-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-solo-apartment-home-essentials-checklist-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-scenario-guide",
+      "repairs": [
+        "2026-solo-apartment-home-essentials-scenario-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-summer-ac-buying-checklist",
+      "repairs": [
+        "2026-summer-ac-buying-checklist/en.md: replaced 4 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "repairs": [
+        "2026-summer-bluetooth-speakers-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-television-buying-guide",
+      "repairs": [
+        "2026-television-buying-guide/ko.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "repairs": [
+        "2026-usb-c-hubs-buying-guide/en.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+      ]
+    },
+    {
       "slug": "2026-washing-machines-scenario-guide",
       "repairs": [
+        "2026-washing-machines-scenario-guide/en.md: replaced 3 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-washing-machines-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-washing-machines-scenario-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
@@ -73,6 +207,7 @@
     {
       "slug": "2026-water-purifiers-buying-guide",
       "repairs": [
+        "2026-water-purifiers-buying-guide/en.md: replaced 6 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-water-purifiers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-water-purifiers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
@@ -80,8 +215,7 @@
     {
       "slug": "2026-window-ac-room-scenario-guide",
       "repairs": [
-        "2026-window-ac-room-scenario-guide/en.md: replaced 3 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
-        "2026-window-ac-room-scenario-guide/ko.md: replaced 3 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
+        "2026-window-ac-room-scenario-guide/en.md: replaced 2 ASCII tilde range(s) with en-dash (GFM strikethrough fix)"
       ]
     }
   ],

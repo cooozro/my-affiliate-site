@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-07-17T06:30:02.369Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
@@ -103,7 +103,7 @@ Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and s
 
 Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 slot for certified NVMe expansion. The disc edition plays UHD Blu-ray and lets you buy, lend, or resell physical copies of flagship exclusives. If your household debates *which* story-driven game to finish before school resumes, PlayStation’s first-party lineup is still the anchor.
 
-**Editorial read:** M.2 expansion and disc resale cut **80 GB patch wait time** when the built-in 1 TB fills during summer sales—physical rotation avoids subscription if you rotate titles. Budget **~$75–110** for a certified SSD add-on.
+**Editorial read:** M.2 expansion and disc resale cut **80 GB patch wait time** when the built-in 1 TB fills during summer sales—physical rotation avoids subscription if you rotate titles. Budget **about $75–110** for a certified SSD add-on.
 
 **Review concern:** Sony exclusives justify the box, but mixing discs plus subscriptions can **cost more than a Series X + Game Pass path** if breadth matters more than first-party stories.
 
@@ -159,7 +159,7 @@ Nintendo specifies a **7-inch OLED panel**, 64 GB internal storage (expandable v
 
 **Editorial read:** At {{krw:349}}, handheld 720p avoids a **second TV purchase** when the living-room display is contested—add a 128 GB microSD to cut eShop install wait time. Docked 1080p keeps **picture and space expectations** separate from a 4K couch setup.
 
-**Review concern:** ~3-hour battery life means a **charger or dock anchor** for all-day play; if you only want cross-platform AAA in 4K, Switch becomes a **second console**, not the only box.
+**Review concern:** about 3-hour battery life means a **charger or dock anchor** for all-day play; if you only want cross-platform AAA in 4K, Switch becomes a **second console**, not the only box.
 
 **Runner-up:** Steam Deck or handheld PC — more flexible, but higher price, fan noise, and shorter battery for younger users.
 

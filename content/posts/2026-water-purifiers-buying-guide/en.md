@@ -26,7 +26,7 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-07-17T06:30:03.481Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## Editorial Overview
@@ -93,7 +93,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** Requires cabinet drill for faucet hole — renters may need landlord approval; no TDS demolition like RO — dissolved mineral taste may persist in hard-water cities; professional install adds $150–$300 if you skip DIY; filter replacement needs shutoff confidence under the sink.
 
-**Editorial read:** 600-gallon cartridges at ~$160/year land near **$679 three-year TCO** (unit plus filters) for a four-person July bottled-water swap; 0.72 GPM cuts pitcher wait time. Nine-inch under-sink clearance frees **summer prep counter space**.
+**Editorial read:** 600-gallon cartridges at about $160/year land near **$679 three-year TCO** (unit plus filters) for a four-person July bottled-water swap; 0.72 GPM cuts pitcher wait time. Nine-inch under-sink clearance frees **summer prep counter space**.
 
 **Review concern:** No RO-level TDS drop leaves **chalky ice and mineral taste** in hard-water cities; renter drill and install add **move-out restore cost**.
 
@@ -125,7 +125,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** $299 unit cost plus about $90/year filters trails PUR on first-year math; hose to faucet is visible — aesthetic compromise in open kitchens; does not reduce TDS like RO; requires nearby outlet for internal pump; adapter fit fails on some designer faucet shapes per owner reviews.
 
-**Editorial read:** $299 plus ~$90/year filters hits **~$569 three-year TCO**—higher than PUR but saves **time and refills** if you refuse ten pitcher top-offs per camp week. 0.5 GPM matters more than purity ads for pitcher refugees.
+**Editorial read:** $299 plus about $90/year filters hits **about $569 three-year TCO**—higher than PUR but saves **time and refills** if you refuse ten pitcher top-offs per camp week. 0.5 GPM matters more than purity ads for pitcher refugees.
 
 **Review concern:** First-year math loses to PUR when **budget is the only lever**; designer faucet adapter misses fail **on install day**.
 
@@ -141,7 +141,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** $479 upfront and counter footprint about 16 inches wide; RO waste water line must route to sink bucket or drain clip; slower 0.5 GPM vs Aquasana faucet; requires power outlet; mineral-stripped taste not for everyone — some owners remineralize manually.
 
-**Editorial read:** $479 plus ~$90/year filters reaches **~$749 three-year TCO** for bottled-water TDS without a plumber; 500-gallon annual swaps beat quarterly carbon cartridges on **filter labor**. Sixteen-inch width and a drain clip need **40 cm+ sink depth**.
+**Editorial read:** $479 plus about $90/year filters reaches **about $749 three-year TCO** for bottled-water TDS without a plumber; 500-gallon annual swaps beat quarterly carbon cartridges on **filter labor**. Sixteen-inch width and a drain clip need **40 cm+ sink depth**.
 
 **Review concern:** Stripped mineral taste can force **parallel bottled water**; 0.5 GPM adds **1–2 minutes per fill** that stacks daily.
 
@@ -157,7 +157,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Weaknesses:** $699 street price highest here; proprietary filters about $120/year; larger depth than Coway — measure counter overhang near dishwasher door; RO waste water handling same as other countertop RO units; overkill if municipal supply already soft and low TDS.
 
-**Editorial read:** $699 plus ~$120/year filters lands near **$1,059 three-year TCO**—premium for open-kitchen aesthetics plus guest refills. 528-gallon cartridges mirror Coway’s **once-a-year swap** rhythm.
+**Editorial read:** $699 plus about $120/year filters lands near **$1,059 three-year TCO**—premium for open-kitchen aesthetics plus guest refills. 528-gallon cartridges mirror Coway’s **once-a-year swap** rhythm.
 
 **Review concern:** Soft, low-TDS cities struggle to justify **$220+ over Coway** for looks alone; dishwasher-door clearance needs **measure-before-buy**.
 

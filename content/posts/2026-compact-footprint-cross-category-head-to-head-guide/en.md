@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T11:23:35.000Z'
+updatedAt: '2026-07-17T06:30:01.429Z'
 publishedAt: '2026-07-17T02:23:36.986Z'
 ---
 ## Editorial Overview
@@ -246,14 +246,11 @@ Tape the **walking lane** left after the unit plus its forced clearance. If less
 
 ## Related guides
 
-- [Portable vs window AC head-to-head](/en/blog/2026-portable-vs-window-ac-head-to-head) — hose vs sash install tradeoffs
-- [Dehumidifiers buying guide](/en/blog/2026-dehumidifiers-guide) — DOE pint, tank, and drain detail
-- [Robot vacuums scenario guide](/en/blog/2026-robot-vacuums-scenario-guide) — dock footprint by apartment layout
-- [Solo apartment essentials scenario guide](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — whole-home priority order
-- [Cordless vacuums scenario guide](/en/blog/2026-cordless-vacuums-scenario-guide) — hang-and-store stick runtime
-
----
-
+- [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — whole-home priority order
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — hose vs sash install tradeoffs
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — dock footprint by apartment layout
+- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — hang-and-store stick runtime
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — DOE pint, tank, and drain detail
 ## Final Verdict
 
 Compact summer living is a **geometry problem first** and a capacity problem second. Editorial standard: measure the rectangle you are willing to lose for three months of heat season, then assign it to the category that removes the biggest daily friction — temperature, humidity, cooking heat, or floor dust — not the loudest marketing badge.
