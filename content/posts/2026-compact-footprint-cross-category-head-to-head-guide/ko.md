@@ -23,6 +23,16 @@ imageSearchKeywords:
   - compact appliances small kitchen
   - small apartment appliances
   - portable ac air fryer
+coverImage: >-
+  /images/posts/2026-compact-footprint-cross-category-head-to-head-guide/compact-apartment-kitchen-cover.jpg
+coverImageAlt: compact apartment kitchen with portable ac and small counter appliances
+coverImageAltKo: 이동식 에어컨과 소형 조리대 가전이 있는 컴팩트 아파트 주방
+coverImageCredit: Photo by Sidekick Visuals / Pexels
+coverImageProvider: pexels
+coverImageAssetId: '2724749'
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-17T02:20:00.000Z'
 ---
 ## 편집부 개요
 

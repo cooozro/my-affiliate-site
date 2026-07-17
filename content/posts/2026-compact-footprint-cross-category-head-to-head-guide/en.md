@@ -25,7 +25,16 @@ imageSearchKeywords:
   - compact appliances small kitchen
   - small apartment appliances
   - portable ac air fryer
-updatedAt: '2026-07-17T02:14:22.944Z'
+coverImage: >-
+  /images/posts/2026-compact-footprint-cross-category-head-to-head-guide/compact-apartment-kitchen-cover.jpg
+coverImageAlt: compact apartment kitchen with portable ac and small counter appliances
+coverImageAltKo: 이동식 에어컨과 소형 조리대 가전이 있는 컴팩트 아파트 주방
+coverImageCredit: Photo by Sidekick Visuals / Pexels
+coverImageProvider: pexels
+coverImageAssetId: '2724749'
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-17T02:21:30.000Z'
 ---
 ## Editorial Overview
 
@@ -215,7 +224,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 ### If sleep cooling already runs eight hours, do I still add a 35-pint dehumidifier — or am I just stacking compressor heat?
 
-Often you still add the dehumidifier when RH stays sticky above ~55% with windows shut. Place units so exhaust and compressor faces are not 2 m apart. The dehumidifier removes moisture the AC cannot; it does not replace cooling. On older rental breakers, stagger starts — a kettle or air fryer kicking on with both compressors can trip the circuit.
+Often you still add the dehumidifier when RH stays sticky above about 55% with windows shut. Place units so exhaust and compressor faces are not 2 m apart. The dehumidifier removes moisture the AC cannot; it does not replace cooling. On older rental breakers, stagger starts — a kettle or air fryer kicking on with both compressors can trip the circuit.
 
 ### Under a 45 cm cabinet overhang, how far back can a 5-quart air fryer sit before the rear exhaust fails?
 

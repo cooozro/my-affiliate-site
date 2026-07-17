@@ -37,7 +37,7 @@
   "scheduledGapHours": 4,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-17",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-07-17",
   "history": [
     {
@@ -681,7 +681,6 @@
     }
   ],
   "formatHistory": [
-    "head-to-head",
     "scenario-guide",
     "buying-guide",
     "head-to-head",
@@ -700,7 +699,8 @@
     "scenario-guide",
     "explainer",
     "checklist",
-    "head-to-head"
+    "head-to-head",
+    "buying-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
@@ -837,6 +837,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-07-16T02:44:53.017Z"
+    },
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-07-17T02:21:57.904Z"
     }
   ]
 }

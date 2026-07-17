@@ -840,6 +840,23 @@
       "contentHash": "644f7321e240f7423e3c9736f2a9b9b53664997ad6c6a53aa6f52382aeac7410",
       "provider": "pexels",
       "registeredAt": "2026-07-15T01:52:22.100Z"
+    },
+    {
+      "slug": "2026-compact-footprint-cross-category-head-to-head-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-07-17T02:21:01.807Z"
+    },
+    {
+      "slug": "2026-compact-footprint-cross-category-head-to-head-guide",
+      "url": "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg",
+      "assetKey": "pexels:2724749",
+      "hash": "5632bbf13e784aa3afb15d1b8a79cc382c81800635e1c80417d4c35e776e6cad",
+      "contentHash": "5632bbf13e784aa3afb15d1b8a79cc382c81800635e1c80417d4c35e776e6cad",
+      "provider": "pexels",
+      "registeredAt": "2026-07-17T02:21:27.395Z"
     }
   ]
 }
