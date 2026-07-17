@@ -1,12 +1,862 @@
 {
-  "topicIndex": 0,
-  "usedTopicIds": [],
-  "lastPublishAt": null,
-  "nextPublishAt": "2026-07-17T02:26:45.515Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 0,
+  "topicIndex": 18,
+  "usedTopicIds": [
+    "dehumidifiers",
+    "power-banks",
+    "window-ac",
+    "bluetooth-speakers",
+    "air-purifiers",
+    "robot-vacuums",
+    "action-cameras",
+    "noise-cancelling-headphones",
+    "gaming-consoles",
+    "electric-fans",
+    "coffee-machines",
+    "air-fryers",
+    "tablet-budget",
+    "portable-ssd",
+    "fitness-trackers",
+    "laptops",
+    "smart-home-cameras",
+    "laptops",
+    "coffee-machines",
+    "cordless-vacuums",
+    "fitness-trackers",
+    "cordless-vacuums",
+    "bidets",
+    "induction-cooktops",
+    "washing-machines",
+    "space-heaters",
+    "television",
+    "wireless-earbuds",
+    "window-ac",
+    "dishwashers"
+  ],
+  "lastPublishAt": "2026-07-17T02:23:36.986Z",
+  "nextPublishAt": "2026-07-17T06:56:42.964Z",
+  "scheduledGapHours": 4.55,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-17",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-17",
-  "history": []
+  "history": [
+    {
+      "action": "publish",
+      "slug": "2026-budget-power-banks-guide",
+      "at": "2026-06-25T08:43:18.231Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-power-banks-guide",
+      "at": "2026-06-25T12:06:58.928Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-smartphones-under-300",
+      "at": "2026-06-26T02:57:56.989Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-smartphones-under-300",
+        "https://www.aipick.shop/ko/blog/2026-budget-smartphones-under-300"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-mechanical-keyboards-guide",
+      "at": "2026-06-26T08:03:42.376Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-mechanical-keyboards-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-mechanical-keyboards-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-monitors-buying-guide",
+      "at": "2026-06-27T01:16:48.240Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-monitors-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-monitors-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-portable-vs-window-ac-head-to-head",
+      "at": "2026-06-27T07:15:05.684Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-portable-vs-window-ac-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-portable-vs-window-ac-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-ac-buying-checklist",
+      "at": "2026-06-28T08:36:05.216Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-ac-buying-checklist",
+        "https://www.aipick.shop/ko/blog/2026-summer-ac-buying-checklist"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-ac-room-scenario-guide",
+      "at": "2026-06-28T15:07:19.713Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-ac-room-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-ac-room-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-bluetooth-speakers-guide",
+      "topic": {
+        "id": "bluetooth-speakers",
+        "category": "audio",
+        "cluster": "audio"
+      },
+      "at": "2026-06-30T08:14:31.718Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-bluetooth-speakers-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-bluetooth-speakers-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-air-purifiers-guide",
+      "topic": {
+        "id": "2026-air-purifiers-guide"
+      },
+      "at": "2026-06-30T13:06:31.556Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-air-purifiers-guide",
+        "https://www.aipick.shop/ko/blog/2026-air-purifiers-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-dehumidifiers-guide",
+      "topic": {
+        "id": "dehumidifiers",
+        "category": "home-appliances",
+        "cluster": "air-quality"
+      },
+      "at": "2026-07-01T01:41:46.782Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-dehumidifiers-guide",
+        "https://www.aipick.shop/ko/blog/2026-dehumidifiers-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-action-cameras-buying-guide",
+      "topic": {
+        "id": "action-cameras"
+      },
+      "at": "2026-07-01T07:26:12.652Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-action-cameras-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-action-cameras-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-robot-vacuums-scenario-guide",
+      "topic": {
+        "id": "robot-vacuums"
+      },
+      "at": "2026-07-02T01:23:32.016Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-robot-vacuums-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-robot-vacuums-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-gaming-consoles-scenario-guide",
+      "topic": {
+        "id": "gaming-consoles"
+      },
+      "at": "2026-07-02T03:15:31.755Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-gaming-consoles-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-gaming-consoles-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-electric-fans-buying-guide",
+      "topic": {
+        "id": "electric-fans",
+        "cluster": "air-conditioning"
+      },
+      "at": "2026-07-03T02:11:09.745Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-electric-fans-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-electric-fans-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-noise-cancelling-headphones-head-to-head",
+      "topic": {
+        "id": "noise-cancelling-headphones"
+      },
+      "at": "2026-07-03T07:10:50.785Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-noise-cancelling-headphones-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-noise-cancelling-headphones-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-webcams-checklist",
+      "topic": {
+        "id": "webcams"
+      },
+      "at": "2026-07-04T01:56:28.535Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-webcams-checklist",
+        "https://www.aipick.shop/ko/blog/2026-webcams-checklist"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-air-fryers-checklist",
+      "topic": {
+        "id": "air-fryers"
+      },
+      "at": "2026-07-04T06:43:31.577Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-air-fryers-checklist",
+        "https://www.aipick.shop/ko/blog/2026-air-fryers-checklist"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-rice-cookers-explainer",
+      "topic": {
+        "id": "rice-cookers"
+      },
+      "at": "2026-07-05T02:44:08.822Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-rice-cookers-explainer",
+        "https://www.aipick.shop/ko/blog/2026-rice-cookers-explainer"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-portable-ssd-explainer",
+      "topic": {
+        "id": "portable-ssd"
+      },
+      "at": "2026-07-05T03:33:06.533Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-portable-ssd-explainer",
+        "https://www.aipick.shop/ko/blog/2026-portable-ssd-explainer"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "topic": {
+        "id": "usb-c-hubs"
+      },
+      "at": "2026-07-06T02:59:37.169Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-usb-c-hubs-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-laptops-buying-guide",
+      "topic": {
+        "id": "2026-laptops-buying-guide"
+      },
+      "at": "2026-07-06T03:36:25.166Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-laptops-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-laptops-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-coffee-machines-head-to-head",
+      "topic": {
+        "id": "coffee-machines"
+      },
+      "at": "2026-07-07T03:34:46.035Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-coffee-machines-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-coffee-machines-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-fitness-trackers-head-to-head",
+      "topic": {
+        "id": "fitness-trackers"
+      },
+      "at": "2026-07-07T04:35:40.875Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-summer-budget-tablets-buying-guide",
+      "topic": {
+        "id": "tablet-budget"
+      },
+      "at": "2026-07-08T02:58:57.557Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-summer-budget-tablets-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-summer-budget-tablets-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-smart-home-cameras-explainer",
+      "topic": {
+        "id": "smart-home-cameras"
+      },
+      "at": "2026-07-08T07:17:54.698Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-smart-home-cameras-explainer",
+        "https://www.aipick.shop/ko/blog/2026-smart-home-cameras-explainer"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-refrigerators-buying-guide",
+      "topic": {
+        "id": "refrigerators",
+        "cluster": "large-appliances"
+      },
+      "at": "2026-07-09T03:51:48.683Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-refrigerators-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-refrigerators-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-cordless-vacuums-scenario-guide",
+      "topic": {
+        "id": "cordless-vacuums"
+      },
+      "at": "2026-07-09T05:23:27.620Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-cordless-vacuums-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-cordless-vacuums-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-bidets-checklist",
+      "topic": {
+        "id": "bidets"
+      },
+      "at": "2026-07-10T05:25:29.985Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-bidets-checklist",
+        "https://www.aipick.shop/ko/blog/2026-bidets-checklist"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-water-purifiers-buying-guide",
+      "topic": {
+        "id": "water-purifiers",
+        "cluster": "kitchen-appliances"
+      },
+      "at": "2026-07-10T05:30:48.298Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-water-purifiers-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-water-purifiers-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-washing-machines-scenario-guide",
+      "topic": {
+        "id": "washing-machines"
+      },
+      "at": "2026-07-10T07:11:46.885Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-washing-machines-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-washing-machines-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-television-buying-guide",
+      "topic": {
+        "id": "television"
+      },
+      "at": "2026-07-10T11:32:02.328Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-television-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-television-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-solo-apartment-home-essentials-scenario-guide",
+      "topic": {
+        "id": "meta-solo-apartment-essentials",
+        "category": "cross-cutting",
+        "cluster": "household-solo"
+      },
+      "at": "2026-07-11T08:43:17.656Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-under-300-cross-category-buying-guide",
+      "topic": {
+        "id": "meta-under-300-cross-category",
+        "category": "cross-cutting",
+        "cluster": "price-tier-300"
+      },
+      "at": "2026-07-11T13:27:19.499Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-under-300-cross-category-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-under-300-cross-category-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-wireless-earbuds-head-to-head",
+      "topic": {
+        "id": "wireless-earbuds"
+      },
+      "at": "2026-07-13T08:28:51.576Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-wireless-earbuds-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-wireless-earbuds-head-to-head"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide",
+      "topic": {
+        "id": "meta-solo-apartment-essentials",
+        "category": "cross-cutting",
+        "cluster": "household-solo"
+      },
+      "at": "2026-07-13T12:13:58.578Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-checklist-guide",
+        "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-checklist-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-family-3-5-home-essentials-scenario-guide",
+      "topic": {
+        "id": "meta-family-3-5-person",
+        "category": "cross-cutting",
+        "cluster": "household-family"
+      },
+      "at": "2026-07-14T03:03:55.993Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-family-3-5-home-essentials-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-family-3-5-home-essentials-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-window-ac-room-scenario-guide",
+      "topic": {
+        "id": "window-ac"
+      },
+      "at": "2026-07-14T07:23:04.352Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-window-ac-room-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-window-ac-room-scenario-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-dishwashers-explainer",
+      "topic": {
+        "id": "dishwashers"
+      },
+      "at": "2026-07-15T01:08:30.765Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-dishwashers-explainer",
+        "https://www.aipick.shop/ko/blog/2026-dishwashers-explainer"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-clothes-dryers-buying-guide",
+      "topic": {
+        "id": "clothes-dryers"
+      },
+      "at": "2026-07-15T06:38:55.823Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-clothes-dryers-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-clothes-dryers-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-induction-cooktops-buying-guide",
+      "topic": {
+        "id": "induction-cooktops"
+      },
+      "at": "2026-07-16T02:44:53.000Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-induction-cooktops-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-induction-cooktops-buying-guide"
+      ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-compact-footprint-cross-category-head-to-head-guide",
+      "topic": {
+        "id": "meta-compact-footprint-appliances",
+        "category": "cross-cutting",
+        "cluster": "capacity-tier"
+      },
+      "at": "2026-07-17T02:23:36.986Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-compact-footprint-cross-category-head-to-head-guide",
+        "https://www.aipick.shop/ko/blog/2026-compact-footprint-cross-category-head-to-head-guide"
+      ]
+    }
+  ],
+  "topicHistory": [
+    {
+      "id": "coffee-machines",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/소형주방",
+      "at": "2026-07-06T05:17:05.827Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "category": "smart-home",
+      "cluster": "floor-care",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-07-06T10:19:34.467Z"
+    },
+    {
+      "id": "coffee-machines",
+      "at": "2026-07-07T03:34:46.038Z"
+    },
+    {
+      "id": "fitness-trackers",
+      "category": "wearables",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-07-07T03:34:46.047Z"
+    },
+    {
+      "id": "fitness-trackers",
+      "at": "2026-07-07T04:35:40.878Z"
+    },
+    {
+      "id": "tablet-budget",
+      "at": "2026-07-08T02:58:57.560Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "category": "smart-home",
+      "cluster": "floor-care",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-07-08T02:58:57.569Z"
+    },
+    {
+      "id": "smart-home-cameras",
+      "at": "2026-07-08T07:17:54.701Z"
+    },
+    {
+      "id": "refrigerators",
+      "cluster": "large-appliances",
+      "at": "2026-07-09T03:51:48.689Z"
+    },
+    {
+      "id": "bidets",
+      "category": "home-appliances",
+      "taxonomyGroup": "생활가전/위생",
+      "at": "2026-07-09T03:51:48.705Z"
+    },
+    {
+      "id": "cordless-vacuums",
+      "at": "2026-07-09T05:23:27.625Z"
+    },
+    {
+      "id": "bidets",
+      "at": "2026-07-10T05:25:29.989Z"
+    },
+    {
+      "id": "induction-cooktops",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/조리",
+      "at": "2026-07-10T05:25:30.000Z"
+    },
+    {
+      "id": "water-purifiers",
+      "cluster": "kitchen-appliances",
+      "at": "2026-07-10T05:30:48.302Z"
+    },
+    {
+      "id": "washing-machines",
+      "at": "2026-07-10T07:11:46.890Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-07-10T07:11:46.902Z"
+    },
+    {
+      "id": "television",
+      "at": "2026-07-10T11:32:02.332Z"
+    },
+    {
+      "id": "meta-solo-apartment-essentials",
+      "category": "cross-cutting",
+      "cluster": "household-solo",
+      "at": "2026-07-11T08:43:17.663Z"
+    },
+    {
+      "id": "meta-under-300-cross-category",
+      "category": "cross-cutting",
+      "cluster": "price-tier-300",
+      "at": "2026-07-11T13:27:19.504Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "category": "audio",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-07-13T08:12:44.171Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "at": "2026-07-13T08:28:51.585Z"
+    },
+    {
+      "id": "meta-solo-apartment-essentials",
+      "category": "cross-cutting",
+      "cluster": "household-solo",
+      "at": "2026-07-13T12:13:58.587Z"
+    },
+    {
+      "id": "meta-family-3-5-person",
+      "category": "cross-cutting",
+      "cluster": "household-family",
+      "at": "2026-07-14T03:03:56.003Z"
+    },
+    {
+      "id": "window-ac",
+      "category": "home-appliances",
+      "cluster": "air-conditioning",
+      "taxonomyGroup": "계절가전/냉방",
+      "at": "2026-07-14T03:03:56.045Z"
+    },
+    {
+      "id": "dishwashers",
+      "category": "kitchen",
+      "taxonomyGroup": "주방가전/소형주방",
+      "at": "2026-07-14T03:05:44.876Z"
+    },
+    {
+      "id": "window-ac",
+      "at": "2026-07-14T07:23:04.357Z"
+    },
+    {
+      "id": "dishwashers",
+      "at": "2026-07-15T01:08:30.769Z"
+    },
+    {
+      "id": "clothes-dryers",
+      "at": "2026-07-15T06:38:55.828Z"
+    },
+    {
+      "id": "induction-cooktops",
+      "at": "2026-07-16T02:44:53.004Z"
+    },
+    {
+      "id": "meta-compact-footprint-appliances",
+      "category": "cross-cutting",
+      "cluster": "capacity-tier",
+      "at": "2026-07-17T02:23:36.991Z"
+    }
+  ],
+  "formatHistory": [
+    "buying-guide",
+    "head-to-head",
+    "scenario-guide",
+    "checklist",
+    "buying-guide",
+    "scenario-guide",
+    "head-to-head",
+    "buying-guide",
+    "checklist",
+    "explainer",
+    "scenario-guide",
+    "buying-guide",
+    "explainer",
+    "head-to-head",
+    "scenario-guide",
+    "explainer",
+    "checklist",
+    "head-to-head",
+    "buying-guide",
+    "scenario-guide"
+  ],
+  "roadmapPhase": "tier2-first-pass",
+  "lastHealthCheck": {
+    "at": "2026-07-17T02:23:35.130Z",
+    "issueCount": 2,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (96min past slot, KST 2026-07-17)",
+        "severity": "error"
+      },
+      {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
+  },
+  "lastDailyContentAuditKst": "2026-07-15",
+  "lastDailyContentAudit": {
+    "at": "2026-07-15T06:38:57.714Z",
+    "postsScanned": 41,
+    "autoRepairCount": 20,
+    "manualReviewCount": 0
+  },
+  "contentStrategyHistory": [
+    {
+      "writingMode": "stable",
+      "contentProfile": "explainer",
+      "topicId": "rice-cookers",
+      "toneVariant": null,
+      "slug": "2026-rice-cookers-explainer",
+      "fallbackFrom": null,
+      "fallbackReason": null,
+      "keyword": null,
+      "at": "2026-07-04T08:17:55.879Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "explainer",
+      "topicId": "portable-ssd",
+      "toneVariant": "data-driven",
+      "slug": "2026-portable-ssd-explainer",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.60 > 0.15",
+      "keyword": "2026 portable SSD buying guide buying guide 분석",
+      "at": "2026-07-04T12:19:25.414Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "buying-guide",
+      "topicId": "usb-c-hubs",
+      "toneVariant": "checklist-hook",
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+      "keyword": "2026 USB-C hub buying guide for laptops buying guide 구매가이드",
+      "at": "2026-07-05T09:48:06.156Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "buying-guide",
+      "topicId": "laptops",
+      "toneVariant": "scenario-first",
+      "slug": "2026-laptops-buying-guide",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.17 > 0.15",
+      "keyword": "2026 budget laptops buying guide 사용법",
+      "at": "2026-07-05T15:02:25.512Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "cordless-vacuums",
+      "toneVariant": "case-study",
+      "slug": "2026-cordless-vacuums-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
+      "keyword": "2026 cordless stick vacuums buying guide 후기",
+      "at": "2026-07-06T03:38:43.316Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "laptops",
+      "toneVariant": "question-led",
+      "slug": "2026-laptops-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.17 > 0.15",
+      "keyword": "2026 budget laptops buying guide 장단점",
+      "at": "2026-07-06T05:17:05.815Z"
+    },
+    {
+      "writingMode": "stable",
+      "contentProfile": "head-to-head",
+      "topicId": "coffee-machines",
+      "toneVariant": "myth-bust",
+      "slug": "2026-coffee-machines-head-to-head",
+      "fallbackFrom": "benchmark",
+      "fallbackReason": "shingle overlap 0.32 > 0.15",
+      "keyword": "2026 coffee machine types buying guide 비교",
+      "at": "2026-07-06T05:59:30.971Z"
+    }
+  ],
+  "lastPublishSkipReason": {
+    "at": "2026-07-11T08:41:54.172Z",
+    "reason": "integrity-gate",
+    "triedSlugs": [
+      "2026-solo-apartment-home-essentials-scenario-guide",
+      "2026-under-300-cross-category-buying-guide"
+    ]
+  },
+  "metaAngleHistory": [
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-07-11T08:43:17.676Z"
+    },
+    {
+      "id": "solo-apartment-essentials",
+      "type": "household-type",
+      "at": "2026-07-15T01:08:30.781Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-07-16T02:44:53.017Z"
+    },
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-07-17T02:21:57.904Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-07-17T02:23:37.005Z"
+    }
+  ]
 }
