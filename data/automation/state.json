@@ -719,14 +719,9 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T02:23:35.130Z",
-    "issueCount": 2,
+    "at": "2026-07-17T02:29:17.797Z",
+    "issueCount": 1,
     "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (96min past slot, KST 2026-07-17)",
-        "severity": "error"
-      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
@@ -734,8 +729,8 @@
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-compact-footprint-cross-category-head-to-head-guide/en.md: publishedAt 2026-07-17T11:23:35.000Z → 2026-07-17T02:23:36.986Z",
+      "2026-compact-footprint-cross-category-head-to-head-guide/ko.md: publishedAt 2026-07-17T11:23:35.000Z → 2026-07-17T02:23:36.986Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-15",
