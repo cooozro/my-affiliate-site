@@ -33,8 +33,8 @@
     "dishwashers"
   ],
   "lastPublishAt": "2026-07-18T03:46:35.985Z",
-  "nextPublishAt": "2026-07-18T08:53:17.776Z",
-  "scheduledGapHours": 5.11,
+  "nextPublishAt": "2026-07-18T07:46:35.985Z",
+  "scheduledGapHours": 4,
   "publishCountToday": 1,
   "publishDateKst": "2026-07-18",
   "writeCountToday": 2,
@@ -744,18 +744,23 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T03:46:34.055Z",
-    "issueCount": 1,
+    "at": "2026-07-18T06:28:21.454Z",
+    "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (64min past slot, KST 2026-07-18)",
-        "severity": "error"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 1/2",
+        "severity": "info"
+      },
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 161min",
+        "severity": "warning"
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-cooling-mattress-pads-buying-guide/en.md: publishedAt 2026-07-18T12:46:34.000Z → 2026-07-18T03:46:35.985Z",
+      "2026-cooling-mattress-pads-buying-guide/ko.md: publishedAt 2026-07-18T12:46:34.000Z → 2026-07-18T03:46:35.985Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-17",

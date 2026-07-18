@@ -29,7 +29,7 @@ coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 updatedAt: '2026-07-18T12:46:34.000Z'
-publishedAt: '2026-07-18T12:46:34.000Z'
+publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## 편집부 개요
 
