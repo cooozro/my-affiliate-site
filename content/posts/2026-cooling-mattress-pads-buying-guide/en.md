@@ -1,12 +1,11 @@
 ---
 title: >-
-  Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for
-  Heatwave Sleep
+  Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave
+  Sleep
 description: >-
   Active water, forced-air, and passive cooling toppers compared for heatwave
   nights — with running cost, maintenance, and three-year ownership math.
 date: '2026-07-18'
-createdAt: '2026-07-18T00:45:00.000Z'
 tags:
   - cooling mattress pads
   - sleep
@@ -18,7 +17,7 @@ topicId: cooling-mattress-pads
 topicCluster: home-comfort
 writingMode: stable
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - cooling mattress pad bed
@@ -33,7 +32,8 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T00:50:02.757Z'
+updatedAt: '2026-07-18T12:46:34.000Z'
+publishedAt: '2026-07-18T12:46:34.000Z'
 ---
 ## Editorial Overview
 

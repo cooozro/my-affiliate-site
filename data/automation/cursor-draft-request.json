@@ -1,7 +1,90 @@
 {
-  "status": "complete",
-  "completedAt": "2026-07-18T00:54:25.228Z",
-  "writtenSlug": "2026-cooling-mattress-pads-buying-guide",
-  "draftCount": 2,
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-cooling-mattress-pads-buying-guide",
+  "requestedAt": "2026-07-18T03:46:36.034Z",
+  "writingMode": "benchmark",
+  "contentProfile": "head-to-head",
+  "toneVariant": "case-study",
+  "serpKeyword": "compact small apartment appliances size comparison guide",
+  "serpCachePath": null,
+  "benchmarkOutline": {
+    "sections": [
+      {
+        "h2": "How we measure footprint fairly",
+        "h3": [
+          "Depth vs width vs height",
+          "Vent clearance rules"
+        ]
+      },
+      {
+        "h2": "Compact cooling and moisture",
+        "h3": [
+          "Portable AC hose path",
+          "Dehumidifier pint per liter of tank"
+        ]
+      },
+      {
+        "h2": "Compact cooking",
+        "h3": [
+          "Air fryer basket liters",
+          "Rice cooker inner pot diameter"
+        ]
+      },
+      {
+        "h2": "Compact cleaning",
+        "h3": [
+          "Robot dock depth",
+          "Storage when not in use"
+        ]
+      },
+      {
+        "h2": "Comparison table: liters, inches, and daily usability"
+      },
+      {
+        "h2": "FAQ"
+      },
+      {
+        "h2": "Final Verdict"
+      }
+    ],
+    "toneVariant": "case-study",
+    "keyword": "compact small apartment appliances size comparison guide",
+    "serpSources": [],
+    "h2Similarity": 0,
+    "shingleOverlap": 0,
+    "embedded": true
+  },
+  "fallbackFrom": null,
+  "fallbackReason": null,
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "contentPlan": "meta",
+  "contentAngle": "compact-footprint-appliances",
+  "slugHint": "2026-compact-footprint-cross-category-head-to-head-guide",
+  "topic": {
+    "id": "meta-compact-footprint-appliances",
+    "category": "cross-cutting",
+    "angle": "Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "imageQuery": "compact appliances small kitchen",
+    "liveData": false,
+    "seasons": [
+      "summer",
+      "spring"
+    ],
+    "anchorTopicIds": [
+      "portable-ac",
+      "air-fryers",
+      "dehumidifiers",
+      "robot-vacuums",
+      "rice-cookers"
+    ],
+    "isMetaAngle": true
+  },
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: benchmark. Tone: case-study. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (capacity-tier): Compact footprint across categories / 소형·컴팩트 제품군. Cover multiple product categories in ONE article — anchor categories: portable-ac, air-fryers, dehumidifiers, robot-vacuums, rice-cookers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-compact-footprint-cross-category-head-to-head-guide. Frontmatter: contentAngle: compact-footprint-appliances, topicId: meta-compact-footprint-appliances. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-17T06:30:01.360Z",
-  "nextPublishAt": "2026-07-18T02:42:00.000Z",
-  "scheduledGapHours": 5.7,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-18T03:46:35.985Z",
+  "nextPublishAt": "2026-07-18T08:53:17.776Z",
+  "scheduledGapHours": 5.11,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-18",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-18",
@@ -550,16 +550,22 @@
         "https://www.aipick.shop/en/blog/2026-family-3-5-home-essentials-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-family-3-5-home-essentials-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-cooling-mattress-pads-buying-guide",
+      "topic": {
+        "id": "cooling-mattress-pads",
+        "cluster": "home-comfort"
+      },
+      "at": "2026-07-18T03:46:35.985Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-cooling-mattress-pads-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-cooling-mattress-pads-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "cordless-vacuums",
-      "category": "smart-home",
-      "cluster": "floor-care",
-      "taxonomyGroup": "생활가전/청소",
-      "at": "2026-07-06T10:19:34.467Z"
-    },
     {
       "id": "coffee-machines",
       "at": "2026-07-07T03:34:46.038Z"
@@ -707,10 +713,14 @@
       "category": "cross-cutting",
       "cluster": "household-family",
       "at": "2026-07-17T06:30:01.365Z"
+    },
+    {
+      "id": "cooling-mattress-pads",
+      "cluster": "home-comfort",
+      "at": "2026-07-18T03:46:35.991Z"
     }
   ],
   "formatHistory": [
-    "buying-guide",
     "head-to-head",
     "scenario-guide",
     "checklist",
@@ -729,14 +739,24 @@
     "checklist",
     "head-to-head",
     "buying-guide",
-    "scenario-guide"
+    "scenario-guide",
+    "head-to-head"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T01:13:48.586Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-18T03:46:34.055Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (64min past slot, KST 2026-07-18)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-17",
   "lastDailyContentAudit": {
@@ -857,6 +877,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-07-17T02:23:37.005Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-07-18T03:46:36.024Z"
     }
   ]
 }

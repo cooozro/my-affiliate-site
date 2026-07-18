@@ -2,7 +2,6 @@
 title: '냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식'
 description: '폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.'
 date: '2026-07-18'
-createdAt: '2026-07-18T00:45:00.000Z'
 tags:
   - 냉각 매트리스 패드
   - 수면
@@ -14,7 +13,7 @@ topicId: cooling-mattress-pads
 topicCluster: home-comfort
 writingMode: stable
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - cooling mattress pad bed
@@ -29,7 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T00:50:02.784Z'
+updatedAt: '2026-07-18T12:46:34.000Z'
+publishedAt: '2026-07-18T12:46:34.000Z'
 ---
 ## 편집부 개요
 
