@@ -758,28 +758,18 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T08:40:16.288Z",
-    "issueCount": 3,
+    "at": "2026-07-18T10:49:21.496Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (53min past slot, KST 2026-07-18)",
-        "severity": "error"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
-        "severity": "info"
-      },
-      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 293min",
+        "message": "Cursor replenish pending 129min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-portable-power-stations-buying-guide/en.md: publishedAt 2026-07-18T17:40:16.000Z → 2026-07-18T08:40:18.328Z",
+      "2026-portable-power-stations-buying-guide/ko.md: publishedAt 2026-07-18T17:40:16.000Z → 2026-07-18T08:40:18.328Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-18",
