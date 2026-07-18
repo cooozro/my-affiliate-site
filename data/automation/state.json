@@ -744,7 +744,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T06:28:21.454Z",
+    "at": "2026-07-18T06:33:26.821Z",
     "issueCount": 2,
     "issues": [
       {
@@ -754,14 +754,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 161min",
+        "message": "Cursor replenish pending 166min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-cooling-mattress-pads-buying-guide/en.md: publishedAt 2026-07-18T12:46:34.000Z → 2026-07-18T03:46:35.985Z",
-      "2026-cooling-mattress-pads-buying-guide/ko.md: publishedAt 2026-07-18T12:46:34.000Z → 2026-07-18T03:46:35.985Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-17",
   "lastDailyContentAudit": {
