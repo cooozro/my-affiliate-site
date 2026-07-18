@@ -1,12 +1,11 @@
 ---
 title: >-
-  Portable Power Stations Buying Guide: Watt-Hours First for Camping,
-  Trips, and Blackouts
+  Portable Power Stations Buying Guide: Watt-Hours First for Camping, Trips, and
+  Blackouts
 description: >-
   Capacity-first picks for summer camping, road trips, and outages — LiFePO4
   cycle life, recharge time, and three-year cost-per-cycle compared.
 date: '2026-07-18'
-createdAt: '2026-07-18T00:50:00.000Z'
 tags:
   - portable power stations
   - camping
@@ -18,7 +17,7 @@ topicId: portable-power-stations
 topicCluster: power-charging
 writingMode: stable
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - portable power station camping
@@ -33,7 +32,8 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T00:50:03.069Z'
+updatedAt: '2026-07-18T08:40:18.393Z'
+publishedAt: '2026-07-18T17:40:16.000Z'
 ---
 ## Editorial Overview
 
@@ -209,11 +209,11 @@ LiFePO4 chemistry is thermally more stable than older lithium types, and reputab
 
 ## Related guides
 
-- [Power banks buying guide — capacity, output, and travel-day charging](/en/blog/2026-budget-power-banks-guide)
-- [Summer Bluetooth speakers — battery life and outdoor sound for trips](/en/blog/2026-summer-bluetooth-speakers-guide)
-- [Portable & window AC head-to-head — cooling power and running cost](/en/blog/2026-portable-vs-window-ac-head-to-head)
-- [Action cameras buying guide — capture the trip without draining your phone](/en/blog/2026-action-cameras-buying-guide)
-
+- [Family of 3–5: Capacity-First Buying Guide for Fridge, Washer, TV, Purifier, Stick Vacuum](/en/blog/2026-family-3-5-home-essentials-buying-guide) — Capacity-first picks for 3–5 person homes — fridge cu ft, washer drum, TV size, bedroom C…
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — Midea portable, LG dual-hose portable, and Frigidaire window AC compared on BTU, noise, i…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
 ## Five checks before you buy
 
 1. Add up your **simultaneous watts and hours** to size watt-hours honestly, not by the biggest device.

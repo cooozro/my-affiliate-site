@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-18T03:46:35.985Z",
-  "nextPublishAt": "2026-07-18T07:46:35.985Z",
-  "scheduledGapHours": 4,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-18T08:40:18.328Z",
+  "nextPublishAt": "2026-07-19T02:31:00.000Z",
+  "scheduledGapHours": 5.52,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-18",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-18",
@@ -563,13 +563,22 @@
         "https://www.aipick.shop/en/blog/2026-cooling-mattress-pads-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-cooling-mattress-pads-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-portable-power-stations-buying-guide",
+      "topic": {
+        "id": "portable-power-stations",
+        "cluster": "power-charging"
+      },
+      "at": "2026-07-18T08:40:18.328Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-portable-power-stations-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-portable-power-stations-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "coffee-machines",
-      "at": "2026-07-07T03:34:46.038Z"
-    },
     {
       "id": "fitness-trackers",
       "category": "wearables",
@@ -718,6 +727,11 @@
       "id": "cooling-mattress-pads",
       "cluster": "home-comfort",
       "at": "2026-07-18T03:46:35.991Z"
+    },
+    {
+      "id": "portable-power-stations",
+      "cluster": "power-charging",
+      "at": "2026-07-18T08:40:18.332Z"
     }
   ],
   "formatHistory": [
@@ -744,9 +758,14 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T07:10:53.780Z",
-    "issueCount": 2,
+    "at": "2026-07-18T08:40:16.288Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (53min past slot, KST 2026-07-18)",
+        "severity": "error"
+      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
@@ -754,17 +773,20 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 204min",
+        "message": "Cursor replenish pending 293min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
-  "lastDailyContentAuditKst": "2026-07-17",
+  "lastDailyContentAuditKst": "2026-07-18",
   "lastDailyContentAudit": {
-    "at": "2026-07-17T06:30:03.683Z",
-    "postsScanned": 43,
-    "autoRepairCount": 54,
+    "at": "2026-07-18T08:40:20.310Z",
+    "postsScanned": 45,
+    "autoRepairCount": 26,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [

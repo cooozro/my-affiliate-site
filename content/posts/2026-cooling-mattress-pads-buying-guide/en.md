@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T12:46:34.000Z'
+updatedAt: '2026-07-18T08:40:18.381Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## Editorial Overview
@@ -209,11 +209,11 @@ Often yes. A Cumulus-style PCM protector layered under a sensible AC and fan str
 
 ## Related guides
 
-- [Portable & window air conditioner head-to-head — cooling power, install, and noise](/en/blog/2026-portable-vs-window-ac-head-to-head)
-- [Summer AC buying checklist — sizing, install, and running cost before you buy](/en/blog/2026-summer-ac-buying-checklist)
-- [Electric fans buying guide — airflow, noise, and energy for hot rooms](/en/blog/2026-electric-fans-buying-guide)
-- [Air purifiers for compact rooms — CADR and filter cost in the cooling season](/en/blog/2026-air-purifiers-guide)
-
+- [Portable Power Stations Buying Guide: Watt-Hours First for Camping, Trips, and Blackouts](/en/blog/2026-portable-power-stations-buying-guide) — Capacity-first picks for summer camping, road trips, and outages — LiFePO4 cycle life, re…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — Midea portable, LG dual-hose portable, and Frigidaire window AC compared on BTU, noise, i…
 ## Five checks before you buy
 
 1. Measure the **nightstand space** an active control unit needs before you assume it will fit.

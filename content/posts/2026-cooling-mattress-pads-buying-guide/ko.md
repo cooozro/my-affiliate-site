@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T12:46:34.000Z'
+updatedAt: '2026-07-18T08:40:18.382Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## 편집부 개요
@@ -205,11 +205,11 @@ publishedAt: '2026-07-18T03:46:35.985Z'
 
 ## 관련 가이드
 
-- [2026 이동식·창문형 에어컨 정면 비교 — 냉방력, 설치, 소음](/ko/blog/2026-portable-vs-window-ac-head-to-head)
-- [여름 에어컨 구매 체크리스트 — 용량·설치·운영비를 사기 전에 점검](/ko/blog/2026-summer-ac-buying-checklist)
-- [2026 선풍기 구매 가이드 — 더운 방을 위한 풍량·소음·전기](/ko/blog/2026-electric-fans-buying-guide)
-- [소형방 공기청정기 — 냉방철 씨에이디아르과 필터 비용](/ko/blog/2026-air-purifiers-guide)
-
+- [휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선](/ko/blog/2026-portable-power-stations-buying-guide) — 여름 캠핑·로드트립·장마철 정전용 파워스테이션을 용량 우선으로 비교합니다 — 인산철 수명, 충전 시간, 3년 사이클당 비용까지 따집니다.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로 비교. 2026 여름 소형 주거 냉방 선택 가이드.
 ## 구매 전 다섯 가지 점검
 
 1. 능동 제어 본체가 들어갈 **협탁 공간**을 넣을 수 있다고 가정하기 전에 먼저 재세요.

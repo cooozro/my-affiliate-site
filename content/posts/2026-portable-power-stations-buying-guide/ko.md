@@ -2,7 +2,6 @@
 title: '휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선'
 description: '여름 캠핑·로드트립·장마철 정전용 파워스테이션을 용량 우선으로 비교합니다 — 인산철 수명, 충전 시간, 3년 사이클당 비용까지 따집니다.'
 date: '2026-07-18'
-createdAt: '2026-07-18T00:50:00.000Z'
 tags:
   - 휴대용 파워스테이션
   - 캠핑
@@ -14,7 +13,7 @@ topicId: portable-power-stations
 topicCluster: power-charging
 writingMode: stable
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - portable power station camping
@@ -29,6 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+updatedAt: '2026-07-18T08:40:19.516Z'
+publishedAt: '2026-07-18T17:40:16.000Z'
 ---
 ## 편집부 개요
 
@@ -204,11 +205,11 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [2026 보조배터리 구매 가이드 — 용량·출력·여행날 충전](/ko/blog/2026-budget-power-banks-guide)
-- [여름 블루투스 스피커 — 여행용 배터리 지속과 야외 사운드](/ko/blog/2026-summer-bluetooth-speakers-guide)
-- [이동식·창문형 에어컨 정면 비교 — 냉방력과 운영비](/ko/blog/2026-portable-vs-window-ac-head-to-head)
-- [액션캠 구매 가이드 — 휴대폰 배터리 없이 여행을 담기](/ko/blog/2026-action-cameras-buying-guide)
-
+- [3~5인 가구 용량 우선 구매 가이드: 냉장고·세탁기·TV·공기청정·스틱](/ko/blog/2026-family-3-5-home-essentials-buying-guide) — 3–5인 가정용 용량 기준 — 냉장 식품실, 세탁 드럼, TV 시청거리, 침실 CADR, 스틱 런타임을 방학·폭염 부하에 맞춰 고릅니다.
+- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로 비교. 2026 여름 소형 주거 냉방 선택 가이드.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
 ## 구매 전 다섯 가지 점검
 
 1. 가장 큰 기기가 아니라 **동시 소비 와트와 시간**을 더해 와트시를 솔직히 잡으세요.
