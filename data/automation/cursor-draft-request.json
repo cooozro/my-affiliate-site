@@ -1,37 +1,7 @@
 {
-  "status": "pending",
-  "needed": 1,
-  "publishedSlug": "2026-family-3-5-home-essentials-buying-guide",
-  "requestedAt": "2026-07-17T06:30:01.398Z",
-  "writingMode": "stable",
-  "contentProfile": "checklist",
-  "toneVariant": "scenario-first",
-  "serpKeyword": "2026 electric blankets and heated mattress pads buying guide 사용법",
-  "serpCachePath": null,
-  "benchmarkOutline": null,
-  "fallbackFrom": "benchmark",
-  "fallbackReason": "SERP provider \"serper\" is not configured (SERPER_API_KEY missing)",
-  "season": "summer",
-  "seasonalEvents": [
-    "여름·방학",
-    "폭염·냉방"
-  ],
-  "contentPlan": "product",
-  "contentAngle": null,
-  "slugHint": null,
-  "topic": {
-    "id": "electric-blankets",
-    "category": "home-appliances",
-    "angle": "electric blankets and heated mattress pads: safety certifications, timers, and wash care",
-    "imageQuery": "electric blanket bed winter",
-    "liveData": false,
-    "seasons": [
-      "winter"
-    ],
-    "anchorTopicIds": null,
-    "isMetaAngle": false
-  },
-  "templatePath": "docs/templates/checklist.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: stable. Tone: scenario-first. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "status": "complete",
+  "completedAt": "2026-07-18T00:54:25.228Z",
+  "writtenSlug": "2026-cooling-mattress-pads-buying-guide",
+  "draftCount": 2,
   "lastError": null
 }

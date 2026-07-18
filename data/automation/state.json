@@ -37,7 +37,7 @@
   "scheduledGapHours": 5.7,
   "publishCountToday": 0,
   "publishDateKst": "2026-07-18",
-  "writeCountToday": 0,
+  "writeCountToday": 2,
   "writeDateKst": "2026-07-18",
   "history": [
     {
@@ -733,7 +733,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-17T23:38:29.350Z",
+    "at": "2026-07-18T00:37:59.389Z",
     "issueCount": 2,
     "issues": [
       {
@@ -743,7 +743,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1028min",
+        "message": "Cursor replenish pending 1087min",
         "severity": "warning"
       }
     ],
