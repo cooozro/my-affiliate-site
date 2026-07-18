@@ -8,12 +8,30 @@
  * Safety: READ published posts; WRITE only content/posts/aipick-seo-precision-report/ko.md
  */
 
+import fs from "fs";
+import path from "path";
+
 import { loadEnvFile, logGa4EnvStatus } from "../lib/load-env.mjs";
 import { runSeoAuditAnalysis } from "./seo-audit/analyze.mjs";
+import { buildAdsenseAnalysis } from "./seo-audit/adsense.mjs";
 import { fetchGaReportBundle } from "./seo-audit/ga-report.mjs";
 import { buildSeoAuditMarkdown } from "./seo-audit/report-builder.mjs";
 import { writeSeoAuditDraft } from "./seo-audit/draft-writer.mjs";
-import { SEO_AUDIT_SLUG } from "./seo-audit/constants.mjs";
+import { SEO_AUDIT_REPORT_JSON, SEO_AUDIT_SLUG } from "./seo-audit/constants.mjs";
+
+/** Reuse the last committed GA snapshot when live GA is unavailable (e.g. local run without keys). */
+function loadCachedGa(root) {
+  try {
+    const snapshotPath = path.join(root, SEO_AUDIT_REPORT_JSON);
+    const cached = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
+    if (cached?.ga?.traffic && cached.ga.meta?.connected) {
+      return cached.ga;
+    }
+  } catch {
+    // no usable cache
+  }
+  return null;
+}
 
 async function main() {
   loadEnvFile();
@@ -23,8 +41,23 @@ async function main() {
   console.log(`SEO audit starting — target draft: ${SEO_AUDIT_SLUG}`);
 
   const analysis = runSeoAuditAnalysis(root);
-  const ga = await fetchGaReportBundle({ topPagesLimit: 8 });
-  const { traffic, topPages, meta } = ga;
+  const adsense = buildAdsenseAnalysis(root);
+  console.log(
+    `[AdSense] readiness ${adsense.readiness}% — ${adsense.counted} indexed posts, ` +
+      `avg ${adsense.avg} (target ${adsense.target}), ${adsense.hiddenCount} quarantined`,
+  );
+
+  let ga = await fetchGaReportBundle({ topPagesLimit: 8 });
+  if (!ga.meta?.connected) {
+    const cached = loadCachedGa(root);
+    if (cached) {
+      console.warn(
+        `[GA4] live fetch unavailable (${ga.meta?.error ?? "unknown"}) — reusing last committed snapshot`,
+      );
+      ga = cached;
+    }
+  }
+  const { traffic, topPages = [], meta } = ga;
 
   if (meta.connected && traffic) {
     console.log(
@@ -36,9 +69,10 @@ async function main() {
     console.warn(`[GA4] not connected — ${meta.error ?? "unknown"}`);
   }
 
-  const markdown = buildSeoAuditMarkdown(analysis, { traffic, topPages, meta });
+  const markdown = buildSeoAuditMarkdown(analysis, { traffic, topPages, meta }, adsense);
   const { koPath, reportPath } = writeSeoAuditDraft(root, markdown, {
     ...analysis,
+    adsense,
     ga: { traffic, topPages, meta },
   });
 

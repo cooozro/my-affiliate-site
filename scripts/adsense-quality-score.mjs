@@ -4,10 +4,8 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import matter from "gray-matter";
-
-const root = path.join(process.cwd(), "content/posts");
-const outPath = path.join(process.cwd(), "data/automation/adsense-quality-score.json");
 
 const OEM = /\b[A-Z][A-Za-z0-9]{1,}[0-9][A-Za-z0-9-]{2,}\b/g;
 const BRANDS =
@@ -28,9 +26,9 @@ function isNoindex(data) {
   return /\bnoindex\b/i.test(robots);
 }
 
-function scorePost(slug) {
-  const koPath = path.join(root, slug, "ko.md");
-  const enPath = path.join(root, slug, "en.md");
+function scorePost(postsRoot, slug) {
+  const koPath = path.join(postsRoot, slug, "ko.md");
+  const enPath = path.join(postsRoot, slug, "en.md");
   if (!fs.existsSync(koPath) || !fs.existsSync(enPath)) return null;
   const ko = matter(fs.readFileSync(koPath, "utf8"));
   const en = matter(fs.readFileSync(enPath, "utf8"));
@@ -183,14 +181,6 @@ function scorePost(slug) {
   };
 }
 
-const slugs = fs
-  .readdirSync(root)
-  .filter((d) => fs.statSync(path.join(root, d)).isDirectory());
-
-const all = slugs.map(scorePost).filter(Boolean);
-const visible = all.filter((r) => !r.noindex);
-const hidden = all.filter((r) => r.noindex);
-
 const avg = (rows) =>
   rows.length
     ? Math.round(rows.reduce((s, r) => s + r.total, 0) / rows.length)
@@ -208,56 +198,83 @@ const actions = (rows) =>
     return a;
   }, {});
 
-const topicMap = {};
-for (const r of visible) {
-  const t = r.topicId || "(none)";
-  topicMap[t] = (topicMap[t] || 0) + 1;
+/**
+ * Compute the AdSense heuristic quality payload for all posts.
+ * Pure (no writes) so the SEO audit report can consume it directly.
+ * @param {string} [rootDir] project root
+ */
+export function computeAdsenseQuality(rootDir = process.cwd()) {
+  const postsRoot = path.join(rootDir, "content/posts");
+  const slugs = fs
+    .readdirSync(postsRoot)
+    .filter((d) => fs.statSync(path.join(postsRoot, d)).isDirectory());
+
+  const all = slugs.map((slug) => scorePost(postsRoot, slug)).filter(Boolean);
+  const visible = all.filter((r) => !r.noindex);
+  const hidden = all.filter((r) => r.noindex);
+
+  const topicMap = {};
+  for (const r of visible) {
+    const t = r.topicId || "(none)";
+    topicMap[t] = (topicMap[t] || 0) + 1;
+  }
+  const dupTopics = Object.entries(topicMap)
+    .filter(([, n]) => n >= 2)
+    .sort((a, b) => b[1] - a[1]);
+
+  visible.sort((a, b) => a.total - b.total || a.slug.localeCompare(b.slug));
+
+  return {
+    generatedAt: new Date().toISOString(),
+    counted: visible.length,
+    avg: avg(visible),
+    avgIncludingHidden: avg(all),
+    hiddenCount: hidden.length,
+    bands: bands(visible),
+    actions: actions(visible),
+    priorities: visible.reduce((a, r) => {
+      a[r.priority] = (a[r.priority] || 0) + 1;
+      return a;
+    }, {}),
+    dupTopics,
+    hidden: hidden.map((r) => ({
+      slug: r.slug,
+      total: r.total,
+      band: r.band,
+      title: r.title,
+    })),
+    rows: visible,
+  };
 }
-const dupTopics = Object.entries(topicMap)
-  .filter(([, n]) => n >= 2)
-  .sort((a, b) => b[1] - a[1]);
 
-visible.sort((a, b) => a.total - b.total || a.slug.localeCompare(b.slug));
+function runCli() {
+  const outPath = path.join(
+    process.cwd(),
+    "data/automation/adsense-quality-score.json",
+  );
+  const payload = computeAdsenseQuality(process.cwd());
+  fs.writeFileSync(outPath, JSON.stringify(payload, null, 2) + "\n");
+  console.log(
+    JSON.stringify(
+      {
+        visible: payload.counted,
+        avg: payload.avg,
+        avgAll: payload.avgIncludingHidden,
+        hidden: payload.hiddenCount,
+        bands: payload.bands,
+        priorities: payload.priorities,
+        lowest5: payload.rows.slice(0, 5).map((r) => `${r.total} ${r.slug}`),
+        top5: [...payload.rows]
+          .sort((a, b) => b.total - a.total)
+          .slice(0, 5)
+          .map((r) => `${r.total} ${r.slug}`),
+      },
+      null,
+      2,
+    ),
+  );
+}
 
-const payload = {
-  generatedAt: new Date().toISOString(),
-  counted: visible.length,
-  avg: avg(visible),
-  avgIncludingHidden: avg(all),
-  hiddenCount: hidden.length,
-  bands: bands(visible),
-  actions: actions(visible),
-  priorities: visible.reduce((a, r) => {
-    a[r.priority] = (a[r.priority] || 0) + 1;
-    return a;
-  }, {}),
-  dupTopics,
-  hidden: hidden.map((r) => ({
-    slug: r.slug,
-    total: r.total,
-    band: r.band,
-    title: r.title,
-  })),
-  rows: visible,
-};
-
-fs.writeFileSync(outPath, JSON.stringify(payload, null, 2) + "\n");
-console.log(
-  JSON.stringify(
-    {
-      visible: payload.counted,
-      avg: payload.avg,
-      avgAll: payload.avgIncludingHidden,
-      hidden: payload.hiddenCount,
-      bands: payload.bands,
-      priorities: payload.priorities,
-      lowest5: visible.slice(0, 5).map((r) => `${r.total} ${r.slug}`),
-      top5: [...visible]
-        .sort((a, b) => b.total - a.total)
-        .slice(0, 5)
-        .map((r) => `${r.total} ${r.slug}`),
-    },
-    null,
-    2,
-  ),
-);
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  runCli();
+}

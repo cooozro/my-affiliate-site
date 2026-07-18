@@ -23,6 +23,30 @@ export function progressBarLine(pct, width = 18) {
 }
 
 /**
+ * Compact emoji bar (no label) for use inside table cells.
+ * @param {number} pct 0–100
+ * @param {number} [width]
+ */
+export function miniBar(pct, width = 10) {
+  const clamped = Math.max(0, Math.min(100, Math.round(pct)));
+  const { emoji } = scoreStatus(clamped);
+  const filled = Math.round((clamped / 100) * width);
+  return emoji.repeat(filled) + "⬜".repeat(Math.max(0, width - filled));
+}
+
+/**
+ * Labeled progress bar with an explicit target annotation (for AdSense goals).
+ * @param {number} pct
+ * @param {string} [targetLabel]
+ * @param {string} [valueLabel]
+ */
+export function targetBarLine(pct, targetLabel = "목표 100%", valueLabel = "") {
+  const base = progressBarLine(pct);
+  const suffix = valueLabel ? ` — ${valueLabel}` : "";
+  return `${base}${suffix} · 🎯 ${targetLabel}`;
+}
+
+/**
  * @param {string} title
  * @param {number} pct
  * @param {string[]} bullets

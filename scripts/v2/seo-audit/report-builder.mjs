@@ -7,8 +7,10 @@ import {
   buildDashboardSummary,
   buildGa4SetupGuide,
   formatAtRiskBlock,
+  miniBar,
   progressBarLine,
   scoreStatus,
+  targetBarLine,
 } from "./report-visual.mjs";
 
 function kstNowLabel(iso) {
@@ -23,11 +25,141 @@ function fmtPct(n) {
   return `${n}%`;
 }
 
+function checkCell(ok) {
+  return ok ? "✅" : "⬜";
+}
+
+/**
+ * AdSense approval readiness — composite bar + per-indicator coverage bars.
+ * @param {object} adsense from buildAdsenseAnalysis
+ */
+function buildAdsenseReadinessSection(adsense) {
+  const lines = [];
+  const { icon, label } = scoreStatus(adsense.readiness);
+
+  lines.push("## AdSense 승인 준비도");
+  lines.push("");
+  lines.push(
+    "> Google 게시자 정책의 **‘가치가 낮은 콘텐츠(low-value content)’** 반려 사유를 " +
+      "정량 지표로 환산했습니다. 아래는 **AdSense 노출 대상(발행·색인) 글**만 집계합니다.",
+  );
+  lines.push("");
+  lines.push(`- **종합 준비도:** ${icon} **${adsense.readiness}%** _(${label})_`);
+  lines.push(
+    `- **집계 대상:** 발행·색인 글 **${adsense.counted}편** / 저품질 격리(noindex) **${adsense.hiddenCount}편**`,
+  );
+  lines.push(
+    `- **평균 품질 점수:** **${adsense.avg}점** (목표 ${adsense.target}점) · 색인 포함 전체 평균 ${adsense.avgIncludingHidden}점`,
+  );
+  lines.push(
+    `- **품질 등급:** ${Object.entries(adsense.bands)
+      .map(([b, n]) => `${b}등급 ${n}편`)
+      .join(" · ")}`,
+  );
+  lines.push("");
+  lines.push(progressBarLine(adsense.readiness));
+  lines.push("");
+
+  lines.push("### 승인 점검 지표 (달성률)");
+  lines.push("");
+  lines.push("| 지표 | 값 | 달성률 | 상태 | 시각화 |");
+  lines.push("| --- | --- | --- | --- | --- |");
+  for (const m of adsense.coverage) {
+    const { icon: mIcon } = scoreStatus(m.pct);
+    lines.push(
+      `| ${m.label} | ${m.value} | **${m.pct}%** | ${mIcon} | ${miniBar(m.pct)} |`,
+    );
+  }
+  lines.push("");
+  return lines;
+}
+
+/**
+ * Low-value-content resolution — the exact rejection reason, as bar charts.
+ * @param {object} adsense
+ */
+function buildLowValueSection(adsense) {
+  const lines = [];
+  lines.push("## 저가치 콘텐츠(Low-value content) 해결 지표");
+  lines.push("");
+  lines.push(
+    "> 심사 반려 사유였던 **‘가치가 별로 없는 콘텐츠’** 를 해소하기 위한 핵심 지표와 달성 상태입니다. " +
+      "각 막대는 발행·색인 글 중 해당 기준을 통과한 비율이며, 🎯 는 목표치입니다.",
+  );
+  lines.push("");
+  for (const m of adsense.lowValue) {
+    lines.push(`**${m.label}** (${m.value})`);
+    lines.push("");
+    lines.push(targetBarLine(m.pct, m.targetLabel ?? `목표 ${m.target}%`, ""));
+    lines.push("");
+  }
+
+  const gaps = adsense.lowValue.filter((m) => m.pct < (m.target ?? 100));
+  if (gaps.length === 0) {
+    lines.push(
+      "✅ **모든 저가치 판정 지표가 목표를 충족** — 반려 사유(빈약·정보성 부족 콘텐츠)에 대응하는 " +
+        "심층 분석·독자 판단·검증 신호·분량·근거가 색인 글 전반에 적용되었습니다.",
+    );
+  } else {
+    lines.push(
+      `⚠️ **미달 지표 ${gaps.length}건:** ${gaps
+        .map((m) => `${m.label} (${m.pct}%)`)
+        .join(", ")} — 해당 글을 우선 보강하세요.`,
+    );
+  }
+  lines.push("");
+  return lines;
+}
+
+/**
+ * Full published-post list with per-post AdSense check status (visualized).
+ * @param {object} adsense
+ */
+function buildFullPostListSection(adsense) {
+  const lines = [];
+  lines.push("## 전체 글 점검 상태");
+  lines.push("");
+  lines.push(
+    "> 발행·색인 글 전체의 품질 점수와 핵심 점검 통과 여부입니다. " +
+      "점검 열: **심층**(편집 해석+우려) · **판단**(평가 기준) · **검증**(교차 검증) · " +
+      "**분량**(≥4,500자) · **근거**(모델·근거) · **FAQ**(3쌍+).",
+  );
+  lines.push("");
+  lines.push("| # | Slug | 프로필 | 점수 | 점수바 | 등급 | 심층 | 판단 | 검증 | 분량 | 근거 | FAQ |");
+  lines.push("| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |");
+  adsense.checkRows.forEach((r, i) => {
+    const c = r.checks;
+    lines.push(
+      `| ${i + 1} | ${r.slug} | ${r.profile} | **${r.total}** | ${miniBar(r.total)} | ${r.band} | ` +
+        `${checkCell(c.depth)} | ${checkCell(c.judgment)} | ${checkCell(c.verified)} | ` +
+        `${checkCell(c.length)} | ${checkCell(c.evidence)} | ${checkCell(c.faq)} |`,
+    );
+  });
+  lines.push("");
+
+  if (adsense.hidden.length > 0) {
+    lines.push("### 저품질 격리(noindex) — AdSense 노출 제외");
+    lines.push("");
+    lines.push(
+      "품질 점수 미달로 색인에서 제외(noindex)해 사이트 전체 가치 희석을 방지한 글입니다.",
+    );
+    lines.push("");
+    lines.push("| Slug | 점수 | 등급 |");
+    lines.push("| --- | --- | --- |");
+    for (const h of adsense.hidden) {
+      lines.push(`| ${h.slug} | ${h.total} | ${h.band} |`);
+    }
+    lines.push("");
+  }
+  return lines;
+}
+
 /**
  * @param {object} analysis from runSeoAuditAnalysis
  * @param {{ traffic?: object|null, topPages?: Array, meta?: object }} ga
+ * @param {object|null} adsense from buildAdsenseAnalysis
  */
-export function buildSeoAuditMarkdown(analysis, ga = {}) {
+export function buildSeoAuditMarkdown(analysis, ga = {}, adsense = null) {
   const { traffic, topPages = [], meta } = ga;
   const lines = [];
 
@@ -50,6 +182,11 @@ export function buildSeoAuditMarkdown(analysis, ga = {}) {
   lines.push("");
 
   lines.push(...buildDashboardSummary(analysis));
+
+  if (adsense) {
+    lines.push(...buildAdsenseReadinessSection(adsense));
+    lines.push(...buildLowValueSection(adsense));
+  }
 
   lines.push("## Executive Summary");
   lines.push("");
@@ -175,6 +312,10 @@ export function buildSeoAuditMarkdown(analysis, ga = {}) {
   lines.push("### 주의 목록 (구조 < 60 또는 정책 이슈)");
   lines.push("");
   lines.push(...formatAtRiskBlock(analysis.atRisk));
+
+  if (adsense) {
+    lines.push(...buildFullPostListSection(adsense));
+  }
 
   lines.push("## 키워드 밀도 샘플 (EN 상위 글)");
   lines.push("");
