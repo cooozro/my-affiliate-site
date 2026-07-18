@@ -758,19 +758,16 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-18T10:49:21.496Z",
+    "at": "2026-07-18T10:52:55.936Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 129min",
+        "message": "Cursor replenish pending 132min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-portable-power-stations-buying-guide/en.md: publishedAt 2026-07-18T17:40:16.000Z → 2026-07-18T08:40:18.328Z",
-      "2026-portable-power-stations-buying-guide/ko.md: publishedAt 2026-07-18T17:40:16.000Z → 2026-07-18T08:40:18.328Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-18",
   "lastDailyContentAudit": {
