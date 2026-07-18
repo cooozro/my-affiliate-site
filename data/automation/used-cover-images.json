@@ -866,6 +866,24 @@
       "contentHash": "d51ee747b93ec8142ca009936b677a9b3f0c63e08882ff3ff4d65bfcb75ccb78",
       "provider": "pexels",
       "registeredAt": "2026-07-17T02:25:25.415Z"
+    },
+    {
+      "slug": "2026-cooling-mattress-pads-buying-guide",
+      "url": "https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg",
+      "assetKey": "pexels:8801681",
+      "hash": "8ee88dc63d6df0129eee871151a395a35ff4a40bf44eb8a28a4bc1926d21c362",
+      "contentHash": "8ee88dc63d6df0129eee871151a395a35ff4a40bf44eb8a28a4bc1926d21c362",
+      "provider": "pexels",
+      "registeredAt": "2026-07-18T00:55:36.433Z"
+    },
+    {
+      "slug": "2026-portable-power-stations-buying-guide",
+      "url": "https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg",
+      "assetKey": "pexels:37489593",
+      "hash": "29b496f8910bef365c7f576303f8b60c8f4eef5e7f09984fc7c5f380db04d3d5",
+      "contentHash": "29b496f8910bef365c7f576303f8b60c8f4eef5e7f09984fc7c5f380db04d3d5",
+      "provider": "pexels",
+      "registeredAt": "2026-07-18T00:55:36.445Z"
     }
   ]
 }
