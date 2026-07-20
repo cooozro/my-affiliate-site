@@ -884,6 +884,15 @@
       "contentHash": "29b496f8910bef365c7f576303f8b60c8f4eef5e7f09984fc7c5f380db04d3d5",
       "provider": "pexels",
       "registeredAt": "2026-07-18T00:55:36.445Z"
+    },
+    {
+      "slug": "2026-under-300-cross-category-head-to-head-guide",
+      "url": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+      "assetKey": "pexels:3183150",
+      "hash": "fd5b946c5f435f7cd064dbbad4ca27c20d7982f359081bb547fd6e3d95857e7c",
+      "contentHash": "fd5b946c5f435f7cd064dbbad4ca27c20d7982f359081bb547fd6e3d95857e7c",
+      "provider": "pexels",
+      "registeredAt": "2026-07-20T00:02:20.569Z"
     }
   ]
 }
