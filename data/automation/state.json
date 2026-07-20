@@ -784,13 +784,16 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-20T10:23:26.060Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": [
-      "2026-countertop-ice-makers-buying-guide/en.md: publishedAt 2026-07-20T17:28:49.000Z → 2026-07-20T08:28:51.349Z",
-      "2026-countertop-ice-makers-buying-guide/ko.md: publishedAt 2026-07-20T17:28:49.000Z → 2026-07-20T08:28:51.349Z"
-    ]
+    "at": "2026-07-20T10:33:26.556Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 124min",
+        "severity": "warning"
+      }
+    ],
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-07-20",
   "lastDailyContentAudit": {
