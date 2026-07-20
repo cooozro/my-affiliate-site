@@ -784,18 +784,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-20T08:28:49.310Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (208min past slot, KST 2026-07-20)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-20T10:23:26.060Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-countertop-ice-makers-buying-guide/en.md: publishedAt 2026-07-20T17:28:49.000Z → 2026-07-20T08:28:51.349Z",
+      "2026-countertop-ice-makers-buying-guide/ko.md: publishedAt 2026-07-20T17:28:49.000Z → 2026-07-20T08:28:51.349Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-20",
