@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-18T08:40:18.328Z",
-  "nextPublishAt": "2026-07-20T00:01:52.986Z",
-  "scheduledGapHours": 5.45,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-20T00:05:21.473Z",
+  "nextPublishAt": "2026-07-20T05:00:13.554Z",
+  "scheduledGapHours": 4.91,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-20",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-20",
@@ -576,15 +576,22 @@
         "https://www.aipick.shop/en/blog/2026-portable-power-stations-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-portable-power-stations-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-under-300-cross-category-head-to-head-guide",
+      "topic": {
+        "id": "meta-under-300-cross-category",
+        "category": "cross-cutting"
+      },
+      "at": "2026-07-20T00:05:21.473Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-under-300-cross-category-head-to-head-guide",
+        "https://www.aipick.shop/ko/blog/2026-under-300-cross-category-head-to-head-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "fitness-trackers",
-      "category": "wearables",
-      "taxonomyGroup": "IT/모바일",
-      "at": "2026-07-07T03:34:46.047Z"
-    },
     {
       "id": "fitness-trackers",
       "at": "2026-07-07T04:35:40.878Z"
@@ -732,10 +739,14 @@
       "id": "portable-power-stations",
       "cluster": "power-charging",
       "at": "2026-07-18T08:40:18.332Z"
+    },
+    {
+      "id": "meta-under-300-cross-category",
+      "category": "cross-cutting",
+      "at": "2026-07-20T00:05:21.478Z"
     }
   ],
   "formatHistory": [
-    "head-to-head",
     "scenario-guide",
     "checklist",
     "buying-guide",
@@ -754,17 +765,18 @@
     "head-to-head",
     "buying-guide",
     "scenario-guide",
-    "head-to-head"
+    "head-to-head",
+    "explainer"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-20T00:01:52.986Z",
+    "at": "2026-07-20T00:05:19.373Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (12min past slot, KST 2026-07-20)",
-        "severity": "error"
+        "message": "Publish ready but no post went live (3min past slot, KST 2026-07-20)",
+        "severity": "warning"
       }
     ],
     "repairs": [
@@ -896,6 +908,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-07-18T03:46:36.024Z"
+    },
+    {
+      "id": "under-300-cross-category",
+      "type": "price-tier-cross",
+      "at": "2026-07-20T00:05:21.512Z"
     }
   ]
 }

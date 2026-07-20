@@ -893,6 +893,15 @@
       "contentHash": "fd5b946c5f435f7cd064dbbad4ca27c20d7982f359081bb547fd6e3d95857e7c",
       "provider": "pexels",
       "registeredAt": "2026-07-20T00:02:20.569Z"
+    },
+    {
+      "slug": "2026-countertop-ice-makers-buying-guide",
+      "url": "https://images.pexels.com/photos/11931271/pexels-photo-11931271.jpeg",
+      "assetKey": "pexels:11931271",
+      "hash": "c4fd3eb4d033645c64823604b37026e9ff66d4ae0eab6060b26e310ac559c28f",
+      "contentHash": "c4fd3eb4d033645c64823604b37026e9ff66d4ae0eab6060b26e310ac559c28f",
+      "provider": "pexels",
+      "registeredAt": "2026-07-20T00:05:21.763Z"
     }
   ]
 }

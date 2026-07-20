@@ -1,11 +1,7 @@
 ---
-title: >-
-  30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기
-description: >-
-  약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에
-  가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+title: '30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기'
+description: 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 date: '2026-07-20'
-createdAt: '2026-07-20T01:00:00.000Z'
 tags:
   - 30만원
   - 교차 카테고리
@@ -17,7 +13,7 @@ contentAngle: under-300-cross-category
 topicId: meta-under-300-cross-category
 writingMode: benchmark
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - budget home tech desk
@@ -25,17 +21,16 @@ imageSearchKeywords:
   - summer gadgets comparison
 coverImage: >-
   /images/posts/2026-under-300-cross-category-head-to-head-guide/budget-home-tech-desk-cover.jpg
-coverImageAlt: >-
-  budget monitor fan power bank and speaker gadgets on a shared home desk
-coverImageAltKo: >-
-  책상 위 가성비 모니터 선풍기 보조배터리 스피커 홈테크
+coverImageAlt: budget monitor fan power bank and speaker gadgets on a shared home desk
+coverImageAltKo: 책상 위 가성비 모니터 선풍기 보조배터리 스피커 홈테크
 coverImageCredit: Photo by fauxels / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '3183150'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1280
+updatedAt: '2026-07-20T09:05:19.000Z'
+publishedAt: '2026-07-20T09:05:19.000Z'
 ---
-
 ## 편집부 개요
 
 > 독립 테크 리뷰 매체 AI Pick & Report는 **약 $300 / {{krw:300}}라는 하나의 단단한 상한**에서 서로 무관한 여름 홈테크 다섯 축을 비교합니다. 기준일은 {{today_locale}}, 가격은 2026년 중반 공개 정가·제조사 스펙입니다. 단일 매대 TOP 5가 아닙니다. 폭염 임대 주택이나 방학 가정이 그 한도 안에서 카트를 하나만 채울 때, 기회비용이 결정을 가릅니다. 27인치 QHD 모니터, 전실 순환 선풍기, 24,000 mAh급 보조배터리, 테라스용 블루투스 스피커, 컴팩트 HEPA 청정기는 각각 다른 종류의 일상 쾌적함을 삽니다. 편집부는 카테고리 승자를 서로 교차 검증해, 같은 예산 티어를 한 번만 — 의도적으로 — 쓰도록 돕습니다.

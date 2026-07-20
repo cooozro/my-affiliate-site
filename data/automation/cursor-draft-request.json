@@ -1,7 +1,118 @@
 {
-  "status": "complete",
-  "completedAt": "2026-07-20T00:00:09.424Z",
-  "writtenSlug": "2026-under-300-cross-category-head-to-head-guide",
-  "draftCount": 2,
+  "status": "pending",
+  "needed": 1,
+  "publishedSlug": "2026-under-300-cross-category-head-to-head-guide",
+  "requestedAt": "2026-07-20T00:05:21.522Z",
+  "writingMode": "benchmark",
+  "contentProfile": "explainer",
+  "toneVariant": "case-study",
+  "serpKeyword": "best home tech under 300 dollars cross category comparison 2026",
+  "serpCachePath": null,
+  "benchmarkOutline": {
+    "sections": [
+      {
+        "h2": "Why compare across categories at one price ceiling",
+        "h3": [
+          "Opportunity cost when every aisle hits $299",
+          "What $300 buys in 2026 vs last year",
+          "Methodology: public specs only"
+        ]
+      },
+      {
+        "h2": "TOP 5 cross-category picks at or under $300",
+        "h3": [
+          "Ranked table with category column",
+          "Reference MSRP as of {{today}}"
+        ]
+      },
+      {
+        "h2": "Category deep dive: Display and desk",
+        "h3": [
+          "Monitor panel and ergonomics",
+          "Analysis takeaway"
+        ]
+      },
+      {
+        "h2": "Category deep dive: Comfort and climate",
+        "h3": [
+          "Fan CFM per watt",
+          "Purifier CADR per dollar"
+        ]
+      },
+      {
+        "h2": "Category deep dive: Mobile and audio",
+        "h3": [
+          "Power bank Wh per dollar",
+          "Speaker IP rating and runtime"
+        ]
+      },
+      {
+        "h2": "Scenario matrix: which $300 pick for which life situation",
+        "h3": [
+          "WFH upgrade",
+          "Summer heat",
+          "Travel season",
+          "Dorm or studio"
+        ]
+      },
+      {
+        "h2": "FAQ",
+        "h3": [
+          "Is one $300 monitor better than five $60 gadgets?",
+          "How to split $300 across two categories",
+          "When to wait for a sale on one flagship vs two budget picks"
+        ]
+      },
+      {
+        "h2": "Five checks before you buy at this tier"
+      },
+      {
+        "h2": "Final Verdict",
+        "h3": [
+          "Buy if",
+          "Skip if"
+        ]
+      }
+    ],
+    "toneVariant": "case-study",
+    "keyword": "best home tech under 300 dollars cross category comparison 2026",
+    "serpSources": [],
+    "h2Similarity": 0,
+    "shingleOverlap": 0,
+    "embedded": true
+  },
+  "fallbackFrom": null,
+  "fallbackReason": null,
+  "season": "summer",
+  "seasonalEvents": [
+    "여름·방학",
+    "폭염·냉방"
+  ],
+  "contentPlan": "meta",
+  "contentAngle": "under-300-cross-category",
+  "slugHint": "2026-under-300-cross-category-explainer-guide",
+  "topic": {
+    "id": "meta-under-300-cross-category",
+    "category": "cross-cutting",
+    "angle": "Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
+    "imageQuery": "budget home tech gadgets desk",
+    "liveData": true,
+    "seasons": [
+      "summer",
+      "spring",
+      "fall",
+      "winter"
+    ],
+    "anchorTopicIds": [
+      "budget-monitors",
+      "electric-fans",
+      "power-banks",
+      "bluetooth-speakers",
+      "air-purifiers"
+    ],
+    "isMetaAngle": true
+  },
+  "templatePath": "docs/templates/explainer.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: benchmark. Tone: case-study. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (price-tier-cross): Under $300 cross-category / 30만 원대 교차 카테고리. Cover multiple product categories in ONE article — anchor categories: budget-monitors, electric-fans, power-banks, bluetooth-speakers, air-purifiers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-under-300-cross-category-explainer-guide. Frontmatter: contentAngle: under-300-cross-category, topicId: meta-under-300-cross-category. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

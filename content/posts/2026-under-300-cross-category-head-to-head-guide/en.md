@@ -4,7 +4,6 @@ description: >-
   Cross-category head-to-head under $300 — which summer home-tech aisle buys the
   most daily comfort for a heatwave or school-break household.
 date: '2026-07-20'
-createdAt: '2026-07-20T01:00:00.000Z'
 tags:
   - under 300
   - cross category
@@ -16,7 +15,7 @@ contentAngle: under-300-cross-category
 topicId: meta-under-300-cross-category
 writingMode: benchmark
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - budget home tech desk
@@ -31,7 +30,8 @@ coverImageProvider: pexels
 coverImageAssetId: '3183150'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-19T23:59:16.519Z'
+updatedAt: '2026-07-20T09:05:19.000Z'
+publishedAt: '2026-07-20T09:05:19.000Z'
 ---
 ## Editorial Overview
 
