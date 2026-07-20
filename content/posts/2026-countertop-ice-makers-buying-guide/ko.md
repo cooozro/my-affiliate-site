@@ -1,10 +1,7 @@
 ---
 title: '소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용'
-description: >-
-  여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수,
-  소음·세척·3년 총비용으로 비교합니다.
+description: '여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.'
 date: '2026-07-20'
-createdAt: '2026-07-20T01:10:00.000Z'
 tags:
   - 카운터톱 제빙기
   - 주방가전
@@ -14,7 +11,7 @@ tags:
 contentProfile: buying-guide
 topicId: ice-makers
 topicCluster: kitchen-appliances
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - countertop ice maker kitchen
@@ -31,6 +28,8 @@ coverImageProvider: pexels
 coverImageAssetId: '11931271'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/11931271/pexels-photo-11931271.jpeg?auto=compress&cs=tinysrgb&w=1280
+updatedAt: '2026-07-20T08:28:52.336Z'
+publishedAt: '2026-07-20T17:28:49.000Z'
 ---
 ## 편집부 개요
 
@@ -226,12 +225,11 @@ coverImageSourceUrl: >-
 
 ## 관련 가이드
 
-- [폭염철 수분 섭취: 카운터 설치·필터 수명·설치비로 본 정수기](/ko/blog/2026-water-purifiers-buying-guide)
-- [냉장고 구매 가이드: 용량, 효율, 주방 핏](/ko/blog/2026-refrigerators-buying-guide)
-- [선풍기 구매 가이드: 풍량, 소음, 하루 전력](/ko/blog/2026-electric-fans-buying-guide)
-- [습한 여름 방: 제습기 용량, 소음, 운영비](/ko/blog/2026-dehumidifiers-guide)
-- [냉각 매트리스 패드: 폭염 수면을 위한 능동 vs 수동](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-
+- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 2026 여름 주방용 정수기 5종 — 상판형·싱크대 하부 설치, 필터 교체 비용, TDS 저감, 무더위 수분 보충 시나리오별 추천.
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
 ## 구매 전 체크
 
 1. **카운터 깊이와 후면 여유를 재세요** — 많은 제품이 배기를 위해 뒤쪽에 수 인치가 필요합니다. 벽에 밀착하면 출력이 줄고 소음이 커집니다.

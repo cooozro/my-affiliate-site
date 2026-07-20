@@ -6,7 +6,6 @@ description: >-
   Summer apartment ice makers compared — nugget vs bullet ice, lbs per day, tank
   vs continuous fill, noise, cleaning, and three-year ownership cost.
 date: '2026-07-20'
-createdAt: '2026-07-20T01:10:00.000Z'
 tags:
   - countertop ice maker
   - kitchen appliances
@@ -16,7 +15,7 @@ tags:
 contentProfile: buying-guide
 topicId: ice-makers
 topicCluster: kitchen-appliances
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - countertop ice maker kitchen
@@ -33,7 +32,8 @@ coverImageProvider: pexels
 coverImageAssetId: '11931271'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/11931271/pexels-photo-11931271.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-20T00:00:03.304Z'
+updatedAt: '2026-07-20T08:28:51.448Z'
+publishedAt: '2026-07-20T17:28:49.000Z'
 ---
 ## Editorial Overview
 
@@ -229,12 +229,11 @@ Not wisely in hard-water regions. Scale reduces efficiency, clouds ice, and shor
 
 ## Related guides
 
-- [Heat-season hydration: water purifiers by countertop fit, filter life, and install cost](/en/blog/2026-water-purifiers-buying-guide)
-- [Refrigerator buying guide: capacity, efficiency, and kitchen fit](/en/blog/2026-refrigerators-buying-guide)
-- [Electric fans buying guide: CFM, dB, and daily kWh for hot rooms](/en/blog/2026-electric-fans-buying-guide)
-- [Humid summer rooms: dehumidifier pint capacity, noise, and running cost](/en/blog/2026-dehumidifiers-guide)
-- [Cooling mattress pads: active vs passive for heatwave sleep](/en/blog/2026-cooling-mattress-pads-buying-guide)
-
+- [Heat-Season Hydration: Five Water Purifiers by Countertop Fit, Filter Life, TDS, and Install Cost](/en/blog/2026-water-purifiers-buying-guide) — Five water purifiers for summer kitchens — countertop vs under-sink install, filter repla…
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — Five French-door fridges compared by cu ft per household, Energy Star kWh, open-kitchen n…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave Sleep](/en/blog/2026-cooling-mattress-pads-buying-guide) — Active water, forced-air, and passive cooling toppers compared for heatwave nights — with…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
 ## Five checks before you buy
 
 1. **Measure counter depth and rear clearance** — Many units need several inches behind for exhaust; a flush wall placement throttles output and raises noise.

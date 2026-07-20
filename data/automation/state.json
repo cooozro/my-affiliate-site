@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-20T00:05:21.473Z",
-  "nextPublishAt": "2026-07-20T05:00:13.554Z",
-  "scheduledGapHours": 4.91,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-20T08:28:51.349Z",
+  "nextPublishAt": "2026-07-21T01:52:00.000Z",
+  "scheduledGapHours": 4.87,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-20",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-20",
@@ -589,13 +589,22 @@
         "https://www.aipick.shop/en/blog/2026-under-300-cross-category-head-to-head-guide",
         "https://www.aipick.shop/ko/blog/2026-under-300-cross-category-head-to-head-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-countertop-ice-makers-buying-guide",
+      "topic": {
+        "id": "ice-makers",
+        "cluster": "kitchen-appliances"
+      },
+      "at": "2026-07-20T08:28:51.349Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-countertop-ice-makers-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-countertop-ice-makers-buying-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "fitness-trackers",
-      "at": "2026-07-07T04:35:40.878Z"
-    },
     {
       "id": "tablet-budget",
       "at": "2026-07-08T02:58:57.560Z"
@@ -744,6 +753,11 @@
       "id": "meta-under-300-cross-category",
       "category": "cross-cutting",
       "at": "2026-07-20T00:05:21.478Z"
+    },
+    {
+      "id": "ice-makers",
+      "cluster": "kitchen-appliances",
+      "at": "2026-07-20T08:28:51.356Z"
     }
   ],
   "formatHistory": [
@@ -770,19 +784,25 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-20T00:10:14.707Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-07-20T08:28:49.310Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (208min past slot, KST 2026-07-20)",
+        "severity": "error"
+      }
+    ],
     "repairs": [
-      "2026-under-300-cross-category-head-to-head-guide/en.md: publishedAt 2026-07-20T09:05:19.000Z → 2026-07-20T00:05:21.473Z",
-      "2026-under-300-cross-category-head-to-head-guide/ko.md: publishedAt 2026-07-20T09:05:19.000Z → 2026-07-20T00:05:21.473Z"
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-19",
+  "lastDailyContentAuditKst": "2026-07-20",
   "lastDailyContentAudit": {
-    "at": "2026-07-19T14:44:21.054Z",
-    "postsScanned": 45,
-    "autoRepairCount": 26,
+    "at": "2026-07-20T08:28:54.013Z",
+    "postsScanned": 48,
+    "autoRepairCount": 28,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [

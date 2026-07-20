@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: '3183150'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-20T09:05:19.000Z'
+updatedAt: '2026-07-20T08:28:51.477Z'
 publishedAt: '2026-07-20T00:05:21.473Z'
 ---
 ## Editorial Overview
@@ -244,12 +244,11 @@ Reserve **15–20%** for the hidden kit: HDMI cable and VESA arm (monitor), extr
 
 ## Related guides
 
-- [Electric Fans Buying Guide: CFM, Noise, and Summer Electricity](/en/blog/2026-electric-fans-buying-guide) — circulator vs tower detail
-- [Budget Monitors: 27-Inch Panels Worth Buying Under a Hard Cap](/en/blog/2026-budget-monitors-buying-guide) — QHD vs FHD desk picks
-- [Air Purifiers Guide: CADR, Filters, and Closed-Window Summers](/en/blog/2026-air-purifiers-guide) — HEPA sizing and filter TCO
-- [Budget Power Banks: Capacity, Wattage, and Travel Wh Rules](/en/blog/2026-budget-power-banks-guide) — Anker-class PD cross-check
-- [Summer Bluetooth Speakers: IPX, Battery, and Patio Volume](/en/blog/2026-summer-bluetooth-speakers-guide) — portable audio scenarios
-
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Anker-class PD cross-check
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — portable audio scenarios
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — circulator vs tower detail
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — HEPA sizing and filter TCO
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — QHD vs FHD desk picks
 ## Final Verdict
 
 Under a hard **$300 / {{krw:300}}** ceiling, the winning aisle is the one that removes the **most repeated summer friction**, not the one with the flashiest unboxing. Editorial standard after cross-checks: fund **heat sensation or sealed-room air quality** before leisure audio when nights are miserable; fund **desk pixels** when weekday screen hours dominate; fund **portable Wh** when the household lives between outlets outdoors.

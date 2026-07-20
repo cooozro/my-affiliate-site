@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: '3183150'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-20T09:05:19.000Z'
+updatedAt: '2026-07-20T08:28:51.479Z'
 publishedAt: '2026-07-20T00:05:21.473Z'
 ---
 ## 편집부 개요
@@ -242,12 +242,11 @@ publishedAt: '2026-07-20T00:05:21.473Z'
 
 ## 관련 가이드
 
-- [선풍기 구매 가이드: CFM, 소음, 여름 전기](/ko/blog/2026-electric-fans-buying-guide) — 순환기 vs 타워 상세
-- [가성비 모니터: 단단한 한도 아래 살 만한 27인치](/ko/blog/2026-budget-monitors-buying-guide) — QHD vs FHD 책상 픽
-- [공기청정기 가이드: CADR, 필터, 창문 닫은 여름](/ko/blog/2026-air-purifiers-guide) — HEPA 사이징과 필터 TCO
-- [가성비 보조배터리: 용량, 와트, 여행 Wh 규칙](/ko/blog/2026-budget-power-banks-guide) — Anker급 PD 교차 검증
-- [여름 블루투스 스피커: IPX, 배터리, 테라스 볼륨](/ko/blog/2026-summer-bluetooth-speakers-guide) — 휴대 오디오 시나리오
-
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — Anker급 PD 교차 검증
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 휴대 오디오 시나리오
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 순환기 vs 타워 상세
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — HEPA 사이징과 필터 TCO
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — QHD vs FHD 책상 픽
 ## 최종 평가
 
 단단한 **$300 / {{krw:300}}** 천장에서 이기는 매대는 개봉이 화려한 쪽이 아니라 **반복되는 여름 마찰을 가장 많이 없애는** 쪽입니다. 교차 검증 후 편집부 기준: 밤이 비참하면 여가 오디오보다 **열 체감·밀폐 공기질**을 먼저, 평일 화면 시간이 지배하면 **책상 픽셀**을, 야외 콘센트 사이를 살면 **휴대 Wh**를 사십시오.
