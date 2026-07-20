@@ -902,6 +902,15 @@
       "contentHash": "c4fd3eb4d033645c64823604b37026e9ff66d4ae0eab6060b26e310ac559c28f",
       "provider": "pexels",
       "registeredAt": "2026-07-20T00:05:21.763Z"
+    },
+    {
+      "slug": "2026-summer-solo-heat-essentials-checklist",
+      "url": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+      "assetKey": "pexels:1571460",
+      "hash": "029028a4437c644cfb9216138b0d7eb43f3968f4a4e6da12e9642bbf79ed9f64",
+      "contentHash": "029028a4437c644cfb9216138b0d7eb43f3968f4a4e6da12e9642bbf79ed9f64",
+      "provider": "pexels",
+      "registeredAt": "2026-07-20T00:10:15.201Z"
     }
   ]
 }
