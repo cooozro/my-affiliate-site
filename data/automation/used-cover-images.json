@@ -911,6 +911,24 @@
       "contentHash": "029028a4437c644cfb9216138b0d7eb43f3968f4a4e6da12e9642bbf79ed9f64",
       "provider": "pexels",
       "registeredAt": "2026-07-20T00:10:15.201Z"
+    },
+    {
+      "slug": "2026-compact-footprint-cross-category-scenario-guide",
+      "url": "https://images.pexels.com/photos/6980571/pexels-photo-6980571.jpeg",
+      "assetKey": "pexels:6980571",
+      "hash": "5978a791d9b579a230e5520ea83e9db2cc8b2b4dc7c29fafbacd1998f2521fce",
+      "contentHash": "5978a791d9b579a230e5520ea83e9db2cc8b2b4dc7c29fafbacd1998f2521fce",
+      "provider": "pexels",
+      "registeredAt": "2026-07-21T10:11:51.275Z"
+    },
+    {
+      "slug": "2026-heatwave-blackout-home-readiness-checklist",
+      "url": "https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg",
+      "assetKey": "pexels:37489595",
+      "hash": "121bc04188bdc797b2d29c81208e04b187d17b9c70689329bf5bbeb869c2ec78",
+      "contentHash": "121bc04188bdc797b2d29c81208e04b187d17b9c70689329bf5bbeb869c2ec78",
+      "provider": "pexels",
+      "registeredAt": "2026-07-21T10:11:51.287Z"
     }
   ]
 }
