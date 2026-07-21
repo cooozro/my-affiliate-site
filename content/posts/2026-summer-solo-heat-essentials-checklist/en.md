@@ -5,7 +5,7 @@ title: >-
 description: >-
   Seven pre-buy checks for one-person heatwave apartments — cooling, air,
   humidity, desk load, and low-heat meals without appliance sprawl.
-date: '2026-07-20'
+date: '2026-07-21'
 tags:
   - checklist
   - solo apartment
@@ -18,13 +18,12 @@ topicId: meta-solo-apartment-essentials
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - solo apartment living room summer
   - apartment fan cooling
   - small apartment essentials
-createdAt: '2026-07-20T01:20:00.000Z'
 coverImage: >-
   /images/posts/2026-summer-solo-heat-essentials-checklist/solo-apartment-summer-fan-cover.jpg
 coverImageAlt: solo apartment living room with electric fan for summer cooling
@@ -34,6 +33,8 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
+updatedAt: '2026-07-21T02:01:11.150Z'
+publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## Editorial Overview
 
