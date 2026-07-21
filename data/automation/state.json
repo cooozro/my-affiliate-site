@@ -33,9 +33,9 @@
     "dishwashers"
   ],
   "lastPublishAt": "2026-07-20T08:28:51.349Z",
-  "nextPublishAt": "2026-07-21T02:58:00.000Z",
+  "nextPublishAt": "2026-07-21T07:56:27.688Z",
   "scheduledGapHours": 5.97,
-  "publishCountToday": 0,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-21",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-21",
@@ -784,21 +784,34 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-21T00:15:51.560Z",
-    "issueCount": 2,
+    "at": "2026-07-21T07:56:27.597Z",
+    "issueCount": 4,
     "issues": [
       {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (298min past slot, KST 2026-07-21)",
+        "severity": "error"
+      },
+      {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 1/2",
+        "message": "Draft buffer 0/2",
         "severity": "info"
       },
       {
+        "code": "homepage-featured-mismatch",
+        "message": "Home featured is 2026-summer-solo-heat-essentials-checklist, expected latest 2026-countertop-ice-makers-buying-guide",
+        "severity": "warning"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 947min",
+        "message": "Cursor replenish pending 1407min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-20",
   "lastDailyContentAudit": {
