@@ -1,10 +1,9 @@
 ---
 title: 'Compact Appliances by Scenario: What Earns Space in a Small Home?'
 description: >-
-  Five compact-appliance scenarios compare cooling, humidity, cooking, rice,
-  and floor care by footprint, running cost, and maintenance.
+  Five compact-appliance scenarios compare cooling, humidity, cooking, rice, and
+  floor care by footprint, running cost, and maintenance.
 date: '2026-07-21'
-createdAt: '2026-07-21T09:54:00.000Z'
 tags:
   - compact appliances
   - small apartment
@@ -17,12 +16,22 @@ topicId: meta-compact-footprint-appliances
 topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - compact appliances small apartment
   - portable air conditioner small room
   - compact kitchen appliances
+coverImage: >-
+  /images/posts/2026-compact-footprint-cross-category-scenario-guide/compact-kitchen-appliances-cover.jpg
+coverImageAlt: compact kitchen appliances and portable AC in a space-saving apartment layout
+coverImageAltKo: 이동식 에어컨과 소형 가전을 배치한 공간 절약형 아파트
+coverImageCredit: Photo by Max Vakhtbovych / Pexels
+coverImageProvider: pexels
+coverImageAssetId: '6980571'
+coverImageSourceUrl: 'https://images.pexels.com/photos/6980571/pexels-photo-6980571.jpeg'
+updatedAt: '2026-07-21T10:10:21.603Z'
+publishedAt: '2026-07-21T10:10:16.000Z'
 ---
 ## Editorial Overview
 
@@ -328,11 +337,10 @@ A dehumidifier on a verified continuous drain and a robot in a cleared dry-floor
 ## Related guides
 
 - [Compact Footprint Face-Off: Portable AC vs Dehumidifier vs Air Fryer vs Robot Dock](/en/blog/2026-compact-footprint-cross-category-head-to-head-guide) — compares the geometry of these categories before a scenario gets the space.
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — explains efficiency, installation, and hose trade-offs.
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — expands the capacity, drain, and energy calculations.
 - [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — matches dock and navigation choices to apartment layouts.
-- [Portable Induction Cooktops: Wattage, Pan Fit, and Small-Kitchen Safety](/en/blog/2026-induction-cooktops-buying-guide) — covers another high-draw option competing for compact kitchen space.
-
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — expands the capacity, drain, and energy calculations.
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — explains efficiency, installation, and hose trade-offs.
+- [Portable vs Built-In Induction: Five Cooktops for Cooler Summer Kitchens](/en/blog/2026-induction-cooktops-buying-guide) — covers another high-draw option competing for compact kitchen space.
 ## Final Verdict
 
 Compact living rewards **task frequency and working clearance**, not the smallest box. For a heatwave sleep problem, buy the **Midea Duo MAP12S1TBL** only when fixed window cooling is unavailable and the hose can remain short and sealed. For a room that is already cool but damp, buy the **Midea Cube MAD20S1QWT** and solve the drain path first. On the counter, choose **Ninja AF101** for frequent crisp meals or **Zojirushi NS-LGC05** for daily rice—do not keep both out by default. For floors, buy the **eufy C10** only when its dock approach remains clear through a normal school-break week.

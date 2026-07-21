@@ -21,6 +21,15 @@ imageSearchKeywords:
   - family heatwave preparedness
   - portable power station home outage
 createdAt: '2026-07-21T09:54:00.000Z'
+coverImage: >-
+  /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
+coverImageAlt: portable power station and power bank carried for apartment blackout readiness
+coverImageAltKo: 아파트 정전 대비용 휴대용 파워스테이션과 보조배터리
+coverImageCredit: Photo by Amar Preciado / Pexels
+coverImageProvider: pexels
+coverImageAssetId: '37489595'
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg
 ---
 ## Editorial Overview
 

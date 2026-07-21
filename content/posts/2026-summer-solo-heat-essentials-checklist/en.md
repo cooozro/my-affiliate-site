@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-21T02:01:11.150Z'
+updatedAt: '2026-07-21T10:10:21.626Z'
 publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## Editorial Overview
@@ -141,14 +141,11 @@ Because a “slim” tower that erases the bed-to-door lane creates tip-over and
 
 ## Related guides
 
-- [Solo apartment essentials scenario guide](/en/blog/2026-solo-apartment-home-essentials-scenario-guide)
-- [Electric fans: CFM, dB, daily kWh](/en/blog/2026-electric-fans-buying-guide)
-- [Dehumidifiers for humid summers](/en/blog/2026-dehumidifiers-guide)
-- [Air purifiers: CADR and filter cost](/en/blog/2026-air-purifiers-guide)
-- [Under $300 cross-category face-off](/en/blog/2026-under-300-cross-category-head-to-head-guide)
-
----
-
+- [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — Solo apartment picks across fans, purifiers, earbuds, fryers, and robot vacuums — five se…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
 ## Final Verdict
 
 For one-person heatwave apartments, **measure pass-through and AC-delay potential first**, then air quality or moisture, then desk and low-heat cooking. Do not let a single category sprawl claim the floor. Editorial bottom line: the checklist order above protects three-year TCO better than stacking five “summer must-haves” in one weekend.

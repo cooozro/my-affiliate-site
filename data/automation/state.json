@@ -32,12 +32,12 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-20T08:28:51.349Z",
-  "nextPublishAt": "2026-07-21T09:45:07.535Z",
-  "scheduledGapHours": 5.97,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-21T10:10:17.516Z",
+  "nextPublishAt": "2026-07-22T01:28:00.000Z",
+  "scheduledGapHours": 4.47,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-21",
-  "writeCountToday": 0,
+  "writeCountToday": 2,
   "writeDateKst": "2026-07-21",
   "history": [
     {
@@ -602,13 +602,23 @@
         "https://www.aipick.shop/en/blog/2026-countertop-ice-makers-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-countertop-ice-makers-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-compact-footprint-cross-category-scenario-guide",
+      "topic": {
+        "id": "meta-compact-footprint-appliances",
+        "category": "cross-cutting",
+        "cluster": "capacity-tier"
+      },
+      "at": "2026-07-21T10:10:17.516Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-compact-footprint-cross-category-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-compact-footprint-cross-category-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "tablet-budget",
-      "at": "2026-07-08T02:58:57.560Z"
-    },
     {
       "id": "cordless-vacuums",
       "category": "smart-home",
@@ -758,6 +768,12 @@
       "id": "ice-makers",
       "cluster": "kitchen-appliances",
       "at": "2026-07-20T08:28:51.356Z"
+    },
+    {
+      "id": "meta-compact-footprint-appliances",
+      "category": "cross-cutting",
+      "cluster": "capacity-tier",
+      "at": "2026-07-21T10:10:17.528Z"
     }
   ],
   "formatHistory": [
@@ -784,39 +800,15 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-21T09:45:07.433Z",
-    "issueCount": 4,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (24min past slot, KST 2026-07-21)",
-        "severity": "error"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 0/2",
-        "severity": "info"
-      },
-      {
-        "code": "homepage-featured-mismatch",
-        "message": "Home featured is 2026-summer-solo-heat-essentials-checklist, expected latest 2026-countertop-ice-makers-buying-guide",
-        "severity": "warning"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1516min",
-        "severity": "warning"
-      }
-    ],
-    "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
-    ]
+    "at": "2026-07-21T10:10:45.464Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": []
   },
-  "lastDailyContentAuditKst": "2026-07-20",
+  "lastDailyContentAuditKst": "2026-07-21",
   "lastDailyContentAudit": {
-    "at": "2026-07-20T08:28:54.013Z",
-    "postsScanned": 48,
+    "at": "2026-07-21T10:10:25.503Z",
+    "postsScanned": 50,
     "autoRepairCount": 28,
     "manualReviewCount": 0
   },

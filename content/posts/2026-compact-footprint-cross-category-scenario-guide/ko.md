@@ -1,9 +1,7 @@
 ---
 title: '소형 가전 시나리오 가이드: 좁은 집에서 자리를 줄 제품은?'
-description: >-
-  냉방, 습도, 간편 조리, 밥, 바닥 청소를 다섯 생활 시나리오로 나눠 설치 면적과 전기료, 소모품, 관리 부담까지 비교합니다.
+description: '냉방, 습도, 간편 조리, 밥, 바닥 청소를 다섯 생활 시나리오로 나눠 설치 면적과 전기료, 소모품, 관리 부담까지 비교합니다.'
 date: '2026-07-21'
-createdAt: '2026-07-21T09:54:00.000Z'
 tags:
   - 소형 가전
   - 소형 주거
@@ -16,12 +14,22 @@ topicId: meta-compact-footprint-appliances
 topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - compact appliances small apartment
   - portable air conditioner small room
   - compact kitchen appliances
+coverImage: >-
+  /images/posts/2026-compact-footprint-cross-category-scenario-guide/compact-kitchen-appliances-cover.jpg
+coverImageAlt: compact kitchen appliances and portable AC in a space-saving apartment layout
+coverImageAltKo: 이동식 에어컨과 소형 가전을 배치한 공간 절약형 아파트
+coverImageCredit: Photo by Max Vakhtbovych / Pexels
+coverImageProvider: pexels
+coverImageAssetId: '6980571'
+coverImageSourceUrl: 'https://images.pexels.com/photos/6980571/pexels-photo-6980571.jpeg'
+updatedAt: '2026-07-21T10:10:21.605Z'
+publishedAt: '2026-07-21T10:10:16.000Z'
 ---
 ## 편집부 개요
 
@@ -326,12 +334,11 @@ Roborock은 Q7 Max+ 계열에 LiDAR 지도, 금지 구역, 최대 5,500파스칼
 
 ## 관련 가이드
 
-- [소형 면적 맞대결: 이동식 에어컨, 제습기, 에어프라이어, 로봇 도크](/ko/blog/2026-compact-footprint-cross-category-head-to-head-guide) — 시나리오에 공간을 주기 전 카테고리별 실제 작동 면적을 비교합니다.
-- [이동식과 창문형 에어컨, 작은 집 여름 냉방에는 무엇이 나은가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 효율, 설치, 호스 차이를 설명합니다.
-- [습한 여름방 제습기, 용량과 소음과 하루 전기료로 고르기](/ko/blog/2026-dehumidifiers-guide) — 제습량, 배수, 전기 계산을 더 자세히 다룹니다.
-- [작은 아파트 로봇청소기, 평면에 맞는 지도와 물걸레 구성](/ko/blog/2026-robot-vacuums-scenario-guide) — 도크와 길 찾기를 집 구조에 맞춰 고릅니다.
-- [이동식 인덕션 구매 가이드, 소비전력과 냄비와 작은 주방 안전](/ko/blog/2026-induction-cooktops-buying-guide) — 소형 주방 회로와 상판을 경쟁하는 다른 가열 기기를 다룹니다.
-
+- [컴팩트 풋프린트 대결: 이동식 AC·제습기·에어프라이어·로봇 도크](/ko/blog/2026-compact-footprint-cross-category-head-to-head-guide) — 시나리오에 공간을 주기 전 카테고리별 실제 작동 면적을 비교합니다.
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 도크와 길 찾기를 집 구조에 맞춰 고릅니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 제습량, 배수, 전기 계산을 더 자세히 다룹니다.
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 효율, 설치, 호스 차이를 설명합니다.
+- [이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지](/ko/blog/2026-induction-cooktops-buying-guide) — 소형 주방 회로와 상판을 경쟁하는 다른 가열 기기를 다룹니다.
 ## 최종 평가
 
 소형 주거에서는 **상자 크기보다 사용 빈도와 작동 여유 공간**이 구매를 결정합니다. 폭염 수면 문제가 있고 고정 창문형이 불가능하며 호스를 짧고 밀폐되게 둘 수 있을 때만 **Midea Duo MAP12S1TBL**을 삽니다. 실내는 이미 시원하지만 눅눅하면 **Midea Cube MAD20S1QWT**를 사고 배수 길부터 해결합니다. 상판에서는 바삭한 식사가 잦으면 **Ninja AF101**, 밥이 매일이면 **Zojirushi NS-LGC05**를 고르며 둘을 기본으로 계속 꺼내 두지 않습니다. 바닥은 평소 방학 생활에서도 도크 진입로가 비어 있을 때만 **eufy C10**을 삽니다.

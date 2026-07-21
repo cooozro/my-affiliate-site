@@ -21,7 +21,7 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
-updatedAt: '2026-07-20T08:28:53.744Z'
+updatedAt: '2026-07-21T10:10:25.118Z'
 publishedAt: '2026-07-10T07:11:46.885Z'
 ---
 ## 편집부 개요

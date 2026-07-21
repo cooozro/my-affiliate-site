@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-21T02:01:11.150Z'
+updatedAt: '2026-07-21T10:10:21.627Z'
 publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## 편집부 개요
@@ -137,14 +137,11 @@ publishedAt: '2026-07-21T02:01:11.150Z'
 
 ## 관련 가이드
 
-- [1인 가구 필수 가전 시나리오](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide)
-- [선풍기 CFM·dB·일일 kWh](/ko/blog/2026-electric-fans-buying-guide)
-- [습한 여름 제습기](/ko/blog/2026-dehumidifiers-guide)
-- [공기청정기 CADR·필터비](/ko/blog/2026-air-purifiers-guide)
-- [30만 원대 교차 대결](/ko/blog/2026-under-300-cross-category-head-to-head-guide)
-
----
-
+- [1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 원룸·투룸 1인 가구를 위한 교차 카테고리 추천 — 선풍기, 공기청정기, 무선 이어버드, 에어프라이어, 로봇청소기를 여름 밀폐 생활과 좁은 평면에 맞춰 비교합니…
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
 ## 최종 평가
 
 1인 폭염 원룸에서는 **통과 폭과 AC 지연 가능성을 먼저** 재고, 그다음 공기질·습도, 그다음 책상·저열 조리입니다. 한 카테고리가 바닥을 잠식하게 두지 마세요. 편집부 한줄: 위 순서가 주말에 ‘여름 필수’ 다섯 개를 쌓는 것보다 3년 TCO를 지킵니다.
