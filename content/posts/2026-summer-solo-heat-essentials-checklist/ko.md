@@ -1,7 +1,7 @@
-﻿---
+---
 title: '여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리'
-description: '1인 폭염 원룸 구매 전 7가지 점검 — 냉방·공기·습도·책상 부하·저열 조리까지 가전 난립 없이 순서대로.'
-date: '2026-07-20'
+description: 1인 폭염 원룸 구매 전 7가지 점검 — 냉방·공기·습도·책상 부하·저열 조리까지 가전 난립 없이 순서대로.
+date: '2026-07-21'
 tags:
   - 체크리스트
   - 1인원룸
@@ -14,13 +14,12 @@ topicId: meta-solo-apartment-essentials
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - solo apartment living room summer
   - apartment fan cooling
   - small apartment essentials
-createdAt: '2026-07-20T01:20:00.000Z'
 coverImage: >-
   /images/posts/2026-summer-solo-heat-essentials-checklist/solo-apartment-summer-fan-cover.jpg
 coverImageAlt: solo apartment living room with electric fan for summer cooling
@@ -30,6 +29,8 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
+updatedAt: '2026-07-21T02:01:11.150Z'
+publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## 편집부 개요
 
