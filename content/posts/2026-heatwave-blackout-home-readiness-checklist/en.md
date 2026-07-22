@@ -1,7 +1,9 @@
 ---
-title: 'Heatwave Blackout Home Readiness Checklist for Apartments and Families'
-description: 'A practical apartment checklist for outage alerts, safe cooling, backup power, food, water, lighting, and family charging priorities.'
-date: '2026-07-21'
+title: Heatwave Blackout Home Readiness Checklist for Apartments and Families
+description: >-
+  A practical apartment checklist for outage alerts, safe cooling, backup power,
+  food, water, lighting, and family charging priorities.
+date: '2026-07-22'
 tags:
   - heatwave preparedness
   - blackout readiness
@@ -13,14 +15,13 @@ topicId: heatwave-blackout-readiness
 topicCluster: emergency-power
 writingMode: stable
 toneVariant: scenario-first
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - apartment blackout emergency kit
   - rechargeable fan LED lantern power bank
   - family heatwave preparedness
   - portable power station home outage
-createdAt: '2026-07-21T09:54:00.000Z'
 coverImage: >-
   /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
 coverImageAlt: portable power station and power bank carried for apartment blackout readiness
@@ -28,8 +29,9 @@ coverImageAltKo: 아파트 정전 대비용 휴대용 파워스테이션과 보�
 coverImageCredit: Photo by Amar Preciado / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '37489595'
-coverImageSourceUrl: >-
-  https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg
+coverImageSourceUrl: 'https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg'
+updatedAt: '2026-07-22T13:40:06.000Z'
+publishedAt: '2026-07-22T13:40:06.000Z'
 ---
 ## Editorial Overview
 

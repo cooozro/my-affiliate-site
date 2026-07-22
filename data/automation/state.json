@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-21T10:10:17.516Z",
-  "nextPublishAt": "2026-07-22T01:23:00.000Z",
-  "scheduledGapHours": 4.38,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-22T04:40:08.419Z",
+  "nextPublishAt": "2026-07-22T09:40:03.372Z",
+  "scheduledGapHours": 5,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-22",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-22",
@@ -616,16 +616,22 @@
         "https://www.aipick.shop/en/blog/2026-compact-footprint-cross-category-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-compact-footprint-cross-category-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-heatwave-blackout-home-readiness-checklist",
+      "topic": {
+        "id": "heatwave-blackout-readiness",
+        "cluster": "emergency-power"
+      },
+      "at": "2026-07-22T04:40:08.419Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-heatwave-blackout-home-readiness-checklist",
+        "https://www.aipick.shop/ko/blog/2026-heatwave-blackout-home-readiness-checklist"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "cordless-vacuums",
-      "category": "smart-home",
-      "cluster": "floor-care",
-      "taxonomyGroup": "생활가전/청소",
-      "at": "2026-07-08T02:58:57.569Z"
-    },
     {
       "id": "smart-home-cameras",
       "at": "2026-07-08T07:17:54.701Z"
@@ -774,10 +780,14 @@
       "category": "cross-cutting",
       "cluster": "capacity-tier",
       "at": "2026-07-21T10:10:17.528Z"
+    },
+    {
+      "id": "heatwave-blackout-readiness",
+      "cluster": "emergency-power",
+      "at": "2026-07-22T04:40:08.424Z"
     }
   ],
   "formatHistory": [
-    "scenario-guide",
     "checklist",
     "buying-guide",
     "scenario-guide",
@@ -796,13 +806,19 @@
     "buying-guide",
     "scenario-guide",
     "head-to-head",
-    "explainer"
+    "explainer",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-22T00:05:10.960Z",
-    "issueCount": 2,
+    "at": "2026-07-22T04:40:06.113Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (197min past slot, KST 2026-07-22)",
+        "severity": "error"
+      },
       {
         "code": "low-draft-buffer",
         "message": "Draft buffer 1/2",
@@ -810,11 +826,14 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 834min",
+        "message": "Cursor replenish pending 1109min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-07-21",
   "lastDailyContentAudit": {
@@ -945,6 +964,11 @@
       "id": "under-300-cross-category",
       "type": "price-tier-cross",
       "at": "2026-07-20T00:05:21.512Z"
+    },
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-07-22T04:40:08.444Z"
     }
   ]
 }
