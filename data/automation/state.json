@@ -827,18 +827,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-22T09:17:38.578Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (37min past slot, KST 2026-07-22)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-22T09:38:09.263Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-family-3-5-summer-load-scenario-guide/en.md: publishedAt 2026-07-22T18:17:38.000Z → 2026-07-22T09:17:40.568Z",
+      "2026-family-3-5-summer-load-scenario-guide/ko.md: publishedAt 2026-07-22T18:17:38.000Z → 2026-07-22T09:17:40.568Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-22",

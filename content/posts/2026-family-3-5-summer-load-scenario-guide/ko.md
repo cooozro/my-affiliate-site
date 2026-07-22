@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571468'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
 updatedAt: '2026-07-22T09:17:42.066Z'
-publishedAt: '2026-07-22T18:17:38.000Z'
+publishedAt: '2026-07-22T09:17:40.568Z'
 ---
 ## 편집부 개요
 
