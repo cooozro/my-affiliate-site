@@ -20,7 +20,7 @@ imageSearchKeywords:
   - rechargeable fan LED lantern power bank
   - family heatwave preparedness
   - portable power station home outage
-updatedAt: '2026-07-22T13:40:06.000Z'
+updatedAt: '2026-07-22T09:17:42.178Z'
 coverImage: >-
   /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
 coverImageAlt: portable power station and power bank carried for apartment blackout readiness
@@ -212,14 +212,11 @@ publishedAt: '2026-07-22T04:40:08.419Z'
 
 ## 관련 가이드
 
-- [휴대용 파워스테이션: Wh·배터리 종류·재충전 시간](/ko/blog/2026-portable-power-stations-buying-guide)
-- [가성비 보조배터리: 용량과 USB-C 충전](/ko/blog/2026-budget-power-banks-guide)
-- [선풍기: 풍량·소음·전력 사용](/ko/blog/2026-electric-fans-buying-guide)
-- [냉장고: 용량·효율·압축기 고려사항](/ko/blog/2026-refrigerators-buying-guide)
-- [정수기: 필터·관리·처리 한계](/ko/blog/2026-water-purifiers-buying-guide)
-
----
-
+- [휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선](/ko/blog/2026-portable-power-stations-buying-guide) — 여름 캠핑·로드트립·장마철 정전용 파워스테이션을 용량 우선으로 비교합니다 — 인산철 수명, 충전 시간, 3년 사이클당 비용까지 따집니다.
+- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 2026 여름 주방용 정수기 5종 — 상판형·싱크대 하부 설치, 필터 교체 비용, TDS 저감, 무더위 수분 보충 시나리오별 추천.
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
 ## 최종 평가
 
 우선순위는 **공공 지침, 실제로 갈 수 있는 냉방 장소, 가족 통신, 물과 식품 판단, 그다음 예비 제품**입니다. 지역 기관이 이동을 안내하거나 누군가 즉시 위험한 상태라면 떠나거나 도움을 요청하세요. 선풍기, 랜턴, 대형 배터리가 있다는 이유로 더운 아파트를 안전하다고 오해하면 안 됩니다.

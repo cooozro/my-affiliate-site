@@ -4,7 +4,6 @@ description: >-
   Heatwave and school-break scenarios for 3–5 person homes — fridge, washer, TV,
   purifier, and cordless vacuum picks with honest energy and filter TCO.
 date: '2026-07-22'
-createdAt: '2026-07-22T04:58:32.417Z'
 tags:
   - summer load
   - school break
@@ -17,7 +16,7 @@ topicId: meta-family-3-5-person
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: case-study
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - family summer kitchen appliances
@@ -33,7 +32,8 @@ coverImageCredit: Photo by Vecislavas Popa / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1571468'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
-updatedAt: '2026-07-22T05:06:03.653Z'
+updatedAt: '2026-07-22T09:17:40.684Z'
+publishedAt: '2026-07-22T18:17:38.000Z'
 ---
 ## Editorial Overview
 
@@ -327,14 +327,11 @@ Fund the failure that creates daily conflict. Spoiled food and constant door fig
 
 ## Related guides
 
-- [Family 3–5 home essentials buying guide](/en/blog/2026-family-3-5-home-essentials-buying-guide) — capacity-first shortlist across the same five anchors  
-- [Refrigerators buying guide](/en/blog/2026-refrigerators-buying-guide) — fresh-zone and energy-label deep dive  
-- [Washing machines scenario guide](/en/blog/2026-washing-machines-scenario-guide) — throughput and cycle scenarios beyond summer break  
-- [Air purifiers guide](/en/blog/2026-air-purifiers-guide) — CADR and filter cost for sealed rooms  
-- [Cordless vacuums scenario guide](/en/blog/2026-cordless-vacuums-scenario-guide) — stick vs cluttered-home reality checks  
-
----
-
+- [Family of 3–5: Capacity-First Buying Guide for Fridge, Washer, TV, Purifier, Stick Vacuum](/en/blog/2026-family-3-5-home-essentials-buying-guide) — capacity-first shortlist across the same five anchors
+- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — stick vs cluttered-home reality checks
+- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — fresh-zone and energy-label deep dive
+- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — throughput and cycle scenarios beyond summer break
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — CADR and filter cost for sealed rooms
 ## Final Verdict
 
 Summer school-break load in a three- to five-person home is a **concurrency test**, not a feature contest. The case-study stack that survives a heatwave week without Sunday panic is: **Samsung RF28T5001SR** for fridge recovery and fresh volume, **Samsung WF53BB8700AVUS** for laundry throughput, **TCL QM8 65-inch** for daytime shared sports and cartoons, **Winix 5500-2** for sealed living-room air, and **Shark Stratos** for crumb bursts when robot paths disappear.

@@ -32,10 +32,10 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-22T04:40:08.419Z",
-  "nextPublishAt": "2026-07-22T08:40:08.419Z",
-  "scheduledGapHours": 4,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-07-22T09:17:40.568Z",
+  "nextPublishAt": "2026-07-23T01:12:00.000Z",
+  "scheduledGapHours": 4.2,
+  "publishCountToday": 2,
   "publishDateKst": "2026-07-22",
   "writeCountToday": 2,
   "writeDateKst": "2026-07-22",
@@ -629,13 +629,23 @@
         "https://www.aipick.shop/en/blog/2026-heatwave-blackout-home-readiness-checklist",
         "https://www.aipick.shop/ko/blog/2026-heatwave-blackout-home-readiness-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-family-3-5-summer-load-scenario-guide",
+      "topic": {
+        "id": "meta-family-3-5-person",
+        "category": "cross-cutting",
+        "cluster": "household-type"
+      },
+      "at": "2026-07-22T09:17:40.568Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-family-3-5-summer-load-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-family-3-5-summer-load-scenario-guide"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "smart-home-cameras",
-      "at": "2026-07-08T07:17:54.701Z"
-    },
     {
       "id": "refrigerators",
       "cluster": "large-appliances",
@@ -785,6 +795,12 @@
       "id": "heatwave-blackout-readiness",
       "cluster": "emergency-power",
       "at": "2026-07-22T04:40:08.424Z"
+    },
+    {
+      "id": "meta-family-3-5-person",
+      "category": "cross-cutting",
+      "cluster": "household-type",
+      "at": "2026-07-22T09:17:40.576Z"
     }
   ],
   "formatHistory": [
@@ -811,16 +827,25 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-22T07:56:41.269Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-22T09:17:38.578Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (37min past slot, KST 2026-07-22)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
-  "lastDailyContentAuditKst": "2026-07-21",
+  "lastDailyContentAuditKst": "2026-07-22",
   "lastDailyContentAudit": {
-    "at": "2026-07-21T10:10:25.503Z",
-    "postsScanned": 50,
-    "autoRepairCount": 28,
+    "at": "2026-07-22T09:17:43.577Z",
+    "postsScanned": 52,
+    "autoRepairCount": 32,
     "manualReviewCount": 0
   },
   "contentStrategyHistory": [

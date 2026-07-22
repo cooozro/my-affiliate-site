@@ -1,11 +1,9 @@
 ---
-title: >-
-  여름 방학 부하: 3–5인 가구를 위한 다섯 가지 가전 시나리오
+title: '여름 방학 부하: 3–5인 가구를 위한 다섯 가지 가전 시나리오'
 description: >-
-  폭염·방학철 3–5인 가구의 냉장고 회복, 세탁 처리량, 공용 TV, 밀폐 공기, 무선 바닥
-  청소를 사례형으로 비교하고 에너지·필터·세제 TCO까지 정리합니다.
+  폭염·방학철 3–5인 가구의 냉장고 회복, 세탁 처리량, 공용 TV, 밀폐 공기, 무선 바닥 청소를 사례형으로 비교하고 에너지·필터·세제
+  TCO까지 정리합니다.
 date: '2026-07-22'
-createdAt: '2026-07-22T04:58:32.417Z'
 tags:
   - 여름 부하
   - 방학
@@ -18,7 +16,7 @@ topicId: meta-family-3-5-person
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: case-study
-draft: true
+draft: false
 liveData: false
 imageSearchKeywords:
   - family summer kitchen appliances
@@ -26,15 +24,17 @@ imageSearchKeywords:
   - living room air purifier vacuum
 coverImage: >-
   /images/posts/2026-family-3-5-summer-load-scenario-guide/family-living-room-cover.jpg
-coverImageAlt: family living room with refrigerator television air purifier and cordless vacuum
+coverImageAlt: >-
+  family living room with refrigerator television air purifier and cordless
+  vacuum
 coverImageAltKo: 냉장고·TV·공기청정기·무선청소기가 보이는 가족 거실
 coverImageCredit: Photo by Vecislavas Popa / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1571468'
-coverImageSourceUrl: >-
-  https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg
+coverImageSourceUrl: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
+updatedAt: '2026-07-22T09:17:42.066Z'
+publishedAt: '2026-07-22T18:17:38.000Z'
 ---
-
 ## 편집부 개요
 
 > 이 사례형 가이드는 **3–5인 가구가 7월 폭염과 방학 한 주를 보낼 때** 냉장고 문이 자주 열리고, 세탁이 두 배로 늘며, 공용 TV가 아침 만화부터 오후 스포츠까지 켜지고, 에어컨 때문에 창문이 닫히며, 간식 부스러기가 매시간 바닥에 떨어지는 현실을 따라갑니다. 냉장고·세탁기·텔레비전·공기청정기·무선 청소기 다섯 축을 **제조사 공개 스펙, Energy Guide 라벨, 시중 표시가**로 맞추며 판매자 API는 쓰지 않습니다. 편집 규칙은 단순합니다. **여름 부하는 동시성 문제**입니다. 네 사람이 한꺼번에 집에 있을 때는 기능 메뉴보다 용량, 회복 속도, 처리량, 눈부심 제어, 방에 맞는 CADR, 바로 쓸 수 있는 흡입이 중요합니다.
@@ -327,14 +327,11 @@ Dyson V15 Detect급은 레이저 먼지 가시화와 입자 읽기로, 회의적
 
 ## 관련 가이드
 
-- [3–5인 가정 필수 가전 구매 가이드](/ko/blog/2026-family-3-5-home-essentials-buying-guide) — 같은 다섯 앵커의 용량 우선 숏리스트  
-- [냉장고 구매 가이드](/ko/blog/2026-refrigerators-buying-guide) — 신선 구역·에너지 라벨 심화  
-- [세탁기 시나리오 가이드](/ko/blog/2026-washing-machines-scenario-guide) — 방학 이후 처리량·코스 시나리오  
-- [공기청정기 가이드](/ko/blog/2026-air-purifiers-guide) — 밀폐 방 CADR·필터비  
-- [무선 청소기 시나리오 가이드](/ko/blog/2026-cordless-vacuums-scenario-guide) — 스틱 대 잡동사니 현실 점검  
-
----
-
+- [3~5인 가구 용량 우선 구매 가이드: 냉장고·세탁기·TV·공기청정·스틱](/ko/blog/2026-family-3-5-home-essentials-buying-guide) — 같은 다섯 앵커의 용량 우선 숏리스트
+- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 스틱 대 잡동사니 현실 점검
+- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — 신선 구역·에너지 라벨 심화
+- [여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음](/ko/blog/2026-washing-machines-scenario-guide) — 방학 이후 처리량·코스 시나리오
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 밀폐 방 CADR·필터비
 ## 최종 평가
 
 3–5인 가구의 여름 방학 부하는 기능 대회가 아니라 **동시성 시험**입니다. 폭염 주를 일요일 공황 없이 버티는 사례 스택은 **Samsung RF28T5001SR**(냉장고 회복·신선 용량), **Samsung WF53BB8700AVUS**(세탁 처리량), **TCL QM8 65인치**(낮 공용 스포츠·만화), **Winix 5500-2**(밀폐 거실 공기), **Shark Stratos**(로봇 길이 사라질 때 부스러기)입니다.
