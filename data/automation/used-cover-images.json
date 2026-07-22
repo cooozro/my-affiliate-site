@@ -929,6 +929,24 @@
       "contentHash": "121bc04188bdc797b2d29c81208e04b187d17b9c70689329bf5bbeb869c2ec78",
       "provider": "pexels",
       "registeredAt": "2026-07-21T10:11:51.287Z"
+    },
+    {
+      "slug": "2026-evaporative-coolers-buying-guide",
+      "url": "https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg",
+      "assetKey": "pexels:4506270",
+      "hash": "ed1a47f3c407b4288e3d343b4a955904a8aa8a43f8c5b76f1f808112e6f820cd",
+      "contentHash": "ed1a47f3c407b4288e3d343b4a955904a8aa8a43f8c5b76f1f808112e6f820cd",
+      "provider": "pexels",
+      "registeredAt": "2026-07-22T05:07:21.709Z"
+    },
+    {
+      "slug": "2026-family-3-5-summer-load-scenario-guide",
+      "url": "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+      "assetKey": "pexels:1571468",
+      "hash": "19fde50033a7232ded3dfe3d23ab23d07ddf3aaf5b121cd382744d29abbc6ede",
+      "contentHash": "19fde50033a7232ded3dfe3d23ab23d07ddf3aaf5b121cd382744d29abbc6ede",
+      "provider": "pexels",
+      "registeredAt": "2026-07-22T05:07:21.711Z"
     }
   ]
 }
