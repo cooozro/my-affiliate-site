@@ -64,8 +64,13 @@ jobs:
           SERP_PROVIDER: serper
         run: node scripts/automation/run-cursor-replenish.mjs
 
+      - name: Persist replenish failure metadata
+        if: failure() && steps.pending.outputs.needed == 'true'
+        run: |
+          bash scripts/ci-git-push.sh "chore(automation): record replenish failure"
+
       - name: Verify replenish produced a draft
-        if: steps.pending.outputs.needed == 'true'
+        if: success() && steps.pending.outputs.needed == 'true'
         run: |
           if grep -q '"status": "pending"' data/automation/cursor-draft-request.json; then
             echo "::error::Replenish finished but cursor-draft-request is still pending"
@@ -75,7 +80,6 @@ jobs:
             exit 1
           fi
           echo "Replenish completed — request status is not pending"
-
       - name: Validate content
         if: success() && steps.pending.outputs.needed == 'true'
         run: npm run content:validate

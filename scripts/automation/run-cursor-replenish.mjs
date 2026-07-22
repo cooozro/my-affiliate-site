@@ -27,6 +27,7 @@ import {
   recordReplenishFailure,
   requeueCursorDraftReplenish,
   saveCursorDraftRequest,
+  uniquifyPendingRequestSlug,
 } from "./cursor-draft-request.mjs";
 import { generateDraftFromRequest } from "./generate-draft.mjs";
 import { pickTopic } from "./topics.mjs";
@@ -48,6 +49,7 @@ import {
   recordContentStrategy,
 } from "../lib/guardian/content-strategy.mjs";
 import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
+import { isMetaTopicId } from "../lib/content-angles.mjs";
 import { listPublishedSlugs } from "../lib/content-quality.mjs";
 import {
   isRequestTopicStale,
@@ -258,6 +260,17 @@ async function runReplenishProviders(request, draftsBefore, keys) {
 
 function refreshStaleRequestTopic(request) {
   if (!isRequestTopicStale(request)) return request;
+
+  // Meta requests go stale when slugHint already exists — uniquify, keep the angle.
+  if (request.contentPlan === "meta" || isMetaTopicId(request.topic?.id)) {
+    const slugFix = uniquifyPendingRequestSlug(request);
+    if (slugFix.changed) {
+      console.log(
+        `Replenish meta slug rotated: ${slugFix.from} already exists → ${slugFix.to}`,
+      );
+      return { ...slugFix.request, lastError: null };
+    }
+  }
 
   const assignedId = request.topic?.id;
   const state = loadState();
@@ -502,6 +515,11 @@ async function main() {
 
   try {
     request = refreshStaleRequestTopic(request);
+    const slugFix = uniquifyPendingRequestSlug(request);
+    if (slugFix.changed) {
+      console.log(`Slug hint uniquified before write: ${slugFix.from} → ${slugFix.to}`);
+      request = slugFix.request;
+    }
     saveCursorDraftRequest({ ...request, status: "pending" });
 
     if (countDrafts() >= TARGET_DRAFT_COUNT) {

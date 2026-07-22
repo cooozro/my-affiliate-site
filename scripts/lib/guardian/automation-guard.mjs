@@ -111,7 +111,16 @@ export function removeReplenishSlugArtifacts(slug, root = process.cwd()) {
 export function isRequestTopicStale(request, root = process.cwd()) {
   const topicId = request?.topic?.id;
   if (!topicId || typeof topicId !== "string") return false;
-  if (isMetaTopicId(topicId) || request.contentPlan === "meta") return false;
+
+  // Meta angles reuse the same angle id across posts; treat colliding slugHint as stale.
+  if (isMetaTopicId(topicId) || request.contentPlan === "meta") {
+    const hint = request.slugHint;
+    if (typeof hint === "string" && hint && fs.existsSync(path.join(root, "content", "posts", hint))) {
+      return true;
+    }
+    return false;
+  }
+
   const coverage = getTopicFormatCoverage(root);
   return topicHasAnyPost(topicId, coverage);
 }

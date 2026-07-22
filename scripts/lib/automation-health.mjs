@@ -9,6 +9,7 @@ import matter from "gray-matter";
 
 import { validatePostFiles, countPublishableDrafts, countPublishEligibleDrafts, isDraftDeferred, readPost } from "../automation/posts-fs.mjs";
 import { kstDateString, loadState, resetDailyCounters } from "../automation/state.mjs";
+import { uniquifyPendingRequestSlug } from "../automation/cursor-draft-request.mjs";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import {
   checkHomepageFeaturedOrder,
@@ -282,6 +283,17 @@ export function runAutomationHealthCheck(options = {}) {
         message: `Cursor replenish pending ${Math.floor((nowMs - since) / 60_000)}min`,
         severity: "warning",
       });
+    }
+
+    const slugFix = uniquifyPendingRequestSlug(cursorRequest);
+    if (slugFix.changed) {
+      const filePath = path.join(root, "data", "automation", "cursor-draft-request.json");
+      fs.writeFileSync(
+        filePath,
+        `${JSON.stringify({ ...slugFix.request, status: "pending" }, null, 2)}\n`,
+      );
+      repairs.push(`uniquified-stale-slug-hint:${slugFix.from}→${slugFix.to}`);
+      stateChanged = true;
     }
   }
 

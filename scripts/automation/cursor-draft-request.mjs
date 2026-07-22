@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
-import { countDrafts, assertDraftPublishReady, validateDraftPublishEligible, countPublishEligibleDrafts, listDrafts } from "./posts-fs.mjs";
+import { countDrafts, assertDraftPublishReady, validateDraftPublishEligible, countPublishEligibleDrafts, listDrafts, slugExists } from "./posts-fs.mjs";
 import { pickContentPlan, describeContentPlanMix } from "../lib/pick-content-plan.mjs";
 import { isMetaTopicId } from "../lib/content-angles.mjs";
-import { loadState, saveState } from "./state.mjs";
+import { kstDateString, loadState, saveState } from "./state.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 import { getTemplatePath, pickContentProfile } from "../lib/content-profiles.mjs";
 import { getActiveSeasonalEvents, getCurrentSeason } from "../lib/season-topics.mjs";
@@ -12,6 +12,51 @@ import {
   prepareDraftStrategy,
 } from "../lib/guardian/content-strategy.mjs";
 import { loadEnvFile } from "../lib/load-env.mjs";
+
+/**
+ * Meta angles often reuse the same slugHint as an already-published post.
+ * Force a unique candidate so Cursor/OpenAI replenish cannot overwrite live content.
+ */
+export function ensureUniqueSlugHint(base) {
+  if (!base || typeof base !== "string") return base;
+  let slug = base
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+  if (!slug) return base;
+  if (!slugExists(slug)) return slug;
+
+  const day = kstDateString().replace(/-/g, "");
+  let candidate = `${slug}-${day}`;
+  if (!slugExists(candidate)) return candidate;
+
+  let n = 2;
+  while (slugExists(`${candidate}-v${n}`)) n += 1;
+  return `${candidate}-v${n}`;
+}
+
+/** Rewrite instructions + slugHint when the suggested slug already exists. */
+export function uniquifyPendingRequestSlug(request) {
+  if (!request || request.status !== "pending" || !request.slugHint) {
+    return { request, changed: false };
+  }
+  const unique = ensureUniqueSlugHint(request.slugHint);
+  if (unique === request.slugHint) {
+    return { request, changed: false };
+  }
+  const escaped = request.slugHint.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const instructions = String(request.instructions ?? "").replace(
+    new RegExp(escaped, "g"),
+    unique,
+  );
+  return {
+    request: { ...request, slugHint: unique, instructions },
+    changed: true,
+    from: request.slugHint,
+    to: unique,
+  };
+}
 
 const REQUEST_PATH = path.join(
   process.cwd(),
@@ -112,6 +157,15 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
   const season = getCurrentSeason();
   const events = getActiveSeasonalEvents();
   const templatePath = getTemplatePath(strategy.contentProfile);
+  const rawSlugHint = plan.slugHint ?? null;
+  const slugHint = rawSlugHint ? ensureUniqueSlugHint(rawSlugHint) : null;
+  if (rawSlugHint && slugHint !== rawSlugHint) {
+    console.log(`Slug hint uniquified at queue: ${rawSlugHint} → ${slugHint}`);
+  }
+  const planForInstructions =
+    slugHint && plan
+      ? { ...plan, slugHint }
+      : plan;
 
   return {
     status: "pending",
@@ -131,7 +185,7 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
     seasonalEvents: events.map((e) => e.label),
     contentPlan: plan.kind,
     contentAngle: plan.angle?.id ?? null,
-    slugHint: plan.slugHint ?? null,
+    slugHint,
     topic: {
       id: topic.id,
       category: topic.category,
@@ -143,7 +197,7 @@ async function buildQueuedRequest(publishedSlug, existing = null, options = {}) 
       isMetaAngle: Boolean(topic.isMetaAngle),
     },
     templatePath,
-    instructions: buildInstructions(strategy, season, events, plan),
+    instructions: buildInstructions(strategy, season, events, planForInstructions),
     lastError: null,
   };
 }

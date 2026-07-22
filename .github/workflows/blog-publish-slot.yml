@@ -114,6 +114,7 @@ jobs:
       - name: Cursor draft replenish
         if: steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true'
         id: replenish
+        continue-on-error: true
         env:
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -122,14 +123,19 @@ jobs:
           SERP_PROVIDER: serper
         run: node scripts/automation/run-cursor-replenish.mjs
 
+      - name: Persist replenish failure metadata
+        if: always() && steps.replenish.outcome == 'failure'
+        run: |
+          bash scripts/ci-git-push.sh "chore(automation): record replenish failure"
+
       - name: Commit and push replenish drafts
-        if: success() && (steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
+        if: steps.replenish.outcome == 'success' && (steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
         run: |
           bash scripts/ci-git-push.sh "chore(content): cursor draft replenish"
 
       - name: Report replenish failure without blocking publish
         if: always() && steps.pending_replenish.outputs.needed == 'true' && steps.replenish.outcome == 'failure'
         run: |
-          echo "::error::Cursor draft replenish failed AFTER publish commit — fill buffer via IDE or fix CURSOR_API_KEY"
+          echo "::warning::Cursor draft replenish failed AFTER publish — fill buffer via IDE or fix CURSOR_API_KEY/OpenAI fallback"
           node -e "try{const r=require('./data/automation/cursor-draft-request.json');console.error('lastError:',r.lastError||'(none)');console.error('lastFailure:',JSON.stringify(r.lastFailure||null,null,2));}catch(e){console.error(e.message)}"
-          exit 1
+          # Do not exit 1: publish already committed; failing the job hid successful publishes and stalled operators.

@@ -29,7 +29,7 @@ coverImageCredit: Photo by Amar Preciado / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '37489595'
 coverImageSourceUrl: 'https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg'
-publishedAt: '2026-07-22T13:40:06.000Z'
+publishedAt: '2026-07-22T04:40:08.419Z'
 ---
 ## 편집부 개요
 
