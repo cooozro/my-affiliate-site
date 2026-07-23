@@ -831,15 +831,18 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-23T06:56:19.770Z",
+    "at": "2026-07-23T07:59:41.739Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": []
+    "repairs": [
+      "2026-evaporative-coolers-buying-guide/en.md: publishedAt 2026-07-23T15:46:17.000Z → 2026-07-23T06:46:19.243Z",
+      "2026-evaporative-coolers-buying-guide/ko.md: publishedAt 2026-07-23T15:46:17.000Z → 2026-07-23T06:46:19.243Z"
+    ]
   },
-  "lastDailyContentAuditKst": "2026-07-22",
+  "lastDailyContentAuditKst": "2026-07-23",
   "lastDailyContentAudit": {
-    "at": "2026-07-22T09:17:43.577Z",
-    "postsScanned": 52,
+    "at": "2026-07-23T07:59:44.581Z",
+    "postsScanned": 53,
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },

@@ -33,8 +33,8 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-23T15:46:17.000Z'
-publishedAt: '2026-07-23T15:46:17.000Z'
+updatedAt: '2026-07-23T07:59:41.946Z'
+publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## Editorial Overview
 
@@ -230,12 +230,11 @@ Lower wattage helps on shared apartment breakers and can pair with careful [port
 
 ## Related guides
 
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — refrigerant options when humidity kills swamp-cooler math
 - [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — airflow assist without adding moisture
+- [Portable Power Stations Buying Guide: Watt-Hours First for Camping, Trips, and Blackouts](/en/blog/2026-portable-power-stations-buying-guide) — low-watt cooler budgeting during outages
+- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — refrigerant options when humidity kills swamp-cooler math
 - [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — when sticky air is the real bottleneck
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — size true AC when evaporative cooling is the wrong tool
-- [Portable Power Stations: Wh, Output, and Quiet Runtime for Apartments](/en/blog/2026-portable-power-stations-buying-guide) — low-watt cooler budgeting during outages
-
 ## Five checks before you buy
 
 1. **Measure humidity before you buy hardware** — If afternoon RH regularly clears about 60%, evaporative cooling is likely the wrong primary appliance. A $10–20 hygrometer is cheaper than a wrong cooler.

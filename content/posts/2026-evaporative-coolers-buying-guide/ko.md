@@ -29,8 +29,8 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-23T15:46:17.000Z'
-publishedAt: '2026-07-23T15:46:17.000Z'
+updatedAt: '2026-07-23T07:59:41.947Z'
+publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## 편집부 개요
 
@@ -226,12 +226,11 @@ publishedAt: '2026-07-23T15:46:17.000Z'
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 에어컨, 작은 아파트 여름엔 무엇이 더 시원할까](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 습도가 스웜프 수학을 죽일 때의 냉매 선택
 - [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 습기를 더하지 않는 기류 보조
-- [습한 여름 방, 제습기는 용량·소음·하루 전기로 고른다](/ko/blog/2026-dehumidifiers-guide) — 끈적함이 진짜 병목일 때
-- [여름 에어컨 사기 전 체크 7가지](/ko/blog/2026-summer-ac-buying-checklist) — 기화식이 틀린 도구일 때 진짜 AC 용량
-- [포터블 파워 스테이션, 아파트용 Wh·출력·정숙 런타임](/ko/blog/2026-portable-power-stations-buying-guide) — 정전 시 저와트 쿨러 예산
-
+- [휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선](/ko/blog/2026-portable-power-stations-buying-guide) — 정전 시 저와트 쿨러 예산
+- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 습도가 스웜프 수학을 죽일 때의 냉매 선택
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 끈적함이 진짜 병목일 때
+- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 기화식이 틀린 도구일 때 진짜 AC 용량
 ## 사기 전 다섯 가지 확인
 
 1. **하드웨어보다 습도부터 재세요** — 오후 RH가 자주 약 60%를 넘으면 주력 가전으로 기화식은 틀린 선택일 확률이 큽니다. 온습도계 만 원대가 잘못된 쿨러보다 쌉니다.
