@@ -33,12 +33,12 @@
     "dishwashers"
   ],
   "lastPublishAt": "2026-07-23T06:46:19.243Z",
-  "nextPublishAt": "2026-07-24T02:08:00.000Z",
-  "scheduledGapHours": 5.13,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-07-23",
-  "writeCountToday": 1,
-  "writeDateKst": "2026-07-23",
+  "nextPublishAt": "2026-07-24T01:33:00.000Z",
+  "scheduledGapHours": 4.55,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-24",
+  "writeCountToday": 0,
+  "writeDateKst": "2026-07-24",
   "history": [
     {
       "action": "publish",
@@ -831,7 +831,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-23T10:04:45.209Z",
+    "at": "2026-07-23T16:04:19.165Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
