@@ -947,6 +947,15 @@
       "contentHash": "19fde50033a7232ded3dfe3d23ab23d07ddf3aaf5b121cd382744d29abbc6ede",
       "provider": "pexels",
       "registeredAt": "2026-07-22T05:07:21.711Z"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide-20260723",
+      "url": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+      "assetKey": "pexels:1457842",
+      "hash": "c88d8de024ad8f95784276950670bf898e028dd7878fba639bf181b3812ad36f",
+      "contentHash": "c88d8de024ad8f95784276950670bf898e028dd7878fba639bf181b3812ad36f",
+      "provider": "pexels",
+      "registeredAt": "2026-07-23T06:56:54.957Z"
     }
   ]
 }
