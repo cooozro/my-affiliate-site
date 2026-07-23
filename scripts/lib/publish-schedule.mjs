@@ -1,5 +1,5 @@
-export const MAX_PUBLISH_PER_DAY = 2;
-export const TARGET_DRAFT_COUNT = 2;
+export const MAX_PUBLISH_PER_DAY = 1;
+export const TARGET_DRAFT_COUNT = 1;
 export const MIN_PUBLISH_GAP_HOURS = 4;
 export const MAX_PUBLISH_GAP_HOURS = 6;
 /** First publish anchor each KST day (06:00) plus a 4–6h random offset. */

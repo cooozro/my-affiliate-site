@@ -7,7 +7,7 @@ Automated draft writing, publishing, and Google Search Console indexing for AI P
 | Step | Where | Schedule |
 | --- | --- | --- |
 | Publish check | GitHub Actions `blog-automation.yml` | Every 15 min + hourly backup + on `main` push |
-| Publish draft | Same workflow | Random 4–6h gap, max 2/day KST |
+| Publish draft | Same workflow | Max 1/day KST; next slot on following day |
 | Draft replenish | Same workflow + `cursor-draft-replenish.yml` backup | Right after publish; backup every 15 min if pending |
 | Indexing | Google Indexing API | On each publish |
 
@@ -26,11 +26,11 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 | Rule | Value |
 | --- | --- |
 | Cron check | Every **15 minutes** + **hourly backup** (KST 08:00–23:00) + **every `main` push** |
-| Publish times | **Random** — not fixed 11:00 / 17:00 |
-| Gap between publishes | **4–6 hours** (random per slot) |
+| Publish times | **Random** — not fixed clock times |
+| Gap between publishes | N/A within a day (1/day); next day uses first-slot offset |
 | First slot of KST day | **06:00 KST** anchor + **4–6h** random (typically 10:00–12:00) |
-| After daily cap (2/day) | Next slot rolls to **following KST day** (not same evening) |
-| Daily cap | Max **2** publishes per KST day |
+| After daily cap (1/day) | Next slot rolls to **following KST day** |
+| Daily cap | Max **1** publish per KST day |
 
 `data/automation/state.json` stores `nextPublishAt` (UTC ISO). Admin shows the next slot in KST.
 
@@ -47,9 +47,9 @@ Without `CURSOR_API_KEY`, publish still works but draft replenish fails until th
 ## Rules
 
 - **작성:** Cursor(요미)가 `draft: true` 임시글 작성 — **OpenAI API 미사용**
-- **보충:** 발행 직후 buffer < 2 → GitHub Actions가 **Cursor SDK**로 임시글 1건 작성 (PC 불필요)
-- **발행:** 하루 최대 2건, **4–6시간 랜덤 간격** (GitHub Actions)
-- **임시 보관(draft):** 항상 **2건** 유지
+- **보충:** 발행 직후 buffer < 1 → GitHub Actions가 **Cursor SDK**로 임시글 1건 작성 (PC 불필요)
+- **발행:** 하루 최대 **1건** (GitHub Actions); 다음 슬롯은 **다음날**
+- **임시 보관(draft):** 항상 **1건** 대기 유지
 - **콘텐츠 기준:** `docs/CONTENT_STANDARDS.md` (구글 가이드 · 애드센스 · SEO)
 
 ## Topics / categories
@@ -101,7 +101,7 @@ Without GSC credentials, posts still publish; indexing is skipped with a warning
 
 ### 4. Initial draft buffer
 
-Before the first publish cron, seed 2 drafts in **Cursor** (`draft: true`, en+ko per post).
+Before the first publish cron, seed **1** draft in **Cursor** (`draft: true`, en+ko per post).
 
 ## Local commands
 
@@ -115,7 +115,7 @@ npm run automation:publish  # publish oldest draft (local test)
 ```
 publish-slot (GHA)     → publish oldest draft
                        → distributor.mjs (GSC + IndexNow + share pack)
-                       → cursor-draft-request.json if buffer < 2
+                       → cursor-draft-request.json if buffer < 1
                        → commit + push → Vercel redeploy
                        → warm RSS/sitemap (120s after push)
 backup (GHA)           → cursor-draft-replenish.yml every 15 min if still pending

@@ -15,9 +15,14 @@ import {
 } from "./state.mjs";
 import { pickContentProfile } from "../lib/content-profiles.mjs";
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
+import {
+  MAX_PUBLISH_PER_DAY,
+  TARGET_DRAFT_COUNT,
+} from "../lib/publish-schedule.mjs";
 
-const MAX_WRITES_PER_DAY = 2;
-const TARGET_DRAFT_BUFFER = 2;
+/** Writes track publish cadence: one ready draft waiting after each go-live. */
+const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
+const TARGET_DRAFT_BUFFER = TARGET_DRAFT_COUNT;
 
 async function callOpenAI(prompt) {
   const apiKey = process.env.OPENAI_API_KEY;

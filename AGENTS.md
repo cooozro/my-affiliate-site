@@ -33,9 +33,9 @@ Changelogs: `lib/guardian/GUARDIAN_CHANGELOG.md`, `scripts/lib/guardian/GUARDIAN
 Scheduled publishing and Google Search Console indexing via GitHub Actions. See **`docs/BLOG_AUTOMATION.md`**.
 
 - **Writing:** Cursor (요미) — `draft: true`, **not** OpenAI API
-- **Publishing:** GHA every 15 min check, 4–6h random gaps, 2/day KST cap
+- **Publishing:** GHA every 15 min check, 1/day KST cap (next slot rolls to following day)
 - **Replenish:** GitHub Actions runs `run-cursor-replenish.mjs` with Cursor SDK (`CURSOR_API_KEY`)
-- **Buffer:** Always keep 2 drafts ready
+- **Buffer:** Always keep 1 draft ready
 - Commands: `npm run automation:status`, `automation:publish`, `automation:replenish`
 
 ### Draft replenish priority (local IDE only)
