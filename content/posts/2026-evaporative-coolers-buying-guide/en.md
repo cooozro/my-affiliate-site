@@ -5,8 +5,7 @@ title: >-
 description: >-
   Five evaporative coolers ranked by CFM, water use, pad TCO, and noise — plus
   when swamp coolers beat portable AC and when humidity makes them a miss.
-date: '2026-07-22'
-createdAt: '2026-07-22T04:58:37.852Z'
+date: '2026-07-23'
 tags:
   - evaporative cooler
   - swamp cooler
@@ -18,7 +17,7 @@ topicId: evaporative-coolers
 topicCluster: cooling
 writingMode: stable
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - evaporative cooler
@@ -34,7 +33,8 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-22T05:06:03.895Z'
+updatedAt: '2026-07-23T15:46:17.000Z'
+publishedAt: '2026-07-23T15:46:17.000Z'
 ---
 ## Editorial Overview
 

@@ -1,8 +1,7 @@
 ---
 title: '기화식 쿨러 vs 이동식 에어컨: 건조 기후 가성비, 습도 한계, 모델 5종'
 description: '기화식(스웜프) 쿨러 5종을 풍량·물 사용·패드 유지비·소음으로 비교하고, 건조 기후에선 이득·고습도에선 왜 실망인지 정리합니다.'
-date: '2026-07-22'
-createdAt: '2026-07-22T04:58:37.852Z'
+date: '2026-07-23'
 tags:
   - 기화식 쿨러
   - 스웜프 쿨러
@@ -14,7 +13,7 @@ topicId: evaporative-coolers
 topicCluster: cooling
 writingMode: stable
 toneVariant: data-driven
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - evaporative cooler
@@ -30,7 +29,8 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-22T05:06:03.926Z'
+updatedAt: '2026-07-23T15:46:17.000Z'
+publishedAt: '2026-07-23T15:46:17.000Z'
 ---
 ## 편집부 개요
 
