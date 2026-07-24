@@ -33,12 +33,12 @@
     "dishwashers"
   ],
   "lastPublishAt": "2026-07-24T07:56:24.703Z",
-  "nextPublishAt": "2026-07-25T01:48:00.000Z",
-  "scheduledGapHours": 4.8,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-07-24",
+  "nextPublishAt": "2026-07-25T01:58:00.000Z",
+  "scheduledGapHours": 4.97,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-07-25",
   "writeCountToday": 0,
-  "writeDateKst": "2026-07-24",
+  "writeDateKst": "2026-07-25",
   "history": [
     {
       "action": "publish",
@@ -836,12 +836,17 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-24T14:50:21.082Z",
-    "issueCount": 1,
+    "at": "2026-07-24T15:19:01.634Z",
+    "issueCount": 2,
     "issues": [
       {
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 0/1",
+        "severity": "info"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 413min",
+        "message": "Cursor replenish pending 442min",
         "severity": "warning"
       }
     ],
