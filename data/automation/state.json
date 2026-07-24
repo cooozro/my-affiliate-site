@@ -32,23 +32,14 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-23T06:46:19.243Z",
-  "nextPublishAt": "2026-07-24T01:33:00.000Z",
-  "scheduledGapHours": 4.55,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-24T07:56:24.703Z",
+  "nextPublishAt": "2026-07-25T01:48:00.000Z",
+  "scheduledGapHours": 4.8,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-24",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-24",
   "history": [
-    {
-      "action": "publish",
-      "slug": "2026-budget-power-banks-guide",
-      "at": "2026-06-25T12:06:58.928Z",
-      "urls": [
-        "https://www.aipick.shop/en/blog/2026-budget-power-banks-guide",
-        "https://www.aipick.shop/ko/blog/2026-budget-power-banks-guide"
-      ]
-    },
     {
       "action": "publish",
       "slug": "2026-budget-smartphones-under-300",
@@ -647,15 +638,23 @@
         "https://www.aipick.shop/en/blog/2026-evaporative-coolers-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-evaporative-coolers-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide-20260723",
+      "topic": {
+        "id": "meta-solo-apartment-essentials",
+        "category": "cross-cutting",
+        "cluster": "household-type"
+      },
+      "at": "2026-07-24T07:56:24.703Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723",
+        "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "bidets",
-      "category": "home-appliances",
-      "taxonomyGroup": "생활가전/위생",
-      "at": "2026-07-09T03:51:48.705Z"
-    },
     {
       "id": "cordless-vacuums",
       "at": "2026-07-09T05:23:27.625Z"
@@ -805,6 +804,12 @@
       "id": "evaporative-coolers",
       "cluster": "cooling",
       "at": "2026-07-23T06:46:19.249Z"
+    },
+    {
+      "id": "meta-solo-apartment-essentials",
+      "category": "cross-cutting",
+      "cluster": "household-type",
+      "at": "2026-07-24T07:56:24.710Z"
     }
   ],
   "formatHistory": [
@@ -831,14 +836,23 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-24T00:13:40.690Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-07-24T07:56:21.263Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (383min past slot, KST 2026-07-24)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
-  "lastDailyContentAuditKst": "2026-07-23",
+  "lastDailyContentAuditKst": "2026-07-24",
   "lastDailyContentAudit": {
-    "at": "2026-07-23T07:59:44.581Z",
+    "at": "2026-07-24T07:56:28.168Z",
     "postsScanned": 53,
     "autoRepairCount": 32,
     "manualReviewCount": 0

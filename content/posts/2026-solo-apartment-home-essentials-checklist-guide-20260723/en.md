@@ -5,8 +5,7 @@ title: >-
 description: >-
   Case-study checklist for one-person summer apartments — nine cross-category
   checks across fans, purifiers, air fryers, earbuds, and robot vacuums.
-date: '2026-07-23'
-createdAt: '2026-07-23T06:50:22.678Z'
+date: '2026-07-24'
 tags:
   - checklist
   - solo apartment
@@ -19,7 +18,7 @@ topicId: meta-solo-apartment-essentials
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: case-study
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - solo apartment summer living
@@ -36,7 +35,8 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-07-23T06:56:02.833Z'
+updatedAt: '2026-07-24T07:56:24.814Z'
+publishedAt: '2026-07-24T16:56:21.000Z'
 ---
 ## Editorial Overview
 
@@ -212,12 +212,11 @@ When every gate here passes and you need model-level CFM tables, CADR shortlists
 
 ## Related guides
 
+- [Summer Solo-Apartment Heat Checklist: Fan, Air, Moisture, Desk, and Low-Heat Cooking](/en/blog/2026-summer-solo-heat-essentials-checklist) — heatwave-focused companion checks
 - [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — scenario picks once these gates pass
+- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — dock and schedule scenarios after clearance passes
 - [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — deeper CFM and sleep-noise tables
 - [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — filter TCO for 15–25 m² sealed rooms
-- [Summer Solo-Apartment Heat Checklist: Fan, Air, Moisture, Desk, and Low-Heat Cooking](/en/blog/2026-summer-solo-heat-essentials-checklist) — heatwave-focused companion checks
-- [Robot Vacuums for Busy Floors: Five Scenario Picks by Layout and Schedule](/en/blog/2026-robot-vacuums-scenario-guide) — dock and schedule scenarios after clearance passes
-
 ## Final Verdict
 
 The case-study apartment did not fail because the brands were wrong. It failed because **five categories checked out before one floor plan was taped**. For one-person summer rentals, priority stays: **lane clearance → fan/cooling path → CADR-fit purifier → circuit-safe air fryer → earbuds noise budget → robot only with dock space** — then a three-year sheet for filters, bags, and kWh as of {{today}}.

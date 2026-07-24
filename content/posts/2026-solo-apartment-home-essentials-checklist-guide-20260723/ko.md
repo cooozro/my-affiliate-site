@@ -1,8 +1,7 @@
 ---
 title: '1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기'
 description: 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
-date: '2026-07-23'
-createdAt: '2026-07-23T06:50:22.678Z'
+date: '2026-07-24'
 tags:
   - 체크리스트
   - 1인원룸
@@ -15,7 +14,7 @@ topicId: meta-solo-apartment-essentials
 topicCluster: household-type
 writingMode: benchmark
 toneVariant: case-study
-draft: true
+draft: false
 liveData: true
 imageSearchKeywords:
   - solo apartment summer living
@@ -32,7 +31,8 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-07-23T06:56:02.867Z'
+updatedAt: '2026-07-24T07:56:24.816Z'
+publishedAt: '2026-07-24T16:56:21.000Z'
 ---
 ## 편집부 개요
 
@@ -208,12 +208,11 @@ updatedAt: '2026-07-23T06:56:02.867Z'
 
 ## 관련 가이드
 
+- [여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리](/ko/blog/2026-summer-solo-heat-essentials-checklist) — 폭염 초점 동반 점검
 - [1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 게이트 통과 후 시나리오 픽
+- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 여유 통과 후 도크·일정 시나리오
 - [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — CFM·수면 소음 심층 표
 - [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 15–25㎡ 밀폐 방 필터 TCO
-- [여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리](/ko/blog/2026-summer-solo-heat-essentials-checklist) — 폭염 초점 동반 점검
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 여유 통과 후 도크·일정 시나리오
-
 ## 최종 평가
 
 사례 원룸은 브랜드가 틀려서가 아니라 **평면도를 테이프로 재기 전에 다섯 카테고리가 결제**되어서 실패했습니다. 1인 여름 임대에서 우선순위는 **통로 여유 → 선풍기/냉각 경로 → CADR 맞춤 청정기 → 회로 안전 에어프라이어 → 이어폰 소음 예산 → 도크 공간이 있을 때만 로봇** — 그다음 {{today_ko}} 기준 필터·봉투·kWh 3년 표입니다.
