@@ -836,18 +836,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-24T07:56:21.263Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (383min past slot, KST 2026-07-24)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-24T08:00:38.265Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-solo-apartment-home-essentials-checklist-guide-20260723/en.md: publishedAt 2026-07-24T16:56:21.000Z → 2026-07-24T07:56:24.703Z",
+      "2026-solo-apartment-home-essentials-checklist-guide-20260723/ko.md: publishedAt 2026-07-24T16:56:21.000Z → 2026-07-24T07:56:24.703Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-24",
