@@ -836,7 +836,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-24T22:47:49.007Z",
+    "at": "2026-07-24T23:09:05.643Z",
     "issueCount": 2,
     "issues": [
       {
@@ -846,7 +846,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 891min",
+        "message": "Cursor replenish pending 912min",
         "severity": "warning"
       }
     ],
