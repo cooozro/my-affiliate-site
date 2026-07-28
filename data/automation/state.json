@@ -32,23 +32,14 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-24T07:56:24.703Z",
-  "nextPublishAt": "2026-07-28T05:06:31.325Z",
-  "scheduledGapHours": 4.97,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-07-28T05:24:50.271Z",
+  "nextPublishAt": "2026-07-29T01:35:00.000Z",
+  "scheduledGapHours": 4.58,
+  "publishCountToday": 1,
   "publishDateKst": "2026-07-28",
   "writeCountToday": 0,
   "writeDateKst": "2026-07-28",
   "history": [
-    {
-      "action": "publish",
-      "slug": "2026-budget-smartphones-under-300",
-      "at": "2026-06-26T02:57:56.989Z",
-      "urls": [
-        "https://www.aipick.shop/en/blog/2026-budget-smartphones-under-300",
-        "https://www.aipick.shop/ko/blog/2026-budget-smartphones-under-300"
-      ]
-    },
     {
       "action": "publish",
       "slug": "2026-budget-mechanical-keyboards-guide",
@@ -652,13 +643,22 @@
         "https://www.aipick.shop/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723",
         "https://www.aipick.shop/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "under-300-cross-category-best-value-2026",
+      "topic": {
+        "id": "meta-under-300-cross-category",
+        "cluster": "cross-cutting"
+      },
+      "at": "2026-07-28T05:24:50.271Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/under-300-cross-category-best-value-2026",
+        "https://www.aipick.shop/ko/blog/under-300-cross-category-best-value-2026"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "cordless-vacuums",
-      "at": "2026-07-09T05:23:27.625Z"
-    },
     {
       "id": "bidets",
       "at": "2026-07-10T05:25:29.989Z"
@@ -810,6 +810,11 @@
       "category": "cross-cutting",
       "cluster": "household-type",
       "at": "2026-07-24T07:56:24.710Z"
+    },
+    {
+      "id": "meta-under-300-cross-category",
+      "cluster": "cross-cutting",
+      "at": "2026-07-28T05:24:50.279Z"
     }
   ],
   "formatHistory": [
@@ -836,13 +841,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-28T05:06:31.325Z",
+    "at": "2026-07-28T05:24:48.747Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (3min past slot, KST 2026-07-28)",
-        "severity": "warning"
+        "message": "Publish ready but no post went live (18min past slot, KST 2026-07-28)",
+        "severity": "error"
       }
     ],
     "repairs": [
@@ -850,10 +855,10 @@
       "marked-slot-catch-up"
     ]
   },
-  "lastDailyContentAuditKst": "2026-07-26",
+  "lastDailyContentAuditKst": "2026-07-28",
   "lastDailyContentAudit": {
-    "at": "2026-07-26T14:11:02.929Z",
-    "postsScanned": 53,
+    "at": "2026-07-28T05:24:53.546Z",
+    "postsScanned": 54,
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },

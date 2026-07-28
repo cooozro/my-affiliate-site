@@ -8,14 +8,13 @@ tags:
   - 가성비 추천
   - 여름 가전
   - 구매 가이드
-draft: true
+draft: false
 contentProfile: explainer
 topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
 writingProvider: deepseek
-createdAt: '2026-07-28T05:04:10.730Z'
 liveData: true
-updatedAt: '2026-07-28T05:04:10.887Z'
+updatedAt: '2026-07-28T05:24:50.412Z'
 coverImage: /images/posts/under-300-cross-category-best-value-2026/cover-3184292.jpg
 coverImageAlt: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
 coverImageAltKo: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
@@ -23,6 +22,7 @@ coverImageProvider: pexels
 coverImageAssetId: 3184292
 coverImageSourceUrl: 'https://www.pexels.com/photo/3184292/'
 coverImageCredit: Pexels
+publishedAt: '2026-07-28T14:24:49.000Z'
 ---
 ## 편집부 개요
 
@@ -146,12 +146,11 @@ CADR(청정 공기 공급률)은 분당 정화되는 공기의 입방피트를 �
 
 ## 관련 가이드
 
-- [가성비 모니터 구매 가이드](/ko/blog/2026-budget-monitors-buying-guide)
-- [가성비 보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide)
-- [공기청정기 가이드](/ko/blog/2026-air-purifiers-guide)
-- [선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide)
-- [30만 원 교차 카테고리 구매 가이드](/ko/blog/2026-under-300-cross-category-buying-guide)
-
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
 ## 최종 결론
 
 ### 구매 추천

@@ -10,14 +10,13 @@ tags:
   - value picks
   - summer tech
   - buying guide
-draft: true
+draft: false
 contentProfile: explainer
 topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
 writingProvider: deepseek
-createdAt: '2026-07-28T05:04:10.730Z'
 liveData: true
-updatedAt: '2026-07-28T05:04:10.858Z'
+updatedAt: '2026-07-28T05:24:50.410Z'
 coverImage: /images/posts/under-300-cross-category-best-value-2026/cover-3184292.jpg
 coverImageAlt: Home desk with monitor and gadgets for a budget tech setup
 coverImageAltKo: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
@@ -25,6 +24,7 @@ coverImageProvider: pexels
 coverImageAssetId: 3184292
 coverImageSourceUrl: 'https://www.pexels.com/photo/3184292/'
 coverImageCredit: Pexels
+publishedAt: '2026-07-28T14:24:49.000Z'
 ---
 ## Editorial Overview
 
@@ -148,12 +148,11 @@ Under $100, purifiers often lack true HEPA and have low CADR. They may filter la
 
 ## Related guides
 
-- [Budget monitors buying guide](/en/blog/2026-budget-monitors-buying-guide)
-- [Budget power banks guide](/en/blog/2026-budget-power-banks-guide)
-- [Air purifiers guide](/en/blog/2026-air-purifiers-guide)
-- [Electric fans buying guide](/en/blog/2026-electric-fans-buying-guide)
-- [Under $300 cross-category buying guide](/en/blog/2026-under-300-cross-category-buying-guide)
-
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
 ## Final Verdict
 
 ### Buy if
