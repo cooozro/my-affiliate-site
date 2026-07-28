@@ -956,6 +956,15 @@
       "contentHash": "c88d8de024ad8f95784276950670bf898e028dd7878fba639bf181b3812ad36f",
       "provider": "pexels",
       "registeredAt": "2026-07-23T06:56:54.957Z"
+    },
+    {
+      "slug": "under-300-cross-category-best-value-2026",
+      "url": "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+      "assetKey": "pexels:3184292",
+      "hash": null,
+      "contentHash": "dc95a92b31bd4a3bfabb8e8aa92a6cfc8c3e03f07fb382700e754886b26c5f26",
+      "provider": "pexels",
+      "registeredAt": "2026-07-28T05:06:13.894Z"
     }
   ]
 }
