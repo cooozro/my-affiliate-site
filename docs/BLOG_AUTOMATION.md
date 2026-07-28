@@ -13,15 +13,21 @@ Automated draft writing, publishing, and Google Search Console indexing for AI P
 
 All steps run on GitHub/Cursor cloud — **no PC, no VPS**.
 
-### Required secret for draft replenish
+### Required secrets for draft replenish
 
 | Secret | Purpose |
 | --- | --- |
-| `CURSOR_API_KEY` | Cursor agent on GHA writes drafts ([Dashboard → Integrations](https://cursor.com/dashboard/integrations)) |
+| `DEEPSEEK_API_KEY` | **Preferred** — DeepSeek chat writes drafts with inlined CONTENT_STANDARDS + profile templates + FAQ/editorial modules (`scripts/automation/writer-system-prompt.mjs`) |
+| `CURSOR_API_KEY` | Fallback — Cursor agent on GHA ([Dashboard → Integrations](https://cursor.com/dashboard/integrations)) |
+| `OPENAI_API_KEY` | Optional last-resort JSON writer |
 
-Without `CURSOR_API_KEY`, publish still works but draft replenish fails until the key is added.
+Optional repo Variables: `REPLENISH_PROVIDER` (`deepseek` \| `cursor` \| `openai`), `DEEPSEEK_MODEL` (default `deepseek-chat`).
 
-## Schedule (Korea Standard Time) — Plan A (Cursor writes, automation publishes)
+Without any writer key, publish still works but draft replenish fails until a key is added.
+
+Drafts land as `draft: true` under `content/posts/` and appear in admin **임시글 보관함** (Posts → Draft) for human Preview before auto/manual publish.
+
+## Schedule (Korea Standard Time) — Plan A (LLM/Cursor writes, automation publishes)
 
 | Rule | Value |
 | --- | --- |
@@ -79,9 +85,11 @@ Repository → Settings → Secrets and variables → Actions:
 | `PEXELS_API_KEY` | Yes (cover images) | Pexels stock photos |
 | `PIXABAY_API_KEY` | Yes (cover images) | Pixabay stock photos — rotates with Pexels by slug |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
-| `CURSOR_API_KEY` | **Yes** (draft replenish on GHA) | Cursor agent writes drafts when PC is off |
+| `CURSOR_API_KEY` | Optional (fallback) | Cursor agent writes drafts when DeepSeek key absent |
+| `DEEPSEEK_API_KEY` | **Preferred** (draft replenish) | DeepSeek JSON writer + module system prompt |
+| `OPENAI_API_KEY` | Optional | Last-resort OpenAI JSON writer |
 
-`OPENAI_API_KEY` is **not** used in Plan A.
+`REPLENISH_PROVIDER` can force `deepseek` / `cursor` / `openai`. Default order: DeepSeek → Cursor → OpenAI.
 
 ### 2. GitHub Variables (optional)
 

@@ -444,10 +444,10 @@ export function AdminDashboard() {
 
       {automation ? (
         <section className="rounded-xl border border-border bg-surface p-5">
-          <h2 className="mb-3 text-lg font-semibold">발행 스케줄 · 임시글 큐</h2>
+          <h2 className="mb-3 text-lg font-semibold">발행 스케줄 · 임시글 보관함</h2>
           <div className="grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-4">
             <MetricCard
-              label="임시글 (draft)"
+              label="임시글 보관함"
               value={automation.draftLabel}
             />
             <MetricCard
@@ -553,15 +553,44 @@ export function AdminDashboard() {
               ) : null}
               <br />
               {automation.cursorDraftPending
-                ? "GitHub Actions가 pending 요청을 5분마다 재시도합니다 (Cursor API, PC 불필요)."
+                ? "GitHub Actions가 pending 신청을 재시도합니다 (DeepSeek → Cursor → OpenAI, PC 불필요)."
                 : "아직 작성 요청 전이면 다음 publish-slot에서 자동 등록됩니다."}
             </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">
-              임시글 버퍼가 충분합니다. publish-slot 워크플로가 5분마다 자동
-              발행을 확인합니다.
+              임시글 보관함 버퍼가 충분합니다. publish-slot 워크플로가 5분마다 자동
+              발행을 확인합니다. 아래 Posts에서 Draft 배지 글을 Preview로 검토한 뒤
+              발행 여부를 판단하세요.
             </p>
           )}
+          {pinnedBufferSlugs.length > 0 ? (
+            <div className="mt-4 rounded-lg border border-border/70 bg-background p-4 text-sm">
+              <p className="font-medium">임시글 보관함 · 사람 검토 대기</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                자동 발행 전 Preview로 확인하세요. Draft 배지 글만 여기 표시됩니다.
+              </p>
+              <ul className="mt-3 space-y-2">
+                {pinnedBufferSlugs.map((slug) => {
+                  const post = posts.find((p) => p.slug === slug);
+                  return (
+                    <li
+                      key={slug}
+                      className="flex flex-wrap items-center justify-between gap-2 border-b border-border/40 pb-2 last:border-0 last:pb-0"
+                    >
+                      <span className="font-medium">{post?.titleKo || post?.titleEn || slug}</span>
+                      <span className="text-xs text-muted-foreground">{slug}</span>
+                      <a
+                        href={`/admin/preview/${slug}`}
+                        className="text-xs text-blue-600 underline dark:text-blue-400"
+                      >
+                        Preview
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ) : null}
           <div className="mt-4 rounded-lg border border-border/70 bg-background p-4 text-sm">
             <p className="font-medium">운영 핵심 요약 (SEO 정밀 분석 연동)</p>
             <p className="mt-1 text-xs text-muted-foreground">

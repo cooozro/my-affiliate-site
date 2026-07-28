@@ -117,6 +117,10 @@ jobs:
         continue-on-error: true
         env:
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          REPLENISH_PROVIDER: ${{ vars.REPLENISH_PROVIDER }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
@@ -131,11 +135,11 @@ jobs:
       - name: Commit and push replenish drafts
         if: steps.replenish.outcome == 'success' && (steps.publish.outputs.replenish_needed == 'true' || steps.pending_replenish.outputs.needed == 'true')
         run: |
-          bash scripts/ci-git-push.sh "chore(content): cursor draft replenish"
+          bash scripts/ci-git-push.sh "chore(content): draft replenish"
 
       - name: Report replenish failure without blocking publish
         if: always() && steps.pending_replenish.outputs.needed == 'true' && steps.replenish.outcome == 'failure'
         run: |
-          echo "::warning::Cursor draft replenish failed AFTER publish — fill buffer via IDE or fix CURSOR_API_KEY/OpenAI fallback"
+          echo "::warning::Draft replenish failed AFTER publish — fill buffer via IDE or fix DEEPSEEK_API_KEY / CURSOR_API_KEY / OpenAI fallback"
           node -e "try{const r=require('./data/automation/cursor-draft-request.json');console.error('lastError:',r.lastError||'(none)');console.error('lastFailure:',JSON.stringify(r.lastFailure||null,null,2));}catch(e){console.error(e.message)}"
           # Do not exit 1: publish already committed; failing the job hid successful publishes and stalled operators.

@@ -1,4 +1,6 @@
 import { buildGenerationPrompt } from "./prompts.mjs";
+import { chatJsonCompletion } from "./llm-chat.mjs";
+import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
 import {
@@ -13,7 +15,7 @@ import {
   resetDailyCounters,
   saveState,
 } from "./state.mjs";
-import { pickContentProfile } from "../lib/content-profiles.mjs";
+import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import {
   MAX_PUBLISH_PER_DAY,
@@ -24,45 +26,19 @@ import {
 const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
 const TARGET_DRAFT_BUFFER = TARGET_DRAFT_COUNT;
 
-async function callOpenAI(prompt) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    throw new Error("OPENAI_API_KEY is required for automated writing");
-  }
-
-  const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      temperature: 0.7,
-      response_format: { type: "json_object" },
-      messages: [
-        {
-          role: "system",
-          content:
-            "You write high-quality bilingual tech buying guides. Output strict JSON only.",
-        },
-        { role: "user", content: prompt },
-      ],
-    }),
+async function callLlmWriter(prompt, contentProfile, options = {}) {
+  const templatePath =
+    options.templatePath ?? getTemplatePath(contentProfile ?? "buying-guide");
+  const system = buildWriterSystemPrompt(contentProfile, { templatePath });
+  const { provider, model, article } = await chatJsonCompletion({
+    system,
+    user: prompt,
+    provider: options.provider,
+    temperature: 0.7,
+    json: true,
   });
-
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`OpenAI API ${response.status}: ${err.slice(0, 300)}`);
-  }
-
-  const data = await response.json();
-  const text = data.choices?.[0]?.message?.content;
-  if (!text) throw new Error("Empty OpenAI response");
-
-  return JSON.parse(text);
+  console.log(`LLM writer: provider=${provider}, model=${model}`);
+  return { article, writingProvider: provider };
 }
 
 function uniqueSlug(base) {
@@ -89,6 +65,7 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
     contentProfile: shared.contentProfile ?? "buying-guide",
     ...(shared.topicId ? { topicId: shared.topicId } : {}),
     ...(shared.topicCluster ? { topicCluster: shared.topicCluster } : {}),
+    ...(shared.writingProvider ? { writingProvider: shared.writingProvider } : {}),
     createdAt: shared.createdAt,
     ...(shared.liveData ? { liveData: true } : {}),
     ...(shared.coverImage ? { coverImage: shared.coverImage } : {}),
@@ -152,6 +129,8 @@ export async function generateDraftFromRequest(request, options = {}) {
     writingMode: request.writingMode,
     toneVariant: request.toneVariant,
     benchmarkOutline: request.benchmarkOutline,
+    templatePath: request.templatePath,
+    provider: options.provider ?? request.preferredProvider,
   });
 }
 
@@ -166,7 +145,14 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
-  const article = await callOpenAI(prompt);
+  const { article, writingProvider } = await callLlmWriter(
+    prompt,
+    contentProfile,
+    {
+      provider: options.provider,
+      templatePath: options.templatePath,
+    },
+  );
 
   const slug = uniqueSlug(article.slug ?? `${year}-${topic.id}-guide`);
   const createdAt = new Date().toISOString();
@@ -189,6 +175,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     contentProfile: article.contentProfile ?? contentProfile,
     topicId: article.topicId ?? topic.id,
     topicCluster: article.topicCluster ?? topic.topicCluster,
+    writingProvider,
     liveData: Boolean(article.liveData ?? topic.liveData),
     ...(imageMeta ?? {}),
     ...(imageMeta

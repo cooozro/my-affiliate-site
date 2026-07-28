@@ -292,11 +292,11 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     ? cursorDraftLastError
       ? `Cursor API 보충이 실패해 GitHub Actions가 5분마다 재시도 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. OpenAI 키는 필요 없습니다 — 아래 실패 메시지를 확인하세요.`
       : cursorDraftPendingMinutes != null && cursorDraftPendingMinutes >= 20
-        ? `임시글 보충 요청이 ${cursorDraftPendingMinutes}분째 대기 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. Cursor API 한도·GHA 스케줄 지연일 수 있습니다.`
-        : `GitHub Actions가 Cursor API로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 보통 5–20분 (한도에 따라 더 걸릴 수 있음).`
+        ? `임시글 보충 요청이 ${cursorDraftPendingMinutes}분째 대기 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. DeepSeek/Cursor API 한도·GHA 스케줄 지연일 수 있습니다.`
+        : `GitHub Actions가 DeepSeek/Cursor로 임시글 보충 중${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. 보통 5–20분 (한도에 따라 더 걸릴 수 있음).`
     : draftCount < TARGET_DRAFT_COUNT
-      ? "임시글 1건 부족. publish-slot(약 5분마다)에서 Cursor 작성 요청이 자동 등록됩니다."
-      : "임시글 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
+      ? "임시글 1건 부족. publish-slot(약 5분마다)에서 작성 요청이 자동 등록됩니다."
+      : "임시글 보관함 버퍼 충분. 발행·보충 모두 GitHub Actions에서 PC 없이 실행됩니다.";
 
   const lastHealthCheck = state.lastHealthCheck as
     | {

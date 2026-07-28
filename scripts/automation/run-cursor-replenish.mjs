@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Draft replenish on GitHub Actions (Plan A).
- * Uses Cursor SDK when CURSOR_API_KEY is set. OpenAI is optional fallback only.
+ * Providers: DeepSeek (preferred when key set) → Cursor SDK → OpenAI fallback.
  */
 
 import fs from "fs";
@@ -87,7 +87,7 @@ function buildCursorPrompt(request) {
       ? `BENCHMARK mode: follow the outline below. Paraphrase every section; zero copied sentences from SERP sources. Tone: ${request.toneVariant ?? "editorial"}.\n`
       : `STABLE mode: follow ${templatePath} section structure exactly.\n`;
 
-  return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes, no OpenAI).
+  return `Replenish the blog draft buffer for AI Pick (Plan A — Cursor writes).
 
 Read first:
 - docs/CONTENT_STANDARDS.md
@@ -215,9 +215,26 @@ function rejectReplenishOverwrite(slug, reason) {
   console.error(reason);
 }
 
-/** Plan A: Cursor first. OpenAI only when CURSOR_API_KEY is absent. */
-function pickReplenishProviders({ cursorKey, openaiKey }) {
+/** Prefer DeepSeek when key/forced; else Cursor; else OpenAI. */
+function pickReplenishProviders({ cursorKey, openaiKey, deepseekKey }) {
+  const forced = (process.env.REPLENISH_PROVIDER ?? "").trim().toLowerCase();
   const providers = [];
+
+  if (forced === "deepseek") {
+    if (deepseekKey) providers.push("deepseek");
+    return providers;
+  }
+  if (forced === "cursor") {
+    if (cursorKey) providers.push("cursor");
+    return providers;
+  }
+  if (forced === "openai") {
+    if (openaiKey) providers.push("openai");
+    return providers;
+  }
+
+  // Default: DeepSeek first when available (module-backed system prompt path).
+  if (deepseekKey) providers.push("deepseek");
   if (cursorKey) providers.push("cursor");
   if (openaiKey) providers.push("openai");
   return providers;
@@ -229,10 +246,10 @@ async function runReplenishProviders(request, draftsBefore, keys) {
 
   for (const provider of providers) {
     try {
-      if (provider === "openai") {
-        const slugs = await replenishWithOpenAI(request);
+      if (provider === "deepseek" || provider === "openai") {
+        const slugs = await replenishWithLlm(request, provider);
         if (slugs.length > 0) return slugs;
-        errors.push("OpenAI replenish returned no draft");
+        errors.push(`${provider} replenish returned no draft`);
         continue;
       }
 
@@ -244,14 +261,14 @@ async function runReplenishProviders(request, draftsBefore, keys) {
         error instanceof Error
           ? error.message
           : String(error);
-      errors.push(provider === "cursor" ? `Cursor: ${message}` : message);
+      errors.push(`${provider}: ${message}`);
       console.error(`${provider} replenish failed: ${message}`);
     }
   }
 
   if (errors.length === 0) {
     throw new Error(
-      "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions).",
+      "No replenish provider available. Set DEEPSEEK_API_KEY (preferred), CURSOR_API_KEY, or OPENAI_API_KEY.",
     );
   }
 
@@ -356,7 +373,7 @@ async function ensureCoverImage(slug, topic) {
   }
 }
 
-function requestForNextOpenAiDraft(request, index) {
+function requestForNextLlmDraft(request, index) {
   if (index === 0) return request;
 
   const state = loadState();
@@ -376,9 +393,10 @@ function requestForNextOpenAiDraft(request, index) {
   };
 }
 
-async function replenishWithOpenAI(request) {
-  const openaiKey = process.env.OPENAI_API_KEY?.trim();
-  if (!openaiKey) return [];
+async function replenishWithLlm(request, provider) {
+  const envKey =
+    provider === "deepseek" ? "DEEPSEEK_API_KEY" : "OPENAI_API_KEY";
+  if (!process.env[envKey]?.trim()) return [];
 
   const created = [];
   const maxCreates = Math.min(
@@ -387,12 +405,13 @@ async function replenishWithOpenAI(request) {
   );
 
   for (let i = 0; i < maxCreates && countDrafts() < TARGET_DRAFT_COUNT; i += 1) {
-    const activeRequest = requestForNextOpenAiDraft(request, i);
+    const activeRequest = requestForNextLlmDraft(request, i);
     console.log(
-      `OpenAI replenish ${i + 1}/${maxCreates}: topic=${activeRequest.topic?.id}`,
+      `${provider} replenish ${i + 1}/${maxCreates}: topic=${activeRequest.topic?.id}`,
     );
     const slug = await generateDraftFromRequest(activeRequest, {
       bypassWriteCap: true,
+      provider,
     });
     if (!slug) break;
     created.push(slug);
@@ -530,10 +549,11 @@ async function main() {
 
     const openaiKey = process.env.OPENAI_API_KEY?.trim();
     const cursorKey = process.env.CURSOR_API_KEY?.trim();
-    if (!cursorKey && !openaiKey) {
+    const deepseekKey = process.env.DEEPSEEK_API_KEY?.trim();
+    if (!cursorKey && !openaiKey && !deepseekKey) {
       const message =
-        "CURSOR_API_KEY missing in GitHub Secrets (Settings → Secrets → Actions). " +
-        "Create at https://cursor.com/dashboard/integrations — chat/IDE keys are not auto-synced.";
+        "No writer API key. Set DEEPSEEK_API_KEY (preferred), CURSOR_API_KEY, or OPENAI_API_KEY " +
+        "in .env / GitHub Secrets (Settings → Secrets → Actions).";
       failReplenish(message, { reason: "missing-api-key" });
       return;
     }
@@ -547,12 +567,17 @@ async function main() {
       createdSlugs = await runReplenishProviders(request, draftsBefore, {
         cursorKey,
         openaiKey,
+        deepseekKey,
       });
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       failReplenish(message, {
         reason: "provider-error",
-        provider: cursorKey ? "cursor" : "openai",
+        provider: deepseekKey
+          ? "deepseek"
+          : cursorKey
+            ? "cursor"
+            : "openai",
       });
       return;
     }
