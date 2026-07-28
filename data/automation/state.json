@@ -841,18 +841,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-07-28T05:24:48.747Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (18min past slot, KST 2026-07-28)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-07-28T06:10:09.532Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "under-300-cross-category-best-value-2026/en.md: publishedAt 2026-07-28T14:24:49.000Z → 2026-07-28T05:24:50.271Z",
+      "under-300-cross-category-best-value-2026/ko.md: publishedAt 2026-07-28T14:24:49.000Z → 2026-07-28T05:24:50.271Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-07-28",
