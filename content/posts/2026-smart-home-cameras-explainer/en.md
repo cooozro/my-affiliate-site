@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-30T14:29:57.431Z'
+updatedAt: '2026-07-31T14:38:13.419Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
 noindex: true
 robots: 'noindex, nofollow'

@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-30T14:29:57.111Z'
+updatedAt: '2026-07-31T14:38:13.072Z'
 publishedAt: '2026-07-18T08:40:18.328Z'
 ---
 ## 편집부 개요
