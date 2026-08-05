@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-08-04'
+date: '2026-08-05'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-08-04T00:57:45.952Z'
+updatedAt: '2026-08-05T00:52:41.932Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 8월 4일 화요일 오전 9:57
+- **생성 시각 (KST):** 2026년 8월 5일 수요일 오전 9:52
 - **스캔 대상:** 발행 글 53 slug / 106 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
@@ -127,7 +127,7 @@ updatedAt: '2026-08-04T00:57:45.952Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 8. 4. 오전 9:57:45
+- **API 수집 시각 (KST):** 2026. 8. 5. 오전 9:52:41
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -135,9 +135,9 @@ updatedAt: '2026-08-04T00:57:45.952Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 17 |
-| Sessions | 27 |
-| Page views | 25 |
+| Active users | 21 |
+| Sessions | 31 |
+| Page views | 29 |
 
 ### 상위 블로그 랜딩 (7일)
 
@@ -146,11 +146,11 @@ updatedAt: '2026-08-04T00:57:45.952Z'
 | `/en/blog/2026-budget-wireless-earbuds-top5` | 5 |
 | `/en/blog/2026-electric-fans-buying-guide` | 2 |
 | `/en/blog/2026-noise-cancelling-headphones-head-to-head` | 2 |
-| `/en/blog/2026-rice-cookers-explainer` | 1 |
-| `/en/blog/2026-wireless-earbuds-head-to-head` | 1 |
-| `/ko/blog/2026-electric-fans-buying-guide` | 1 |
-| `/ko/blog/2026-noise-cancelling-headphones-head-to-head` | 1 |
-| `/ko/blog/2026-television-buying-guide` | 1 |
+| `/en/blog/2026-wireless-earbuds-head-to-head` | 2 |
+| `/en/blog/2026-budget-mechanical-keyboards-guide` | 1 |
+| `/en/blog/2026-clothes-dryers-buying-guide` | 1 |
+| `/en/blog/2026-compact-footprint-cross-category-scenario-guide` | 1 |
+| `/en/blog/2026-family-3-5-home-essentials-scenario-guide` | 1 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
