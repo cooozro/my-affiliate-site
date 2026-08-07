@@ -33,7 +33,7 @@
     "dishwashers"
   ],
   "lastPublishAt": "2026-07-28T05:24:50.271Z",
-  "nextPublishAt": "2026-08-07T15:40:21.689Z",
+  "nextPublishAt": "2026-08-07T16:05:13.735Z",
   "scheduledGapHours": 5.87,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-08",
@@ -841,12 +841,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-07T15:40:21.611Z",
+    "at": "2026-08-07T16:05:13.643Z",
     "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (40min past slot, KST 2026-08-08)",
+        "message": "Publish ready but no post went live (24min past slot, KST 2026-08-08)",
         "severity": "error"
       },
       {
@@ -856,7 +856,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 15015min",
+        "message": "Cursor replenish pending 15040min",
         "severity": "warning"
       }
     ],
