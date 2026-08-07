@@ -31,7 +31,7 @@ coverImageProvider: pexels
 coverImageAssetId: 10024297
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-04T14:32:08.776Z'
+updatedAt: '2026-08-07T14:02:51.324Z'
 publishedAt: '2026-07-13T12:13:57.000Z'
 ---
 ## 편집부 개요
