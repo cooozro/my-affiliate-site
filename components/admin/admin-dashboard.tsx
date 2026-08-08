@@ -9,6 +9,7 @@ import {
   isAutomationBufferDraft,
 } from "@/lib/admin-only-posts";
 import { TARGET_DRAFT_COUNT } from "@/lib/publish-schedule";
+import { AdminHtmlEditorModal } from "@/components/admin/admin-html-editor-modal";
 
 type AdminPostRow = {
   slug: string;
@@ -125,6 +126,13 @@ export function AdminDashboard() {
   const [coverBusy, setCoverBusy] = useState<string | null>(null);
   const [copyDoneSlug, setCopyDoneSlug] = useState<string | null>(null);
   const [copyBusy, setCopyBusy] = useState<string | null>(null);
+  const [htmlCopyDoneSlug, setHtmlCopyDoneSlug] = useState<string | null>(null);
+  const [htmlCopyBusy, setHtmlCopyBusy] = useState<string | null>(null);
+  const [htmlEditor, setHtmlEditor] = useState<{
+    slug: string;
+    locale: "en" | "ko";
+    title: string;
+  } | null>(null);
   const [uploadSlug, setUploadSlug] = useState<string | null>(null);
   const [imageVersion, setImageVersion] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -213,7 +221,7 @@ export function AdminDashboard() {
 
       await navigator.clipboard.writeText(data.text);
       setCopyDoneSlug(slug);
-      setMessage(`리포트 전체 내용이 클립보드에 복사되었습니다. (${slug})`);
+      setMessage(`마크다운 전체가 클립보드에 복사되었습니다. (${slug})`);
       window.setTimeout(() => {
         setCopyDoneSlug((current) => (current === slug ? null : current));
       }, 2500);
@@ -221,6 +229,36 @@ export function AdminDashboard() {
       setError("클립보드 복사에 실패했습니다. 브라우저 권한을 확인하세요.");
     } finally {
       setCopyBusy(null);
+    }
+  }
+
+  async function copyReportHtml(slug: string, locale: "en" | "ko") {
+    setHtmlCopyBusy(slug);
+    setMessage("");
+    setError("");
+
+    try {
+      const response = await fetch(
+        `/api/admin/posts/${slug}/content?locale=${locale}&format=html`,
+        { credentials: "same-origin" },
+      );
+      const data = (await response.json()) as { html?: string; error?: string };
+
+      if (!response.ok || !data.html) {
+        setError(data.error ?? "HTML 복사에 실패했습니다.");
+        return;
+      }
+
+      await navigator.clipboard.writeText(data.html);
+      setHtmlCopyDoneSlug(slug);
+      setMessage(`HTML 전체가 클립보드에 복사되었습니다. (${slug})`);
+      window.setTimeout(() => {
+        setHtmlCopyDoneSlug((current) => (current === slug ? null : current));
+      }, 2500);
+    } catch {
+      setError("클립보드 복사에 실패했습니다. 브라우저 권한을 확인하세요.");
+    } finally {
+      setHtmlCopyBusy(null);
     }
   }
 
@@ -699,9 +737,12 @@ export function AdminDashboard() {
       ) : null}
 
         <p className="mb-4 text-xs text-muted-foreground">
+          <strong>SEO 리포트</strong>: <strong>수정</strong>으로 HTML/Markdown을
+          편집하고, <strong>HTML 전체복사</strong>로 렌더된 HTML을 클립보드에
+          넣습니다. <strong>복사</strong>는 마크다운 원본입니다.{" "}
           <strong>커버 교체</strong>: 파일 선택 창이 열립니다. 기존 파일명이 있으면 같은
-          이름으로 덮어씁니다. 아래 파일명·ALT를 참고해 수동 교체하세요.{" "}
-          <strong>자동 검색</strong>은 Pexels/Pixabay API가 있을 때만 사용합니다.
+          이름으로 덮어씁니다. <strong>자동 검색</strong>은 Pexels/Pixabay API가 있을
+          때만 사용합니다.
         </p>
 
         <input
@@ -775,20 +816,49 @@ export function AdminDashboard() {
                   <td className="px-3 py-3">
                     <div className="flex flex-wrap gap-2">
                       {publishBlocked ? (
-                        <button
-                          type="button"
-                          disabled={copyBusy === post.slug}
-                          onClick={() =>
-                            void copyReportMarkdown(post.slug, previewLocale)
-                          }
-                          className="rounded border border-violet-500/40 px-2 py-1 text-xs text-violet-700 hover:bg-violet-500/10 disabled:opacity-40 dark:text-violet-300"
-                        >
-                          {copyBusy === post.slug
-                            ? "…"
-                            : copyDoneSlug === post.slug
-                              ? "복사됨"
-                              : "복사"}
-                        </button>
+                        <>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setHtmlEditor({
+                                slug: post.slug,
+                                locale: previewLocale,
+                                title: post.titleKo || post.titleEn || post.slug,
+                              })
+                            }
+                            className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
+                          >
+                            수정
+                          </button>
+                          <button
+                            type="button"
+                            disabled={htmlCopyBusy === post.slug}
+                            onClick={() =>
+                              void copyReportHtml(post.slug, previewLocale)
+                            }
+                            className="rounded border border-violet-500/40 px-2 py-1 text-xs text-violet-700 hover:bg-violet-500/10 disabled:opacity-40 dark:text-violet-300"
+                          >
+                            {htmlCopyBusy === post.slug
+                              ? "…"
+                              : htmlCopyDoneSlug === post.slug
+                                ? "HTML 복사됨"
+                                : "HTML 전체복사"}
+                          </button>
+                          <button
+                            type="button"
+                            disabled={copyBusy === post.slug}
+                            onClick={() =>
+                              void copyReportMarkdown(post.slug, previewLocale)
+                            }
+                            className="rounded border border-border px-2 py-1 text-xs hover:bg-muted disabled:opacity-40"
+                          >
+                            {copyBusy === post.slug
+                              ? "…"
+                              : copyDoneSlug === post.slug
+                                ? "MD 복사됨"
+                                : "MD 복사"}
+                          </button>
+                        </>
                       ) : null}
                       <Link
                         href={`/admin/preview/${post.slug}?locale=${previewLocale}`}
@@ -887,6 +957,22 @@ export function AdminDashboard() {
           </table>
         </div>
       </section>
+
+      <AdminHtmlEditorModal
+        open={Boolean(htmlEditor)}
+        slug={htmlEditor?.slug ?? ""}
+        locale={htmlEditor?.locale ?? "ko"}
+        title={htmlEditor?.title ?? ""}
+        onClose={() => setHtmlEditor(null)}
+        onSaved={(msg) => {
+          setMessage(msg);
+          setError("");
+        }}
+        onError={(msg) => {
+          setError(msg);
+          setMessage("");
+        }}
+      />
     </div>
   );
 }

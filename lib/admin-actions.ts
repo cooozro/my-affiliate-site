@@ -36,6 +36,8 @@ import {
   ADMIN_DRAFT_EXCLUDE,
   isAdminPublishBlocked,
 } from "@/lib/admin-only-posts";
+import matter from "gray-matter";
+import { markdownBodyToHtml } from "@/lib/markdown-to-html";
 
 export type AutomationStatus = {
   mode: "publish-only";
@@ -508,6 +510,113 @@ export async function getPostCopyMarkdown(
     throw new Error(`Locale file not found: ${slug}/${locale}.md`);
   }
   return fs.readFileSync(filePath, "utf8");
+}
+
+export type AdminPostContentBundle = {
+  slug: string;
+  locale: "en" | "ko";
+  markdown: string;
+  body: string;
+  html: string;
+  title: string;
+};
+
+/** Markdown + rendered HTML for admin-only report edit/copy. */
+export async function getAdminPostContentBundle(
+  slug: string,
+  locale: "en" | "ko",
+): Promise<AdminPostContentBundle> {
+  if (!isAdminPublishBlocked(slug)) {
+    throw new Error("HTML edit is only available for admin-only reports.");
+  }
+
+  const markdown = await getPostCopyMarkdown(slug, locale);
+  const parsed = matter(markdown);
+  const body = String(parsed.content ?? "").trim();
+  const looksLikeHtml = /^</.test(body);
+
+  return {
+    slug,
+    locale,
+    markdown,
+    body,
+    html: looksLikeHtml ? body : markdownBodyToHtml(body),
+    title: String(parsed.data?.title ?? slug),
+  };
+}
+
+/**
+ * Save admin-only report content.
+ * - HTML mode stores the HTML fragment as the markdown body.
+ * - Markdown mode accepts full file (with frontmatter) or body-only.
+ */
+export async function saveAdminPostContent(
+  slug: string,
+  locale: "en" | "ko",
+  payload: { markdown?: string; html?: string; mode?: "markdown" | "html" },
+): Promise<{ mode: "local" | "github" }> {
+  if (!isAdminPublishBlocked(slug)) {
+    throw new Error("HTML edit is only available for admin-only reports.");
+  }
+
+  const relativePath = `content/posts/${slug}/${locale}.md`;
+  const existingRaw = await getPostCopyMarkdown(slug, locale);
+  const existing = matter(existingRaw);
+  const data: Record<string, unknown> = {
+    ...existing.data,
+    updatedAt: new Date().toISOString(),
+  };
+
+  let nextMarkdown: string;
+  const mode = payload.mode ?? (payload.markdown != null ? "markdown" : "html");
+
+  if (mode === "markdown") {
+    if (typeof payload.markdown !== "string" || !payload.markdown.trim()) {
+      throw new Error("markdown is required");
+    }
+    if (payload.markdown.trimStart().startsWith("---")) {
+      const reparsed = matter(payload.markdown);
+      nextMarkdown = matter.stringify(reparsed.content, {
+        ...reparsed.data,
+        updatedAt: data.updatedAt,
+      });
+    } else {
+      nextMarkdown = matter.stringify(payload.markdown.trim(), data);
+    }
+  } else {
+    if (typeof payload.html !== "string" || !payload.html.trim()) {
+      throw new Error("html is required");
+    }
+    nextMarkdown = matter.stringify(payload.html.trim(), data);
+  }
+
+  if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
+    let sha: string | undefined;
+    try {
+      const existingFile = await readGithubFile(relativePath);
+      sha = existingFile.sha;
+    } catch {
+      sha = undefined;
+    }
+    const { writeGithubFile } = await import("@/lib/admin-services");
+    await writeGithubFile(
+      relativePath,
+      nextMarkdown,
+      `chore(admin): update HTML/content for ${slug}`,
+      sha,
+    );
+    return { mode: "github" };
+  }
+
+  const filePath = path.join(process.cwd(), relativePath);
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(
+    filePath,
+    nextMarkdown.endsWith("\n") ? nextMarkdown : `${nextMarkdown}\n`,
+    "utf8",
+  );
+  return { mode: "local" };
 }
 
 export async function uploadCoverImage(
