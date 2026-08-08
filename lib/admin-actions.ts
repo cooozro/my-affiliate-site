@@ -489,27 +489,42 @@ export function getPostPreview(slug: string, locale: "en" | "ko") {
   return readPostFile(slug, locale);
 }
 
-/** Raw markdown file (frontmatter + body) for admin clipboard copy. */
+/** Raw markdown file (frontmatter + body) for admin clipboard / HTML edit. */
 export async function getPostCopyMarkdown(
   slug: string,
   locale: "en" | "ko",
 ): Promise<string> {
-  if (!isAdminPublishBlocked(slug)) {
-    throw new Error("Copy is only available for admin-only reports.");
-  }
-
   const relativePath = `content/posts/${slug}/${locale}.md`;
 
   if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
-    const { content } = await readGithubFile(relativePath);
-    return content;
+    try {
+      const { content } = await readGithubFile(relativePath);
+      return content;
+    } catch {
+      const fallbackLocale = locale === "ko" ? "en" : "ko";
+      const fallbackPath = `content/posts/${slug}/${fallbackLocale}.md`;
+      const { content } = await readGithubFile(fallbackPath);
+      return content;
+    }
   }
 
   const filePath = path.join(process.cwd(), relativePath);
-  if (!fs.existsSync(filePath)) {
+  if (fs.existsSync(filePath)) {
+    return fs.readFileSync(filePath, "utf8");
+  }
+
+  const fallbackLocale = locale === "ko" ? "en" : "ko";
+  const fallbackPath = path.join(
+    process.cwd(),
+    "content",
+    "posts",
+    slug,
+    `${fallbackLocale}.md`,
+  );
+  if (!fs.existsSync(fallbackPath)) {
     throw new Error(`Locale file not found: ${slug}/${locale}.md`);
   }
-  return fs.readFileSync(filePath, "utf8");
+  return fs.readFileSync(fallbackPath, "utf8");
 }
 
 export type AdminPostContentBundle = {
@@ -521,15 +536,11 @@ export type AdminPostContentBundle = {
   title: string;
 };
 
-/** Markdown + rendered HTML for admin-only report edit/copy. */
+/** Markdown + rendered HTML for admin edit/copy (all posts). */
 export async function getAdminPostContentBundle(
   slug: string,
   locale: "en" | "ko",
 ): Promise<AdminPostContentBundle> {
-  if (!isAdminPublishBlocked(slug)) {
-    throw new Error("HTML edit is only available for admin-only reports.");
-  }
-
   const markdown = await getPostCopyMarkdown(slug, locale);
   const parsed = matter(markdown);
   const body = String(parsed.content ?? "").trim();
@@ -546,7 +557,7 @@ export async function getAdminPostContentBundle(
 }
 
 /**
- * Save admin-only report content.
+ * Save post content from admin HTML/Markdown editor.
  * - HTML mode stores the HTML fragment as the markdown body.
  * - Markdown mode accepts full file (with frontmatter) or body-only.
  */
@@ -555,10 +566,6 @@ export async function saveAdminPostContent(
   locale: "en" | "ko",
   payload: { markdown?: string; html?: string; mode?: "markdown" | "html" },
 ): Promise<{ mode: "local" | "github" }> {
-  if (!isAdminPublishBlocked(slug)) {
-    throw new Error("HTML edit is only available for admin-only reports.");
-  }
-
   const relativePath = `content/posts/${slug}/${locale}.md`;
   const existingRaw = await getPostCopyMarkdown(slug, locale);
   const existing = matter(existingRaw);

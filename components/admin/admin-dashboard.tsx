@@ -737,9 +737,8 @@ export function AdminDashboard() {
       ) : null}
 
         <p className="mb-4 text-xs text-muted-foreground">
-          <strong>SEO 리포트</strong>: <strong>수정</strong>으로 HTML/Markdown을
-          편집하고, <strong>HTML 전체복사</strong>로 렌더된 HTML을 클립보드에
-          넣습니다. <strong>복사</strong>는 마크다운 원본입니다.{" "}
+          <strong>수정 / HTML 전체복사</strong>: 발행·임시글 모두 HTML/Markdown 편집과
+          렌더 HTML 복사가 가능합니다. <strong>MD 복사</strong>는 마크다운 원본입니다.{" "}
           <strong>커버 교체</strong>: 파일 선택 창이 열립니다. 기존 파일명이 있으면 같은
           이름으로 덮어씁니다. <strong>자동 검색</strong>은 Pexels/Pixabay API가 있을
           때만 사용합니다.
@@ -815,51 +814,47 @@ export function AdminDashboard() {
                   </td>
                   <td className="px-3 py-3">
                     <div className="flex flex-wrap gap-2">
-                      {publishBlocked ? (
-                        <>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              setHtmlEditor({
-                                slug: post.slug,
-                                locale: previewLocale,
-                                title: post.titleKo || post.titleEn || post.slug,
-                              })
-                            }
-                            className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
-                          >
-                            수정
-                          </button>
-                          <button
-                            type="button"
-                            disabled={htmlCopyBusy === post.slug}
-                            onClick={() =>
-                              void copyReportHtml(post.slug, previewLocale)
-                            }
-                            className="rounded border border-violet-500/40 px-2 py-1 text-xs text-violet-700 hover:bg-violet-500/10 disabled:opacity-40 dark:text-violet-300"
-                          >
-                            {htmlCopyBusy === post.slug
-                              ? "…"
-                              : htmlCopyDoneSlug === post.slug
-                                ? "HTML 복사됨"
-                                : "HTML 전체복사"}
-                          </button>
-                          <button
-                            type="button"
-                            disabled={copyBusy === post.slug}
-                            onClick={() =>
-                              void copyReportMarkdown(post.slug, previewLocale)
-                            }
-                            className="rounded border border-border px-2 py-1 text-xs hover:bg-muted disabled:opacity-40"
-                          >
-                            {copyBusy === post.slug
-                              ? "…"
-                              : copyDoneSlug === post.slug
-                                ? "MD 복사됨"
-                                : "MD 복사"}
-                          </button>
-                        </>
-                      ) : null}
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setHtmlEditor({
+                            slug: post.slug,
+                            locale: previewLocale,
+                            title: post.titleKo || post.titleEn || post.slug,
+                          })
+                        }
+                        className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
+                      >
+                        수정
+                      </button>
+                      <button
+                        type="button"
+                        disabled={htmlCopyBusy === post.slug}
+                        onClick={() =>
+                          void copyReportHtml(post.slug, previewLocale)
+                        }
+                        className="rounded border border-violet-500/40 px-2 py-1 text-xs text-violet-700 hover:bg-violet-500/10 disabled:opacity-40 dark:text-violet-300"
+                      >
+                        {htmlCopyBusy === post.slug
+                          ? "…"
+                          : htmlCopyDoneSlug === post.slug
+                            ? "HTML 복사됨"
+                            : "HTML 전체복사"}
+                      </button>
+                      <button
+                        type="button"
+                        disabled={copyBusy === post.slug}
+                        onClick={() =>
+                          void copyReportMarkdown(post.slug, previewLocale)
+                        }
+                        className="rounded border border-border px-2 py-1 text-xs hover:bg-muted disabled:opacity-40"
+                      >
+                        {copyBusy === post.slug
+                          ? "…"
+                          : copyDoneSlug === post.slug
+                            ? "MD 복사됨"
+                            : "MD 복사"}
+                      </button>
                       <Link
                         href={`/admin/preview/${post.slug}?locale=${previewLocale}`}
                         target="_blank"

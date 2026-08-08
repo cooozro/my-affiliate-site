@@ -191,7 +191,8 @@ export function AdminHtmlEditorModal({
         <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border px-4 py-3">
           <p className="text-xs text-muted-foreground">
             HTML 탭 저장 시 본문이 HTML 코드로 저장됩니다. Markdown 탭은
-            frontmatter 포함 원본을 저장합니다.
+            frontmatter 포함 원본을 저장합니다. 발행 글도 동일하게 편집·복사할 수
+            있습니다.
           </p>
           <div className="flex gap-2">
             <button
