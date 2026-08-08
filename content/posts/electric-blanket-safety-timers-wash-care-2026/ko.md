@@ -8,13 +8,12 @@ tags:
   - 안전 인증
   - 타이머
   - 세탁 관리
-draft: true
+draft: false
 contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-08T04:17:46.999Z'
-updatedAt: '2026-08-08T04:18:56.569Z'
+updatedAt: '2026-08-08T04:24:35.715Z'
 coverImage: /images/posts/electric-blanket-safety-timers-wash-care-2026/cover-1037995.jpg
 coverImageProvider: pexels
 coverImageAssetId: 1037995
@@ -22,6 +21,7 @@ coverImageSourceUrl: 'https://www.pexels.com/photo/1037995/'
 coverImageCredit: Pexels
 coverImageAlt: 정돈된 침대 위 접힌 이불과 따뜻한 담요
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
+publishedAt: '2026-08-08T13:24:33.000Z'
 ---
 ## 편집부 개요
 
@@ -174,12 +174,11 @@ KC는 판매 합법성의 기본 조건이지만, 밤새 사용은 자동 꺼짐
 
 ## 관련 가이드
 
-- [원룸 필수템 체크리스트](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide)
-- [선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide)
-- [폭염·정전 대비 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist)
-- [여름 1인 더위 필수템](/ko/blog/2026-summer-solo-heat-essentials-checklist)
-- [공기청정기 가이드](/ko/blog/2026-air-purifiers-guide)
-
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리](/ko/blog/2026-summer-solo-heat-essentials-checklist) — 1인 폭염 원룸 구매 전 7가지 점검 — 냉방·공기·습도·책상 부하·저열 조리까지 가전 난립 없이 순서대로.
+- [1인 아파트 필수 가전 체크리스트: 여름 입주 전 교차 카테고리 7가지 점검](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide) — 1인 아파트 교차 카테고리 7항목 — 선풍기·공기청정기·무선 이어폰·에어프라이어·로봇청소기, 밀폐 냉방 여름 전 점검. 스튜디오·원룸 회로·발코니 제약 포함.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
 ## 핵심 정리
 
 1. **항상 안전 인증을 확인하십시오** — UL, ETL, CE, KC. 이것이 첫 번째 방어선입니다.

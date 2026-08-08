@@ -32,23 +32,14 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-07-28T05:24:50.271Z",
-  "nextPublishAt": "2026-08-08T04:16:29.200Z",
-  "scheduledGapHours": 5.87,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-08T04:24:35.467Z",
+  "nextPublishAt": "2026-08-09T02:44:00.000Z",
+  "scheduledGapHours": 5.73,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-08",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-08",
   "history": [
-    {
-      "action": "publish",
-      "slug": "2026-budget-mechanical-keyboards-guide",
-      "at": "2026-06-26T08:03:42.376Z",
-      "urls": [
-        "https://www.aipick.shop/en/blog/2026-budget-mechanical-keyboards-guide",
-        "https://www.aipick.shop/ko/blog/2026-budget-mechanical-keyboards-guide"
-      ]
-    },
     {
       "action": "publish",
       "slug": "2026-budget-monitors-buying-guide",
@@ -656,13 +647,22 @@
         "https://www.aipick.shop/en/blog/under-300-cross-category-best-value-2026",
         "https://www.aipick.shop/ko/blog/under-300-cross-category-best-value-2026"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "electric-blanket-safety-timers-wash-care-2026",
+      "topic": {
+        "id": "electric-blankets",
+        "cluster": "home-appliances"
+      },
+      "at": "2026-08-08T04:24:35.467Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/electric-blanket-safety-timers-wash-care-2026",
+        "https://www.aipick.shop/ko/blog/electric-blanket-safety-timers-wash-care-2026"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "bidets",
-      "at": "2026-07-10T05:25:29.989Z"
-    },
     {
       "id": "induction-cooktops",
       "category": "kitchen",
@@ -815,6 +815,11 @@
       "id": "meta-under-300-cross-category",
       "cluster": "cross-cutting",
       "at": "2026-07-28T05:24:50.279Z"
+    },
+    {
+      "id": "electric-blankets",
+      "cluster": "home-appliances",
+      "at": "2026-08-08T04:24:35.473Z"
     }
   ],
   "formatHistory": [
@@ -841,22 +846,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-08T04:16:29.089Z",
-    "issueCount": 3,
+    "at": "2026-08-08T04:24:33.669Z",
+    "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (15min past slot, KST 2026-08-08)",
-        "severity": "error"
-      },
-      {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 0/1",
-        "severity": "info"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 15771min",
+        "message": "Publish ready but no post went live (8min past slot, KST 2026-08-08)",
         "severity": "warning"
       }
     ],
@@ -865,10 +860,10 @@
       "marked-slot-catch-up"
     ]
   },
-  "lastDailyContentAuditKst": "2026-08-07",
+  "lastDailyContentAuditKst": "2026-08-08",
   "lastDailyContentAudit": {
-    "at": "2026-08-07T14:02:52.362Z",
-    "postsScanned": 54,
+    "at": "2026-08-08T04:24:37.904Z",
+    "postsScanned": 55,
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },

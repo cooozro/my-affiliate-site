@@ -10,12 +10,11 @@ tags:
   - safety certifications
   - timer
   - wash care
-draft: true
+draft: false
 contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-08T04:17:46.999Z'
 coverImage: /images/posts/electric-blanket-safety-timers-wash-care-2026/cover-1037995.jpg
 coverImageProvider: pexels
 coverImageAssetId: 1037995
@@ -23,7 +22,8 @@ coverImageSourceUrl: 'https://www.pexels.com/photo/1037995/'
 coverImageCredit: Pexels
 coverImageAlt: Folded bedding and warm blanket on a tidy bed
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
-updatedAt: '2026-08-08T04:18:56.535Z'
+updatedAt: '2026-08-08T04:24:35.604Z'
+publishedAt: '2026-08-08T13:24:33.000Z'
 ---
 ## Editorial Overview
 
@@ -176,12 +176,11 @@ Plan for electricity (usually a few dollars per season at sleep settings), occas
 
 ## Related guides
 
-- [Solo apartment essentials checklist](/en/blog/2026-solo-apartment-home-essentials-checklist-guide)
-- [Electric fans buying guide](/en/blog/2026-electric-fans-buying-guide)
-- [Heatwave blackout readiness checklist](/en/blog/2026-heatwave-blackout-home-readiness-checklist)
-- [Summer solo heat essentials](/en/blog/2026-summer-solo-heat-essentials-checklist)
-- [Air purifiers guide](/en/blog/2026-air-purifiers-guide)
-
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [Summer Solo-Apartment Heat Checklist: Fan, Air, Moisture, Desk, and Low-Heat Cooking](/en/blog/2026-summer-solo-heat-essentials-checklist) — Seven pre-buy checks for one-person heatwave apartments — cooling, air, humidity, desk lo…
+- [Solo Apartment Home Essentials Checklist: Seven Cross-Category Checks Before Summer Move-In](/en/blog/2026-solo-apartment-home-essentials-checklist-guide) — Seven cross-category checks for solo apartments — fans, purifiers, earbuds, air fryers, a…
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
 ## Key Takeaways
 
 1. **Always look for safety certifications** like UL, ETL, CE, or KC. They are your first line of defense.

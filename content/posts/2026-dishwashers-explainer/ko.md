@@ -17,7 +17,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-08-07T14:02:50.195Z'
+updatedAt: '2026-08-08T04:24:36.507Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
