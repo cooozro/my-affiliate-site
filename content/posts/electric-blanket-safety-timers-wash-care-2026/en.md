@@ -23,7 +23,7 @@ coverImageCredit: Pexels
 coverImageAlt: Folded bedding and warm blanket on a tidy bed
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
 updatedAt: '2026-08-08T04:24:35.604Z'
-publishedAt: '2026-08-08T13:24:33.000Z'
+publishedAt: '2026-08-08T04:24:35.467Z'
 ---
 ## Editorial Overview
 

@@ -846,18 +846,12 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-08T04:24:33.669Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (8min past slot, KST 2026-08-08)",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-08-08T05:07:13.150Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "electric-blanket-safety-timers-wash-care-2026/en.md: publishedAt 2026-08-08T13:24:33.000Z → 2026-08-08T04:24:35.467Z",
+      "electric-blanket-safety-timers-wash-care-2026/ko.md: publishedAt 2026-08-08T13:24:33.000Z → 2026-08-08T04:24:35.467Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-08-08",
