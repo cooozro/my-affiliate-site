@@ -965,6 +965,15 @@
       "contentHash": "dc95a92b31bd4a3bfabb8e8aa92a6cfc8c3e03f07fb382700e754886b26c5f26",
       "provider": "pexels",
       "registeredAt": "2026-07-28T05:06:13.894Z"
+    },
+    {
+      "slug": "electric-blanket-safety-timers-wash-care-2026",
+      "url": "https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg",
+      "assetKey": "pexels:1037995",
+      "hash": null,
+      "contentHash": "2449257fb125759c8b1a07afae48b29d8075011a207ba76937f458481ca9e020",
+      "provider": "pexels",
+      "registeredAt": "2026-08-08T04:18:56.380Z"
     }
   ]
 }

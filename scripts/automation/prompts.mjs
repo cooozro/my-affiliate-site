@@ -45,6 +45,7 @@ MANDATORY RULES (violations = rejection):
 9. Bilingual depth: EN body ≥ 5,000 UTF-8 bytes; KO body ≥ 2,500 characters. Checklist items need 2–3 sentences each for Why and Red flag in both languages.
 10. Publish integrity gate (auto-checked before draft save & LIVE): no calendar year (20xx) in titles; EN titles must not start with How to / Stop / Why you / What to / When to; no hangul-latin typos in Korean (e.g. 백그ra운드); no Hanja/CJK ideographs in Korean (use Hangul only — e.g. 과대 not 誇大, 독창적 not 독찴적); ≥3 Related guides links to published slugs only; ≥3 tags; ≥4 H2 sections (head-to-head ≥3); locale-correct internal links (/en/ in en.md, /ko/ in ko.md); no duplicate H2 headings; no draft/preview URLs in body.
 11. FAQ: include ## FAQ / ## 자주 묻는 질문 with 3–5 pairs. Questions = beginner-curious (natural Korean/English), NOT templates like "어떤 사용자에게 가장 잘 맞나요" or "체크리스트의 ○○은 왜 구매 전에". Answers = warm editorial team voice, 4–6 sentences, easy examples.
+12. AdSense A-tier (scripts/adsense-quality-score.mjs): KO ≥4500 chars (prefer 6500+); ≥3 named OEM models + ≥2 brands; include "## Models this report shortlists" / "## 편집부가 선정한 대표 모델"; use Editorial read/편집부 해석, Review concern/검토 시 우려, Analysis takeaway/분석 요약; mention total cost of ownership / 총 소유 비용 (3-year); avoid generic-no-models.
 
 ${topic.liveData ? `Use these placeholders in body where prices/dates appear:
 - {{today}} or {{today_locale}} for dates

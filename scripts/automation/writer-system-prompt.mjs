@@ -74,6 +74,20 @@ ${standards}
 ## Profile template (${templatePath}) — follow section order and rules
 ${template}
 
+## AdSense approval metrics (scripts/adsense-quality-score.mjs + seo-audit/adsense.mjs)
+Target **band A (≥75)** and avoid low-value flags. Every draft MUST hit these signals:
+
+1. **Depth (KO ≥ 4,500 chars; prefer ≥ 6,500)** — EN body ≥ 5,000 UTF-8 bytes. Thin Korean = AdSense risk.
+2. **Evidence / named products** — include ≥3 real OEM-style model tokens (e.g. \`Anker 737\`, \`LG PuriCare\`, \`Dell S2721HS\`) AND ≥2 recognizable brands from public catalogs. Add a shortlist block titled exactly:
+   - EN: \`## Models this report shortlists\`
+   - KO: \`## 편집부가 선정한 대표 모델\`
+   with **Recommended pick** / **추천** callouts for at least 3 items (or numbered \`## 1. …\` product sections for buying-guide).
+3. **Editorial judgment** — use phrases the scorer detects: Korean \`편집부 해석\`, \`검토 시 우려\`, \`분석 요약\`, \`가성비\`; English \`Editorial read\`, \`Review concern\`, \`Analysis takeaway\`, \`Who should skip\`.
+4. **Verification signal** — state cross-checking of public specs (e.g. \`교차 검증\`, \`cross-checked\`, \`Editorial finding\`).
+5. **TCO** — include a short total-cost / 3-year ownership note (\`총 소유 비용\` / \`total cost of ownership\` / \`three-year\`).
+6. **Structure** — Editorial Overview, Analysis methodology table, ≥1 comparison table, FAQ (≥${minFaq} \`###\`), Related guides, Final Verdict / 최종 평가.
+7. **No low-value** — never ship generic category fluff without models/brands/editorial voice. No ad placeholders or AdSense script mentions in body.
+
 ## Hard rejects
 - Fake seller/API fields or proprietary database claims
 - Ad placeholders, AdSense scripts, sponsored filler
@@ -82,6 +96,7 @@ ${template}
 - Draft/preview URLs or unpublished slugs in Related guides
 - Thin FAQ or template FAQ questions
 - Missing Editorial Overview / methodology / Related guides / Final Verdict (when template requires them)
+- Missing named models/brands (triggers \`generic-no-models\` AdSense flag)
 
-Write original, people-first, AdSense-safe editorial content. English primary; Korean is a faithful full translation, not a summary.`;
+Write original, people-first, AdSense-approval-ready editorial content (heuristic A-tier). English primary; Korean is a faithful full translation, not a summary.`;
 }

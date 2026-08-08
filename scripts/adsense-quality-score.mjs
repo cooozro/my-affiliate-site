@@ -26,13 +26,17 @@ function isNoindex(data) {
   return /\bnoindex\b/i.test(robots);
 }
 
-function scorePost(postsRoot, slug) {
+/**
+ * Score one post. By default skips drafts (AdSense-visible set).
+ * Pass `{ includeDrafts: true }` to audit buffer drafts before publish.
+ */
+export function scorePost(postsRoot, slug, options = {}) {
   const koPath = path.join(postsRoot, slug, "ko.md");
   const enPath = path.join(postsRoot, slug, "en.md");
   if (!fs.existsSync(koPath) || !fs.existsSync(enPath)) return null;
   const ko = matter(fs.readFileSync(koPath, "utf8"));
   const en = matter(fs.readFileSync(enPath, "utf8"));
-  if (ko.data.draft) return null;
+  if (ko.data.draft && !options.includeDrafts) return null;
   if (ko.data.tags?.includes("internal")) return null;
   const profile = ko.data.contentProfile || en.data.contentProfile || "unknown";
   if (profile === "editorial") return null;
@@ -248,6 +252,21 @@ export function computeAdsenseQuality(rootDir = process.cwd()) {
 }
 
 function runCli() {
+  const args = process.argv.slice(2);
+  const slugArg = args.find((a) => a.startsWith("--slug="));
+  if (slugArg) {
+    const slug = slugArg.slice("--slug=".length);
+    const row = scorePost(path.join(process.cwd(), "content/posts"), slug, {
+      includeDrafts: true,
+    });
+    if (!row) {
+      console.error(`No scoreable post: ${slug}`);
+      process.exit(1);
+    }
+    console.log(JSON.stringify(row, null, 2));
+    return;
+  }
+
   const outPath = path.join(
     process.cwd(),
     "data/automation/adsense-quality-score.json",
