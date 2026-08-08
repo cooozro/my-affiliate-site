@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-08-08'
+date: '2026-08-09'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,14 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-08-07T23:55:11.162Z'
+updatedAt: '2026-08-08T23:51:22.515Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 8월 8일 토요일 오전 8:55
-- **스캔 대상:** 발행 글 53 slug / 106 locale 파일
+- **생성 시각 (KST):** 2026년 8월 9일 일요일 오전 8:51
+- **스캔 대상:** 발행 글 54 slug / 108 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -34,8 +34,8 @@ updatedAt: '2026-08-07T23:55:11.162Z'
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **53** slug (welcome 등 1건 제외)
-- locale 파일 **106**개 분석
+- 스캔 대상 **54** slug (welcome 등 1건 제외)
+- locale 파일 **108**개 분석
 
 ### 수익성·효율성 지표
 
@@ -60,9 +60,9 @@ updatedAt: '2026-08-07T23:55:11.162Z'
 > Google 게시자 정책의 **‘가치가 낮은 콘텐츠(low-value content)’** 반려 사유를 정량 지표로 환산했습니다. 아래는 **AdSense 노출 대상(발행·색인) 글**만 집계합니다.
 
 - **종합 준비도:** ✅ **96%** _(좋음)_
-- **집계 대상:** 발행·색인 글 **47편** / 저품질 격리(noindex) **6편**
+- **집계 대상:** 발행·색인 글 **48편** / 저품질 격리(noindex) **6편**
 - **평균 품질 점수:** **94점** (목표 88점) · 색인 포함 전체 평균 89점
-- **품질 등급:** B등급 2편 · A등급 45편
+- **품질 등급:** B등급 2편 · A등급 46편
 
 ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_
 
@@ -70,41 +70,41 @@ updatedAt: '2026-08-07T23:55:11.162Z'
 
 | 지표 | 값 | 달성률 | 상태 | 시각화 |
 | --- | --- | --- | --- | --- |
-| A등급(75점+) 달성 | 45/47 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| A등급(75점+) 달성 | 46/48 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
 | 평균 품질 점수 | 94점 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 심층 편집 분석(해석+우려) | 46/47 | **98%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 독자적 판단·평가 기준 | 47/47 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 1차 검증 신호(교차 검증) | 45/47 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 충분한 분량(≥4,500자) | 47/47 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 실모델·근거 제시 | 42/47 | **89%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
-| FAQ 3쌍 이상 | 47/47 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 저가치 플래그 0건 | 40/47 | **85%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
+| 심층 편집 분석(해석+우려) | 47/48 | **98%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 독자적 판단·평가 기준 | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 1차 검증 신호(교차 검증) | 46/48 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 충분한 분량(≥4,500자) | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 실모델·근거 제시 | 43/48 | **90%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
+| FAQ 3쌍 이상 | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 저가치 플래그 0건 | 41/48 | **85%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
 
 ## 저가치 콘텐츠(Low-value content) 해결 지표
 
 > 심사 반려 사유였던 **‘가치가 별로 없는 콘텐츠’** 를 해소하기 위한 핵심 지표와 달성 상태입니다. 각 막대는 발행·색인 글 중 해당 기준을 통과한 비율이며, 🎯 는 목표치입니다.
 
-**A등급(75점+) 달성** (45/47)
+**A등급(75점+) 달성** (46/48)
 
 ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ · 🎯 목표 100%
 
-**심층 편집 분석(해석+우려)** (46/47)
+**심층 편집 분석(해석+우려)** (47/48)
 
 ✅ **98%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
 
-**독자적 판단·평가 기준** (47/47)
+**독자적 판단·평가 기준** (48/48)
 
 ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
 
-**1차 검증 신호(교차 검증)** (45/47)
+**1차 검증 신호(교차 검증)** (46/48)
 
 ✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ · 🎯 목표 100%
 
-**충분한 분량(≥4,500자)** (47/47)
+**충분한 분량(≥4,500자)** (48/48)
 
 ✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
 
-**저가치 플래그 0건** (40/47)
+**저가치 플래그 0건** (41/48)
 
 ✅ **85%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ _(좋음)_ · 🎯 목표 100%
 
@@ -127,7 +127,7 @@ updatedAt: '2026-08-07T23:55:11.162Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 8. 8. 오전 8:55:10
+- **API 수집 시각 (KST):** 2026. 8. 9. 오전 8:51:21
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -135,18 +135,18 @@ updatedAt: '2026-08-07T23:55:11.162Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 21 |
-| Sessions | 27 |
+| Active users | 20 |
+| Sessions | 26 |
 | Page views | 27 |
 
 ### 상위 블로그 랜딩 (7일)
 
 | 페이지 | 조회수 |
 | --- | --- |
-| `/en/blog/2026-budget-wireless-earbuds-top5` | 6 |
+| `/en/blog/2026-budget-wireless-earbuds-top5` | 4 |
+| `/en/blog/2026-wireless-earbuds-head-to-head` | 3 |
 | `/en/blog/2026-electric-fans-buying-guide` | 2 |
 | `/en/blog/2026-noise-cancelling-headphones-head-to-head` | 2 |
-| `/en/blog/2026-wireless-earbuds-head-to-head` | 2 |
 | `/en/blog/2026-budget-mechanical-keyboards-guide` | 1 |
 | `/en/blog/2026-clothes-dryers-buying-guide` | 1 |
 | `/en/blog/2026-compact-footprint-cross-category-scenario-guide` | 1 |
@@ -231,19 +231,20 @@ Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)�
 | 32 | 2026-summer-ac-buying-checklist | checklist | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 33 | 2026-summer-budget-tablets-buying-guide | buying-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 34 | 2026-portable-vs-window-ac-head-to-head | head-to-head | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 35 | 2026-laptops-buying-guide | buying-guide | **91** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 36 | 2026-budget-power-banks-guide | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 37 | 2026-budget-wireless-earbuds-top5 | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 38 | 2026-wireless-earbuds-head-to-head | head-to-head | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 39 | 2026-budget-fitness-trackers-head-to-head | head-to-head | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 40 | 2026-dishwashers-explainer | explainer | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 41 | 2026-solo-apartment-home-essentials-checklist-guide | checklist | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 42 | 2026-cooling-mattress-pads-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 43 | 2026-portable-power-stations-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 44 | 2026-heatwave-blackout-home-readiness-checklist | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ⬜ | ✅ | ⬜ | ✅ |
-| 45 | 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 46 | 2026-summer-solo-heat-essentials-checklist | checklist | **73** | 🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜ | B | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 47 | under-300-cross-category-best-value-2026 | explainer | **64** | 🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜ | B | ⬜ | ✅ | ✅ | ✅ | ⬜ | ✅ |
+| 35 | electric-blanket-safety-timers-wash-care-2026 | explainer | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 36 | 2026-laptops-buying-guide | buying-guide | **91** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 37 | 2026-budget-power-banks-guide | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 38 | 2026-budget-wireless-earbuds-top5 | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 39 | 2026-wireless-earbuds-head-to-head | head-to-head | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 40 | 2026-budget-fitness-trackers-head-to-head | head-to-head | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 41 | 2026-dishwashers-explainer | explainer | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 42 | 2026-solo-apartment-home-essentials-checklist-guide | checklist | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
+| 43 | 2026-cooling-mattress-pads-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 44 | 2026-portable-power-stations-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 45 | 2026-heatwave-blackout-home-readiness-checklist | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ⬜ | ✅ | ⬜ | ✅ |
+| 46 | 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
+| 47 | 2026-summer-solo-heat-essentials-checklist | checklist | **73** | 🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜ | B | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
+| 48 | under-300-cross-category-best-value-2026 | explainer | **64** | 🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜ | B | ⬜ | ✅ | ✅ | ✅ | ⬜ | ✅ |
 
 ### 저품질 격리(noindex) — AdSense 노출 제외
 
