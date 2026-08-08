@@ -846,13 +846,10 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-08T05:07:13.150Z",
+    "at": "2026-08-08T05:13:45.329Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "electric-blanket-safety-timers-wash-care-2026/en.md: publishedAt 2026-08-08T13:24:33.000Z → 2026-08-08T04:24:35.467Z",
-      "electric-blanket-safety-timers-wash-care-2026/ko.md: publishedAt 2026-08-08T13:24:33.000Z → 2026-08-08T04:24:35.467Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-08-08",
   "lastDailyContentAudit": {
