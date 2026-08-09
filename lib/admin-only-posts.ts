@@ -18,7 +18,10 @@ export function isAdminPublishBlocked(slug: string): boolean {
 }
 
 export function isAutomationBufferDraft(row: AdminPostRow): boolean {
-  return row.draft && !ADMIN_DRAFT_EXCLUDE.has(row.slug);
+  if (!row.draft || ADMIN_DRAFT_EXCLUDE.has(row.slug)) return false;
+  // Selahim / editorial stubs: visible in admin, never fill publish buffer.
+  if (row.automationBuffer === false) return false;
+  return true;
 }
 
 /** Admin list sort — 작성일 only (never updatedAt). */

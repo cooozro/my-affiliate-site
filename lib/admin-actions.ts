@@ -33,8 +33,8 @@ import {
   TARGET_DRAFT_COUNT,
 } from "@/lib/publish-schedule";
 import {
-  ADMIN_DRAFT_EXCLUDE,
   isAdminPublishBlocked,
+  isAutomationBufferDraft,
 } from "@/lib/admin-only-posts";
 import matter from "gray-matter";
 import { markdownBodyToHtml } from "@/lib/markdown-to-html";
@@ -223,9 +223,7 @@ async function loadCursorDraftRequest(): Promise<Record<string, unknown> | null>
 }
 
 function countAutomationDrafts(posts: AdminPostRow[]): number {
-  return posts.filter(
-    (post) => post.draft && !ADMIN_DRAFT_EXCLUDE.has(post.slug),
-  ).length;
+  return posts.filter((post) => isAutomationBufferDraft(post)).length;
 }
 
 async function loadDailyContentAudit(): Promise<Record<string, unknown> | null> {

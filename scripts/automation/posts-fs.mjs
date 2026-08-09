@@ -108,6 +108,8 @@ export function countPublishedOnKstDate(dateKst = kstDateString()) {
 export function isDraftDeferred(slug) {
   const { data } = readPost(slug, "en");
   if (!data.draft) return false;
+  // Admin-only / Selahim stubs — never enter the publish queue.
+  if (data.automationBuffer === false) return true;
   const deferred = data.publishAfter ?? data.scheduledPublishDate ?? null;
   if (!deferred) return false;
   const scheduled = String(deferred).slice(0, 10);

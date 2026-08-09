@@ -20,6 +20,8 @@ export type AdminPostRow = {
   hasEn: boolean;
   hasKo: boolean;
   liveData: boolean;
+  /** false = admin-visible draft that must not fill the publish buffer */
+  automationBuffer?: boolean;
 };
 
 function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
@@ -70,6 +72,7 @@ export function listPostsForAdmin(): AdminPostRow[] {
       let publishedAt: string | undefined;
       let createdAt: string | undefined;
       let liveData = false;
+      let automationBuffer: boolean | undefined;
 
       if (hasEn) {
         const en = readPostFile(slug, "en");
@@ -82,6 +85,9 @@ export function listPostsForAdmin(): AdminPostRow[] {
           : undefined;
         createdAt = en.data.createdAt ? String(en.data.createdAt) : undefined;
         liveData = Boolean(en.data.liveData);
+        if (typeof en.data.automationBuffer === "boolean") {
+          automationBuffer = en.data.automationBuffer;
+        }
       }
 
       if (hasKo) {
@@ -90,6 +96,9 @@ export function listPostsForAdmin(): AdminPostRow[] {
         if (!hasEn) {
           draft = Boolean(ko.data.draft);
           date = String(ko.data.date ?? "");
+          if (typeof ko.data.automationBuffer === "boolean") {
+            automationBuffer = ko.data.automationBuffer;
+          }
         }
       }
 
@@ -105,6 +114,7 @@ export function listPostsForAdmin(): AdminPostRow[] {
         hasEn,
         hasKo,
         liveData,
+        automationBuffer,
       };
     })
     .filter((row) => row.hasEn || row.hasKo);
@@ -120,6 +130,7 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
   let publishedAt: string | undefined;
   let createdAt: string | undefined;
   let liveData = false;
+  let automationBuffer: boolean | undefined;
   let hasEn = false;
   let hasKo = false;
 
@@ -138,12 +149,18 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
         publishedAt = data.publishedAt ? String(data.publishedAt) : undefined;
         createdAt = data.createdAt ? String(data.createdAt) : undefined;
         liveData = Boolean(data.liveData);
+        if (typeof data.automationBuffer === "boolean") {
+          automationBuffer = data.automationBuffer;
+        }
       }
       if (locale === "ko") {
         titleKo = String(data.title ?? slug);
         if (!hasEn) {
           draft = Boolean(data.draft);
           date = String(data.date ?? "");
+          if (typeof data.automationBuffer === "boolean") {
+            automationBuffer = data.automationBuffer;
+          }
         }
       }
     } catch {
@@ -165,6 +182,7 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
     hasEn,
     hasKo,
     liveData,
+    automationBuffer,
   };
 }
 
