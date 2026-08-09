@@ -3,7 +3,7 @@ title: 'Electric Blanket Safety, Timers, and Wash Care: What the Labels Really M
 description: >-
   Understand electric blanket safety certifications, timer features, and washing
   rules. Editorial guide to choosing and caring for heated bedding safely.
-date: '2026-08-08'
+date: '2026-08-09'
 tags:
   - electric blanket
   - heated mattress pad
@@ -22,8 +22,8 @@ coverImageSourceUrl: 'https://www.pexels.com/photo/1037995/'
 coverImageCredit: Pexels
 coverImageAlt: Folded bedding and warm blanket on a tidy bed
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
-updatedAt: '2026-08-08T04:24:35.604Z'
-publishedAt: '2026-08-08T04:24:35.467Z'
+updatedAt: '2026-08-09T02:02:07.527Z'
+publishedAt: '2026-08-09T02:02:07.527Z'
 ---
 ## Editorial Overview
 
