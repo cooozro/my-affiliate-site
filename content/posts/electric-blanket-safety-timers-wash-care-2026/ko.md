@@ -1,7 +1,7 @@
 ---
 title: '전기장판 안전 인증, 타이머, 세탁 관리 — 라벨이 말하는 진짜 의미'
 description: '전기장판 안전 인증, 타이머 기능, 세탁 규칙을 이해하기 쉽게 설명합니다. 안전하게 따뜻한 침구를 선택하고 관리하는 방법을 다룹니다.'
-date: '2026-08-08'
+date: '2026-08-09'
 tags:
   - 전기장판
   - 전기매트
@@ -13,7 +13,7 @@ contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances
 writingProvider: deepseek
-updatedAt: '2026-08-08T04:24:35.715Z'
+updatedAt: '2026-08-09T02:02:07.527Z'
 coverImage: /images/posts/electric-blanket-safety-timers-wash-care-2026/cover-1037995.jpg
 coverImageProvider: pexels
 coverImageAssetId: 1037995
@@ -21,7 +21,7 @@ coverImageSourceUrl: 'https://www.pexels.com/photo/1037995/'
 coverImageCredit: Pexels
 coverImageAlt: 정돈된 침대 위 접힌 이불과 따뜻한 담요
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
-publishedAt: '2026-08-08T04:24:35.467Z'
+publishedAt: '2026-08-09T02:02:07.527Z'
 ---
 ## 편집부 개요
 
