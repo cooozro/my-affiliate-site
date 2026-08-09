@@ -189,18 +189,33 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
 /** Live GitHub main — avoids stale Vercel bundle after admin delete. */
 export async function listPostsForAdminLive(): Promise<AdminPostRow[]> {
   if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
-    const entries = await listGithubDirectory("content/posts");
-    const slugs = entries
-      .filter((entry) => entry.type === "dir")
-      .map((entry) => entry.name ?? entry.path.split("/").pop() ?? "")
-      .filter(Boolean);
+    try {
+      const entries = await listGithubDirectory("content/posts");
+      const slugs = entries
+        .filter((entry) => entry.type === "dir")
+        .map((entry) => entry.name ?? entry.path.split("/").pop() ?? "")
+        .filter(Boolean);
 
-    const rows: AdminPostRow[] = [];
-    for (const slug of slugs) {
-      const row = await buildAdminRowFromGithub(slug);
-      if (row) rows.push(row);
+      // Batch reads to finish faster; fall back below on rate-limit / API errors.
+      const rows: AdminPostRow[] = [];
+      const batchSize = 8;
+      for (let i = 0; i < slugs.length; i += batchSize) {
+        const batch = slugs.slice(i, i + batchSize);
+        const built = await Promise.all(
+          batch.map((slug) => buildAdminRowFromGithub(slug)),
+        );
+        for (const row of built) {
+          if (row) rows.push(row);
+        }
+      }
+      return sortAdminRows(rows);
+    } catch (error) {
+      console.error(
+        "Admin live GitHub list failed; using deploy bundle fallback:",
+        error instanceof Error ? error.message : error,
+      );
+      return listPostsForAdmin();
     }
-    return sortAdminRows(rows);
   }
 
   return listPostsForAdmin();
