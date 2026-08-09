@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-08-09'
+date: '2026-08-10'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,13 +9,13 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-08-08T23:51:22.515Z'
+updatedAt: '2026-08-09T23:55:23.106Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 8월 9일 일요일 오전 8:51
+- **생성 시각 (KST):** 2026년 8월 10일 월요일 오전 8:55
 - **스캔 대상:** 발행 글 54 slug / 108 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
@@ -127,7 +127,7 @@ updatedAt: '2026-08-08T23:51:22.515Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 8. 9. 오전 8:51:21
+- **API 수집 시각 (KST):** 2026. 8. 10. 오전 8:55:22
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -135,9 +135,9 @@ updatedAt: '2026-08-08T23:51:22.515Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 20 |
-| Sessions | 26 |
-| Page views | 27 |
+| Active users | 22 |
+| Sessions | 29 |
+| Page views | 30 |
 
 ### 상위 블로그 랜딩 (7일)
 
@@ -145,12 +145,12 @@ updatedAt: '2026-08-08T23:51:22.515Z'
 | --- | --- |
 | `/en/blog/2026-budget-wireless-earbuds-top5` | 4 |
 | `/en/blog/2026-wireless-earbuds-head-to-head` | 3 |
+| `/en/blog/2026-budget-mechanical-keyboards-guide` | 2 |
 | `/en/blog/2026-electric-fans-buying-guide` | 2 |
 | `/en/blog/2026-noise-cancelling-headphones-head-to-head` | 2 |
-| `/en/blog/2026-budget-mechanical-keyboards-guide` | 1 |
+| `/en/blog/2026-budget-smartphones-under-300` | 1 |
 | `/en/blog/2026-clothes-dryers-buying-guide` | 1 |
 | `/en/blog/2026-compact-footprint-cross-category-scenario-guide` | 1 |
-| `/en/blog/2026-family-3-5-home-essentials-scenario-guide` | 1 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
