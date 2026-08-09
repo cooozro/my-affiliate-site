@@ -21,7 +21,7 @@ coverImageSourceUrl: 'https://www.pexels.com/photo/1037995/'
 coverImageCredit: Pexels
 coverImageAlt: 정돈된 침대 위 접힌 이불과 따뜻한 담요
 coverImageAltKo: 정돈된 침대 위 접힌 이불과 따뜻한 담요
-publishedAt: '2026-08-09T02:02:07.527Z'
+publishedAt: '2026-08-08T04:24:35.467Z'
 ---
 ## 편집부 개요
 
