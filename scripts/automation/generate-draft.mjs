@@ -229,6 +229,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     imageSearchKeywords: topic.imageSearchKeywords,
     topicCluster: topic.topicCluster,
     topic,
+    topicId: topic.id,
   };
   const imageContext = resolveImageContext(slug, imageInput);
   const imageMeta = await fetchCoverImage(slug, imageInput);
