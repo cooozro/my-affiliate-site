@@ -9,7 +9,9 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-08-10T23:57:27.262Z'
+updatedAt: '2026-08-11T04:24:25.076Z'
+automationBuffer: false
+createdAt: '2026-08-11T04:24:25.076Z'
 ---
 ## 편집부 개요
 

@@ -409,7 +409,7 @@ async function validateForPublish(slug: string): Promise<string[]> {
 export async function publishPost(slug: string) {
   if (isAdminPublishBlocked(slug)) {
     throw new Error(
-      "aipick-seo-precision-report는 어드민 전용 SEO 리포트입니다. 발행할 수 없습니다. Preview로만 확인하세요.",
+      `${slug}는 어드민/내부 전용 글입니다. 발행할 수 없습니다. Preview로만 확인하세요.`,
     );
   }
 

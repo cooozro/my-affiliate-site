@@ -4,6 +4,7 @@ import {
   countPublishableDrafts,
   countPublishEligibleDrafts,
   isDraftDeferred,
+  isNeverPublishSlug,
   listDrafts,
   pickDraftForPublish,
   readPost,
@@ -101,6 +102,11 @@ function canPublishNow(state, force = false) {
 }
 
 function publishSlug(slug) {
+  if (isNeverPublishSlug(slug)) {
+    throw new Error(
+      `Refusing to publish never-publish slug: ${slug} (admin/internal only)`,
+    );
+  }
   const publishDate = kstDateString();
   const updatedAt = kstNow().toISOString();
 
@@ -167,7 +173,9 @@ export async function publishOneDraft(options = {}) {
   let diversitySkipped = 0;
 
   while (!slug) {
-    const candidates = drafts.filter((d) => !tried.has(d.slug));
+    const candidates = drafts.filter(
+      (d) => !tried.has(d.slug) && !isNeverPublishSlug(d.slug),
+    );
     if (candidates.length === 0) break;
 
     const picked = pickDraftForPublish(candidates, state);

@@ -17,6 +17,17 @@ import { kstDateString, loadState } from "./state.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
+/** Internal / admin-only — never enter publish queue or go live. */
+export const NEVER_PUBLISH_SLUGS = new Set([
+  "welcome",
+  "adsense-seo-checklist",
+  "aipick-seo-precision-report",
+]);
+
+export function isNeverPublishSlug(slug) {
+  return NEVER_PUBLISH_SLUGS.has(slug);
+}
+
 export function listSlugDirs() {
   if (!fs.existsSync(POSTS_DIR)) return [];
   return fs
@@ -106,10 +117,12 @@ export function countPublishedOnKstDate(dateKst = kstDateString()) {
  * Plain frontmatter `date` on drafts is display-only — publish overwrites it at go-live.
  */
 export function isDraftDeferred(slug) {
+  if (isNeverPublishSlug(slug)) return true;
   const { data } = readPost(slug, "en");
   if (!data.draft) return false;
   // Admin-only / Selahim stubs — never enter the publish queue.
   if (data.automationBuffer === false) return true;
+  if (data.tags?.includes?.("internal")) return true;
   const deferred = data.publishAfter ?? data.scheduledPublishDate ?? null;
   if (!deferred) return false;
   const scheduled = String(deferred).slice(0, 10);
@@ -132,6 +145,7 @@ export function pickDraftForPublish(drafts, state = loadState()) {
   const roadmapPhase = getRoadmapPhase(getTopicFormatCoverage());
 
   for (const draft of drafts) {
+    if (isNeverPublishSlug(draft.slug)) continue;
     const { data } = readPost(draft.slug, "en");
     const topic = inferPostTopic(draft.slug, data);
     const topicDef =
@@ -166,6 +180,9 @@ export function pickDraftForPublish(drafts, state = loadState()) {
 
 /** Publish-slot eligibility (includes topic diversity / taxonomy spread). */
 export function getDraftPublishEligibility(slug, state = loadState()) {
+  if (isNeverPublishSlug(slug)) {
+    return { eligible: false, blockers: ["never-publish (admin/internal)"] };
+  }
   if (isDraftDeferred(slug)) {
     return { eligible: false, blockers: ["deferred until publishAfter"] };
   }

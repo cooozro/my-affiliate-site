@@ -11,7 +11,11 @@ export const ADMIN_DRAFT_EXCLUDE = new Set<string>([
   SEO_AUDIT_REPORT_SLUG,
 ]);
 
-const ADMIN_PUBLISH_BLOCKED = new Set<string>([SEO_AUDIT_REPORT_SLUG]);
+/** Hard publish block — automation + admin UI must never go live. */
+export const ADMIN_PUBLISH_BLOCKED = new Set<string>([
+  "adsense-seo-checklist",
+  SEO_AUDIT_REPORT_SLUG,
+]);
 
 export function isAdminPublishBlocked(slug: string): boolean {
   return ADMIN_PUBLISH_BLOCKED.has(slug);

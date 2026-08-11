@@ -52,6 +52,9 @@ const INTEGRITY_EXEMPT_SLUGS = new Set([
   "adsense-seo-checklist",
   "aipick-seo-precision-report",
 ]);
+
+/** Same set — publish phase must hard-fail (exempt only skips draft-quality checks). */
+const NEVER_PUBLISH_SLUGS = INTEGRITY_EXEMPT_SLUGS;
 const MIN_RELATED_GUIDES_PUBLISH = 3;
 const MAX_RELATED_GUIDES_PUBLISH = MAX_RELATED_GUIDE_LINKS;
 const MIN_TAGS_PUBLISH = 3;
@@ -519,6 +522,26 @@ export function verifyPostIntegrity(root, slug, options = {}) {
   const enPeek = readLocaleFile(root, slug, "en");
   const koPeek = readLocaleFile(root, slug, "ko");
   const peekData = enPeek?.data ?? koPeek?.data ?? {};
+
+  // Admin/internal posts: skip draft-quality noise, but NEVER allow LIVE publish.
+  if (NEVER_PUBLISH_SLUGS.has(slug) && phase === "publish") {
+    return {
+      ok: false,
+      phase,
+      slug,
+      errors: [
+        {
+          severity: "error",
+          message: `${slug}: never-publish (admin/internal) — cannot go live`,
+        },
+      ],
+      warnings: [],
+      repairs: [...priorRepairs],
+      exempt: false,
+      neverPublish: true,
+    };
+  }
+
   if (isIntegrityExempt(slug, peekData)) {
     return {
       ok: true,
