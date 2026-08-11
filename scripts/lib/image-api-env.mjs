@@ -18,21 +18,21 @@ Image API keys are not set locally.
 
 GitHub Secrets cannot be read from Cursor or your PC (by design). Options:
 
-  A) GHA (recommended for IDE replenish, no local keys)
-     1. Write the draft WITHOUT coverImage — never copy another post's cover.
-     2. git push origin main
-     3. GitHub Actions runs "Fetch missing draft covers" with repo Secrets.
-     4. git pull — unique cover + frontmatter are committed by the bot.
-     5. Run integrity, then mark cursor-draft-request complete.
-
-     Manual trigger: GitHub → Actions → "Fetch missing draft covers" → Run workflow
-
-  B) Local keys (one-time copy from GitHub Settings → Secrets)
-     Add to .env (gitignored, same values as repo Secrets):
+  A) Put keys in local .env (recommended for IDE writes)
+     Copy the same values used on VPS (/root/blogger_automation/pexels_access_key.txt)
+     and GitHub Actions Secrets into gitignored .env:
        PEXELS_API_KEY=...
        PIXABAY_API_KEY=...
      Then: npm run content:image -- --slug=your-slug
 
-Duplicate heroes are blocked by contentHash; copying files will fail integrity.
+  B) GHA (no local keys)
+     1. Write the draft WITHOUT coverImage — never copy another post's cover.
+     2. git push origin main
+     3. GitHub Actions runs "Fetch missing draft covers" with repo Secrets.
+     4. git pull — unique cover + frontmatter are committed by the bot.
+
+     Manual trigger: GitHub → Actions → "Fetch missing draft covers" → Run workflow
+
+Vercel env vars are for runtime/deploy — draft cover fetch runs in Node scripts / GHA.
 `);
 }

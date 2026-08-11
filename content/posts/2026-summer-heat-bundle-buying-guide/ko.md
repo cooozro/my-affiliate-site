@@ -18,6 +18,16 @@ writingProvider: deepseek
 createdAt: '2026-08-11T05:22:54.061Z'
 liveData: true
 updatedAt: '2026-08-11T05:22:54.180Z'
+coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
+coverImageAlt: 선풍기
+coverImageAltKo: 선풍기
+coverImageCredit: Photo by zeng jinwen / Pexels
+imageSearchKeywords:
+  - electric fan room
+coverImageProvider: pexels
+coverImageAssetId: 17958126
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/17958126/pexels-photo-17958126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## 편집부 개요: 밀폐된 여름을 견디는 법
 

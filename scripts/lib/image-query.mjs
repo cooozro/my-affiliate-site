@@ -767,6 +767,16 @@ export function deriveProductKeywords(input = {}) {
   const topicId = topic.id ?? input.topicId;
   const profile = slugProfile(input.slug, topicId);
 
+  // Explicit CLI / automation imageQuery wins — otherwise seasonal tags drown product searches.
+  if (input.imageQuery?.trim()) {
+    return uniqueStrings([
+      input.imageQuery.trim(),
+      ...(input.imageSearchKeywords ?? []),
+      ...(topic.imageSearchKeywords ?? []),
+      ...(profile?.imageSearchKeywords ?? []),
+    ]);
+  }
+
   const explicit = uniqueStrings([
     ...(profile?.imageSearchKeywords ?? []),
     ...(input.imageSearchKeywords ?? []),
@@ -777,6 +787,15 @@ export function deriveProductKeywords(input = {}) {
   const tagKeywords = uniqueStrings(input.tags ?? []).filter(
     (tag) => !GENERIC_TAGS.has(tag.toLowerCase()),
   );
+  // Prefer concrete product tags over mood/season phrases for stock-photo search.
+  const productish = tagKeywords.filter((tag) =>
+    /\b(dehumidifier|purifier|fan|ac|conditioner|fryer|vacuum|monitor|earbuds?|phone|laptop|keyboard|speaker|tracker|camera|cooker|washer|dryer|humidifier|heater|blanket)\b/i.test(
+      tag,
+    ),
+  );
+  if (productish.length > 0) {
+    return uniqueStrings([...productish, ...tagKeywords]);
+  }
   if (tagKeywords.length > 0) return tagKeywords;
 
   if (input.slug) {
@@ -784,7 +803,6 @@ export function deriveProductKeywords(input = {}) {
     if (fromSlug) return [fromSlug];
   }
 
-  if (input.imageQuery?.trim()) return [input.imageQuery.trim()];
   if (topic.imageQuery?.trim()) return [topic.imageQuery.trim()];
 
   return ["technology product"];
@@ -805,20 +823,27 @@ export function buildSearchQueries(productKeywords, input = {}) {
   });
   const primary = productKeywords.slice(0, 2).join(" ");
   const secondary = productKeywords[0] ?? "product";
+  // Prefer a keyword that matches required product anchors when applying season boosts.
+  const seasonSeed =
+    productKeywords.find((kw) =>
+      /\b(dehumidifier|purifier|fan|conditioner|fryer|vacuum|monitor|earbuds?|phone|laptop|humidifier)\b/i.test(
+        kw,
+      ),
+    ) ?? secondary;
 
   const seasonQueries =
     season.season && season.searchBoost.length > 0
-      ? season.searchBoost.map((boost) => `${secondary} ${boost}`)
+      ? season.searchBoost.map((boost) => `${seasonSeed} ${boost}`)
       : [];
 
   const queries = uniqueStrings([
+    input.imageQuery,
+    topic.imageQuery,
     ...(profile?.extraSearchQueries ?? []),
     ...seasonQueries,
     primary,
-    `${secondary} product photo`,
-    `${secondary} appliance`,
-    input.imageQuery,
-    topic.imageQuery,
+    `${seasonSeed} product photo`,
+    `${seasonSeed} appliance`,
     profile?.extraSearchQueries?.[0],
   ]);
 
@@ -969,10 +994,21 @@ export function requiredProductAnchors(productKeywords, topicCluster, topicId, s
     if (lower.includes("tracker") || lower.includes("smartwatch")) anchors.add("tracker");
     if (lower.includes("purifier")) anchors.add("purifier");
     if (lower.includes("dehumidifier")) anchors.add("dehumidifier");
+    if (lower.includes("humidifier")) anchors.add("humidifier");
+    if (/\bfan\b/.test(lower) || lower.includes("electric fan")) anchors.add("fan");
     if (lower.includes("air conditioner") || /\bac\b/.test(lower)) anchors.add("air conditioner");
+    if (lower.includes("air fryer") || lower.includes("fryer")) anchors.add("fryer");
     if (lower.includes("vacuum") && mode == null) anchors.add("vacuum");
     if (lower.includes("power bank")) anchors.add("power bank");
     if (lower.includes("camera")) anchors.add("camera");
+  }
+
+  // Cross-category / meta posts: accept any concrete product term from keywords.
+  if (String(topicId ?? "").startsWith("meta-") || /cross-category|cross-cutting/i.test(String(slug ?? ""))) {
+    for (const kw of productKeywords) {
+      const token = String(kw).toLowerCase().replace(/[^a-z0-9\s-]/g, " ").trim();
+      if (token.length >= 3) anchors.add(token.split(/\s+/)[0]);
+    }
   }
 
   return [...anchors];

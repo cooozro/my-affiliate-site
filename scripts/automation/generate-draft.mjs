@@ -17,6 +17,7 @@ import {
 } from "./state.mjs";
 import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
+import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
 import {
   MAX_PUBLISH_PER_DAY,
   TARGET_DRAFT_COUNT,
@@ -207,6 +208,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
+  ensureImageApiEnv();
   const { article, writingProvider } = await callLlmWriter(
     prompt,
     contentProfile,

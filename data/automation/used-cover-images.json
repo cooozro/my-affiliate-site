@@ -1016,14 +1016,6 @@
       "registeredAt": "2026-08-11T05:22:54.106Z"
     },
     {
-      "slug": "2026-summer-heat-bundle-buying-guide",
-      "assetKey": null,
-      "hash": null,
-      "contentHash": null,
-      "provider": null,
-      "registeredAt": "2026-08-11T05:22:54.265Z"
-    },
-    {
       "slug": "adsense-seo-checklist",
       "assetKey": null,
       "hash": null,
@@ -1032,12 +1024,12 @@
       "registeredAt": "2026-08-11T05:22:54.272Z"
     },
     {
-      "slug": "2026-summer-heat-bundle-buying-guide",
+      "slug": "adsense-seo-checklist",
       "assetKey": null,
       "hash": null,
       "contentHash": null,
       "provider": null,
-      "registeredAt": "2026-08-11T05:24:21.998Z"
+      "registeredAt": "2026-08-11T05:24:22.006Z"
     },
     {
       "slug": "adsense-seo-checklist",
@@ -1045,7 +1037,112 @@
       "hash": null,
       "contentHash": null,
       "provider": null,
-      "registeredAt": "2026-08-11T05:24:22.006Z"
+      "registeredAt": "2026-08-11T05:30:00.937Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:30:30.460Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:31:32.625Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:31:32.673Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:32:54.229Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:32:54.279Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:34:13.587Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:34:21.801Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:34:21.848Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:35:22.885Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:36:10.513Z"
+    },
+    {
+      "slug": "2026-summer-heat-bundle-buying-guide",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:36:10.559Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T05:36:10.569Z"
+    },
+    {
+      "slug": "2026-summer-heat-bundle-buying-guide",
+      "url": "https://images.pexels.com/photos/17958126/pexels-photo-17958126.jpeg",
+      "assetKey": "pexels:17958126",
+      "hash": "961d553fb1c57c34df87e7e153c725035512422afe0a7b7af0aae82b611bbf3e",
+      "contentHash": "961d553fb1c57c34df87e7e153c725035512422afe0a7b7af0aae82b611bbf3e",
+      "provider": "pexels",
+      "registeredAt": "2026-08-11T05:36:59.882Z"
     }
   ]
 }
