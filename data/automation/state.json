@@ -1,7 +1,6 @@
 {
-  "topicIndex": 18,
+  "topicIndex": 20,
   "usedTopicIds": [
-    "dehumidifiers",
     "power-banks",
     "window-ac",
     "bluetooth-speakers",
@@ -30,7 +29,8 @@
     "television",
     "wireless-earbuds",
     "window-ac",
-    "dishwashers"
+    "dishwashers",
+    "space-heaters"
   ],
   "lastPublishAt": "2026-08-11T02:21:39.879Z",
   "nextPublishAt": "2026-08-12T01:57:00.000Z",
@@ -664,11 +664,6 @@
   ],
   "topicHistory": [
     {
-      "id": "water-purifiers",
-      "cluster": "kitchen-appliances",
-      "at": "2026-07-10T05:30:48.302Z"
-    },
-    {
       "id": "washing-machines",
       "at": "2026-07-10T07:11:46.890Z"
     },
@@ -818,6 +813,12 @@
     {
       "id": "adsense-seo-checklist",
       "at": "2026-08-11T02:21:39.887Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-08-11T08:07:48.066Z"
     }
   ],
   "formatHistory": [
@@ -840,16 +841,22 @@
     "buying-guide",
     "explainer",
     "head-to-head",
-    "buying-guide"
+    "buying-guide",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-11T06:16:38.548Z",
-    "issueCount": 1,
+    "at": "2026-08-11T08:54:17.067Z",
+    "issueCount": 2,
     "issues": [
       {
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
+        "severity": "warning"
+      },
+      {
         "code": "homepage-featured-mismatch",
-        "message": "Home featured is electric-blanket-safety-timers-wash-care-2026, expected latest adsense-seo-checklist",
+        "message": "Home featured is 2026-summer-heat-bundle-buying-guide, expected latest adsense-seo-checklist",
         "severity": "warning"
       }
     ],
@@ -1061,5 +1068,11 @@
       "type": "use-case-bundle",
       "at": "2026-08-11T04:22:08.841Z"
     }
+  ],
+  "formatDeck": [
+    "buying-guide",
+    "head-to-head",
+    "checklist",
+    "explainer"
   ]
 }

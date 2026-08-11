@@ -1159,6 +1159,23 @@
       "contentHash": null,
       "provider": null,
       "registeredAt": "2026-08-11T08:04:28.753Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-11T08:07:28.709Z"
+    },
+    {
+      "slug": "humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
+      "url": "https://pixabay.com/get/g6239d893f101e7f231e8a3968ea9710767bd726656f2dd205edcd11f216ed3565efafd0a838ee5b1de7b0e6ccbfdb1302ba28f0d7c949ca8a87a306fae1d8f6e_1280.jpg",
+      "assetKey": "pixabay:4076727",
+      "hash": "1dd5415fea50b5b5838ff65f832c691b6e8a73752a547907cf4b17f0c4d1286a",
+      "contentHash": "1dd5415fea50b5b5838ff65f832c691b6e8a73752a547907cf4b17f0c4d1286a",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-11T08:07:47.632Z"
     }
   ]
 }
