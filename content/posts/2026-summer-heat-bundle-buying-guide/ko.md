@@ -10,14 +10,13 @@ tags:
   - 에어프라이어
   - 수분 보충
   - 폭염
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting
 writingProvider: deepseek
-createdAt: '2026-08-11T05:22:54.061Z'
 liveData: true
-updatedAt: '2026-08-11T05:22:54.180Z'
+updatedAt: '2026-08-11T08:04:01.612Z'
 coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
 coverImageAlt: 선풍기
 coverImageAltKo: 선풍기
@@ -28,6 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 17958126
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/17958126/pexels-photo-17958126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-08-11T08:04:01.612Z'
 ---
 ## 편집부 개요: 밀폐된 여름을 견디는 법
 
