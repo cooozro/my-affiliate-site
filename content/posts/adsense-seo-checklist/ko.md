@@ -7,7 +7,7 @@ tags:
   - SEO
   - internal
 updatedAt: '2026-08-11T11:21:38.000Z'
-publishedAt: '2026-08-11T11:21:38.000Z'
+publishedAt: '2026-08-11T02:21:39.879Z'
 ---
 ## 1. 콘텐츠 품질
 

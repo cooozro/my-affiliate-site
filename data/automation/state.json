@@ -824,7 +824,6 @@
     }
   ],
   "formatHistory": [
-    "scenario-guide",
     "head-to-head",
     "buying-guide",
     "checklist",
@@ -843,27 +842,16 @@
     "explainer",
     "scenario-guide",
     "checklist",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-11T02:21:37.759Z",
-    "issueCount": 2,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (0min past slot, KST 2026-08-11)",
-        "severity": "warning"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 4197min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-08-11T02:28:50.232Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "adsense-seo-checklist/ko.md: publishedAt 2026-08-11T11:21:38.000Z → 2026-08-11T02:21:39.879Z"
     ]
   },
   "lastDailyContentAuditKst": "2026-08-11",
@@ -1010,6 +998,11 @@
       "id": "under-300-cross-category",
       "type": "price-tier-cross",
       "at": "2026-08-11T02:23:22.573Z"
+    },
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-08-11T02:28:50.551Z"
     }
   ]
 }
