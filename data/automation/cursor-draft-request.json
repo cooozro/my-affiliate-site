@@ -2,30 +2,30 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": null,
-  "requestedAt": "2026-08-11T03:23:14.380Z",
+  "requestedAt": "2026-08-11T03:33:44.901Z",
   "writingMode": "benchmark",
-  "contentProfile": "buying-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "single person apartment essential appliances buying guide 2026 분석",
-  "serpCachePath": "/opt/aipick/data/automation/serp-cache/single-person-apartment-essential-appliances-buying-guide-2026-분석.json",
+  "contentProfile": "scenario-guide",
+  "toneVariant": "checklist-hook",
+  "serpKeyword": "best home tech under 300 dollars cross category comparison 2026 구매가이드",
+  "serpCachePath": null,
   "benchmarkOutline": {
-    "contentProfile": "buying-guide",
-    "toneVariant": "data-driven",
-    "introAngle": "data-driven framing for Cross-category starter essentials for one-person apartments: compact cooling, air quality, desk tech, and quick meals without full-size appliance sprawl",
+    "contentProfile": "scenario-guide",
+    "toneVariant": "checklist-hook",
+    "introAngle": "checklist-hook framing for Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
     "conclusionAngle": "Actionable next steps without hype",
     "sections": [
       {
-        "h2": "By the numbers: Section 1: 위한 가전제품 선택 방법",
+        "h2": "Before you decide: 첫 내 집 마련 절차 및 핵심 전략",
         "h3": [
-          "Key factors: 내장형 가전제품 확인",
-          "가전제품을 방 크기와 구조에 맞게 선택하세요"
+          "Key factors: Step 1. 사전 승인 (Pre-approval)",
+          "Step 2. 에이전트 선정 및 집 찾기"
         ]
       },
       {
-        "h2": "Key factors: Section 2: 필요한 가전제품 최소 목록",
+        "h2": "Key factors: 한눈에 보는 핵심 요약",
         "h3": [
-          "생활 방식에 기반하여 필요한 '수용량'을 결정하세요",
-          "Key factors: 공간 절약을 위해 \"다기능 가전제품\"을 후보합니다"
+          "Step 3. 오퍼 제출",
+          "Key factors: Step 4. 홈 인스펙션"
         ]
       },
       {
@@ -36,79 +36,78 @@
         ]
       },
       {
-        "h2": "Section 3: 위한 있으면 좋은 가전제품",
+        "h2": "1. 주택 선택 9단계 프로세스",
         "h3": [
-          "Key factors: 전자레인지",
-          "진공 청소기"
+          "Key factors: Step 5. 변호사 계약",
+          "Step 6. 모기지 및 감정"
         ]
       },
       {
-        "h2": "Key factors: Section 4: 가구용 가전제품 선택 팁",
+        "h2": "Key factors: 2. 꼭 알아야 할 주의사항",
         "h3": [
-          "전기 주전자",
-          "Key factors: 토스터 오븐"
+          "Step 7. 타이틀 확인",
+          "Key factors: Step 8. 클로징"
         ]
       },
       {
-        "h2": "Section 5: 편안한 1인 생활을 시작하세요",
+        "h2": "3. 실제 거래에서 자주 발생하는 상황",
         "h3": [
-          "Key factors: 미용 기기",
-          "목표 판매 시즌 및 신제품 출시 시기"
+          "Key factors: Step 9. 클로징 이후",
+          "클로징 비용"
         ]
       },
       {
-        "h2": "Key factors: Section 1: What “Small” Actually Means",
+        "h2": "Key factors: 해외 투자 및 유학생 부모 안내",
         "h3": [
-          "중고품 가게와 중고 물품을 활용하세요",
-          "Key factors: 관련 기사"
+          "크레딧 관리 (가장 중요)",
+          "Key factors: As-Is 조항"
         ]
       }
     ],
-    "keyword": "single person apartment essential appliances buying guide 2026 분석",
-    "baseKeyword": "single person apartment essential appliances buying guide 2026",
+    "keyword": "best home tech under 300 dollars cross category comparison 2026 구매가이드",
+    "baseKeyword": "best home tech under 300 dollars cross category comparison 2026",
     "serpSources": [
       {
-        "title": "My Top Tips for Buying Kitchen Appliances in 2026",
-        "url": "https://www.youtube.com/watch?v=QjK5MWLp7SY"
+        "title": "2026 구매가이드",
+        "url": "https://www.youtube.com/playlist?list=PLaqD5eIIWQl8"
       },
       {
-        "title": "혼자 살 때 꼭 필요한 가전제품: 가장 먼저 준비해야 할 필수품 ...",
-        "url": "https://www.tiger-corporation.com/ko/kor/magazine/weekly-tips/general1/"
+        "title": "2026년 뉴욕 주택 구매 가이드",
+        "url": "https://zipitzy.com/nyc-home-buying-guide-2026/"
       },
       {
-        "title": "Best Compact & Apartment-Sized Appliances for 2026",
-        "url": "https://www.shopappliances.com/blog/best-compact-apartment-sized-appliances-2026?srsltid=AfmBOopDEBl7HpNLHkUWuKkv5bQtdijDdH9R6XYaCG6i0u5clQNfAW1_"
+        "title": "Top 3 Verified Security Home CCTVs Recommended for 2026 ...",
+        "url": "https://www.youtube.com/watch?v=2b4RcX-xd9c"
       },
       {
-        "title": "Home Appliance Buying Guides",
-        "url": "https://www.samsung.com/us/home-appliances/buying-guide/"
+        "title": "https://www.bestliving.co.kr/m/board.html?code=bes...",
+        "url": "https://www.bestliving.co.kr/m/board.html?code=bestliving_board5&page=34&board_cate="
       },
       {
-        "title": "【2026 Large Home Appliance Buying Guide】Are ...",
-        "url": "https://www.fortress.com.hk/en/promotion/buying-guides/large-home-appliance-authorized-good-vs-parallel-import"
+        "title": "기아 - Movement that inspires",
+        "url": "https://www.kia.com/kr"
       },
       {
-        "title": "Refrigerator Buying Guide 2026",
-        "url": "https://www.ajmadison.com/learn/refrigeration/buying-guide/refrigerator-buying-guide/?srsltid=AfmBOoqjBWnqqQxWu8QIYbqf7dKqQ9z8CzQ7sNIaLT-3iUA9BEfHvUuQ"
+        "title": "동행·매력 특별시 서울 | 서울특별시",
+        "url": "https://www.seoul.go.kr/"
       },
       {
-        "title": "Buying a Refrigerator in 2026: A Practical Guide for Your Kitchen",
-        "url": "https://www.joybuy.nl/blog/buying-a-refrigerator-2026-guide/opsx3DBJ"
+        "title": "현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com",
+        "url": "https://www.hyundai.com/kr/ko/e"
       },
       {
-        "title": "18 Best Kitchen Appliances of 2026, Lab-Tested and ...",
-        "url": "https://www.consumerreports.org/appliances/best-kitchen-appliances-of-the-year-a1167512464/"
+        "title": "네이버 광고주센터",
+        "url": "https://ads.naver.com/"
       },
       {
-        "title": "7 Kitchen Appliances Worth Buying in 2026, and the One ...",
-        "url": "https://blog.yaleappliance.com/appliances-to-consider-in-your-new-kitchen"
+        "title": "The Best Smart Home Devices We've Tested for 2026",
+        "url": "https://www.pcmag.com/picks/the-best-smart-home-devices"
       }
     ],
-    "validatedAt": "2026-08-11T03:23:14.357Z",
-    "h2Similarity": 0.40306122448979587,
-    "shingleOverlap": 0.12371134020618557,
-    "serpCachePath": "/opt/aipick/data/automation/serp-cache/single-person-apartment-essential-appliances-buying-guide-2026-분석.json",
-    "fromCache": false
+    "validatedAt": "2026-08-11T03:33:44.893Z",
+    "h2Similarity": 0.5789115646258504,
+    "shingleOverlap": 0.11494252873563218,
+    "fromCache": true
   },
   "fallbackFrom": null,
   "fallbackReason": null,
@@ -119,13 +118,13 @@
     "폭염·냉방"
   ],
   "contentPlan": "meta",
-  "contentAngle": "solo-apartment-essentials",
-  "slugHint": "2026-solo-apartment-home-essentials-buying-guide",
+  "contentAngle": "under-300-cross-category",
+  "slugHint": "2026-under-300-cross-category-scenario-guide",
   "topic": {
-    "id": "meta-solo-apartment-essentials",
+    "id": "meta-under-300-cross-category",
     "category": "cross-cutting",
-    "angle": "Cross-category starter essentials for one-person apartments: compact cooling, air quality, desk tech, and quick meals without full-size appliance sprawl",
-    "imageQuery": "small apartment living room essentials",
+    "angle": "Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
+    "imageQuery": "budget home tech gadgets desk",
     "liveData": true,
     "seasons": [
       "summer",
@@ -134,15 +133,15 @@
       "winter"
     ],
     "anchorTopicIds": [
+      "budget-monitors",
       "electric-fans",
-      "air-purifiers",
-      "air-fryers",
-      "wireless-earbuds",
-      "robot-vacuums"
+      "power-banks",
+      "bluetooth-speakers",
+      "air-purifiers"
     ],
     "isMetaAngle": true
   },
-  "templatePath": "docs/templates/buying-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: benchmark. Tone: data-driven. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (household-type): Single-person apartment / 1인 가구. Cover multiple product categories in ONE article — anchor categories: electric-fans, air-purifiers, air-fryers, wireless-earbuds, robot-vacuums. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-solo-apartment-home-essentials-buying-guide. Frontmatter: contentAngle: solo-apartment-essentials, topicId: meta-solo-apartment-essentials. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/scenario-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: benchmark. Tone: checklist-hook. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (price-tier-cross): Under $300 cross-category / 30만 원대 교차 카테고리. Cover multiple product categories in ONE article — anchor categories: budget-monitors, electric-fans, power-banks, bluetooth-speakers, air-purifiers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-under-300-cross-category-scenario-guide. Frontmatter: contentAngle: under-300-cross-category, topicId: meta-under-300-cross-category. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }
