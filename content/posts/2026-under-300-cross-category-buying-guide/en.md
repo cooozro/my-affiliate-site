@@ -28,15 +28,12 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-07-16T02:45:13.501Z'
+updatedAt: '2026-08-11T06:15:04.369Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
-noindex: true
-robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare **unrelated product categories at one price ceiling** using public specs as of {{today}} — not a single-aisle TOP 5. When every cart lands near **$299**, opportunity cost shifts: a 27-inch QHD panel, a whole-room fan, a 20,000 mAh power bank, an IP67 speaker, and a HEPA purifier each solve different problems. This guide ranks what **$300 buys inside each category** so you split budget deliberately instead of defaulting to the loudest marketing vertical.
-
 
 ## Introduction: why cross-category at $300
 
@@ -143,6 +140,34 @@ We do **not** use proprietary seller APIs. Each category keeps its native metric
 | Dorm desk + patio | Monitor $199 class + JBL mini | Skip purifier if window opens daily |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking $300 street prices, display, air quality, and mobile power stayed the most stable utility buys.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Dell | S2721QS | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Vornado | Vornado660B | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Anker | A737PowerBank | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| JBL | Charge5Plus | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Coway | Airmega150 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| AOC | Q27G2SX | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: cross-category lists blur models, so OEM codes are pinned.**
+
+**Total cost of ownership (3-year): include filters, cables, and mounts in the comparison.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

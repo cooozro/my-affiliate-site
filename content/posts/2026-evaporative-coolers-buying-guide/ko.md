@@ -23,8 +23,8 @@ imageSearchKeywords:
   - water cooler fan
 coverImage: >-
   /images/posts/2026-evaporative-coolers-buying-guide/evaporative-cooler-cover.jpg
-coverImageAlt: evaporative cooler and portable air cooler for dry-climate summer rooms
-coverImageAltKo: 건조 기후용 기화식 쿨러와 이동식 에어쿨러
+coverImageAlt: 실내에 놓인 evaporative cooler 선풍기형 냉풍기
+coverImageAltKo: 실내에 놓인 evaporative cooler 선풍기형 냉풍기
 coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'

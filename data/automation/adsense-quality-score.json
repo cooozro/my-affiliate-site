@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-18T01:07:10.763Z",
-  "counted": 36,
-  "avg": 96,
-  "avgIncludingHidden": 89,
-  "hiddenCount": 6,
+  "generatedAt": "2026-08-11T06:16:00.655Z",
+  "counted": 54,
+  "avg": 97,
+  "avgIncludingHidden": 97,
+  "hiddenCount": 0,
   "bands": {
-    "A": 36
+    "A": 54
   },
   "actions": {
-    "keep-hero": 36
+    "keep-hero": 54
   },
   "priorities": {
-    "P5": 36
+    "P5": 54
   },
   "dupTopics": [
     [
@@ -19,56 +19,27 @@
       7
     ],
     [
+      "meta-solo-apartment-essentials",
+      4
+    ],
+    [
       "meta-family-3-5-person",
+      3
+    ],
+    [
+      "meta-under-300-cross-category",
+      3
+    ],
+    [
+      "meta-compact-footprint-appliances",
       2
     ],
     [
       "portable-ac",
       2
-    ],
-    [
-      "meta-solo-apartment-essentials",
-      2
     ]
   ],
-  "hidden": [
-    {
-      "slug": "2026-air-fryers-checklist",
-      "total": 45,
-      "band": "C",
-      "title": "여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크"
-    },
-    {
-      "slug": "2026-portable-ssd-explainer",
-      "total": 61,
-      "band": "B",
-      "title": "휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요"
-    },
-    {
-      "slug": "2026-rice-cookers-explainer",
-      "total": 53,
-      "band": "C",
-      "title": "퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것"
-    },
-    {
-      "slug": "2026-smart-home-cameras-explainer",
-      "total": 31,
-      "band": "D",
-      "title": "홈 IP 카메라 설명: 해상도·클라우드 vs 로컬·여름 여행 보안"
-    },
-    {
-      "slug": "2026-under-300-cross-category-buying-guide",
-      "total": 59,
-      "band": "C",
-      "title": "30만 원대 교차 비교: 같은 가격대에서 카테고리마다 무엇을 얻는가"
-    },
-    {
-      "slug": "2026-webcams-checklist",
-      "total": 55,
-      "band": "C",
-      "title": "여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크"
-    }
-  ],
+  "hidden": [],
   "rows": [
     {
       "slug": "2026-budget-fitness-trackers-head-to-head",
@@ -353,6 +324,44 @@
       "priority": "P5"
     },
     {
+      "slug": "electric-blanket-safety-timers-wash-care-2026",
+      "title": "전기장판 안전 인증, 타이머, 세탁 관리 — 라벨이 말하는 진짜 의미",
+      "profile": "explainer",
+      "topicId": "electric-blankets",
+      "angle": "",
+      "date": "2026-08-09",
+      "publishedAt": "2026-08-08T04:24:35.467Z",
+      "noindex": false,
+      "koChars": 6016,
+      "enBytes": 11760,
+      "modelCount": 3,
+      "brandCount": 1,
+      "picks": 8,
+      "products": 0,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 13,
+      "faq": 19,
+      "lengthScore": 20,
+      "specScore": 24,
+      "judge": 28,
+      "struct": 20,
+      "total": 92,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "SBL5611",
+        "TB120",
+        "UHM200"
+      ],
+      "priority": "P5"
+    },
+    {
       "slug": "2026-cordless-vacuums-scenario-guide",
       "title": "여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오",
       "profile": "scenario-guide",
@@ -372,6 +381,39 @@
       "hasWhy": true,
       "tables": 48,
       "faq": 3,
+      "lengthScore": 25,
+      "specScore": 15,
+      "judge": 33,
+      "struct": 20,
+      "total": 93,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "editorial-depth"
+      ],
+      "models": [],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-countertop-ice-makers-buying-guide",
+      "title": "소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용",
+      "profile": "buying-guide",
+      "topicId": "ice-makers",
+      "angle": "",
+      "date": "2026-07-20",
+      "publishedAt": "2026-07-20T08:28:51.349Z",
+      "noindex": false,
+      "koChars": 11297,
+      "enBytes": 21478,
+      "modelCount": 0,
+      "brandCount": 4,
+      "picks": 0,
+      "products": 5,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 44,
+      "faq": 11,
       "lengthScore": 25,
       "specScore": 15,
       "judge": 33,
@@ -672,6 +714,45 @@
       "priority": "P5"
     },
     {
+      "slug": "2026-evaporative-coolers-buying-guide",
+      "title": "기화식 쿨러 vs 이동식 에어컨: 건조 기후 가성비, 습도 한계, 모델 5종",
+      "profile": "buying-guide",
+      "topicId": "evaporative-coolers",
+      "angle": "",
+      "date": "2026-07-23",
+      "publishedAt": "2026-07-23T06:46:19.243Z",
+      "noindex": false,
+      "koChars": 11764,
+      "enBytes": 22458,
+      "modelCount": 4,
+      "brandCount": 1,
+      "picks": 0,
+      "products": 5,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 47,
+      "faq": 10,
+      "lengthScore": 25,
+      "specScore": 19,
+      "judge": 33,
+      "struct": 20,
+      "total": 97,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "MC37M",
+        "CO60PM",
+        "CO30XE",
+        "EC45S"
+      ],
+      "priority": "P5"
+    },
+    {
       "slug": "2026-usb-c-hubs-buying-guide",
       "title": "여름 이동·방학 WFH, USB-C 허브는 PD 통과·포트 구성으로 고른다",
       "profile": "buying-guide",
@@ -963,6 +1044,119 @@
       "priority": "P5"
     },
     {
+      "slug": "2026-under-300-cross-category-head-to-head-guide",
+      "title": "30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기",
+      "profile": "head-to-head",
+      "topicId": "meta-under-300-cross-category",
+      "angle": "under-300-cross-category",
+      "date": "2026-07-20",
+      "publishedAt": "2026-07-20T00:05:21.473Z",
+      "noindex": false,
+      "koChars": 10484,
+      "enBytes": 18900,
+      "modelCount": 1,
+      "brandCount": 9,
+      "picks": 0,
+      "products": 3,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 52,
+      "faq": 19,
+      "lengthScore": 25,
+      "specScore": 20,
+      "judge": 33,
+      "struct": 20,
+      "total": 98,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "S2721DS"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-smart-home-cameras-explainer",
+      "title": "홈 IP 카메라 설명: 해상도·클라우드 vs 로컬·여름 여행 보안",
+      "profile": "explainer",
+      "topicId": "smart-home-cameras",
+      "angle": "",
+      "date": "2026-07-08",
+      "publishedAt": "2026-07-08T07:17:54.698Z",
+      "noindex": false,
+      "koChars": 4544,
+      "enBytes": 8757,
+      "modelCount": 3,
+      "brandCount": 12,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 31,
+      "faq": 6,
+      "lengthScore": 20,
+      "specScore": 26,
+      "judge": 33,
+      "struct": 20,
+      "total": 99,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "SoloCamS340",
+        "BlinkOut4Gen",
+        "Argus3Pro"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-webcams-checklist",
+      "title": "여름 재택·원격 근무, 웹캠은 해상도·오토포커스·마이크 7가지 체크",
+      "profile": "checklist",
+      "topicId": "webcams",
+      "angle": "",
+      "date": "2026-07-04",
+      "publishedAt": "2026-07-04T01:56:28.535Z",
+      "noindex": false,
+      "koChars": 5279,
+      "enBytes": 10194,
+      "modelCount": 4,
+      "brandCount": 11,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 20,
+      "faq": 3,
+      "lengthScore": 20,
+      "specScore": 26,
+      "judge": 33,
+      "struct": 20,
+      "total": 99,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "C920s",
+        "WB7022",
+        "PowerConfC200",
+        "LifeCamHD3000"
+      ],
+      "priority": "P5"
+    },
+    {
       "slug": "2026-action-cameras-buying-guide",
       "title": "여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기",
       "profile": "buying-guide",
@@ -994,6 +1188,46 @@
       ],
       "models": [
         "Insta360"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-air-fryers-checklist",
+      "title": "여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크",
+      "profile": "checklist",
+      "topicId": "air-fryers",
+      "angle": "",
+      "date": "2026-07-04",
+      "publishedAt": "2026-07-04T06:43:31.577Z",
+      "noindex": false,
+      "koChars": 5169,
+      "enBytes": 11061,
+      "modelCount": 5,
+      "brandCount": 10,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 20,
+      "faq": 3,
+      "lengthScore": 20,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "LI211",
+        "AF101",
+        "InstantVP6Qt",
+        "HD9252",
+        "NQ70M6650DS"
       ],
       "priority": "P5"
     },
@@ -1107,6 +1341,83 @@
       ],
       "models": [
         "ECAM290"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-compact-footprint-cross-category-scenario-guide",
+      "title": "소형 가전 시나리오 가이드: 좁은 집에서 자리를 줄 제품은?",
+      "profile": "scenario-guide",
+      "topicId": "meta-compact-footprint-appliances",
+      "angle": "compact-footprint-appliances",
+      "date": "2026-07-21",
+      "publishedAt": "2026-07-21T10:10:16.000Z",
+      "noindex": false,
+      "koChars": 18676,
+      "enBytes": 36013,
+      "modelCount": 5,
+      "brandCount": 5,
+      "picks": 20,
+      "products": 0,
+      "scenarios": 5,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 57,
+      "faq": 8,
+      "lengthScore": 25,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "MAP12S1TBL",
+        "LP0621WSR",
+        "MAD20S1QWT",
+        "ADHL22LA",
+        "AF101"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-cooling-mattress-pads-buying-guide",
+      "title": "냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식",
+      "profile": "buying-guide",
+      "topicId": "cooling-mattress-pads",
+      "angle": "",
+      "date": "2026-07-18",
+      "publishedAt": "2026-07-18T03:46:35.985Z",
+      "noindex": false,
+      "koChars": 9287,
+      "enBytes": 17379,
+      "modelCount": 2,
+      "brandCount": 10,
+      "picks": 0,
+      "products": 6,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 42,
+      "faq": 9,
+      "lengthScore": 25,
+      "specScore": 25,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "editorial-depth"
+      ],
+      "models": [
+        "Pod4Ultra",
+        "BedJet30X"
       ],
       "priority": "P5"
     },
@@ -1230,6 +1541,92 @@
       "priority": "P5"
     },
     {
+      "slug": "2026-family-3-5-summer-load-scenario-guide",
+      "title": "여름 방학 부하: 3–5인 가구를 위한 다섯 가지 가전 시나리오",
+      "profile": "scenario-guide",
+      "topicId": "meta-family-3-5-person",
+      "angle": "family-3-5-person",
+      "date": "2026-07-22",
+      "publishedAt": "2026-07-22T09:17:40.568Z",
+      "noindex": false,
+      "koChars": 15343,
+      "enBytes": 30895,
+      "modelCount": 10,
+      "brandCount": 16,
+      "picks": 20,
+      "products": 1,
+      "scenarios": 5,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 63,
+      "faq": 9,
+      "lengthScore": 25,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "RF28T5001SR",
+        "LRFXS2503S",
+        "WF53BB8700AVUS",
+        "WFW5620HW",
+        "QM851G",
+        "RF28R7351SG",
+        "WM4000HWA",
+        "WinixC545A",
+        "V15Detect",
+        "RoborockS8PU"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-heatwave-blackout-home-readiness-checklist",
+      "title": "폭염 정전 대비 아파트·가족 체크리스트",
+      "profile": "checklist",
+      "topicId": "heatwave-blackout-readiness",
+      "angle": "",
+      "date": "2026-07-22",
+      "publishedAt": "2026-07-22T04:40:08.419Z",
+      "noindex": false,
+      "koChars": 14436,
+      "enBytes": 28067,
+      "modelCount": 5,
+      "brandCount": 13,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 18,
+      "faq": 7,
+      "lengthScore": 25,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "AnkerC1000X",
+        "EcoFlowD2Max",
+        "BluettiAC180",
+        "Explorer1000v2",
+        "Yet400X"
+      ],
+      "priority": "P5"
+    },
+    {
       "slug": "2026-noise-cancelling-headphones-head-to-head",
       "title": "여름 장거리 비행용 노이즈캔슬링 헤드폰, 소니·사운드코어·JBL 맞대결",
       "profile": "head-to-head",
@@ -1261,6 +1658,84 @@
       ],
       "models": [
         "CH720N"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-portable-power-stations-buying-guide",
+      "title": "휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선",
+      "profile": "buying-guide",
+      "topicId": "portable-power-stations",
+      "angle": "",
+      "date": "2026-07-18",
+      "publishedAt": "2026-07-18T08:40:18.328Z",
+      "noindex": false,
+      "koChars": 9369,
+      "enBytes": 16954,
+      "modelCount": 5,
+      "brandCount": 10,
+      "picks": 0,
+      "products": 6,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 42,
+      "faq": 9,
+      "lengthScore": 25,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "EcoFlowD2Max",
+        "Explorer1000v2",
+        "BluettiAC180",
+        "AnkerC1000X",
+        "Yet1000X"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-portable-ssd-explainer",
+      "title": "휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요",
+      "profile": "explainer",
+      "topicId": "portable-ssd",
+      "angle": "",
+      "date": "2026-07-05",
+      "publishedAt": "2026-07-05T03:33:06.533Z",
+      "noindex": false,
+      "koChars": 7189,
+      "enBytes": 14879,
+      "modelCount": 3,
+      "brandCount": 10,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 28,
+      "faq": 6,
+      "lengthScore": 25,
+      "specScore": 26,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "T7Shield2TB",
+        "ExtremePro2TB",
+        "X10Pro4TB"
       ],
       "priority": "P5"
     },
@@ -1305,6 +1780,128 @@
       "priority": "P5"
     },
     {
+      "slug": "2026-rice-cookers-explainer",
+      "title": "퍼지 로직·IH·멀티쿡, 밥솥에서 실제로 달라지는 것",
+      "profile": "explainer",
+      "topicId": "rice-cookers",
+      "angle": "",
+      "date": "2026-07-05",
+      "publishedAt": "2026-07-05T02:44:08.822Z",
+      "noindex": false,
+      "koChars": 6375,
+      "enBytes": 14979,
+      "modelCount": 5,
+      "brandCount": 11,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 28,
+      "faq": 6,
+      "lengthScore": 20,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth"
+      ],
+      "models": [
+        "ST1009F",
+        "HCC10XH",
+        "TigerJBVA10U",
+        "ZG185",
+        "ToshibaRC10V"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-solo-apartment-home-essentials-checklist-guide-20260723",
+      "title": "1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기",
+      "profile": "checklist",
+      "topicId": "meta-solo-apartment-essentials",
+      "angle": "solo-apartment-essentials",
+      "date": "2026-07-24",
+      "publishedAt": "2026-07-24T07:56:24.703Z",
+      "noindex": false,
+      "koChars": 11362,
+      "enBytes": 21977,
+      "modelCount": 4,
+      "brandCount": 11,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 38,
+      "faq": 8,
+      "lengthScore": 25,
+      "specScore": 26,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "Core300S",
+        "HSH004",
+        "AnkerA1257PD",
+        "LI211"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-summer-solo-heat-essentials-checklist",
+      "title": "여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리",
+      "profile": "checklist",
+      "topicId": "meta-solo-apartment-essentials",
+      "angle": "solo-apartment-essentials",
+      "date": "2026-07-21",
+      "publishedAt": "2026-07-21T02:01:11.150Z",
+      "noindex": false,
+      "koChars": 5679,
+      "enBytes": 10500,
+      "modelCount": 6,
+      "brandCount": 14,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 15,
+      "faq": 5,
+      "lengthScore": 20,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "HAF001S",
+        "T42950",
+        "MAP12S1TBL",
+        "HME020031N",
+        "HTF210B",
+        "Core300S"
+      ],
+      "priority": "P5"
+    },
+    {
       "slug": "2026-television-buying-guide",
       "title": "창문 닫고 시원하게: 여름 스포츠·스트리밍·HDMI 2.1 게이밍 TV 5선",
       "profile": "buying-guide",
@@ -1339,6 +1936,48 @@
         "OLED65C4",
         "QN65S90D",
         "QM851G"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "2026-under-300-cross-category-buying-guide",
+      "title": "30만 원대 교차 비교: 같은 가격대에서 카테고리마다 무엇을 얻는가",
+      "profile": "buying-guide",
+      "topicId": "meta-under-300-cross-category",
+      "angle": "under-300-cross-category",
+      "date": "2026-07-11",
+      "publishedAt": "2026-07-11T13:27:19.499Z",
+      "noindex": false,
+      "koChars": 4599,
+      "enBytes": 10253,
+      "modelCount": 6,
+      "brandCount": 13,
+      "picks": 0,
+      "products": 6,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 32,
+      "faq": 6,
+      "lengthScore": 20,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "S2721QS",
+        "Vornado660B",
+        "A737PowerBank",
+        "Charge5Plus",
+        "Airmega150",
+        "Q27G2SX"
       ],
       "priority": "P5"
     },
@@ -1385,6 +2024,48 @@
         "WF53BB8700",
         "WM5500HVA",
         "WAW285"
+      ],
+      "priority": "P5"
+    },
+    {
+      "slug": "under-300-cross-category-best-value-2026",
+      "title": "30만 원으로 살 수 있는 최고의 물건: 모니터 vs 공기청정기 vs 보조배터리",
+      "profile": "explainer",
+      "topicId": "meta-under-300-cross-category",
+      "angle": "",
+      "date": "2026-07-28",
+      "publishedAt": "2026-07-28T05:24:50.271Z",
+      "noindex": false,
+      "koChars": 7246,
+      "enBytes": 11723,
+      "modelCount": 6,
+      "brandCount": 13,
+      "picks": 0,
+      "products": 1,
+      "scenarios": 0,
+      "hasExp": true,
+      "hasWhy": true,
+      "tables": 22,
+      "faq": 22,
+      "lengthScore": 25,
+      "specScore": 30,
+      "judge": 33,
+      "struct": 20,
+      "total": 100,
+      "band": "A",
+      "action": "keep-hero",
+      "flags": [
+        "strong-candidate",
+        "editorial-depth",
+        "meta-angle"
+      ],
+      "models": [
+        "Q27G2SX",
+        "S2721QS",
+        "Core300S",
+        "AnkerA1257PD",
+        "Vornado660B",
+        "Charge5Plus"
       ],
       "priority": "P5"
     }

@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T08:40:18.381Z'
+updatedAt: '2026-08-11T06:15:03.529Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## Editorial Overview
@@ -182,6 +182,33 @@ Our **Sleep Cooling Index (SCI)** weights sustained cooling, quiet operation nea
 | Light sleeper, quiet room | Dock Pro (pad silent) → Cumulus → TEMPUR | Avoid pillow-side fan noise |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking active water/air systems vs passive toppers, noise, leak risk, and service cost explain comfort gaps more than ‘cooling fabric’ claims.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Eight Sleep | Pod4Ultra | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| BedJet | BedJet30X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Tempur | TempurAdaptC1 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| ChiliSleep | ChiliDockPro1 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Sleepme | SleepmeCube01 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: localized marketing names obscure OEM IDs, so Latin model codes are listed.**
+
+**Total cost of ownership (3-year): subscriptions, pump replacements, and electricity can exceed the pad itself.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

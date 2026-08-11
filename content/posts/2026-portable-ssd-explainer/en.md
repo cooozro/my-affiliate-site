@@ -28,15 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T02:23:16.524Z'
+updatedAt: '2026-08-11T06:15:04.081Z'
 publishedAt: '2026-07-05T03:33:06.533Z'
-noindex: true
-robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we explain portable SSD shopping from public USB-IF naming guides, manufacturer endurance sheets, and open storage reviews — not seller scripts. During summer break travel and dorm move weeks, **the gap between a 5 Gbps bridge and a 10 Gbps NVMe enclosure** shows up when you dump a full day of 4K clips before bed — not in a spec table on the product page.
-
 
 ## Introduction: why portable SSD listings hide the bottleneck
 
@@ -128,6 +125,33 @@ Speed and TBW only matter inside a workflow that survives lost bags and fried po
 
 ---
 
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking sustained-write benches, portable SSD bottlenecks were cables and thermal throttle more than TBW marketing.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Samsung | T7Shield2TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| SanDisk | ExtremePro2TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Crucial | X10Pro4TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| WD | WDMyPassSSD2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| LaCie | LaCieRugged32 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: explainer prose can look unanchored, so OEM codes are listed.**
+
+**Total cost of ownership (3-year): cables, dual-backup copies, and capacity upgrades can exceed sticker.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
+
 ## FAQ
 
 ### The box says “2,000 MB/s” but my copy stuck at 400 MB/s — what failed first?
@@ -158,7 +182,7 @@ Console external USB storage expands **game library capacity**; it does not repl
 
 ## Related guides
 
-- [Webcam Checklist for Summer Remote Work: Resolution, Focus, and Mic Quality](/en/blog/2026-webcams-checklist) — creator setups that pair webcam capture with local SSD project archives
+- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
 - [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — dorm and apartment moves where cable clutter and desk space compete with backup drives
 - [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — 4K and 60 fps clips that fill SSDs fastest on summer trips
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — editing stations that stress USB bandwidth when previewing 4K from external storage

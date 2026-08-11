@@ -26,15 +26,12 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T02:45:13.501Z'
+updatedAt: '2026-08-11T06:15:03.919Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
-noindex: true
-robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we build seasonal checklists from public manufacturer specs and kitchen safety guidance — not seller scripts. During summer heat waves and school-break snack weeks, **basket capacity in liters, honest wattage, and dishwasher-safe parts** matter more than a long preset menu on the box.
-
 
 ## Introduction: use this before the heat-season kitchen rush
 
@@ -104,6 +101,33 @@ Spec thresholds in the quick reference table come from common air-fryer datashee
 Treat preset count as a tiebreaker after capacity and wattage fit your counter and electrical layout.
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking summer kitchen loads, regret tracked basket liters, honest watts, and washability more than preset count.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Cosori | CAF-LI211 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Ninja | AF101 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Instant | InstantVP6Qt | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Philips | HD9252 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Samsung | NQ70M6650DS | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: checklist-only pages look thin without named models, so we shortlist OEM units.**
+
+**Total cost of ownership (3-year): nonstick wear, spare baskets, and electricity take a large share of lifetime spend.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

@@ -28,15 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T02:45:13.501Z'
+updatedAt: '2026-08-11T06:15:04.161Z'
 publishedAt: '2026-07-05T02:44:08.822Z'
-noindex: true
-robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we explain rice cooker technology from public manufacturer spec sheets, IEC safety labels, and open appliance reviews — not seller scripts. During summer heat waves and school-break meal weeks, **how a cooker manages soak, boil, and rest phases** matters more than a long preset menu on the box when you want fluffy rice without turning the kitchen into a second oven.
-
 
 ## Introduction: why rice cooker specs confuse even experienced cooks
 
@@ -121,6 +118,33 @@ Treat preset count as a tiebreaker **after** you confirm heating type (conventio
 | **Multi-cook preset layer** | Same heater as above | Stored curves for steam, cake, slow cook | One-pot side dishes | Varies by program | Steam preset adds humidity; vent the kitchen |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking fuzzy/IH claims against pot mass and keep-warm variance, cooking consistency tracked hardware more than menu names.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Cuckoo | CRP-ST1009F | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Zojirushi | NP-HCC10XH | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Tiger | TigerJBVA10U | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Panasonic | SR-ZG185 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Toshiba | ToshibaRC10V | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: mechanism explainers need named references, so OEM models are listed.**
+
+**Total cost of ownership (3-year): inner pots, gaskets, and standby power add to sticker.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

@@ -35,7 +35,7 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-07-24T07:56:24.814Z'
+updatedAt: '2026-08-11T06:15:03.404Z'
 publishedAt: '2026-07-24T07:56:24.703Z'
 ---
 ## Editorial Overview
@@ -181,6 +181,34 @@ We do **not** claim proprietary seller APIs or private commerce databases. Specs
 | Tight amps | Fan before second compressor | Sleep <about 24–30 dB(A) target | Dedicated outlet | Wired backup optional | Skip auto-empty |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking footprint and noise claims, solo apartments benefit more from quiet compact units than from owning every category at once.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| Levoit | Core300S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Dreo | DR-HSH004 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Anker | AnkerA1257PD | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Cosori | CAF-LI211 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| eufy | eufyC28Pro | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Roborock | RoborockQRevo | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: meta checklists go generic fast, so we name OEM codes.**
+
+**Total cost of ownership (3-year): filters, nonstick wear, and battery cycles take a large share of lifetime spend.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

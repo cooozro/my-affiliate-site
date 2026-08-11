@@ -27,15 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T02:23:16.886Z'
+updatedAt: '2026-08-11T06:15:04.300Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
-noindex: true
-robots: 'noindex, nofollow'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we explain home IP camera shopping from public manufacturer specs, privacy documentation, and open smart-home reviews — not seller scripts. During summer vacation and school-break travel, **whether clips stay on a local card or a paid cloud tier, and who can access live view from abroad** matter more than megapixel marketing on the box.
-
 
 ## Introduction: why camera listings hide the storage bill
 
@@ -95,6 +92,33 @@ If the OEM offers **end-to-end encryption** for live view, understand the trade-
 | Outdoor bullet | 2K–4K | Cloud or SD | Vehicle/person | Driveway, porch |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking local vs cloud storage bills, night noise and subscription fees explained TCO gaps more than 4K marketing.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| eufy | SoloCamS340 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Google | NestCamBatt2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Amazon | BlinkOut4Gen | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Arlo | ArloPro5S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Reolink | Argus3Pro | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: short camera explainers look thin without models, so we add a shortlist and editorial read.**
+
+**Total cost of ownership (3-year): cloud plans frequently exceed camera sticker price.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

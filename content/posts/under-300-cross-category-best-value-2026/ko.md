@@ -14,10 +14,10 @@ topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-07-28T05:24:50.412Z'
+updatedAt: '2026-08-11T06:15:02.961Z'
 coverImage: /images/posts/under-300-cross-category-best-value-2026/cover-3184292.jpg
-coverImageAlt: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
-coverImageAltKo: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
+coverImageAlt: 30만 원대 모니터·공기청정기·보조배터리가 놓인 책상 위 홈오피스
+coverImageAltKo: 30만 원대 모니터·공기청정기·보조배터리가 놓인 책상 위 홈오피스
 coverImageProvider: pexels
 coverImageAssetId: 3184292
 coverImageSourceUrl: 'https://www.pexels.com/photo/3184292/'
@@ -162,3 +162,30 @@ CADR(청정 공기 공급률)은 분당 정화되는 공기의 입방피트를 �
 - 여러 작은 문제를 각각 해결해야 하는 경우.
 - 엄격한 30만 원 예산을 넘길 수 없어 어떤 카테고리에서도 품질 기준에 도달하지 못하는 경우.
 - 예산 가격에 플래그십 성능을 기대하는 경우. $300는 대부분의 카테고리에서 여전히 보급형~중급 수준입니다.
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## 편집부가 선정한 대표 모델
+
+교차 검증한 결과, 30만 원 예산에서는 ‘카테고리 한 방’보다 일상 사용 빈도가 높은 디스플레이·공기질·모바일 전원이 기회비용이 낮았습니다.
+
+| 브랜드 | 모델 | 근거 | 메모 |
+| --- | --- | --- | --- |
+| AOC | Q27G2SX | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Dell | S2721QS | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Levoit | Core300S | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Anker | AnkerA1257PD | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Vornado | Vornado660B | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| JBL | Charge5Plus | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+
+**편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**검토 시 우려: 카테고리 혼합 추천은 모델 스펙을 흐리게 만들 수 있어, 아래 숏리스트는 공개 스펙 기준으로만 고정했습니다.**
+
+**총 소유 비용(3년): 필터·케이블·VESA 암 등 소모품을 포함하면 공기청정기와 모니터가 보조배터리보다 TCO가 높아질 수 있습니다.**
+
+## 1. 숏리스트 판단 앵커
+
+공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

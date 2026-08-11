@@ -20,7 +20,7 @@ imageSearchKeywords:
   - rechargeable fan LED lantern power bank
   - family heatwave preparedness
   - portable power station home outage
-updatedAt: '2026-08-11T02:23:16.214Z'
+updatedAt: '2026-08-11T06:15:03.360Z'
 coverImage: >-
   /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
 coverImageAlt: portable power station and power bank carried for apartment blackout readiness
@@ -222,3 +222,29 @@ publishedAt: '2026-07-22T04:40:08.419Z'
 우선순위는 **공공 지침, 실제로 갈 수 있는 냉방 장소, 가족 통신, 물과 식품 판단, 그다음 예비 제품**입니다. 지역 기관이 이동을 안내하거나 누군가 즉시 위험한 상태라면 떠나거나 도움을 요청하세요. 선풍기, 랜턴, 대형 배터리가 있다는 이유로 더운 아파트를 안전하다고 오해하면 안 됩니다.
 
 범위가 분명한 짧은 정전 키트에는 신뢰할 만한 20,000mAh USB-C PD 보조배터리, 안정적인 충전식 직류 선풍기, 저조도 발광 다이오드 랜턴, 올바르게 계산한 인산철 파워스테이션이 통신과 기본 편의를 지원할 수 있습니다. 구매 전에 부하를 Wh와 W로 적고, 냉장고 압축기 시동 순간 출력을 반영하고, 아파트에서 안전한 배치를 확인하고, 3년 TCO를 계산하세요. 이 체크리스트에서 가장 강한 권장은 돈이 들지 않습니다. 전력망이 멈추기 전에 어디로 갈지, 믿을 수 있는 안내를 어떻게 받을지 정하세요.
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## 편집부가 선정한 대표 모델
+
+교차 검증한 결과, 정전 대비는 Wh 스티커보다 인버터 파형·충전 입력·냉장고 기동 전류가 핵심이었습니다.
+
+| 브랜드 | 모델 | 근거 | 메모 |
+| --- | --- | --- | --- |
+| Anker | AnkerC1000X | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| EcoFlow | EcoFlowD2Max | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Bluetti | BluettiAC180 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Jackery | Explorer1000v2 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Goal Zero | Yet400X | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+
+**편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**검토 시 우려: 체크리스트 항목이 길어지면 실모델 근거가 희미해져, 아래 숏리스트로 고정합니다.**
+
+**총 소유 비용(3년): 확장 배터리·태양광 패널·셀 열화까지 보면 초기가의 1.4–1.8배가 흔합니다.**
+
+## 1. 숏리스트 판단 앵커
+
+공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

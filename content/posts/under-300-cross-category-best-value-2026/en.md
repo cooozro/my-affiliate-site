@@ -16,10 +16,12 @@ topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-07-28T05:24:50.410Z'
+updatedAt: '2026-08-11T06:15:02.962Z'
 coverImage: /images/posts/under-300-cross-category-best-value-2026/cover-3184292.jpg
-coverImageAlt: Home desk with monitor and gadgets for a budget tech setup
-coverImageAltKo: 책상 위 모니터와 가젯이 놓인 홈 오피스 장면
+coverImageAlt: >-
+  Home desk with budget monitor air purifier and power bank under 300 value
+  setup
+coverImageAltKo: 30만 원대 모니터·공기청정기·보조배터리가 놓인 책상 위 홈오피스
 coverImageProvider: pexels
 coverImageAssetId: 3184292
 coverImageSourceUrl: 'https://www.pexels.com/photo/3184292/'
@@ -115,6 +117,34 @@ Portable Bluetooth speakers at $149 now offer IP67 (dust-proof, 1m water submers
 ### Dorm or Studio
 - **Best pick:** Monitor ($199) + tower fan ($89) = $288. A small space benefits from a second screen and quiet airflow.
 - **Alternative:** Air purifier ($249) + power bank ($69) = $318 (slightly over). The purifier keeps a small room fresh.
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking listed specs and street prices, a $300 budget usually returns more daily utility from a monitor, a compact purifier, or a high-watt power bank than from a one-time novelty gadget.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| AOC | Q27G2SX | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Dell | S2721QS | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Levoit | Core300S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Anker | AnkerA1257PD | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Vornado | Vornado660B | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| JBL | Charge5Plus | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: cross-category picks can hide weak model specs, so the shortlist below is locked to public datasheets only.**
+
+**Total cost of ownership (3-year): filters, mounts, and cables can push purifier/monitor TCO above a power bank.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 

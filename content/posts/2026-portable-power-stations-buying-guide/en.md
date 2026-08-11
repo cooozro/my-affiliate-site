@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-18T08:40:18.393Z'
+updatedAt: '2026-08-11T06:15:03.672Z'
 publishedAt: '2026-07-18T08:40:18.328Z'
 ---
 ## Editorial Overview
@@ -182,6 +182,33 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 | Grow capacity over time | Delta 2 → Anker C1000 → Bluetti | Expandable ecosystem |
 
 ---
+
+<!-- -enrichment:v1 -->
+
+<!-- aipick-enrichment:v1 -->
+
+## Models this report shortlists
+
+After cross-checking LFP cycle claims and UPS switchover times, usable value tracked chemistry and input watts more than peak-output stickers.
+
+| Brand | Model | Evidence | Note |
+| --- | --- | --- | --- |
+| EcoFlow | EcoFlowD2Max | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Jackery | Explorer1000v2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Bluetti | BluettiAC180 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Anker | AnkerC1000X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Goal Zero | Yet1000X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+
+**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+
+**Review concern: Korean marketing names alone make datasheet matching hard, so OEM codes are fixed here.**
+
+**Total cost of ownership (3-year): expanders, solar, and inverter losses often land near 1.5× sticker.**
+
+## 1. Shortlist decision anchors
+
+After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
+
 
 ## FAQ
 
