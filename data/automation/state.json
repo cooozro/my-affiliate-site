@@ -824,7 +824,6 @@
     }
   ],
   "formatHistory": [
-    "buying-guide",
     "checklist",
     "explainer",
     "scenario-guide",
@@ -843,7 +842,8 @@
     "checklist",
     "head-to-head",
     "scenario-guide",
-    "checklist"
+    "checklist",
+    "buying-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
@@ -1006,6 +1006,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-08-11T02:37:33.517Z"
+    },
+    {
+      "id": "summer-heat-bundle",
+      "type": "use-case-bundle",
+      "at": "2026-08-11T02:44:11.806Z"
     }
   ]
 }
