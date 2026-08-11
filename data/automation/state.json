@@ -33,12 +33,12 @@
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-11T02:21:39.879Z",
-  "nextPublishAt": "2026-08-12T01:57:00.000Z",
-  "scheduledGapHours": 4.95,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-08-11",
+  "nextPublishAt": "2026-08-12T02:22:00.000Z",
+  "scheduledGapHours": 5.37,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-08-12",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-11",
+  "writeDateKst": "2026-08-12",
   "history": [
     {
       "action": "publish",
@@ -846,7 +846,7 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-11T12:05:26.575Z",
+    "at": "2026-08-11T23:49:28.314Z",
     "issueCount": 3,
     "issues": [
       {
@@ -861,7 +861,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 237min",
+        "message": "Cursor replenish pending 941min",
         "severity": "warning"
       }
     ],
