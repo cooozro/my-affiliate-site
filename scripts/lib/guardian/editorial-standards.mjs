@@ -50,8 +50,10 @@ Content profiles (contentProfile frontmatter):
 - scenario-guide: docs/templates/scenario-guide.md
 - explainer: docs/templates/explainer.md
 - checklist: docs/templates/checklist.md
+- editorial: docs/templates/editorial.md (admin/internal only — not in auto replenish)
 
-All profiles require: Editorial Overview, methodology, Related guides.
+Auto rotation: equal round-robin shuffle deck (each public profile once per cycle).
+All public profiles require: Editorial Overview, methodology, Related guides.
 Season-first topic selection: scripts/lib/season-topics.mjs
 `.trim();
 

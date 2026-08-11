@@ -31,7 +31,7 @@ Run before commit: `npm run content:validate`
 ## 3. SEO & indexing (mandatory)
 
 - Unique `title` and `description` (description ≥ 50 chars) per locale
-- **Professional review format:** `docs/templates/` by `contentProfile` (`buying-guide`, `head-to-head`, `scenario-guide`, `explainer`, `checklist`). See `scripts/lib/content-profiles.mjs` for rotation. **English primary;** Korean is a faithful translation. No personal operator details in posts.
+- **Professional review format:** `docs/templates/` by `contentProfile` (`buying-guide`, `head-to-head`, `scenario-guide`, `explainer`, `checklist`). Auto replenish uses **equal round-robin** (each format once per cycle, then reshuffle) — see `scripts/lib/content-profiles.mjs`. `editorial` is admin/internal only (not in the auto deck). **English primary;** Korean is a faithful translation. No personal operator details in posts.
 - **Season-first topics:** `scripts/lib/season-topics.mjs` — spring/summer/fall/winter, school terms, and heat-season appliances (AC, purifiers) are prioritized when picking topics.
 - **Varied headlines** — avoid repeating `2026 가성비 X TOP 5 — …` on every post; see `scripts/lib/editorial-standards.mjs`
 - **Honest sourcing** — never claim proprietary seller APIs or fake database field names (`sale_price_usd`, `판매자 API`, etc.); cite public manufacturer specs, listed prices, and open reviews
