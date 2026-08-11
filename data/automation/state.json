@@ -824,7 +824,6 @@
     }
   ],
   "formatHistory": [
-    "buying-guide",
     "scenario-guide",
     "head-to-head",
     "explainer",
@@ -843,11 +842,12 @@
     "checklist",
     "buying-guide",
     "explainer",
-    "head-to-head"
+    "head-to-head",
+    "buying-guide"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-11T04:11:38.719Z",
+    "at": "2026-08-11T04:22:08.533Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
@@ -948,11 +948,6 @@
   },
   "metaAngleHistory": [
     {
-      "id": "family-3-5-person",
-      "type": "household-type",
-      "at": "2026-07-17T02:21:57.904Z"
-    },
-    {
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-07-17T02:23:37.005Z"
@@ -1046,6 +1041,11 @@
       "id": "under-300-cross-category",
       "type": "price-tier-cross",
       "at": "2026-08-11T04:11:39.087Z"
+    },
+    {
+      "id": "summer-heat-bundle",
+      "type": "use-case-bundle",
+      "at": "2026-08-11T04:22:08.841Z"
     }
   ]
 }
