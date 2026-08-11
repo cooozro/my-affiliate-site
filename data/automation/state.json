@@ -32,23 +32,14 @@
     "window-ac",
     "dishwashers"
   ],
-  "lastPublishAt": "2026-08-08T04:24:35.467Z",
-  "nextPublishAt": "2026-08-09T02:15:00.000Z",
-  "scheduledGapHours": 5.25,
-  "publishCountToday": 0,
-  "publishDateKst": "2026-08-09",
+  "lastPublishAt": "2026-08-11T02:21:39.879Z",
+  "nextPublishAt": "2026-08-12T01:57:00.000Z",
+  "scheduledGapHours": 4.95,
+  "publishCountToday": 1,
+  "publishDateKst": "2026-08-11",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-09",
+  "writeDateKst": "2026-08-11",
   "history": [
-    {
-      "action": "publish",
-      "slug": "2026-budget-monitors-buying-guide",
-      "at": "2026-06-27T01:16:48.240Z",
-      "urls": [
-        "https://www.aipick.shop/en/blog/2026-budget-monitors-buying-guide",
-        "https://www.aipick.shop/ko/blog/2026-budget-monitors-buying-guide"
-      ]
-    },
     {
       "action": "publish",
       "slug": "2026-portable-vs-window-ac-head-to-head",
@@ -660,15 +651,21 @@
         "https://www.aipick.shop/en/blog/electric-blanket-safety-timers-wash-care-2026",
         "https://www.aipick.shop/ko/blog/electric-blanket-safety-timers-wash-care-2026"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "adsense-seo-checklist",
+      "topic": {
+        "id": "adsense-seo-checklist"
+      },
+      "at": "2026-08-11T02:21:39.879Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/adsense-seo-checklist",
+        "https://www.aipick.shop/ko/blog/adsense-seo-checklist"
+      ]
     }
   ],
   "topicHistory": [
-    {
-      "id": "induction-cooktops",
-      "category": "kitchen",
-      "taxonomyGroup": "주방가전/조리",
-      "at": "2026-07-10T05:25:30.000Z"
-    },
     {
       "id": "water-purifiers",
       "cluster": "kitchen-appliances",
@@ -820,6 +817,10 @@
       "id": "electric-blankets",
       "cluster": "home-appliances",
       "at": "2026-08-08T04:24:35.473Z"
+    },
+    {
+      "id": "adsense-seo-checklist",
+      "at": "2026-08-11T02:21:39.887Z"
     }
   ],
   "formatHistory": [
@@ -846,29 +847,29 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-09T02:05:50.996Z",
+    "at": "2026-08-11T02:21:37.759Z",
     "issueCount": 2,
     "issues": [
       {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 0/1",
-        "severity": "info"
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (0min past slot, KST 2026-08-11)",
+        "severity": "warning"
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1301min",
+        "message": "Cursor replenish pending 4197min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "electric-blanket-safety-timers-wash-care-2026/en.md: publishedAt 2026-08-09T02:02:07.527Z → 2026-08-08T04:24:35.467Z",
-      "electric-blanket-safety-timers-wash-care-2026/ko.md: publishedAt 2026-08-09T02:02:07.527Z → 2026-08-08T04:24:35.467Z"
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
     ]
   },
-  "lastDailyContentAuditKst": "2026-08-08",
+  "lastDailyContentAuditKst": "2026-08-11",
   "lastDailyContentAudit": {
-    "at": "2026-08-08T04:24:37.904Z",
-    "postsScanned": 55,
+    "at": "2026-08-11T02:23:18.338Z",
+    "postsScanned": 56,
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },

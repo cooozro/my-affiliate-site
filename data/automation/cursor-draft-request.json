@@ -1,85 +1,114 @@
 {
   "status": "pending",
   "needed": 1,
-  "publishedSlug": "electric-blanket-safety-timers-wash-care-2026",
-  "requestedAt": "2026-08-08T04:24:35.536Z",
+  "publishedSlug": "adsense-seo-checklist",
+  "requestedAt": "2026-08-11T02:21:45.905Z",
   "writingMode": "benchmark",
   "contentProfile": "head-to-head",
-  "toneVariant": "question-led",
-  "serpKeyword": "best home tech under 300 dollars cross category comparison 2026",
-  "serpCachePath": null,
+  "toneVariant": "scenario-first",
+  "serpKeyword": "compact small apartment appliances size comparison guide 사용법",
+  "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-사용법.json",
   "benchmarkOutline": {
+    "contentProfile": "head-to-head",
+    "toneVariant": "scenario-first",
+    "introAngle": "scenario-first framing for Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "conclusionAngle": "Actionable next steps without hype",
     "sections": [
       {
-        "h2": "Why compare across categories at one price ceiling",
+        "h2": "If your situation is: Section 1: Necessities of Modern Life.",
         "h3": [
-          "Opportunity cost when every aisle hits $299",
-          "What $300 buys in 2026 vs last year",
-          "Methodology: public specs only"
+          "Key factors: Refrigerator",
+          "Oven"
         ]
       },
       {
-        "h2": "TOP 5 cross-category picks at or under $300",
+        "h2": "Key factors: Section 2: Appliances for Every Kitchen",
         "h3": [
-          "Ranked table with category column",
-          "Reference MSRP as of {{today}}"
+          "Cooktop",
+          "Key factors: Range"
         ]
       },
       {
-        "h2": "Category deep dive: Display and desk",
+        "h2": "Analysis methodology",
         "h3": [
-          "Monitor panel and ergonomics",
-          "Analysis takeaway"
+          "Sources we use",
+          "How we compare models"
         ]
       },
       {
-        "h2": "Category deep dive: Comfort and climate",
+        "h2": "Section 3: a Compact Laundry Room",
         "h3": [
-          "Fan CFM per watt",
-          "Purifier CADR per dollar"
+          "Key factors: Dishwashers",
+          "Compact Washers"
         ]
       },
       {
-        "h2": "Category deep dive: Mobile and audio",
+        "h2": "Key factors: Section 4: for Selecting Compact Appliances",
         "h3": [
-          "Power bank Wh per dollar",
-          "Speaker IP rating and runtime"
+          "Compact Dryers",
+          "Key factors: Compact Washer/Dryer Combinations"
         ]
       },
       {
-        "h2": "Scenario matrix: which $300 pick for which life situation",
+        "h2": "Section 5: Out of Minimal Space",
         "h3": [
-          "WFH upgrade",
-          "Summer heat",
-          "Travel season",
-          "Dorm or studio"
+          "Key factors: Measurements",
+          "Style"
         ]
       },
       {
-        "h2": "FAQ",
+        "h2": "Key factors: Section 1: Which Appliances to Choose",
         "h3": [
-          "Is one $300 monitor better than five $60 gadgets?",
-          "How to split $300 across two categories",
-          "When to wait for a sale on one flagship vs two budget picks"
-        ]
-      },
-      {
-        "h2": "Five checks before you buy at this tier"
-      },
-      {
-        "h2": "Final Verdict",
-        "h3": [
-          "Buy if",
-          "Skip if"
+          "Finish",
+          "Key factors: Energy Usage"
         ]
       }
     ],
-    "toneVariant": "question-led",
-    "keyword": "best home tech under 300 dollars cross category comparison 2026",
-    "serpSources": [],
-    "h2Similarity": 0,
+    "keyword": "compact small apartment appliances size comparison guide 사용법",
+    "baseKeyword": "compact small apartment appliances size comparison guide",
+    "serpSources": [
+      {
+        "title": "Compact Kitchen Appliances for Today's Small Kitchens",
+        "url": "https://www.fergusonhome.com/compact-appliances-guide/a23042?srsltid=AfmBOoqUXoe9s5_ZHuniTrM09jpBbnkBRjTdFe9I9Dv-8fGzMoCjXqcv"
+      },
+      {
+        "title": "Best Compact Kitchen Appliances",
+        "url": "https://metroappliancesandmore.com/blog/compact-appliances-for-small-kitchens?srsltid=AfmBOoq2pClhGnsfv4dYtnJNkq_snwWVcjjMUD36uys4o1yTXHywLHzB"
+      },
+      {
+        "title": "Maximizing Space with Compact Appliances for Small ...",
+        "url": "https://www.thorkitchen.com/blogs/post/compact-appliances-for-small-kitchens?srsltid=AfmBOooPfSKvoL1IehFRjbOxhkH8CF0eNf_vY69f1F7kZJD_KhiIHplg"
+      },
+      {
+        "title": "How to Design a Small Apartment with the Best Appliances",
+        "url": "https://multihousingdepot.com/how-to-design-a-small-apartment-with-the-best-appliances/"
+      },
+      {
+        "title": "Apartment Size Appliances | Small Space Kitchens",
+        "url": "https://www.bosch-home.ie/experience-bosch/kitchen-planning-tips/small-space-appliances"
+      },
+      {
+        "title": "Top Small Space Appliance Brands of 2025 - Bosch, Sub ...",
+        "url": "https://www.homewiseappliance.com/blog/post/best-small-space-appliance-brands?srsltid=AfmBOorhpr4_cuy8mv693RYYfCszOgnAHV5jjZDHpwxI3SuCHiEbAqVP"
+      },
+      {
+        "title": "Apartment Size Appliances for Small Spaces",
+        "url": "https://www.friedmansappliance.com/blog/apartment-size-appliances"
+      },
+      {
+        "title": "Best Compact Appliances for Small Space",
+        "url": "https://www.dewaardandbode.com/blog/best-compact-appliances-for-small-spaces?srsltid=AfmBOooVnXuTnjTo1uPFCdrar2kYRMHQJehArKWcetKk6R0l0DrjbDyW"
+      },
+      {
+        "title": "Apartment Size Dishwasher Buying Guide",
+        "url": "https://www.whirlpool.com/blog/kitchen/apartment-size-dishwasher-buying-guide.html"
+      }
+    ],
+    "validatedAt": "2026-08-11T02:21:45.887Z",
+    "h2Similarity": 0.3684807256235828,
     "shingleOverlap": 0,
-    "embedded": true
+    "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-사용법.json",
+    "fromCache": false
   },
   "fallbackFrom": null,
   "fallbackReason": null,
@@ -90,30 +119,28 @@
     "폭염·냉방"
   ],
   "contentPlan": "meta",
-  "contentAngle": "under-300-cross-category",
-  "slugHint": "2026-under-300-cross-category-head-to-head-guide-20260808",
+  "contentAngle": "compact-footprint-appliances",
+  "slugHint": "2026-compact-footprint-cross-category-head-to-head-guide-20260811",
   "topic": {
-    "id": "meta-under-300-cross-category",
+    "id": "meta-compact-footprint-appliances",
     "category": "cross-cutting",
-    "angle": "Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
-    "imageQuery": "budget home tech gadgets desk",
-    "liveData": true,
+    "angle": "Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "imageQuery": "compact appliances small kitchen",
+    "liveData": false,
     "seasons": [
       "summer",
-      "spring",
-      "fall",
-      "winter"
+      "spring"
     ],
     "anchorTopicIds": [
-      "budget-monitors",
-      "electric-fans",
-      "power-banks",
-      "bluetooth-speakers",
-      "air-purifiers"
+      "portable-ac",
+      "air-fryers",
+      "dehumidifiers",
+      "robot-vacuums",
+      "rice-cookers"
     ],
     "isMetaAngle": true
   },
   "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: benchmark. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (price-tier-cross): Under $300 cross-category / 30만 원대 교차 카테고리. Cover multiple product categories in ONE article — anchor categories: budget-monitors, electric-fans, power-banks, bluetooth-speakers, air-purifiers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-under-300-cross-category-head-to-head-guide-20260808. Frontmatter: contentAngle: under-300-cross-category, topicId: meta-under-300-cross-category. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: benchmark. Tone: scenario-first. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (capacity-tier): Compact footprint across categories / 소형·컴팩트 제품군. Cover multiple product categories in ONE article — anchor categories: portable-ac, air-fryers, dehumidifiers, robot-vacuums, rice-cookers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-compact-footprint-cross-category-head-to-head-guide-20260811. Frontmatter: contentAngle: compact-footprint-appliances, topicId: meta-compact-footprint-appliances. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

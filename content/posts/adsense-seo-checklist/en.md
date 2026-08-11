@@ -1,14 +1,14 @@
 ---
 title: 애드센스 승인을 위한 SEO 체크리스트
 description: 구글 애드센스 승인과 검색 노출을 동시에 잡기 위한 필수 SEO 점검 항목을 정리했습니다.
-date: '2026-06-24'
-draft: true
+date: '2026-08-11'
+draft: false
 tags:
   - SEO
   - internal
-updatedAt: '2026-08-09T02:05:59.753Z'
+updatedAt: '2026-08-11T11:21:38.000Z'
+publishedAt: '2026-08-11T11:21:38.000Z'
 ---
-
 ## 1. 콘텐츠 품질
 
 애드센스는 **독창적이고 유용한 콘텐츠** 를 가장 중요하게 봅니다.
