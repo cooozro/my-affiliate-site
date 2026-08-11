@@ -2,112 +2,57 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": null,
-  "requestedAt": "2026-08-11T03:33:44.901Z",
+  "requestedAt": "2026-08-11T03:43:23.233Z",
   "writingMode": "benchmark",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "checklist-hook",
-  "serpKeyword": "best home tech under 300 dollars cross category comparison 2026 구매가이드",
+  "contentProfile": "checklist",
+  "toneVariant": "question-led",
+  "serpKeyword": "summer heat wave home essentials cooling dehumidifier fan guide",
   "serpCachePath": null,
   "benchmarkOutline": {
-    "contentProfile": "scenario-guide",
-    "toneVariant": "checklist-hook",
-    "introAngle": "checklist-hook framing for Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
-    "conclusionAngle": "Actionable next steps without hype",
     "sections": [
       {
-        "h2": "Before you decide: 첫 내 집 마련 절차 및 핵심 전략",
+        "h2": "Editorial overview: closed-window summer weeks",
         "h3": [
-          "Key factors: Step 1. 사전 승인 (Pre-approval)",
-          "Step 2. 에이전트 선정 및 집 찾기"
+          "Tiered electricity",
+          "Humidity plus heat"
         ]
       },
       {
-        "h2": "Key factors: 한눈에 보는 핵심 요약",
+        "h2": "Layer 1: Active cooling choices",
         "h3": [
-          "Step 3. 오퍼 제출",
-          "Key factors: Step 4. 홈 인스펙션"
+          "Fan vs portable vs window"
         ]
       },
       {
-        "h2": "Analysis methodology",
+        "h2": "Layer 2: Moisture control",
         "h3": [
-          "Sources we use",
-          "How we compare models"
+          "When AC is not enough",
+          "Drain paths"
         ]
       },
       {
-        "h2": "1. 주택 선택 9단계 프로세스",
+        "h2": "Layer 3: Hydration and low-heat meals",
         "h3": [
-          "Key factors: Step 5. 변호사 계약",
-          "Step 6. 모기지 및 감정"
+          "Countertop water",
+          "Air fryer vs stove heat load"
         ]
       },
       {
-        "h2": "Key factors: 2. 꼭 알아야 할 주의사항",
-        "h3": [
-          "Step 7. 타이틀 확인",
-          "Key factors: Step 8. 클로징"
-        ]
+        "h2": "Bundle checklist before peak season"
       },
       {
-        "h2": "3. 실제 거래에서 자주 발생하는 상황",
-        "h3": [
-          "Key factors: Step 9. 클로징 이후",
-          "클로징 비용"
-        ]
+        "h2": "FAQ"
       },
       {
-        "h2": "Key factors: 해외 투자 및 유학생 부모 안내",
-        "h3": [
-          "크레딧 관리 (가장 중요)",
-          "Key factors: As-Is 조항"
-        ]
+        "h2": "Final Verdict"
       }
     ],
-    "keyword": "best home tech under 300 dollars cross category comparison 2026 구매가이드",
-    "baseKeyword": "best home tech under 300 dollars cross category comparison 2026",
-    "serpSources": [
-      {
-        "title": "2026 구매가이드",
-        "url": "https://www.youtube.com/playlist?list=PLaqD5eIIWQl8"
-      },
-      {
-        "title": "2026년 뉴욕 주택 구매 가이드",
-        "url": "https://zipitzy.com/nyc-home-buying-guide-2026/"
-      },
-      {
-        "title": "Top 3 Verified Security Home CCTVs Recommended for 2026 ...",
-        "url": "https://www.youtube.com/watch?v=2b4RcX-xd9c"
-      },
-      {
-        "title": "https://www.bestliving.co.kr/m/board.html?code=bes...",
-        "url": "https://www.bestliving.co.kr/m/board.html?code=bestliving_board5&page=34&board_cate="
-      },
-      {
-        "title": "기아 - Movement that inspires",
-        "url": "https://www.kia.com/kr"
-      },
-      {
-        "title": "동행·매력 특별시 서울 | 서울특별시",
-        "url": "https://www.seoul.go.kr/"
-      },
-      {
-        "title": "현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com",
-        "url": "https://www.hyundai.com/kr/ko/e"
-      },
-      {
-        "title": "네이버 광고주센터",
-        "url": "https://ads.naver.com/"
-      },
-      {
-        "title": "The Best Smart Home Devices We've Tested for 2026",
-        "url": "https://www.pcmag.com/picks/the-best-smart-home-devices"
-      }
-    ],
-    "validatedAt": "2026-08-11T03:33:44.893Z",
-    "h2Similarity": 0.5789115646258504,
-    "shingleOverlap": 0.11494252873563218,
-    "fromCache": true
+    "toneVariant": "question-led",
+    "keyword": "summer heat wave home essentials cooling dehumidifier fan guide",
+    "serpSources": [],
+    "h2Similarity": 0,
+    "shingleOverlap": 0,
+    "embedded": true
   },
   "fallbackFrom": null,
   "fallbackReason": null,
@@ -118,30 +63,27 @@
     "폭염·냉방"
   ],
   "contentPlan": "meta",
-  "contentAngle": "under-300-cross-category",
-  "slugHint": "2026-under-300-cross-category-scenario-guide",
+  "contentAngle": "summer-heat-bundle",
+  "slugHint": "2026-summer-heat-home-bundle-checklist-guide",
   "topic": {
-    "id": "meta-under-300-cross-category",
+    "id": "meta-summer-heat-bundle",
     "category": "cross-cutting",
-    "angle": "Best value picks under $300 across unrelated categories — compare what each product class delivers at the same price ceiling",
-    "imageQuery": "budget home tech gadgets desk",
+    "angle": "Cross-category summer stack: cooling, dehumidifying, hydration, and low-heat cooking when windows stay closed for weeks",
+    "imageQuery": "summer home cooling fan apartment",
     "liveData": true,
     "seasons": [
-      "summer",
-      "spring",
-      "fall",
-      "winter"
+      "summer"
     ],
     "anchorTopicIds": [
-      "budget-monitors",
       "electric-fans",
-      "power-banks",
-      "bluetooth-speakers",
-      "air-purifiers"
+      "dehumidifiers",
+      "water-purifiers",
+      "air-fryers",
+      "portable-ac"
     ],
     "isMetaAngle": true
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: benchmark. Tone: checklist-hook. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (price-tier-cross): Under $300 cross-category / 30만 원대 교차 카테고리. Cover multiple product categories in ONE article — anchor categories: budget-monitors, electric-fans, power-banks, bluetooth-speakers, air-purifiers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-under-300-cross-category-scenario-guide. Frontmatter: contentAngle: under-300-cross-category, topicId: meta-under-300-cross-category. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/checklist.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: benchmark. Tone: question-led. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (use-case-bundle): Summer heat-season bundle / 여름 폭염 번들. Cover multiple product categories in ONE article — anchor categories: electric-fans, dehumidifiers, water-purifiers, air-fryers, portable-ac. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-summer-heat-home-bundle-checklist-guide. Frontmatter: contentAngle: summer-heat-bundle, topicId: meta-summer-heat-bundle. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }
