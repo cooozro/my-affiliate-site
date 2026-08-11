@@ -2,30 +2,30 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": null,
-  "requestedAt": "2026-08-11T03:12:30.885Z",
+  "requestedAt": "2026-08-11T03:23:14.380Z",
   "writingMode": "benchmark",
-  "contentProfile": "head-to-head",
-  "toneVariant": "question-led",
-  "serpKeyword": "compact small apartment appliances size comparison guide 장단점",
-  "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-장단점.json",
+  "contentProfile": "buying-guide",
+  "toneVariant": "data-driven",
+  "serpKeyword": "single person apartment essential appliances buying guide 2026 분석",
+  "serpCachePath": "/opt/aipick/data/automation/serp-cache/single-person-apartment-essential-appliances-buying-guide-2026-분석.json",
   "benchmarkOutline": {
-    "contentProfile": "head-to-head",
-    "toneVariant": "question-led",
-    "introAngle": "question-led framing for Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "contentProfile": "buying-guide",
+    "toneVariant": "data-driven",
+    "introAngle": "data-driven framing for Cross-category starter essentials for one-person apartments: compact cooling, air quality, desk tech, and quick meals without full-size appliance sprawl",
     "conclusionAngle": "Actionable next steps without hype",
     "sections": [
       {
-        "h2": "What you need to know: Section 1: Necessities of Modern Life.",
+        "h2": "By the numbers: Section 1: 위한 가전제품 선택 방법",
         "h3": [
-          "Key factors: Refrigerator",
-          "Oven"
+          "Key factors: 내장형 가전제품 확인",
+          "가전제품을 방 크기와 구조에 맞게 선택하세요"
         ]
       },
       {
-        "h2": "Key factors: Section 2: Appliances for Every Kitchen",
+        "h2": "Key factors: Section 2: 필요한 가전제품 최소 목록",
         "h3": [
-          "Cooktop",
-          "Key factors: Range"
+          "생활 방식에 기반하여 필요한 '수용량'을 결정하세요",
+          "Key factors: 공간 절약을 위해 \"다기능 가전제품\"을 후보합니다"
         ]
       },
       {
@@ -36,78 +36,78 @@
         ]
       },
       {
-        "h2": "Section 3: a Compact Laundry Room",
+        "h2": "Section 3: 위한 있으면 좋은 가전제품",
         "h3": [
-          "Key factors: Dishwashers",
-          "Compact Washers"
+          "Key factors: 전자레인지",
+          "진공 청소기"
         ]
       },
       {
-        "h2": "Key factors: Section 4: for Selecting Compact Appliances",
+        "h2": "Key factors: Section 4: 가구용 가전제품 선택 팁",
         "h3": [
-          "Compact Dryers",
-          "Key factors: Compact Washer/Dryer Combinations"
+          "전기 주전자",
+          "Key factors: 토스터 오븐"
         ]
       },
       {
-        "h2": "Section 5: Out of Minimal Space",
+        "h2": "Section 5: 편안한 1인 생활을 시작하세요",
         "h3": [
-          "Key factors: Measurements",
-          "Style"
+          "Key factors: 미용 기기",
+          "목표 판매 시즌 및 신제품 출시 시기"
         ]
       },
       {
-        "h2": "Key factors: Section 1: Matters in Small Kitchens",
+        "h2": "Key factors: Section 1: What “Small” Actually Means",
         "h3": [
-          "Finish",
-          "Key factors: Energy Usage"
+          "중고품 가게와 중고 물품을 활용하세요",
+          "Key factors: 관련 기사"
         ]
       }
     ],
-    "keyword": "compact small apartment appliances size comparison guide 장단점",
-    "baseKeyword": "compact small apartment appliances size comparison guide",
+    "keyword": "single person apartment essential appliances buying guide 2026 분석",
+    "baseKeyword": "single person apartment essential appliances buying guide 2026",
     "serpSources": [
       {
-        "title": "Compact Kitchen Appliances for Today's Small Kitchens",
-        "url": "https://www.fergusonhome.com/compact-appliances-guide/a23042?srsltid=AfmBOorB0bcFD6ivj4PkhHw_CJVejNyfAWjaCbD2XYNa-svGcSFO5AGG"
+        "title": "My Top Tips for Buying Kitchen Appliances in 2026",
+        "url": "https://www.youtube.com/watch?v=QjK5MWLp7SY"
       },
       {
-        "title": "Best Kitchen Appliance Combinations for Small Apartments",
-        "url": "https://galleriaing4.com/best-kitchen-appliance-combinations-for-small-apartments/"
+        "title": "혼자 살 때 꼭 필요한 가전제품: 가장 먼저 준비해야 할 필수품 ...",
+        "url": "https://www.tiger-corporation.com/ko/kor/magazine/weekly-tips/general1/"
       },
       {
-        "title": "Top Small Space Appliance Brands of 2025 - Bosch, Sub ...",
-        "url": "https://www.homewiseappliance.com/blog/post/best-small-space-appliance-brands?srsltid=AfmBOopWNwv9gXNVcaQrarG2yQGHzkZFrCSrtJrhX4C6429n81jIOw5g"
+        "title": "Best Compact & Apartment-Sized Appliances for 2026",
+        "url": "https://www.shopappliances.com/blog/best-compact-apartment-sized-appliances-2026?srsltid=AfmBOopDEBl7HpNLHkUWuKkv5bQtdijDdH9R6XYaCG6i0u5clQNfAW1_"
       },
       {
-        "title": "How to Design a Small Apartment with the Best Appliances",
-        "url": "https://multihousingdepot.com/how-to-design-a-small-apartment-with-the-best-appliances/"
+        "title": "Home Appliance Buying Guides",
+        "url": "https://www.samsung.com/us/home-appliances/buying-guide/"
       },
       {
-        "title": "Apartment Size Appliances | Small Space Kitchens",
-        "url": "https://www.bosch-home.ie/experience-bosch/kitchen-planning-tips/small-space-appliances"
+        "title": "【2026 Large Home Appliance Buying Guide】Are ...",
+        "url": "https://www.fortress.com.hk/en/promotion/buying-guides/large-home-appliance-authorized-good-vs-parallel-import"
       },
       {
-        "title": "Apartment Size Appliances for Small Spaces",
-        "url": "https://www.friedmansappliance.com/blog/apartment-size-appliances"
+        "title": "Refrigerator Buying Guide 2026",
+        "url": "https://www.ajmadison.com/learn/refrigeration/buying-guide/refrigerator-buying-guide/?srsltid=AfmBOoqjBWnqqQxWu8QIYbqf7dKqQ9z8CzQ7sNIaLT-3iUA9BEfHvUuQ"
       },
       {
-        "title": "Best Compact Appliances for Small Space",
-        "url": "https://www.dewaardandbode.com/blog/best-compact-appliances-for-small-spaces?srsltid=AfmBOopC3u7UGFoZzTwPd1n9k0Z7veI_tk3mom5rDQMBB84RCO3gt40B"
+        "title": "Buying a Refrigerator in 2026: A Practical Guide for Your Kitchen",
+        "url": "https://www.joybuy.nl/blog/buying-a-refrigerator-2026-guide/opsx3DBJ"
       },
       {
-        "title": "The best appliances for small kitchens",
-        "url": "https://www.choice.com.au/home-and-living/kitchen/ovens/articles/the-5-best-appliances-for-small-kitchens"
+        "title": "18 Best Kitchen Appliances of 2026, Lab-Tested and ...",
+        "url": "https://www.consumerreports.org/appliances/best-kitchen-appliances-of-the-year-a1167512464/"
       },
       {
-        "title": "【New Move-in】How to Make the Most of Small Spaces with ...",
-        "url": "https://www.fortress.com.hk/en/promotion/buying-guides/move-in-compact-appliance"
+        "title": "7 Kitchen Appliances Worth Buying in 2026, and the One ...",
+        "url": "https://blog.yaleappliance.com/appliances-to-consider-in-your-new-kitchen"
       }
     ],
-    "validatedAt": "2026-08-11T03:12:30.874Z",
-    "h2Similarity": 0.3672438672438672,
-    "shingleOverlap": 0,
-    "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-장단점.json",
+    "validatedAt": "2026-08-11T03:23:14.357Z",
+    "h2Similarity": 0.40306122448979587,
+    "shingleOverlap": 0.12371134020618557,
+    "serpCachePath": "/opt/aipick/data/automation/serp-cache/single-person-apartment-essential-appliances-buying-guide-2026-분석.json",
     "fromCache": false
   },
   "fallbackFrom": null,
@@ -119,28 +119,30 @@
     "폭염·냉방"
   ],
   "contentPlan": "meta",
-  "contentAngle": "compact-footprint-appliances",
-  "slugHint": "2026-compact-footprint-cross-category-head-to-head-guide-20260811",
+  "contentAngle": "solo-apartment-essentials",
+  "slugHint": "2026-solo-apartment-home-essentials-buying-guide",
   "topic": {
-    "id": "meta-compact-footprint-appliances",
+    "id": "meta-solo-apartment-essentials",
     "category": "cross-cutting",
-    "angle": "Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
-    "imageQuery": "compact appliances small kitchen",
-    "liveData": false,
+    "angle": "Cross-category starter essentials for one-person apartments: compact cooling, air quality, desk tech, and quick meals without full-size appliance sprawl",
+    "imageQuery": "small apartment living room essentials",
+    "liveData": true,
     "seasons": [
       "summer",
-      "spring"
+      "spring",
+      "fall",
+      "winter"
     ],
     "anchorTopicIds": [
-      "portable-ac",
+      "electric-fans",
+      "air-purifiers",
       "air-fryers",
-      "dehumidifiers",
-      "robot-vacuums",
-      "rice-cookers"
+      "wireless-earbuds",
+      "robot-vacuums"
     ],
     "isMetaAngle": true
   },
-  "templatePath": "docs/templates/head-to-head.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: benchmark. Tone: question-led. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (capacity-tier): Compact footprint across categories / 소형·컴팩트 제품군. Cover multiple product categories in ONE article — anchor categories: portable-ac, air-fryers, dehumidifiers, robot-vacuums, rice-cookers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-compact-footprint-cross-category-head-to-head-guide-20260811. Frontmatter: contentAngle: compact-footprint-appliances, topicId: meta-compact-footprint-appliances. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/buying-guide.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:buying-guide. Writing mode: benchmark. Tone: data-driven. Follow docs/templates/buying-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (household-type): Single-person apartment / 1인 가구. Cover multiple product categories in ONE article — anchor categories: electric-fans, air-purifiers, air-fryers, wireless-earbuds, robot-vacuums. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-solo-apartment-home-essentials-buying-guide. Frontmatter: contentAngle: solo-apartment-essentials, topicId: meta-solo-apartment-essentials. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }
