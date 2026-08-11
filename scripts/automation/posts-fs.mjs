@@ -77,8 +77,13 @@ export function listDrafts() {
     const koPath = path.join(POSTS_DIR, slug, "ko.md");
     if (!fs.existsSync(enPath) || !fs.existsSync(koPath)) continue;
 
+    // Admin/internal stubs must not occupy the automation buffer.
+    if (isNeverPublishSlug(slug)) continue;
+
     const en = readPost(slug, "en");
     if (!en.data.draft) continue;
+    if (en.data.automationBuffer === false) continue;
+    if (en.data.tags?.includes?.("internal")) continue;
 
     drafts.push({
       slug,

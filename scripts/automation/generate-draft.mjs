@@ -26,19 +26,81 @@ import {
 const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
 const TARGET_DRAFT_BUFFER = TARGET_DRAFT_COUNT;
 
+/**
+ * Two-pass writer: EN(+meta) then KO. Single-shot bilingual JSON routinely
+ * hits DeepSeek output caps and truncates mid-string.
+ */
 async function callLlmWriter(prompt, contentProfile, options = {}) {
   const templatePath =
     options.templatePath ?? getTemplatePath(contentProfile ?? "buying-guide");
   const system = buildWriterSystemPrompt(contentProfile, { templatePath });
-  const { provider, model, article } = await chatJsonCompletion({
+  const providerOpt = options.provider;
+
+  const enPass = await chatJsonCompletion({
     system,
-    user: prompt,
-    provider: options.provider,
+    user: `${prompt}
+
+PASS 1 of 2 — English only.
+Return JSON with: slug, topicId, topicCluster, contentProfile, imageQuery, liveData, and "en" { title, description, tags, body }.
+Do NOT include a "ko" object in this pass. Keep EN body complete and publish-ready.`,
+    provider: providerOpt,
     temperature: 0.7,
     json: true,
   });
-  console.log(`LLM writer: provider=${provider}, model=${model}`);
-  return { article, writingProvider: provider };
+
+  console.log(`LLM writer pass1(EN): provider=${enPass.provider}, model=${enPass.model}`);
+
+  const base = enPass.article;
+  if (!base?.en?.body || !base?.en?.title) {
+    throw new Error("LLM EN pass missing en.title/en.body");
+  }
+
+  const koPass = await chatJsonCompletion({
+    system,
+    user: `PASS 2 of 2 — Korean locale for the same article.
+
+Translate faithfully (not a summary). Same H2/H3 structure, tables, FAQ count, methodology, and AdSense model-name depth as the English draft.
+
+English source (do not rewrite EN; output KO only):
+${JSON.stringify(
+  {
+    slug: base.slug,
+    topicId: base.topicId,
+    contentProfile: base.contentProfile ?? contentProfile,
+    en: base.en,
+  },
+  null,
+  2,
+)}
+
+Return JSON with only:
+{
+  "ko": {
+    "title": "...",
+    "description": "50-160 chars",
+    "tags": ["..."],
+    "body": "full Korean markdown, same structure as EN"
+  }
+}`,
+    provider: providerOpt,
+    temperature: 0.55,
+    json: true,
+  });
+
+  console.log(`LLM writer pass2(KO): provider=${koPass.provider}, model=${koPass.model}`);
+
+  const ko = koPass.article?.ko;
+  if (!ko?.body || !ko?.title) {
+    throw new Error("LLM KO pass missing ko.title/ko.body");
+  }
+
+  return {
+    article: {
+      ...base,
+      ko,
+    },
+    writingProvider: enPass.provider,
+  };
 }
 
 function uniqueSlug(base) {
@@ -192,7 +254,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   const issues = validatePostFiles(slug, {
     phase: "draft",
     applyRepair: true,
-  });
+  }).filter((issue) => !/missing coverImage/i.test(issue));
+  // Cover may be filled later by ensureCoverImage / GHA "Fetch missing draft covers".
   if (issues.length > 0) {
     throw new Error(`Draft integrity gate failed for ${slug}:\n${issues.join("\n")}`);
   }

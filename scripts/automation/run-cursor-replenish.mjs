@@ -215,28 +215,23 @@ function rejectReplenishOverwrite(slug, reason) {
   console.error(reason);
 }
 
-/** Prefer DeepSeek when key/forced; else Cursor; else OpenAI. */
+/** Prefer DeepSeek when key/forced; else Cursor; else OpenAI. Forced = preferred, not exclusive. */
 function pickReplenishProviders({ cursorKey, openaiKey, deepseekKey }) {
   const forced = (process.env.REPLENISH_PROVIDER ?? "").trim().toLowerCase();
   const providers = [];
 
-  if (forced === "deepseek") {
-    if (deepseekKey) providers.push("deepseek");
-    return providers;
-  }
-  if (forced === "cursor") {
-    if (cursorKey) providers.push("cursor");
-    return providers;
-  }
-  if (forced === "openai") {
-    if (openaiKey) providers.push("openai");
-    return providers;
-  }
+  const pushUnique = (id) => {
+    if (!providers.includes(id)) providers.push(id);
+  };
 
-  // Default: DeepSeek first when available (module-backed system prompt path).
-  if (deepseekKey) providers.push("deepseek");
-  if (cursorKey) providers.push("cursor");
-  if (openaiKey) providers.push("openai");
+  if (forced === "deepseek" && deepseekKey) pushUnique("deepseek");
+  if (forced === "cursor" && cursorKey) pushUnique("cursor");
+  if (forced === "openai" && openaiKey) pushUnique("openai");
+
+  // Always keep fallbacks so a truncated DeepSeek JSON does not stall the buffer.
+  if (deepseekKey) pushUnique("deepseek");
+  if (cursorKey) pushUnique("cursor");
+  if (openaiKey) pushUnique("openai");
   return providers;
 }
 
@@ -604,15 +599,22 @@ async function main() {
 
     await ensureCoverImage(slug, request.topic);
     const issues = validateDraftPublishReady(slug);
-    if (issues.length > 0) {
+    const blockers = issues.filter((issue) => !/missing coverImage/i.test(issue));
+    const coverOnly = issues.length > 0 && blockers.length === 0;
+    if (blockers.length > 0) {
       removeReplenishSlugArtifacts(slug);
-      const detail = issues.slice(0, 5).join(" | ");
+      const detail = blockers.slice(0, 5).join(" | ");
       failReplenish(`Integrity gate failed for ${slug}: ${detail}`, {
         reason: "integrity-gate",
         slug,
-        issues: issues.slice(0, 8),
+        issues: blockers.slice(0, 8),
       });
       return;
+    }
+    if (coverOnly) {
+      console.warn(
+        `Draft ${slug}: cover still missing after ensureCoverImage — leave for GHA Fetch missing draft covers`,
+      );
     }
 
     ensureDraftCreatedAt(slug, new Date().toISOString());

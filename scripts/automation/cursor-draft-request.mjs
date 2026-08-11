@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { countDrafts, assertDraftPublishReady, validateDraftPublishEligible, countPublishEligibleDrafts, listDrafts, slugExists } from "./posts-fs.mjs";
+import { countDrafts, validateDraftPublishReady, validateDraftPublishEligible, countPublishEligibleDrafts, listDrafts, slugExists } from "./posts-fs.mjs";
 import { pickContentPlan, describeContentPlanMix } from "../lib/pick-content-plan.mjs";
 import { isMetaTopicId } from "../lib/content-angles.mjs";
 import { kstDateString, loadState, saveState } from "./state.mjs";
@@ -326,8 +326,18 @@ export async function queueBenchmarkReplenish(publishedSlug = null) {
 
 export function completeCursorDraftRequest(writtenSlug) {
   if (writtenSlug) {
-    assertDraftPublishReady(writtenSlug);
-    const publishIssues = validateDraftPublishEligible(writtenSlug);
+    const issues = validateDraftPublishReady(writtenSlug).filter(
+      (issue) => !/missing coverImage/i.test(issue),
+    );
+    if (issues.length > 0) {
+      throw new Error(
+        `Draft "${writtenSlug}" is not publish-ready:\n${issues.map((i) => `  • ${i}`).join("\n")}`,
+      );
+    }
+    // Cover may be filled by GHA "Fetch missing draft covers" when local image keys are absent.
+    const publishIssues = validateDraftPublishEligible(writtenSlug).filter(
+      (issue) => !/missing coverImage/i.test(issue),
+    );
     if (publishIssues.length > 0) {
       throw new Error(
         `Draft "${writtenSlug}" would fail publish slot:\n${publishIssues.map((i) => `  • ${i}`).join("\n")}`,

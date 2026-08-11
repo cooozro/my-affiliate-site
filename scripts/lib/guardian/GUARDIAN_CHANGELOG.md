@@ -4,6 +4,20 @@ All changes under `scripts/lib/guardian/` require owner approval before commit.
 
 Record **impact on other modules** when proposing a change.
 
+## 2026-08-11 — Description trim must write frontmatter
+
+**Root cause:** `repairPostLocale` trimmed long SEO descriptions in memory and logged a repair, but only assigned `data[key]` when a typo fix also changed the string — so length gates still failed.
+
+**Fixed:** Persist any change from trim and/or typo repair back to frontmatter.
+
+**Impact:** Draft/publish integrity repair for `description` (and other string keys in the same loop).
+
+**Root cause:** `repairPost` only rewrote Related guides when `postIndex.has(slug)`, but the published index never contains brand-new draft slugs — so LLM drafts kept fake `/blog/...` links and failed integrity.
+
+**Fixed:** Always run `repairRelatedGuidesInBody` for non-exempt posts (draft or published).
+
+**Impact:** `publish-integrity.mjs` repair path; DeepSeek/OpenAI replenish drafts. No API breaks.
+
 ## 2026-07-06 — Topic inference fix (laptop duplicate draft)
 
 **Root cause:** Published `2026-laptops-buying-guide` lacked `topicId`, so coverage treated slug as topic id — `laptops` looked uncovered and a second draft was allowed.

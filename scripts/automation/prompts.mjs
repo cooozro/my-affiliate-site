@@ -1,5 +1,6 @@
 import { getTemplatePath } from "../lib/content-profiles.mjs";
 import { getCurrentSeason, getActiveSeasonalEvents } from "../lib/season-topics.mjs";
+import { listPublishedSlugs } from "../lib/content-quality.mjs";
 
 export function buildGenerationPrompt(topic, year, contentProfile = "buying-guide", options = {}) {
   const templatePath = getTemplatePath(contentProfile);
@@ -41,6 +42,7 @@ MANDATORY RULES (violations = rejection):
 5. Titles: do NOT reuse "2026 가성비 X TOP 5 — …" or "Best Budget X TOP 5 — …" templates. Rotate formats (question, scenario, myth-bust, number hook). EN and KO titles should feel independently written.
 6. Methodology: do NOT claim proprietary seller APIs, sale_price_usd fields, or private databases. Use honest editorial sources (manufacturer specs, listed retail prices, public reviews). Include a "## Analysis methodology" / "## 분석 방법론" section with a plain-language source table.
 7. Follow the profile template at ${templatePath}. Always include Editorial Overview, methodology, Related guides internal links to **published** posts only (/en/blog/slug or /ko/blog/slug — no deleted or draft slugs). English primary, Korean faithful translation (not a summary).
+   Example published slugs you may link (pick 3–5 relevant): ${[...listPublishedSlugs(process.cwd())].sort().slice(0, 20).join(", ")}.
 8. Season-first framing: tie the angle to current season (${season}) when the topic is seasonal (AC in summer, air purifier in spring, back-to-school in fall, etc.).
 9. Bilingual depth: EN body ≥ 5,000 UTF-8 bytes; KO body ≥ 2,500 characters. Checklist items need 2–3 sentences each for Why and Red flag in both languages.
 10. Publish integrity gate (auto-checked before draft save & LIVE): no calendar year (20xx) in titles; EN titles must not start with How to / Stop / Why you / What to / When to; no hangul-latin typos in Korean (e.g. 백그ra운드); no Hanja/CJK ideographs in Korean (use Hangul only — e.g. 과대 not 誇大, 독창적 not 독찴적); ≥3 Related guides links to published slugs only; ≥3 tags; ≥4 H2 sections (head-to-head ≥3); locale-correct internal links (/en/ in en.md, /ko/ in ko.md); no duplicate H2 headings; no draft/preview URLs in body.
@@ -53,7 +55,7 @@ ${topic.liveData ? `Use these placeholders in body where prices/dates appear:
 - {{krw:29.99}} to convert USD prices (example)
 Set liveData true in output.` : "Do not use live data placeholders."}
 
-Return ONLY valid JSON (no markdown fences):
+The pipeline may request EN and KO in separate passes. When asked for both locales, return ONLY valid JSON (no markdown fences):
 {
   "slug": "lowercase-hyphenated-english-slug-with-year",
   "topicId": "${topic.id}",

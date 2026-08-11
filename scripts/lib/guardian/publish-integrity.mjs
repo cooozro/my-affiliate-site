@@ -152,7 +152,8 @@ export function repairPostLocale(root, slug, locale) {
 
   for (const key of ["title", "description", "coverImageAlt", "coverImageAltKo"]) {
     if (typeof data[key] === "string") {
-      let value = data[key];
+      const original = data[key];
+      let value = original;
       if (key === "description" && value.length > MAX_DESCRIPTION_CHARS) {
         const trimmed = trimDescriptionToMetaLimit(value);
         if (trimmed !== value) {
@@ -164,8 +165,10 @@ export function repairPostLocale(root, slug, locale) {
       }
       const fixed = fixStringTypos(value, locale);
       if (fixed !== value) {
-        data[key] = fixed;
         repairs.push(`${slug}/${locale}.md: policy/spelling fix in ${key}`);
+      }
+      if (fixed !== original) {
+        data[key] = fixed;
       }
     }
   }
@@ -206,7 +209,8 @@ export function repairPostLocale(root, slug, locale) {
   }
 
   const postIndex = loadPublishedPostIndex(root);
-  if (postIndex.has(slug) && !isIntegrityExempt(slug, data)) {
+  // New drafts are not in the published index — still rewrite Related guides to live slugs.
+  if (!isIntegrityExempt(slug, data)) {
     const related = repairRelatedGuidesInBody(body, locale, slug, postIndex);
     if (related.changed) {
       body = related.body;

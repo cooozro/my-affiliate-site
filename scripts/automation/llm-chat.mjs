@@ -45,22 +45,32 @@ function extractJsonObject(text) {
   const trimmed = text.trim();
   try {
     return JSON.parse(trimmed);
-  } catch {
+  } catch (firstError) {
     const fenced = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
     if (fenced?.[1]) {
-      return JSON.parse(fenced[1].trim());
+      try {
+        return JSON.parse(fenced[1].trim());
+      } catch {
+        /* fall through */
+      }
     }
     const start = trimmed.indexOf("{");
     const end = trimmed.lastIndexOf("}");
     if (start >= 0 && end > start) {
-      return JSON.parse(trimmed.slice(start, end + 1));
+      try {
+        return JSON.parse(trimmed.slice(start, end + 1));
+      } catch {
+        /* fall through */
+      }
     }
-    throw new Error("Model response was not valid JSON");
+    const detail =
+      firstError instanceof Error ? firstError.message : String(firstError);
+    throw new Error(`Model response was not valid JSON (${detail})`);
   }
 }
 
 /**
- * @param {{ system: string, user: string, provider?: string, temperature?: number, json?: boolean }} options
+ * @param {{ system: string, user: string, provider?: string, temperature?: number, json?: boolean, maxTokens?: number }} options
  */
 export async function chatJsonCompletion(options) {
   const {
@@ -69,6 +79,7 @@ export async function chatJsonCompletion(options) {
     provider: preferred,
     temperature = 0.7,
     json = true,
+    maxTokens,
   } = options;
 
   const provider = resolveLlmProvider(preferred);
@@ -82,9 +93,16 @@ export async function chatJsonCompletion(options) {
   const model =
     process.env[provider.modelEnv]?.trim() || provider.defaultModel;
 
+  // Bilingual buying guides often need the full output window; default was truncating mid-JSON.
+  const envMax = Number(process.env.LLM_MAX_TOKENS || 0);
+  const resolvedMaxTokens =
+    maxTokens ??
+    (envMax > 0 ? envMax : provider.id === "deepseek" ? 8192 : 16384);
+
   const body = {
     model,
     temperature,
+    max_tokens: resolvedMaxTokens,
     messages: [
       { role: "system", content: system },
       { role: "user", content: user },
@@ -113,9 +131,17 @@ export async function chatJsonCompletion(options) {
   }
 
   const data = await response.json();
-  const text = data.choices?.[0]?.message?.content;
+  const choice = data.choices?.[0];
+  const text = choice?.message?.content;
   if (!text) {
     throw new Error(`Empty ${provider.id} response`);
+  }
+
+  if (choice.finish_reason === "length") {
+    throw new Error(
+      `${provider.id} truncated output (finish_reason=length, max_tokens=${resolvedMaxTokens}). ` +
+        "Retry with two-pass locale writing or a higher LLM_MAX_TOKENS.",
+    );
   }
 
   const parsed = extractJsonObject(text);
