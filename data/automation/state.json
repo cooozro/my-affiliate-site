@@ -33,7 +33,7 @@
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-11T02:21:39.879Z",
-  "nextPublishAt": "2026-08-12T03:13:55.045Z",
+  "nextPublishAt": "2026-08-12T03:23:53.411Z",
   "scheduledGapHours": 5.37,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-12",
@@ -846,13 +846,13 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-12T03:13:54.808Z",
+    "at": "2026-08-12T03:23:53.079Z",
     "issueCount": 5,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (10min past slot, KST 2026-08-12)",
-        "severity": "error"
+        "message": "Publish ready but no post went live (9min past slot, KST 2026-08-12)",
+        "severity": "warning"
       },
       {
         "code": "draft-integrity-issues",
@@ -871,7 +871,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1146min",
+        "message": "Cursor replenish pending 1156min",
         "severity": "warning"
       }
     ],
@@ -978,7 +978,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-12T03:13:55.178Z",
+    "at": "2026-08-12T03:23:53.562Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "humidifier-types-explained-ultrasonic-evaporative-mold-prevention"
