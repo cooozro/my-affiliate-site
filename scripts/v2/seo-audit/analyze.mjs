@@ -111,6 +111,12 @@ function profileStructureScore(profile, h2s, body) {
     score += 10;
   }
 
+  if (profile === "model-deep-dive") {
+    if (/spec|at-a-glance|한눈에|스펙/.test(h2Text)) score += 10;
+    if (/strength|weakness|장점|단점/.test(bodyLower)) score += 10;
+    if (/verdict|최종/.test(h2Text)) score += 10;
+  }
+
   return Math.min(100, score);
 }
 

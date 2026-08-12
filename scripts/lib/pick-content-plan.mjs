@@ -140,9 +140,11 @@ export function pickContentPlan(state, options = {}) {
   const coverage = getTopicFormatCoverage();
   const phase = getRoadmapPhase(coverage);
   const contentProfile = options.contentProfile ?? pickContentProfile(state);
+  const forceProduct =
+    options.forceProduct || contentProfile === "model-deep-dive";
 
   const useMeta =
-    !options.forceProduct &&
+    !forceProduct &&
     (options.forceMeta || shouldPickMetaAngle(state, coverage));
 
   if (useMeta && !options.forceMeta && metaPublishWouldViolateDiversity(state)) {

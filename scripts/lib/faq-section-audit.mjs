@@ -21,6 +21,7 @@ export const MIN_FAQ_BY_PROFILE = {
   "scenario-guide": 3,
   explainer: 5,
   checklist: 3,
+  "model-deep-dive": 5,
   editorial: 0,
 };
 

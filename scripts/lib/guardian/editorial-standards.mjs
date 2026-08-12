@@ -50,6 +50,7 @@ Content profiles (contentProfile frontmatter):
 - scenario-guide: docs/templates/scenario-guide.md
 - explainer: docs/templates/explainer.md
 - checklist: docs/templates/checklist.md
+- model-deep-dive: docs/templates/model-deep-dive.md (single popular model review — pipeline assigns focus SKU)
 - editorial: docs/templates/editorial.md (admin/internal only — not in auto replenish)
 
 Auto rotation: equal round-robin shuffle deck (each public profile once per cycle).

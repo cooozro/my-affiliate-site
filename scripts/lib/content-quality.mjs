@@ -343,6 +343,52 @@ function auditChecklist(body, label) {
   return issues;
 }
 
+function auditModelDeepDive(body, label, data = {}) {
+  const issues = [];
+
+  const h2Count = (body.match(/^##\s+/gm) ?? []).length;
+  if (h2Count < 4) {
+    issues.push(`${label}: model-deep-dive needs at least 4 H2 sections (found ${h2Count})`);
+  }
+
+  if (!/\|.+\|/.test(body)) {
+    issues.push(`${label}: missing spec or comparison table`);
+  }
+
+  const modelToken =
+    data.modelPickName ??
+    data.modelPickBrand ??
+    "";
+  if (
+    modelToken &&
+    !body.toLowerCase().includes(String(modelToken).toLowerCase())
+  ) {
+    issues.push(
+      `${label}: body should mention the focus model (${modelToken})`,
+    );
+  }
+
+  if (
+    !/(strength|weakness|장점|아쉬운|단점)/i.test(body)
+  ) {
+    issues.push(`${label}: missing Strengths & weaknesses section`);
+  }
+
+  if (!WHO_SHOULD_BUY_PATTERN.test(body)) {
+    issues.push(`${label}: missing Who should buy / 이런 분께 추천 section`);
+  }
+
+  if (!WHO_SHOULD_SKIP_PATTERN.test(body)) {
+    issues.push(`${label}: missing Who should skip / 이런 분은 패스 section`);
+  }
+
+  if (!FINAL_VERDICT_PATTERN.test(body)) {
+    issues.push(`${label}: missing Final Verdict section`);
+  }
+
+  return issues;
+}
+
 /**
  * Google Search Essentials / people-first self-audit before publish.
  */
@@ -355,6 +401,7 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
   }
 
   const { issues, body, label } = shared;
+  const { data } = matter(raw);
 
   if (profile === "buying-guide") {
     issues.push(...auditBuyingGuide(body, label));
@@ -366,6 +413,8 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
     issues.push(...auditExplainer(body, label));
   } else if (profile === "checklist") {
     issues.push(...auditChecklist(body, label));
+  } else if (profile === "model-deep-dive") {
+    issues.push(...auditModelDeepDive(body, label, data));
   }
 
   if (MIN_FAQ_BY_PROFILE[profile] > 0) {

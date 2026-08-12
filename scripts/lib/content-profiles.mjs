@@ -2,7 +2,7 @@
  * Content profile definitions and format rotation for AI Pick & Report.
  *
  * Public auto-write profiles (templates in docs/templates/):
- *   buying-guide | head-to-head | scenario-guide | explainer | checklist
+ *   buying-guide | head-to-head | scenario-guide | explainer | checklist | model-deep-dive
  *
  * Admin / internal only (not in auto replenish deck):
  *   editorial — SEO audit report, welcome, etc.
@@ -17,6 +17,7 @@ export const CONTENT_PROFILES = [
   "scenario-guide",
   "explainer",
   "checklist",
+  "model-deep-dive",
 ];
 
 /** @deprecated Prefer round-robin deck; kept equal weights for any legacy callers. */
@@ -31,6 +32,7 @@ export const PROFILE_TEMPLATE_PATHS = {
   "scenario-guide": "docs/templates/scenario-guide.md",
   explainer: "docs/templates/explainer.md",
   checklist: "docs/templates/checklist.md",
+  "model-deep-dive": "docs/templates/model-deep-dive.md",
   editorial: "docs/templates/editorial.md",
 };
 
@@ -41,6 +43,7 @@ export const PROFILE_MIN_BODY_CHARS = {
   "scenario-guide": 4500,
   explainer: 2500,
   checklist: 2500,
+  "model-deep-dive": 5500,
   editorial: 800,
 };
 

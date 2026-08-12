@@ -15,7 +15,11 @@ import {
   resetDailyCounters,
   saveState,
 } from "./state.mjs";
-import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
+import { pickContentProfile, getTemplatePath, CONTENT_PROFILES } from "../lib/content-profiles.mjs";
+import {
+  pickPopularModels,
+  recordModelPick,
+} from "../lib/popular-model-picks.mjs";
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
 import {
@@ -139,6 +143,9 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
       : {}),
     ...(shared.coverImageCredit ? { coverImageCredit: shared.coverImageCredit } : {}),
     ...(shared.coverImageProvider ? { coverImageProvider: shared.coverImageProvider } : {}),
+    ...(shared.modelPickId ? { modelPickId: shared.modelPickId } : {}),
+    ...(shared.modelPickBrand ? { modelPickBrand: shared.modelPickBrand } : {}),
+    ...(shared.modelPickName ? { modelPickName: shared.modelPickName } : {}),
   };
 }
 
@@ -154,8 +161,22 @@ export async function generateOneDraft(options = {}) {
   }
 
   const contentProfile = pickContentProfile(state);
-  const topic = pickTopic(state, { contentProfile });
-  return generateDraftForTopic(topic, contentProfile, { bypassWriteCap, state });
+  const profilesToTry = [
+    contentProfile,
+    ...CONTENT_PROFILES.filter((p) => p !== contentProfile),
+  ];
+
+  let lastError = null;
+  for (const profile of profilesToTry) {
+    try {
+      const topic = pickTopic(state, { contentProfile: profile });
+      return generateDraftForTopic(topic, profile, { bypassWriteCap, state });
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError ?? new Error("No topics available for any content profile");
 }
 
 function normalizeRequestTopic(raw) {
@@ -211,10 +232,26 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   }
   const state = inputState ?? loadState();
   const year = new Date().getFullYear();
+
+  let modelPick = null;
+  if (contentProfile === "model-deep-dive") {
+    modelPick = pickPopularModels(topic.id, { state });
+    if (!modelPick?.primary) {
+      throw new Error(
+        `No popular-model catalog for topic ${topic.id} (model-deep-dive)`,
+      );
+    }
+    console.log(
+      `Model deep-dive pick: ${modelPick.primary.brand} ${modelPick.primary.name}` +
+        (modelPick.rival ? ` vs ${modelPick.rival.brand} ${modelPick.rival.name}` : ""),
+    );
+  }
+
   const prompt = buildGenerationPrompt(topic, year, contentProfile, {
     writingMode: options.writingMode,
     toneVariant: options.toneVariant,
     benchmarkOutline: options.benchmarkOutline,
+    modelPick,
   });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
@@ -228,7 +265,10 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     },
   );
 
-  const slug = uniqueSlug(article.slug ?? `${year}-${topic.id}-guide`);
+  const slugBase = modelPick?.primary
+    ? `${year}-${topic.id}-${modelPick.primary.id}-review`
+    : `${year}-${topic.id}-guide`;
+  const slug = uniqueSlug(article.slug ?? slugBase);
   const createdAt = new Date().toISOString();
   const date = kstDateString();
 
@@ -259,6 +299,13 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
           return { coverImageAlt: alts.en, coverImageAltKo: alts.ko };
         })()
       : {}),
+    ...(modelPick?.primary
+      ? {
+          modelPickId: modelPick.primary.id,
+          modelPickBrand: modelPick.primary.brand,
+          modelPickName: modelPick.primary.name,
+        }
+      : {}),
   };
 
   writePost(slug, "en", buildFrontmatter("en", article.en, shared), article.en.body);
@@ -275,6 +322,9 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 
   if (!bypassWriteCap) {
     state.writeCountToday += 1;
+  }
+  if (modelPick?.primary) {
+    recordModelPick(state, topic.id, modelPick.primary.id);
   }
   state.history = [
     ...(state.history ?? []),

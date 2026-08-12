@@ -28,6 +28,7 @@ import {
   wouldViolateTopicDiversity,
   wouldViolateTaxonomyGroupSpread,
 } from "../lib/topic-diversity.mjs";
+import { topicSupportsModelDeepDive } from "../lib/popular-model-picks.mjs";
 
 export const POST_TOPICS = PRODUCT_TOPICS;
 
@@ -101,6 +102,7 @@ export function pickTopic(state, options = {}) {
 
   const formatAvailable = (t) =>
     supportsFormat(t, contentProfile) &&
+    (contentProfile !== "model-deep-dive" || topicSupportsModelDeepDive(t.id)) &&
     !isTopicBlockedByRoadmap(
       t,
       contentProfile,

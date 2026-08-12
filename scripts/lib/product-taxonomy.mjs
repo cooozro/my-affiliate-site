@@ -508,6 +508,10 @@ for (const topic of PRODUCT_TOPICS) {
   ) {
     topic.evergreen = true;
   }
+  topic.allowedFormats = [
+    ...(topic.allowedFormats ?? FORMATS.full),
+    "model-deep-dive",
+  ].filter((f, i, arr) => arr.indexOf(f) === i);
 }
 
 export const POST_TOPIC_IDS = new Set(PRODUCT_TOPICS.map((t) => t.id));
