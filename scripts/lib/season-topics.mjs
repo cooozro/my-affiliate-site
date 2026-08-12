@@ -162,3 +162,27 @@ export function getActiveSeasonalEvents(date = new Date()) {
   const month = getKstMonth(date);
   return SEASONAL_EVENTS.filter((e) => e.months.includes(month));
 }
+
+/**
+ * True when topic is appropriate for the current KST season/month.
+ * Topics without `seasons` are treated as evergreen.
+ */
+export function isTopicInSeason(topic, date = new Date()) {
+  const seasons = topic?.seasons;
+  if (!Array.isArray(seasons) || seasons.length === 0) return true;
+
+  const season = getCurrentSeason(date);
+  if (seasons.includes(season)) return true;
+
+  const month = getKstMonth(date);
+  if (Array.isArray(topic.peakMonths) && topic.peakMonths.includes(month)) {
+    return true;
+  }
+
+  return false;
+}
+
+/** Drop off-season topics (hard gate for topic pick / draft write). */
+export function filterTopicsInSeason(topics, date = new Date()) {
+  return topics.filter((t) => isTopicInSeason(t, date));
+}

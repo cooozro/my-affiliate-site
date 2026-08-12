@@ -66,16 +66,20 @@ export function isMechanicalFaqSection(sectionText, locale) {
 
   if (mechanicalCount >= 1) return true;
 
-  // Same sentence skeleton repeated
+  // Same sentence skeleton with only slot differences (KO 「…」 / quoted phrases).
+  // Do NOT wipe Latin word runs — that collapses every EN question to "…?" and
+  // false-blocks publish (slot then keeps catch-up delaying / Selahim shows 미정).
   const skeletons = questions.map((q) =>
     q
       .replace(/「[^」]+」/g, "「…」")
-      .replace(/[A-Za-z0-9][A-Za-z0-9 .\-+()]+/g, "…")
+      .replace(/"[^"]+"/g, '"…"')
+      .replace(/'[^']+'/g, "'…'")
       .replace(/\s+/g, " ")
-      .trim(),
+      .trim()
+      .toLowerCase(),
   );
   const unique = new Set(skeletons);
-  if (questions.length >= 2 && unique.size === 1) return true;
+  if (questions.length >= 3 && unique.size === 1) return true;
 
   return false;
 }

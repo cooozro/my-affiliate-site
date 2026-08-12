@@ -3,7 +3,7 @@
  * Roadmap phase → season score → diversity.
  */
 import { PRODUCT_TOPICS } from "../lib/product-taxonomy.mjs";
-import { pickSeasonalTopic } from "../lib/season-topics.mjs";
+import { pickSeasonalTopic, filterTopicsInSeason, getCurrentSeason } from "../lib/season-topics.mjs";
 import {
   getTopicFormatCoverage,
   getClusterFormatCoverage,
@@ -117,6 +117,31 @@ export function pickTopic(state, options = {}) {
     recentlyUsed,
     roadmapPhase,
   );
+
+  const inSeason = filterTopicsInSeason(candidates);
+  if (inSeason.length > 0) {
+    candidates = inSeason;
+  } else {
+    const season = getCurrentSeason();
+    const seasonalPool = filterTopicsInSeason(
+      POST_TOPICS.filter(formatAvailable),
+    );
+    if (seasonalPool.length === 0) {
+      throw new Error(
+        `No in-season topics for ${season} (${contentProfile}, phase ${roadmapPhase})`,
+      );
+    }
+    console.warn(
+      `Topic pool narrowed: ${candidates.length} off-season candidate(s) blocked for ${season}`,
+    );
+    candidates = sortByFreshness(
+      seasonalPool,
+      coverage,
+      clusterCoverage,
+      recentlyUsed,
+      roadmapPhase,
+    );
+  }
 
   candidates = filterByTaxonomyGroupSpread(candidates, roadmapPhase, coverage);
   candidates = filterByTopicDiversity(candidates, topicHistory);
