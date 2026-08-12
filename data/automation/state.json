@@ -849,17 +849,15 @@
     "buying-guide",
     "scenario-guide",
     "buying-guide",
-    "head-to-head"
+    "head-to-head",
+    "checklist"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-12T04:35:22.979Z",
+    "at": "2026-08-12T04:41:43.200Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/en.md: publishedAt 2026-08-12T13:33:56.000Z → 2026-08-12T04:33:58.635Z",
-      "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/ko.md: publishedAt 2026-08-12T13:33:56.000Z → 2026-08-12T04:33:58.635Z"
-    ]
+    "repairs": []
   },
   "lastDailyContentAuditKst": "2026-08-12",
   "lastDailyContentAudit": {
@@ -972,11 +970,6 @@
   },
   "metaAngleHistory": [
     {
-      "id": "under-300-cross-category",
-      "type": "price-tier-cross",
-      "at": "2026-07-20T00:05:21.512Z"
-    },
-    {
       "id": "family-3-5-person",
       "type": "household-type",
       "at": "2026-07-22T04:40:08.444Z"
@@ -1070,10 +1063,14 @@
       "id": "under-300-cross-category",
       "type": "price-tier-cross",
       "at": "2026-08-12T04:36:59.666Z"
+    },
+    {
+      "id": "solo-apartment-essentials",
+      "type": "household-type",
+      "at": "2026-08-12T04:41:58.444Z"
     }
   ],
   "formatDeck": [
-    "checklist",
     "explainer"
   ]
 }
