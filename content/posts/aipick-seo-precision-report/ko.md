@@ -1,7 +1,7 @@
 ---
 title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
-date: '2026-08-11'
+date: '2026-08-12'
 draft: true
 contentProfile: editorial
 tags:
@@ -9,16 +9,14 @@ tags:
   - internal
   - admin-audit
 robots: 'noindex, nofollow'
-updatedAt: '2026-08-11T04:24:25.076Z'
-automationBuffer: false
-createdAt: '2026-08-11T04:24:25.076Z'
+updatedAt: '2026-08-12T00:05:11.110Z'
 ---
 ## 편집부 개요
 
 > **어드민 전용 draft** — Google sitemap·RSS 미포함, 공개 블로그 URL 비활성. SEO 개선 지표 전용 리포트입니다.
 
-- **생성 시각 (KST):** 2026년 8월 11일 화요일 오전 8:57
-- **스캔 대상:** 발행 글 54 slug / 108 locale 파일
+- **생성 시각 (KST):** 2026년 8월 12일 수요일 오전 9:05
+- **스캔 대상:** 발행 글 55 slug / 110 locale 파일
 - **분석 제외:** `welcome` (인사말·내부 전용)
 
 ## 대시보드 요약
@@ -36,8 +34,8 @@ createdAt: '2026-08-11T04:24:25.076Z'
 ✅ **91%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ _(좋음)_
 
 - SERP 구조·검색 의도 일치 **91%**
-- 스캔 대상 **54** slug (welcome 등 1건 제외)
-- locale 파일 **108**개 분석
+- 스캔 대상 **55** slug (welcome 등 1건 제외)
+- locale 파일 **110**개 분석
 
 ### 수익성·효율성 지표
 
@@ -61,56 +59,56 @@ createdAt: '2026-08-11T04:24:25.076Z'
 
 > Google 게시자 정책의 **‘가치가 낮은 콘텐츠(low-value content)’** 반려 사유를 정량 지표로 환산했습니다. 아래는 **AdSense 노출 대상(발행·색인) 글**만 집계합니다.
 
-- **종합 준비도:** ✅ **96%** _(좋음)_
-- **집계 대상:** 발행·색인 글 **48편** / 저품질 격리(noindex) **6편**
-- **평균 품질 점수:** **94점** (목표 88점) · 색인 포함 전체 평균 89점
-- **품질 등급:** B등급 2편 · A등급 46편
+- **종합 준비도:** ✅ **100%** _(좋음)_
+- **집계 대상:** 발행·색인 글 **55편** / 저품질 격리(noindex) **0편**
+- **평균 품질 점수:** **97점** (목표 88점) · 색인 포함 전체 평균 97점
+- **품질 등급:** A등급 55편
 
-✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_
 
 ### 승인 점검 지표 (달성률)
 
 | 지표 | 값 | 달성률 | 상태 | 시각화 |
 | --- | --- | --- | --- | --- |
-| A등급(75점+) 달성 | 46/48 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 평균 품질 점수 | 94점 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 심층 편집 분석(해석+우려) | 47/48 | **98%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 독자적 판단·평가 기준 | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 1차 검증 신호(교차 검증) | 46/48 | **96%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 충분한 분량(≥4,500자) | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 실모델·근거 제시 | 43/48 | **90%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
-| FAQ 3쌍 이상 | 48/48 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| 저가치 플래그 0건 | 41/48 | **85%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ |
+| A등급(75점+) 달성 | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 평균 품질 점수 | 97점 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 심층 편집 분석(해석+우려) | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 독자적 판단·평가 기준 | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 1차 검증 신호(교차 검증) | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 충분한 분량(≥4,500자) | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 실모델·근거 제시 | 54/55 | **98%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| FAQ 3쌍 이상 | 55/55 | **100%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| 저가치 플래그 0건 | 54/55 | **98%** | ✅ | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
 
 ## 저가치 콘텐츠(Low-value content) 해결 지표
 
 > 심사 반려 사유였던 **‘가치가 별로 없는 콘텐츠’** 를 해소하기 위한 핵심 지표와 달성 상태입니다. 각 막대는 발행·색인 글 중 해당 기준을 통과한 비율이며, 🎯 는 목표치입니다.
 
-**A등급(75점+) 달성** (46/48)
+**A등급(75점+) 달성** (55/55)
 
-✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ · 🎯 목표 100%
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
 
-**심층 편집 분석(해석+우려)** (47/48)
+**심층 편집 분석(해석+우려)** (55/55)
+
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
+
+**독자적 판단·평가 기준** (55/55)
+
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
+
+**1차 검증 신호(교차 검증)** (55/55)
+
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
+
+**충분한 분량(≥4,500자)** (55/55)
+
+✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
+
+**저가치 플래그 0건** (54/55)
 
 ✅ **98%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
 
-**독자적 판단·평가 기준** (48/48)
-
-✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
-
-**1차 검증 신호(교차 검증)** (46/48)
-
-✅ **96%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ _(좋음)_ · 🎯 목표 100%
-
-**충분한 분량(≥4,500자)** (48/48)
-
-✅ **100%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 _(좋음)_ · 🎯 목표 100%
-
-**저가치 플래그 0건** (41/48)
-
-✅ **85%** 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ _(좋음)_ · 🎯 목표 100%
-
-⚠️ **미달 지표 4건:** A등급(75점+) 달성 (96%), 심층 편집 분석(해석+우려) (98%), 1차 검증 신호(교차 검증) (96%), 저가치 플래그 0건 (85%) — 해당 글을 우선 보강하세요.
+⚠️ **미달 지표 1건:** 저가치 플래그 0건 (98%) — 해당 글을 우선 보강하세요.
 
 ## Executive Summary
 
@@ -129,7 +127,7 @@ createdAt: '2026-08-11T04:24:25.076Z'
 
 ✅ **GA4 연결됨** — 아래 수치는 최근 7일 집계입니다.
 
-- **API 수집 시각 (KST):** 2026. 8. 11. 오전 8:57:26
+- **API 수집 시각 (KST):** 2026. 8. 12. 오전 9:05:10
 - **속성 ID:** `54…28`
 - **서비스 계정:** `aipick@aipick-500507.iam.gserviceaccount.com`
 - **집계 기간:** 7daysAgo ~ today (KST 기준 GA4 집계)
@@ -137,22 +135,22 @@ createdAt: '2026-08-11T04:24:25.076Z'
 
 | 지표 | 값 |
 | --- | --- |
-| Active users | 21 |
-| Sessions | 29 |
-| Page views | 29 |
+| Active users | 16 |
+| Sessions | 27 |
+| Page views | 38 |
 
 ### 상위 블로그 랜딩 (7일)
 
 | 페이지 | 조회수 |
 | --- | --- |
 | `/en/blog/2026-budget-wireless-earbuds-top5` | 4 |
+| `/en/blog/2026-noise-cancelling-headphones-head-to-head` | 3 |
 | `/en/blog/2026-wireless-earbuds-head-to-head` | 3 |
-| `/en/blog/2026-budget-mechanical-keyboards-guide` | 2 |
 | `/en/blog/2026-washing-machines-scenario-guide` | 2 |
+| `/en/blog/2026-budget-mechanical-keyboards-guide` | 1 |
 | `/en/blog/2026-budget-smartphones-under-300` | 1 |
-| `/en/blog/2026-clothes-dryers-buying-guide` | 1 |
-| `/en/blog/2026-compact-footprint-cross-category-scenario-guide` | 1 |
-| `/en/blog/2026-family-3-5-home-essentials-scenario-guide` | 1 |
+| `/en/blog/2026-water-purifiers-buying-guide` | 1 |
+| `/ko/blog/electric-blanket-safety-timers-wash-care-2026` | 1 |
 
 ## SERP 벤치마킹 — 구조·의도 점수
 
@@ -164,11 +162,11 @@ createdAt: '2026-08-11T04:24:25.076Z'
 
 | Slug | Profile | H2 | 점수 | 상태 |
 | --- | --- | --- | --- | --- |
-| 2026-air-fryers-checklist | checklist | 8 | 95% | ✅ |
+| 2026-air-fryers-checklist | checklist | 10 | 95% | ✅ |
 | 2026-bidets-checklist | checklist | 9 | 95% | ✅ |
-| 2026-heatwave-blackout-home-readiness-checklist | checklist | 9 | 95% | ✅ |
+| 2026-heatwave-blackout-home-readiness-checklist | checklist | 11 | 95% | ✅ |
 | 2026-solo-apartment-home-essentials-checklist-guide | checklist | 9 | 95% | ✅ |
-| 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | 8 | 95% | ✅ |
+| 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | 10 | 95% | ✅ |
 
 ## 데이터 무결성 — JSON-LD
 
@@ -200,66 +198,60 @@ Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)�
 | # | Slug | 프로필 | 점수 | 점수바 | 등급 | 심층 | 판단 | 검증 | 분량 | 근거 | FAQ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 2026-action-cameras-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | 2026-budget-monitors-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | 2026-clothes-dryers-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | 2026-coffee-machines-head-to-head | head-to-head | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | 2026-compact-footprint-cross-category-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | 2026-dehumidifiers-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 7 | 2026-electric-fans-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 8 | 2026-family-3-5-home-essentials-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 9 | 2026-family-3-5-summer-load-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ⬜ | ✅ | ✅ | ✅ |
-| 10 | 2026-noise-cancelling-headphones-head-to-head | head-to-head | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 11 | 2026-refrigerators-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 12 | 2026-television-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 13 | 2026-washing-machines-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 14 | 2026-air-purifiers-guide | buying-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 15 | 2026-compact-footprint-cross-category-head-to-head-guide | head-to-head | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 16 | 2026-family-3-5-home-essentials-buying-guide | buying-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 17 | 2026-robot-vacuums-scenario-guide | scenario-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 18 | 2026-solo-apartment-home-essentials-scenario-guide | scenario-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 19 | 2026-under-300-cross-category-head-to-head-guide | head-to-head | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 20 | 2026-evaporative-coolers-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 21 | 2026-usb-c-hubs-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 22 | 2026-water-purifiers-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 23 | 2026-window-ac-room-scenario-guide | scenario-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 24 | 2026-bidets-checklist | checklist | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 25 | 2026-budget-mechanical-keyboards-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 26 | 2026-budget-smartphones-under-300 | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 27 | 2026-gaming-consoles-scenario-guide | scenario-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 28 | 2026-induction-cooktops-buying-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 29 | 2026-summer-bluetooth-speakers-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 30 | 2026-cordless-vacuums-scenario-guide | scenario-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 31 | 2026-countertop-ice-makers-buying-guide | buying-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 32 | 2026-summer-ac-buying-checklist | checklist | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 33 | 2026-summer-budget-tablets-buying-guide | buying-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 34 | 2026-portable-vs-window-ac-head-to-head | head-to-head | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 35 | electric-blanket-safety-timers-wash-care-2026 | explainer | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 36 | 2026-laptops-buying-guide | buying-guide | **91** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 37 | 2026-budget-power-banks-guide | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 38 | 2026-budget-wireless-earbuds-top5 | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 39 | 2026-wireless-earbuds-head-to-head | head-to-head | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 40 | 2026-budget-fitness-trackers-head-to-head | head-to-head | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 41 | 2026-dishwashers-explainer | explainer | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 42 | 2026-solo-apartment-home-essentials-checklist-guide | checklist | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 43 | 2026-cooling-mattress-pads-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 44 | 2026-portable-power-stations-buying-guide | buying-guide | **87** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 45 | 2026-heatwave-blackout-home-readiness-checklist | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ⬜ | ✅ | ⬜ | ✅ |
-| 46 | 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | **78** | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 47 | 2026-summer-solo-heat-essentials-checklist | checklist | **73** | 🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜ | B | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-| 48 | under-300-cross-category-best-value-2026 | explainer | **64** | 🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜ | B | ⬜ | ✅ | ✅ | ✅ | ⬜ | ✅ |
-
-### 저품질 격리(noindex) — AdSense 노출 제외
-
-품질 점수 미달로 색인에서 제외(noindex)해 사이트 전체 가치 희석을 방지한 글입니다.
-
-| Slug | 점수 | 등급 |
-| --- | --- | --- |
-| 2026-air-fryers-checklist | 45 | C |
-| 2026-portable-ssd-explainer | 61 | B |
-| 2026-rice-cookers-explainer | 53 | C |
-| 2026-smart-home-cameras-explainer | 31 | D |
-| 2026-under-300-cross-category-buying-guide | 59 | C |
-| 2026-webcams-checklist | 55 | C |
+| 2 | 2026-air-fryers-checklist | checklist | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | 2026-budget-monitors-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | 2026-clothes-dryers-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | 2026-coffee-machines-head-to-head | head-to-head | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | 2026-compact-footprint-cross-category-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | 2026-cooling-mattress-pads-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | 2026-dehumidifiers-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 9 | 2026-electric-fans-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 10 | 2026-family-3-5-home-essentials-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 11 | 2026-family-3-5-summer-load-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 12 | 2026-heatwave-blackout-home-readiness-checklist | checklist | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 13 | 2026-noise-cancelling-headphones-head-to-head | head-to-head | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 14 | 2026-portable-power-stations-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 15 | 2026-portable-ssd-explainer | explainer | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 16 | 2026-refrigerators-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 17 | 2026-rice-cookers-explainer | explainer | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 18 | 2026-solo-apartment-home-essentials-checklist-guide-20260723 | checklist | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 19 | 2026-summer-solo-heat-essentials-checklist | checklist | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 20 | 2026-television-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 21 | 2026-under-300-cross-category-buying-guide | buying-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 22 | 2026-washing-machines-scenario-guide | scenario-guide | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 23 | under-300-cross-category-best-value-2026 | explainer | **100** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 24 | 2026-smart-home-cameras-explainer | explainer | **99** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 25 | 2026-webcams-checklist | checklist | **99** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 26 | 2026-air-purifiers-guide | buying-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 27 | 2026-compact-footprint-cross-category-head-to-head-guide | head-to-head | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 28 | 2026-family-3-5-home-essentials-buying-guide | buying-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 29 | 2026-robot-vacuums-scenario-guide | scenario-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 30 | 2026-solo-apartment-home-essentials-scenario-guide | scenario-guide | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 31 | 2026-under-300-cross-category-head-to-head-guide | head-to-head | **98** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 32 | 2026-evaporative-coolers-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 33 | 2026-usb-c-hubs-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 34 | 2026-water-purifiers-buying-guide | buying-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 35 | 2026-window-ac-room-scenario-guide | scenario-guide | **97** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 36 | 2026-bidets-checklist | checklist | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 37 | 2026-budget-mechanical-keyboards-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 38 | 2026-budget-smartphones-under-300 | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 39 | 2026-gaming-consoles-scenario-guide | scenario-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 40 | 2026-induction-cooktops-buying-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 41 | 2026-summer-bluetooth-speakers-guide | buying-guide | **95** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 42 | 2026-cordless-vacuums-scenario-guide | scenario-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 43 | 2026-countertop-ice-makers-buying-guide | buying-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 44 | 2026-summer-ac-buying-checklist | checklist | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 45 | 2026-summer-budget-tablets-buying-guide | buying-guide | **93** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 46 | 2026-portable-vs-window-ac-head-to-head | head-to-head | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 47 | 2026-summer-heat-bundle-buying-guide | buying-guide | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 48 | electric-blanket-safety-timers-wash-care-2026 | explainer | **92** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 49 | 2026-laptops-buying-guide | buying-guide | **91** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 50 | 2026-budget-power-banks-guide | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 51 | 2026-budget-wireless-earbuds-top5 | buying-guide | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 52 | 2026-wireless-earbuds-head-to-head | head-to-head | **90** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 53 | 2026-budget-fitness-trackers-head-to-head | head-to-head | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 54 | 2026-dishwashers-explainer | explainer | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 55 | 2026-solo-apartment-home-essentials-checklist-guide | checklist | **88** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ | A | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
 
 ## 키워드 밀도 샘플 (EN 상위 글)
 
@@ -267,11 +259,11 @@ Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)�
 
 | 토큰 | 빈도 | 밀도 |
 | --- | --- | --- |
-| or | 24 | ✅ 1.8% |
-| air | 16 | ✅ 1.2% |
-| basket | 12 | ✅ 0.9% |
-| oven | 12 | ✅ 0.9% |
-| to | 12 | ✅ 0.9% |
+| or | 24 | ✅ 1.6% |
+| air | 16 | ✅ 1.1% |
+| basket | 13 | ✅ 0.9% |
+| to | 13 | ✅ 0.9% |
+| summer | 12 | ✅ 0.8% |
 
 ### 2026-bidets-checklist
 
@@ -287,11 +279,11 @@ Guardian `content-policy` + `publish-integrity` (publish phase, repair 없음)�
 
 | 토큰 | 빈도 | 밀도 |
 | --- | --- | --- |
-| or | 70 | ✅ 1.9% |
-| is | 40 | ✅ 1.1% |
-| it | 40 | ✅ 1.1% |
-| to | 39 | ✅ 1.1% |
-| power | 36 | ✅ 1% |
+| or | 70 | ✅ 1.8% |
+| to | 41 | ✅ 1.1% |
+| is | 40 | ✅ 1% |
+| it | 40 | ✅ 1% |
+| power | 36 | ✅ 0.9% |
 
 ## 운영 메모
 
