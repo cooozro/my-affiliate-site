@@ -5,10 +5,17 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import { loadState, saveState, resetDailyCounters } from "./state.mjs";
 import { pickTopic } from "./topics.mjs";
 import { generateDraftFromRequest } from "./generate-draft.mjs";
 import { countDrafts } from "./posts-fs.mjs";
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const siteRoot =
+  process.env.AIPICK_SITE_ROOT?.trim() ||
+  path.resolve(scriptDir, "../..");
+process.chdir(siteRoot);
 
 const ROOT = process.cwd();
 const requestPath = path.join(ROOT, "data/automation/cursor-draft-request.json");
