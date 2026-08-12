@@ -1,7 +1,6 @@
 {
   "topicIndex": 20,
   "usedTopicIds": [
-    "power-banks",
     "window-ac",
     "bluetooth-speakers",
     "air-purifiers",
@@ -30,6 +29,7 @@
     "wireless-earbuds",
     "window-ac",
     "dishwashers",
+    "space-heaters",
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-12T04:33:58.635Z",
@@ -37,18 +37,9 @@
   "scheduledGapHours": 6,
   "publishCountToday": 1,
   "publishDateKst": "2026-08-12",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-08-12",
   "history": [
-    {
-      "action": "publish",
-      "slug": "2026-summer-ac-room-scenario-guide",
-      "at": "2026-06-28T15:07:19.713Z",
-      "urls": [
-        "https://www.aipick.shop/en/blog/2026-summer-ac-room-scenario-guide",
-        "https://www.aipick.shop/ko/blog/2026-summer-ac-room-scenario-guide"
-      ]
-    },
     {
       "action": "publish",
       "slug": "2026-summer-bluetooth-speakers-guide",
@@ -664,15 +655,15 @@
         "https://www.aipick.shop/en/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
         "https://www.aipick.shop/ko/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "space-heaters-ceramic-vs-oil-filled-2026",
+      "at": "2026-08-12T04:56:14.839Z",
+      "topic": "space-heaters"
     }
   ],
   "topicHistory": [
-    {
-      "id": "space-heaters",
-      "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
-      "at": "2026-07-10T07:11:46.902Z"
-    },
     {
       "id": "television",
       "at": "2026-07-10T11:32:02.332Z"
@@ -824,6 +815,12 @@
       "id": "humidifiers",
       "cluster": "home-appliances",
       "at": "2026-08-12T04:33:58.655Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-08-12T04:53:33.283Z"
     }
   ],
   "formatHistory": [
@@ -850,11 +847,12 @@
     "scenario-guide",
     "buying-guide",
     "head-to-head",
-    "checklist"
+    "checklist",
+    "explainer"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-12T04:41:43.200Z",
+    "at": "2026-08-12T04:53:32.839Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
@@ -1070,7 +1068,5 @@
       "at": "2026-08-12T04:41:58.444Z"
     }
   ],
-  "formatDeck": [
-    "explainer"
-  ]
+  "formatDeck": []
 }

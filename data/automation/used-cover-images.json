@@ -1176,6 +1176,23 @@
       "contentHash": "1dd5415fea50b5b5838ff65f832c691b6e8a73752a547907cf4b17f0c4d1286a",
       "provider": "pixabay",
       "registeredAt": "2026-08-11T08:07:47.632Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-12T04:56:14.972Z"
+    },
+    {
+      "slug": "space-heaters-ceramic-vs-oil-filled-2026",
+      "url": "https://pixabay.com/get/g4d1d88519058cd1a30b7ba7177e491412f8e0ae3dfed82d52dbeab8b390eb09cc55537656ae698cbef0dd2ac31f320a0939842be8e5389c9573a405c9ba38808_1280.jpg",
+      "assetKey": "pixabay:1665669",
+      "hash": "a2bdd82e2117f2958d2e5947d7f77113680c64e05e69a02d130f63619baead40",
+      "contentHash": "a2bdd82e2117f2958d2e5947d7f77113680c64e05e69a02d130f63619baead40",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-12T04:56:37.443Z"
     }
   ]
 }
