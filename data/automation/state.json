@@ -33,7 +33,7 @@
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-11T02:21:39.879Z",
-  "nextPublishAt": "2026-08-12T02:22:00.000Z",
+  "nextPublishAt": "2026-08-12T02:23:25.259Z",
   "scheduledGapHours": 5.37,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-12",
@@ -846,13 +846,23 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-12T02:12:38.138Z",
-    "issueCount": 3,
+    "at": "2026-08-12T02:23:25.007Z",
+    "issueCount": 5,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (1min past slot, KST 2026-08-12)",
+        "severity": "warning"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
+      },
+      {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
       },
       {
         "code": "homepage-featured-mismatch",
@@ -861,11 +871,14 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1084min",
+        "message": "Cursor replenish pending 1095min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "lastDailyContentAuditKst": "2026-08-11",
   "lastDailyContentAudit": {
@@ -965,12 +978,16 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-07-11T08:41:54.172Z",
-    "reason": "integrity-gate",
+    "at": "2026-08-12T02:23:25.410Z",
+    "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
-      "2026-solo-apartment-home-essentials-scenario-guide",
-      "2026-under-300-cross-category-buying-guide"
-    ]
+      "humidifier-types-explained-ultrasonic-evaporative-mold-prevention"
+    ],
+    "deferredSkipped": 0,
+    "integritySkipped": 1,
+    "diversitySkipped": 0,
+    "publishableCount": 1,
+    "publishEligibleCount": 0
   },
   "metaAngleHistory": [
     {
