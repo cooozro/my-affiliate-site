@@ -22,7 +22,7 @@ import {
   MAX_PUBLISH_PER_DAY,
   TARGET_DRAFT_COUNT,
 } from "../lib/publish-schedule.mjs";
-import { getCurrentSeason, isTopicInSeason } from "../lib/season-topics.mjs";
+import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../lib/season-topics.mjs";
 
 /** Writes track publish cadence: one ready draft waiting after each go-live. */
 const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
@@ -200,7 +200,10 @@ export async function generateDraftFromRequest(request, options = {}) {
 
 async function generateDraftForTopic(topic, contentProfile, options = {}) {
   const { bypassWriteCap = false, state: inputState } = options;
-  if (!isTopicInSeason(topic)) {
+  if (
+    SEASONAL_ONLY_TOPIC_IDS.has(topic.id) &&
+    !isTopicInSeason(topic)
+  ) {
     const season = getCurrentSeason();
     throw new Error(
       `Off-season topic blocked: ${topic.id} is not eligible in ${season} (KST)`,

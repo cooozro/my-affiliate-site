@@ -31,7 +31,7 @@ import { FORMULAIC_TITLE_PATTERNS } from "./editorial-standards.mjs";
 import { CONTENT_PROFILES } from "../content-profiles.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
 import { getTopicById } from "../../automation/topics.mjs";
-import { getCurrentSeason, isTopicInSeason } from "../season-topics.mjs";
+import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../season-topics.mjs";
 import { validateReplenishTopicUnique } from "./automation-guard.mjs";
 import { wouldViolateTopicDiversity } from "../topic-diversity.mjs";
 import {
@@ -566,7 +566,11 @@ export function verifyPostIntegrity(root, slug, options = {}) {
     typeof peekData.topicId === "string" ? peekData.topicId.trim() : "";
   if (topicId && !topicId.startsWith("meta-")) {
     const topic = getTopicById(topicId);
-    if (topic && !isTopicInSeason(topic)) {
+    if (
+      topic &&
+      SEASONAL_ONLY_TOPIC_IDS.has(topicId) &&
+      !isTopicInSeason(topic)
+    ) {
       bucket.errors.push({
         severity: "error",
         message: `${slug}: off-season topic ${topicId} for ${getCurrentSeason()} (KST) — blocked until in-season`,

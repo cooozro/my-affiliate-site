@@ -123,6 +123,12 @@ export function scoreTopicForSeason(topic, date = new Date()) {
     score += 3;
   }
 
+  if (topic.evergreen === true) {
+    score += 5;
+  } else if (!isTopicPeakForSeason(topic, date)) {
+    score -= 4;
+  }
+
   return score;
 }
 
@@ -132,9 +138,25 @@ export function scoreTopicForSeason(topic, date = new Date()) {
  * @param {Date} [date]
  */
 export function pickSeasonalTopic(topics, usedIds, date = new Date(), options = {}) {
-  const { lightSeason = false } = options;
+  const { lightSeason = false, evergreenBlend = 0.38 } = options;
   const available = topics.filter((t) => !usedIds.has(t.id));
   const pool = available.length > 0 ? available : topics;
+
+  const evergreen = pool.filter((t) => t.evergreen === true);
+  if (evergreen.length > 0 && Math.random() < evergreenBlend) {
+    const rankedEg = evergreen
+      .map((topic) => ({
+        topic,
+        score: scoreTopicForSeason(topic, date),
+      }))
+      .sort((a, b) => b.score - a.score || a.topic.id.localeCompare(b.topic.id));
+    const tier = rankedEg.filter(
+      (r) => r.score >= (rankedEg[0]?.score ?? 0) - 2,
+    );
+    const pick =
+      tier[Math.floor(Math.random() * tier.length)]?.topic ?? evergreen[0];
+    if (pick) return pick;
+  }
 
   const ranked = pool
     .map((topic) => ({
@@ -163,26 +185,63 @@ export function getActiveSeasonalEvents(date = new Date()) {
   return SEASONAL_EVENTS.filter((e) => e.months.includes(month));
 }
 
+const ALL_SEASONS = ["spring", "summer", "fall", "winter"];
+
+/** Hard off-season block only for these (e.g. heaters in August). */
+export const SEASONAL_ONLY_TOPIC_IDS = new Set([
+  "portable-ac",
+  "window-ac",
+  "electric-fans",
+  "dehumidifiers",
+  "humidifiers",
+  "space-heaters",
+  "electric-blankets",
+  "evaporative-coolers",
+]);
+
 /**
  * True when topic is appropriate for the current KST season/month.
- * Topics without `seasons` are treated as evergreen.
+ * `evergreen` topics (IT/mobile/PC) stay eligible year-round.
+ * `SEASONAL_ONLY_TOPIC_IDS` are blocked outside their `seasons` / `peakMonths`.
  */
 export function isTopicInSeason(topic, date = new Date()) {
+  if (topic?.evergreen === true) return true;
+
   const seasons = topic?.seasons;
   if (!Array.isArray(seasons) || seasons.length === 0) return true;
 
   const season = getCurrentSeason(date);
-  if (seasons.includes(season)) return true;
-
   const month = getKstMonth(date);
+  const inWindow =
+    seasons.includes(season) ||
+    (Array.isArray(topic.peakMonths) && topic.peakMonths.includes(month));
+
+  if (inWindow) return true;
+
+  // Off-season: only hard-block clearly seasonal appliances.
+  if (SEASONAL_ONLY_TOPIC_IDS.has(topic.id)) return false;
+
+  // Other topics (phones, laptops, TV…): allow with lower priority — not hard-blocked.
+  return true;
+}
+
+/** Prefer in-season; for soft off-season topics use score only (see pickSeasonalTopic). */
+export function filterTopicsInSeason(topics, date = new Date()) {
+  return topics.filter((t) => {
+    if (t.evergreen === true) return true;
+    if (SEASONAL_ONLY_TOPIC_IDS.has(t.id)) return isTopicInSeason(t, date);
+    return true;
+  });
+}
+
+/** Strong in-season match for scoring (excludes soft off-season). */
+export function isTopicPeakForSeason(topic, date = new Date()) {
+  if (topic?.evergreen === true) return false;
+  const season = getCurrentSeason(date);
+  const month = getKstMonth(date);
+  if (topic?.seasons?.includes(season)) return true;
   if (Array.isArray(topic.peakMonths) && topic.peakMonths.includes(month)) {
     return true;
   }
-
   return false;
-}
-
-/** Drop off-season topics (hard gate for topic pick / draft write). */
-export function filterTopicsInSeason(topics, date = new Date()) {
-  return topics.filter((t) => isTopicInSeason(t, date));
 }

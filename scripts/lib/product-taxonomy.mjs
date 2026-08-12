@@ -9,6 +9,8 @@ const FORMATS = {
   compare: ["buying-guide", "head-to-head", "scenario-guide"],
 };
 
+const ALL_SEASONS = ["spring", "summer", "fall", "winter"];
+
 /** @type {Array<{ id: string, category: string, imageQuery: string, allowedFormats: string[], angle: string, [key: string]: unknown }>} */
 export const PRODUCT_TOPICS = [
   // ── 대형 가전 ──
@@ -18,6 +20,7 @@ export const PRODUCT_TOPICS = [
     category: "large-appliances",
     imageQuery: "smart TV living room OLED",
     liveData: true,
+    evergreen: true,
     seasons: ["spring", "fall"],
     peakMonths: [3, 4, 5, 9, 10, 11],
     peakMonthBonus: 8,
@@ -134,6 +137,7 @@ export const PRODUCT_TOPICS = [
     topicCluster: "floor-care",
     imageQuery: "robot vacuum smart home",
     liveData: true,
+    evergreen: true,
     seasons: ["spring", "summer"],
     peakMonths: [3, 4, 5, 6],
     peakMonthBonus: 7,
@@ -160,6 +164,7 @@ export const PRODUCT_TOPICS = [
     category: "home-appliances",
     imageQuery: "HEPA air purifier product photo",
     liveData: false,
+    evergreen: true,
     seasons: ["spring", "summer", "winter"],
     peakMonths: [3, 4, 5, 6],
     peakMonthBonus: 7,
@@ -285,6 +290,20 @@ export const PRODUCT_TOPICS = [
     angle: "electric blankets and heated mattress pads: safety certifications, timers, and wash care",
   },
   // ── IT / 모바일 ──
+  {
+    id: "flagship-smartphones",
+    taxonomyGroup: "IT/모바일",
+    category: "smartphones",
+    imageQuery: "flagship smartphone comparison desk",
+    liveData: true,
+    evergreen: true,
+    seasons: ALL_SEASONS,
+    peakMonths: [2, 3, 6, 7, 8, 9, 11, 12],
+    peakMonthBonus: 6,
+    allowedFormats: ["head-to-head", "buying-guide", "explainer"],
+    angle:
+      "flagship smartphone deep-dive: name 2–3 specific current models (Galaxy S / iPhone Pro / Pixel generation) — chipset, camera stacks, battery, and who should upgrade",
+  },
   {
     id: "wireless-earbuds",
     taxonomyGroup: "IT/모바일",
@@ -476,5 +495,19 @@ export const PRODUCT_TOPICS = [
     angle: "home IP cameras: resolution, local vs cloud storage, and privacy features",
   },
 ];
+
+for (const topic of PRODUCT_TOPICS) {
+  if (topic.taxonomyGroup?.startsWith("IT/") && topic.id !== "action-cameras") {
+    topic.evergreen = true;
+  }
+  if (
+    topic.id === "television" ||
+    topic.id === "robot-vacuums" ||
+    topic.id === "air-purifiers" ||
+    topic.id === "cordless-vacuums"
+  ) {
+    topic.evergreen = true;
+  }
+}
 
 export const POST_TOPIC_IDS = new Set(PRODUCT_TOPICS.map((t) => t.id));
