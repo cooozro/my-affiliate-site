@@ -1,7 +1,7 @@
 {
-  "dateKst": "2026-08-11",
-  "scannedAt": "2026-08-11T02:23:18.338Z",
-  "postsScanned": 56,
+  "dateKst": "2026-08-12",
+  "scannedAt": "2026-08-12T04:36:59.064Z",
+  "postsScanned": 57,
   "autoRepairCount": 32,
   "autoRepairs": [
     {
@@ -127,6 +127,22 @@
       ]
     }
   ],
-  "manualReviewCount": 0,
-  "manualReview": []
+  "manualReviewCount": 1,
+  "manualReview": [
+    {
+      "order": 1,
+      "slug": "welcome",
+      "phase": "publish",
+      "issues": [
+        "welcome: never-publish (admin/internal) — cannot go live"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/welcome",
+        "ko": "https://www.aipick.shop/ko/blog/welcome",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/welcome?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/welcome?locale=ko"
+      }
+    }
+  ]
 }

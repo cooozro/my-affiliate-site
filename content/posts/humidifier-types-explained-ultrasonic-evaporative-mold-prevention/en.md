@@ -22,7 +22,7 @@ coverImageAltKo: 실내의 가습기
 coverImageCredit: Photo by asundermeier / Pixabay
 coverImageProvider: pixabay
 updatedAt: '2026-08-12T04:34:10.542Z'
-publishedAt: '2026-08-12T13:33:56.000Z'
+publishedAt: '2026-08-12T04:33:58.635Z'
 ---
 ## Editorial Overview
 

@@ -848,40 +848,25 @@
     "head-to-head",
     "buying-guide",
     "scenario-guide",
-    "buying-guide"
+    "buying-guide",
+    "head-to-head"
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
-    "at": "2026-08-12T04:33:56.530Z",
-    "issueCount": 3,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (3min past slot, KST 2026-08-12)",
-        "severity": "warning"
-      },
-      {
-        "code": "homepage-featured-mismatch",
-        "message": "Home featured is 2026-summer-heat-bundle-buying-guide, expected latest adsense-seo-checklist",
-        "severity": "warning"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1226min",
-        "severity": "warning"
-      }
-    ],
+    "at": "2026-08-12T04:35:22.979Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/en.md: publishedAt 2026-08-12T13:33:56.000Z → 2026-08-12T04:33:58.635Z",
+      "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/ko.md: publishedAt 2026-08-12T13:33:56.000Z → 2026-08-12T04:33:58.635Z"
     ]
   },
-  "lastDailyContentAuditKst": "2026-08-11",
+  "lastDailyContentAuditKst": "2026-08-12",
   "lastDailyContentAudit": {
-    "at": "2026-08-11T02:23:18.338Z",
-    "postsScanned": 56,
+    "at": "2026-08-12T04:36:59.064Z",
+    "postsScanned": 57,
     "autoRepairCount": 32,
-    "manualReviewCount": 0
+    "manualReviewCount": 1
   },
   "contentStrategyHistory": [
     {
@@ -987,11 +972,6 @@
   },
   "metaAngleHistory": [
     {
-      "id": "compact-footprint-appliances",
-      "type": "capacity-tier",
-      "at": "2026-07-18T03:46:36.024Z"
-    },
-    {
       "id": "under-300-cross-category",
       "type": "price-tier-cross",
       "at": "2026-07-20T00:05:21.512Z"
@@ -1085,10 +1065,14 @@
       "id": "family-3-5-person",
       "type": "household-type",
       "at": "2026-08-12T04:33:58.718Z"
+    },
+    {
+      "id": "under-300-cross-category",
+      "type": "price-tier-cross",
+      "at": "2026-08-12T04:36:59.666Z"
     }
   ],
   "formatDeck": [
-    "head-to-head",
     "checklist",
     "explainer"
   ]
