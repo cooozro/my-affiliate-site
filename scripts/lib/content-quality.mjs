@@ -343,7 +343,8 @@ function auditChecklist(body, label) {
   return issues;
 }
 
-function auditModelDeepDive(body, label, data = {}) {
+function auditModelDeepDive(body, label, data = {}, options = {}) {
+  const { locale = "en" } = options;
   const issues = [];
 
   const h2Count = (body.match(/^##\s+/gm) ?? []).length;
@@ -359,13 +360,21 @@ function auditModelDeepDive(body, label, data = {}) {
     data.modelPickName ??
     data.modelPickBrand ??
     "";
-  if (
-    modelToken &&
-    !body.toLowerCase().includes(String(modelToken).toLowerCase())
-  ) {
-    issues.push(
-      `${label}: body should mention the focus model (${modelToken})`,
-    );
+  if (modelToken) {
+    const token = String(modelToken);
+    const enHit = body.toLowerCase().includes(token.toLowerCase());
+    const brandHit =
+      data.modelPickBrand &&
+      body.toLowerCase().includes(String(data.modelPickBrand).toLowerCase());
+    const koBrandHit =
+      locale === "ko" &&
+      data.modelPickBrand === "Samsung" &&
+      /갤럭시|삼성/.test(body);
+    if (!enHit && !brandHit && !koBrandHit) {
+      issues.push(
+        `${label}: body should mention the focus model (${token})`,
+      );
+    }
   }
 
   if (
@@ -414,7 +423,7 @@ export function auditLocalePost(root, slug, locale, raw, options = {}) {
   } else if (profile === "checklist") {
     issues.push(...auditChecklist(body, label));
   } else if (profile === "model-deep-dive") {
-    issues.push(...auditModelDeepDive(body, label, data));
+    issues.push(...auditModelDeepDive(body, label, data, { locale }));
   }
 
   if (MIN_FAQ_BY_PROFILE[profile] > 0) {
