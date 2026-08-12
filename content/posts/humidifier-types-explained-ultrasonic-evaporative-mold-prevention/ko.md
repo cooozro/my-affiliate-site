@@ -1,25 +1,25 @@
 ---
 title: '초음파 vs 증발식 가습기: 작동 원리와 곰팡이 예방까지, 어떤 타입을 골라야 할까?'
 description: '초음파 가습기와 증발식 가습기의 작동 원리, 적정 물탱크 크기, 곰팡이 예방법을 상세히 분석하여 가습기 선택을 돕는 정보를 제공합니다.'
-date: '2026-08-11'
+date: '2026-08-12'
 tags:
   - 가습기
   - 초음파 가습기
   - 증발식 가습기
   - 곰팡이 방지
   - 가전제품
-draft: true
+draft: false
 contentProfile: explainer
 topicId: humidifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-11T08:07:28.582Z'
 coverImage: >-
   /images/posts/humidifier-types-explained-ultrasonic-evaporative-mold-prevention/humidifier-ultrasonic-evaporative-mold-clean-cover.jpg
 coverImageAlt: 실내의 가습기
 coverImageCredit: Photo by asundermeier / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-11T08:07:47.762Z'
+updatedAt: '2026-08-12T04:34:10.543Z'
+publishedAt: '2026-08-12T13:33:56.000Z'
 ---
 ## 편집부 개요
 
@@ -173,13 +173,11 @@ updatedAt: '2026-08-11T08:07:47.762Z'
 
 ## 관련 가이드
 
-연중 쾌적한 실내 공기를 유지하려면 다른 설명서와 구매 가이드도 참고하세요.
-
-- [2026 공기청정기 가이드: 필요에 맞는 제품 고르기](/ko/blog/2026-air-purifiers-guide)
-- [제습기 완벽 가이드: 언제, 왜 필요한가](/ko/blog/2026-dehumidifiers-guide)
-- [에어컨 없이 시원하게, 2026 최고의 선풍기 추천](/ko/blog/2026-electric-fans-buying-guide)
-- [여름철 숙면을 위한 냉감 매트리스 패드](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-
+- [전기장판 안전 인증, 타이머, 세탁 관리 — 라벨이 말하는 진짜 의미](/ko/blog/electric-blanket-safety-timers-wash-care-2026) — 전기장판 안전 인증, 타이머 기능, 세탁 규칙을 이해하기 쉽게 설명합니다. 안전하게 따뜻한 침구를 선택하고 관리하는 방법을 다룹니다.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
 ## 핵심 정리
 
 1. **기술 선택은 물 상태와 소음 허용치에 달렸습니다.** 초음파는 속삭이듯 조용하지만 센물에선 백색 분진이 생기고, 증발식은 약간 시끄럽지만 습도가 자동 조절되고 흰 가루가 없습니다.

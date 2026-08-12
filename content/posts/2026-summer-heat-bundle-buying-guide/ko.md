@@ -16,7 +16,7 @@ topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-08-11T08:04:01.612Z'
+updatedAt: '2026-08-12T04:34:10.514Z'
 coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
 coverImageAlt: 선풍기
 coverImageAltKo: 선풍기
@@ -210,12 +210,11 @@ publishedAt: '2026-08-11T08:04:01.612Z'
 
 ## 관련 가이드
 
-- [2026 선풍기 구매 가이드](/ko/blog/2026-electric-fans-buying-guide)
-- [2026 제습기 가이드](/ko/blog/2026-dehumidifiers-guide)
-- [2026 에어프라이어 체크리스트](/ko/blog/2026-air-fryers-checklist)
-- [2026 쿨링 매트리스 패드 구매 가이드](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-- [2026 탁상용 제빙기 구매 가이드](/ko/blog/2026-countertop-ice-makers-buying-guide)
-
+- [여름 주방 더위·방학 간식, 에어프라이어 용량·와트·세척 7가지 체크](/ko/blog/2026-air-fryers-checklist) — 에어프라이어 구매 전 7항목 — 바스켓 리터·와트·열, 프리셋 온도, 논스틱 코팅, 식기세척기 호환, 카운터 여유, 오븐과 역할 겹침. 폭염·방학철 주방 사용…
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
+- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용](/ko/blog/2026-countertop-ice-makers-buying-guide) — 여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.
 ## 구매 전 다섯 가지 확인 사항
 
 1. **방 크기를 측정하세요.** 냉방 및 제습 용량은 BTU와 핀트로 표시됩니다. 너무 작은 제품은 따라가지 못하고, 너무 큰 제품은 에너지를 낭비합니다.

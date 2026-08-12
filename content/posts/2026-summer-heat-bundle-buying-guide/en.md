@@ -16,7 +16,7 @@ topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-08-11T08:04:01.612Z'
+updatedAt: '2026-08-12T04:34:10.511Z'
 coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
 coverImageAlt: electric fan
 coverImageAltKo: 선풍기
@@ -210,12 +210,11 @@ Portable ACs are easier to install and can be moved from room to room, but they'
 
 ## Related guides
 
-- [2026 Electric Fans Buying Guide](/en/blog/2026-electric-fans-buying-guide)
-- [2026 Dehumidifiers Guide](/en/blog/2026-dehumidifiers-guide)
-- [2026 Air Fryers Checklist](/en/blog/2026-air-fryers-checklist)
-- [2026 Cooling Mattress Pads Buying Guide](/en/blog/2026-cooling-mattress-pads-buying-guide)
-- [2026 Countertop Ice Makers Buying Guide](/en/blog/2026-countertop-ice-makers-buying-guide)
-
+- [Air Fryer Checklist: Capacity, Wattage, and Cleanup Before Summer Kitchen Heat](/en/blog/2026-air-fryers-checklist) — Seven air fryer checks before summer — basket liters, wattage, presets, nonstick coating,…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave Sleep](/en/blog/2026-cooling-mattress-pads-buying-guide) — Active water, forced-air, and passive cooling toppers compared for heatwave nights — with…
+- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — Five electric fans for hot bedrooms and WFH rooms — airflow CFM, sleep noise in dB, watta…
+- [Countertop Ice Makers for Small Kitchens: Nugget vs Bullet, Output, and 3-Year Cost](/en/blog/2026-countertop-ice-makers-buying-guide) — Summer apartment ice makers compared — nugget vs bullet ice, lbs per day, tank vs continu…
 ## Five checks before you buy
 
 1. **Measure your room size.** Cooling and dehumidifying capacity is rated in BTUs and pints. A unit too small won't keep up; too large wastes energy.
