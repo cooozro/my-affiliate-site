@@ -23,7 +23,7 @@ coverImageAlt: ceramic vs oil-filled space in a home interior
 coverImageAltKo: 실내의 ceramic vs oil-filled space
 coverImageCredit: Photo by stevepb / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-12T06:18:18.224Z'
+updatedAt: '2026-08-12T06:29:03.339Z'
 ---
 ## Editorial Overview
 
