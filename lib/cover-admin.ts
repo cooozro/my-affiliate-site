@@ -100,6 +100,10 @@ function adminCoverPreviewUrl(
   coverStatus: CoverStatus,
 ): string | undefined {
   if (!coverImage.startsWith("/")) return undefined;
+  // Draft/admin: prefer GitHub raw — CDN bundle lags until Vercel redeploy.
+  if (usesRemotePostStore() && coverStatus !== "missing" && coverStatus !== "no-meta") {
+    return githubCoverPreviewUrl(coverImage, Date.now());
+  }
   if (coverStatus === "ok") {
     return `${siteConfig.url}${coverImage}`;
   }
