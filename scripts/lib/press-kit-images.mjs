@@ -287,8 +287,8 @@ export async function discoverPressKitImages(model, options = {}) {
     images.push({
       url,
       role: roles[images.length] ?? "detail",
-      altHint: `${brand} ${name} official press kit product photo`,
-      altHintKo: `${brand} ${name} 공식 프레스킷 제품컷`,
+      altHint: `${brand} ${name} official press kit smartphone product photo`,
+      altHintKo: `${brand} ${name} 공식 프레스킷 스마트폰 제품컷`,
     });
     if (images.length >= count) break;
   }
@@ -335,8 +335,8 @@ async function scrapeAppleNewsroomImages(galleryUrl, brand, name) {
     return uniq.map((url, i) => ({
       url,
       role: roles[i] ?? "detail",
-      altHint: `${brand} ${name} official Apple Newsroom press photo`,
-      altHintKo: `${brand} ${name} 애플 뉴스룸 공식 프레스 사진`,
+      altHint: `${brand} ${name} official Apple Newsroom smartphone press photo`,
+      altHintKo: `${brand} ${name} 애플 뉴스룸 공식 스마트폰 프레스 사진`,
     }));
   } catch {
     return [];
@@ -445,10 +445,10 @@ export async function fetchPressKitImages(slug, model, options = {}) {
 
       const altEn =
         img.altHint ??
-        `${entry.brand} ${entry.modelName} official press kit product photo`;
+        `${entry.brand} ${entry.modelName} official press kit smartphone product photo`;
       const altKo =
         img.altHintKo ??
-        `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 제품컷`;
+        `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 스마트폰 제품컷`;
 
       console.log(`Press-kit image: ${slug} ← ${img.url.slice(0, 90)}…`);
 
