@@ -51,5 +51,22 @@
     "postsScanned": 58,
     "autoRepairCount": 32,
     "manualReviewCount": 3
-  }
+  },
+  "formatDeck": [
+    "scenario-guide",
+    "checklist",
+    "explainer",
+    "model-deep-dive",
+    "head-to-head"
+  ],
+  "formatHistory": [
+    "buying-guide"
+  ],
+  "metaAngleHistory": [
+    {
+      "id": "summer-heat-bundle",
+      "type": "use-case-bundle",
+      "at": "2026-08-13T02:53:50.046Z"
+    }
+  ]
 }
