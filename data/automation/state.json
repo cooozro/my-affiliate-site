@@ -852,12 +852,26 @@
   ],
   "roadmapPhase": "tier2-first-pass",
   "lastHealthCheck": {
+<<<<<<< Updated upstream
     "at": "2026-08-13T00:41:27.201Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "stale-cursor-replenish",
         "message": "Cursor replenish pending 1199min",
+=======
+    "at": "2026-08-11T06:18:20.509Z",
+    "issueCount": 2,
+    "issues": [
+      {
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (1 deferred)",
+        "severity": "warning"
+      },
+      {
+        "code": "homepage-featured-mismatch",
+        "message": "Home featured is electric-blanket-safety-timers-wash-care-2026, expected latest adsense-seo-checklist",
+>>>>>>> Stashed changes
         "severity": "warning"
       }
     ],

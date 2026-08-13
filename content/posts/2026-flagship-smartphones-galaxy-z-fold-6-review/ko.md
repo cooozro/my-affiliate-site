@@ -21,21 +21,22 @@ coverImage: >-
   /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/foldable-smartphone-open-product-photo-flagship--cover.jpg
 coverImageAlt: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
 coverImageAltKo: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
-coverImageCredit: Photo by tookapic / Pixabay
+coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
 updatedAt: '2026-08-12T08:43:50.639Z'
-coverImageAssetId: 933326
+coverImageAssetId: 8509637
 coverImageSourceUrl: >-
-  https://pixabay.com/get/g23827624d8d36d300315eac5efaad364e467bbaf42699cddc8fe39927bb468517fc6232df031462566b3e65794479c180a6c8e2f29023eed35e8dd64d7044998_1280.jpg
+  https://pixabay.com/get/gb348f32be3fc69ea1186907704c285810ea468f44f147d89f8e4dc0b16e50606cfbce5b2a45b59fa39ef79a0dc7d77c920801cb020cdf1d9b54d7475cdd9a1e3_1280.jpg
 imageSearchKeywords:
   - foldable smartphone open product photo
   - flagship smartphone on desk lifestyle
   - modern smartphone hands-on review
   - Samsung foldable smartphone open product photo
   - product photography electronics lifestyle
+pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6'
 ---
 ## 편집부 개요
 
@@ -59,10 +60,9 @@ imageSearchKeywords:
 
 ## 한눈에 보는 스펙
 
-
 ![Samsung 갤럭시 Z 폴드6 편집부 리뷰용 디테일 컷 (스톡 일러스트 사진)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-2-9f19aa.jpg)
 
-*이미지: Photo by Karolina Grabowska www.kaboompics.com / Pexels — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
+*이미지: Photo by donterase / Pixabay — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
 
 | 항목 | 삼성 갤럭시 Z 폴드6 |
 | --- | --- |
@@ -79,7 +79,6 @@ imageSearchKeywords:
 | 가격 (정가) | $1,899.99 (≈ {{krw:1899.99}}) |
 
 ## 디자인과 실사용
-
 
 ![Samsung 갤럭시 Z 폴드6 실사용 라이프스타일 장면 (스톡 일러스트 사진)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
 

@@ -23,21 +23,22 @@ coverImageAlt: >-
   Samsung Galaxy Z Fold6 product cut for editorial deep-dive review (stock photo
   illustration) — budget smartphone on a desk
 coverImageAltKo: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
-coverImageCredit: Photo by tookapic / Pixabay
+coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
 updatedAt: '2026-08-12T08:43:50.639Z'
-coverImageAssetId: 933326
+coverImageAssetId: 8509637
 coverImageSourceUrl: >-
-  https://pixabay.com/get/g23827624d8d36d300315eac5efaad364e467bbaf42699cddc8fe39927bb468517fc6232df031462566b3e65794479c180a6c8e2f29023eed35e8dd64d7044998_1280.jpg
+  https://pixabay.com/get/gb348f32be3fc69ea1186907704c285810ea468f44f147d89f8e4dc0b16e50606cfbce5b2a45b59fa39ef79a0dc7d77c920801cb020cdf1d9b54d7475cdd9a1e3_1280.jpg
 imageSearchKeywords:
   - foldable smartphone open product photo
   - flagship smartphone on desk lifestyle
   - modern smartphone hands-on review
   - Samsung foldable smartphone open product photo
   - product photography electronics lifestyle
+pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6'
 ---
 ## Editorial Overview
 
@@ -77,7 +78,6 @@ This review is editorial research cross-checking public manufacturer specs, list
 
 ## Design & everyday use
 
-
 ![Samsung Galaxy Z Fold6 in a real-world lifestyle setting (stock photo illustration)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
 
 *Image: Photo by Arina Krasnikova / Pexels — copyright-safe stock (category illustration).*
@@ -86,10 +86,9 @@ The Z Fold6 feels surprisingly refined. Closed, it’s a chunky but usable 6.3�
 
 ## Core performance
 
-
 ![Samsung Galaxy Z Fold6 product detail angle for editorial review (stock photo illustration)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-2-9f19aa.jpg)
 
-*Image: Photo by Karolina Grabowska www.kaboompics.com / Pexels — copyright-safe stock (category illustration).*
+*Image: Photo by donterase / Pixabay — copyright-safe stock (category illustration).*
 
 Qualcomm’s Snapdragon 8 Gen 3 for Galaxy chews through everything. Multitasking — running three apps side‑by‑side — feels fluid. **Analysis takeaway:** Geekbench 6 scores (single about 2,200, multi about 7,000) put it on par with 2025 flagships. The 50MP main camera captures vibrant shots, though low‑light performance trails the iPhone 16 Pro Max’s larger sensor. The under‑display camera is serviceable for video calls but not for serious selfies.
 

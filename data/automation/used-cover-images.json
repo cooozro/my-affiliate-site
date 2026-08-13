@@ -214,15 +214,6 @@
       "registeredAt": "2026-08-13T00:41:18.976Z"
     },
     {
-      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
-      "url": "https://pixabay.com/get/g23827624d8d36d300315eac5efaad364e467bbaf42699cddc8fe39927bb468517fc6232df031462566b3e65794479c180a6c8e2f29023eed35e8dd64d7044998_1280.jpg",
-      "assetKey": "pixabay:933326",
-      "hash": "6a8566acba778f8a51814fa9326a73d9a982c2bd025569453abae36922b0e0f6",
-      "contentHash": "6a8566acba778f8a51814fa9326a73d9a982c2bd025569453abae36922b0e0f6",
-      "provider": "pixabay",
-      "registeredAt": "2026-08-13T00:41:18.977Z"
-    },
-    {
       "slug": "2026-gaming-consoles-scenario-guide",
       "url": "https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg",
       "assetKey": "pexels:9071502",
@@ -522,6 +513,83 @@
       "contentHash": "3bdd3802997580c60e26cbb5e9ee6c72c20603d4734b3d3cb36ee7b3b5832095",
       "provider": null,
       "registeredAt": "2026-08-13T00:41:19.004Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:50:25.920Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://pixabay.com/get/g23827624d8d36d300315eac5efaad364e467bbaf42699cddc8fe39927bb468517fc6232df031462566b3e65794479c180a6c8e2f29023eed35e8dd64d7044998_1280.jpg",
+      "assetKey": "pixabay:933326",
+      "hash": null,
+      "contentHash": null,
+      "provider": "pixabay",
+      "registeredAt": "2026-08-13T00:50:25.947Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:50:25.976Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://pixabay.com/get/gb348f32be3fc69ea1186907704c285810ea468f44f147d89f8e4dc0b16e50606cfbce5b2a45b59fa39ef79a0dc7d77c920801cb020cdf1d9b54d7475cdd9a1e3_1280.jpg",
+      "assetKey": "pixabay:8509637",
+      "hash": "eb265e08904b48e7224328e4165949b881f5329ad1f4e0cee508172f07f8feca",
+      "contentHash": "eb265e08904b48e7224328e4165949b881f5329ad1f4e0cee508172f07f8feca",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-13T00:50:37.872Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:50:37.940Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://images.pexels.com/photos/5712152/pexels-photo-5712152.jpeg",
+      "assetKey": "pexels:5712152",
+      "hash": "14829fa497b680190ecf116e6f407f2e0c2ea937d9830997d6237f00a33938e4",
+      "contentHash": "14829fa497b680190ecf116e6f407f2e0c2ea937d9830997d6237f00a33938e4",
+      "provider": "pexels",
+      "registeredAt": "2026-08-13T00:50:42.796Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://pixabay.com/get/g877a49b00c2986f7c3c377a8eb57e265809c4bf6b4a230fbd365dd647cd620664ecc56c44f36d4b18cadd3929f92c3ba73a0cf0e282db6fff74e57a99828465e_1280.jpg",
+      "assetKey": "pixabay:789625",
+      "hash": "e10cee9b8ae4a48fbf3c95bbea5f32029664e6e68eb9fd545c0cedce1c8a0ae4",
+      "contentHash": "e10cee9b8ae4a48fbf3c95bbea5f32029664e6e68eb9fd545c0cedce1c8a0ae4",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-13T00:50:43.131Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:50:43.535Z"
+    },
+    {
+      "slug": "press-kit-smoke-iphone16pro",
+      "url": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/apple-iphone-16-pro-hero-geo-240909_inline.jpg.large.jpg",
+      "assetKey": "press-kit:d1afea3f14",
+      "hash": "83a7c5bd696025b620c31abf97d850fcf2754fd970416f21f5f17d4260c3abe3",
+      "contentHash": "83a7c5bd696025b620c31abf97d850fcf2754fd970416f21f5f17d4260c3abe3",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-13T00:50:44.263Z"
     }
   ]
 }
