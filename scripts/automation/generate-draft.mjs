@@ -3,6 +3,12 @@ import { chatJsonCompletion } from "./llm-chat.mjs";
 import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
+import { fetchAdditionalImages } from "../lib/cover-image.mjs";
+import {
+  buildModelDeepDiveAlts,
+  buildModelDeepDiveSearchQueries,
+  insertModelDeepDiveBodyImages,
+} from "../lib/model-deep-dive-images.mjs";
 import {
   countDrafts,
   slugExists,
@@ -281,8 +287,62 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     topic,
     topicId: topic.id,
   };
+
+  // Model deep-dive: bias cover search toward category product-cut stock (not OEM scrapes).
+  if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+    const queries = buildModelDeepDiveSearchQueries(modelPick.primary, topic);
+    imageInput.imageQuery = queries[0];
+    imageInput.imageSearchKeywords = queries;
+    imageInput.tags = [
+      ...(imageInput.tags ?? []),
+      modelPick.primary.brand,
+      modelPick.primary.name,
+      "product photo",
+    ];
+  }
+
   const imageContext = resolveImageContext(slug, imageInput);
   const imageMeta = await fetchCoverImage(slug, imageInput);
+
+  let enBody = article.en.body;
+  let koBody = article.ko.body;
+
+  if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+    const bodyQueries = buildModelDeepDiveSearchQueries(modelPick.primary, topic);
+    const bodyInput = {
+      ...imageInput,
+      imageQuery: bodyQueries[1] ?? bodyQueries[0],
+      imageSearchKeywords: bodyQueries,
+    };
+    try {
+      const extras = await fetchAdditionalImages(slug, bodyInput, {
+        count: 2,
+        filenamePrefix: "body",
+        skipCurated: true,
+      });
+      if (extras.length > 0) {
+        const roles = ["lifestyle", "detail"];
+        const figures = extras.map((img, i) => {
+          const alts = buildModelDeepDiveAlts(
+            modelPick.primary,
+            topic.id,
+            roles[i] ?? "detail",
+          );
+          return {
+            path: img.path,
+            altEn: alts.en,
+            altKo: alts.ko,
+            credit: img.credit,
+          };
+        });
+        enBody = insertModelDeepDiveBodyImages(enBody, figures, "en");
+        koBody = insertModelDeepDiveBodyImages(koBody, figures, "ko");
+        console.log(`Model-deep-dive body images: ${figures.length}`);
+      }
+    } catch (err) {
+      console.warn(`Body image enrich skipped: ${err.message}`);
+    }
+  }
 
   const shared = {
     date,
@@ -295,6 +355,19 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     ...(imageMeta ?? {}),
     ...(imageMeta
       ? (() => {
+          if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+            const alts = buildModelDeepDiveAlts(
+              modelPick.primary,
+              topic.id,
+              "cover",
+            );
+            // Merge product anchors so alt gate passes (phone / smartphone etc.).
+            const base = buildCoverAlts(imageContext);
+            return {
+              coverImageAlt: `${alts.en} — ${base.en}`.slice(0, 200),
+              coverImageAltKo: `${alts.ko} — ${base.ko}`.slice(0, 200),
+            };
+          }
           const alts = buildCoverAlts(imageContext);
           return { coverImageAlt: alts.en, coverImageAltKo: alts.ko };
         })()
@@ -308,8 +381,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       : {}),
   };
 
-  writePost(slug, "en", buildFrontmatter("en", article.en, shared), article.en.body);
-  writePost(slug, "ko", buildFrontmatter("ko", article.ko, shared), article.ko.body);
+  writePost(slug, "en", buildFrontmatter("en", article.en, shared), enBody);
+  writePost(slug, "ko", buildFrontmatter("ko", article.ko, shared), koBody);
 
   const issues = validatePostFiles(slug, {
     phase: "draft",

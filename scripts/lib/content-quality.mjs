@@ -395,6 +395,14 @@ function auditModelDeepDive(body, label, data = {}, options = {}) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
+  const bodyImgs = (body.match(/!\[[^\]]*]\(\/images\/posts\/[^)]+\)/g) ?? [])
+    .length;
+  if (bodyImgs < 1) {
+    issues.push(
+      `${label}: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)`,
+    );
+  }
+
   return issues;
 }
 

@@ -529,3 +529,95 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
     return null;
   }
 }
+
+/**
+ * Fetch additional in-body stock images (same Pexels/Pixabay pipeline).
+ * Used by model-deep-dive for 1–2 product-cut / lifestyle figures.
+ *
+ * @param {string} slug
+ * @param {string | Record<string, unknown>} queryOrContext
+ * @param {{ count?: number, filenamePrefix?: string, rootDir?: string, provider?: string, skipCurated?: boolean }} [options]
+ * @returns {Promise<Array<{ path: string, credit: string, provider: string, assetId: string|number, sourceUrl: string, searchQuery: string }>>}
+ */
+export async function fetchAdditionalImages(slug, queryOrContext, options = {}) {
+  const count = Math.max(1, Math.min(3, options.count ?? 2));
+  const prefix = options.filenamePrefix ?? "body";
+  const ctx = resolveImageContext(slug, queryOrContext);
+  const rootDir = workRoot(options);
+  let registry = syncImageRegistryFromPosts();
+
+  const providers = allProviders(options.provider);
+  if (providers.length === 0) {
+    console.warn("No image API keys — skip additional body images");
+    return [];
+  }
+
+  const { pool } = await collectCandidatePool(slug, ctx, registry, {
+    ...options,
+    skipCurated: options.skipCurated ?? true,
+  });
+
+  if (pool.length === 0) {
+    console.warn(`No body-image candidates for ${slug}`);
+    return [];
+  }
+
+  const results = [];
+  const usedKeys = new Set();
+
+  for (let i = 0; i < count; i++) {
+    const remaining = pool.filter((c) => !usedKeys.has(c.assetKey));
+    if (remaining.length === 0) break;
+
+    const winner = await pickWinnerFromPool(remaining, ctx, registry, `${slug}-body-${i}`, {
+      ...options,
+      skipCurated: true,
+    });
+    if (!winner) break;
+    usedKeys.add(winner.assetKey);
+
+    const filename = `${prefix}-${i + 1}-${hashSlug(slug, `body:${i}`).toString(16).slice(0, 6)}.jpg`;
+    try {
+      const downloaded = await downloadToSlug(slug, winner.imageUrl, filename, rootDir);
+      if (
+        isImageUsed(registry, {
+          hash: downloaded.hash,
+          contentHash: hashImageContent(downloaded.buffer),
+        })
+      ) {
+        fs.unlinkSync(
+          path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
+        );
+        continue;
+      }
+
+      registerUsedImage(registry, {
+        slug,
+        url: winner.imageUrl,
+        assetKey: winner.assetKey,
+        hash: downloaded.hash,
+        contentHash: hashImageContent(downloaded.buffer),
+        provider: winner.provider,
+      });
+      saveImageRegistry(registry);
+      registry = loadImageRegistry();
+
+      console.log(
+        `Body image ${i + 1}: ${slug} via ${winner.provider} id=${winner.assetId}`,
+      );
+
+      results.push({
+        path: downloaded.relativePath,
+        credit: winner.credit,
+        provider: winner.provider,
+        assetId: winner.assetId,
+        sourceUrl: winner.imageUrl,
+        searchQuery: winner.searchQuery,
+      });
+    } catch (error) {
+      console.warn(`Body image download failed: ${error.message}`);
+    }
+  }
+
+  return results;
+}
