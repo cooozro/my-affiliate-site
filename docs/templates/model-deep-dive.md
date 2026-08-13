@@ -25,8 +25,8 @@ Use for **`contentProfile: model-deep-dive`**. One **named retail model** per ar
 
 **Priority 1 — Official Press Kit / Media Gallery** (preferred for named models)
 
-- Use manufacturer **press release / media gallery** assets when curated in `scripts/lib/press-kit-images.mjs` (Samsung Mobile Press, Apple Newsroom, LG Newsroom, etc.).
-- Only allowlisted newsroom hosts are downloaded — never scrape retail storefronts.
+- Pipeline **auto-discovers** manufacturer press images (Serper → allowlisted newsroom hosts: Samsung Mobile Press / Newsroom CDN, Apple Newsroom, LG, Sony, …).
+- Only allowlisted hosts are downloaded — never scrape retail storefronts.
 - Credit: “Official press image courtesy of {Brand} (Press Kit / Media Gallery)”.
 - Frontmatter may include `pressKitGallery` linking to the public media page.
 

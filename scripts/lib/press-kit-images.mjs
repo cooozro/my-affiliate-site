@@ -3,13 +3,10 @@
  *
  * Policy:
  * - ONLY download from allowlisted newsroom / press hosts (editorial press kits).
+ * - Auto-discover via Serper image search (site:newsroom) when curated URLs empty.
  * - Never scrape retail storefronts or random OEM marketing CDNs.
  * - Always attribute: brand + "Official Press Kit / Media Gallery".
- * - Prefer press-kit product cuts for cover + first body figure; fall back to
- *   Pexels/Pixabay stock when no curated URL is available.
- *
- * Editors: add entries under PRESS_KIT_BY_MODEL_ID when a new launch has a
- * public press gallery. Prefer direct image URLs from Newsroom "Download media".
+ * - Prefer press-kit product cuts for cover + body; fall back to Pexels/Pixabay stock.
  */
 
 import fs from "fs";
@@ -18,7 +15,6 @@ import crypto from "crypto";
 import {
   hashBuffer,
   hashImageContent,
-  isImageUsed,
   loadImageRegistry,
   registerUsedImage,
   saveImageRegistry,
@@ -34,9 +30,10 @@ export const PRESS_KIT_ALLOWED_HOST_SUFFIXES = [
   "api.samsungmobilepress.com",
   "img.global.news.samsung.com",
   "news.lg.com",
-  "www.lgnewsroom.com",
+  "lgnewsroom.com",
   "news.sony.com",
-  "www.sony.com",
+  "sony.com",
+  "playstation.com",
   "newsroom.ibm.com",
   "news.microsoft.com",
   "blogs.nvidia.com",
@@ -44,6 +41,7 @@ export const PRESS_KIT_ALLOWED_HOST_SUFFIXES = [
   "newsroom.intel.com",
   "corporate.dyson.com",
   "news.dyson.com",
+  "media.dyson.com",
 ];
 
 /**
@@ -64,11 +62,19 @@ export const PRESS_KIT_ALLOWED_HOST_SUFFIXES = [
  * }} PressKitEntry
  */
 
-/**
- * Curated press-kit assets keyed by popular-model-picks `id`.
- * Direct image URLs must be from allowlisted hosts (Newsroom download / media CDN).
- * @type {Record<string, PressKitEntry>}
- */
+const BRAND_SITE_FILTERS = {
+  Samsung:
+    "site:news.samsung.com OR site:samsungmobilepress.com OR site:img.global.news.samsung.com",
+  Apple: "site:apple.com/newsroom",
+  LG: "site:news.lg.com OR site:lgnewsroom.com",
+  Sony: "site:sony.com OR site:news.sony.com OR site:playstation.com",
+  Microsoft: "site:news.microsoft.com",
+  Google: "site:blog.google OR site:store.google.com",
+  Dyson: "site:dyson.com OR site:news.dyson.com",
+  Nintendo: "site:nintendo.com",
+};
+
+/** Optional hand-curated seeds (auto-discover fills the rest). */
 export const PRESS_KIT_BY_MODEL_ID = {
   "galaxy-z-fold-6": {
     brand: "Samsung",
@@ -77,10 +83,7 @@ export const PRESS_KIT_BY_MODEL_ID = {
     galleryUrl: "https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6",
     licenseNote:
       "Samsung Mobile Press / Newsroom media assets for editorial coverage of Galaxy Z Fold6.",
-    images: [
-      // Gallery page is public; add direct CDN URLs here when editors copy
-      // "Download" links from Samsung Mobile Press (allowlisted host).
-    ],
+    images: [],
   },
   "galaxy-s25-ultra": {
     brand: "Samsung",
@@ -98,26 +101,7 @@ export const PRESS_KIT_BY_MODEL_ID = {
       "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
     licenseNote:
       "Apple Newsroom press images — editorial use with Apple attribution.",
-    images: [
-      {
-        url: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg",
-        role: "cover",
-        altHint: "Apple iPhone 16 Pro and iPhone 16 Pro Max official press product shot",
-        altHintKo: "애플 아이폰 16 Pro·Pro Max 공식 프레스 제품컷",
-      },
-      {
-        url: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-finish-lineup-240909_big.jpg.large.jpg",
-        role: "lifestyle",
-        altHint: "iPhone 16 Pro finish lineup official Apple Newsroom image",
-        altHintKo: "아이폰 16 Pro 색상 라인업 공식 프레스 이미지",
-      },
-      {
-        url: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-camera-system-240909_inline.jpg.large.jpg",
-        role: "detail",
-        altHint: "iPhone 16 Pro rear camera system official press close-up",
-        altHintKo: "아이폰 16 Pro 후면 카메라 공식 프레스 클로즈업",
-      },
-    ],
+    images: [],
   },
   "iphone-16-pro-max": {
     brand: "Apple",
@@ -127,20 +111,7 @@ export const PRESS_KIT_BY_MODEL_ID = {
       "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
     licenseNote:
       "Apple Newsroom press images — editorial use with Apple attribution.",
-    images: [
-      {
-        url: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg",
-        role: "cover",
-        altHint: "Apple iPhone 16 Pro Max official press product shot",
-        altHintKo: "애플 아이폰 16 Pro Max 공식 프레스 제품컷",
-      },
-      {
-        url: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-finish-lineup-240909_big.jpg.large.jpg",
-        role: "lifestyle",
-        altHint: "iPhone 16 Pro Max finish lineup official Apple Newsroom image",
-        altHintKo: "아이폰 16 Pro Max 색상 라인업 공식 프레스 이미지",
-      },
-    ],
+    images: [],
   },
   "macbook-air-m3": {
     brand: "Apple",
@@ -149,30 +120,6 @@ export const PRESS_KIT_BY_MODEL_ID = {
     galleryUrl:
       "https://www.apple.com/newsroom/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/",
     licenseNote: "Apple Newsroom press images — editorial use with Apple attribution.",
-    images: [
-      {
-        url: "https://www.apple.com/newsroom/images/2024/03/apple-unveils-the-new-13-and-15-inch-macbook-air-with-the-powerful-m3-chip/article/Apple-MacBook-Air-2-up-240304_big.jpg.large.jpg",
-        role: "cover",
-        altHint: "MacBook Air with M3 chip official Apple Newsroom product shot",
-        altHintKo: "M3 맥북 에어 공식 프레스 제품컷",
-      },
-    ],
-  },
-  "airpods-pro-2": {
-    brand: "Apple",
-    modelName: "AirPods Pro (2nd gen)",
-    modelNameKo: "에어팟 프로 2세대",
-    galleryUrl:
-      "https://www.apple.com/newsroom/2023/09/apple-announces-the-advanced-new-airpods-pro-2nd-generation/",
-    licenseNote: "Apple Newsroom press images — editorial use with Apple attribution.",
-    images: [],
-  },
-  "ps5-slim": {
-    brand: "Sony",
-    modelName: "PlayStation 5 Slim",
-    modelNameKo: "플레이스테이션 5 슬림",
-    galleryUrl: "https://www.playstation.com/en-us/ps5/",
-    licenseNote: "Prefer Sony Interactive press assets when URL is allowlisted.",
     images: [],
   },
 };
@@ -180,6 +127,44 @@ export const PRESS_KIT_BY_MODEL_ID = {
 export function getPressKitEntry(modelId) {
   if (!modelId) return null;
   return PRESS_KIT_BY_MODEL_ID[modelId] ?? null;
+}
+
+/** Build a synthetic entry from model pick when not in the seed catalog. */
+export function resolvePressKitEntry(model) {
+  const seeded = getPressKitEntry(model?.id);
+  if (seeded) {
+    return {
+      ...seeded,
+      modelName: model?.name || seeded.modelName,
+      modelNameKo: model?.nameKo || seeded.modelNameKo,
+      brand: model?.brand || seeded.brand,
+    };
+  }
+  if (!model?.brand || !model?.name) return null;
+  return {
+    brand: model.brand,
+    modelName: model.name,
+    modelNameKo: model.nameKo || model.name,
+    galleryUrl: guessGalleryUrl(model.brand, model.name),
+    licenseNote: `${model.brand} official press / media gallery (auto-discovered).`,
+    images: [],
+  };
+}
+
+function guessGalleryUrl(brand, name) {
+  const b = String(brand).toLowerCase();
+  const slug = String(name)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  if (b.includes("samsung")) {
+    return `https://www.samsungmobilepress.com/media-assets/${slug}`;
+  }
+  if (b.includes("apple")) {
+    return "https://www.apple.com/newsroom/";
+  }
+  if (b.includes("lg")) return "https://www.lgnewsroom.com/";
+  return `https://www.google.com/search?q=${encodeURIComponent(`${brand} ${name} press kit`)}`;
 }
 
 export function isPressKitUrlAllowed(urlString) {
@@ -209,6 +194,155 @@ function hashSlug(slug, salt = "") {
   return crypto.createHash("sha256").update(`${slug}:${salt}`).digest("hex").slice(0, 10);
 }
 
+function cachePath(rootDir) {
+  return path.join(rootDir, "data/automation/press-kit-cache.json");
+}
+
+function loadCache(rootDir) {
+  const file = cachePath(rootDir);
+  if (!fs.existsSync(file)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function saveCache(rootDir, cache) {
+  const file = cachePath(rootDir);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, `${JSON.stringify(cache, null, 2)}\n`);
+}
+
+function buildSerperQuery(brand, name) {
+  const site =
+    BRAND_SITE_FILTERS[brand] ??
+    `site:${brand.toLowerCase()}.com newsroom OR press`;
+  return `${name} ${brand} official press product OR media kit ${site}`;
+}
+
+/**
+ * Auto-discover press images via Serper (Google Images) limited to newsroom hosts.
+ */
+export async function discoverPressKitImages(model, options = {}) {
+  const count = Math.max(1, Math.min(6, options.count ?? 4));
+  const rootDir = options.rootDir ?? process.cwd();
+  const brand = model?.brand;
+  const name = model?.name;
+  if (!brand || !name) return [];
+
+  const cacheKey = `${model.id || `${brand}:${name}`}`.toLowerCase();
+  const cache = loadCache(rootDir);
+  const hit = cache[cacheKey];
+  if (
+    hit?.at &&
+    Date.now() - new Date(hit.at).getTime() < 7 * 24 * 3600 * 1000 &&
+    Array.isArray(hit.images) &&
+    hit.images.length > 0
+  ) {
+    console.log(`Press-kit cache hit: ${cacheKey} (${hit.images.length})`);
+    return hit.images.slice(0, count);
+  }
+
+  const apiKey = process.env.SERPER_API_KEY?.trim();
+  if (!apiKey) {
+    console.warn("Press-kit auto-discover skipped: SERPER_API_KEY missing");
+    return [];
+  }
+
+  const q = buildSerperQuery(brand, name);
+  console.log(`Press-kit auto-discover: ${q}`);
+
+  let data;
+  try {
+    const response = await fetch("https://google.serper.dev/images", {
+      method: "POST",
+      headers: {
+        "X-API-KEY": apiKey,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ q, num: 10 }),
+    });
+    if (!response.ok) {
+      throw new Error(`Serper images ${response.status}`);
+    }
+    data = await response.json();
+  } catch (err) {
+    console.warn(`Press-kit Serper failed: ${err.message}`);
+    return [];
+  }
+
+  const roles = ["cover", "lifestyle", "detail", "detail"];
+  const seen = new Set();
+  const images = [];
+
+  for (const row of data.images ?? []) {
+    const url = row.imageUrl || row.link;
+    if (!url || !isPressKitUrlAllowed(url)) continue;
+    if (seen.has(url)) continue;
+    const w = Number(row.imageWidth || 0);
+    const h = Number(row.imageHeight || 0);
+    if (w > 0 && h > 0 && (w < 500 || h < 300)) continue;
+    seen.add(url);
+    images.push({
+      url,
+      role: roles[images.length] ?? "detail",
+      altHint: `${brand} ${name} official press kit product photo`,
+      altHintKo: `${brand} ${name} 공식 프레스킷 제품컷`,
+    });
+    if (images.length >= count) break;
+  }
+
+  if (images.length < 2 && brand === "Apple") {
+    const entry = resolvePressKitEntry(model);
+    const fromHtml = await scrapeAppleNewsroomImages(
+      entry?.galleryUrl,
+      brand,
+      name,
+    );
+    for (const img of fromHtml) {
+      if (images.some((i) => i.url === img.url)) continue;
+      images.push(img);
+      if (images.length >= count) break;
+    }
+  }
+
+  cache[cacheKey] = { at: new Date().toISOString(), query: q, images };
+  saveCache(rootDir, cache);
+  console.log(`Press-kit discovered ${images.length} allowlisted URL(s) for ${name}`);
+  return images;
+}
+
+async function scrapeAppleNewsroomImages(galleryUrl, brand, name) {
+  if (!galleryUrl || !galleryUrl.includes("apple.com/newsroom")) return [];
+  try {
+    const res = await fetch(galleryUrl, {
+      headers: {
+        "User-Agent":
+          "AIPickEditorialBot/1.0 (+https://www.aipick.shop; press-kit editorial fetch)",
+        Accept: "text/html",
+      },
+    });
+    if (!res.ok) return [];
+    const html = await res.text();
+    const urls = [
+      ...html.matchAll(
+        /https:\/\/www\.apple\.com\/newsroom\/images\/[^"'\\\s>]+\.jpg(?:\.large\.jpg)?/g,
+      ),
+    ].map((m) => m[0]);
+    const uniq = [...new Set(urls)].filter(isPressKitUrlAllowed).slice(0, 4);
+    const roles = ["cover", "lifestyle", "detail", "detail"];
+    return uniq.map((url, i) => ({
+      url,
+      role: roles[i] ?? "detail",
+      altHint: `${brand} ${name} official Apple Newsroom press photo`,
+      altHintKo: `${brand} ${name} 애플 뉴스룸 공식 프레스 사진`,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 async function downloadUrl(url, destPath) {
   const response = await fetch(url, {
     headers: {
@@ -222,12 +356,22 @@ async function downloadUrl(url, destPath) {
     throw new Error(`Press-kit download ${response.status} for ${url}`);
   }
   const contentType = String(response.headers.get("content-type") ?? "");
-  if (contentType && !contentType.startsWith("image/")) {
-    throw new Error(`Press-kit URL not image (${contentType})`);
-  }
   const buffer = Buffer.from(await response.arrayBuffer());
   if (buffer.length < 8_000) {
     throw new Error("Press-kit image too small — likely not a product cut");
+  }
+  const isJpeg = buffer[0] === 0xff && buffer[1] === 0xd8;
+  const isPng = buffer[0] === 0x89 && buffer[1] === 0x50;
+  const isWebp = buffer.slice(8, 12).toString("ascii") === "WEBP";
+  if (
+    contentType &&
+    !contentType.startsWith("image/") &&
+    contentType !== "application/octet-stream" &&
+    !isJpeg &&
+    !isPng &&
+    !isWebp
+  ) {
+    throw new Error(`Press-kit URL not image (${contentType})`);
   }
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
   fs.writeFileSync(destPath, buffer);
@@ -235,38 +379,30 @@ async function downloadUrl(url, destPath) {
 }
 
 /**
- * Download curated press-kit images for a model into public/images/posts/{slug}/.
- *
- * @param {string} slug
- * @param {{ id?: string, brand?: string, name?: string, nameKo?: string }} model
- * @param {{ count?: number, rootDir?: string, preferRoles?: string[] }} [options]
- * @returns {Promise<{
- *   entry: PressKitEntry|null,
- *   images: Array<{
- *     path: string,
- *     role: string,
- *     credit: string,
- *     creditKo: string,
- *     source: 'press-kit',
- *     sourceUrl: string,
- *     galleryUrl?: string,
- *     altEn: string,
- *     altKo: string,
- *     provider: 'press-kit',
- *     assetId: string,
- *   }>,
- * }>}
+ * Download press-kit images (curated + auto-discovered) into public/images/posts/{slug}/.
  */
 export async function fetchPressKitImages(slug, model, options = {}) {
   const count = Math.max(1, Math.min(3, options.count ?? 2));
   const rootDir = options.rootDir ?? process.cwd();
-  const entry = getPressKitEntry(model?.id);
+  const entry = resolvePressKitEntry(model);
   if (!entry) {
     return { entry: null, images: [] };
   }
 
   const preferRoles = options.preferRoles ?? ["cover", "lifestyle", "detail"];
-  const sorted = [...(entry.images ?? [])].sort((a, b) => {
+
+  let candidates = [...(entry.images ?? [])];
+  if (candidates.filter((c) => c?.url && isPressKitUrlAllowed(c.url)).length < count) {
+    const discovered = await discoverPressKitImages(model, {
+      count: Math.max(count, 4),
+      rootDir,
+    });
+    for (const d of discovered) {
+      if (!candidates.some((c) => c.url === d.url)) candidates.push(d);
+    }
+  }
+
+  const sorted = [...candidates].sort((a, b) => {
     const ai = preferRoles.indexOf(a.role ?? "detail");
     const bi = preferRoles.indexOf(b.role ?? "detail");
     return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi);
@@ -275,7 +411,7 @@ export async function fetchPressKitImages(slug, model, options = {}) {
   const usable = sorted.filter((img) => img?.url && isPressKitUrlAllowed(img.url));
   if (usable.length === 0) {
     console.log(
-      `Press kit: ${model.id} has gallery ${entry.galleryUrl} but no allowlisted direct image URLs yet`,
+      `Press kit: no allowlisted images yet for ${entry.modelName} (gallery ${entry.galleryUrl})`,
     );
     return { entry, images: [] };
   }
@@ -295,16 +431,6 @@ export async function fetchPressKitImages(slug, model, options = {}) {
     try {
       const buffer = await downloadUrl(img.url, destPath);
       const key = assetKey("press-kit", hashSlug(slug, img.url));
-      if (
-        isImageUsed(registry, {
-          hash: hashBuffer(buffer),
-          contentHash: hashImageContent(buffer),
-          assetKey: key,
-        })
-      ) {
-        // Same visual already used on another post — still OK for this model's review,
-        // but register under this slug for tracking.
-      }
 
       registerUsedImage(registry, {
         slug,
@@ -324,7 +450,7 @@ export async function fetchPressKitImages(slug, model, options = {}) {
         img.altHintKo ??
         `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 제품컷`;
 
-      console.log(`Press-kit image: ${slug} ← ${img.url.slice(0, 80)}…`);
+      console.log(`Press-kit image: ${slug} ← ${img.url.slice(0, 90)}…`);
 
       out.push({
         path: relativePath,
@@ -352,12 +478,7 @@ export async function fetchPressKitImages(slug, model, options = {}) {
   return { entry, images: out };
 }
 
-/**
- * Merge press-kit figures with stock figures (press first, then stock fill).
- * @param {Array<object>} pressImages
- * @param {Array<object>} stockFigures
- * @param {number} target
- */
+/** Merge press-kit figures with stock figures (press first, then stock fill). */
 export function mergePressAndStockFigures(pressImages, stockFigures, target = 2) {
   const merged = [];
   for (const p of pressImages ?? []) {

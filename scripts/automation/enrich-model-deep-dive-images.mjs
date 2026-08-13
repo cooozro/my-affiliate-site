@@ -9,6 +9,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
+import { loadEnvFile } from "../lib/load-env.mjs";
 import { fetchCoverImage, fetchAdditionalImages } from "../lib/cover-image.mjs";
 import {
   buildModelDeepDiveAlts,
@@ -29,11 +30,12 @@ process.chdir(siteRoot);
 
 const slug = process.argv[2];
 if (!slug) {
-  console.error("Usage: node enrich-model-deep-dive-images.mjs <slug>");
+  console.error("Usage: node enrich-model-deep-dive-images.mjs <slug> [--fresh]");
   process.exit(1);
 }
 
 ensureImageApiEnv();
+loadEnvFile();
 
 const enPath = path.join(siteRoot, "content/posts", slug, "en.md");
 const koPath = path.join(siteRoot, "content/posts", slug, "ko.md");
@@ -46,6 +48,20 @@ const model = {
   nameKo: "갤럭시 Z 폴드6",
   id: en.data.modelPickId || "galaxy-z-fold-6",
 };
+
+if (process.argv.includes("--fresh")) {
+  const cacheFile = path.join(siteRoot, "data/automation/press-kit-cache.json");
+  if (fs.existsSync(cacheFile)) {
+    try {
+      const cache = JSON.parse(fs.readFileSync(cacheFile, "utf8"));
+      delete cache[String(model.id).toLowerCase()];
+      fs.writeFileSync(cacheFile, `${JSON.stringify(cache, null, 2)}\n`);
+      console.log("Press-kit cache cleared for", model.id);
+    } catch {
+      /* ignore */
+    }
+  }
+}
 const topic = {
   id: en.data.topicId || "flagship-smartphones",
   imageQuery: "flagship smartphone product photo",
