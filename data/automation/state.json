@@ -45,21 +45,11 @@
       "at": "2026-08-13T02:51:56.959Z"
     }
   ],
-  "formatDeck": [
-    "checklist",
-    "explainer",
-    "scenario-guide",
-    "model-deep-dive",
-    "head-to-head"
-  ],
-  "formatHistory": [
-    "buying-guide"
-  ],
-  "metaAngleHistory": [
-    {
-      "id": "family-3-5-person",
-      "type": "household-type",
-      "at": "2026-08-13T02:51:56.979Z"
-    }
-  ]
+  "lastDailyContentAuditKst": "2026-08-13",
+  "lastDailyContentAudit": {
+    "at": "2026-08-13T02:53:45.228Z",
+    "postsScanned": 58,
+    "autoRepairCount": 32,
+    "manualReviewCount": 3
+  }
 }
