@@ -590,6 +590,14 @@
       "contentHash": "83a7c5bd696025b620c31abf97d850fcf2754fd970416f21f5f17d4260c3abe3",
       "provider": "press-kit",
       "registeredAt": "2026-08-13T00:50:44.263Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:51:55.046Z"
     }
   ]
 }
