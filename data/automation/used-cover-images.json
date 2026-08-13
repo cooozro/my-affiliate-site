@@ -598,6 +598,40 @@
       "contentHash": null,
       "provider": null,
       "registeredAt": "2026-08-13T00:51:55.046Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:57:34.721Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/samsung-mobile-galaxy-unpacked-2024-galaxy-z-fold6-and-z-flip6-official-press-release_dl1-728x410.jpg",
+      "assetKey": "press-kit:9ae65cb9fd",
+      "hash": "221dd71e479e521b7047b60152000280c26e24cc4cc00d449c84ae112dd40dc1",
+      "contentHash": "221dd71e479e521b7047b60152000280c26e24cc4cc00d449c84ae112dd40dc1",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-13T00:57:35.307Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://api.samsungmobilepress.com/api/v1/file/91e8ba91dc8597be8b7cc028a604e5355688818dd1d156e4f84e6ca4ba096e892a3a32a8b370f5555a2569f9d6b2b78e8ef2831a1bdffb335be80db92dd3b49a6fd1e6630c8f4f2e19604c47d607409cbcedcfa2b843e1ef76c16eafb79831df97fdae79f818690d1a24330fc23beb7bcd6fc66e3ea18d75b5c8075d3926eb03",
+      "assetKey": "press-kit:d605b1ebd7",
+      "hash": "edf5e0df3efa556de722093d453c0597026ee0121fae40260082a8c7b6c3a862",
+      "contentHash": "edf5e0df3efa556de722093d453c0597026ee0121fae40260082a8c7b6c3a862",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-13T00:57:36.336Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:57:36.419Z"
     }
   ]
 }

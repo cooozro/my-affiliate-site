@@ -1,0 +1,32 @@
+{
+  "galaxy-z-fold-6": {
+    "at": "2026-08-13T00:57:34.617Z",
+    "query": "Galaxy Z Fold6 Samsung official press product OR media kit site:news.samsung.com OR site:samsungmobilepress.com OR site:img.global.news.samsung.com",
+    "images": [
+      {
+        "url": "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl1-728x410.jpg",
+        "role": "cover",
+        "altHint": "Samsung Galaxy Z Fold6 official press kit product photo",
+        "altHintKo": "Samsung Galaxy Z Fold6 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://api.samsungmobilepress.com/api/v1/file/91E8BA91DC8597BE8B7CC028A604E5355688818DD1D156E4F84E6CA4BA096E892A3A32A8B370F5555A2569F9D6B2B78E8EF2831A1BDFFB335BE80DB92DD3B49A6FD1E6630C8F4F2E19604C47D607409CBCEDCFA2B843E1EF76C16EAFB79831DF97FDAE79F818690D1A24330FC23BEB7BCD6FC66E3EA18D75B5C8075D3926EB03",
+        "role": "lifestyle",
+        "altHint": "Samsung Galaxy Z Fold6 official press kit product photo",
+        "altHintKo": "Samsung Galaxy Z Fold6 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://img.global.news.samsung.com/ca/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl6-1024x683.jpg",
+        "role": "detail",
+        "altHint": "Samsung Galaxy Z Fold6 official press kit product photo",
+        "altHintKo": "Samsung Galaxy Z Fold6 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://img.global.news.samsung.com/ca/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl4-1024x683.jpg",
+        "role": "detail",
+        "altHint": "Samsung Galaxy Z Fold6 official press kit product photo",
+        "altHintKo": "Samsung Galaxy Z Fold6 공식 프레스킷 제품컷"
+      }
+    ]
+  }
+}
