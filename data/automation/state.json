@@ -1,6 +1,7 @@
 {
   "topicIndex": 20,
   "usedTopicIds": [
+    "space-heaters",
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-13T02:51:56.951Z",
@@ -26,7 +27,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T03:49:45.923Z",
+    "at": "2026-08-13T04:08:37.075Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
@@ -42,6 +43,12 @@
       "category": "home-appliances",
       "taxonomyGroup": "계절가전/난방·가습",
       "at": "2026-08-13T03:31:03.827Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-08-13T04:08:37.687Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-13",
@@ -52,14 +59,14 @@
     "manualReviewCount": 3
   },
   "formatDeck": [
-    "model-deep-dive",
     "head-to-head"
   ],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
     "checklist",
-    "explainer"
+    "explainer",
+    "model-deep-dive"
   ],
   "metaAngleHistory": [
     {
