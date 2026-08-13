@@ -10,6 +10,10 @@ import {
   insertModelDeepDiveBodyImages,
 } from "../lib/model-deep-dive-images.mjs";
 import {
+  fetchPressKitImages,
+  mergePressAndStockFigures,
+} from "../lib/press-kit-images.mjs";
+import {
   countDrafts,
   slugExists,
   validatePostFiles,
@@ -152,6 +156,7 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
     ...(shared.modelPickId ? { modelPickId: shared.modelPickId } : {}),
     ...(shared.modelPickBrand ? { modelPickBrand: shared.modelPickBrand } : {}),
     ...(shared.modelPickName ? { modelPickName: shared.modelPickName } : {}),
+    ...(shared.pressKitGallery ? { pressKitGallery: shared.pressKitGallery } : {}),
   };
 }
 
@@ -302,7 +307,41 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   }
 
   const imageContext = resolveImageContext(slug, imageInput);
-  const imageMeta = await fetchCoverImage(slug, imageInput);
+
+  /** @type {Awaited<ReturnType<typeof fetchPressKitImages>>['images']} */
+  let pressImages = [];
+  /** @type {Awaited<ReturnType<typeof fetchPressKitImages>>['entry']} */
+  let pressEntry = null;
+  if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+    try {
+      const press = await fetchPressKitImages(slug, modelPick.primary, {
+        count: 2,
+        preferRoles: ["cover", "lifestyle", "detail"],
+      });
+      pressEntry = press.entry;
+      pressImages = press.images;
+    } catch (err) {
+      console.warn(`Press-kit fetch skipped: ${err.message}`);
+    }
+  }
+
+  const pressCover = pressImages.find((p) => p.role === "cover") ?? pressImages[0];
+  let imageMeta = null;
+  if (pressCover) {
+    imageMeta = {
+      coverImage: pressCover.path,
+      coverImageAlt: pressCover.altEn,
+      coverImageAltKo: pressCover.altKo,
+      coverImageCredit: pressCover.credit,
+      coverImageProvider: "press-kit",
+      coverImageAssetId: pressCover.assetId,
+      coverImageSourceUrl: pressCover.sourceUrl,
+      imageSearchKeywords: imageInput.imageSearchKeywords,
+    };
+    console.log(`Cover from press kit: ${pressCover.path}`);
+  } else {
+    imageMeta = await fetchCoverImage(slug, imageInput);
+  }
 
   let enBody = article.en.body;
   let koBody = article.ko.body;
@@ -315,14 +354,19 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       imageSearchKeywords: bodyQueries,
     };
     try {
-      const extras = await fetchAdditionalImages(slug, bodyInput, {
-        count: 2,
-        filenamePrefix: "body",
-        skipCurated: true,
-      });
-      if (extras.length > 0) {
+      const needStock = Math.max(
+        0,
+        2 - pressImages.filter((p) => p.path !== pressCover?.path).length,
+      );
+      let stockFigures = [];
+      if (needStock > 0) {
+        const extras = await fetchAdditionalImages(slug, bodyInput, {
+          count: needStock,
+          filenamePrefix: "body",
+          skipCurated: true,
+        });
         const roles = ["lifestyle", "detail"];
-        const figures = extras.map((img, i) => {
+        stockFigures = extras.map((img, i) => {
           const alts = buildModelDeepDiveAlts(
             modelPick.primary,
             topic.id,
@@ -333,11 +377,21 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
             altEn: alts.en,
             altKo: alts.ko,
             credit: img.credit,
+            source: "stock",
           };
         });
+      }
+      const pressForBody = pressImages.filter((p) => p.path !== pressCover?.path);
+      let figures = mergePressAndStockFigures(pressForBody, stockFigures, 2);
+      if (figures.length === 0 && stockFigures.length > 0) {
+        figures = [...stockFigures];
+      }
+      if (figures.length > 0) {
         enBody = insertModelDeepDiveBodyImages(enBody, figures, "en");
         koBody = insertModelDeepDiveBodyImages(koBody, figures, "ko");
-        console.log(`Model-deep-dive body images: ${figures.length}`);
+        console.log(
+          `Model-deep-dive body images: ${figures.length} (press=${figures.filter((f) => f.source === "press-kit").length}, stock=${figures.filter((f) => f.source === "stock").length})`,
+        );
       }
     } catch (err) {
       console.warn(`Body image enrich skipped: ${err.message}`);
@@ -356,12 +410,17 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     ...(imageMeta
       ? (() => {
           if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+            if (imageMeta.coverImageProvider === "press-kit") {
+              return {
+                coverImageAlt: imageMeta.coverImageAlt,
+                coverImageAltKo: imageMeta.coverImageAltKo,
+              };
+            }
             const alts = buildModelDeepDiveAlts(
               modelPick.primary,
               topic.id,
               "cover",
             );
-            // Merge product anchors so alt gate passes (phone / smartphone etc.).
             const base = buildCoverAlts(imageContext);
             return {
               coverImageAlt: `${alts.en} — ${base.en}`.slice(0, 200),
@@ -378,6 +437,9 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
           modelPickBrand: modelPick.primary.brand,
           modelPickName: modelPick.primary.name,
         }
+      : {}),
+    ...(pressEntry?.galleryUrl
+      ? { pressKitGallery: pressEntry.galleryUrl }
       : {}),
   };
 

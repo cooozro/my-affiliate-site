@@ -1,7 +1,7 @@
 /**
- * Model-deep-dive visuals — copyright-safe stock (Pexels/Pixabay) only.
- * Never scrape OEM marketing sites. ALT names the focus model for SEO;
- * credit line discloses stock source.
+ * Model-deep-dive visuals.
+ * Prefer manufacturer Press Kit / Media Gallery (allowlisted newsroom hosts),
+ * then copyright-safe stock (Pexels/Pixabay). ALT names the focus model for SEO.
  */
 
 /** Generic category product-cut queries (no trademarked SKU as search key). */
@@ -167,14 +167,24 @@ export function insertModelDeepDiveBodyImages(body, images, locale = "en") {
 
   const caption =
     locale === "ko"
-      ? (img) =>
-          img.credit
+      ? (img) => {
+          if (img.source === "press-kit") {
+            const c = img.creditKo || img.credit || "제조사 공식 프레스킷";
+            return `\n*이미지: ${c} — 보도자료·미디어 갤러리 배포용(편집 인용).*\n`;
+          }
+          return img.credit
             ? `\n*이미지: ${img.credit} — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*\n`
-            : "\n*이미지: 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*\n"
-      : (img) =>
-          img.credit
+            : "\n*이미지: 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*\n";
+        }
+      : (img) => {
+          if (img.source === "press-kit") {
+            const c = img.credit || "Official manufacturer press kit";
+            return `\n*Image: ${c} — press release / media gallery (editorial use).*\n`;
+          }
+          return img.credit
             ? `\n*Image: ${img.credit} — copyright-safe stock (category illustration).*\n`
             : "\n*Image: copyright-safe stock (category illustration).*\n";
+        };
 
   for (const slot of slots) {
     const img = images[slot.idx] ?? images[0];
