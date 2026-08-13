@@ -3,19 +3,18 @@ title: '삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산�
 description: >-
   편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가
   있을까요?
-date: '2026-08-12'
+date: '2026-08-13'
 tags:
   - 삼성 갤럭시 Z 폴드6
   - 폴더블폰 리뷰
   - 플래그십 스마트폰
   - 아이폰 16 Pro Max 비교
   - 생산성
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: flagship-smartphones
 topicCluster: smartphones
 writingProvider: deepseek
-createdAt: '2026-08-12T08:43:38.601Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/press-cover-9ae65cb9fd.jpg
@@ -26,7 +25,7 @@ coverImageProvider: press-kit
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
-updatedAt: '2026-08-12T08:43:50.639Z'
+updatedAt: '2026-08-13T02:52:07.590Z'
 coverImageAssetId: 9ae65cb9fd
 coverImageSourceUrl: >-
   https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl1-728x410.jpg
@@ -37,6 +36,7 @@ imageSearchKeywords:
   - Samsung foldable smartphone open product photo
   - product photography electronics lifestyle
 pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6'
+publishedAt: '2026-08-13T11:51:56.000Z'
 ---
 ## 편집부 개요
 
@@ -143,10 +143,11 @@ Z 폴드6는 개선된 보호층이 있는 초박형 유리(UTG)를 사용합니
 
 ## 관련 가이드
 
-- [2026년 가성비 스마트폰 TOP 5 (30만원 이하)](/ko/blog/2026-budget-smartphones-under-300) — Z 폴드6가 예산을 벗어난 경우.
-- [2026년 무선 이어폰 추천 TOP 5](/ko/blog/2026-budget-wireless-earbuds-top5) — 새 폴드6와 함께 사용하세요.
-- [보조 배터리 구매 가이드](/ko/blog/2026-budget-power-banks-guide) — 폴더블 사용자에게 필수 액세서리.
-
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — Z 폴드6가 예산을 벗어난 경우.
+- [여름 출퇴근 TWS: Sony WF-C700N vs 갤럭시 버즈3 vs 사운드코어 리버티 4 NC](/ko/blog/2026-wireless-earbuds-head-to-head) — 2026년 예산형 무선 이어버드 3종을 ANC 깊이, LDAC·AAC 코덱, ANC 켠 배터리, 무더위 출퇴근·이동에 맞춰 비교합니다.
+- [창문을 몇 주 동안 닫아야 할 때: 여름 더위 생존 스택](/ko/blog/2026-summer-heat-bundle-buying-guide) — 닫힌 창문 속 폭염에 대비한 냉방, 제습, 수분 보충, 저열 조리까지 아우르는 종합 구매 가이드. 편집부 추천 제품과 총소유비용을 담았습니다.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폴더블 사용자에게 필수 액세서리.
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 새 폴드6와 함께 사용하세요.
 ## 최종 평가
 
 삼성 갤럭시 Z 폴드6는 시장에서 가장 세련된 폴더블로, 스마트폰과 태블릿을 내구성 있는 패키지에 매끄럽게 결합했습니다. 뛰어난 멀티태스킹 능력과 넓은 디스플레이는 진정한 생산성 강점입니다. 하지만 높은 가격, 평범한 배터리, 여전히 남아 있는 취약함이 주류 채택을 가로막습니다.

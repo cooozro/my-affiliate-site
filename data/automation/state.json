@@ -1,18 +1,65 @@
 {
   "topicIndex": 0,
   "usedTopicIds": [],
-  "lastPublishAt": null,
-  "nextPublishAt": "2026-08-13T02:34:00.000Z",
-  "scheduledGapHours": 5.57,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-13T02:51:56.951Z",
+  "nextPublishAt": "2026-08-14T01:27:00.000Z",
+  "scheduledGapHours": 4.45,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-13",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-13",
-  "history": [],
+  "history": [
+    {
+      "action": "publish",
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "topic": {
+        "id": "flagship-smartphones",
+        "cluster": "smartphones"
+      },
+      "at": "2026-08-13T02:51:56.951Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review",
+        "https://www.aipick.shop/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review"
+      ]
+    }
+  ],
   "lastHealthCheck": {
-    "at": "2026-08-13T02:33:30.609Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
-  }
+    "at": "2026-08-13T02:51:55.836Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (17min past slot, KST 2026-08-13)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
+  },
+  "topicHistory": [
+    {
+      "id": "flagship-smartphones",
+      "cluster": "smartphones",
+      "at": "2026-08-13T02:51:56.959Z"
+    }
+  ],
+  "formatDeck": [
+    "checklist",
+    "explainer",
+    "scenario-guide",
+    "model-deep-dive",
+    "head-to-head"
+  ],
+  "formatHistory": [
+    "buying-guide"
+  ],
+  "metaAngleHistory": [
+    {
+      "id": "family-3-5-person",
+      "type": "household-type",
+      "at": "2026-08-13T02:51:56.979Z"
+    }
+  ]
 }
