@@ -186,26 +186,36 @@ async function runCursorAgentOnce(request) {
     local: { cwd: process.cwd(), settingSources: [] },
   };
 
-  await using agent = await Agent.create(agentOptions);
-  const run = await agent.send(prompt);
+  // Avoid `await using` — some Node 22 builds reject Explicit Resource Management syntax.
+  const agent = await Agent.create(agentOptions);
+  try {
+    const run = await agent.send(prompt);
 
-  for await (const event of run.stream()) {
-    if (event.type === "assistant") {
-      for (const block of event.message.content) {
-        if (block.type === "text") {
-          const line = block.text.trim();
-          if (line) console.log(`[cursor] ${line.slice(0, 200)}`);
+    for await (const event of run.stream()) {
+      if (event.type === "assistant") {
+        for (const block of event.message.content) {
+          if (block.type === "text") {
+            const line = block.text.trim();
+            if (line) console.log(`[cursor] ${line.slice(0, 200)}`);
+          }
         }
+      } else if (event.type === "tool_call") {
+        console.log(`[cursor tool] ${event.name}: ${event.status}`);
+      } else if (event.type === "status") {
+        console.log(`[cursor status] ${event.status}`);
       }
-    } else if (event.type === "tool_call") {
-      console.log(`[cursor tool] ${event.name}: ${event.status}`);
-    } else if (event.type === "status") {
-      console.log(`[cursor status] ${event.status}`);
+    }
+
+    return await run.wait();
+  } finally {
+    if (typeof agent?.[Symbol.asyncDispose] === "function") {
+      await agent[Symbol.asyncDispose]();
+    } else if (typeof agent?.close === "function") {
+      await agent.close();
+    } else if (typeof agent?.dispose === "function") {
+      await agent.dispose();
     }
   }
-
-  const result = await run.wait();
-  return result;
 }
 
 function rejectReplenishOverwrite(slug, reason) {

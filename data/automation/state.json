@@ -24,10 +24,16 @@
         "https://www.aipick.shop/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review",
         "https://www.aipick.shop/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "at": "2026-08-13T04:56:15.964Z",
+      "topic": "meta-compact-footprint-appliances"
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T04:50:47.219Z",
+    "at": "2026-08-13T04:56:42.587Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
@@ -89,5 +95,18 @@
       "at": "2026-08-13T04:26:55.197Z"
     }
   ],
-  "roadmapPhase": "tier2-first-pass"
+  "roadmapPhase": "tier2-first-pass",
+  "contentStrategyHistory": [
+    {
+      "writingMode": "benchmark",
+      "contentProfile": "head-to-head",
+      "topicId": "meta-compact-footprint-appliances",
+      "toneVariant": "case-study",
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "fallbackFrom": null,
+      "fallbackReason": null,
+      "keyword": "compact small apartment appliances size comparison guide 후기",
+      "at": "2026-08-13T04:56:27.757Z"
+    }
+  ]
 }

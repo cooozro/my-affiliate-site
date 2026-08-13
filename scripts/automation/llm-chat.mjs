@@ -97,7 +97,7 @@ export async function chatJsonCompletion(options) {
   const envMax = Number(process.env.LLM_MAX_TOKENS || 0);
   const resolvedMaxTokens =
     maxTokens ??
-    (envMax > 0 ? envMax : provider.id === "deepseek" ? 8192 : 16384);
+    (envMax > 0 ? envMax : provider.id === "deepseek" ? 16384 : 16384);
 
   const body = {
     model,

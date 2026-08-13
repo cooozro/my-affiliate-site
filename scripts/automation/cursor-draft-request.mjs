@@ -228,11 +228,27 @@ export async function queueCursorDraftReplenish(publishedSlug) {
     return false;
   }
 
+  // Buffer needs a draft — keep/refresh pending so GHA or local replenish can finish.
+  const existing = readCursorDraftRequest();
+  if (existing?.status === "pending" && !existing.unblockReason) {
+    writeRequest({
+      ...existing,
+      needed: Math.max(1, needed),
+      requestedAt: existing.requestedAt ?? new Date().toISOString(),
+      refreshedAt: new Date().toISOString(),
+      note: existing.note ?? "Pending replenish still needed (buffer empty).",
+    });
+    console.log(
+      `Cursor draft replenish already pending (${existing.topic?.id ?? "topic?"}) — kept active, needed=${needed}`,
+    );
+    return true;
+  }
+
   const request = await buildQueuedRequest(publishedSlug);
   writeRequest(request);
 
   console.log(
-    `Cursor draft replenish queued: ${needed} needed, plan=${request.contentPlan ?? "product"}, topic=${request.topic.id}, ` +
+    `Cursor draft replenish queued: ${needed} needed, plan=${request.contentPlan ?? "product"}, topic=${request.topic?.id}, ` +
       `profile=${request.contentProfile}, mode=${request.writingMode}, season=${request.season}` +
       (request.fallbackReason ? ` (fallback: ${request.fallbackReason})` : ""),
   );
