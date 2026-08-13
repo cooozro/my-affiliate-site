@@ -26,7 +26,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T03:31:03.218Z",
+    "at": "2026-08-13T03:49:45.923Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
@@ -52,14 +52,14 @@
     "manualReviewCount": 3
   },
   "formatDeck": [
-    "explainer",
     "model-deep-dive",
     "head-to-head"
   ],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
-    "checklist"
+    "checklist",
+    "explainer"
   ],
   "metaAngleHistory": [
     {
@@ -71,6 +71,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-08-13T03:12:21.627Z"
+    },
+    {
+      "id": "under-300-cross-category",
+      "type": "price-tier-cross",
+      "at": "2026-08-13T03:49:46.465Z"
     }
   ],
   "roadmapPhase": "tier2-first-pass"
