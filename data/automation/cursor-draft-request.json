@@ -2,30 +2,37 @@
   "status": "pending",
   "needed": 1,
   "publishedSlug": null,
-  "requestedAt": "2026-08-13T03:12:29.977Z",
+  "requestedAt": "2026-08-13T03:31:07.426Z",
   "writingMode": "benchmark",
-  "contentProfile": "scenario-guide",
-  "toneVariant": "data-driven",
-  "serpKeyword": "compact small apartment appliances size comparison guide 분석",
-  "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-분석.json",
+  "contentProfile": "checklist",
+  "toneVariant": "scenario-first",
+  "serpKeyword": "2026 space heaters buying guide 사용법",
+  "serpCachePath": "/opt/aipick/data/automation/serp-cache/2026-space-heaters-buying-guide-사용법.json",
   "benchmarkOutline": {
-    "contentProfile": "scenario-guide",
-    "toneVariant": "data-driven",
-    "introAngle": "data-driven framing for Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "contentProfile": "checklist",
+    "toneVariant": "scenario-first",
+    "introAngle": "scenario-first framing for space heaters: ceramic vs oil-filled, tip-over protection, and room sizing",
     "conclusionAngle": "Actionable next steps without hype",
     "sections": [
       {
-        "h2": "By the numbers: Section 1: Necessities of Modern Life.",
+        "h2": "Pre-purchase checklist",
         "h3": [
-          "Key factors: Refrigerator",
-          "Oven"
+          "Must-check specs",
+          "Red flags to skip"
         ]
       },
       {
-        "h2": "Key factors: Section 2: Appliances for Every Kitchen",
+        "h2": "If your situation is: Section 1: Buying a Space Heater",
         "h3": [
-          "Cooktop",
-          "Key factors: Range"
+          "Key factors: 1 Heating Method &#x26; Speed",
+          "2 Wattage &#x26; Room Sizing"
+        ]
+      },
+      {
+        "h2": "Key factors: Section 2: Key Decision Factors",
+        "h3": [
+          "3 Safety Sensors &#x26; Certifications",
+          "Key factors: 4 Thermostat Control &#x26; Eco Modes"
         ]
       },
       {
@@ -36,78 +43,67 @@
         ]
       },
       {
-        "h2": "Section 3: a Compact Laundry Room",
+        "h2": "Section 3: Common Mistakes",
         "h3": [
-          "Key factors: Dishwashers",
-          "Compact Washers"
+          "Key factors: 5 Noise Levels &#x26; Fan Design",
+          "Top Pick"
         ]
       },
       {
-        "h2": "Key factors: Section 4: for Selecting Compact Appliances",
+        "h2": "Key factors: Section 1: Heaters for Overall Heating",
         "h3": [
-          "Compact Dryers",
-          "Key factors: Compact Washer/Dryer Combinations"
+          "Before You Buy",
+          "Key factors: Don't Buy New If..."
         ]
       },
       {
-        "h2": "Section 5: Out of Minimal Space",
+        "h2": "Section 2: Heating a Room Quickly",
         "h3": [
-          "Key factors: Measurements",
-          "Style"
-        ]
-      },
-      {
-        "h2": "Key factors: Section 1: more than a filling",
-        "h3": [
-          "Finish",
-          "Key factors: Energy Usage"
+          "Key factors: Download Spanr for iOS or Android",
+          "Share guide"
         ]
       }
     ],
-    "keyword": "compact small apartment appliances size comparison guide 분석",
-    "baseKeyword": "compact small apartment appliances size comparison guide",
+    "keyword": "2026 space heaters buying guide 사용법",
+    "baseKeyword": "2026 space heaters buying guide",
     "serpSources": [
       {
-        "title": "Compact Kitchen Appliances for Today's Small Kitchens",
-        "url": "https://www.fergusonhome.com/compact-appliances-guide/a23042?srsltid=AfmBOor-vfgpsKy9E1TWC6offt2ODM6HCcov76lO-y3KK4LuEpT5H7Zv"
+        "title": "Best Space Heaters 2026: The Ultimate Buying Guide",
+        "url": "https://m.joybuy.fr/blog/best-space-heaters-2026-guide/E2XJQNzA"
       },
       {
-        "title": "Appliances for small kitchens: designs for real spaces",
-        "url": "https://www.teka.com/global/inspiration/appliances-for-small-kitchens-designs-for-real-spaces/"
+        "title": "Space Heater Buying Guide 2026: 5 Things to Know ...",
+        "url": "https://www.spanr.ai/guides/space-heater/buying-guide/"
       },
       {
-        "title": "Apartment Size Appliances | Small Space Kitchens",
-        "url": "https://www.bosch-home.ie/experience-bosch/kitchen-planning-tips/small-space-appliances"
+        "title": "BEST Electric Heaters in 2026 - Don't Freeze OR Waste Money!",
+        "url": "https://www.youtube.com/watch?v=f2dt8YahfJY"
       },
       {
-        "title": "How to Design a Small Apartment with the Best Appliances",
-        "url": "https://multihousingdepot.com/how-to-design-a-small-apartment-with-the-best-appliances/"
+        "title": "11 Best Space Heaters of 2026, Lab-Tested and Reviewed",
+        "url": "https://www.consumerreports.org/appliances/space-heaters/best-space-heaters-of-the-year-a6792168873/"
       },
       {
-        "title": "Apartment Size Appliances for Small Spaces",
-        "url": "https://www.friedmansappliance.com/blog/apartment-size-appliances"
+        "title": "Heater buying guide",
+        "url": "https://www.thegoodguys.com.au/buying-guide/heater-buying-guide?srsltid=AfmBOooJnJu4PnGPBB6qsftn2o1_QtM-v9Xx9jswkXRL4mmi-26TJDKT"
       },
       {
-        "title": "Buying and Planning a Kitchen for a Single Person",
-        "url": "https://www.haecker-kuechen.com/en/kitchen-magazine/kitchen-for-a-single-person"
+        "title": "Buying Guide: Space heaters for your home",
+        "url": "https://saveonenergy.ca/en/For-Your-Home/Advice-and-Tips/Space-heater-buying-guide"
       },
       {
-        "title": "Best Compact Appliances for Small Space",
-        "url": "https://www.dewaardandbode.com/blog/best-compact-appliances-for-small-spaces?srsltid=AfmBOop83ob0vON3jvdVOhSU7ZQz2P5ziDxBvY4oX_rprJ1Ka7Vpe-Nc"
+        "title": "Space Heater Buying Guide",
+        "url": "https://www.consumerreports.org/video/view/buying-guides/5249448113001/space-heater-buying-guide/"
       },
       {
-        "title": "Apartment Size Dishwasher Buying Guide",
-        "url": "https://www.whirlpool.com/blog/kitchen/apartment-size-dishwasher-buying-guide.html"
-      },
-      {
-        "title": "Small Appliances, Big Impact: A Guide to Compact ...",
-        "url": "https://www.leonardiappliance.com/blog/guide-to-compact-appliances"
+        "title": "Best Heater Buying Guide 2026",
+        "url": "https://www.retravision.com.au/buying-guides/heater-buying-guide?srsltid=AfmBOorYs-7hHUElcvObmSI38JjflL6_YVK13wF9icTUiuQpMuFOLWk2"
       }
     ],
-    "validatedAt": "2026-08-13T03:12:29.956Z",
-    "h2Similarity": 0.3752923976608186,
-    "shingleOverlap": 0,
-    "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-분석.json",
+    "validatedAt": "2026-08-13T03:31:07.410Z",
+    "h2Similarity": 0.35840548340548345,
+    "shingleOverlap": 0.13043478260869565,
+    "serpCachePath": "/opt/aipick/data/automation/serp-cache/2026-space-heaters-buying-guide-사용법.json",
     "fromCache": false
   },
   "fallbackFrom": null,
@@ -118,29 +114,22 @@
     "여름·방학",
     "폭염·냉방"
   ],
-  "contentPlan": "meta",
-  "contentAngle": "compact-footprint-appliances",
-  "slugHint": "2026-compact-footprint-cross-category-scenario-guide-20260813",
+  "contentPlan": "product",
+  "contentAngle": null,
+  "slugHint": null,
   "topic": {
-    "id": "meta-compact-footprint-appliances",
-    "category": "cross-cutting",
-    "angle": "Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
-    "imageQuery": "compact appliances small kitchen",
+    "id": "space-heaters",
+    "category": "home-appliances",
+    "angle": "space heaters: ceramic vs oil-filled, tip-over protection, and room sizing",
+    "imageQuery": "portable space heater room",
     "liveData": false,
     "seasons": [
-      "summer",
-      "spring"
+      "winter"
     ],
-    "anchorTopicIds": [
-      "portable-ac",
-      "air-fryers",
-      "dehumidifiers",
-      "robot-vacuums",
-      "rice-cookers"
-    ],
-    "isMetaAngle": true
+    "anchorTopicIds": null,
+    "isMetaAngle": false
   },
-  "templatePath": "docs/templates/scenario-guide.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:scenario-guide. Writing mode: benchmark. Tone: data-driven. Follow docs/templates/scenario-guide.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (capacity-tier): Compact footprint across categories / 소형·컴팩트 제품군. Cover multiple product categories in ONE article — anchor categories: portable-ac, air-fryers, dehumidifiers, robot-vacuums, rice-cookers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-compact-footprint-cross-category-scenario-guide-20260813. Frontmatter: contentAngle: compact-footprint-appliances, topicId: meta-compact-footprint-appliances. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "templatePath": "docs/templates/checklist.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:checklist. Writing mode: benchmark. Tone: scenario-first. Follow docs/templates/checklist.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null
 }

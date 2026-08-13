@@ -1,6 +1,8 @@
 {
-  "topicIndex": 0,
-  "usedTopicIds": [],
+  "topicIndex": 20,
+  "usedTopicIds": [
+    "space-heaters"
+  ],
   "lastPublishAt": "2026-08-13T02:51:56.951Z",
   "nextPublishAt": "2026-08-14T01:27:00.000Z",
   "scheduledGapHours": 4.45,
@@ -24,19 +26,22 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T03:12:20.951Z",
+    "at": "2026-08-13T03:31:03.218Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-flagship-smartphones-galaxy-z-fold-6-review/en.md: publishedAt 2026-08-13T11:51:56.000Z → 2026-08-13T02:51:56.951Z",
-      "2026-flagship-smartphones-galaxy-z-fold-6-review/ko.md: publishedAt 2026-08-13T11:51:56.000Z → 2026-08-13T02:51:56.951Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
       "id": "flagship-smartphones",
       "cluster": "smartphones",
       "at": "2026-08-13T02:51:56.959Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-08-13T03:31:03.827Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-13",
@@ -47,14 +52,14 @@
     "manualReviewCount": 3
   },
   "formatDeck": [
-    "checklist",
     "explainer",
     "model-deep-dive",
     "head-to-head"
   ],
   "formatHistory": [
     "buying-guide",
-    "scenario-guide"
+    "scenario-guide",
+    "checklist"
   ],
   "metaAngleHistory": [
     {
@@ -67,5 +72,6 @@
       "type": "capacity-tier",
       "at": "2026-08-13T03:12:21.627Z"
     }
-  ]
+  ],
+  "roadmapPhase": "tier2-first-pass"
 }
