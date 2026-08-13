@@ -641,6 +641,14 @@
       "contentHash": "099017e9402017f1bfce6945a274a366549b87acd0cf524d5a442f294c27cf6a",
       "provider": "pixabay",
       "registeredAt": "2026-08-13T00:57:42.298Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:58:48.150Z"
     }
   ]
 }
