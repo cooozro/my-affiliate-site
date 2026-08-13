@@ -36,7 +36,7 @@ imageSearchKeywords:
   - Samsung foldable smartphone open product photo
   - product photography electronics lifestyle
 pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6'
-publishedAt: '2026-08-13T11:51:56.000Z'
+publishedAt: '2026-08-13T02:51:56.951Z'
 ---
 ## 편집부 개요
 

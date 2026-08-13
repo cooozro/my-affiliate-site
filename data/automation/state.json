@@ -24,18 +24,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T02:51:55.836Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (17min past slot, KST 2026-08-13)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-08-13T03:12:20.951Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-flagship-smartphones-galaxy-z-fold-6-review/en.md: publishedAt 2026-08-13T11:51:56.000Z → 2026-08-13T02:51:56.951Z",
+      "2026-flagship-smartphones-galaxy-z-fold-6-review/ko.md: publishedAt 2026-08-13T11:51:56.000Z → 2026-08-13T02:51:56.951Z"
     ]
   },
   "topicHistory": [
@@ -53,20 +47,25 @@
     "manualReviewCount": 3
   },
   "formatDeck": [
-    "scenario-guide",
     "checklist",
     "explainer",
     "model-deep-dive",
     "head-to-head"
   ],
   "formatHistory": [
-    "buying-guide"
+    "buying-guide",
+    "scenario-guide"
   ],
   "metaAngleHistory": [
     {
       "id": "summer-heat-bundle",
       "type": "use-case-bundle",
       "at": "2026-08-13T02:53:50.046Z"
+    },
+    {
+      "id": "compact-footprint-appliances",
+      "type": "capacity-tier",
+      "at": "2026-08-13T03:12:21.627Z"
     }
   ]
 }
