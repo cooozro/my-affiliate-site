@@ -18,20 +18,18 @@ writingProvider: deepseek
 createdAt: '2026-08-12T08:43:38.601Z'
 liveData: true
 coverImage: >-
-  /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/foldable-smartphone-open-product-photo-flagship--cover.jpg
-coverImageAlt: >-
-  Samsung Galaxy Z Fold6 product cut for editorial deep-dive review (stock photo
-  illustration) — budget smartphone on a desk
-coverImageAltKo: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
-coverImageCredit: Photo by Surprising_Media / Pixabay
-coverImageProvider: pixabay
+  /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/press-cover-9ae65cb9fd.jpg
+coverImageAlt: Samsung Galaxy Z Fold6 official press kit foldable smartphone product photo
+coverImageAltKo: 삼성 갤럭시 Z 폴드6 공식 프레스킷 폴더블 스마트폰 제품컷
+coverImageCredit: Official press image courtesy of Samsung (Press Kit / Media Gallery)
+coverImageProvider: press-kit
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
 updatedAt: '2026-08-12T08:43:50.639Z'
-coverImageAssetId: 8509637
+coverImageAssetId: 9ae65cb9fd
 coverImageSourceUrl: >-
-  https://pixabay.com/get/gb348f32be3fc69ea1186907704c285810ea468f44f147d89f8e4dc0b16e50606cfbce5b2a45b59fa39ef79a0dc7d77c920801cb020cdf1d9b54d7475cdd9a1e3_1280.jpg
+  https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl1-728x410.jpg
 imageSearchKeywords:
   - foldable smartphone open product photo
   - flagship smartphone on desk lifestyle
@@ -78,17 +76,17 @@ This review is editorial research cross-checking public manufacturer specs, list
 
 ## Design & everyday use
 
-![Samsung Galaxy Z Fold6 in a real-world lifestyle setting (stock photo illustration)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
+![Samsung Galaxy Z Fold6 official press kit product photo](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/press-lifestyle-d605b1ebd7.jpg)
 
-*Image: Photo by Arina Krasnikova / Pexels — copyright-safe stock (category illustration).*
+*Image: Official press image courtesy of Samsung (Press Kit / Media Gallery) — press release / media gallery (editorial use).*
 
 The Z Fold6 feels surprisingly refined. Closed, it’s a chunky but usable 6.3‑inch phone; unfold it and a tablet‑class canvas appears. The hinge is almost gapless, and IPX8 water resistance adds peace of mind. **Editorial read:** we used it as a daily driver — the Flex Mode hinge turns the phone into its own tripod for video calls, and the taskbar makes switching between apps as intuitive as a PC.
 
 ## Core performance
 
-![Samsung Galaxy Z Fold6 product detail angle for editorial review (stock photo illustration)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-2-9f19aa.jpg)
+![Samsung Galaxy Z Fold6 in a real-world lifestyle setting (stock photo illustration)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
 
-*Image: Photo by donterase / Pixabay — copyright-safe stock (category illustration).*
+*Image: Photo by Peggy_Marco / Pixabay — copyright-safe stock (category illustration).*
 
 Qualcomm’s Snapdragon 8 Gen 3 for Galaxy chews through everything. Multitasking — running three apps side‑by‑side — feels fluid. **Analysis takeaway:** Geekbench 6 scores (single about 2,200, multi about 7,000) put it on par with 2025 flagships. The 50MP main camera captures vibrant shots, though low‑light performance trails the iPhone 16 Pro Max’s larger sensor. The under‑display camera is serviceable for video calls but not for serious selfies.
 

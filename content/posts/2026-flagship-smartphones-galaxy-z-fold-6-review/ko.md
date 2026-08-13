@@ -18,18 +18,18 @@ writingProvider: deepseek
 createdAt: '2026-08-12T08:43:38.601Z'
 liveData: true
 coverImage: >-
-  /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/foldable-smartphone-open-product-photo-flagship--cover.jpg
-coverImageAlt: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
-coverImageAltKo: Samsung 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 책상 위의 스마트폰
-coverImageCredit: Photo by Surprising_Media / Pixabay
-coverImageProvider: pixabay
+  /images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/press-cover-9ae65cb9fd.jpg
+coverImageAlt: 삼성 갤럭시 Z 폴드6 공식 프레스킷 폴더블 스마트폰 제품컷
+coverImageAltKo: Samsung Galaxy Z Fold6 공식 프레스킷 제품컷
+coverImageCredit: Official press image courtesy of Samsung (Press Kit / Media Gallery)
+coverImageProvider: press-kit
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
 updatedAt: '2026-08-12T08:43:50.639Z'
-coverImageAssetId: 8509637
+coverImageAssetId: 9ae65cb9fd
 coverImageSourceUrl: >-
-  https://pixabay.com/get/gb348f32be3fc69ea1186907704c285810ea468f44f147d89f8e4dc0b16e50606cfbce5b2a45b59fa39ef79a0dc7d77c920801cb020cdf1d9b54d7475cdd9a1e3_1280.jpg
+  https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl1-728x410.jpg
 imageSearchKeywords:
   - foldable smartphone open product photo
   - flagship smartphone on desk lifestyle
@@ -60,9 +60,9 @@ pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6
 
 ## 한눈에 보는 스펙
 
-![Samsung 갤럭시 Z 폴드6 편집부 리뷰용 디테일 컷 (스톡 일러스트 사진)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-2-9f19aa.jpg)
+![Samsung 갤럭시 Z 폴드6 실사용 라이프스타일 장면 (스톡 일러스트 사진)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
 
-*이미지: Photo by donterase / Pixabay — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
+*이미지: Photo by Peggy_Marco / Pixabay — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
 
 | 항목 | 삼성 갤럭시 Z 폴드6 |
 | --- | --- |
@@ -80,9 +80,9 @@ pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6
 
 ## 디자인과 실사용
 
-![Samsung 갤럭시 Z 폴드6 실사용 라이프스타일 장면 (스톡 일러스트 사진)](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/body-1-9f7a20.jpg)
+![Samsung Galaxy Z Fold6 공식 프레스킷 제품컷](/images/posts/2026-flagship-smartphones-galaxy-z-fold-6-review/press-lifestyle-d605b1ebd7.jpg)
 
-*이미지: Photo by Arina Krasnikova / Pexels — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
+*이미지: Samsung 공식 프레스킷·미디어 갤러리 제공 이미지 — 보도자료·미디어 갤러리 배포용(편집 인용).*
 
 Z 폴드6는 놀라울 정도로 세련된 느낌입니다. 접으면 다소 두툼하지만 6.3형의 사용 가능한 스마트폰이 되고, 펼치면 태블릿급 화면이 펼쳐집니다. 힌지는 거의 틈이 없고, IPX8 방수 등급이 안심을 더합니다. **편집부 해석:** 데일리 기기로 사용한 결과, 플렉스 모드 힌지 덕분에 영상 통화 시 스탠드 없이 세워둘 수 있고, 작업 표시줄을 통해 PC처럼 직관적으로 앱을 전환할 수 있었습니다.
 
