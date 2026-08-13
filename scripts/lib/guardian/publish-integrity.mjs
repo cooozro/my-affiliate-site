@@ -42,6 +42,10 @@ import {
 } from "../used-images.mjs";
 import { repairGfmTildeRanges } from "./markdown-gfm-safe.mjs";
 import { auditHelpNavFrontmatter } from "../help-nav.mjs";
+import {
+  dedupeEditorialBlocks,
+  countConsecutiveDuplicateParagraphs,
+} from "../editorial-block-dedupe.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
 
@@ -230,6 +234,16 @@ export function repairPostLocale(root, slug, locale) {
     }
   }
 
+  if (!isIntegrityExempt(slug, data)) {
+    const deduped = dedupeEditorialBlocks(body, {
+      label: `${slug}/${locale}.md`,
+    });
+    if (deduped.changed) {
+      body = deduped.body;
+      repairs.push(...deduped.repairs);
+    }
+  }
+
   body = body.replace(/\n{4,}/g, "\n\n\n").trim();
 
   const repaired = repairs.length > 0 || body !== content;
@@ -338,6 +352,14 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
     addError(
       bucket,
       `${label}: Korean body has hangul-latin mixed tokens (repair or fix manually)`,
+    );
+  }
+
+  const dupParagraphs = countConsecutiveDuplicateParagraphs(body);
+  if (dupParagraphs > 0) {
+    addError(
+      bucket,
+      `${label}: ${dupParagraphs} consecutive duplicate paragraph(s) (editorial stump / pad loop)`,
     );
   }
 

@@ -3,6 +3,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import {
+  STOCK_KO_EDITORIAL_STUMP,
+  dedupeEditorialBlocks,
+} from "../lib/editorial-block-dedupe.mjs";
 
 const slug = process.argv[2] || "2026-flagship-smartphones-galaxy-z-fold-6-review";
 const root = process.env.AIPICK_SITE_ROOT || "/opt/aipick";
@@ -47,12 +51,19 @@ for (const locale of ["en", "ko"]) {
 - 카메라·배터리 최상위 플래그십만 원하는 분
 `;
     }
-    while (body.length < 5600) {
-      body += "\n\n**편집부 해석:** 실사용 기준으로 스펙 표와 FAQ를 교차 검증했으며, 총 소유 비용(액세서리·보호필름 3년)도 함께 고려했습니다.";
+    // Never pad with repeated editorial stumps — at most one stock line if missing.
+    if (!/\*\*편집부 해석:\*\*/.test(body)) {
+      body += `\n\n${STOCK_KO_EDITORIAL_STUMP}`;
     }
   }
 
+  const deduped = dedupeEditorialBlocks(body, { label: `${slug}/${locale}.md` });
+  body = deduped.body;
+
   const out = matter.stringify(body, data);
   fs.writeFileSync(file, out);
-  console.log(`patched ${locale}.md (${body.length} chars body)`);
+  console.log(
+    `patched ${locale}.md (${body.length} chars body)` +
+      (deduped.changed ? `; ${deduped.repairs.join("; ")}` : ""),
+  );
 }
