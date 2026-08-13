@@ -5,12 +5,12 @@
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-13T02:51:56.951Z",
-  "nextPublishAt": "2026-08-14T01:27:00.000Z",
-  "scheduledGapHours": 4.45,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-08-13",
+  "nextPublishAt": "2026-08-14T01:25:00.000Z",
+  "scheduledGapHours": 4.42,
+  "publishCountToday": 0,
+  "publishDateKst": "2026-08-14",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-13",
+  "writeDateKst": "2026-08-14",
   "history": [
     {
       "action": "publish",
@@ -33,7 +33,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-13T12:43:41.481Z",
+    "at": "2026-08-13T23:21:43.999Z",
     "issueCount": 0,
     "issues": [],
     "repairs": []
