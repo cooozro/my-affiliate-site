@@ -1211,14 +1211,6 @@
       "registeredAt": "2026-08-12T07:38:46.394Z"
     },
     {
-      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
-      "assetKey": null,
-      "hash": null,
-      "contentHash": null,
-      "provider": "pixabay",
-      "registeredAt": "2026-08-13T00:26:30.050Z"
-    },
-    {
       "slug": "adsense-seo-checklist",
       "assetKey": null,
       "hash": null,
@@ -1227,12 +1219,28 @@
       "registeredAt": "2026-08-13T00:26:30.073Z"
     },
     {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+<<<<<<< HEAD
+      "registeredAt": "2026-08-13T00:26:30.073Z"
+=======
+      "registeredAt": "2026-08-13T00:39:52.021Z"
+>>>>>>> 2724b70 (chore(sync): push aipick drafts for admin visibility)
+    },
+    {
       "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
       "assetKey": null,
       "hash": null,
       "contentHash": null,
       "provider": "pixabay",
+<<<<<<< HEAD
       "registeredAt": "2026-08-13T00:40:03.349Z"
+=======
+      "registeredAt": "2026-08-13T00:39:52.054Z"
+>>>>>>> 2724b70 (chore(sync): push aipick drafts for admin visibility)
     },
     {
       "slug": "adsense-seo-checklist",
@@ -1240,7 +1248,54 @@
       "hash": null,
       "contentHash": null,
       "provider": null,
+<<<<<<< HEAD
       "registeredAt": "2026-08-13T00:40:03.380Z"
+=======
+      "registeredAt": "2026-08-13T00:39:52.073Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://pixabay.com/get/g23827624d8d36d300315eac5efaad364e467bbaf42699cddc8fe39927bb468517fc6232df031462566b3e65794479c180a6c8e2f29023eed35e8dd64d7044998_1280.jpg",
+      "assetKey": "pixabay:933326",
+      "hash": "6a8566acba778f8a51814fa9326a73d9a982c2bd025569453abae36922b0e0f6",
+      "contentHash": "6a8566acba778f8a51814fa9326a73d9a982c2bd025569453abae36922b0e0f6",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-13T00:40:22.419Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": "pixabay",
+      "registeredAt": "2026-08-13T00:40:22.445Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-13T00:40:22.461Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://images.pexels.com/photos/5712152/pexels-photo-5712152.jpeg",
+      "assetKey": "pexels:5712152",
+      "hash": "14829fa497b680190ecf116e6f407f2e0c2ea937d9830997d6237f00a33938e4",
+      "contentHash": "14829fa497b680190ecf116e6f407f2e0c2ea937d9830997d6237f00a33938e4",
+      "provider": "pexels",
+      "registeredAt": "2026-08-13T00:40:32.936Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-z-fold-6-review",
+      "url": "https://images.pexels.com/photos/6432/smartphone-notebook-pen-notes.jpg",
+      "assetKey": "pexels:6432",
+      "hash": "d50faaf0eacaec3a252a0c24a1a23630084d75ba142191c11464befe5e500da5",
+      "contentHash": "d50faaf0eacaec3a252a0c24a1a23630084d75ba142191c11464befe5e500da5",
+      "provider": "pexels",
+      "registeredAt": "2026-08-13T00:40:33.527Z"
+>>>>>>> 2724b70 (chore(sync): push aipick drafts for admin visibility)
     }
   ]
 }
