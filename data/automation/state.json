@@ -46,13 +46,10 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-14T01:58:43.727Z",
+    "at": "2026-08-14T02:15:54.097Z",
     "issueCount": 0,
     "issues": [],
-    "repairs": [
-      "2026-compact-dishwasher-vs-portable-washer/en.md: publishedAt 2026-08-14T10:37:13.000Z → 2026-08-14T01:37:15.074Z",
-      "2026-compact-dishwasher-vs-portable-washer/ko.md: publishedAt 2026-08-14T10:37:13.000Z → 2026-08-14T01:37:15.074Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
