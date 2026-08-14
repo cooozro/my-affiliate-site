@@ -24,7 +24,7 @@ coverImageAltKo: 실내의 compact dishwasher small apartment
 coverImageCredit: Photo by PublicDomainPictures / Pixabay
 coverImageProvider: pixabay
 updatedAt: '2026-08-14T01:37:15.241Z'
-publishedAt: '2026-08-14T10:37:13.000Z'
+publishedAt: '2026-08-14T01:37:15.074Z'
 ---
 ## Editorial Overview
 

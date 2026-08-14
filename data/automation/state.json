@@ -46,18 +46,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-14T01:37:13.703Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (12min past slot, KST 2026-08-14)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-08-14T01:58:43.727Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-compact-dishwasher-vs-portable-washer/en.md: publishedAt 2026-08-14T10:37:13.000Z → 2026-08-14T01:37:15.074Z",
+      "2026-compact-dishwasher-vs-portable-washer/ko.md: publishedAt 2026-08-14T10:37:13.000Z → 2026-08-14T01:37:15.074Z"
     ]
   },
   "topicHistory": [
