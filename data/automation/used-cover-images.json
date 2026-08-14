@@ -994,6 +994,15 @@
       "contentHash": null,
       "provider": null,
       "registeredAt": "2026-08-14T06:15:17.125Z"
+    },
+    {
+      "slug": "2026-small-room-air-purifiers-head-to-head",
+      "url": "https://images.pexels.com/photos/36665794/pexels-photo-36665794.jpeg",
+      "assetKey": "pexels:36665794",
+      "hash": "124eee2227901d1c0a06e52612cd96e769cebca52b453352902d931767ff4969",
+      "contentHash": "124eee2227901d1c0a06e52612cd96e769cebca52b453352902d931767ff4969",
+      "provider": "pexels",
+      "registeredAt": "2026-08-14T06:15:24.080Z"
     }
   ]
 }

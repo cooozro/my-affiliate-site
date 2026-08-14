@@ -19,6 +19,21 @@ topicCluster: home-appliances
 writingProvider: deepseek
 createdAt: '2026-08-14T06:09:24.112Z'
 updatedAt: '2026-08-14T06:09:32.310Z'
+coverImage: >-
+  /images/posts/2026-small-room-air-purifiers-head-to-head/air-purifier-small-room-cover.jpg
+coverImageAlt: HEPA air purifier
+coverImageAltKo: HEPA 공기청정기
+coverImageCredit: Photo by tommy picone / Pexels
+imageSearchKeywords:
+  - air purifier
+  - small room
+  - CADR
+  - HEPA filter
+  - running costs
+coverImageProvider: pexels
+coverImageAssetId: 36665794
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/36665794/pexels-photo-36665794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 
