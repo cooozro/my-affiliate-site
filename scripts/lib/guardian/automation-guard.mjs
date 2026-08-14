@@ -9,7 +9,6 @@ import path from "path";
 import matter from "gray-matter";
 
 import { listPublishedSlugs } from "../content-quality.mjs";
-import { topicHasAnyPost } from "../content-roadmap.mjs";
 import { getTopicFormatCoverage } from "../topic-coverage.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
 import { isMetaTopicId } from "../content-angles.mjs";
@@ -67,7 +66,7 @@ export function validateReplenishWrittenSlug(slug, slugsBefore, root = process.c
   return { ok: true };
 }
 
-/** One topic id must not appear in two slugs during first-pass / draft buffer. */
+/** Same topic is OK in format-rotation if the contentProfile is new. */
 export function validateReplenishTopicUnique(slug, root = process.cwd()) {
   const enPath = path.join(root, "content", "posts", slug, "en.md");
   if (!fs.existsSync(enPath)) {
@@ -76,16 +75,25 @@ export function validateReplenishTopicUnique(slug, root = process.cwd()) {
 
   const { data } = matter(fs.readFileSync(enPath, "utf8"));
   const topic = inferPostTopic(slug, data);
+  const profile = String(data.contentProfile ?? "buying-guide");
   const coverage = getTopicFormatCoverage(root);
   const entry = coverage.get(topic.id);
 
   if (!entry) return { ok: true };
 
   const others = entry.slugs.filter((s) => s !== slug);
-  if (others.length > 0) {
+  const sameFormat = [];
+  for (const other of others) {
+    const otherPath = path.join(root, "content", "posts", other, "en.md");
+    if (!fs.existsSync(otherPath)) continue;
+    const { data: otherData } = matter(fs.readFileSync(otherPath, "utf8"));
+    const otherProfile = String(otherData.contentProfile ?? "buying-guide");
+    if (otherProfile === profile) sameFormat.push(other);
+  }
+  if (sameFormat.length > 0) {
     return {
       ok: false,
-      reason: `Topic "${topic.id}" already has post(s): ${others.join(", ")}`,
+      reason: `Topic "${topic.id}" already has ${profile}: ${sameFormat.join(", ")}`,
     };
   }
 
@@ -122,7 +130,10 @@ export function isRequestTopicStale(request, root = process.cwd()) {
   }
 
   const coverage = getTopicFormatCoverage(root);
-  return topicHasAnyPost(topicId, coverage);
+  const profile = String(request.contentProfile ?? "buying-guide");
+  const entry = coverage.get(topicId);
+  if (!entry) return false;
+  return entry.publishedFormats.has(profile) || entry.draftFormats.has(profile);
 }
 
 export function revertPostSlugFromGit(slug) {

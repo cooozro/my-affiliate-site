@@ -181,7 +181,7 @@ export async function generateOneDraft(options = {}) {
   for (const profile of profilesToTry) {
     try {
       const topic = pickTopic(state, { contentProfile: profile });
-      return generateDraftForTopic(topic, profile, { bypassWriteCap, state });
+      return await generateDraftForTopic(topic, profile, { bypassWriteCap, state });
     } catch (error) {
       lastError = error;
     }
