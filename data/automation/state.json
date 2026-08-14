@@ -46,9 +46,15 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-14T03:34:23.985Z",
-    "issueCount": 0,
-    "issues": [],
+    "at": "2026-08-14T03:54:23.768Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "stale-cursor-replenish",
+        "message": "Cursor replenish pending 137min",
+        "severity": "warning"
+      }
+    ],
     "repairs": []
   },
   "topicHistory": [
