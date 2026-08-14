@@ -44,17 +44,41 @@ export function kstDayAnchorUtc(dateString, hour = KST_DAY_START_HOUR) {
   return kstWallClockToUtc(year, month, day, hour, 0);
 }
 
-export function scheduleNextDayFirstPublish(state, from = new Date()) {
-  const offsetMs = randomFirstSlotOffsetMs();
+/** 주6일 — 일요일만 휴무 (토요일 포함). */
+export function isAipickPublishCalendarDay(date = new Date()) {
+  const weekday = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Seoul",
+    weekday: "short",
+  }).format(date);
+  return weekday !== "Sun";
+}
+
+function nextPublishDayAnchor(from = new Date(), includeToday = false) {
   const todayKst = kstDateString(from);
   const { year, month, day } = parseKstDateString(todayKst);
-  const tomorrowAnchor = kstWallClockToUtc(year, month, day + 1, KST_DAY_START_HOUR, 0);
+  const start = includeToday ? 0 : 1;
+  for (let offset = start; offset <= 8; offset += 1) {
+    const probe = kstWallClockToUtc(year, month, day + offset, 12, 0);
+    if (isAipickPublishCalendarDay(probe)) {
+      return kstWallClockToUtc(year, month, day + offset, KST_DAY_START_HOUR, 0);
+    }
+  }
+  return kstWallClockToUtc(year, month, day + 2, KST_DAY_START_HOUR, 0);
+}
+
+export function scheduleNextDayFirstPublish(state, from = new Date()) {
+  const offsetMs = randomFirstSlotOffsetMs();
+  const tomorrowAnchor = nextPublishDayAnchor(from, false);
 
   state.scheduledGapHours = Math.round((offsetMs / 3_600_000) * 100) / 100;
   state.nextPublishAt = new Date(tomorrowAnchor.getTime() + offsetMs).toISOString();
 }
 
 export function scheduleFirstPublishOfDay(state, from = new Date()) {
+  if (!isAipickPublishCalendarDay(from)) {
+    scheduleNextDayFirstPublish(state, from);
+    return;
+  }
   const offsetMs = randomFirstSlotOffsetMs();
   const todayKst = kstDateString(from);
   const anchor = kstDayAnchorUtc(todayKst, KST_DAY_START_HOUR);

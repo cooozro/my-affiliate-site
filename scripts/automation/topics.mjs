@@ -125,11 +125,13 @@ export function pickTopic(state, options = {}) {
 
   if (candidates.length === 0) {
     candidates = sortByFreshness(
-      POST_TOPICS.filter(
-        (t) =>
-          formatAvailable(t) &&
-          !wouldViolateTaxonomyGroupSpread(t, roadmapPhase, coverage).blocked &&
-          !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      filterTopicsInSeason(
+        POST_TOPICS.filter(
+          (t) =>
+            formatAvailable(t) &&
+            !wouldViolateTaxonomyGroupSpread(t, roadmapPhase, coverage).blocked &&
+            !wouldViolateTopicDiversity(t, topicHistory).blocked,
+        ),
       ),
       coverage,
       clusterCoverage,
@@ -140,10 +142,12 @@ export function pickTopic(state, options = {}) {
 
   if (candidates.length === 0) {
     candidates = sortByFreshness(
-      POST_TOPICS.filter(
-        (t) =>
-          formatAvailable(t) &&
-          !wouldViolateTopicDiversity(t, topicHistory).blocked,
+      filterTopicsInSeason(
+        POST_TOPICS.filter(
+          (t) =>
+            formatAvailable(t) &&
+            !wouldViolateTopicDiversity(t, topicHistory).blocked,
+        ),
       ),
       coverage,
       clusterCoverage,
@@ -157,7 +161,7 @@ export function pickTopic(state, options = {}) {
       "No fresh topic×format pairs — relaxing diversity guard for this profile",
     );
     candidates = sortByFreshness(
-      POST_TOPICS.filter(formatAvailable),
+      filterTopicsInSeason(POST_TOPICS.filter(formatAvailable)),
       coverage,
       clusterCoverage,
       new Set(),

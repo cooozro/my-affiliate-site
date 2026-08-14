@@ -6,7 +6,12 @@ import { isMetaTopicId } from "../lib/content-angles.mjs";
 import { kstDateString, loadState, saveState } from "./state.mjs";
 import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 import { getTemplatePath, pickContentProfile } from "../lib/content-profiles.mjs";
-import { getActiveSeasonalEvents, getCurrentSeason } from "../lib/season-topics.mjs";
+import {
+  getActiveSeasonalEvents,
+  getCurrentSeason,
+  isTopicInSeason,
+  SEASONAL_ONLY_TOPIC_IDS,
+} from "../lib/season-topics.mjs";
 import {
   formatOutlineForPrompt,
   prepareDraftStrategy,
@@ -230,7 +235,16 @@ export async function queueCursorDraftReplenish(publishedSlug) {
 
   // Buffer needs a draft — keep/refresh pending so GHA or local replenish can finish.
   const existing = readCursorDraftRequest();
-  if (existing?.status === "pending" && !existing.unblockReason) {
+  const pendingOffSeason =
+    existing?.status === "pending" &&
+    existing?.topic?.id &&
+    SEASONAL_ONLY_TOPIC_IDS.has(existing.topic.id) &&
+    !isTopicInSeason(existing.topic);
+  if (pendingOffSeason) {
+    console.log(
+      `Dropping off-season pending replenish (${existing.topic.id}) — will queue an in-season topic`,
+    );
+  } else if (existing?.status === "pending" && !existing.unblockReason) {
     writeRequest({
       ...existing,
       needed: Math.max(1, needed),

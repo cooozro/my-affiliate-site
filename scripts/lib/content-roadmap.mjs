@@ -7,6 +7,15 @@
  */
 
 import { PRODUCT_TOPICS } from "./product-taxonomy.mjs";
+import { isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "./season-topics.mjs";
+
+function isDeferredOffSeason(topic) {
+  return (
+    Boolean(topic?.id) &&
+    SEASONAL_ONLY_TOPIC_IDS.has(topic.id) &&
+    !isTopicInSeason(topic)
+  );
+}
 
 /** 1인 설치·사용 가능 — 소형가전·데스크·모바일·플러그앤플레이 위주 */
 export const TIER1_PERSONAL_TOPIC_IDS = new Set([
@@ -65,7 +74,9 @@ export function tier1FirstPassComplete(coverage) {
  * @param {Map<string, { slugs: string[] }>} coverage
  */
 export function allTopicsHaveFirstPost(coverage) {
-  return PRODUCT_TOPICS.every((topic) => topicHasAnyPost(topic.id, coverage));
+  return PRODUCT_TOPICS.every(
+    (topic) => topicHasAnyPost(topic.id, coverage) || isDeferredOffSeason(topic)
+  );
 }
 
 /**
@@ -94,6 +105,8 @@ export function isTopicBlockedByRoadmap(
   roadmapPhase,
   formatBlockedFn,
 ) {
+  if (isDeferredOffSeason(topic)) return true;
+
   if (roadmapPhase === "tier1-first-pass") {
     if (!TIER1_PERSONAL_TOPIC_IDS.has(topic.id)) return true;
     if (topicHasAnyPost(topic.id, coverage)) return true;
@@ -117,7 +130,7 @@ export function describeRoadmapPhase(phase, coverage) {
   }
   if (phase === "tier2-first-pass") {
     const missing = PRODUCT_TOPICS.filter(
-      (t) => !topicHasAnyPost(t.id, coverage),
+      (t) => !topicHasAnyPost(t.id, coverage) && !isDeferredOffSeason(t),
     ).map((t) => t.id);
     return `Full taxonomy first pass (${missing.length} topics without any post) + meta angles`;
   }
