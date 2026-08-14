@@ -38,7 +38,8 @@ const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
 
 const PEXELS_PHOTO = "https://api.pexels.com/v1/photos";
-const TEXT_MIN_SCORE = 4;
+
+const TEXT_MIN_SCORE = DEFAULT_TEXT_MIN_SCORE;
 
 function isBlockedAsset(candidate, ctx) {
   const key = `${candidate.provider}:${candidate.assetId}`;
@@ -119,17 +120,28 @@ function rankText(candidates, ctx) {
         ctx.slug,
       ),
     )
-    .map((candidate) => ({
-      ...candidate,
-      textScore: scoreImageRelevance(
+    .map((candidate) => {
+      const altBlob = String(candidate.providerAlt ?? candidate.relevanceText ?? "").toLowerCase();
+      let textScore = scoreImageRelevance(
         candidate.providerAlt ?? candidate.relevanceText,
         ctx.productKeywords,
         ctx.negativeTags,
         ctx.seasonContext,
         ctx.topicId,
         ctx.slug,
-      ),
-    }))
+      );
+      for (const anchor of anchors) {
+        const a = anchor.toLowerCase();
+        if (a.length >= 4 && altBlob.includes(a)) {
+          textScore += 5;
+          break;
+        }
+      }
+      return {
+        ...candidate,
+        textScore,
+      };
+    })
     .filter((c) => c.textScore >= TEXT_MIN_SCORE)
     .sort((a, b) => b.textScore - a.textScore);
 }
@@ -341,18 +353,13 @@ async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
     const minText = vacuumMode ? VACUUM_TEXT_MIN_SCORE : DEFAULT_TEXT_MIN_SCORE;
     const strongText = pool.filter((c) => c.textScore >= minText);
     winner = strongText[0] ?? null;
-    if (!winner && !vacuumMode && pool.length > 0) {
-      winner = pool[0];
-      console.log(
-        `  text-only weak fallback: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
-      );
-    } else if (winner) {
+    if (winner) {
       console.log(
         `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
       );
-    } else if (vacuumMode) {
+    } else {
       console.warn(
-        `  text-only: no vacuum candidate met min score ${minText} for ${slug} — refusing weak pick`,
+        `  text-only: no candidate met min score ${minText} for ${slug} — refusing weak/off-topic pick`,
       );
     }
   }

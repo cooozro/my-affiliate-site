@@ -567,6 +567,31 @@ const GLOBAL_STOCK_NEGATIVES = [
   "airline",
   "helicopter",
   "drone aerial only",
+  "sd card",
+  "memory card",
+  "flash drive",
+  "usb drive",
+  "sim card",
+  "storage card",
+  "micro sd",
+  "compact flash",
+  "scar",
+  "wound",
+  "surgery",
+  "makeup",
+  "cosmetic",
+  "skincare",
+  "mascara",
+  "lipstick",
+  "foundation",
+  "torso",
+  "bikini",
+  "lingerie",
+  "nude",
+  "breast",
+  "abdomen",
+  "collarbone",
+  "cleavage",
 ];
 
 const CLUSTER_NEGATIVES = {
@@ -789,7 +814,7 @@ export function deriveProductKeywords(input = {}) {
   );
   // Prefer concrete product tags over mood/season phrases for stock-photo search.
   const productish = tagKeywords.filter((tag) =>
-    /\b(dehumidifier|purifier|fan|ac|conditioner|fryer|vacuum|monitor|earbuds?|phone|laptop|keyboard|speaker|tracker|camera|cooker|washer|dryer|humidifier|heater|blanket)\b/i.test(
+    /\b(dehumidifier|purifier|fan|ac|conditioner|fryer|vacuum|monitor|earbuds?|phone|laptop|keyboard|speaker|tracker|camera|cooker|washer|dryer|humidifier|heater|blanket|dishwasher|laundry)\b/i.test(
       tag,
     ),
   );
@@ -884,6 +909,18 @@ const CLUSTER_FORBIDDEN = {
   audio: ["clock", "watch", "air conditioner"],
   smartphones: ["clock", "watch", "earbuds only"],
   "floor-care": ["airplane", "aircraft"],
+  laundry: [
+    "sd card",
+    "memory card",
+    "flash drive",
+    "usb",
+    "smartphone",
+    "laptop",
+    "keyboard",
+    "cat",
+    "dog",
+    "pet",
+  ],
 };
 
 export function negativeTagsForCluster(topicCluster, slug, seasonContext, topicId) {
@@ -916,7 +953,46 @@ const CLUSTER_PRODUCT_ANCHORS = {
   "air-conditioning": ["air conditioner", "portable ac", "window ac", "ac unit"],
   "floor-care": ["vacuum", "robot vacuum"],
   "smart-home": ["camera", "security camera", "cctv", "surveillance", "webcam"],
+  laundry: [
+    "dishwasher",
+    "washing machine",
+    "washer",
+    "laundry",
+    "countertop dishwasher",
+    "portable washer",
+  ],
 };
+
+/** Too vague to trust as sole alt/tag anchor (e.g. SD card tagged "compact"). */
+const GENERIC_ANCHOR_STOP = new Set([
+  "compact",
+  "small",
+  "guide",
+  "best",
+  "product",
+  "appliance",
+  "budget",
+  "home",
+  "cross",
+  "category",
+  "summer",
+  "winter",
+  "spring",
+  "fall",
+  "checklist",
+  "explainer",
+  "scenario",
+  "head",
+  "review",
+  "tech",
+  "technology",
+  "new",
+  "top",
+  "vs",
+  "the",
+  "and",
+  "for",
+]);
 
 const VACUUM_CORDLESS_NEGATIVES = [
   "robot vacuum",
@@ -1001,13 +1077,38 @@ export function requiredProductAnchors(productKeywords, topicCluster, topicId, s
     if (lower.includes("vacuum") && mode == null) anchors.add("vacuum");
     if (lower.includes("power bank")) anchors.add("power bank");
     if (lower.includes("camera")) anchors.add("camera");
+    if (lower.includes("dishwasher")) anchors.add("dishwasher");
+    if (lower.includes("washing machine") || lower.includes("washer")) anchors.add("washer");
+    if (lower.includes("laundry")) anchors.add("laundry");
   }
 
-  // Cross-category / meta posts: accept any concrete product term from keywords.
-  if (String(topicId ?? "").startsWith("meta-") || /cross-category|cross-cutting/i.test(String(slug ?? ""))) {
+  // Cross-category / meta posts: require substantive product nouns — never "compact" alone.
+  if (
+    String(topicId ?? "").startsWith("meta-") ||
+    /cross-category|cross-cutting/i.test(String(slug ?? ""))
+  ) {
     for (const kw of productKeywords) {
-      const token = String(kw).toLowerCase().replace(/[^a-z0-9\s-]/g, " ").trim();
-      if (token.length >= 3) anchors.add(token.split(/\s+/)[0]);
+      const lower = String(kw).toLowerCase();
+      for (const phrase of [
+        "dishwasher",
+        "washing machine",
+        "portable washer",
+        "countertop dishwasher",
+        "air purifier",
+        "dehumidifier",
+        "robot vacuum",
+        "air fryer",
+        "rice cooker",
+        "portable ac",
+        "air conditioner",
+      ]) {
+        if (lower.includes(phrase)) anchors.add(phrase);
+      }
+      for (const token of lower.replace(/[^a-z0-9\s-]/g, " ").split(/\s+/)) {
+        if (token.length >= 5 && !GENERIC_ANCHOR_STOP.has(token)) {
+          anchors.add(token);
+        }
+      }
     }
   }
 
@@ -1228,6 +1329,11 @@ export function altSubjectEn(productKeywords) {
   if (lower.includes("fan")) return "electric fan";
   if (lower.includes("humidifier")) return "humidifier";
   if (lower.includes("laptop")) return "laptop";
+  if (lower.includes("dishwasher")) return "countertop dishwasher";
+  if (lower.includes("washing machine") || lower.includes("portable washer")) {
+    return "portable washing machine";
+  }
+  if (lower.includes("laundry")) return "compact laundry appliance";
 
   return raw.split(/\s+/).slice(0, 4).join(" ");
 }
@@ -1310,9 +1416,9 @@ function mapKeywordToKo(keyword) {
   if (k.includes("fan")) return "선풍기";
   if (k.includes("humidifier")) return "가습기";
   if (k.includes("laptop")) return "노트북";
-  if (k.includes("product research") || k.includes("notebook")) {
-    return "노트북과 메모";
-  }
+  if (k.includes("dishwasher")) return "식기세척기";
+  if (k.includes("washing machine") || k.includes("washer")) return "휴대용 세탁기";
+  if (k.includes("laundry")) return "소형 세탁 가전";
   return keyword;
 }
 
@@ -1382,5 +1488,8 @@ function inferClusterFromKeywords(keywords) {
     return "wearables";
   }
   if (blob.includes("tablet")) return "tablets";
+  if (blob.includes("dishwasher") || blob.includes("washer") || blob.includes("laundry")) {
+    return "laundry";
+  }
   return "smart-home";
 }
