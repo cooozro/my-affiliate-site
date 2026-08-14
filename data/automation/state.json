@@ -1,15 +1,17 @@
 {
-  "topicIndex": 20,
+  "topicIndex": 11,
   "usedTopicIds": [
     "space-heaters",
-    "space-heaters"
+    "space-heaters",
+    "robot-vacuums",
+    "air-purifiers"
   ],
   "lastPublishAt": "2026-08-14T01:37:15.074Z",
   "nextPublishAt": "2026-08-15T01:58:00.000Z",
   "scheduledGapHours": 4.97,
   "publishCountToday": 1,
   "publishDateKst": "2026-08-14",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-08-14",
   "history": [
     {
@@ -43,15 +45,26 @@
         "https://www.aipick.shop/en/blog/2026-compact-dishwasher-vs-portable-washer",
         "https://www.aipick.shop/ko/blog/2026-compact-dishwasher-vs-portable-washer"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "2026-small-room-air-purifiers-head-to-head",
+      "at": "2026-08-14T06:09:24.112Z",
+      "topic": "air-purifiers"
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-14T05:57:39.360Z",
-    "issueCount": 1,
+    "at": "2026-08-14T06:09:32.591Z",
+    "issueCount": 2,
     "issues": [
       {
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
+        "severity": "warning"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 260min",
+        "message": "Cursor replenish pending 272min",
         "severity": "warning"
       }
     ],
@@ -79,6 +92,19 @@
       "id": "meta-compact-footprint-appliances",
       "cluster": "cross-cutting",
       "at": "2026-08-14T01:37:15.091Z"
+    },
+    {
+      "id": "robot-vacuums",
+      "category": "smart-home",
+      "cluster": "floor-care",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-08-14T06:08:02.741Z"
+    },
+    {
+      "id": "air-purifiers",
+      "category": "home-appliances",
+      "taxonomyGroup": "생활가전/청소",
+      "at": "2026-08-14T06:08:36.937Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-14",
@@ -88,14 +114,21 @@
     "autoRepairCount": 42,
     "manualReviewCount": 3
   },
-  "formatDeck": [],
+  "formatDeck": [
+    "head-to-head",
+    "model-deep-dive",
+    "scenario-guide",
+    "checklist",
+    "explainer"
+  ],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
     "checklist",
     "explainer",
     "model-deep-dive",
-    "head-to-head"
+    "head-to-head",
+    "buying-guide"
   ],
   "metaAngleHistory": [
     {
@@ -119,7 +152,7 @@
       "at": "2026-08-13T04:26:55.197Z"
     }
   ],
-  "roadmapPhase": "tier2-first-pass",
+  "roadmapPhase": "format-rotation",
   "contentStrategyHistory": [
     {
       "writingMode": "benchmark",
