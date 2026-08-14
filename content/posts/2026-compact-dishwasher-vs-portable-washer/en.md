@@ -18,13 +18,22 @@ topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting
 writingProvider: deepseek
 coverImage: >-
-  /images/posts/2026-compact-dishwasher-vs-portable-washer/compact-dishwasher-small-apartment-cover.jpg
-coverImageAlt: compact dishwasher small apartment in a home interior
-coverImageAltKo: 실내의 compact dishwasher small apartment
-coverImageCredit: Photo by PublicDomainPictures / Pixabay
-coverImageProvider: pixabay
+  /images/posts/2026-compact-dishwasher-vs-portable-washer/countertop-dishwasher-portable-washer-cover.jpg
+coverImageAlt: countertop dishwasher
+coverImageAltKo: 식기세척기
+coverImageCredit: Photo by AS Photography / Pexels
+coverImageProvider: pexels
 updatedAt: '2026-08-14T01:37:15.241Z'
 publishedAt: '2026-08-14T01:37:15.074Z'
+imageSearchKeywords:
+  - countertop dishwasher
+  - portable washer
+  - compact appliances
+  - small-space appliances
+  - appliance head-to-head
+coverImageAssetId: 213162
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/213162/pexels-photo-213162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 ---
 ## Editorial Overview
 

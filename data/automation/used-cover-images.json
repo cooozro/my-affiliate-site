@@ -1004,12 +1004,12 @@
       "registeredAt": "2026-08-14T06:23:20.037Z"
     },
     {
-      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "slug": "adsense-seo-checklist",
       "assetKey": null,
       "hash": null,
       "contentHash": null,
-      "provider": "pixabay",
-      "registeredAt": "2026-08-14T06:23:20.059Z"
+      "provider": null,
+      "registeredAt": "2026-08-14T06:23:20.093Z"
     },
     {
       "slug": "adsense-seo-checklist",
@@ -1017,7 +1017,32 @@
       "hash": null,
       "contentHash": null,
       "provider": null,
-      "registeredAt": "2026-08-14T06:23:20.093Z"
+      "registeredAt": "2026-08-14T06:24:29.446Z"
+    },
+    {
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": "pixabay",
+      "registeredAt": "2026-08-14T06:24:29.472Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-14T06:24:29.510Z"
+    },
+    {
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "url": "https://images.pexels.com/photos/213162/pexels-photo-213162.jpeg",
+      "assetKey": "pexels:213162",
+      "hash": "14517cf17bd7b421e1ffab6ee1d07c81d6ee6abe5b9d488ca5cc44dab88e0fcf",
+      "contentHash": "14517cf17bd7b421e1ffab6ee1d07c81d6ee6abe5b9d488ca5cc44dab88e0fcf",
+      "provider": "pexels",
+      "registeredAt": "2026-08-14T06:24:35.720Z"
     }
   ]
 }
