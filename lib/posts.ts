@@ -17,6 +17,7 @@ export type PostMeta = {
   coverImage?: string;
   coverImageAlt?: string;
   coverImageCredit?: string;
+  coverImageSourceUrl?: string;
   liveData?: boolean;
   draft?: boolean;
   /** Frontmatter noindex / robots — hidden from sitemap, RSS, homepage, related picks. */
@@ -106,6 +107,9 @@ function parsePostFile(slug: string, locale: Locale): Post {
     coverImageAlt: data.coverImageAlt ? String(data.coverImageAlt) : undefined,
     coverImageCredit: data.coverImageCredit
       ? String(data.coverImageCredit)
+      : undefined,
+    coverImageSourceUrl: data.coverImageSourceUrl
+      ? String(data.coverImageSourceUrl)
       : undefined,
     liveData: Boolean(data.liveData),
     draft: Boolean(data.draft),

@@ -14,7 +14,7 @@ topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting
 writingProvider: deepseek
 coverImage: >-
-  /images/posts/2026-compact-dishwasher-vs-portable-washer/countertop-dishwasher-portable-washer-cover.jpg
+  https://images.pexels.com/photos/213162/pexels-photo-213162.jpeg?auto=compress&cs=tinysrgb&w=1200
 coverImageAlt: 식기세척기
 coverImageCredit: Photo by AS Photography / Pexels
 coverImageProvider: pexels

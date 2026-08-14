@@ -417,14 +417,12 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
     return null;
   }
 
-  if (options.forceRefresh) {
-    const meta =
-      typeof queryOrContext === "object" && queryOrContext?.coverImage
-        ? queryOrContext.coverImage
-        : null;
-    clearSlugCoverAssets(slug, meta, options);
-    registry = syncImageRegistryFromPosts();
-  }
+  const pendingForceRefreshClear =
+    options.forceRefresh &&
+    typeof queryOrContext === "object" &&
+    queryOrContext?.coverImage
+      ? String(queryOrContext.coverImage)
+      : null;
 
   const filename = buildCoverFilename(ctx.productKeywords, slug);
   const alts = buildCoverAlts(ctx);
@@ -505,6 +503,11 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
         path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
       );
       return null;
+    }
+
+    if (pendingForceRefreshClear) {
+      clearSlugCoverAssets(slug, downloaded.relativePath, options);
+      registry = syncImageRegistryFromPosts();
     }
 
     registerUsedImage(registry, {
@@ -598,7 +601,12 @@ export async function fetchAdditionalImages(slug, queryOrContext, options = {}) 
         continue;
       }
 
-      registerUsedImage(registry, {
+      if (pendingForceRefreshClear) {
+      clearSlugCoverAssets(slug, downloaded.relativePath, options);
+      registry = syncImageRegistryFromPosts();
+    }
+
+    registerUsedImage(registry, {
         slug,
         url: winner.imageUrl,
         assetKey: winner.assetKey,
