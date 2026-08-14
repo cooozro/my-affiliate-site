@@ -5,26 +5,26 @@ title: >-
 description: >-
   Depth, width, and real capacity face-off: COMFEE countertop dishwasher vs.
   BLACK+DECKER portable washer for tight studio closets.
-date: '2026-08-13'
+date: '2026-08-14'
 tags:
   - compact appliances
   - countertop dishwasher
   - portable washer
   - small-space appliances
   - appliance head-to-head
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting
 writingProvider: deepseek
-createdAt: '2026-08-13T04:56:15.964Z'
 coverImage: >-
   /images/posts/2026-compact-dishwasher-vs-portable-washer/compact-dishwasher-small-apartment-cover.jpg
 coverImageAlt: compact dishwasher small apartment in a home interior
 coverImageAltKo: 실내의 compact dishwasher small apartment
 coverImageCredit: Photo by PublicDomainPictures / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-13T04:56:27.585Z'
+updatedAt: '2026-08-14T01:37:15.241Z'
+publishedAt: '2026-08-14T10:37:13.000Z'
 ---
 ## Editorial Overview
 
@@ -140,12 +140,11 @@ Treat both as one-person or two-person tools. Run a dishwasher after every meal,
 
 ## Related guides
 
-- [Compact Footprint Scenario Guide for Small Spaces](/en/blog/2026-compact-footprint-cross-category-scenario-guide)
-- [Dishwashers Explained: Capacity, Cycles, and Cut-Out Sizes](/en/blog/2026-dishwashers-explainer)
-- [2026 Clothes Dryers Buying Guide](/en/blog/2026-clothes-dryers-buying-guide)
-- [Cordless Vacuums Scenario Guide](/en/blog/2026-cordless-vacuums-scenario-guide)
-- [Countertop Ice Makers Buying Guide](/en/blog/2026-countertop-ice-makers-buying-guide)
-
+- [Compact Appliances by Scenario: What Earns Space in a Small Home?](/en/blog/2026-compact-footprint-cross-category-scenario-guide) — Five compact-appliance scenarios compare cooling, humidity, cooking, rice, and floor care…
+- [Countertop Ice Makers for Small Kitchens: Nugget vs Bullet, Output, and 3-Year Cost](/en/blog/2026-countertop-ice-makers-buying-guide) — Summer apartment ice makers compared — nugget vs bullet ice, lbs per day, tank vs continu…
+- [Dishwasher Place Settings, dB, and Liters: What the Specs Actually Mean](/en/blog/2026-dishwashers-explainer) — Explains dishwasher place settings, noise ratings, and water liters per cycle so compact…
+- [Heat Pump vs Vented Dryers: Five Picks for Humid Summer Indoor Laundry](/en/blog/2026-clothes-dryers-buying-guide) — Compare heat-pump and vented clothes dryers for humid summer weeks — energy use, capacity…
+- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — Summer stick vacuums by scenario — AC dust, travel resets, pet shedding, and school-break…
 ## Final Verdict
 
 **Who should buy the COMFEE CDC17P1AWW**

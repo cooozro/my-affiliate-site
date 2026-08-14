@@ -1,25 +1,25 @@
 ---
 title: '소형 공간 대결: COMFEE 카운터탑 식기세척기 vs. BLACK+DECKER 휴대용 세탁기'
 description: '깊이·폭·실사용 용량 대결: 좁은 원룸 옷장을 위한 COMFEE 카운터탑 식기세척기 vs. BLACK+DECKER 휴대용 세탁기.'
-date: '2026-08-13'
+date: '2026-08-14'
 tags:
   - compact appliances
   - countertop dishwasher
   - portable washer
   - small-space appliances
   - appliance head-to-head
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting
 writingProvider: deepseek
-createdAt: '2026-08-13T04:56:15.964Z'
 coverImage: >-
   /images/posts/2026-compact-dishwasher-vs-portable-washer/compact-dishwasher-small-apartment-cover.jpg
 coverImageAlt: 실내의 compact dishwasher small apartment
 coverImageCredit: Photo by PublicDomainPictures / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-13T04:56:27.618Z'
+updatedAt: '2026-08-14T01:37:15.243Z'
+publishedAt: '2026-08-14T10:37:13.000Z'
 ---
 ## 편집부 개요
 
@@ -135,12 +135,11 @@ COMFEE는 카운터 위에 놓고 주방 수도꼭지를 사용하므로 임대 
 
 ## 관련 가이드
 
-- [소형 공간을 위한 콤팩트 설치 면적 시나리오 가이드](/ko/blog/2026-compact-footprint-cross-category-scenario-guide)
-- [식기세척기 설명: 용량, 사이클, 컷아웃 크기](/ko/blog/2026-dishwashers-explainer)
-- [2026 의류 건조기 구매 가이드](/ko/blog/2026-clothes-dryers-buying-guide)
-- [무선 청소기 시나리오 가이드](/ko/blog/2026-cordless-vacuums-scenario-guide)
-- [카운터탑 제빙기 구매 가이드](/ko/blog/2026-countertop-ice-makers-buying-guide)
-
+- [소형 가전 시나리오 가이드: 좁은 집에서 자리를 줄 제품은?](/ko/blog/2026-compact-footprint-cross-category-scenario-guide) — 냉방, 습도, 간편 조리, 밥, 바닥 청소를 다섯 생활 시나리오로 나눠 설치 면적과 전기료, 소모품, 관리 부담까지 비교합니다.
+- [소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용](/ko/blog/2026-countertop-ice-makers-buying-guide) — 여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.
+- [식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하는 것](/ko/blog/2026-dishwashers-explainer) — 콤팩트·빌트인 식기세척기의 플레이스 세팅, 소음(dB), 사이클당 물 사용량(L)을 비교할 때 헷갈리는 스펙을 정리합니다.
+- [히트펌프 vs 배기형 건조기: 습한 여름 실내 빨래를 위한 5가지](/ko/blog/2026-clothes-dryers-buying-guide) — 습한 여름 실내 건조에 맞춘 히트펌프·배기형 의류건조기 비교 — 전력, 용량, 센서 건조, 설치 제약을 공개 스펙으로 정리합니다.
+- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 여름 무선 스틱 청소기 시나리오 — 냉방 먼지, 휴가 전후 청소, 반려 털, 방학 생활 먼지를 공개 스펙 기준으로 비교.
 ## 최종 평가
 
 **COMFEE CDC17P1AWW를 구매해야 할 사람**

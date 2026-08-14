@@ -2,12 +2,13 @@
   "topicIndex": 20,
   "usedTopicIds": [
     "space-heaters",
+    "space-heaters",
     "space-heaters"
   ],
-  "lastPublishAt": "2026-08-13T02:51:56.951Z",
-  "nextPublishAt": "2026-08-14T01:25:00.000Z",
-  "scheduledGapHours": 4.42,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-14T01:37:15.074Z",
+  "nextPublishAt": "2026-08-15T01:58:00.000Z",
+  "scheduledGapHours": 4.97,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-14",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-14",
@@ -30,13 +31,35 @@
       "slug": "2026-compact-dishwasher-vs-portable-washer",
       "at": "2026-08-13T04:56:15.964Z",
       "topic": "meta-compact-footprint-appliances"
+    },
+    {
+      "action": "publish",
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "topic": {
+        "id": "meta-compact-footprint-appliances",
+        "cluster": "cross-cutting"
+      },
+      "at": "2026-08-14T01:37:15.074Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-compact-dishwasher-vs-portable-washer",
+        "https://www.aipick.shop/ko/blog/2026-compact-dishwasher-vs-portable-washer"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-14T01:17:24.712Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-08-14T01:37:13.703Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (12min past slot, KST 2026-08-14)",
+        "severity": "error"
+      }
+    ],
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -55,6 +78,17 @@
       "category": "home-appliances",
       "taxonomyGroup": "계절가전/난방·가습",
       "at": "2026-08-13T04:08:37.687Z"
+    },
+    {
+      "id": "meta-compact-footprint-appliances",
+      "cluster": "cross-cutting",
+      "at": "2026-08-14T01:37:15.091Z"
+    },
+    {
+      "id": "space-heaters",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/난방·가습",
+      "at": "2026-08-14T01:37:15.162Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-13",
@@ -64,14 +98,21 @@
     "autoRepairCount": 32,
     "manualReviewCount": 3
   },
-  "formatDeck": [],
+  "formatDeck": [
+    "buying-guide",
+    "checklist",
+    "scenario-guide",
+    "head-to-head",
+    "model-deep-dive"
+  ],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
     "checklist",
     "explainer",
     "model-deep-dive",
-    "head-to-head"
+    "head-to-head",
+    "explainer"
   ],
   "metaAngleHistory": [
     {
