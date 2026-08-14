@@ -1,8 +1,7 @@
 name: Blog automation
 
+# Selahim-controlled only — no auto-run on every main push.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     inputs:
       task:

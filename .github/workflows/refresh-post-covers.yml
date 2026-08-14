@@ -1,16 +1,8 @@
 name: Refresh post covers
 
+# Selahim-controlled only — no auto-run on script push.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - scripts/lib/cover-image.mjs
-      - scripts/lib/image-query.mjs
-      - scripts/lib/image-vision.mjs
-      - scripts/lib/product-taxonomy.mjs
-      - scripts/refresh-post-covers.mjs
-      - .github/workflows/refresh-post-covers.yml
 
 concurrency:
   group: refresh-post-covers

@@ -3,14 +3,9 @@ name: Fetch missing draft covers
 # Runs when drafts are pushed without coverImage; uses GitHub Secrets (PEXELS/PIXABAY).
 # Git pushes serialize via concurrency group git-write-main (shared with publish-slot).
 
+# Selahim-controlled only — no auto-run on content push.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "content/posts/**/en.md"
-      - "content/posts/**/ko.md"
-      - ".github/workflows/fetch-draft-covers.yml"
 
 concurrency:
   group: git-write-main

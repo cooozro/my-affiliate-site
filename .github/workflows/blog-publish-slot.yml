@@ -1,22 +1,8 @@
 name: Blog publish slot
 
-# Fast publish-only cron — separate from slow Cursor replenish so slots are not blocked.
-# Publish+commit always runs before replenish so a Cursor API failure cannot block go-live.
+# Selahim-controlled only — no standalone cron/push.
+# Manual or Selahim dispatch via workflow_dispatch.
 on:
-  push:
-    branches: [main]
-    paths:
-      # Do not trigger on draft-only content pushes — new drafts must not publish immediately.
-      - "data/automation/**"
-      - ".github/workflows/blog-publish-slot.yml"
-  schedule:
-    # Primary: every 15 min (documented cadence; */5 is often dropped on low-traffic repos)
-    - cron: "*/15 * * * *"
-    # Extra safety during KST publish window (UTC 23–14 ≈ KST 08:00–23:00)
-    - cron: "*/15 23 * * *"
-    - cron: "*/15 0-14 * * *"
-    # Hourly backstop
-    - cron: "0 * * * *"
   workflow_dispatch:
 
 env:

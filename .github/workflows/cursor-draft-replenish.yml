@@ -1,18 +1,8 @@
 name: Cursor draft replenish
 
-# Backup scheduler: processes pending cursor-draft-request.json when PC is off.
-# Primary path: blog-automation.yml runs replenish right after publish.
+# Selahim-controlled only — no standalone cron/push backup.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "data/automation/cursor-draft-request.json"
-  schedule:
-    # Backup only — primary replenish runs inside blog-publish-slot.yml.
-    # Do not use */5 here: Cursor agent runs often exceed 15min; frequent cron + cancel killed jobs.
-    - cron: "*/15 * * * *"
-    - cron: "0 * * * *"
   workflow_dispatch:
 
 concurrency:

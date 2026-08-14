@@ -1,11 +1,7 @@
 name: URL index submission
 
-# After content push (incl. admin publish): submit EN/KO URLs to Google + IndexNow (Bing, Naver).
+# Selahim-controlled only — no auto-run on content push.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "content/posts/**"
   workflow_dispatch:
     inputs:
       mode:

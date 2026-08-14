@@ -1,19 +1,10 @@
 name: SEO audit daily
 
-# Admin-only draft: aipick-seo-precision-report (08:30 KST = 23:30 UTC)
-# Isolated from blog-automation / cursor-draft-replenish schedulers.
+# Admin-only draft: aipick-seo-precision-report
+# Selahim-controlled only — no daily cron / auto push.
 
 on:
-  schedule:
-    - cron: "30 23 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/seo-audit-daily.yml"
-      - "scripts/v2/seo-audit/**"
-      - "scripts/v2/seo-audit.mjs"
-      - "scripts/lib/load-env.mjs"
 
 concurrency:
   group: seo-audit-daily
