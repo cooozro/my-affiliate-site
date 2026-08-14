@@ -18,7 +18,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: portable power bank on a travel desk
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-14T01:38:50.635Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707
@@ -33,7 +33,6 @@ coverImageAltKo: 책상 위의 보조배터리
 ## Editorial Overview
 
 > As an independent tech review publication, we cross-check public manufacturer specs and listed retail prices for portable power banks. In our analysis, **watt-hours (Wh) and USB-C PD output** predict airline compliance and real-world charge speed more reliably than mAh labels alone.
-
 
 ## Introduction: the 2026 power bank market shifts to wattage wars
 
@@ -166,8 +165,6 @@ Snapshot as of {{today}}.
 | Laptop assist | Baseus 65W 20000 | Anker 733 |
 | Cheapest bulk (car) | Romoss 30000 | Xiaomi 20000 |
 | Samsung phone focus | Samsung 25W 10000 | Anker 733 |
-
----
 
 ---
 

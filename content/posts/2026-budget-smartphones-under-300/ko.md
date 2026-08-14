@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: 책상 위의 스마트폰
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-08-14T01:38:50.744Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -31,7 +31,6 @@ coverImageAltKo: 책상 위의 스마트폰
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 30만 원대 스마트폰을 제조사 공개 스펙과 업데이트 정책 데이터로 분석합니다. **칩셋 티어와 보안 패치 기간**이 쇼핑몰 디스플레이·카메라 마케팅보다 장기 사용 가치를 더 잘 설명합니다.
-
 
 ## 서론: 2026년 입문 스마트폰, '칩셋 티어'가 승부를 가른다
 
@@ -164,8 +163,6 @@ coverImageAltKo: 책상 위의 스마트폰
 | 배터리 최우선 | Moto G Power | Poco M6 Pro |
 | 최저가 선물 | Galaxy A15 | Moto G Power |
 | 샤오미 생태계 | Redmi Note 13 Pro | Poco M6 Pro |
-
----
 
 ---
 

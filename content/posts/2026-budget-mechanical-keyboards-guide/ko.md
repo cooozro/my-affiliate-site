@@ -15,7 +15,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: 책상 위의 기계식 키보드
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-08-14T01:38:50.502Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -30,7 +30,6 @@ coverImageAltKo: 책상 위의 기계식 키보드
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 입문용 기계식 키보드를 공개 스펙 기준의 핫스왑·스위치·레이아웃 데이터로 평가합니다. **핫스왑과 스위치 타입**이 RGB·브랜드 마케팅보다 입문 만족도를 더 잘 설명합니다.
-
 
 ## 서론: 2026년 입문 기계식 시장, '핫스왑'이 기본이 됐다
 
@@ -165,8 +164,6 @@ coverImageAltKo: 책상 위의 기계식 키보드
 | 최저가 체험 | Redragon K552 | Keychron C3 |
 | 조용한 사무실 | Epomaker TH80 Pro | Keychron C3 |
 | 커스텀 확장 | Akko 5075B | RK84 |
-
----
 
 ---
 

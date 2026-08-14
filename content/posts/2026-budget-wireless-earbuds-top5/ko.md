@@ -23,13 +23,12 @@ imageSearchKeywords:
   - true wireless earphones
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-14T01:38:50.823Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 가성비 무선 이어폰을 공개 코덱·ANC·배터리 데이터로 비교합니다. 벤치마크상 **LDAC 지원과 노이즈 캔슬링 깊이**가 5만 원 이하 구간에서 브랜드보다 체감 가치를 더 잘 설명합니다.
-
 
 ## 서론: 2026년 TWS 시장, '가성비 전쟁'이 본격화되다
 
@@ -162,8 +161,6 @@ publishedAt: '2026-06-25T08:00:00.000Z'
 | 최저가 입문 | QCY MeloBuds Pro | SoundPeats Air5 Pro |
 | 게이밍·통화 | EarFun Air Pro 4 | Anker Soundcore P40i |
 | 샤오미 생태계 | Redmi Buds 5 Pro | SoundPeats Air5 Pro |
-
----
 
 ---
 

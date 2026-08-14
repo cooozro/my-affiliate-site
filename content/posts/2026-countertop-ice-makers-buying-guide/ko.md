@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: '11931271'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/11931271/pexels-photo-11931271.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-08-13T02:53:42.196Z'
+updatedAt: '2026-08-14T01:38:51.460Z'
 publishedAt: '2026-07-20T08:28:51.349Z'
 ---
 ## 편집부 개요

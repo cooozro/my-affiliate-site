@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-smartphones-under-300/budget-smartphone-android-phone-handset-cover.jpg
 coverImageAlt: budget smartphone on a desk
 coverImageCredit: Photo by Andrey Matveev / Pexels
-updatedAt: '2026-07-17T06:30:01.871Z'
+updatedAt: '2026-08-14T01:38:50.714Z'
 publishedAt: '2026-06-26T02:57:56.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 33041301
@@ -31,7 +31,6 @@ coverImageAltKo: 책상 위의 스마트폰
 ## Editorial Overview
 
 > As an independent tech review publication, we analyze sub-$300 smartphones from public spec sheets and published update policies. Our data shows **SoC tier and security patch timelines** explain long-term value more clearly than storefront display or camera marketing.
-
 
 ## Introduction: in 2026 entry phones are won on chipset tier
 
@@ -164,8 +163,6 @@ Snapshot as of {{today}}.
 | Battery first | Moto G Power | Poco M6 Pro |
 | Cheapest gift | Galaxy A15 | Moto G Power |
 | Xiaomi ecosystem | Redmi Note 13 Pro | Poco M6 Pro |
-
----
 
 ---
 

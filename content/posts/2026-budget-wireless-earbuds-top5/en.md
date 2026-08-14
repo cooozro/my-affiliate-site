@@ -25,13 +25,12 @@ imageSearchKeywords:
   - true wireless earphones
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-14T01:38:50.797Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare budget true wireless earbuds using public codec, ANC, and battery data. Our benchmarks show **LDAC support and noise-cancellation depth** define value under $40 more reliably than brand prestige.
-
 
 ## Introduction: The 2026 TWS Value War
 
@@ -164,8 +163,6 @@ Snapshot as of {{today}}.
 | Lowest budget | QCY MeloBuds Pro | SoundPeats Air5 Pro |
 | Gaming & calls | EarFun Air Pro 4 | Anker Soundcore P40i |
 | Xiaomi ecosystem | Redmi Buds 5 Pro | SoundPeats Air5 Pro |
-
----
 
 ---
 

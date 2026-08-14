@@ -2,7 +2,6 @@
   "topicIndex": 20,
   "usedTopicIds": [
     "space-heaters",
-    "space-heaters",
     "space-heaters"
   ],
   "lastPublishAt": "2026-08-14T01:37:15.074Z",
@@ -83,36 +82,23 @@
       "id": "meta-compact-footprint-appliances",
       "cluster": "cross-cutting",
       "at": "2026-08-14T01:37:15.091Z"
-    },
-    {
-      "id": "space-heaters",
-      "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
-      "at": "2026-08-14T01:37:15.162Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-13",
+  "lastDailyContentAuditKst": "2026-08-14",
   "lastDailyContentAudit": {
-    "at": "2026-08-13T02:53:45.228Z",
-    "postsScanned": 58,
-    "autoRepairCount": 32,
+    "at": "2026-08-14T01:38:54.648Z",
+    "postsScanned": 59,
+    "autoRepairCount": 42,
     "manualReviewCount": 3
   },
-  "formatDeck": [
-    "buying-guide",
-    "checklist",
-    "scenario-guide",
-    "head-to-head",
-    "model-deep-dive"
-  ],
+  "formatDeck": [],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
     "checklist",
     "explainer",
     "model-deep-dive",
-    "head-to-head",
-    "explainer"
+    "head-to-head"
   ],
   "metaAngleHistory": [
     {

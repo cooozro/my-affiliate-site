@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: 책상 위의 보조배터리
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-07-17T06:30:01.842Z'
+updatedAt: '2026-08-14T01:38:50.663Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707
@@ -32,7 +32,6 @@ coverImageAltKo: 책상 위의 보조배터리
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 보조배터리 비교 시 제조사 공개 스펙과 공식 판매가를 교차 검증합니다. 분석 결과 **Wh(와트시)와 PD 와트**가 mAh 표기보다 항공기 휴대 적합성과 실제 충전 속도를 더 정확히 반영합니다.
-
 
 ## 서론: 2026년 보조배터리 시장, '와트 수 전쟁'이 시작됐다
 
@@ -165,8 +164,6 @@ coverImageAltKo: 책상 위의 보조배터리
 | 노트북 보조 충전 | Baseus 65W 20000 | Anker 733 |
 | 최저가 대용량(차량) | Romoss 30000 | Xiaomi 20000 |
 | 삼성폰 최적화 | Samsung 25W 10000 | Anker 733 |
-
----
 
 ---
 

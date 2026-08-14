@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: mechanical keyboard on a desk
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-07-17T06:30:01.734Z'
+updatedAt: '2026-08-14T01:38:50.476Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606
@@ -32,7 +32,6 @@ coverImageAltKo: 책상 위의 기계식 키보드
 ## Editorial Overview
 
 > As an independent tech review publication, we evaluate entry mechanical keyboards on hot-swap support, switch type, and layout data from public spec sheets. These factors predict first-buyer satisfaction more reliably than RGB or brand marketing.
-
 
 ## Introduction: hot-swap is the 2026 entry-keyboard baseline
 
@@ -167,8 +166,6 @@ Prices are reference USD list values.
 | Cheapest trial | Redragon K552 | Keychron C3 |
 | Quiet office | Epomaker TH80 Pro | Keychron C3 |
 | Customization path | Akko 5075B | RK84 |
-
----
 
 ---
 
