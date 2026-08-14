@@ -35,6 +35,6 @@
   "templatePath": "docs/templates/explainer.md",
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: data-driven. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null,
-  "refreshedAt": "2026-08-14T04:14:16.043Z",
+  "refreshedAt": "2026-08-14T04:33:50.016Z",
   "note": "Pending replenish still needed (buffer empty)."
 }
