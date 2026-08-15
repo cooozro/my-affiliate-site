@@ -7,7 +7,7 @@
     "air-purifiers"
   ],
   "lastPublishAt": "2026-08-14T01:37:15.074Z",
-  "nextPublishAt": "2026-08-15T09:56:37.410Z",
+  "nextPublishAt": "2026-08-15T10:15:43.555Z",
   "scheduledGapHours": 5.98,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-15",
@@ -54,7 +54,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-15T09:56:37.211Z",
+    "at": "2026-08-15T10:15:43.347Z",
     "issueCount": 1,
     "issues": [
       {
