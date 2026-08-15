@@ -1043,6 +1043,23 @@
       "contentHash": "14517cf17bd7b421e1ffab6ee1d07c81d6ee6abe5b9d488ca5cc44dab88e0fcf",
       "provider": "pexels",
       "registeredAt": "2026-08-14T06:24:35.720Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-15T11:05:24.085Z"
+    },
+    {
+      "slug": "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300",
+      "url": "https://pixabay.com/get/g25a71c125df8350fd45890102820bd827f578116fddec474797365b392a84c777522e558d3ceb3e7a602505b4f727669801f29f6e24aec1a83310759473f3c60_1280.jpg",
+      "assetKey": "pixabay:6881420",
+      "hash": "27cf617b57d0d20818d924dc2ae5e32266ecb5bf745824a468128e67cfa3e5fa",
+      "contentHash": "27cf617b57d0d20818d924dc2ae5e32266ecb5bf745824a468128e67cfa3e5fa",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-15T11:05:45.272Z"
     }
   ]
 }

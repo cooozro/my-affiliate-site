@@ -23,7 +23,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-08-14T01:38:51.977Z'
+updatedAt: '2026-08-15T11:00:18.687Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468

@@ -1,20 +1,19 @@
 ---
 title: '작은 방용 공기청정기 3종 비교: 과연 어떤 제품이 공기를 제대로 정화할까?'
 description: '작은 방에 적합한 공기청정기 3종을 CADR, 필터 방식, 소음, 유지비용으로 비교해 침실과 사무실에 맞는 제품을 고르는 데 도움을 줍니다.'
-date: '2026-08-14'
+date: '2026-08-15'
 tags:
   - 공기청정기
   - 작은 방
   - CADR
   - HEPA 필터
   - 유지비용
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-14T06:09:24.112Z'
-updatedAt: '2026-08-14T06:09:32.348Z'
+updatedAt: '2026-08-15T10:58:39.823Z'
 coverImage: >-
   /images/posts/2026-small-room-air-purifiers-head-to-head/air-purifier-small-room-cover.jpg
 coverImageAlt: HEPA 공기청정기
@@ -30,6 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 36665794
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/36665794/pexels-photo-36665794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-08-15T10:58:23.783Z'
 ---
 ## 편집부 개요
 
@@ -151,10 +151,11 @@ AP-1012C는 작은 방에서 최고의 정화 성능을 제공하지만, 어느 
 
 ## 관련 가이드
 
-- [2026 공기청정기 가이드](/ko/blog/2026-air-purifiers-guide)
-- [2026 제습기 가이드](/ko/blog/2026-dehumidifiers-guide)
-- [2026 쿨링 매트리스 패드 구매 가이드](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [초음파 vs 증발식 가습기: 작동 원리와 곰팡이 예방까지, 어떤 타입을 골라야 할까?](/ko/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention) — 초음파 가습기와 증발식 가습기의 작동 원리, 적정 물탱크 크기, 곰팡이 예방법을 상세히 분석하여 가습기 선택을 돕는 정보를 제공합니다.
+- [전기장판 안전 인증, 타이머, 세탁 관리 — 라벨이 말하는 진짜 의미](/ko/blog/electric-blanket-safety-timers-wash-care-2026) — 전기장판 안전 인증, 타이머 기능, 세탁 규칙을 이해하기 쉽게 설명합니다. 안전하게 따뜻한 침구를 선택하고 관리하는 방법을 다룹니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
 ## 최종 평가
 
 ### 구매를 추천하는 경우

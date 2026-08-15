@@ -17,7 +17,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-08-14T01:38:52.380Z'
+updatedAt: '2026-08-15T11:00:19.094Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: 실내의 induction cooktop kitchen

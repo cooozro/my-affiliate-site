@@ -6,10 +6,10 @@
     "robot-vacuums",
     "air-purifiers"
   ],
-  "lastPublishAt": "2026-08-14T01:37:15.074Z",
-  "nextPublishAt": "2026-08-15T10:53:10.266Z",
-  "scheduledGapHours": 5.98,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-15T10:58:23.783Z",
+  "nextPublishAt": "2026-08-17T02:58:00.000Z",
+  "scheduledGapHours": 5.97,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-15",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-15",
@@ -51,21 +51,28 @@
       "slug": "2026-small-room-air-purifiers-head-to-head",
       "at": "2026-08-14T06:09:24.112Z",
       "topic": "air-purifiers"
+    },
+    {
+      "action": "publish",
+      "slug": "2026-small-room-air-purifiers-head-to-head",
+      "topic": {
+        "id": "air-purifiers",
+        "cluster": "home-appliances"
+      },
+      "at": "2026-08-15T10:58:23.783Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-small-room-air-purifiers-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-small-room-air-purifiers-head-to-head"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-15T10:53:10.056Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (18min past slot, KST 2026-08-15)",
-        "severity": "error"
-      }
-    ],
+    "at": "2026-08-15T11:00:28.810Z",
+    "issueCount": 0,
+    "issues": [],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-small-room-air-purifiers-head-to-head/en.md: publishedAt 2026-08-15T19:58:21.000Z → 2026-08-15T10:58:23.783Z",
+      "2026-small-room-air-purifiers-head-to-head/ko.md: publishedAt 2026-08-15T19:58:21.000Z → 2026-08-15T10:58:23.783Z"
     ]
   },
   "topicHistory": [
@@ -103,14 +110,19 @@
       "category": "home-appliances",
       "taxonomyGroup": "생활가전/청소",
       "at": "2026-08-14T06:08:36.937Z"
+    },
+    {
+      "id": "air-purifiers",
+      "cluster": "home-appliances",
+      "at": "2026-08-15T10:58:23.801Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-14",
+  "lastDailyContentAuditKst": "2026-08-15",
   "lastDailyContentAudit": {
-    "at": "2026-08-14T01:38:54.648Z",
-    "postsScanned": 59,
-    "autoRepairCount": 42,
-    "manualReviewCount": 3
+    "at": "2026-08-15T11:00:21.762Z",
+    "postsScanned": 60,
+    "autoRepairCount": 32,
+    "manualReviewCount": 4
   },
   "formatDeck": [
     "head-to-head",

@@ -5,20 +5,19 @@ title: >-
 description: >-
   We compare three compact air purifiers for small rooms — CADR, filter types,
   noise, and running costs — to help you pick the right one for your bedroom or…
-date: '2026-08-14'
+date: '2026-08-15'
 tags:
   - air purifier
   - small room
   - CADR
   - HEPA filter
   - running costs
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-14T06:09:24.112Z'
-updatedAt: '2026-08-14T06:09:32.310Z'
+updatedAt: '2026-08-15T10:58:39.821Z'
 coverImage: >-
   /images/posts/2026-small-room-air-purifiers-head-to-head/air-purifier-small-room-cover.jpg
 coverImageAlt: HEPA air purifier
@@ -34,6 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: 36665794
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/36665794/pexels-photo-36665794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+publishedAt: '2026-08-15T10:58:23.783Z'
 ---
 ## Editorial Overview
 
@@ -155,10 +155,11 @@ Yes, most modern purifiers have a sleep mode that reduces fan speed and noise. T
 
 ## Related guides
 
-- [2026 Air Purifiers Guide](/en/blog/2026-air-purifiers-guide)
-- [2026 Dehumidifiers Guide](/en/blog/2026-dehumidifiers-guide)
-- [2026 Cooling Mattress Pads Buying Guide](/en/blog/2026-cooling-mattress-pads-buying-guide)
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [Which Humidifier Type Should You Choose? Ultrasonic vs Evaporative Explained](/en/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention) — Discover the key differences between ultrasonic and evaporative humidifiers, optimal tank…
+- [Electric Blanket Safety, Timers, and Wash Care: What the Labels Really Mean](/en/blog/electric-blanket-safety-timers-wash-care-2026) — Understand electric blanket safety certifications, timer features, and washing rules. Edi…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave Sleep](/en/blog/2026-cooling-mattress-pads-buying-guide) — Active water, forced-air, and passive cooling toppers compared for heatwave nights — with…
 ## Final Verdict
 
 ### Who should buy

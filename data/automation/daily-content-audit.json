@@ -1,8 +1,8 @@
 {
-  "dateKst": "2026-08-14",
-  "scannedAt": "2026-08-14T01:38:54.648Z",
-  "postsScanned": 59,
-  "autoRepairCount": 42,
+  "dateKst": "2026-08-15",
+  "scannedAt": "2026-08-15T11:00:21.762Z",
+  "postsScanned": 60,
+  "autoRepairCount": 32,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -18,39 +18,9 @@
       ]
     },
     {
-      "slug": "2026-budget-mechanical-keyboards-guide",
-      "repairs": [
-        "2026-budget-mechanical-keyboards-guide/en.md: removed 1 consecutive duplicate paragraph(s)",
-        "2026-budget-mechanical-keyboards-guide/ko.md: removed 1 consecutive duplicate paragraph(s)"
-      ]
-    },
-    {
       "slug": "2026-budget-monitors-buying-guide",
       "repairs": [
-        "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links",
-        "2026-budget-monitors-buying-guide/en.md: removed 1 consecutive duplicate paragraph(s)",
-        "2026-budget-monitors-buying-guide/ko.md: removed 1 consecutive duplicate paragraph(s)"
-      ]
-    },
-    {
-      "slug": "2026-budget-power-banks-guide",
-      "repairs": [
-        "2026-budget-power-banks-guide/en.md: removed 1 consecutive duplicate paragraph(s)",
-        "2026-budget-power-banks-guide/ko.md: removed 1 consecutive duplicate paragraph(s)"
-      ]
-    },
-    {
-      "slug": "2026-budget-smartphones-under-300",
-      "repairs": [
-        "2026-budget-smartphones-under-300/en.md: removed 1 consecutive duplicate paragraph(s)",
-        "2026-budget-smartphones-under-300/ko.md: removed 1 consecutive duplicate paragraph(s)"
-      ]
-    },
-    {
-      "slug": "2026-budget-wireless-earbuds-top5",
-      "repairs": [
-        "2026-budget-wireless-earbuds-top5/en.md: removed 1 consecutive duplicate paragraph(s)",
-        "2026-budget-wireless-earbuds-top5/ko.md: removed 1 consecutive duplicate paragraph(s)"
+        "2026-budget-monitors-buying-guide/en.md: removed draft/preview URL links"
       ]
     },
     {
@@ -157,10 +127,26 @@
       ]
     }
   ],
-  "manualReviewCount": 3,
+  "manualReviewCount": 4,
   "manualReview": [
     {
       "order": 1,
+      "slug": "2026-compact-dishwasher-vs-portable-washer",
+      "phase": "publish",
+      "issues": [
+        "2026-compact-dishwasher-vs-portable-washer/en.md: cover image file not found",
+        "2026-compact-dishwasher-vs-portable-washer/ko.md: cover image file not found"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-compact-dishwasher-vs-portable-washer",
+        "ko": "https://www.aipick.shop/ko/blog/2026-compact-dishwasher-vs-portable-washer",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-compact-dishwasher-vs-portable-washer?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-compact-dishwasher-vs-portable-washer?locale=ko"
+      }
+    },
+    {
+      "order": 2,
       "slug": "electric-blanket-safety-timers-wash-care-2026",
       "phase": "publish",
       "issues": [
@@ -175,7 +161,7 @@
       }
     },
     {
-      "order": 2,
+      "order": 3,
       "slug": "humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
       "phase": "publish",
       "issues": [
@@ -190,7 +176,7 @@
       }
     },
     {
-      "order": 3,
+      "order": 4,
       "slug": "welcome",
       "phase": "publish",
       "issues": [

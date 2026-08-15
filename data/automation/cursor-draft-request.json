@@ -1,14 +1,115 @@
 {
-  "status": "complete",
+  "status": "pending",
   "needed": 1,
-  "publishedSlug": "2026-compact-dishwasher-vs-portable-washer",
-  "requestedAt": "2026-08-14T01:37:15.181Z",
-  "writingMode": "stable",
-  "contentProfile": "explainer",
-  "toneVariant": "data-driven",
-  "serpKeyword": null,
-  "serpCachePath": null,
-  "benchmarkOutline": null,
+  "publishedSlug": "2026-small-room-air-purifiers-head-to-head",
+  "requestedAt": "2026-08-15T10:58:39.692Z",
+  "writingMode": "benchmark",
+  "contentProfile": "head-to-head",
+  "toneVariant": "checklist-hook",
+  "serpKeyword": "compact small apartment appliances size comparison guide 구매가이드",
+  "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-구매가이드.json",
+  "benchmarkOutline": {
+    "contentProfile": "head-to-head",
+    "toneVariant": "checklist-hook",
+    "introAngle": "checklist-hook framing for Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "conclusionAngle": "Actionable next steps without hype",
+    "sections": [
+      {
+        "h2": "Before you decide: Section 1: Necessities of Modern Life.",
+        "h3": [
+          "Key factors: Refrigerator",
+          "Oven"
+        ]
+      },
+      {
+        "h2": "Key factors: Section 2: Appliances for Every Kitchen",
+        "h3": [
+          "Cooktop",
+          "Key factors: Range"
+        ]
+      },
+      {
+        "h2": "Analysis methodology",
+        "h3": [
+          "Sources we use",
+          "How we compare models"
+        ]
+      },
+      {
+        "h2": "Section 3: a Compact Laundry Room",
+        "h3": [
+          "Key factors: Dishwashers",
+          "Compact Washers"
+        ]
+      },
+      {
+        "h2": "Key factors: Section 4: for Selecting Compact Appliances",
+        "h3": [
+          "Compact Dryers",
+          "Key factors: Compact Washer/Dryer Combinations"
+        ]
+      },
+      {
+        "h2": "Section 5: Out of Minimal Space",
+        "h3": [
+          "Key factors: Measurements",
+          "Style"
+        ]
+      },
+      {
+        "h2": "Key factors: Section 1: ovens for small kitchens.",
+        "h3": [
+          "Finish",
+          "Key factors: Energy Usage"
+        ]
+      }
+    ],
+    "keyword": "compact small apartment appliances size comparison guide 구매가이드",
+    "baseKeyword": "compact small apartment appliances size comparison guide",
+    "serpSources": [
+      {
+        "title": "Compact Kitchen Appliances for Today's Small Kitchens",
+        "url": "https://www.fergusonhome.com/compact-appliances-guide/a23042?srsltid=AfmBOooAYyXnQTgdk7w3b_1VFpnxabx49yFGEjD8UpQ9UfkFGumiR72k"
+      },
+      {
+        "title": "Apartment Size Appliances | Small Space Kitchens",
+        "url": "https://www.bosch-home.ie/experience-bosch/kitchen-planning-tips/small-space-appliances"
+      },
+      {
+        "title": "Top Small Space Appliance Brands of 2025",
+        "url": "https://www.homewiseappliance.com/blog/post/best-small-space-appliance-brands?srsltid=AfmBOooR3542a4VxCpviN73uZ77ExQ7-ZWM3re1ZeO_tRDhfKjpMNu9n"
+      },
+      {
+        "title": "How to Design a Small Apartment with the Best Appliances",
+        "url": "https://multihousingdepot.com/how-to-design-a-small-apartment-with-the-best-appliances/"
+      },
+      {
+        "title": "Apartment Size Dishwasher Buying Guide",
+        "url": "https://www.whirlpool.com/blog/kitchen/apartment-size-dishwasher-buying-guide.html"
+      },
+      {
+        "title": "Apartment Size Appliances for Small Spaces",
+        "url": "https://www.friedmansappliance.com/blog/apartment-size-appliances"
+      },
+      {
+        "title": "Best Compact Appliances for Small Space",
+        "url": "https://www.dewaardandbode.com/blog/best-compact-appliances-for-small-spaces?srsltid=AfmBOorYmb8msYzksaSqhXNG3mYWBPEyll6NINOdw82lWpRixNYUy7EO"
+      },
+      {
+        "title": "Kitchen Appliance Size Guide: How to Measure and Choose ...",
+        "url": "https://www.gorenjeplus.com/home-appliances/kitchen-appliance-size-guide-how-to-measure-and-choose-the-perfect-fit/"
+      },
+      {
+        "title": "Small Appliances, Big Impact: A Guide to Compact Appliances",
+        "url": "https://www.weirsappliances.com/blog/guide-to-compact-appliances"
+      }
+    ],
+    "validatedAt": "2026-08-15T10:58:39.671Z",
+    "h2Similarity": 0.36984126984126986,
+    "shingleOverlap": 0,
+    "serpCachePath": "/opt/aipick/data/automation/serp-cache/compact-small-apartment-appliances-size-comparison-guide-구매가이드.json",
+    "fromCache": false
+  },
   "fallbackFrom": null,
   "fallbackReason": null,
   "season": "summer",
@@ -17,25 +118,29 @@
     "여름·방학",
     "폭염·냉방"
   ],
-  "contentPlan": "product",
-  "contentAngle": null,
-  "slugHint": null,
+  "contentPlan": "meta",
+  "contentAngle": "compact-footprint-appliances",
+  "slugHint": "2026-compact-footprint-cross-category-head-to-head-guide-20260815",
   "topic": {
-    "id": "space-heaters",
-    "category": "home-appliances",
-    "angle": "space heaters: ceramic vs oil-filled, tip-over protection, and room sizing",
-    "imageQuery": "portable space heater room",
+    "id": "meta-compact-footprint-appliances",
+    "category": "cross-cutting",
+    "angle": "Depth, width, and liter-or-cu-ft comparisons across categories when counter space and closet storage are the limiting factor",
+    "imageQuery": "compact appliances small kitchen",
     "liveData": false,
     "seasons": [
-      "winter"
+      "summer",
+      "spring"
     ],
-    "anchorTopicIds": null,
-    "isMetaAngle": false
+    "anchorTopicIds": [
+      "portable-ac",
+      "air-fryers",
+      "dehumidifiers",
+      "robot-vacuums",
+      "rice-cookers"
+    ],
+    "isMetaAngle": true
   },
-  "templatePath": "docs/templates/explainer.md",
-  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:explainer. Writing mode: stable. Tone: data-driven. Follow docs/templates/explainer.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
-  "lastError": null,
-  "refreshedAt": "2026-08-14T05:57:39.970Z",
-  "note": "Buffer filled locally (in-season draft); cleared off-season space-heaters pending.",
-  "completedAt": "2026-08-14T06:12:07.083604Z"
+  "templatePath": "docs/templates/head-to-head.md",
+  "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:head-to-head. Writing mode: benchmark. Tone: checklist-hook. Follow docs/templates/head-to-head.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. CROSS-CATEGORY ANGLE (capacity-tier): Compact footprint across categories / 소형·컴팩트 제품군. Cover multiple product categories in ONE article — anchor categories: portable-ac, air-fryers, dehumidifiers, robot-vacuums, rice-cookers. Do NOT write a single-product deep dive; each section compares categories for this household/price/capacity theme. Suggested slug: 2026-compact-footprint-cross-category-head-to-head-guide-20260815. Frontmatter: contentAngle: compact-footprint-appliances, topicId: meta-compact-footprint-appliances. Use the benchmark outline in this request (outline-first). Paraphrase all sections; never copy SERP text. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
+  "lastError": null
 }
