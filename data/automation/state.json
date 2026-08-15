@@ -7,7 +7,7 @@
     "air-purifiers"
   ],
   "lastPublishAt": "2026-08-14T01:37:15.074Z",
-  "nextPublishAt": "2026-08-15T10:15:43.555Z",
+  "nextPublishAt": "2026-08-15T10:34:22.670Z",
   "scheduledGapHours": 5.98,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-15",
@@ -54,12 +54,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-15T10:15:43.347Z",
+    "at": "2026-08-15T10:34:22.310Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (19min past slot, KST 2026-08-15)",
+        "message": "Publish ready but no post went live (18min past slot, KST 2026-08-15)",
         "severity": "error"
       }
     ],
