@@ -67,13 +67,16 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-15T11:00:28.810Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": [
-      "2026-small-room-air-purifiers-head-to-head/en.md: publishedAt 2026-08-15T19:58:21.000Z → 2026-08-15T10:58:23.783Z",
-      "2026-small-room-air-purifiers-head-to-head/ko.md: publishedAt 2026-08-15T19:58:21.000Z → 2026-08-15T10:58:23.783Z"
-    ]
+    "at": "2026-08-15T11:13:01.571Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
+        "severity": "warning"
+      }
+    ],
+    "repairs": []
   },
   "topicHistory": [
     {
