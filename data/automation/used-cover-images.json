@@ -1077,6 +1077,23 @@
       "contentHash": "c72d43d6b808b970a0439a9aa2af210c6a5d5fbe442f2223e2e5c641fdf26e1a",
       "provider": "press-kit",
       "registeredAt": "2026-08-17T02:25:36.969Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-17T03:17:58.378Z"
+    },
+    {
+      "slug": "2026-flagship-smartphone-deep-dive",
+      "url": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/tile/apple-iphone-16-pro-hero-240909-lp.jpg.landing-big_2x.jpg",
+      "assetKey": "press-kit:45e5e9ce0c",
+      "hash": "42f69be6d12b563da8fce7b1f05df143a1fa92934309905253d797f96e13eff8",
+      "contentHash": "42f69be6d12b563da8fce7b1f05df143a1fa92934309905253d797f96e13eff8",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-17T03:17:58.851Z"
     }
   ]
 }

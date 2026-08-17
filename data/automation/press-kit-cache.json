@@ -58,5 +58,35 @@
         "altHintKo": "JBL Flip 7 공식 프레스킷 제품컷"
       }
     ]
+  },
+  "apple-iphone-16-pro": {
+    "at": "2026-08-17T03:17:58.304Z",
+    "query": "iPhone 16 Pro Apple official press product OR media kit site:apple.com/newsroom",
+    "images": [
+      {
+        "url": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/tile/Apple-iPhone-16-Pro-hero-240909-lp.jpg.landing-big_2x.jpg",
+        "role": "cover",
+        "altHint": "Apple iPhone 16 Pro official press kit smartphone photo",
+        "altHintKo": "Apple iPhone 16 Pro 스마트폰 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg",
+        "role": "lifestyle",
+        "altHint": "Apple iPhone 16 Pro official press kit smartphone photo",
+        "altHintKo": "Apple iPhone 16 Pro 스마트폰 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/tile/Apple-iPhone-16-lineup-240909-lp.jpg.og.jpg?202605201549",
+        "role": "detail",
+        "altHint": "Apple iPhone 16 Pro official press kit smartphone photo",
+        "altHintKo": "Apple iPhone 16 Pro 스마트폰 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-finish-lineup-240909_big.jpg.large.jpg",
+        "role": "detail",
+        "altHint": "Apple iPhone 16 Pro official press kit smartphone photo",
+        "altHintKo": "Apple iPhone 16 Pro 스마트폰 공식 프레스킷 제품컷"
+      }
+    ]
   }
 }

@@ -25,7 +25,7 @@ updatedAt: '2026-08-17T03:04:42.226Z'
 coverImageAssetId: 8aa5d58b1d
 coverImageSourceUrl: >-
   https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535
-publishedAt: '2026-08-17T12:04:37.000Z'
+publishedAt: '2026-08-17T03:04:42.008Z'
 ---
 ## 편집부 개요
 

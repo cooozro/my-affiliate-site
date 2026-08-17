@@ -1,17 +1,19 @@
 {
-  "topicIndex": 11,
+  "topicIndex": 22,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
     "robot-vacuums",
-    "air-purifiers"
+    "air-purifiers",
+    "budget-monitors",
+    "flagship-smartphones"
   ],
   "lastPublishAt": "2026-08-17T03:04:42.008Z",
   "nextPublishAt": "2026-08-18T02:06:00.000Z",
   "scheduledGapHours": 5.1,
   "publishCountToday": 1,
   "publishDateKst": "2026-08-17",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-08-17",
   "history": [
     {
@@ -77,25 +79,27 @@
         "https://www.aipick.shop/en/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300",
         "https://www.aipick.shop/ko/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "2026-flagship-smartphone-deep-dive",
+      "at": "2026-08-17T03:17:57.258Z",
+      "topic": "flagship-smartphones"
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T03:04:37.530Z",
-    "issueCount": 2,
+    "at": "2026-08-17T03:11:59.964Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (6min past slot, KST 2026-08-17)",
-        "severity": "warning"
-      },
-      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2405min",
+        "message": "Cursor replenish pending 2413min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/en.md: publishedAt 2026-08-17T12:04:37.000Z → 2026-08-17T03:04:42.008Z",
+      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/ko.md: publishedAt 2026-08-17T12:04:37.000Z → 2026-08-17T03:04:42.008Z"
     ]
   },
   "topicHistory": [
@@ -143,6 +147,18 @@
       "id": "bluetooth-speakers",
       "cluster": "audio",
       "at": "2026-08-17T03:04:42.026Z"
+    },
+    {
+      "id": "budget-monitors",
+      "category": "displays",
+      "taxonomyGroup": "IT/PC",
+      "at": "2026-08-17T03:12:00.381Z"
+    },
+    {
+      "id": "flagship-smartphones",
+      "category": "smartphones",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-08-17T03:13:00.869Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-17",
@@ -153,7 +169,6 @@
     "manualReviewCount": 11
   },
   "formatDeck": [
-    "head-to-head",
     "model-deep-dive",
     "scenario-guide",
     "checklist",
@@ -166,7 +181,8 @@
     "explainer",
     "model-deep-dive",
     "head-to-head",
-    "buying-guide"
+    "buying-guide",
+    "head-to-head"
   ],
   "metaAngleHistory": [
     {
