@@ -21,11 +21,14 @@ writingProvider: deepseek
 createdAt: '2026-08-15T11:05:23.996Z'
 liveData: true
 coverImage: >-
-  /images/posts/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/waterproof-bluetooth-speaker-outdoors-cover.jpg
-coverImageAlt: portable Bluetooth speaker in a home interior
-coverImageAltKo: 실내의 블루투스 스피커
-coverImageCredit: Photo by Surprising_Media / Pixabay
-coverImageProvider: pixabay
+  /images/posts/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/press-cover-8aa5d58b1d.jpg
+coverImageAlt: JBL Flip 7 official press kit product photo
+coverImageAltKo: JBL Flip 7 공식 프레스킷 제품컷
+coverImageCredit: Official press image courtesy of JBL (Press Kit / Media Gallery)
+coverImageProvider: press-kit
+coverImageAssetId: 8aa5d58b1d
+coverImageSourceUrl: >-
+  https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535
 ---
 ## Editorial Overview
 

@@ -28,5 +28,35 @@
         "altHintKo": "Samsung Galaxy Z Fold6 공식 프레스킷 제품컷"
       }
     ]
+  },
+  "jbl-flip-7": {
+    "at": "2026-08-17T02:25:36.703Z",
+    "query": "Flip 7 JBL official press product OR media kit site:jbl.com OR site:harman.com OR site:news.harman.com",
+    "images": [
+      {
+        "url": "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535",
+        "role": "cover",
+        "altHint": "JBL Flip 7 official press kit product photo",
+        "altHintKo": "JBL Flip 7 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4335a69d/pdp/JBL_Flip_7_Lifestyle_01_904x560px.png?sw=904&sh=560",
+        "role": "lifestyle",
+        "altHint": "JBL Flip 7 official press kit product photo",
+        "altHintKo": "JBL Flip 7 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwad0b22ea/JBL_FLIP_7_HERO_BLUE_079_x1.png?sw=535&sh=535",
+        "role": "detail",
+        "altHint": "JBL Flip 7 official press kit product photo",
+        "altHintKo": "JBL Flip 7 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb158dc83/JBL_FLIP_7_BACK_BLUE_047_x1.png?sw=535&sh=535",
+        "role": "detail",
+        "altHint": "JBL Flip 7 official press kit product photo",
+        "altHintKo": "JBL Flip 7 공식 프레스킷 제품컷"
+      }
+    ]
   }
 }
