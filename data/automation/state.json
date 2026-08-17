@@ -88,19 +88,10 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T03:32:40.646Z",
-    "issueCount": 1,
-    "issues": [
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2434min",
-        "severity": "warning"
-      }
-    ],
-    "repairs": [
-      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/en.md: publishedAt 2026-08-17T12:04:37.000Z → 2026-08-17T03:04:42.008Z",
-      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/ko.md: publishedAt 2026-08-17T12:04:37.000Z → 2026-08-17T03:04:42.008Z"
-    ]
+    "at": "2026-08-17T03:35:18.173Z",
+    "issueCount": 0,
+    "issues": [],
+    "repairs": []
   },
   "topicHistory": [
     {
