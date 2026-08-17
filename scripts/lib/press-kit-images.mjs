@@ -42,6 +42,16 @@ export const PRESS_KIT_ALLOWED_HOST_SUFFIXES = [
   "corporate.dyson.com",
   "news.dyson.com",
   "media.dyson.com",
+  // Audio brands — newsroom / media press assets only
+  "jbl.com",
+  "harman.com",
+  "news.harman.com",
+  "bose.com",
+  "assets.bose.com",
+  "ultimateears.com",
+  "logitech.com",
+  "marshall.com",
+  "marshallheadphones.com",
 ];
 
 /**
@@ -72,6 +82,12 @@ const BRAND_SITE_FILTERS = {
   Google: "site:blog.google OR site:store.google.com",
   Dyson: "site:dyson.com OR site:news.dyson.com",
   Nintendo: "site:nintendo.com",
+  JBL: "site:jbl.com OR site:harman.com OR site:news.harman.com",
+  Harman: "site:harman.com OR site:news.harman.com OR site:jbl.com",
+  Bose: "site:bose.com OR site:assets.bose.com",
+  "Ultimate Ears": "site:ultimateears.com OR site:logitech.com",
+  UE: "site:ultimateears.com OR site:logitech.com",
+  Marshall: "site:marshall.com OR site:marshallheadphones.com",
 };
 
 /** Optional hand-curated seeds (auto-discover fills the rest). */
@@ -122,6 +138,30 @@ export const PRESS_KIT_BY_MODEL_ID = {
     licenseNote: "Apple Newsroom press images — editorial use with Apple attribution.",
     images: [],
   },
+  "jbl-flip-7": {
+    brand: "JBL",
+    modelName: "Flip 7",
+    modelNameKo: "Flip 7",
+    galleryUrl: "https://www.jbl.com/",
+    licenseNote: "JBL / Harman official press or media assets for editorial Flip 7 coverage.",
+    images: [],
+  },
+  "ue-boom-4": {
+    brand: "Ultimate Ears",
+    modelName: "Boom 4",
+    modelNameKo: "Boom 4",
+    galleryUrl: "https://www.ultimateears.com/",
+    licenseNote: "Ultimate Ears / Logitech official press assets for editorial Boom 4 coverage.",
+    images: [],
+  },
+  "sony-srs-xe300": {
+    brand: "Sony",
+    modelName: "SRS-XE300",
+    modelNameKo: "SRS-XE300",
+    galleryUrl: "https://www.sony.com/",
+    licenseNote: "Sony official press / newsroom assets for editorial SRS-XE300 coverage.",
+    images: [],
+  },
 };
 
 export function getPressKitEntry(modelId) {
@@ -164,7 +204,64 @@ function guessGalleryUrl(brand, name) {
     return "https://www.apple.com/newsroom/";
   }
   if (b.includes("lg")) return "https://www.lgnewsroom.com/";
+  if (b.includes("jbl") || b.includes("harman")) return "https://www.jbl.com/";
+  if (b.includes("bose")) return "https://www.bose.com/";
+  if (b.includes("ultimate") || b === "ue") return "https://www.ultimateears.com/";
+  if (b.includes("marshall")) return "https://www.marshall.com/";
+  if (b.includes("sony")) return "https://www.sony.com/";
   return `https://www.google.com/search?q=${encodeURIComponent(`${brand} ${name} press kit`)}`;
+}
+
+/**
+ * Parse brand/model pairs from comparison titles like
+ * "JBL Flip 7 vs UE Boom 4 vs Sony SRS-XE300".
+ * @param {string} title
+ * @returns {Array<{ id: string, brand: string, name: string }>}
+ */
+export function parseModelsFromTitle(title) {
+  const raw = String(title || "");
+  if (!raw.trim()) return [];
+  const parts = raw
+    .split(/\s+vs\.?\s+|\s+VS\s+|,\s*(?=[A-Z])/i)
+    .map((p) => p.replace(/^.*?:\s*/, "").trim())
+    .filter(Boolean);
+
+  const brandPatterns = [
+    { re: /\bJBL\b/i, brand: "JBL" },
+    { re: /\bUE\b|\bUltimate Ears\b/i, brand: "Ultimate Ears" },
+    { re: /\bBose\b/i, brand: "Bose" },
+    { re: /\bSony\b/i, brand: "Sony" },
+    { re: /\bMarshall\b/i, brand: "Marshall" },
+    { re: /\bSamsung\b/i, brand: "Samsung" },
+    { re: /\bApple\b|\biPhone\b|\bMacBook\b/i, brand: "Apple" },
+    { re: /\bLG\b/i, brand: "LG" },
+    { re: /\bDyson\b/i, brand: "Dyson" },
+  ];
+
+  const out = [];
+  for (const part of parts.slice(0, 4)) {
+    let brand = null;
+    for (const bp of brandPatterns) {
+      if (bp.re.test(part)) {
+        brand = bp.brand;
+        break;
+      }
+    }
+    if (!brand) continue;
+    const name = part
+      .replace(new RegExp(brand, "ig"), "")
+      .replace(/\bUltimate Ears\b/ig, "")
+      .replace(/[—–|:·].*$/, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!name || name.length < 2) continue;
+    const id = `${brand}-${name}`
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+    out.push({ id, brand, name });
+  }
+  return out;
 }
 
 export function isPressKitUrlAllowed(urlString) {
@@ -287,8 +384,8 @@ export async function discoverPressKitImages(model, options = {}) {
     images.push({
       url,
       role: roles[images.length] ?? "detail",
-      altHint: `${brand} ${name} official press kit smartphone product photo`,
-      altHintKo: `${brand} ${name} 공식 프레스킷 스마트폰 제품컷`,
+      altHint: `${brand} ${name} official press kit product photo`,
+      altHintKo: `${brand} ${name} 공식 프레스킷 제품컷`,
     });
     if (images.length >= count) break;
   }
@@ -335,8 +432,8 @@ async function scrapeAppleNewsroomImages(galleryUrl, brand, name) {
     return uniq.map((url, i) => ({
       url,
       role: roles[i] ?? "detail",
-      altHint: `${brand} ${name} official Apple Newsroom smartphone press photo`,
-      altHintKo: `${brand} ${name} 애플 뉴스룸 공식 스마트폰 프레스 사진`,
+      altHint: `${brand} ${name} official Apple Newsroom press photo`,
+      altHintKo: `${brand} ${name} 애플 뉴스룸 공식 프레스 사진`,
     }));
   } catch {
     return [];
@@ -445,10 +542,10 @@ export async function fetchPressKitImages(slug, model, options = {}) {
 
       const altEn =
         img.altHint ??
-        `${entry.brand} ${entry.modelName} official press kit smartphone product photo`;
+        `${entry.brand} ${entry.modelName} official press kit product photo`;
       const altKo =
         img.altHintKo ??
-        `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 스마트폰 제품컷`;
+        `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 제품컷`;
 
       console.log(`Press-kit image: ${slug} ← ${img.url.slice(0, 90)}…`);
 

@@ -12,8 +12,10 @@ import {
   passesVacuumTypeAltGate,
   isRobotVacuumAsset,
   vacuumTopicMode,
+  isPortableSpeakerTopic,
   VACUUM_TEXT_MIN_SCORE,
   DEFAULT_TEXT_MIN_SCORE,
+  SPEAKER_TEXT_MIN_SCORE,
 } from "./image-query.mjs";
 import {
   pickVisionWinner,
@@ -33,11 +35,24 @@ import {
   saveImageRegistry,
   syncImageRegistryFromPosts,
 } from "./used-images.mjs";
+import {
+  fetchPressKitImages,
+  parseModelsFromTitle,
+} from "./press-kit-images.mjs";
 
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
+const UNSPLASH_SEARCH = "https://api.unsplash.com/search/photos";
 
 const PEXELS_PHOTO = "https://api.pexels.com/v1/photos";
+
+function unsplashAccessKey() {
+  return (
+    process.env.UNSPLASH_ACCESS_KEY?.trim() ||
+    process.env.UNSPLASH_API_KEY?.trim() ||
+    ""
+  );
+}
 
 const TEXT_MIN_SCORE = DEFAULT_TEXT_MIN_SCORE;
 
@@ -64,6 +79,7 @@ export function availableImageProviders() {
   const providers = [];
   if (process.env.PEXELS_API_KEY?.trim()) providers.push("pexels");
   if (process.env.PIXABAY_API_KEY?.trim()) providers.push("pixabay");
+  if (unsplashAccessKey()) providers.push("unsplash");
   return providers;
 }
 
@@ -254,6 +270,58 @@ async function fetchPixabayCandidates(query, apiKey, slug, queryIndex, ctx, page
     .filter(Boolean);
 }
 
+async function fetchUnsplashCandidates(query, apiKey, slug, queryIndex, ctx, pageOffset) {
+  const url = new URL(UNSPLASH_SEARCH);
+  url.searchParams.set("query", query);
+  url.searchParams.set("per_page", "30");
+  url.searchParams.set("page", String(searchPage(slug, queryIndex, pageOffset)));
+  url.searchParams.set("orientation", "landscape");
+  url.searchParams.set("content_filter", "high");
+
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Client-ID ${apiKey}`,
+      "Accept-Version": "v1",
+    },
+  });
+  if (!response.ok) throw new Error(`Unsplash API ${response.status}`);
+
+  const data = await response.json();
+  return (data.results ?? [])
+    .map((photo) => {
+      const imageUrl = photo.urls?.regular || photo.urls?.full || photo.urls?.small;
+      if (!imageUrl) return null;
+      const tagBlob = (photo.tags ?? [])
+        .map((t) => t?.title)
+        .filter(Boolean)
+        .join(", ");
+      const alt = [photo.alt_description, photo.description, tagBlob]
+        .filter(Boolean)
+        .join(" | ");
+      const photographer = photo.user?.name ?? "Unsplash";
+      return {
+        imageUrl,
+        thumbUrl: photo.urls?.small || imageUrl,
+        assetKey: assetKey("unsplash", photo.id),
+        providerAlt: alt,
+        relevanceText: alt,
+        credit: `Photo by ${photographer} / Unsplash`,
+        provider: "unsplash",
+        assetId: photo.id,
+        searchQuery: query,
+        downloadLocation: photo.links?.download_location ?? null,
+      };
+    })
+    .filter(Boolean);
+}
+
+function pingUnsplashDownload(downloadLocation, apiKey) {
+  if (!downloadLocation || !apiKey) return;
+  fetch(downloadLocation, {
+    headers: { Authorization: `Client-ID ${apiKey}` },
+  }).catch(() => {});
+}
+
 function dedupeCandidates(candidates) {
   const seen = new Set();
   const out = [];
@@ -306,6 +374,15 @@ async function collectCandidatePool(slug, ctx, registry, options) {
               ctx,
               pageOffset,
             );
+          } else if (provider === "unsplash" && unsplashAccessKey()) {
+            batch = await fetchUnsplashCandidates(
+              query,
+              unsplashAccessKey(),
+              slug,
+              queryIndex,
+              ctx,
+              pageOffset,
+            );
           }
           raw.push(...batch);
         } catch (error) {
@@ -325,11 +402,11 @@ async function collectCandidatePool(slug, ctx, registry, options) {
 async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
   if (pool.length === 0) return null;
 
-  let winner = null;
-
+  // Default: rank by provider alt/tags from Pexels / Pixabay / Unsplash.
+  // OpenAI vision is opt-in only (IMAGE_VISION=1) — not used for image picking.
   if (visionSelectionEnabled()) {
     const visionRanked = await rankCandidatesWithVision(pool, ctx);
-    winner = pickVisionWinner(visionRanked);
+    let winner = pickVisionWinner(visionRanked);
 
     if (!winner) {
       console.warn(`Vision rejected pool for ${slug} — expanding search`);
@@ -348,22 +425,27 @@ async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
         winner = pickVisionWinner(extraRanked);
       }
     }
-  } else {
-    const vacuumMode = vacuumTopicMode(ctx.topicId, ctx.slug);
-    const minText = vacuumMode ? VACUUM_TEXT_MIN_SCORE : DEFAULT_TEXT_MIN_SCORE;
-    const strongText = pool.filter((c) => c.textScore >= minText);
-    winner = strongText[0] ?? null;
-    if (winner) {
-      console.log(
-        `  text-only pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
-      );
-    } else {
-      console.warn(
-        `  text-only: no candidate met min score ${minText} for ${slug} — refusing weak/off-topic pick`,
-      );
-    }
+    return winner;
   }
 
+  const vacuumMode = vacuumTopicMode(ctx.topicId, ctx.slug);
+  const speakerMode = isPortableSpeakerTopic(ctx.topicId, ctx.slug);
+  const minText = vacuumMode
+    ? VACUUM_TEXT_MIN_SCORE
+    : speakerMode
+      ? SPEAKER_TEXT_MIN_SCORE
+      : DEFAULT_TEXT_MIN_SCORE;
+  const strongText = pool.filter((c) => c.textScore >= minText);
+  const winner = strongText[0] ?? null;
+  if (winner) {
+    console.log(
+      `  stock pick: ${winner.provider}:${winner.assetId} (score ${winner.textScore})`,
+    );
+  } else {
+    console.warn(
+      `  stock APIs: no candidate met min score ${minText} for ${slug} — refusing weak/off-topic pick`,
+    );
+  }
   return winner;
 }
 
@@ -404,16 +486,86 @@ function workRoot(options) {
 }
 
 /**
- * Fetch a cover image using Pexels + Pixabay with vision ranking when available.
+ * Prefer manufacturer press-kit / newsroom product cuts when brand+model
+ * can be resolved from title or explicit model. Falls back to null so
+ * callers continue with Pexels/Pixabay stock.
+ */
+export async function tryOfficialCoverFirst(slug, queryOrContext, options = {}) {
+  const meta =
+    typeof queryOrContext === "string" ? { imageQuery: queryOrContext } : (queryOrContext ?? {});
+  const title = String(meta.title ?? "");
+  const models = [
+    ...(meta.modelPick?.primary
+      ? [
+          {
+            id: meta.modelPick.primary.id,
+            brand: meta.modelPick.primary.brand,
+            name: meta.modelPick.primary.name,
+            nameKo: meta.modelPick.primary.nameKo,
+          },
+        ]
+      : []),
+    ...parseModelsFromTitle(title),
+  ];
+
+  // Deduplicate by id
+  const seen = new Set();
+  const unique = [];
+  for (const m of models) {
+    if (!m?.brand || !m?.name) continue;
+    const key = (m.id || `${m.brand}-${m.name}`).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(m);
+  }
+
+  for (const model of unique.slice(0, 3)) {
+    try {
+      const press = await fetchPressKitImages(slug, model, {
+        count: 1,
+        preferRoles: ["cover", "lifestyle", "detail"],
+        rootDir: options.rootDir,
+      });
+      const cover = press.images?.[0];
+      if (!cover?.path) continue;
+
+      console.log(`Cover from official press kit: ${cover.path} (${model.brand} ${model.name})`);
+      return {
+        coverImage: cover.path,
+        coverImageAlt: cover.altEn,
+        coverImageAltKo: cover.altKo,
+        coverImageCredit: cover.credit,
+        coverImageProvider: "press-kit",
+        coverImageAssetId: cover.assetId,
+        coverImageSourceUrl: cover.sourceUrl,
+        imageSearchKeywords: meta.imageSearchKeywords,
+      };
+    } catch (err) {
+      console.warn(`Official cover try failed (${model.brand} ${model.name}): ${err.message}`);
+    }
+  }
+  return null;
+}
+
+/**
+ * Fetch a cover image: official press-kit first, then Pexels / Pixabay / Unsplash.
+ * Ranking uses each provider's alt/tags — not OpenAI vision.
  */
 export async function fetchCoverImage(slug, queryOrContext, options = {}) {
+  if (!options.skipOfficial) {
+    const official = await tryOfficialCoverFirst(slug, queryOrContext, options);
+    if (official) return official;
+  }
+
   const ctx = resolveImageContext(slug, queryOrContext);
   const rootDir = workRoot(options);
   let registry = syncImageRegistryFromPosts();
 
   const providers = allProviders(options.provider);
   if (providers.length === 0) {
-    console.warn("No image API keys set — add PEXELS_API_KEY and/or PIXABAY_API_KEY");
+    console.warn(
+      "No image API keys set — add PEXELS_API_KEY, PIXABAY_API_KEY, and/or UNSPLASH_ACCESS_KEY",
+    );
     return null;
   }
 
@@ -436,9 +588,7 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   if (ctx.seasonContext?.season) {
     console.log(`  season: ${ctx.seasonContext.season} (scene rejects: ${ctx.seasonContext.sceneReject.slice(0, 4).join(", ")})`);
   }
-  console.log(
-    `  vision: ${visionSelectionEnabled() ? `on (min ${visionMinScore()}/10)` : "off (text-only)"}`,
-  );
+  console.log(`  stock APIs: ${providers.join(", ")}`);
 
   const { pool, lastError } = await collectCandidatePool(slug, ctx, registry, options);
 
@@ -453,7 +603,7 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
   const winner = await pickWinnerFromPool(pool, ctx, registry, slug, options);
 
   if (!winner) {
-    console.warn(`No vision-approved image for ${slug} (min ${visionMinScore()}/10)`);
+    console.warn(`No stock API image met the relevance bar for ${slug}`);
     if (lastError) console.warn(lastError.message);
     return null;
   }
@@ -474,6 +624,9 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
 
   try {
     const downloaded = await downloadToSlug(slug, winner.imageUrl, filename, rootDir);
+    if (winner.provider === "unsplash") {
+      pingUnsplashDownload(winner.downloadLocation, unsplashAccessKey());
+    }
 
     if (visionSelectionEnabled()) {
       const verify = await verifyDownloadedImage(downloaded.buffer, ctx);

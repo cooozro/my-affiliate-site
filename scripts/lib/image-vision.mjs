@@ -1,6 +1,6 @@
 /**
- * Vision-based stock photo relevance scoring (OpenAI).
- * Falls back gracefully when OPENAI_API_KEY is unset.
+ * Optional OpenAI vision scoring — OFF unless IMAGE_VISION=1.
+ * Cover selection uses Pexels / Pixabay / Unsplash alt+tags, not this module.
  */
 
 const OPENAI_CHAT = "https://api.openai.com/v1/chat/completions";
@@ -9,10 +9,11 @@ const VISION_MIN_SCORE = Number(process.env.IMAGE_VISION_MIN_SCORE ?? 8);
 const VISION_CANDIDATE_LIMIT = Number(process.env.IMAGE_VISION_CANDIDATE_LIMIT ?? 12);
 
 const REASON_REJECT_PATTERN =
-  /\b(vacuum|robot vacuum|clock|watch|wristwatch|airplane|aircraft|tablet|laptop|bedroom|wrong|unrelated|snow|snowy|winter|blizzard|ice|ski|cold weather)\b/i;
+  /\b(vacuum|robot vacuum|clock|watch|wristwatch|airplane|aircraft|tablet|laptop|bedroom|wrong|unrelated|snow|snowy|winter|blizzard|ice|ski|cold weather|musician|busker|guitar|concert|street performer|crowd|headphones|earbuds|earphone)\b/i;
 
 export function visionSelectionEnabled() {
-  return Boolean(process.env.OPENAI_API_KEY?.trim());
+  const optedIn = /^(1|true|yes)$/i.test(String(process.env.IMAGE_VISION ?? "").trim());
+  return optedIn && Boolean(process.env.OPENAI_API_KEY?.trim());
 }
 
 export function visionMinScore() {
@@ -50,10 +51,12 @@ Also reject: ${negatives}
 ${seasonReject ? `Season mismatch — score 0-3 if scene shows: ${seasonReject}` : ""}
 
 Rules:
-- Score 9-10 ONLY if the REQUIRED subject is clearly the main focus AND the scene matches the editorial season (e.g. summer article must NOT show snow, winter coats, or ski scenes).
+- Score 9-10 ONLY if the REQUIRED product itself is clearly the main focus (product cut / close-up / lifestyle with product dominant) AND the scene matches the editorial season.
+- Score 0-2 if people/musicians/buskers/guitarists/concert crowds are the main subject and the product is only a prop or background (e.g. street musician with a speaker).
 - Score 0-2 if you see the wrong vacuum type: a round autonomous robot vacuum when REQUIRED is a cordless stick/handheld vacuum, or an upright stick vacuum when REQUIRED is a robot vacuum.
-- Score 0-2 if you see clock, wristwatch, airplane, bedroom without the product, snow/winter scene on a summer article, or any forbidden/wrong device.
+- Score 0-2 if you see clock, wristwatch, airplane, bedroom without the product, snow/winter scene on a summer article, headphones/earbuds when REQUIRED is a portable speaker, or any forbidden/wrong device.
 - A cordless stick vacuum is NOT a robot vacuum (round puck on floor). A robot vacuum is NOT a stick/upright handheld unit.
+- For portable/bluetooth speakers: the speaker body must be the clear hero — reject lifestyle scenes where instruments or performers dominate.
 
 Reply ONLY JSON: {"score": number, "reason": "max 12 words"}`;
 

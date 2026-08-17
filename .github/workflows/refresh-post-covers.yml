@@ -23,11 +23,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Refresh covers (vision + dual provider)
+      - name: Refresh covers (Pexels / Pixabay / Unsplash)
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node scripts/refresh-post-covers.mjs
 
       - name: Validate content
@@ -42,7 +42,7 @@ jobs:
             echo "No cover changes to commit"
             exit 0
           fi
-          git commit -m "chore(content): refresh post covers with vision ranking"
+          git commit -m "chore(content): refresh post covers from stock APIs"
           git push
 
       - name: Trigger Vercel redeploy

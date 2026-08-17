@@ -288,7 +288,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     tags: article.en?.tags ?? article.tags,
     imageQuery: article.imageQuery ?? topic.imageQuery,
     imageSearchKeywords: topic.imageSearchKeywords,
-    topicCluster: topic.topicCluster,
+    topicCluster: topic.topicCluster ?? topic.category,
     topic,
     topicId: topic.id,
   };
@@ -312,10 +312,12 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   let pressImages = [];
   /** @type {Awaited<ReturnType<typeof fetchPressKitImages>>['entry']} */
   let pressEntry = null;
-  if (contentProfile === "model-deep-dive" && modelPick?.primary) {
+  // Prefer official press-kit for any profile when a named model is available;
+  // head-to-head / buying-guide also benefit (fetchCoverImage retries official first).
+  if (modelPick?.primary) {
     try {
       const press = await fetchPressKitImages(slug, modelPick.primary, {
-        count: 2,
+        count: contentProfile === "model-deep-dive" ? 2 : 1,
         preferRoles: ["cover", "lifestyle", "detail"],
       });
       pressEntry = press.entry;
@@ -323,6 +325,9 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     } catch (err) {
       console.warn(`Press-kit fetch skipped: ${err.message}`);
     }
+  } else if (article.en?.title) {
+    // head-to-head titles often encode brand+model ("JBL Flip 7 vs …")
+    imageInput.title = article.en.title;
   }
 
   const pressCover = pressImages.find((p) => p.role === "cover") ?? pressImages[0];

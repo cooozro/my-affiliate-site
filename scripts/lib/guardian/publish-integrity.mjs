@@ -414,6 +414,22 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
     }
   }
 
+  // liveData placeholders must only appear when liveData:true (site expands at render).
+  const hasKrwPh = /\{\{krw:[\d.]+\}\}/.test(body) || /\{\{usd_krw_rate\}\}/.test(body);
+  if (hasKrwPh && !data.liveData) {
+    if (phase === "publish") {
+      addError(
+        bucket,
+        `${label}: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW`,
+      );
+    } else {
+      addWarning(
+        bucket,
+        `${label}: currency placeholders without liveData:true — will leak raw template text`,
+      );
+    }
+  }
+
   if (/20\d{2}/.test(String(data.title ?? ""))) {
     if (phase === "publish") {
       addError(bucket, `${label}: title must not contain a calendar year (20xx)`);

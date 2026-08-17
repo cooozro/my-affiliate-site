@@ -1,6 +1,6 @@
 name: Fetch missing draft covers
 
-# Runs when drafts are pushed without coverImage; uses GitHub Secrets (PEXELS/PIXABAY).
+# Runs when drafts are pushed without coverImage; uses GitHub Secrets (PEXELS/PIXABAY/UNSPLASH).
 # Git pushes serialize via concurrency group git-write-main (shared with publish-slot).
 
 # Selahim-controlled only — no auto-run on content push.
@@ -32,6 +32,7 @@ jobs:
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node scripts/fetch-missing-draft-covers.mjs
 
       - name: Validate content

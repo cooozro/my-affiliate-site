@@ -332,6 +332,7 @@ export const PRODUCT_TOPICS = [
     id: "bluetooth-speakers",
     taxonomyGroup: "IT/모바일",
     category: "audio",
+    topicCluster: "audio",
     imageQuery: "portable bluetooth speaker",
     liveData: true,
     seasons: ["summer"],

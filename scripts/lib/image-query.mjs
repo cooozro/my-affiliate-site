@@ -221,6 +221,56 @@ export const TOPIC_IMAGE_PROFILES = {
     topicCluster: "floor-care",
     altScene: { en: "on a hardwood floor", ko: "마루 바닥" },
   },
+  "bluetooth-speakers": {
+    imageSearchKeywords: [
+      "portable bluetooth speaker product",
+      "wireless bluetooth speaker outdoor",
+      "waterproof portable speaker close-up",
+    ],
+    extraSearchQueries: [
+      "bluetooth speaker product photo white background",
+      "portable speaker beach outdoor summer",
+      "wireless speaker close up product shot",
+      "jbl portable bluetooth speaker product",
+    ],
+    topicCluster: "audio",
+    altScene: { en: "outdoors in summer", ko: "여름 야외" },
+    forbiddenSubjects: [
+      "street musician",
+      "busker",
+      "guitarist",
+      "live band",
+      "crowd concert only",
+      "headphones only",
+      "earbuds only",
+      "person singing with guitar",
+    ],
+    extraNegatives: [
+      "musician",
+      "busker",
+      "guitar",
+      "concert stage",
+      "crowd",
+      "headphones",
+      "earbuds",
+      "earphone",
+      "street performer",
+    ],
+  },
+  "noise-cancelling-headphones": {
+    imageSearchKeywords: [
+      "noise cancelling headphones product",
+      "over ear wireless headphones",
+    ],
+    extraSearchQueries: [
+      "wireless headphones product photo",
+      "noise cancelling headphones desk",
+    ],
+    topicCluster: "audio",
+    altScene: { en: "on a desk", ko: "책상 위" },
+    forbiddenSubjects: ["speaker only", "earbuds only", "street musician"],
+    extraNegatives: ["speaker", "busker", "musician"],
+  },
 };
 
 /** Per-slug tuned keywords — avoids ambiguous stock search (e.g. air → airplane). */
@@ -637,6 +687,17 @@ const CLUSTER_NEGATIVES = {
     "dog",
     "airplane",
     "aircraft",
+    // Lifestyle/busker stock often tags "speaker" but shows a musician — reject hard.
+    "musician",
+    "busker",
+    "guitar",
+    "guitarist",
+    "street performer",
+    "concert",
+    "crowd",
+    "singing",
+    "violin",
+    "saxophone",
   ],
   smartphones: ["earbuds", "keyboard", "air conditioner", "air purifier", "cat", "airplane"],
   computing: ["earbuds", "smartphone", "air conditioner", "air purifier", "cat", "airplane"],
@@ -746,6 +807,17 @@ function slugProfile(slug, topicId) {
   if (topicId && TOPIC_IMAGE_PROFILES[topicId]) return TOPIC_IMAGE_PROFILES[topicId];
   if (slug?.includes("fitness-tracker")) return TOPIC_IMAGE_PROFILES["fitness-trackers"];
   if (slug?.includes("tablet")) return TOPIC_IMAGE_PROFILES["tablet-budget"];
+  if (
+    topicId === "bluetooth-speakers" ||
+    slug?.includes("bluetooth-speaker") ||
+    slug?.includes("portable-speaker") ||
+    (slug?.includes("speaker") && (slug.includes("jbl") || slug.includes("boom") || slug.includes("sony")))
+  ) {
+    return TOPIC_IMAGE_PROFILES["bluetooth-speakers"];
+  }
+  if (topicId === "noise-cancelling-headphones" || slug?.includes("noise-cancelling-headphone")) {
+    return TOPIC_IMAGE_PROFILES["noise-cancelling-headphones"];
+  }
   return null;
 }
 
@@ -906,7 +978,16 @@ const CLUSTER_FORBIDDEN = {
     "watch",
   ],
   power: ["clock", "wristwatch", "wall clock", "alarm clock", "watch"],
-  audio: ["clock", "watch", "air conditioner"],
+  audio: [
+    "clock",
+    "watch",
+    "air conditioner",
+    "musician",
+    "busker",
+    "guitar",
+    "street performer",
+    "concert crowd",
+  ],
   smartphones: ["clock", "watch", "earbuds only"],
   "floor-care": ["airplane", "aircraft"],
   laundry: [
@@ -1029,6 +1110,8 @@ const CORDLESS_STICK_ALT_MARKERS = [
 /** Text-only fetch mode: higher bar when vision API is unavailable (e.g. GHA). */
 export const VACUUM_TEXT_MIN_SCORE = 8;
 export const DEFAULT_TEXT_MIN_SCORE = 6;
+/** Speakers without vision: require stronger product-tag evidence (avoid busker stock). */
+export const SPEAKER_TEXT_MIN_SCORE = 10;
 
 /** @returns {'cordless' | 'robot' | null} */
 export function vacuumTopicMode(topicId, slug) {
@@ -1037,6 +1120,18 @@ export function vacuumTopicMode(topicId, slug) {
     return "cordless";
   }
   return null;
+}
+
+export function isPortableSpeakerTopic(topicId, slug) {
+  return (
+    topicId === "bluetooth-speakers" ||
+    Boolean(slug?.includes("bluetooth-speaker")) ||
+    Boolean(slug?.includes("portable-speaker")) ||
+    Boolean(
+      slug?.includes("speaker") &&
+        (slug.includes("jbl") || slug.includes("boom") || slug.includes("sony") || slug.includes("bose")),
+    )
+  );
 }
 
 export function requiredProductAnchors(productKeywords, topicCluster, topicId, slug) {
@@ -1229,6 +1324,19 @@ export function scoreImageRelevance(text, productKeywords, negatives, seasonCont
     }
   }
 
+  // Prefer product-cut tags over lifestyle (helps when vision is off).
+  if (
+    isPortableSpeakerTopic(topicId, slug) ||
+    productKeywords.some((k) => /\bspeaker\b/i.test(k))
+  ) {
+    if (/\b(product|product shot|white background|isolated|studio)\b/.test(blob)) {
+      score += 4;
+    }
+    if (/\b(portable|waterproof|bluetooth)\b/.test(blob) && /\bspeaker\b/.test(blob)) {
+      score += 3;
+    }
+  }
+
   if (blob.includes("air ") && !blob.includes("purifier") && !blob.includes("conditioner")) {
     const needsPurifier = productKeywords.some((k) => k.toLowerCase().includes("purifier"));
     if (needsPurifier) score -= 8;
@@ -1288,12 +1396,14 @@ const CLUSTER_ALT_SCENES = {
   "air-quality": { en: "in a small room", ko: "작은 방" },
   "air-conditioning": { en: "in an apartment room", ko: "원룸" },
   audio: { en: "on a desk", ko: "책상 위" },
+  "audio-portable": { en: "outdoors in summer", ko: "여름 야외" },
   smartphones: { en: "on a desk", ko: "책상 위" },
   computing: { en: "on a workspace desk", ko: "책상" },
   power: { en: "charging a phone", ko: "스마트폰 충전" },
   "smart-home": { en: "in a home interior", ko: "실내" },
   wearables: { en: "during an outdoor workout", ko: "야외 운동" },
   tablets: { en: "on a desk for reading", ko: "책상 위" },
+  "floor-care": { en: "on a hardwood floor", ko: "마루 바닥" },
 };
 
 /**
@@ -1351,6 +1461,13 @@ function resolveAltScene(ctx) {
 
   const cluster =
     ctx.topicCluster ?? inferClusterFromKeywords(ctx.productKeywords ?? []);
+  if (
+    cluster === "audio" &&
+    (ctx.topicId === "bluetooth-speakers" ||
+      /\bspeaker\b/i.test((ctx.productKeywords ?? []).join(" ")))
+  ) {
+    return CLUSTER_ALT_SCENES["audio-portable"];
+  }
   return CLUSTER_ALT_SCENES[cluster] ?? null;
 }
 
@@ -1478,10 +1595,20 @@ function inferClusterFromKeywords(keywords) {
   if (blob.includes("air conditioner") || /\bportable ac\b/.test(blob) || /\bwindow ac\b/.test(blob)) {
     return "air-conditioning";
   }
+  // Speakers before generic "phone" / smart-home fallback — otherwise
+  // "portable bluetooth speaker" becomes indoor smart-home alt scenes.
+  if (
+    blob.includes("bluetooth speaker") ||
+    blob.includes("portable speaker") ||
+    blob.includes("wireless speaker") ||
+    /\bspeaker\b/.test(blob)
+  ) {
+    return "audio";
+  }
   if (blob.includes("earbuds") || blob.includes("earphone") || blob.includes("headphone")) {
     return "audio";
   }
-  if (blob.includes("smartphone") || blob.includes("phone")) return "smartphones";
+  if (blob.includes("smartphone") || /\bphone\b/.test(blob)) return "smartphones";
   if (blob.includes("keyboard") || blob.includes("monitor")) return "computing";
   if (blob.includes("power bank")) return "power";
   if (blob.includes("fitness") || blob.includes("tracker") || blob.includes("smartwatch") || blob.includes("wearable")) {
@@ -1490,6 +1617,10 @@ function inferClusterFromKeywords(keywords) {
   if (blob.includes("tablet")) return "tablets";
   if (blob.includes("dishwasher") || blob.includes("washer") || blob.includes("laundry")) {
     return "laundry";
+  }
+  if (blob.includes("vacuum") || blob.includes("robot cleaner")) return "floor-care";
+  if (blob.includes("security camera") || blob.includes("home camera") || blob.includes("webcam")) {
+    return "smart-home";
   }
   return "smart-home";
 }

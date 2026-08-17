@@ -7,7 +7,10 @@ export function ensureImageApiEnv() {
 export function hasImageApiKeys() {
   ensureImageApiEnv();
   return Boolean(
-    process.env.PEXELS_API_KEY?.trim() || process.env.PIXABAY_API_KEY?.trim(),
+    process.env.PEXELS_API_KEY?.trim() ||
+      process.env.PIXABAY_API_KEY?.trim() ||
+      process.env.UNSPLASH_ACCESS_KEY?.trim() ||
+      process.env.UNSPLASH_API_KEY?.trim(),
   );
 }
 
@@ -23,6 +26,7 @@ GitHub Secrets cannot be read from Cursor or your PC (by design). Options:
      and GitHub Actions Secrets into gitignored .env:
        PEXELS_API_KEY=...
        PIXABAY_API_KEY=...
+       UNSPLASH_ACCESS_KEY=...
      Then: npm run content:image -- --slug=your-slug
 
   B) GHA (no local keys)

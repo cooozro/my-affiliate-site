@@ -83,7 +83,8 @@ Repository → Settings → Secrets and variables → Actions:
 | Secret | Required | Purpose |
 | --- | --- | --- |
 | `PEXELS_API_KEY` | Yes (cover images) | Pexels stock photos |
-| `PIXABAY_API_KEY` | Yes (cover images) | Pixabay stock photos — rotates with Pexels by slug |
+| `PIXABAY_API_KEY` | Yes (cover images) | Pixabay stock photos |
+| `UNSPLASH_ACCESS_KEY` | Yes (cover images) | Unsplash stock photos — rotates with Pexels/Pixabay by slug |
 | `GOOGLE_SERVICE_ACCOUNT_JSON` | Recommended | Indexing API URL submit |
 | `CURSOR_API_KEY` | Optional (fallback) | Cursor agent writes drafts when DeepSeek key absent |
 | `DEEPSEEK_API_KEY` | **Preferred** (draft replenish) | DeepSeek JSON writer + module system prompt |

@@ -16,7 +16,7 @@ Summary:
 
 Placeholders for live posts: `{{today}}`, `{{today_locale}}`, `{{usd_krw_rate}}`, `{{krw:29.99}}`.
 
-Images: `npm run content:image` with `PEXELS_API_KEY` and/or `PIXABAY_API_KEY` (rotates by slug).
+Images: `npm run content:image` with `PEXELS_API_KEY`, `PIXABAY_API_KEY`, and/or `UNSPLASH_ACCESS_KEY` (rotates by slug). Cover ranking uses stock alt/tags — not OpenAI.
 
 ## Guardian baseline (mandatory)
 

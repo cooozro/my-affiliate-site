@@ -11,7 +11,7 @@
  *   node scripts/refresh-post-covers.mjs --slug=2026-my-draft-slug
  *   node scripts/refresh-post-covers.mjs --include-published --slug=2026-air-purifiers-guide
  *
- * Env: PEXELS_API_KEY, PIXABAY_API_KEY, OPENAI_API_KEY (vision)
+ * Env: PEXELS_API_KEY, PIXABAY_API_KEY, UNSPLASH_ACCESS_KEY
  */
 
 import fs from "fs";
@@ -156,7 +156,9 @@ async function refreshSlug(slug, { includePublished }) {
 async function main() {
   loadEnvLocal();
   if (availableImageProviders().length === 0) {
-    console.error("Set PEXELS_API_KEY and/or PIXABAY_API_KEY in .env.local");
+    console.error(
+      "Set PEXELS_API_KEY, PIXABAY_API_KEY, and/or UNSPLASH_ACCESS_KEY in .env.local",
+    );
     process.exit(1);
   }
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Fetch a royalty-free cover image (Pexels + Pixabay rotation) and update post frontmatter.
+ * Fetch a royalty-free cover image (Pexels / Pixabay / Unsplash) and update post frontmatter.
  *
  * Usage:
  *   npm run content:image -- --slug=my-post
  *   npm run content:image -- --slug=my-post --query="override search" [--force]
  *
- * Env: PEXELS_API_KEY and/or PIXABAY_API_KEY in .env.local
+ * Env: PEXELS_API_KEY, PIXABAY_API_KEY, and/or UNSPLASH_ACCESS_KEY in .env.local
  */
 
 import fs from "fs";

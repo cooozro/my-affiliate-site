@@ -109,7 +109,12 @@ if (targets.length === 0) {
   process.exit(0);
 }
 
-if (!process.env.PEXELS_API_KEY && !process.env.PIXABAY_API_KEY) {
+if (
+  !process.env.PEXELS_API_KEY &&
+  !process.env.PIXABAY_API_KEY &&
+  !process.env.UNSPLASH_ACCESS_KEY &&
+  !process.env.UNSPLASH_API_KEY
+) {
   printImageApiKeyHelp();
   process.exit(1);
 }
