@@ -7,7 +7,7 @@
     "air-purifiers"
   ],
   "lastPublishAt": "2026-08-15T10:58:23.783Z",
-  "nextPublishAt": "2026-08-17T01:32:00.000Z",
+  "nextPublishAt": "2026-08-17T01:49:14.794Z",
   "scheduledGapHours": 4.53,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-17",
@@ -67,21 +67,34 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T01:29:11.521Z",
-    "issueCount": 2,
+    "at": "2026-08-17T01:49:14.539Z",
+    "issueCount": 4,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (17min past slot, KST 2026-08-17)",
+        "severity": "error"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2310min",
+        "message": "Cursor replenish pending 2330min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -183,5 +196,17 @@
       "keyword": "compact small apartment appliances size comparison guide 후기",
       "at": "2026-08-13T04:56:27.757Z"
     }
-  ]
+  ],
+  "lastPublishSkipReason": {
+    "at": "2026-08-17T01:49:14.958Z",
+    "reason": "no-publish-eligible-drafts",
+    "triedSlugs": [
+      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"
+    ],
+    "deferredSkipped": 0,
+    "integritySkipped": 1,
+    "diversitySkipped": 0,
+    "publishableCount": 1,
+    "publishEligibleCount": 0
+  }
 }
