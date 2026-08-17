@@ -3,29 +3,29 @@ title: '여름용 휴대용 스피커, 무엇을 고를까? JBL Flip 7 vs UE Boo
 description: >-
   사운드, 방수, 배터리로 비교한 JBL Flip 7, UE Boom 4, Sony SRS-XE300. 여름 휴대용 스피커 선택에 도움을
   드립니다.
-date: '2026-08-15'
+date: '2026-08-17'
 tags:
   - 휴대용 블루투스 스피커
   - JBL Flip 7
   - UE Boom 4
   - Sony SRS-XE300
   - 여름 오디오
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
-createdAt: '2026-08-15T11:05:23.996Z'
 liveData: true
 coverImage: >-
   /images/posts/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/press-cover-8aa5d58b1d.jpg
-coverImageAlt: JBL Flip 7 공식 프레스킷 제품컷
+coverImageAlt: JBL Flip 7 휴대용 스피커 공식 프레스킷 제품컷
 coverImageCredit: Official press image courtesy of JBL (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-15T11:05:45.379Z'
+updatedAt: '2026-08-17T03:04:42.226Z'
 coverImageAssetId: 8aa5d58b1d
 coverImageSourceUrl: >-
   https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535
+publishedAt: '2026-08-17T12:04:37.000Z'
 ---
 ## 편집부 개요
 
@@ -168,12 +168,11 @@ Sony SRS-XE300만 내장 마이크가 있어 스피커폰으로 사용할 수 �
 
 ## 관련 가이드
 
-- [가성비 무선 이어폰: 2026년 TOP 5 추천](/ko/blog/2026-budget-wireless-earbuds-top5)
-- [가성비 보조배터리: 신뢰할 수 있는 예비 배터리 고르는 법](/ko/blog/2026-budget-power-banks-guide)
-- [액션캠 구매 가이드: 여름 모험을 담다](/ko/blog/2026-action-cameras-buying-guide)
-- [냉감 매트리스 패드: 여름 더위 극복하기](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-- [제습기 가이드: 습도를 낮추고 쾌적함 개선하기](/ko/blog/2026-dehumidifiers-guide)
-
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
+- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
 ## 최종 평가
 
 사운드, 내구성, 배터리 수명, 실제 사용 편의성을 비교한 결과, 대부분의 사람에게는 **JBL Flip 7**을 최종 추천합니다. 음질, 휴대성, 가격의 균형이 가장 뛰어납니다. 그룹 환경에서 360° 사운드와 깊은 저음을 우선시한다면 **UE Boom 4**가 좋은 선택입니다. 배터리 지속 시간과 최대 음량이 필수라면 **Sony SRS-XE300**이 승리하며, 스피커폰 기능도 유일하게 지원합니다.

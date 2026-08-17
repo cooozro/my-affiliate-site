@@ -6,10 +6,10 @@
     "robot-vacuums",
     "air-purifiers"
   ],
-  "lastPublishAt": "2026-08-15T10:58:23.783Z",
-  "nextPublishAt": "2026-08-17T02:38:31.447Z",
-  "scheduledGapHours": 4.53,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-17T03:04:42.008Z",
+  "nextPublishAt": "2026-08-18T02:06:00.000Z",
+  "scheduledGapHours": 5.1,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-17",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-17",
@@ -64,35 +64,37 @@
         "https://www.aipick.shop/en/blog/2026-small-room-air-purifiers-head-to-head",
         "https://www.aipick.shop/ko/blog/2026-small-room-air-purifiers-head-to-head"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300",
+      "topic": {
+        "id": "bluetooth-speakers",
+        "cluster": "audio"
+      },
+      "at": "2026-08-17T03:04:42.008Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300",
+        "https://www.aipick.shop/ko/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T02:38:31.198Z",
-    "issueCount": 4,
+    "at": "2026-08-17T03:04:37.530Z",
+    "issueCount": 2,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (9min past slot, KST 2026-08-17)",
+        "message": "Publish ready but no post went live (6min past slot, KST 2026-08-17)",
         "severity": "warning"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
-        "severity": "error"
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2379min",
+        "message": "Cursor replenish pending 2405min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
       "marked-slot-catch-up"
     ]
   },
@@ -136,14 +138,19 @@
       "id": "air-purifiers",
       "cluster": "home-appliances",
       "at": "2026-08-15T10:58:23.801Z"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "cluster": "audio",
+      "at": "2026-08-17T03:04:42.026Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-15",
+  "lastDailyContentAuditKst": "2026-08-17",
   "lastDailyContentAudit": {
-    "at": "2026-08-15T11:00:21.762Z",
-    "postsScanned": 60,
+    "at": "2026-08-17T03:04:47.112Z",
+    "postsScanned": 61,
     "autoRepairCount": 32,
-    "manualReviewCount": 4
+    "manualReviewCount": 11
   },
   "formatDeck": [
     "head-to-head",
@@ -198,7 +205,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-17T02:38:31.602Z",
+    "at": "2026-08-17T03:03:07.051Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"

@@ -6,29 +6,30 @@ description: >-
   We compare JBL Flip 7, UE Boom 4, and Sony SRS-XE300 on sound quality, water
   resistance, and battery life to help you pick the best portable speaker for
   summer.
-date: '2026-08-15'
+date: '2026-08-17'
 tags:
   - portable bluetooth speakers
   - jbl flip 7
   - ue boom 4
   - sony srs-xe300
   - summer audio
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
-createdAt: '2026-08-15T11:05:23.996Z'
 liveData: true
 coverImage: >-
   /images/posts/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300/press-cover-8aa5d58b1d.jpg
-coverImageAlt: JBL Flip 7 official press kit product photo
-coverImageAltKo: JBL Flip 7 공식 프레스킷 제품컷
+coverImageAlt: JBL Flip 7 official press kit portable speaker photo
+coverImageAltKo: JBL Flip 7 휴대용 스피커 공식 프레스킷 제품컷
 coverImageCredit: Official press image courtesy of JBL (Press Kit / Media Gallery)
 coverImageProvider: press-kit
 coverImageAssetId: 8aa5d58b1d
 coverImageSourceUrl: >-
   https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535
+updatedAt: '2026-08-17T03:04:42.225Z'
+publishedAt: '2026-08-17T12:04:37.000Z'
 ---
 ## Editorial Overview
 
@@ -166,12 +167,11 @@ Only the Sony SRS-XE300 has a built-in microphone, so it can be used as a speake
 
 ## Related guides
 
-- [Budget Wireless Earbuds: Top 5 Picks for 2026](/en/blog/2026-budget-wireless-earbuds-top5)
-- [Budget Power Banks: How to Choose a Reliable Backup Battery](/en/blog/2026-budget-power-banks-guide)
-- [Action Cameras Buying Guide: Capture Summer Adventures](/en/blog/2026-action-cameras-buying-guide)
-- [Cooling Mattress Pads: Beat the Summer Heat](/en/blog/2026-cooling-mattress-pads-buying-guide)
-- [Dehumidifiers Guide: Reduce Humidity and Improve Comfort](/en/blog/2026-dehumidifiers-guide)
-
+- [Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave Sleep](/en/blog/2026-cooling-mattress-pads-buying-guide) — Active water, forced-air, and passive cooling toppers compared for heatwave nights — with…
+- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scena…
 ## Final Verdict
 
 After comparing sound, durability, battery life, and real-world usability, the **JBL Flip 7** is our overall recommendation for most people. It offers the best balance of sound quality, portability, and price. The **UE Boom 4** is the choice if you prioritize 360° sound and deep bass for group settings. The **Sony SRS-XE300** wins when battery endurance and loudness are non-negotiable, and it is the only one that works as a speakerphone.
