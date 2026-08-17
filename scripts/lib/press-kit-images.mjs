@@ -164,6 +164,34 @@ export const PRESS_KIT_BY_MODEL_ID = {
   },
 };
 
+function pressProductNoun(brand, name) {
+  const blob = `${brand} ${name}`.toLowerCase();
+  if (
+    /\b(flip|boom|charge|speaker|soundlink)\b/.test(blob) ||
+    /srs[- ]?xe\d/.test(blob)
+  ) {
+    return { en: "portable speaker", ko: "휴대용 스피커" };
+  }
+  if (/\b(iphone|galaxy|pixel|smartphone|phone)\b/.test(blob)) {
+    return { en: "smartphone", ko: "스마트폰" };
+  }
+  if (/\b(ipad|tablet)\b/.test(blob)) {
+    return { en: "tablet", ko: "태블릿" };
+  }
+  if (/\b(macbook|laptop|notebook)\b/.test(blob)) {
+    return { en: "laptop", ko: "노트북" };
+  }
+  return { en: "product", ko: "제품" };
+}
+
+function pressKitAltPair(brand, name, nameKo) {
+  const noun = pressProductNoun(brand, name);
+  return {
+    en: `${brand} ${name} official press kit ${noun.en} photo`,
+    ko: `${brand} ${nameKo || name} ${noun.ko} 공식 프레스킷 제품컷`,
+  };
+}
+
 export function getPressKitEntry(modelId) {
   if (!modelId) return null;
   return PRESS_KIT_BY_MODEL_ID[modelId] ?? null;
@@ -381,11 +409,12 @@ export async function discoverPressKitImages(model, options = {}) {
     const h = Number(row.imageHeight || 0);
     if (w > 0 && h > 0 && (w < 500 || h < 300)) continue;
     seen.add(url);
+    const alts = pressKitAltPair(brand, name);
     images.push({
       url,
       role: roles[images.length] ?? "detail",
-      altHint: `${brand} ${name} official press kit product photo`,
-      altHintKo: `${brand} ${name} 공식 프레스킷 제품컷`,
+      altHint: alts.en,
+      altHintKo: alts.ko,
     });
     if (images.length >= count) break;
   }
@@ -540,12 +569,13 @@ export async function fetchPressKitImages(slug, model, options = {}) {
       saveImageRegistry(registry);
       registry = loadImageRegistry();
 
-      const altEn =
-        img.altHint ??
-        `${entry.brand} ${entry.modelName} official press kit product photo`;
-      const altKo =
-        img.altHintKo ??
-        `${entry.brand} ${entry.modelNameKo ?? entry.modelName} 공식 프레스킷 제품컷`;
+      const alts = pressKitAltPair(
+        entry.brand,
+        entry.modelName,
+        entry.modelNameKo,
+      );
+      const altEn = img.altHint ?? alts.en;
+      const altKo = img.altHintKo ?? alts.ko;
 
       console.log(`Press-kit image: ${slug} ← ${img.url.slice(0, 90)}…`);
 

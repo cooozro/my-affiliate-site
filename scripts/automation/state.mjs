@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import {
   MAX_PUBLISH_PER_DAY,
+  isAipickPublishCalendarDay,
   scheduleFirstPublishOfDay,
 } from "../lib/publish-schedule.mjs";
 
@@ -65,11 +66,17 @@ export function resetDailyCounters(state) {
         state.nextPublishAt &&
         Date.now() >= new Date(state.nextPublishAt).getTime();
 
-      if (missedSlot) {
+      if (missedSlot && isAipickPublishCalendarDay()) {
         state.nextPublishAt = new Date().toISOString();
         console.log(
           "Catch-up: previous KST day had an overdue publish slot — publishing on next check.",
         );
+      } else if (
+        state.nextPublishAt &&
+        new Date(state.nextPublishAt).getTime() > Date.now() &&
+        isAipickPublishCalendarDay(new Date(state.nextPublishAt))
+      ) {
+        // Keep the already-rolled weekday slot (do not re-randomize on Sunday).
       } else {
         scheduleFirstPublishOfDay(state);
       }

@@ -48,7 +48,7 @@ export const FORBIDDEN_PHRASES = [
   },
   {
     id: "clickbait-ko",
-    pattern: /(충격|경악|절대\s*후회|이것만\s*알면)/gi,
+    pattern: /(충격적|충격\s*(사실|진실|고백)|경악|절대\s*후회|이것만\s*알면)/gi,
     replacement: "",
     autoFix: false,
     policy: "google-clickbait",

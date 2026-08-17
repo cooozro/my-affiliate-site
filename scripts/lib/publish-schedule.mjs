@@ -67,6 +67,12 @@ function nextPublishDayAnchor(from = new Date(), includeToday = false) {
 }
 
 export function scheduleNextDayFirstPublish(state, from = new Date()) {
+  if (state.nextPublishAt) {
+    const next = new Date(state.nextPublishAt);
+    if (next.getTime() > from.getTime() && isAipickPublishCalendarDay(next)) {
+      return;
+    }
+  }
   const offsetMs = randomFirstSlotOffsetMs();
   const tomorrowAnchor = nextPublishDayAnchor(from, false);
 
@@ -126,7 +132,9 @@ export function reconcilePublishSchedule(state, from = new Date()) {
   ) {
     const nextKst = kstDateString(new Date(state.nextPublishAt));
     const todayKst = kstDateString(from);
-    if (nextKst > todayKst) {
+    // Pull a future slot back only on a real publish day.
+    // Sunday ticks used to re-roll Monday 10–12h every cron.
+    if (nextKst > todayKst && isAipickPublishCalendarDay(from)) {
       scheduleFirstPublishOfDay(state, from);
       changed = true;
     }
@@ -249,15 +257,18 @@ export function getPublishReadyAt(state, from = new Date()) {
   return new Date(Math.max(...candidates));
 }
 
-/** Keep nextPublishAt aligned when health catch-up races ahead of the 4h gap. */
+/** Keep nextPublishAt aligned with the 4h gap — never push an already-due slot. */
 export function reconcilePublishSlotWithGap(state, from = new Date()) {
   if (!state.nextPublishAt) return false;
 
-  const ready = getPublishReadyAt(state, from);
+  const now = from.getTime();
   const nextMs = new Date(state.nextPublishAt).getTime();
-  if (nextMs >= ready.getTime()) return false;
+  if (nextMs <= now) return false;
 
-  state.nextPublishAt = ready.toISOString();
+  const gapAt = minGapPublishAt(state);
+  if (!gapAt || nextMs >= gapAt.getTime()) return false;
+
+  state.nextPublishAt = gapAt.toISOString();
   state.scheduledGapHours = Math.max(
     state.scheduledGapHours ?? MIN_PUBLISH_GAP_HOURS,
     MIN_PUBLISH_GAP_HOURS,

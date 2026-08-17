@@ -30,6 +30,7 @@ import {
   getPublishReadyAt,
   MAX_PUBLISH_PER_DAY,
   MIN_PUBLISH_GAP_HOURS,
+  isAipickPublishCalendarDay,
   reconcileOverduePublishSlot,
   reconcilePublishSchedule,
   reconcilePublishSlotWithGap,
@@ -55,6 +56,11 @@ function canPublishNow(state, force = false) {
   ensureNextPublishAt(state);
 
   if (force) return true;
+
+  if (!isAipickPublishCalendarDay()) {
+    console.log("Publish skipped: Sunday off (buffer replenish still allowed)");
+    return false;
+  }
 
   const actualToday = countPublishedOnKstDate();
   if (actualToday >= MAX_PUBLISH_PER_DAY) {
