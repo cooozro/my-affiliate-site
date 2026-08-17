@@ -7,7 +7,7 @@
     "air-purifiers"
   ],
   "lastPublishAt": "2026-08-15T10:58:23.783Z",
-  "nextPublishAt": "2026-08-17T02:09:04.100Z",
+  "nextPublishAt": "2026-08-17T02:28:49.029Z",
   "scheduledGapHours": 4.53,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-17",
@@ -67,7 +67,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T02:09:03.852Z",
+    "at": "2026-08-17T02:28:48.700Z",
     "issueCount": 4,
     "issues": [
       {
@@ -87,7 +87,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2350min",
+        "message": "Cursor replenish pending 2370min",
         "severity": "warning"
       }
     ],
@@ -198,7 +198,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-17T02:09:04.258Z",
+    "at": "2026-08-17T02:28:49.180Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"
