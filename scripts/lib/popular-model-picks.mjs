@@ -4,7 +4,7 @@
  * Picks rotate via state.modelPickHistory to avoid back-to-back duplicates.
  */
 
-/** @typedef {{ id: string, brand: string, name: string, nameKo: string, tier?: string, score?: number, why?: string }} ModelEntry */
+/** @typedef {{ id: string, brand: string, name: string, nameKo: string, tier?: string, score?: number, genYear?: number, why?: string }} ModelEntry */
 
 /** @type {Record<string, ModelEntry[]>} */
 export const MODEL_CATALOG = {
@@ -165,11 +165,12 @@ export const MODEL_CATALOG = {
 
   // ── IT / 모바일 ──
   "flagship-smartphones": [
-    { id: "galaxy-s25-ultra", brand: "Samsung", name: "Galaxy S25 Ultra", nameKo: "갤럭시 S25 울트라", tier: "flagship", score: 96, why: "2025 Samsung AI flagship" },
-    { id: "iphone-16-pro-max", brand: "Apple", name: "iPhone 16 Pro Max", nameKo: "아이폰 16 Pro Max", tier: "flagship", score: 95, why: "Apple Intelligence camera stack" },
-    { id: "pixel-9-pro-xl", brand: "Google", name: "Pixel 9 Pro XL", nameKo: "픽셀 9 Pro XL", tier: "flagship", score: 92, why: "computational photo leader" },
-    { id: "galaxy-z-fold-6", brand: "Samsung", name: "Galaxy Z Fold6", nameKo: "갤럭시 Z 폴드6", tier: "flagship", score: 91, why: "foldable productivity niche" },
-    { id: "iphone-17-pro", brand: "Apple", name: "iPhone 17 Pro", nameKo: "아이폰 17 Pro", tier: "upcoming", score: 94, why: "fall 2026 launch anticipation wave" },
+    { id: "galaxy-s26-ultra", brand: "Samsung", name: "Galaxy S26 Ultra", nameKo: "갤럭시 S26 울트라", tier: "flagship", score: 97, genYear: 2026, why: "Mar 2026 Ultra — Snapdragon 8 Elite Gen 5 + dual tele" },
+    { id: "iphone-17-pro", brand: "Apple", name: "iPhone 17 Pro", nameKo: "아이폰 17 Pro", tier: "flagship", score: 96, genYear: 2025, why: "current Apple Pro — A19 Pro + 48MP triple Fusion" },
+    { id: "pixel-10-pro", brand: "Google", name: "Pixel 10 Pro", nameKo: "픽셀 10 Pro", tier: "flagship", score: 94, genYear: 2025, why: "Tensor G5 computational photo + 7yr updates" },
+    { id: "galaxy-z-fold-7", brand: "Samsung", name: "Galaxy Z Fold7", nameKo: "갤럭시 Z 폴드7", tier: "flagship", score: 91, genYear: 2026, why: "current foldable productivity niche" },
+    { id: "galaxy-s25-ultra", brand: "Samsung", name: "Galaxy S25 Ultra", nameKo: "갤럭시 S25 울트라", tier: "popular", score: 88, genYear: 2025, why: "previous Ultra — discount / trade-in value lane" },
+    { id: "iphone-16-pro", brand: "Apple", name: "iPhone 16 Pro", nameKo: "아이폰 16 Pro", tier: "popular", score: 86, genYear: 2024, why: "previous Pro — ecosystem buyers on a discount" },
   ],
   "budget-smartphones": [
     { id: "galaxy-a56", brand: "Samsung", name: "Galaxy A56 5G", nameKo: "갤럭시 A56 5G", tier: "upcoming", score: 93, why: "2026 mid-range refresh expected" },
@@ -301,10 +302,23 @@ export function listModelDeepDiveTopicIds() {
  * @param {string} topicId
  * @param {{ state?: { modelPickHistory?: Array<{ topicId: string, modelId: string }> } }} [options]
  */
+/**
+ * Prefer current / last calendar-year flagships so summer–fall drafts do not
+ * shortlist two-cycles-old Ultra/Pro phones as "현세대".
+ */
+function modelFreshnessRank(model, year) {
+  const gen = Number(model?.genYear ?? 0);
+  if (!gen) return 0;
+  if (gen >= year) return 2;
+  if (gen >= year - 1) return 1;
+  return 0;
+}
+
 export function pickPopularModels(topicId, options = {}) {
   const catalog = MODEL_CATALOG[topicId];
   if (!catalog?.length) return null;
 
+  const year = options.year ?? new Date().getFullYear();
   const history = options.state?.modelPickHistory ?? [];
   const recentIds = new Set(
     history
@@ -316,11 +330,34 @@ export function pickPopularModels(topicId, options = {}) {
   let pool = catalog.filter((m) => !recentIds.has(m.id));
   if (pool.length === 0) pool = [...catalog];
 
-  pool.sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
-  const topTier = pool.filter((m) => (m.score ?? 0) >= (pool[0]?.score ?? 0) - 5);
-  const primary = topTier[Math.floor(Math.random() * topTier.length)] ?? pool[0];
+  // Prefer tier:flagship + recent genYear, then score.
+  pool.sort((a, b) => {
+    const aFlag = a.tier === "flagship" ? 1 : 0;
+    const bFlag = b.tier === "flagship" ? 1 : 0;
+    if (bFlag !== aFlag) return bFlag - aFlag;
+    const freshDiff =
+      modelFreshnessRank(b, year) - modelFreshnessRank(a, year);
+    if (freshDiff !== 0) return freshDiff;
+    return (b.score ?? 0) - (a.score ?? 0);
+  });
+
+  const topTier = pool.filter(
+    (m) =>
+      modelFreshnessRank(m, year) >= 1 &&
+      (m.tier === "flagship" || (m.score ?? 0) >= (pool[0]?.score ?? 0) - 5),
+  );
+  const chooseFrom = topTier.length > 0 ? topTier : pool;
+  const primary =
+    chooseFrom[Math.floor(Math.random() * Math.min(3, chooseFrom.length))] ??
+    pool[0];
 
   const rival =
+    pool.find(
+      (m) =>
+        m.id !== primary.id &&
+        m.brand !== primary.brand &&
+        modelFreshnessRank(m, year) >= 1,
+    ) ??
     pool.find((m) => m.id !== primary.id && m.brand !== primary.brand) ??
     pool.find((m) => m.id !== primary.id) ??
     null;
