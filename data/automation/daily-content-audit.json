@@ -1,18 +1,21 @@
 {
   "dateKst": "2026-08-17",
-  "scannedAt": "2026-08-17T03:04:47.112Z",
-  "postsScanned": 61,
-  "autoRepairCount": 32,
+  "scannedAt": "2026-08-17T03:32:28.875Z",
+  "postsScanned": 60,
+  "autoRepairCount": 42,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
       "repairs": [
-        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links"
+        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links",
+        "2026-action-cameras-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
+        "2026-action-cameras-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
       ]
     },
     {
       "slug": "2026-air-purifiers-guide",
       "repairs": [
+        "2026-air-purifiers-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
         "2026-air-purifiers-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-air-purifiers-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
@@ -27,7 +30,14 @@
       "slug": "2026-clothes-dryers-buying-guide",
       "repairs": [
         "2026-clothes-dryers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
-        "2026-clothes-dryers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+        "2026-clothes-dryers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)",
+        "2026-clothes-dryers-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
+      ]
+    },
+    {
+      "slug": "2026-coffee-machines-head-to-head",
+      "repairs": [
+        "2026-coffee-machines-head-to-head/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
       ]
     },
     {
@@ -42,6 +52,13 @@
       "repairs": [
         "2026-countertop-ice-makers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-countertop-ice-makers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+      ]
+    },
+    {
+      "slug": "2026-dehumidifiers-guide",
+      "repairs": [
+        "2026-dehumidifiers-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
+        "2026-dehumidifiers-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
       ]
     },
     {
@@ -113,6 +130,12 @@
       ]
     },
     {
+      "slug": "2026-usb-c-hubs-buying-guide",
+      "repairs": [
+        "2026-usb-c-hubs-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site"
+      ]
+    },
+    {
       "slug": "2026-washing-machines-scenario-guide",
       "repairs": [
         "2026-washing-machines-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
@@ -122,181 +145,13 @@
     {
       "slug": "2026-water-purifiers-buying-guide",
       "repairs": [
+        "2026-water-purifiers-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
         "2026-water-purifiers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
-        "2026-water-purifiers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
+        "2026-water-purifiers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)",
+        "2026-water-purifiers-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
       ]
     }
   ],
-  "manualReviewCount": 11,
-  "manualReview": [
-    {
-      "order": 1,
-      "slug": "2026-action-cameras-buying-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-action-cameras-buying-guide/en.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW",
-        "2026-action-cameras-buying-guide/ko.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-action-cameras-buying-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-action-cameras-buying-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-action-cameras-buying-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-action-cameras-buying-guide?locale=ko"
-      }
-    },
-    {
-      "order": 2,
-      "slug": "2026-air-purifiers-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-air-purifiers-guide/en.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-air-purifiers-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-air-purifiers-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-air-purifiers-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-air-purifiers-guide?locale=ko"
-      }
-    },
-    {
-      "order": 3,
-      "slug": "2026-clothes-dryers-buying-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-clothes-dryers-buying-guide/ko.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-clothes-dryers-buying-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-clothes-dryers-buying-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-clothes-dryers-buying-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-clothes-dryers-buying-guide?locale=ko"
-      }
-    },
-    {
-      "order": 4,
-      "slug": "2026-coffee-machines-head-to-head",
-      "phase": "publish",
-      "issues": [
-        "2026-coffee-machines-head-to-head/ko.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-coffee-machines-head-to-head",
-        "ko": "https://www.aipick.shop/ko/blog/2026-coffee-machines-head-to-head",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-coffee-machines-head-to-head?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-coffee-machines-head-to-head?locale=ko"
-      }
-    },
-    {
-      "order": 5,
-      "slug": "2026-compact-dishwasher-vs-portable-washer",
-      "phase": "publish",
-      "issues": [
-        "2026-compact-dishwasher-vs-portable-washer/en.md: cover image file not found",
-        "2026-compact-dishwasher-vs-portable-washer/ko.md: cover image file not found"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-compact-dishwasher-vs-portable-washer",
-        "ko": "https://www.aipick.shop/ko/blog/2026-compact-dishwasher-vs-portable-washer",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-compact-dishwasher-vs-portable-washer?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-compact-dishwasher-vs-portable-washer?locale=ko"
-      }
-    },
-    {
-      "order": 6,
-      "slug": "2026-dehumidifiers-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-dehumidifiers-guide/en.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW",
-        "2026-dehumidifiers-guide/ko.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-dehumidifiers-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-dehumidifiers-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-dehumidifiers-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-dehumidifiers-guide?locale=ko"
-      }
-    },
-    {
-      "order": 7,
-      "slug": "2026-usb-c-hubs-buying-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-usb-c-hubs-buying-guide/en.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-usb-c-hubs-buying-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-buying-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-usb-c-hubs-buying-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-usb-c-hubs-buying-guide?locale=ko"
-      }
-    },
-    {
-      "order": 8,
-      "slug": "2026-water-purifiers-buying-guide",
-      "phase": "publish",
-      "issues": [
-        "2026-water-purifiers-buying-guide/en.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW",
-        "2026-water-purifiers-buying-guide/ko.md: {{krw:}}/{{usd_krw_rate}} present but liveData is not true — set liveData or replace with concrete KRW"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-water-purifiers-buying-guide",
-        "ko": "https://www.aipick.shop/ko/blog/2026-water-purifiers-buying-guide",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-water-purifiers-buying-guide?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-water-purifiers-buying-guide?locale=ko"
-      }
-    },
-    {
-      "order": 9,
-      "slug": "electric-blanket-safety-timers-wash-care-2026",
-      "phase": "publish",
-      "issues": [
-        "electric-blanket-safety-timers-wash-care-2026: off-season topic electric-blankets for summer (KST) — blocked until in-season"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/electric-blanket-safety-timers-wash-care-2026",
-        "ko": "https://www.aipick.shop/ko/blog/electric-blanket-safety-timers-wash-care-2026",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/electric-blanket-safety-timers-wash-care-2026?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/electric-blanket-safety-timers-wash-care-2026?locale=ko"
-      }
-    },
-    {
-      "order": 10,
-      "slug": "humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-      "phase": "publish",
-      "issues": [
-        "humidifier-types-explained-ultrasonic-evaporative-mold-prevention: off-season topic humidifiers for summer (KST) — blocked until in-season"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-        "ko": "https://www.aipick.shop/ko/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/humidifier-types-explained-ultrasonic-evaporative-mold-prevention?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/humidifier-types-explained-ultrasonic-evaporative-mold-prevention?locale=ko"
-      }
-    },
-    {
-      "order": 11,
-      "slug": "welcome",
-      "phase": "publish",
-      "issues": [
-        "welcome: never-publish (admin/internal) — cannot go live"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/welcome",
-        "ko": "https://www.aipick.shop/ko/blog/welcome",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/welcome?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/welcome?locale=ko"
-      }
-    }
-  ]
+  "manualReviewCount": 0,
+  "manualReview": []
 }

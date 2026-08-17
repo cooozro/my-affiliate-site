@@ -84,9 +84,18 @@ function scenarioSectionHasNamedProduct(sectionBody) {
   return false;
 }
 
+function isHttpUrl(value) {
+  return /^https?:\/\//i.test(String(value ?? "").trim());
+}
+
 function hasCoverImage(root, data) {
-  if (!data.coverImage) return false;
-  return fs.existsSync(path.join(root, "public", data.coverImage));
+  const cover = String(data.coverImage ?? "").trim();
+  if (!cover) return false;
+  // Remote CDN / press-kit URLs render via enrichPost; do not require a local file.
+  if (isHttpUrl(cover)) return true;
+  const relative = cover.replace(/^\/+/, "");
+  if (fs.existsSync(path.join(root, "public", relative))) return true;
+  return isHttpUrl(data.coverImageSourceUrl);
 }
 
 function auditShared(root, slug, locale, raw, profile, options) {

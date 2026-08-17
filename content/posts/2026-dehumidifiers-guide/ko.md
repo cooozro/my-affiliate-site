@@ -12,7 +12,7 @@ tags:
   - 구매 가이드
 contentProfile: buying-guide
 draft: false
-liveData: false
+liveData: true
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
 coverImageAlt: 습한 실내의 제습기
@@ -22,7 +22,7 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-08-17T03:32:24.369Z'
 publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## 편집부 개요

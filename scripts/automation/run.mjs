@@ -69,7 +69,9 @@ async function main() {
       const { runDailyContentAuditIfDue } = await import(
         "../lib/daily-content-audit-runner.mjs"
       );
-      const result = await runDailyContentAuditIfDue();
+      const result = await runDailyContentAuditIfDue(process.cwd(), {
+        force: process.argv.includes("--force"),
+      });
       if (!result.ran) {
         console.log(`Daily content audit skipped: ${result.reason}`);
       }

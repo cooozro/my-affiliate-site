@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { listDrafts } from "../automation/posts-fs.mjs";
+import { isNeverPublishSlug, listDrafts } from "../automation/posts-fs.mjs";
 import { kstDateString, loadState, saveState } from "../automation/state.mjs";
 import { sitePostUrls } from "./content-policy.mjs";
 import { listPublishedSlugs } from "./content-quality.mjs";
@@ -35,7 +35,8 @@ function isDraftSlug(root, slug) {
   return Boolean(data.draft);
 }
 
-export function shouldRunDailyContentAudit(state, now = new Date()) {
+export function shouldRunDailyContentAudit(state, now = new Date(), options = {}) {
+  if (options.force) return true;
   const today = kstDateString(now);
   if (state.lastDailyContentAuditKst === today) return false;
 
@@ -59,7 +60,9 @@ export function shouldRunDailyContentAudit(state, now = new Date()) {
 function collectSlugsToScan(root) {
   const published = listPublishedSlugs(root);
   const drafts = listDrafts().map((d) => d.slug);
-  return [...new Set([...published, ...drafts])].sort();
+  return [...new Set([...published, ...drafts])]
+    .filter((slug) => !isNeverPublishSlug(slug))
+    .sort();
 }
 
 function writeReport(report) {
@@ -106,7 +109,7 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
       autoRepairs.push({ slug, repairs: result.repairs });
     }
 
-    if (!result.ok && !result.exempt) {
+    if (!result.ok && !result.exempt && !result.neverPublish) {
       const issues = integrityIssuesFlat(result).filter(
         (issue) =>
           !issue.includes("Related guides has") &&
@@ -152,7 +155,7 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
 
 export async function runDailyContentAuditIfDue(root = process.cwd(), options = {}) {
   const state = options.state ?? loadState();
-  if (!shouldRunDailyContentAudit(state)) {
+  if (!shouldRunDailyContentAudit(state, new Date(), options)) {
     return { ran: false, reason: "not-due" };
   }
 

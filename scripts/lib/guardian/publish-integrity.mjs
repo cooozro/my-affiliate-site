@@ -246,6 +246,17 @@ export function repairPostLocale(root, slug, locale) {
 
   body = body.replace(/\n{4,}/g, "\n\n\n").trim();
 
+  const hasLivePlaceholder =
+    /\{\{krw:[\d.]+\}\}/.test(body) ||
+    /\{\{usd_krw_rate\}\}/.test(body) ||
+    /\{\{today/.test(body);
+  if (hasLivePlaceholder && data.liveData !== true) {
+    data.liveData = true;
+    repairs.push(
+      `${slug}/${locale}.md: set liveData:true so KRW/date placeholders expand on the live site`,
+    );
+  }
+
   const repaired = repairs.length > 0 || body !== content;
   if (repaired) {
     writeLocaleFile(root, slug, locale, data, body);
@@ -602,7 +613,9 @@ export function verifyPostIntegrity(root, slug, options = {}) {
 
   const topicId =
     typeof peekData.topicId === "string" ? peekData.topicId.trim() : "";
-  if (topicId && !topicId.startsWith("meta-")) {
+  // Seasonal block is for NEW drafts going live — already-published winter posts
+  // must stay live through summer (daily audit was treating them as manual review).
+  if (topicId && !topicId.startsWith("meta-") && peekData.draft === true) {
     const topic = getTopicById(topicId);
     if (
       topic &&

@@ -13,14 +13,14 @@ tags:
   - buying guide
 contentProfile: buying-guide
 draft: false
-liveData: false
+liveData: true
 coverImage: >-
   /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
 coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-07-17T06:30:01.596Z'
+updatedAt: '2026-08-17T03:32:22.778Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier

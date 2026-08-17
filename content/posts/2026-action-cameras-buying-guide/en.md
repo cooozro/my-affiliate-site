@@ -14,7 +14,7 @@ tags:
 contentProfile: buying-guide
 topicId: action-cameras
 draft: false
-liveData: false
+liveData: true
 coverImage: >-
   /images/posts/2026-action-cameras-buying-guide/action-camera-outdoor-summer-action-cam-travel-m-cover.jpg
 coverImageAlt: action camera mounted outdoors in summer travel
@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-17T03:04:42.275Z'
+updatedAt: '2026-08-17T03:32:22.539Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview

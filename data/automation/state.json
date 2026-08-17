@@ -88,12 +88,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-17T03:11:59.964Z",
+    "at": "2026-08-17T03:32:40.646Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2413min",
+        "message": "Cursor replenish pending 2434min",
         "severity": "warning"
       }
     ],
@@ -163,10 +163,10 @@
   ],
   "lastDailyContentAuditKst": "2026-08-17",
   "lastDailyContentAudit": {
-    "at": "2026-08-17T03:04:47.112Z",
-    "postsScanned": 61,
-    "autoRepairCount": 32,
-    "manualReviewCount": 11
+    "at": "2026-08-17T03:32:28.875Z",
+    "postsScanned": 60,
+    "autoRepairCount": 42,
+    "manualReviewCount": 0
   },
   "formatDeck": [
     "model-deep-dive",

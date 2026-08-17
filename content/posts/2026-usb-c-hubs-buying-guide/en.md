@@ -14,7 +14,7 @@ contentProfile: buying-guide
 writingMode: stable
 topicId: usb-c-hubs
 draft: false
-liveData: false
+liveData: true
 imageSearchKeywords:
   - usb c hub laptop
   - usb c dock
@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:03.359Z'
+updatedAt: '2026-08-17T03:32:27.682Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview

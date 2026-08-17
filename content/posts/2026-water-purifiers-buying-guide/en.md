@@ -16,7 +16,7 @@ contentProfile: buying-guide
 topicId: water-purifiers
 topicCluster: kitchen-appliances
 draft: false
-liveData: false
+liveData: true
 imageSearchKeywords:
   - water purifier
   - kitchen
@@ -26,7 +26,7 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-07-17T06:30:03.481Z'
+updatedAt: '2026-08-17T03:32:28.025Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## Editorial Overview
