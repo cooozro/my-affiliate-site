@@ -5,26 +5,26 @@ title: >-
 description: >-
   We compare Samsung Galaxy S26 Ultra, iPhone 17 Pro, and Pixel 10 Pro on
   camera, battery, and longevity to help you decide if upgrading is worth it.
-date: '2026-08-17'
+date: '2026-08-18'
 tags:
   - flagship smartphones
   - Galaxy S26 Ultra
   - iPhone 17 Pro
   - Pixel 10 Pro
   - smartphone buying guide
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: flagship-smartphones
 topicCluster: smartphones
 writingProvider: deepseek
-createdAt: '2026-08-17T03:17:57.258Z'
 liveData: true
 coverImage: /images/posts/2026-flagship-smartphone-deep-dive/press-cover-45e5e9ce0c.jpg
 coverImageAlt: flagship smartphone on a desk for editorial comparison
 coverImageAltKo: 편집부 비교용 책상 위 플래그십 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-17T04:20:03.172Z'
+updatedAt: '2026-08-18T02:09:26.044Z'
+publishedAt: '2026-08-18T11:09:24.000Z'
 ---
 ## Editorial Overview
 
@@ -162,12 +162,11 @@ Plan $50–$100 beyond the phone for a fast charger, case, and screen protector.
 
 ## Related guides
 
-- [Best Budget Smartphones Under $300](/en/blog/2026-budget-smartphones-under-300)
-- [Best Budget Wireless Earbuds: Top 5](/en/blog/2026-budget-wireless-earbuds-top5)
-- [Best Budget Power Banks Guide](/en/blog/2026-budget-power-banks-guide)
-- [Budget Monitors Buying Guide](/en/blog/2026-budget-monitors-buying-guide)
-- [Budget Mechanical Keyboards Guide](/en/blog/2026-budget-mechanical-keyboards-guide)
-
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
+- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Sce…
+- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Five budget power banks compared by capacity, USB-C PD, weight, certifications, and retur…
+- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — Five budget wireless earbuds compared across battery, codec, ANC, and price data. A scena…
 ## Five checks before you buy
 
 1. **Check your current battery health.** If the phone is two years old and health is above 85%, a sub-$80 battery service may buy another two years.

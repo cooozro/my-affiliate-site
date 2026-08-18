@@ -1,21 +1,18 @@
 {
-  "dateKst": "2026-08-17",
-  "scannedAt": "2026-08-17T03:32:28.875Z",
-  "postsScanned": 60,
-  "autoRepairCount": 42,
+  "dateKst": "2026-08-18",
+  "scannedAt": "2026-08-18T02:11:10.896Z",
+  "postsScanned": 61,
+  "autoRepairCount": 32,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
       "repairs": [
-        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links",
-        "2026-action-cameras-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
-        "2026-action-cameras-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
+        "2026-action-cameras-buying-guide/en.md: removed draft/preview URL links"
       ]
     },
     {
       "slug": "2026-air-purifiers-guide",
       "repairs": [
-        "2026-air-purifiers-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
         "2026-air-purifiers-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-air-purifiers-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
@@ -30,14 +27,7 @@
       "slug": "2026-clothes-dryers-buying-guide",
       "repairs": [
         "2026-clothes-dryers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
-        "2026-clothes-dryers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)",
-        "2026-clothes-dryers-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
-      ]
-    },
-    {
-      "slug": "2026-coffee-machines-head-to-head",
-      "repairs": [
-        "2026-coffee-machines-head-to-head/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
+        "2026-clothes-dryers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     },
     {
@@ -52,13 +42,6 @@
       "repairs": [
         "2026-countertop-ice-makers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-countertop-ice-makers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
-      ]
-    },
-    {
-      "slug": "2026-dehumidifiers-guide",
-      "repairs": [
-        "2026-dehumidifiers-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
-        "2026-dehumidifiers-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
       ]
     },
     {
@@ -130,12 +113,6 @@
       ]
     },
     {
-      "slug": "2026-usb-c-hubs-buying-guide",
-      "repairs": [
-        "2026-usb-c-hubs-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site"
-      ]
-    },
-    {
       "slug": "2026-washing-machines-scenario-guide",
       "repairs": [
         "2026-washing-machines-scenario-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
@@ -145,10 +122,8 @@
     {
       "slug": "2026-water-purifiers-buying-guide",
       "repairs": [
-        "2026-water-purifiers-buying-guide/en.md: set liveData:true so KRW/date placeholders expand on the live site",
         "2026-water-purifiers-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
-        "2026-water-purifiers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)",
-        "2026-water-purifiers-buying-guide/ko.md: set liveData:true so KRW/date placeholders expand on the live site"
+        "2026-water-purifiers-buying-guide/ko.md: Related guides 5 → 5 links (relevance order, max 5)"
       ]
     }
   ],

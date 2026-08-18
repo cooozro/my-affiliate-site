@@ -8,10 +8,10 @@
     "budget-monitors",
     "flagship-smartphones"
   ],
-  "lastPublishAt": "2026-08-17T03:04:42.008Z",
-  "nextPublishAt": "2026-08-18T02:06:00.000Z",
-  "scheduledGapHours": 5.1,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-18T02:09:25.841Z",
+  "nextPublishAt": "2026-08-19T02:46:00.000Z",
+  "scheduledGapHours": 5.77,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-18",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-18",
@@ -85,13 +85,34 @@
       "slug": "2026-flagship-smartphone-deep-dive",
       "at": "2026-08-17T03:17:57.258Z",
       "topic": "flagship-smartphones"
+    },
+    {
+      "action": "publish",
+      "slug": "2026-flagship-smartphone-deep-dive",
+      "topic": {
+        "id": "flagship-smartphones",
+        "cluster": "smartphones"
+      },
+      "at": "2026-08-18T02:09:25.841Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-flagship-smartphone-deep-dive",
+        "https://www.aipick.shop/ko/blog/2026-flagship-smartphone-deep-dive"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-18T01:49:46.298Z",
-    "issueCount": 0,
-    "issues": [],
-    "repairs": []
+    "at": "2026-08-18T02:09:23.931Z",
+    "issueCount": 1,
+    "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (3min past slot, KST 2026-08-18)",
+        "severity": "warning"
+      }
+    ],
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -150,13 +171,18 @@
       "category": "smartphones",
       "taxonomyGroup": "IT/모바일",
       "at": "2026-08-17T03:13:00.869Z"
+    },
+    {
+      "id": "flagship-smartphones",
+      "cluster": "smartphones",
+      "at": "2026-08-18T02:09:25.864Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-17",
+  "lastDailyContentAuditKst": "2026-08-18",
   "lastDailyContentAudit": {
-    "at": "2026-08-17T03:32:28.875Z",
-    "postsScanned": 60,
-    "autoRepairCount": 42,
+    "at": "2026-08-18T02:11:10.896Z",
+    "postsScanned": 61,
+    "autoRepairCount": 32,
     "manualReviewCount": 0
   },
   "formatDeck": [

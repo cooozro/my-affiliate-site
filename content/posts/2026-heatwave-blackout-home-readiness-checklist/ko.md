@@ -20,7 +20,7 @@ imageSearchKeywords:
   - rechargeable fan LED lantern power bank
   - family heatwave preparedness
   - portable power station home outage
-updatedAt: '2026-08-17T03:32:25.265Z'
+updatedAt: '2026-08-18T02:11:08.142Z'
 coverImage: >-
   /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
 coverImageAlt: portable power station and power bank carried for apartment blackout readiness

@@ -1,25 +1,25 @@
 ---
 title: 플래그십 폰 지금 사야 할까? 갤럭시 S26 울트라 vs 아이폰 17 프로 vs 픽셀 10 프로 — 어떤 업그레이드가 진짜 합리적일까?
-description: 삼성 갤럭시 S26 울트라, 아이폰 17 프로, 픽셀 10 프로를 카메라·배터리·수명 기준으로 비교해 업그레이드 가치를 판단합니다.
-date: '2026-08-17'
+description: '삼성 갤럭시 S26 울트라, 아이폰 17 프로, 픽셀 10 프로를 카메라·배터리·수명 기준으로 비교해 업그레이드 가치를 판단합니다.'
+date: '2026-08-18'
 tags:
   - 플래그십 스마트폰
   - 갤럭시 S26 울트라
   - 아이폰 17 프로
   - 픽셀 10 프로
   - 스마트폰 구매 가이드
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: flagship-smartphones
 topicCluster: smartphones
 writingProvider: deepseek
-createdAt: '2026-08-17T03:17:57.258Z'
 liveData: true
 coverImage: /images/posts/2026-flagship-smartphone-deep-dive/press-cover-45e5e9ce0c.jpg
 coverImageAlt: 편집부 비교용 책상 위 플래그십 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-17T04:20:00.000Z'
+updatedAt: '2026-08-18T02:09:26.046Z'
+publishedAt: '2026-08-18T11:09:24.000Z'
 ---
 ## 편집부 개요
 
@@ -157,12 +157,11 @@ S26 울트라의 5,000mAh와 60W 유선 충전이 헤비 유즈 하루 사용에
 
 ## 관련 가이드
 
-- [30만 원대 가성비 스마트폰 가이드](/ko/blog/2026-budget-smartphones-under-300)
-- [가성비 무선 이어폰 TOP 5](/ko/blog/2026-budget-wireless-earbuds-top5)
-- [가성비 보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide)
-- [가성비 모니터 구매 가이드](/ko/blog/2026-budget-monitors-buying-guide)
-- [가성비 기계식 키보드 가이드](/ko/blog/2026-budget-mechanical-keyboards-guide)
-
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
 ## 사기 전 다섯 가지 점검
 
 1. **지금 배터리 상태를 확인하세요.** 2년 차이고 건강도가 85% 이상이라면 8만 원대 이하 배터리 교체가 2년을 더 살릴 수 있습니다.
