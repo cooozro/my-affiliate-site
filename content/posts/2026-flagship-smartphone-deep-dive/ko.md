@@ -19,7 +19,7 @@ coverImageAlt: 편집부 비교용 책상 위 플래그십 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
 updatedAt: '2026-08-18T02:09:26.046Z'
-publishedAt: '2026-08-18T11:09:24.000Z'
+publishedAt: '2026-08-18T02:09:25.841Z'
 ---
 ## 편집부 개요
 
