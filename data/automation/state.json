@@ -101,7 +101,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-18T02:38:02.636Z",
+    "at": "2026-08-18T02:57:19.190Z",
     "issueCount": 1,
     "issues": [
       {
@@ -110,10 +110,7 @@
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-flagship-smartphone-deep-dive/en.md: publishedAt 2026-08-18T11:09:24.000Z → 2026-08-18T02:09:25.841Z",
-      "2026-flagship-smartphone-deep-dive/ko.md: publishedAt 2026-08-18T11:09:24.000Z → 2026-08-18T02:09:25.841Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
