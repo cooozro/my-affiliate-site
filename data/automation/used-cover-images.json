@@ -1094,6 +1094,31 @@
       "contentHash": "42f69be6d12b563da8fce7b1f05df143a1fa92934309905253d797f96e13eff8",
       "provider": "press-kit",
       "registeredAt": "2026-08-17T03:17:58.851Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-18T02:16:06.063Z"
+    },
+    {
+      "slug": "2026-window-ac-lg-lw1217ersm-review",
+      "url": "https://images.pexels.com/photos/5933783/pexels-photo-5933783.jpeg",
+      "assetKey": "pexels:5933783",
+      "hash": "00bcb37efdc474d2370a581080def6a5b5b6a675e891ba2285b7cbc024427615",
+      "contentHash": "00bcb37efdc474d2370a581080def6a5b5b6a675e891ba2285b7cbc024427615",
+      "provider": "pexels",
+      "registeredAt": "2026-08-18T02:17:31.278Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-18T02:17:31.330Z"
     }
   ]
 }

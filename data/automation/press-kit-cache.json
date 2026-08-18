@@ -88,5 +88,10 @@
         "altHintKo": "Apple iPhone 16 Pro 스마트폰 공식 프레스킷 제품컷"
       }
     ]
+  },
+  "lg-lw1217ersm": {
+    "at": "2026-08-18T02:16:06.002Z",
+    "query": "LW1217ERSM LG official press product OR media kit site:news.lg.com OR site:lgnewsroom.com",
+    "images": []
   }
 }
