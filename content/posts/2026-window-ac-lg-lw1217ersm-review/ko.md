@@ -25,8 +25,8 @@ modelPickId: lg-lw1217ersm
 modelPickBrand: LG
 modelPickName: LW1217ERSM
 pressKitGallery: 'https://www.lgnewsroom.com/'
-updatedAt: '2026-08-19T19:07:47.000Z'
-publishedAt: '2026-08-19T19:07:47.000Z'
+updatedAt: '2026-08-19T10:07:51.617Z'
+publishedAt: '2026-08-19T10:07:51.424Z'
 ---
 ## 편집부 개요
 
@@ -181,12 +181,11 @@ LG LW1217ERSM은 표준 115V 접지 콘센트에 연결합니다. 제조사는 �
 
 ## 관련 가이드
 
-- [2026 공기청정기 가이드](/ko/blog/2026-air-purifiers-guide)
-- [2026 제습기 가이드](/ko/blog/2026-dehumidifiers-guide)
-- [2026 쿨링 매트리스 패드 구매 가이드](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-- [2026 조리대 제빙기 구매 가이드](/ko/blog/2026-countertop-ice-makers-buying-guide)
-- [2026 콤팩트 설치 공간 교차 카테고리 시나리오 가이드](/ko/blog/2026-compact-footprint-cross-category-scenario-guide)
-
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [소형 가전 시나리오 가이드: 좁은 집에서 자리를 줄 제품은?](/ko/blog/2026-compact-footprint-cross-category-scenario-guide) — 냉방, 습도, 간편 조리, 밥, 바닥 청소를 다섯 생활 시나리오로 나눠 설치 면적과 전기료, 소모품, 관리 부담까지 비교합니다.
+- [소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용](/ko/blog/2026-countertop-ice-makers-buying-guide) — 여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
 ## 최종 평가
 
 LG LW1217ERSM은 맞는 방이라면 구매할 만합니다. 표준 더블헝 창문, 250–450 sq ft 공간, 스마트홈 복잡성 없이 검증된 12,000 BTU 냉방을 원하는 사용자에게 적합합니다. 3년 총 소유 비용은 예측 가능합니다. 전기요금, 세척 가능한 필터 1개, 구독이나 연간 서비스는 없습니다. 창문 유형이 맞지 않거나 앱 제어가 필요하거나 600 sq ft가 넘는 방을 식히려면 건너뛰세요. 12,000 BTU 등급에서 Midea U-Shaped MAW12V1QWT가 조용한 침실용으로 유일하게 진지한 경쟁 제품이지만, 단순한 여름용 일꾼을 원한다면 LG LW1217ERSM이 여전히 추천을 받을 자격이 있습니다.

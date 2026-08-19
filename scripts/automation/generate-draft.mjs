@@ -4,6 +4,7 @@ import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
 import { fetchAdditionalImages } from "../lib/cover-image.mjs";
+import { repairModelDeepDiveBody } from "../lib/repair-model-deep-dive-body.mjs";
 import {
   buildModelDeepDiveAlts,
   buildModelDeepDiveSearchQueries,
@@ -448,8 +449,13 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       : {}),
   };
 
-  writePost(slug, "en", buildFrontmatter("en", article.en, shared), enBody);
-  writePost(slug, "ko", buildFrontmatter("ko", article.ko, shared), koBody);
+  const enFm = buildFrontmatter("en", article.en, shared);
+  const koFm = buildFrontmatter("ko", article.ko, shared);
+  enBody = repairModelDeepDiveBody(enFm, enBody, "en").body;
+  koBody = repairModelDeepDiveBody(koFm, koBody, "ko").body;
+
+  writePost(slug, "en", enFm, enBody);
+  writePost(slug, "ko", koFm, koBody);
 
   const issues = validatePostFiles(slug, {
     phase: "draft",

@@ -40,7 +40,7 @@ const EDITORS_NOTE_PATTERN =
 const FINAL_VERDICT_PATTERN =
   /##\s*(Final Verdict|최종 평가)/i;
 const WHO_SHOULD_BUY_PATTERN =
-  /(Who should buy|이런 분께 추천)/i;
+  /(Who should buy|이런 분께 추천|이런 분에게 추천)/i;
 const WHO_SHOULD_SKIP_PATTERN =
   /(Who should skip|이런 분은 패스)/i;
 const CONCLUSION_PATTERN = /##\s*(결론|Conclusion)/i;

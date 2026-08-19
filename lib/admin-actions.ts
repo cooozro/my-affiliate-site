@@ -23,6 +23,7 @@ import {
   readPostFile,
   slugExists,
   usesRemotePostStore,
+  writePostFile,
   type AdminPostRow,
 } from "@/lib/posts-admin";
 import fs from "fs";
@@ -417,8 +418,19 @@ export async function publishPost(slug: string) {
     throw new Error(`Post not found: ${slug}`);
   }
 
+  const { repairModelDeepDiveBody } = await import(
+    "../scripts/lib/repair-model-deep-dive-body.mjs"
+  );
+
   const issues = await validateForPublish(slug);
-  if (issues.length > 0) {
+  const repairableOnly =
+    issues.length > 0 &&
+    issues.every((msg) =>
+      /in-body product\/lifestyle image|Who should buy|이런 분께 추천|Who should skip|이런 분은 패스/i.test(
+        msg,
+      ),
+    );
+  if (issues.length > 0 && !repairableOnly) {
     throw new Error(issues.join("\n"));
   }
 
@@ -426,7 +438,8 @@ export async function publishPost(slug: string) {
     assertGithubAdminConfigured();
     const publishDate = kstDateString();
     const updatedAt = new Date().toISOString();
-    await commitPostChanges(slug, `admin: publish ${slug}`, (_locale, data, content) => {
+    await commitPostChanges(slug, `admin: publish ${slug}`, (locale, data, content) => {
+      const repaired = repairModelDeepDiveBody(data, content, locale);
       const next: Record<string, unknown> = {
         ...data,
         draft: false,
@@ -435,11 +448,22 @@ export async function publishPost(slug: string) {
         publishedAt: updatedAt,
       };
       delete next.createdAt;
-      return { data: next, content };
+      return { data: next, content: repaired.body };
     });
     return { mode: "github" as const };
   }
 
+  for (const locale of ["en", "ko"] as const) {
+    try {
+      const { data, content } = readPostFile(slug, locale);
+      const repaired = repairModelDeepDiveBody(data, content, locale);
+      if (repaired.repairs.length > 0) {
+        writePostFile(slug, locale, data, repaired.body);
+      }
+    } catch {
+      /* locale file may be missing */
+    }
+  }
   publishPostLocally(slug);
   return { mode: "local" as const };
 }

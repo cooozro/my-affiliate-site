@@ -28,8 +28,8 @@ modelPickId: lg-lw1217ersm
 modelPickBrand: LG
 modelPickName: LW1217ERSM
 pressKitGallery: 'https://www.lgnewsroom.com/'
-updatedAt: '2026-08-19T19:07:47.000Z'
-publishedAt: '2026-08-19T19:07:47.000Z'
+updatedAt: '2026-08-19T10:07:51.615Z'
+publishedAt: '2026-08-19T10:07:51.424Z'
 ---
 ## Editorial Overview
 
@@ -184,12 +184,11 @@ No, the LG LW1217ERSM uses a digital panel and an included remote, but it does n
 
 ## Related guides
 
-- [2026 Air Purifiers Guide](/en/blog/2026-air-purifiers-guide)
-- [2026 Dehumidifiers Guide](/en/blog/2026-dehumidifiers-guide)
-- [2026 Cooling Mattress Pads Buying Guide](/en/blog/2026-cooling-mattress-pads-buying-guide)
-- [2026 Countertop Ice Makers Buying Guide](/en/blog/2026-countertop-ice-makers-buying-guide)
-- [2026 Compact Footprint Cross-Category Scenario Guide](/en/blog/2026-compact-footprint-cross-category-scenario-guide)
-
+- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
+- [Compact Appliances by Scenario: What Earns Space in a Small Home?](/en/blog/2026-compact-footprint-cross-category-scenario-guide) — Five compact-appliance scenarios compare cooling, humidity, cooking, rice, and floor care…
+- [Countertop Ice Makers for Small Kitchens: Nugget vs Bullet, Output, and 3-Year Cost](/en/blog/2026-countertop-ice-makers-buying-guide) — Summer apartment ice makers compared — nugget vs bullet ice, lbs per day, tank vs continu…
+- [Cooling Mattress Pads & Toppers Buying Guide: Active vs Passive for Heatwave Sleep](/en/blog/2026-cooling-mattress-pads-buying-guide) — Active water, forced-air, and passive cooling toppers compared for heatwave nights — with…
+- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
 ## Final Verdict
 
 The LG LW1217ERSM is a buy for the right room: a standard double-hung window, a space between 250 and 450 square feet, and a user who wants proven 12,000 BTU cooling without smart home complexity. The three-year total cost of ownership is predictable — electricity, one washable filter, and no subscription or annual service. Skip it if your window type does not match, you need app control, or you are cooling a room above 600 square feet. In the 12,000 BTU class, the Midea U-Shaped MAW12V1QWT is the only serious quiet-bedroom rival, but for a straightforward summer workhorse, the LG LW1217ERSM still earns the recommendation.

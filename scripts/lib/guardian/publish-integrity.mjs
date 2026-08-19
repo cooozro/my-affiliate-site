@@ -46,6 +46,7 @@ import {
   dedupeEditorialBlocks,
   countConsecutiveDuplicateParagraphs,
 } from "../editorial-block-dedupe.mjs";
+import { repairModelDeepDiveBody } from "../repair-model-deep-dive-body.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
 
@@ -221,6 +222,16 @@ export function repairPostLocale(root, slug, locale) {
     if (related.changed) {
       body = related.body;
       repairs.push(...related.repairs);
+    }
+  }
+
+  if (!isIntegrityExempt(slug, data)) {
+    const deepDive = repairModelDeepDiveBody(data, body, locale);
+    if (deepDive.repairs.length > 0) {
+      body = deepDive.body;
+      repairs.push(
+        ...deepDive.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+      );
     }
   }
 
