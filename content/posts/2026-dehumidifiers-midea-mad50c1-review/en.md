@@ -22,14 +22,20 @@ modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-08-19T10:16:37.982Z'
-coverImage: "/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg"
-coverImageAlt: "Midea MAD50C1ZWS dehumidifier in a humid room"
+updatedAt: '2026-08-19T11:46:25.407Z'
+coverImage: >-
+  /images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
+coverImageAlt: Midea MAD50C1ZWS dehumidifier in a humid room
 coverImageProvider: local-copy
 ---
 <figure><img src="/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg" alt="Midea MAD50C1ZWS dehumidifier" loading="lazy" /></figure>
 
 ## Editorial Overview
+
+![Midea MAD50C1ZWS dehumidifier in a humid room](/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg)
+
+*Image: copyright-safe stock — product/lifestyle cut.*
+
 
 The Midea MAD50C1ZWS is a 50-pint dehumidifier that targets homeowners and renters dealing with damp basements, laundry rooms, and humid summer air. Unlike a generic category roundup, this review centers on one named retail model and cross-checks manufacturer specs, public owner reviews, and listed retail prices. We focus on the questions that matter most in a humid summer: how much moisture does it actually pull, how loud is it overnight, and what does it cost to run per day. **Editorial read:** the smart bucket alert is the headline feature, but the real story is whether the 50-pint capacity and measured energy draw justify the footprint for an average home.
 
