@@ -3,19 +3,18 @@ title: 'LG LW1217ERSM 창문형 에어컨 리뷰: 12,000 BTU는 더운 방을 �
 description: >-
   LG LW1217ERSM 단일 모델 심층 리뷰. 12,000 BTU 냉방, 설치 제약, 에너지 라벨, 실사용 소음, Midea
   U-Shaped 경쟁 제품을 분석합니다.
-date: '2026-08-18'
+date: '2026-08-19'
 tags:
   - LG LW1217ERSM
   - 창문형 에어컨
   - BTU 평수
   - 에너지스타
   - Midea U-Shaped
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: window-ac
 topicCluster: air-conditioning
 writingProvider: deepseek
-createdAt: '2026-08-18T02:16:05.034Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-window-ac-lg-lw1217ersm-review/window-air-conditioner-apartment-product-lg-wind-cover.jpg
@@ -26,9 +25,15 @@ modelPickId: lg-lw1217ersm
 modelPickBrand: LG
 modelPickName: LW1217ERSM
 pressKitGallery: 'https://www.lgnewsroom.com/'
-updatedAt: '2026-08-18T02:17:52.538Z'
+updatedAt: '2026-08-19T19:07:47.000Z'
+publishedAt: '2026-08-19T19:07:47.000Z'
 ---
 ## 편집부 개요
+
+![LG LG LW1217ERSM 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 침실의 창문형 에어컨](/images/posts/2026-window-ac-lg-lw1217ersm-review/window-air-conditioner-apartment-product-lg-wind-cover.jpg)
+
+*이미지: Photo by Victor  de Dompablo / Pexels — 제품/라이프스타일 컷.*
+
 
 이 글은 카테고리 비교가 아니라 LG LW1217ERSM 단일 모델에 대한 편집부 심층 리뷰입니다. 이 제품이 실제로 어떤 공간에 맞는지, 폭염이 닥쳤을 때 어떻게 작동하는지, 그리고 Midea U-Shaped MAW12V1QWT를 대신 고려해야 하는 상황을 중점적으로 다룹니다. 공개된 제조사 스펙, 주요 쇼핑몰 공시 판매가, 공개 사용자 리뷰를 {{today}} 기준으로 교차 검증했으며, 비공개 판매자 API나 숨겨진 데이터베이스는 사용하지 않았습니다.
 
