@@ -101,21 +101,33 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-19T02:38:36.293Z",
-    "issueCount": 2,
+    "at": "2026-08-19T02:58:31.421Z",
+    "issueCount": 4,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (12min past slot, KST 2026-08-19)",
+        "severity": "error"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1469min",
+        "message": "Cursor replenish pending 1489min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -241,10 +253,10 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-17T03:03:07.051Z",
+    "at": "2026-08-19T02:58:31.847Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
-      "jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300"
+      "2026-window-ac-lg-lw1217ersm-review"
     ],
     "deferredSkipped": 0,
     "integritySkipped": 1,
