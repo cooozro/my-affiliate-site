@@ -11,10 +11,10 @@
   "lastPublishAt": "2026-08-18T02:09:25.841Z",
   "nextPublishAt": "2026-08-19T02:46:00.000Z",
   "scheduledGapHours": 5.77,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-08-18",
+  "publishCountToday": 0,
+  "publishDateKst": "2026-08-19",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-18",
+  "writeDateKst": "2026-08-19",
   "history": [
     {
       "action": "publish",
@@ -101,7 +101,7 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-18T11:41:09.533Z",
+    "at": "2026-08-19T00:03:26.511Z",
     "issueCount": 2,
     "issues": [
       {
@@ -111,7 +111,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 571min",
+        "message": "Cursor replenish pending 1314min",
         "severity": "warning"
       }
     ],
