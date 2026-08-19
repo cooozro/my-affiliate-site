@@ -93,5 +93,10 @@
     "at": "2026-08-18T02:16:06.002Z",
     "query": "LW1217ERSM LG official press product OR media kit site:news.lg.com OR site:lgnewsroom.com",
     "images": []
+  },
+  "midea-mad50c1": {
+    "at": "2026-08-19T10:15:33.369Z",
+    "query": "MAD50C1ZWS Midea official press product OR media kit site:midea.com newsroom OR press",
+    "images": []
   }
 }

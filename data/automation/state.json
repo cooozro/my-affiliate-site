@@ -8,10 +8,10 @@
     "budget-monitors",
     "flagship-smartphones"
   ],
-  "lastPublishAt": "2026-08-18T02:09:25.841Z",
-  "nextPublishAt": "2026-08-19T02:46:00.000Z",
-  "scheduledGapHours": 5.77,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-19T10:07:51.424Z",
+  "nextPublishAt": "2026-08-20T02:44:00.000Z",
+  "scheduledGapHours": 5.73,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-19",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-19",
@@ -98,26 +98,32 @@
         "https://www.aipick.shop/en/blog/2026-flagship-smartphone-deep-dive",
         "https://www.aipick.shop/ko/blog/2026-flagship-smartphone-deep-dive"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-window-ac-lg-lw1217ersm-review",
+      "topic": {
+        "id": "window-ac",
+        "cluster": "air-conditioning"
+      },
+      "at": "2026-08-19T10:07:51.424Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-window-ac-lg-lw1217ersm-review",
+        "https://www.aipick.shop/ko/blog/2026-window-ac-lg-lw1217ersm-review"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-19T10:07:47.508Z",
-    "issueCount": 2,
+    "at": "2026-08-19T10:11:34.341Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (441min past slot, KST 2026-08-19)",
-        "severity": "error"
-      },
-      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1918min",
+        "message": "Cursor replenish pending 1922min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "marked-slot-catch-up"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
@@ -181,12 +187,17 @@
       "id": "flagship-smartphones",
       "cluster": "smartphones",
       "at": "2026-08-18T02:09:25.864Z"
+    },
+    {
+      "id": "window-ac",
+      "cluster": "air-conditioning",
+      "at": "2026-08-19T10:07:51.444Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-18",
+  "lastDailyContentAuditKst": "2026-08-19",
   "lastDailyContentAudit": {
-    "at": "2026-08-18T02:11:10.896Z",
-    "postsScanned": 61,
+    "at": "2026-08-19T10:07:56.983Z",
+    "postsScanned": 62,
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },
