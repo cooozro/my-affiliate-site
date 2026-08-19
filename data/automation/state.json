@@ -101,12 +101,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-19T04:55:41.673Z",
+    "at": "2026-08-19T05:15:24.282Z",
     "issueCount": 4,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (129min past slot, KST 2026-08-19)",
+        "message": "Publish ready but no post went live (149min past slot, KST 2026-08-19)",
         "severity": "error"
       },
       {
@@ -121,7 +121,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1606min",
+        "message": "Cursor replenish pending 1625min",
         "severity": "warning"
       }
     ],
@@ -253,7 +253,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-19T04:55:42.134Z",
+    "at": "2026-08-19T05:15:24.701Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "2026-window-ac-lg-lw1217ersm-review"
