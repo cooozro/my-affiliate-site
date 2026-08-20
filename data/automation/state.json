@@ -114,21 +114,33 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-20T02:35:27.075Z",
-    "issueCount": 2,
+    "at": "2026-08-20T02:54:39.643Z",
+    "issueCount": 4,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (10min past slot, KST 2026-08-20)",
+        "severity": "error"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2906min",
+        "message": "Cursor replenish pending 2925min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -259,10 +271,10 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-19T09:48:38.763Z",
+    "at": "2026-08-20T02:54:40.070Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
-      "2026-window-ac-lg-lw1217ersm-review"
+      "2026-dehumidifiers-midea-mad50c1-review"
     ],
     "deferredSkipped": 0,
     "integritySkipped": 1,
