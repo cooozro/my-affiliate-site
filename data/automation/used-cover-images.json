@@ -1912,6 +1912,14 @@
       "contentHash": "1dd865d4ec0b50f88c7a9aec61fd6fd3fa6bda032f9cbc6aaf8708ebf386ef10",
       "provider": "pixabay",
       "registeredAt": "2026-08-20T00:35:01.737Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-midea-mad50c1-review",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-20T00:45:21.803Z"
     }
   ]
 }
