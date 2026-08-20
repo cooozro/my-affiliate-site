@@ -3,24 +3,23 @@ title: 'Midea MAD50C1ZWS 제습기 리뷰: 50파인트 용량, 소음, 그리고
 description: >-
   Midea MAD50C1ZWS 50파인트 제습기의 스마트 물통 알림, 실제 소음, 하루 전기요금을 분석하고 습한 여름 방에 적합한지
   판단합니다.
-date: '2026-08-19'
+date: '2026-08-20'
 tags:
   - Midea MAD50C1ZWS
   - 제습기
   - 습도 조절
   - 가전제품
   - 전기요금
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: dehumidifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-19T10:15:32.351Z'
 modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-08-20T00:38:49.206Z'
+updatedAt: '2026-08-20T07:48:44.525Z'
 coverImageAlt: 실내 제습기 사용 환경 제품 컷
 coverImageAltKo: 실내 제습기 사용 환경 제품 컷
 coverImage: >-
@@ -29,6 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 3347540
 coverImageSourceUrl: 'https://images.pexels.com/photos/3347540/pexels-photo-3347540.jpeg'
 coverImageCredit: Photo by Ansel Lee / Pexels
+publishedAt: '2026-08-20T07:48:44.525Z'
 ---
 ## 편집부 개요
 
