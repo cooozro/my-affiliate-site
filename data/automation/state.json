@@ -114,12 +114,12 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-20T07:28:58.298Z",
+    "at": "2026-08-20T07:48:28.799Z",
     "issueCount": 4,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (284min past slot, KST 2026-08-20)",
+        "message": "Publish ready but no post went live (304min past slot, KST 2026-08-20)",
         "severity": "error"
       },
       {
@@ -134,7 +134,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 3199min",
+        "message": "Cursor replenish pending 3219min",
         "severity": "warning"
       }
     ],
@@ -271,7 +271,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-20T07:28:58.713Z",
+    "at": "2026-08-20T07:48:29.246Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "2026-dehumidifiers-midea-mad50c1-review"
