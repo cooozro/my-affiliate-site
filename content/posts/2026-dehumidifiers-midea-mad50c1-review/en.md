@@ -23,8 +23,16 @@ modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
 updatedAt: '2026-08-20T00:38:49.174Z'
-coverImageAlt: home dehumidifier
-coverImageAltKo: 제습기
+coverImageAlt: >-
+  A serene minimalist bedroom scene featuring a white bedside table and a
+  kettle. — dehumidifier review context
+coverImageAltKo: 실내 제습기 사용 환경 제품 컷
+coverImage: >-
+  /images/posts/2026-dehumidifiers-midea-mad50c1-review/midea-dehumidifier-unique-cover.jpg
+coverImageProvider: pexels
+coverImageAssetId: 3347540
+coverImageSourceUrl: 'https://images.pexels.com/photos/3347540/pexels-photo-3347540.jpeg'
+coverImageCredit: Photo by Ansel Lee / Pexels
 ---
 ## Editorial Overview
 

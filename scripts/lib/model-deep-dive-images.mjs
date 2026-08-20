@@ -138,8 +138,9 @@ export function buildModelDeepDiveAlts(model, topicId, role = "cover") {
  * @param {Array<{ path: string, altEn: string, altKo: string, credit?: string }>} images
  * @param {'en'|'ko'} locale
  */
-export function insertModelDeepDiveBodyImages(body, images, locale = "en") {
+export function insertModelDeepDiveBodyImages(body, images, locale = "en", options = {}) {
   if (!images?.length) return body;
+  const cover = typeof options.coverImage === "string" ? options.coverImage.trim() : "";
   let out = body;
 
   const slots =
@@ -189,6 +190,7 @@ export function insertModelDeepDiveBodyImages(body, images, locale = "en") {
   for (const slot of slots) {
     const img = images[slot.idx] ?? images[0];
     if (!img?.path) continue;
+    if (cover && img.path === cover) continue;
     if (out.includes(img.path)) continue;
     const alt = locale === "ko" ? img.altKo : img.altEn;
     const block = `\n\n![${alt}](${img.path})\n${caption(img)}`;

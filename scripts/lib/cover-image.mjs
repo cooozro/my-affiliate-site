@@ -125,21 +125,33 @@ function candidateIsUsed(registry, candidate) {
   });
 }
 
+function passesAnchorWithSearchQuery(altText, searchQuery, anchors) {
+  if (!anchors?.length) return true;
+  if (passesProductAltGate(altText, anchors)) return true;
+  const query = String(searchQuery ?? "").toLowerCase();
+  return anchors.every((anchor) => query.includes(String(anchor).toLowerCase()));
+}
+
 function rankText(candidates, ctx) {
   const anchors = ctx.requiredAnchors ?? [];
   return candidates
-    .filter((candidate) =>
-      passesProductAltGate(candidate.providerAlt ?? candidate.relevanceText, anchors) &&
-      passesVacuumTypeAltGate(
-        candidate.providerAlt ?? candidate.relevanceText,
-        ctx.topicId,
-        ctx.slug,
-      ),
-    )
+    .filter((candidate) => {
+      const altText =
+        String(candidate.providerAlt ?? candidate.relevanceText ?? "").trim() ||
+        String(candidate.searchQuery ?? "");
+      return (
+        passesAnchorWithSearchQuery(altText, candidate.searchQuery, anchors) &&
+        passesVacuumTypeAltGate(altText, ctx.topicId, ctx.slug)
+      );
+    })
     .map((candidate) => {
-      const altBlob = String(candidate.providerAlt ?? candidate.relevanceText ?? "").toLowerCase();
+      const altBlob = (
+        String(candidate.providerAlt ?? candidate.relevanceText ?? "").trim() ||
+        String(candidate.searchQuery ?? "")
+      ).toLowerCase();
       let textScore = scoreImageRelevance(
-        candidate.providerAlt ?? candidate.relevanceText,
+        String(candidate.providerAlt ?? candidate.relevanceText ?? "").trim() ||
+          String(candidate.searchQuery ?? ""),
         ctx.productKeywords,
         ctx.negativeTags,
         ctx.seasonContext,
@@ -393,8 +405,14 @@ async function collectCandidatePool(slug, ctx, registry, options) {
     }
   }
 
-  const ranked = rankText(dedupeCandidates(raw), ctx);
+  const deduped = dedupeCandidates(raw);
+  const sample = deduped.slice(0, 5).map((c) => `${c.provider}:${String(c.providerAlt ?? "").slice(0, 80)}`);
+  console.log(`  sample alts: ${sample.join(" || ")}`);
+  const ranked = rankText(deduped, ctx);
   const unused = filterBlocked(ranked, ctx).filter((c) => !candidateIsUsed(registry, c));
+  console.log(
+    `  pool sizes: raw=${raw.length} ranked=${ranked.length} unused=${unused.length}`,
+  );
 
   return { pool: unused, lastError };
 }
@@ -569,12 +587,14 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
     return null;
   }
 
-  const pendingForceRefreshClear =
-    options.forceRefresh &&
-    typeof queryOrContext === "object" &&
-    queryOrContext?.coverImage
-      ? String(queryOrContext.coverImage)
-      : null;
+  if (options.forceRefresh) {
+    const meta =
+      typeof queryOrContext === "object" && queryOrContext?.coverImage
+        ? queryOrContext.coverImage
+        : null;
+    clearSlugCoverAssets(slug, meta, options);
+    registry = syncImageRegistryFromPosts();
+  }
 
   const filename = buildCoverFilename(ctx.productKeywords, slug);
   const alts = buildCoverAlts(ctx);
@@ -656,11 +676,6 @@ export async function fetchCoverImage(slug, queryOrContext, options = {}) {
         path.join(rootDir, "public", downloaded.relativePath.replace(/^\//, "")),
       );
       return null;
-    }
-
-    if (pendingForceRefreshClear) {
-      clearSlugCoverAssets(slug, downloaded.relativePath, options);
-      registry = syncImageRegistryFromPosts();
     }
 
     registerUsedImage(registry, {
@@ -754,12 +769,7 @@ export async function fetchAdditionalImages(slug, queryOrContext, options = {}) 
         continue;
       }
 
-      if (pendingForceRefreshClear) {
-      clearSlugCoverAssets(slug, downloaded.relativePath, options);
-      registry = syncImageRegistryFromPosts();
-    }
-
-    registerUsedImage(registry, {
+      registerUsedImage(registry, {
         slug,
         url: winner.imageUrl,
         assetKey: winner.assetKey,

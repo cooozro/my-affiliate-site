@@ -143,6 +143,20 @@ export const TOPIC_IMAGE_PROFILES = {
     topicCluster: "air-conditioning",
     altScene: { en: "in a summer bedroom", ko: "여름 침실" },
   },
+  dehumidifiers: {
+    imageSearchKeywords: [
+      "home dehumidifier",
+      "room dehumidifier appliance",
+      "portable dehumidifier unit",
+    ],
+    extraSearchQueries: [
+      "dehumidifier bedroom appliance",
+      "basement dehumidifier product photo",
+    ],
+    topicCluster: "air-quality",
+    altScene: { en: "in a humid room", ko: "습한 실내" },
+    forbiddenSubjects: ["air purifier", "vacuum cleaner", "clock", "watch"],
+  },
   "smart-home-cameras": {
     imageSearchKeywords: [
       "home security camera",
@@ -818,6 +832,9 @@ function slugProfile(slug, topicId) {
   if (topicId === "noise-cancelling-headphones" || slug?.includes("noise-cancelling-headphone")) {
     return TOPIC_IMAGE_PROFILES["noise-cancelling-headphones"];
   }
+  if (topicId === "dehumidifiers" || slug?.includes("dehumidifier")) {
+    return TOPIC_IMAGE_PROFILES.dehumidifiers;
+  }
   return null;
 }
 
@@ -836,7 +853,16 @@ export function extractSeasonContext(input = {}) {
     .toLowerCase();
 
   for (const [season, cfg] of Object.entries(SEASON_SIGNALS)) {
-    if (cfg.tokens.some((token) => blob.includes(token.toLowerCase()))) {
+    if (
+      cfg.tokens.some((token) => {
+        const t = token.toLowerCase();
+        if (t === "humid") {
+          if (/\bdehumid/.test(blob)) return false;
+          return /\bhumid(?:ity)?\b/.test(blob);
+        }
+        return blob.includes(t);
+      })
+    ) {
       return {
         season,
         searchBoost: cfg.searchBoost,
@@ -1148,6 +1174,9 @@ export function requiredProductAnchors(productKeywords, topicCluster, topicId, s
 
   for (const anchor of CLUSTER_PRODUCT_ANCHORS[topicCluster] ?? []) {
     const head = anchor.split(/\s+/)[0];
+    if (anchor === "humidifier" && /\bdehumid/.test(blob) && !/\bhumidifier\b/.test(blob)) {
+      continue;
+    }
     if (blob.includes(anchor) || blob.includes(head)) anchors.add(anchor);
   }
 
@@ -1165,7 +1194,9 @@ export function requiredProductAnchors(productKeywords, topicCluster, topicId, s
     if (lower.includes("tracker") || lower.includes("smartwatch")) anchors.add("tracker");
     if (lower.includes("purifier")) anchors.add("purifier");
     if (lower.includes("dehumidifier")) anchors.add("dehumidifier");
-    if (lower.includes("humidifier")) anchors.add("humidifier");
+    if (lower.includes("humidifier") && !lower.includes("dehumid")) {
+      anchors.add("humidifier");
+    }
     if (/\bfan\b/.test(lower) || lower.includes("electric fan")) anchors.add("fan");
     if (lower.includes("air conditioner") || /\bac\b/.test(lower)) anchors.add("air conditioner");
     if (lower.includes("air fryer") || lower.includes("fryer")) anchors.add("fryer");

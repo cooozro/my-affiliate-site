@@ -21,7 +21,6 @@ async function loadCursorSdk() {
 }
 import { resolveImageContext, buildCoverAlts } from "../lib/image-query.mjs";
 import {
-  copyFallbackImageFromTopic,
   coverFileExists as draftCoverFileExists,
 } from "../lib/draft-image-integrity.mjs";
 import {
@@ -346,20 +345,6 @@ async function ensureCoverImage(slug, topic) {
   });
 
   let meta = await fetchCoverImage(slug, imageContext);
-  if (!meta?.coverImage) {
-    const fallback = copyFallbackImageFromTopic(
-      process.cwd(),
-      slug,
-      String(data.topicId ?? topic?.id ?? ""),
-    );
-    if (fallback) {
-      meta = {
-        coverImage: fallback,
-        coverImageProvider: "topic-fallback-copy",
-      };
-      console.warn(`Cover topic-fallback copy for ${slug}: ${fallback}`);
-    }
-  }
   if (!meta?.coverImage) return false;
 
   const alts = buildCoverAlts(imageContext);

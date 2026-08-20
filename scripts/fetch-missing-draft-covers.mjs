@@ -10,12 +10,30 @@ import { fetchCoverImage } from "./lib/cover-image.mjs";
 import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
 import { ensureImageApiEnv } from "./lib/image-api-env.mjs";
 import {
-  copyFallbackImageFromTopic,
   coverFileExists,
+  publicPathFromWeb,
   repairCoverFrontmatter,
   stripBrokenImageRefs,
+  stripCoverDuplicatesFromBody,
 } from "./lib/draft-image-integrity.mjs";
 import { repairModelDeepDiveBody } from "./lib/repair-model-deep-dive-body.mjs";
+
+const SKIP_SLUGS = new Set([
+  "welcome",
+  "adsense-seo-checklist",
+  "aipick-seo-precision-report",
+]);
+
+function isStolenSiblingCover(data) {
+  const provider = String(data?.coverImageProvider ?? "");
+  const cover = String(data?.coverImage ?? "");
+  return provider === "topic-fallback-copy" || /cover-fallback\.(jpe?g|webp|png)$/i.test(cover);
+}
+
+function deleteCoverFile(webPath) {
+  const abs = publicPathFromWeb(root, webPath);
+  if (abs && fs.existsSync(abs)) fs.unlinkSync(abs);
+}
 
 const root = process.cwd();
 const postsDir = path.join(root, "content", "posts");
@@ -41,10 +59,24 @@ function writeLocale(slug, locale, data, content) {
 }
 
 async function ensureCoverForSlug(slug) {
+  if (SKIP_SLUGS.has(slug)) return { slug, action: "skip-internal" };
   const en = readLocale(slug, "en");
   if (!en.data.draft) return { slug, action: "skip-live" };
 
-  if (coverFileExists(root, slug, en.data)) {
+  if (isStolenSiblingCover(en.data)) {
+    console.warn(`${slug}: discarding sibling-copied cover (must be unique)`);
+    deleteCoverFile(en.data.coverImage);
+    for (const locale of ["en", "ko"]) {
+      const post = readLocale(slug, locale);
+      const nextData = { ...post.data };
+      delete nextData.coverImage;
+      delete nextData.coverImageProvider;
+      writeLocale(slug, locale, nextData, post.content);
+    }
+  }
+
+  const fresh = readLocale(slug, "en");
+  if (coverFileExists(root, slug, fresh.data) && !isStolenSiblingCover(fresh.data)) {
     let touched = false;
     for (const locale of ["en", "ko"]) {
       const post = readLocale(slug, locale);
@@ -52,11 +84,17 @@ async function ensureCoverForSlug(slug) {
       let body = post.content;
       const stripped = stripBrokenImageRefs(root, body);
       if (stripped.changed) body = stripped.body;
+      const coverDup = stripCoverDuplicatesFromBody(
+        body,
+        coverFix.data.coverImage,
+      );
+      if (coverDup.changed) body = coverDup.body;
       const deep = repairModelDeepDiveBody(coverFix.data, body, locale, { root });
       body = deep.body;
       if (
         coverFix.repaired ||
         stripped.changed ||
+        coverDup.changed ||
         deep.repairs.length > 0
       ) {
         writeLocale(slug, locale, coverFix.data, body);
@@ -67,36 +105,29 @@ async function ensureCoverForSlug(slug) {
   }
 
   ensureImageApiEnv();
+  const draftEn = readLocale(slug, "en");
   const topic = {
-    id: en.data.topicId,
-    category: en.data.topicCluster,
-    topicCluster: en.data.topicCluster,
-    imageSearchKeywords: en.data.imageSearchKeywords,
+    id: draftEn.data.topicId,
+    category: draftEn.data.topicCluster,
+    topicCluster: draftEn.data.topicCluster,
+    imageSearchKeywords: draftEn.data.imageSearchKeywords,
   };
+  const indoorQueries =
+    String(draftEn.data.topicId ?? "").includes("dehumid") ||
+    String(draftEn.data.title ?? "").toLowerCase().includes("dehumid")
+      ? ["dehumidifier"]
+      : draftEn.data.imageSearchKeywords;
   const ctx = resolveImageContext(slug, {
-    title: en.data.title,
-    tags: en.data.tags,
-    topicId: en.data.topicId,
-    topicCluster: en.data.topicCluster,
-    imageSearchKeywords: en.data.imageSearchKeywords,
+    title: draftEn.data.title,
+    tags: draftEn.data.tags,
+    topicId: draftEn.data.topicId,
+    topicCluster: draftEn.data.topicCluster,
+    imageSearchKeywords: indoorQueries,
+    imageQuery: indoorQueries?.[0],
     topic,
   });
 
   let meta = await fetchCoverImage(slug, ctx, { rootDir: root });
-  if (!meta?.coverImage) {
-    const fallback = copyFallbackImageFromTopic(
-      root,
-      slug,
-      String(en.data.topicId ?? ""),
-    );
-    if (fallback) {
-      meta = {
-        coverImage: fallback,
-        coverImageProvider: "topic-fallback-copy",
-      };
-      console.log(`  fallback copy: ${fallback}`);
-    }
-  }
   if (!meta?.coverImage) {
     return { slug, action: "fetch-failed" };
   }
@@ -113,6 +144,8 @@ async function ensureCoverForSlug(slug) {
       coverImageAlt: locale === "ko" ? alts.ko : alts.en,
       coverImageAltKo: alts.ko,
     };
+    const coverDup = stripCoverDuplicatesFromBody(body, merged.coverImage);
+    if (coverDup.changed) body = coverDup.body;
     const deep = repairModelDeepDiveBody(merged, body, locale, { root });
     writeLocale(slug, locale, merged, deep.body);
   }

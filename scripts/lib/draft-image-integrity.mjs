@@ -36,29 +36,39 @@ export function firstImageInSlugDir(root, slug) {
   return null;
 }
 
-/** Copy image asset from another post (same topic cluster) when fetch APIs fail. */
-export function copyFallbackImageFromTopic(root, slug, topicId) {
-  if (!topicId) return null;
-  const postsDir = path.join(root, "content", "posts");
-  if (!fs.existsSync(postsDir)) return null;
-
-  for (const ent of fs.readdirSync(postsDir, { withFileTypes: true })) {
-    if (!ent.isDirectory() || ent.name === slug) continue;
-    if (!ent.name.includes(String(topicId))) continue;
-    const srcWeb = firstImageInSlugDir(root, ent.name);
-    if (!srcWeb) continue;
-    const srcAbs = publicPathFromWeb(root, srcWeb);
-    if (!srcAbs || !isRealImageFile(srcAbs)) continue;
-
-    const ext = path.extname(srcAbs) || ".jpg";
-    const destDir = slugImageDir(root, slug);
-    fs.mkdirSync(destDir, { recursive: true });
-    const destName = `cover-fallback${ext}`;
-    const destAbs = path.join(destDir, destName);
-    fs.copyFileSync(srcAbs, destAbs);
-    return `/images/posts/${slug}/${destName}`;
-  }
+/**
+ * Never copy another post's file. Same visual across posts is a hero-duplicate
+ * (used-images registry). Fetch a unique stock/press asset or fail the draft.
+ */
+export function copyFallbackImageFromTopic() {
   return null;
+}
+
+/** Cover is rendered by the site hero — do not also embed the same file in body. */
+export function stripCoverDuplicatesFromBody(body, coverWebPath) {
+  const cover = typeof coverWebPath === "string" ? coverWebPath.trim() : "";
+  if (!cover || !cover.startsWith("/images/posts/")) {
+    return { body: String(body ?? ""), changed: false, repairs: [] };
+  }
+  const repairs = [];
+  let next = String(body ?? "");
+  const esc = cover.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const before = next;
+  next = next.replace(
+    new RegExp(`\\n?!\\[[^\\]]*\\]\\(${esc}\\)\\s*(?:\\n\\*[^\\n]*\\*)?\\n?`, "g"),
+    "\n",
+  );
+  next = next.replace(
+    new RegExp(`<figure>[\\s\\S]*?<img[^>]+src=["']${esc}["'][\\s\\S]*?</figure>\\n?`, "gi"),
+    "",
+  );
+  next = next.replace(
+    new RegExp(`<img[^>]+src=["']${esc}["'][^>]*\\/?>\\n?`, "gi"),
+    "",
+  );
+  next = next.replace(/\n{3,}/g, "\n\n");
+  if (next !== before) repairs.push(`removed in-body duplicate of cover ${cover}`);
+  return { body: next, changed: next !== String(body ?? ""), repairs };
 }
 
 export function coverFileExists(root, slug, data) {

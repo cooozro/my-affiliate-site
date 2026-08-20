@@ -396,8 +396,12 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
         figures = [...stockFigures];
       }
       if (figures.length > 0) {
-        enBody = insertModelDeepDiveBodyImages(enBody, figures, "en");
-        koBody = insertModelDeepDiveBodyImages(koBody, figures, "ko");
+        enBody = insertModelDeepDiveBodyImages(enBody, figures, "en", {
+          coverImage: imageMeta?.coverImage || pressCover?.path,
+        });
+        koBody = insertModelDeepDiveBodyImages(koBody, figures, "ko", {
+          coverImage: imageMeta?.coverImage || pressCover?.path,
+        });
         console.log(
           `Model-deep-dive body images: ${figures.length} (press=${figures.filter((f) => f.source === "press-kit").length}, stock=${figures.filter((f) => f.source === "stock").length})`,
         );

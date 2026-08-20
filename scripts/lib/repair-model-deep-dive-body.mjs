@@ -1,14 +1,11 @@
 /**
  * Deterministic repairs so model-deep-dive drafts can actually publish:
- * missing Who should buy/skip, missing in-body /images/posts/ figure.
- * Safe for VPS scheduler, admin GitHub commit, and draft generation.
+ * missing Who should buy/skip. Cover lives in frontmatter (site hero) —
+ * never inject the same file into the body.
  */
-import fs from "fs";
-import path from "path";
+import { stripCoverDuplicatesFromBody } from "./draft-image-integrity.mjs";
 
-import { imageRefExists } from "./draft-image-integrity.mjs";
-
-export function repairModelDeepDiveBody(data, body, locale = "en", options = {}) {
+export function repairModelDeepDiveBody(data, body, locale = "en", _options = {}) {
   const profile = data?.contentProfile;
   if (profile !== "model-deep-dive" || typeof body !== "string") {
     return { body, repairs: [] };
@@ -43,33 +40,11 @@ export function repairModelDeepDiveBody(data, body, locale = "en", options = {})
     repairs.push("added Who should buy/skip section");
   }
 
-  const root = options.root ?? process.cwd();
-  const hasBodyImg = /!\[[^\]]*]\(\/images\/posts\/[^)]+\)/.test(next);
   const cover = typeof data.coverImage === "string" ? data.coverImage.trim() : "";
-  if (
-    !hasBodyImg &&
-    /^\/images\/posts\//.test(cover) &&
-    imageRefExists(root, cover)
-  ) {
-    const alt =
-      locale === "ko"
-        ? String(data.coverImageAltKo || data.coverImageAlt || model)
-        : String(data.coverImageAlt || model);
-    const credit = String(data.coverImageCredit || "").trim();
-    const caption =
-      locale === "ko"
-        ? `\n*이미지: ${credit || "저작권 안전한 스톡"} — 제품/라이프스타일 컷.*\n`
-        : `\n*Image: ${credit || "copyright-safe stock"} — product/lifestyle cut.*\n`;
-    const block = `\n\n![${alt}](${cover})\n${caption}`;
-    const firstH2 = next.search(/^##\s+/m);
-    if (firstH2 >= 0) {
-      const lineEnd = next.indexOf("\n", firstH2);
-      const at = lineEnd >= 0 ? lineEnd : firstH2;
-      next = next.slice(0, at) + block + next.slice(at);
-    } else {
-      next = `${block}\n${next}`;
-    }
-    repairs.push("inserted cover as in-body product image");
+  const stripped = stripCoverDuplicatesFromBody(next, cover);
+  if (stripped.changed) {
+    next = stripped.body;
+    repairs.push(...stripped.repairs);
   }
 
   return { body: next, repairs };

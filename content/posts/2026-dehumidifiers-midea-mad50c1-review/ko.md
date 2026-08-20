@@ -21,8 +21,14 @@ modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
 updatedAt: '2026-08-20T00:38:49.206Z'
-coverImageAlt: 제습기
-coverImageAltKo: 제습기
+coverImageAlt: 실내 제습기 사용 환경 제품 컷
+coverImageAltKo: 실내 제습기 사용 환경 제품 컷
+coverImage: >-
+  /images/posts/2026-dehumidifiers-midea-mad50c1-review/midea-dehumidifier-unique-cover.jpg
+coverImageProvider: pexels
+coverImageAssetId: 3347540
+coverImageSourceUrl: 'https://images.pexels.com/photos/3347540/pexels-photo-3347540.jpeg'
+coverImageCredit: Photo by Ansel Lee / Pexels
 ---
 ## 편집부 개요
 

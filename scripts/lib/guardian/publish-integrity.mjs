@@ -54,6 +54,7 @@ import {
   repairCoverFrontmatter,
   resolveCoverWebPath,
   stripBrokenImageRefs,
+  stripCoverDuplicatesFromBody,
 } from "../draft-image-integrity.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
@@ -176,6 +177,14 @@ export function repairPostLocale(root, slug, locale) {
     content = stripped.body;
     repairs.push(
       ...stripped.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+    );
+  }
+
+  const coverDup = stripCoverDuplicatesFromBody(content, data.coverImage);
+  if (coverDup.changed) {
+    content = coverDup.body;
+    repairs.push(
+      ...coverDup.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
     );
   }
 
