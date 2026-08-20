@@ -3,8 +3,11 @@ import { chatJsonCompletion } from "./llm-chat.mjs";
 import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
+import fs from "fs";
+import path from "path";
 import { fetchAdditionalImages } from "../lib/cover-image.mjs";
 import { repairModelDeepDiveBody } from "../lib/repair-model-deep-dive-body.mjs";
+import { imageRefExists } from "../lib/draft-image-integrity.mjs";
 import {
   buildModelDeepDiveAlts,
   buildModelDeepDiveSearchQueries,
@@ -451,8 +454,16 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 
   const enFm = buildFrontmatter("en", article.en, shared);
   const koFm = buildFrontmatter("ko", article.ko, shared);
-  enBody = repairModelDeepDiveBody(enFm, enBody, "en").body;
-  koBody = repairModelDeepDiveBody(koFm, koBody, "ko").body;
+
+  const siteRoot = process.cwd();
+  if (!shared.coverImage || !imageRefExists(siteRoot, shared.coverImage)) {
+    throw new Error(
+      `Cover image not on disk for ${slug} — draft aborted (phantom coverImage forbidden)`,
+    );
+  }
+
+  enBody = repairModelDeepDiveBody(enFm, enBody, "en", { root: siteRoot }).body;
+  koBody = repairModelDeepDiveBody(koFm, koBody, "ko", { root: siteRoot }).body;
 
   writePost(slug, "en", enFm, enBody);
   writePost(slug, "ko", koFm, koBody);
@@ -460,8 +471,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   const issues = validatePostFiles(slug, {
     phase: "draft",
     applyRepair: true,
-  }).filter((issue) => !/missing coverImage/i.test(issue));
-  // Cover may be filled later by ensureCoverImage / GHA "Fetch missing draft covers".
+  });
   if (issues.length > 0) {
     throw new Error(`Draft integrity gate failed for ${slug}:\n${issues.join("\n")}`);
   }

@@ -10,6 +10,17 @@ updatedAt: '2026-08-11T04:24:25.065Z'
 automationBuffer: false
 robots: 'noindex, nofollow'
 createdAt: '2026-08-11T04:24:25.071Z'
+coverImage: /images/posts/adsense-seo-checklist/seo-internal-cover.jpg
+coverImageAlt: SEO in a home interior
+coverImageAltKo: 실내의 SEO
+coverImageCredit: Photo by 스마트랜스 / Pixabay
+coverImageProvider: pixabay
+coverImageAssetId: 5969381
+coverImageSourceUrl: >-
+  https://pixabay.com/get/g85ef579b984b82c768d846434d2889bb43f353c8c4712ed7dcccab2be1f95b76fbdadd3caa0822449d9352f1b23a554d1b5095efdb4aa83fb1a6fd5228b0d2b6_1280.jpg
+imageSearchKeywords:
+  - SEO
+  - internal
 ---
 ## 1. 콘텐츠 품질
 

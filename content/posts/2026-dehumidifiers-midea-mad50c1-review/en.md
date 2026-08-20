@@ -23,16 +23,19 @@ modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
 updatedAt: '2026-08-19T11:46:25.407Z'
-coverImage: >-
-  /images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
-coverImageAlt: Midea MAD50C1ZWS dehumidifier in a humid room
-coverImageProvider: local-copy
+coverImage: /images/posts/2026-dehumidifiers-midea-mad50c1-review/cover-fallback.jpg
+coverImageAlt: home dehumidifier
+coverImageProvider: topic-fallback-copy
+coverImageAltKo: 제습기
 ---
-<figure><img src="/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg" alt="Midea MAD50C1ZWS dehumidifier" loading="lazy" /></figure>
 
 ## Editorial Overview
 
-![Midea MAD50C1ZWS dehumidifier in a humid room](/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg)
+![home dehumidifier](/images/posts/2026-dehumidifiers-midea-mad50c1-review/cover-fallback.jpg)
+
+*Image: copyright-safe stock — product/lifestyle cut.*
+
+
 
 *Image: copyright-safe stock — product/lifestyle cut.*
 

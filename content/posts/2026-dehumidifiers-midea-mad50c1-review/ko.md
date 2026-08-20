@@ -21,16 +21,19 @@ modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
 updatedAt: '2026-08-19T11:46:25.448Z'
-coverImage: >-
-  /images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg
-coverImageAlt: 습한 실내의 Midea MAD50C1ZWS 제습기
-coverImageProvider: local-copy
+coverImage: /images/posts/2026-dehumidifiers-midea-mad50c1-review/cover-fallback.jpg
+coverImageAlt: 제습기
+coverImageProvider: topic-fallback-copy
+coverImageAltKo: 제습기
 ---
-<figure><img src="/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg" alt="Midea MAD50C1ZWS dehumidifier" loading="lazy" /></figure>
 
 ## 편집부 개요
 
-![습한 실내의 Midea MAD50C1ZWS 제습기](/images/posts/2026-dehumidifiers-midea-mad50c1-review/home-dehumidifier-room-dehumidifier-appliance-cover.jpg)
+![제습기](/images/posts/2026-dehumidifiers-midea-mad50c1-review/cover-fallback.jpg)
+
+*이미지: 저작권 안전한 스톡 — 제품/라이프스타일 컷.*
+
+
 
 *이미지: 저작권 안전한 스톡 — 제품/라이프스타일 컷.*
 

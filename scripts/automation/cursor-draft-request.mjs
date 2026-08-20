@@ -130,7 +130,7 @@ function buildInstructions(strategy, season, events, plan = null) {
 
   instructions +=
     'Publish-ready before complete: description 50–160 chars (en+ko), "## FAQ" / "## 자주 묻는 질문" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. ' +
-    'Cover: never copy another post cover. If no local PEXELS/PIXABAY/UNSPLASH keys, omit coverImage, push, let GHA "Fetch missing draft covers" run (repo Secrets), then git pull. ' +
+    'Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA "Fetch missing draft covers" run (repo Secrets), then git pull. ' +
     'Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. ' +
     'Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. ' +
     'Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.';
@@ -356,18 +356,13 @@ export async function queueBenchmarkReplenish(publishedSlug = null) {
 
 export function completeCursorDraftRequest(writtenSlug) {
   if (writtenSlug) {
-    const issues = validateDraftPublishReady(writtenSlug).filter(
-      (issue) => !/missing coverImage/i.test(issue),
-    );
+    const issues = validateDraftPublishReady(writtenSlug);
     if (issues.length > 0) {
       throw new Error(
         `Draft "${writtenSlug}" is not publish-ready:\n${issues.map((i) => `  • ${i}`).join("\n")}`,
       );
     }
-    // Cover may be filled by GHA "Fetch missing draft covers" when local image keys are absent.
-    const publishIssues = validateDraftPublishEligible(writtenSlug).filter(
-      (issue) => !/missing coverImage/i.test(issue),
-    );
+    const publishIssues = validateDraftPublishEligible(writtenSlug);
     if (publishIssues.length > 0) {
       throw new Error(
         `Draft "${writtenSlug}" would fail publish slot:\n${publishIssues.map((i) => `  • ${i}`).join("\n")}`,

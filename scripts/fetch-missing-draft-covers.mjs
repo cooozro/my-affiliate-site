@@ -1,154 +1,157 @@
 #!/usr/bin/env node
 /**
- * Fetch cover images for draft posts that lack coverImage OR share visual content with another post.
- * Used on GHA where PEXELS_API_KEY / PIXABAY_API_KEY live in Secrets.
+ * Repair draft posts with missing /images/posts/ files.
+ * Run from site root (VPS /opt/aipick or GHA). Commits are done by caller (Selahim git push / GHA).
  */
-
 import fs from "fs";
 import path from "path";
-import { spawnSync } from "child_process";
 import matter from "gray-matter";
+import { fetchCoverImage } from "./lib/cover-image.mjs";
+import { buildCoverAlts, resolveImageContext } from "./lib/image-query.mjs";
+import { ensureImageApiEnv } from "./lib/image-api-env.mjs";
 import {
-  hashFile,
-  hashImageContentFile,
-  syncImageRegistryFromPosts,
-} from "./lib/used-images.mjs";
-import { ensureImageApiEnv, printImageApiKeyHelp } from "./lib/image-api-env.mjs";
+  copyFallbackImageFromTopic,
+  coverFileExists,
+  repairCoverFrontmatter,
+  stripBrokenImageRefs,
+} from "./lib/draft-image-integrity.mjs";
+import { repairModelDeepDiveBody } from "./lib/repair-model-deep-dive-body.mjs";
 
-const POSTS_DIR = path.join(process.cwd(), "content", "posts");
-const SKIP_SLUGS = new Set(["adsense-seo-checklist", "aipick-seo-precision-report"]);
+const root = process.cwd();
+const postsDir = path.join(root, "content", "posts");
 
-function coverFilePath(coverImage) {
-  return path.join(process.cwd(), "public", String(coverImage).replace(/^\//, ""));
+function listDraftSlugs() {
+  if (!fs.existsSync(postsDir)) return [];
+  return fs
+    .readdirSync(postsDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name);
 }
 
-function listDraftSlugsMissingCover() {
-  if (!fs.existsSync(POSTS_DIR)) return [];
-
-  const slugs = [];
-  for (const entry of fs.readdirSync(POSTS_DIR, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const slug = entry.name;
-    if (SKIP_SLUGS.has(slug)) continue;
-
-    const enPath = path.join(POSTS_DIR, slug, "en.md");
-    const koPath = path.join(POSTS_DIR, slug, "ko.md");
-    if (!fs.existsSync(enPath) || !fs.existsSync(koPath)) continue;
-
-    const { data } = matter(fs.readFileSync(enPath, "utf8"));
-    if (!data.draft) continue;
-    if (!data.coverImage) slugs.push(slug);
-  }
-
-  return slugs.sort();
+function readLocale(slug, locale) {
+  const filePath = path.join(postsDir, slug, `${locale}.md`);
+  const raw = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(raw);
+  return { data, content: content.trim(), filePath };
 }
 
-function findDuplicateCoverSlugs() {
-  const byFileHash = new Map();
-  const byContentHash = new Map();
+function writeLocale(slug, locale, data, content) {
+  const filePath = path.join(postsDir, slug, `${locale}.md`);
+  fs.writeFileSync(filePath, matter.stringify(content, data), "utf8");
+}
 
-  for (const slug of fs.readdirSync(POSTS_DIR)) {
-    const enPath = path.join(POSTS_DIR, slug, "en.md");
-    if (!fs.existsSync(enPath)) continue;
+async function ensureCoverForSlug(slug) {
+  const en = readLocale(slug, "en");
+  if (!en.data.draft) return { slug, action: "skip-live" };
 
-    const { data } = matter(fs.readFileSync(enPath, "utf8"));
-    if (!data.coverImage) continue;
-
-    const filePath = coverFilePath(data.coverImage);
-    if (!fs.existsSync(filePath)) continue;
-
-    const fileHash = hashFile(filePath);
-    const contentHash = hashImageContentFile(filePath);
-
-    if (fileHash) {
-      const list = byFileHash.get(fileHash) ?? [];
-      list.push(slug);
-      byFileHash.set(fileHash, list);
+  if (coverFileExists(root, slug, en.data)) {
+    let touched = false;
+    for (const locale of ["en", "ko"]) {
+      const post = readLocale(slug, locale);
+      const coverFix = repairCoverFrontmatter(root, slug, post.data);
+      let body = post.content;
+      const stripped = stripBrokenImageRefs(root, body);
+      if (stripped.changed) body = stripped.body;
+      const deep = repairModelDeepDiveBody(coverFix.data, body, locale, { root });
+      body = deep.body;
+      if (
+        coverFix.repaired ||
+        stripped.changed ||
+        deep.repairs.length > 0
+      ) {
+        writeLocale(slug, locale, coverFix.data, body);
+        touched = true;
+      }
     }
-    if (contentHash) {
-      const list = byContentHash.get(contentHash) ?? [];
-      list.push(slug);
-      byContentHash.set(contentHash, list);
+    return { slug, action: touched ? "repaired-meta" : "ok" };
+  }
+
+  ensureImageApiEnv();
+  const topic = {
+    id: en.data.topicId,
+    category: en.data.topicCluster,
+    topicCluster: en.data.topicCluster,
+    imageSearchKeywords: en.data.imageSearchKeywords,
+  };
+  const ctx = resolveImageContext(slug, {
+    title: en.data.title,
+    tags: en.data.tags,
+    topicId: en.data.topicId,
+    topicCluster: en.data.topicCluster,
+    imageSearchKeywords: en.data.imageSearchKeywords,
+    topic,
+  });
+
+  let meta = await fetchCoverImage(slug, ctx, { rootDir: root });
+  if (!meta?.coverImage) {
+    const fallback = copyFallbackImageFromTopic(
+      root,
+      slug,
+      String(en.data.topicId ?? ""),
+    );
+    if (fallback) {
+      meta = {
+        coverImage: fallback,
+        coverImageProvider: "topic-fallback-copy",
+      };
+      console.log(`  fallback copy: ${fallback}`);
+    }
+  }
+  if (!meta?.coverImage) {
+    return { slug, action: "fetch-failed" };
+  }
+
+  const alts = buildCoverAlts(ctx);
+  for (const locale of ["en", "ko"]) {
+    const post = readLocale(slug, locale);
+    let body = post.content;
+    const stripped = stripBrokenImageRefs(root, body);
+    if (stripped.changed) body = stripped.body;
+    const merged = {
+      ...post.data,
+      ...meta,
+      coverImageAlt: locale === "ko" ? alts.ko : alts.en,
+      coverImageAltKo: alts.ko,
+    };
+    const deep = repairModelDeepDiveBody(merged, body, locale, { root });
+    writeLocale(slug, locale, merged, deep.body);
+  }
+  return { slug, action: "fetched", cover: meta.coverImage };
+}
+
+async function main() {
+  const slugs = listDraftSlugs();
+  const drafts = slugs.filter((slug) => {
+    try {
+      const en = readLocale(slug, "en");
+      return Boolean(en.data.draft);
+    } catch {
+      return false;
+    }
+  });
+
+  const results = [];
+  for (const slug of drafts) {
+    try {
+      const r = await ensureCoverForSlug(slug);
+      results.push(r);
+      if (r.action !== "ok") console.log(`${slug}: ${r.action}${r.cover ? ` → ${r.cover}` : ""}`);
+    } catch (err) {
+      console.error(`${slug}: ERROR ${err.message}`);
+      results.push({ slug, action: "error", error: err.message });
     }
   }
 
-  const duplicates = new Set();
-  for (const slugs of byFileHash.values()) {
-    if (slugs.length > 1) for (const s of slugs) duplicates.add(s);
+  const need = results.filter((r) =>
+    ["fetch-failed", "error", "fetched", "repaired-meta"].includes(r.action),
+  );
+  if (need.length === 0) {
+    console.log("No draft posts missing covers.");
   }
-  for (const slugs of byContentHash.values()) {
-    if (slugs.length > 1) for (const s of slugs) duplicates.add(s);
-  }
-
-  return [...duplicates].sort();
+  console.log(JSON.stringify({ drafts: drafts.length, results }, null, 2));
 }
 
-function defaultQuery(slug) {
-  const enPath = path.join(POSTS_DIR, slug, "en.md");
-  const { data } = matter(fs.readFileSync(enPath, "utf8"));
-  const keywords = data.imageSearchKeywords;
-  if (Array.isArray(keywords) && keywords[0]) return String(keywords[0]);
-  return slug.replace(/-/g, " ");
-}
-
-syncImageRegistryFromPosts();
-ensureImageApiEnv();
-
-const missing = listDraftSlugsMissingCover();
-const duplicateDrafts = findDuplicateCoverSlugs().filter((slug) => {
-  const enPath = path.join(POSTS_DIR, slug, "en.md");
-  if (!fs.existsSync(enPath)) return false;
-  const { data } = matter(fs.readFileSync(enPath, "utf8"));
-  return Boolean(data.draft);
-});
-
-const targets = [...new Set([...missing, ...duplicateDrafts])].sort();
-
-if (targets.length === 0) {
-  console.log("No draft posts missing coverImage or duplicate hero content.");
-  process.exit(0);
-}
-
-if (
-  !process.env.PEXELS_API_KEY &&
-  !process.env.PIXABAY_API_KEY &&
-  !process.env.UNSPLASH_ACCESS_KEY &&
-  !process.env.UNSPLASH_API_KEY
-) {
-  printImageApiKeyHelp();
+main().catch((err) => {
+  console.error(err);
   process.exit(1);
-}
-
-if (missing.length > 0) {
-  console.log(`Missing cover: ${missing.join(", ")}`);
-}
-if (duplicateDrafts.length > 0) {
-  console.log(`Duplicate hero content: ${duplicateDrafts.join(", ")}`);
-}
-
-console.log(`Fetching covers for ${targets.length} draft(s): ${targets.join(", ")}`);
-
-let failed = false;
-
-for (const slug of targets) {
-  const query = defaultQuery(slug);
-  const force = duplicateDrafts.includes(slug);
-  console.log(`\n→ ${slug} (query: ${query}${force ? ", force refresh" : ""})`);
-  const args = [
-    "scripts/fetch-cover-image.mjs",
-    `--slug=${slug}`,
-    `--query=${query}`,
-    "--locale=all",
-  ];
-  if (force) args.push("--force");
-  const result = spawnSync(process.execPath, args, { stdio: "inherit", env: process.env });
-  if (result.status !== 0) {
-    failed = true;
-    console.error(`Failed to fetch cover for ${slug}`);
-  }
-}
-
-if (failed) process.exit(1);
-
-syncImageRegistryFromPosts();
-console.log("\nDone.");
+});

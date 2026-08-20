@@ -47,6 +47,14 @@ import {
   countConsecutiveDuplicateParagraphs,
 } from "../editorial-block-dedupe.mjs";
 import { repairModelDeepDiveBody } from "../repair-model-deep-dive-body.mjs";
+import {
+  coverFileExists,
+  extractPostImageRefs,
+  imageRefExists,
+  repairCoverFrontmatter,
+  resolveCoverWebPath,
+  stripBrokenImageRefs,
+} from "../draft-image-integrity.mjs";
 
 export const INTEGRITY_PHASES = ["draft", "publish"];
 
@@ -157,6 +165,20 @@ export function repairPostLocale(root, slug, locale) {
   let { data, content } = file;
   const repairs = [];
 
+  const coverFix = repairCoverFrontmatter(root, slug, data);
+  if (coverFix.repaired) {
+    data = coverFix.data;
+    repairs.push(`${slug}/${locale}.md: synced coverImage to on-disk file (${coverFix.coverPath})`);
+  }
+
+  const stripped = stripBrokenImageRefs(root, content);
+  if (stripped.changed) {
+    content = stripped.body;
+    repairs.push(
+      ...stripped.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+    );
+  }
+
   for (const key of ["title", "description", "coverImageAlt", "coverImageAltKo"]) {
     if (typeof data[key] === "string") {
       const original = data[key];
@@ -226,7 +248,7 @@ export function repairPostLocale(root, slug, locale) {
   }
 
   if (!isIntegrityExempt(slug, data)) {
-    const deepDive = repairModelDeepDiveBody(data, body, locale);
+    const deepDive = repairModelDeepDiveBody(data, body, locale, { root });
     if (deepDive.repairs.length > 0) {
       body = deepDive.body;
       repairs.push(
@@ -256,17 +278,6 @@ export function repairPostLocale(root, slug, locale) {
   }
 
   body = body.replace(/\n{4,}/g, "\n\n\n").trim();
-
-  const hasLivePlaceholder =
-    /\{\{krw:[\d.]+\}\}/.test(body) ||
-    /\{\{usd_krw_rate\}\}/.test(body) ||
-    /\{\{today/.test(body);
-  if (hasLivePlaceholder && data.liveData !== true) {
-    data.liveData = true;
-    repairs.push(
-      `${slug}/${locale}.md: set liveData:true so KRW/date placeholders expand on the live site`,
-    );
-  }
 
   const repaired = repairs.length > 0 || body !== content;
   if (repaired) {
@@ -472,6 +483,12 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
       addError(bucket, `${label}: internal link uses /${linkLocale}/ in ${locale} file`);
     }
   }
+
+  for (const ref of extractPostImageRefs(body)) {
+    if (!imageRefExists(root, ref)) {
+      addError(bucket, `${label}: broken in-body image ${ref}`);
+    }
+  }
 }
 
 function auditPostLevel(root, slug, phase, bucket, state) {
@@ -488,6 +505,19 @@ function auditPostLevel(root, slug, phase, bucket, state) {
       severity: "error",
       message: `${slug}: invalid contentProfile "${profile}"`,
     });
+  }
+
+  if (!coverFileExists(root, slug, enFile.data)) {
+    addError(bucket, `${slug}: missing cover image file on disk`);
+  } else {
+    const resolvedCover = resolveCoverWebPath(root, slug, enFile.data);
+    const fmCover = String(enFile.data.coverImage ?? "").trim();
+    if (resolvedCover && fmCover && fmCover !== resolvedCover) {
+      addError(
+        bucket,
+        `${slug}: coverImage frontmatter stale (${fmCover} — file at ${resolvedCover})`,
+      );
+    }
   }
 
   const registry = loadImageRegistry();
@@ -624,9 +654,7 @@ export function verifyPostIntegrity(root, slug, options = {}) {
 
   const topicId =
     typeof peekData.topicId === "string" ? peekData.topicId.trim() : "";
-  // Seasonal block is for NEW drafts going live — already-published winter posts
-  // must stay live through summer (daily audit was treating them as manual review).
-  if (topicId && !topicId.startsWith("meta-") && peekData.draft === true) {
+  if (topicId && !topicId.startsWith("meta-")) {
     const topic = getTopicById(topicId);
     if (
       topic &&

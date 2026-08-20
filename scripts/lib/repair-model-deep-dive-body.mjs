@@ -3,8 +3,12 @@
  * missing Who should buy/skip, missing in-body /images/posts/ figure.
  * Safe for VPS scheduler, admin GitHub commit, and draft generation.
  */
+import fs from "fs";
+import path from "path";
 
-export function repairModelDeepDiveBody(data, body, locale = "en") {
+import { imageRefExists } from "./draft-image-integrity.mjs";
+
+export function repairModelDeepDiveBody(data, body, locale = "en", options = {}) {
   const profile = data?.contentProfile;
   if (profile !== "model-deep-dive" || typeof body !== "string") {
     return { body, repairs: [] };
@@ -39,9 +43,14 @@ export function repairModelDeepDiveBody(data, body, locale = "en") {
     repairs.push("added Who should buy/skip section");
   }
 
+  const root = options.root ?? process.cwd();
   const hasBodyImg = /!\[[^\]]*]\(\/images\/posts\/[^)]+\)/.test(next);
   const cover = typeof data.coverImage === "string" ? data.coverImage.trim() : "";
-  if (!hasBodyImg && /^\/images\/posts\//.test(cover)) {
+  if (
+    !hasBodyImg &&
+    /^\/images\/posts\//.test(cover) &&
+    imageRefExists(root, cover)
+  ) {
     const alt =
       locale === "ko"
         ? String(data.coverImageAltKo || data.coverImageAlt || model)

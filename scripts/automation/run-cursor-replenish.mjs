@@ -21,6 +21,10 @@ async function loadCursorSdk() {
 }
 import { resolveImageContext, buildCoverAlts } from "../lib/image-query.mjs";
 import {
+  copyFallbackImageFromTopic,
+  coverFileExists as draftCoverFileExists,
+} from "../lib/draft-image-integrity.mjs";
+import {
   completeCursorDraftRequest,
   readCursorDraftRequest,
   recordReplenishAttempt,
@@ -324,20 +328,12 @@ function refreshStaleRequestTopic(request) {
 function coverFileExists(slug) {
   const enPath = path.join(process.cwd(), "content", "posts", slug, "en.md");
   if (!fs.existsSync(enPath)) return false;
-
   const { data } = readPost(slug, "en");
-  if (data.coverImage?.startsWith("/images/posts/")) {
-    const imagePath = path.join(process.cwd(), "public", data.coverImage);
-    if (fs.existsSync(imagePath)) return true;
-  }
-
-  const dir = path.join(process.cwd(), "public", "images", "posts", slug);
-  if (!fs.existsSync(dir)) return false;
-  return fs.readdirSync(dir).some((name) => /\.(jpe?g|webp|png)$/i.test(name));
+  return draftCoverFileExists(process.cwd(), slug, data);
 }
 
 async function ensureCoverImage(slug, topic) {
-  if (coverFileExists(slug)) return;
+  if (coverFileExists(slug)) return true;
 
   const { data } = readPost(slug, "en");
   const imageContext = resolveImageContext(slug, {
@@ -349,8 +345,22 @@ async function ensureCoverImage(slug, topic) {
     topic,
   });
 
-  const meta = await fetchCoverImage(slug, imageContext);
-  if (!meta) return;
+  let meta = await fetchCoverImage(slug, imageContext);
+  if (!meta?.coverImage) {
+    const fallback = copyFallbackImageFromTopic(
+      process.cwd(),
+      slug,
+      String(data.topicId ?? topic?.id ?? ""),
+    );
+    if (fallback) {
+      meta = {
+        coverImage: fallback,
+        coverImageProvider: "topic-fallback-copy",
+      };
+      console.warn(`Cover topic-fallback copy for ${slug}: ${fallback}`);
+    }
+  }
+  if (!meta?.coverImage) return false;
 
   const alts = buildCoverAlts(imageContext);
 
@@ -376,6 +386,7 @@ async function ensureCoverImage(slug, topic) {
       content,
     );
   }
+  return coverFileExists(slug);
 }
 
 function requestForNextLlmDraft(request, index) {
@@ -607,24 +618,27 @@ async function main() {
       return;
     }
 
-    await ensureCoverImage(slug, request.topic);
+    const coverOk = await ensureCoverImage(slug, request.topic);
     const issues = validateDraftPublishReady(slug);
-    const blockers = issues.filter((issue) => !/missing coverImage/i.test(issue));
-    const coverOnly = issues.length > 0 && blockers.length === 0;
-    if (blockers.length > 0) {
+    if (!coverOk || issues.some((issue) => /missing cover image|broken in-body image/i.test(issue))) {
       removeReplenishSlugArtifacts(slug);
-      const detail = blockers.slice(0, 5).join(" | ");
-      failReplenish(`Integrity gate failed for ${slug}: ${detail}`, {
-        reason: "integrity-gate",
+      const detail = issues.slice(0, 5).join(" | ") || "cover file missing on disk";
+      failReplenish(`Cover/image integrity failed for ${slug}: ${detail}`, {
+        reason: "cover-integrity",
         slug,
-        issues: blockers.slice(0, 8),
+        issues: issues.slice(0, 8),
       });
       return;
     }
-    if (coverOnly) {
-      console.warn(
-        `Draft ${slug}: cover still missing after ensureCoverImage — leave for GHA Fetch missing draft covers`,
-      );
+    if (issues.length > 0) {
+      removeReplenishSlugArtifacts(slug);
+      const detail = issues.slice(0, 5).join(" | ");
+      failReplenish(`Integrity gate failed for ${slug}: ${detail}`, {
+        reason: "integrity-gate",
+        slug,
+        issues: issues.slice(0, 8),
+      });
+      return;
     }
 
     ensureDraftCreatedAt(slug, new Date().toISOString());
