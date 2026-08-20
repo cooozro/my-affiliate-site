@@ -5,24 +5,23 @@ title: >-
 description: >-
   We break down the Midea MAD50C1ZWS 50-pint dehumidifier: smart bucket alerts,
   real noise levels, daily energy cost, and whether it fits humid summer rooms.
-date: '2026-08-19'
+date: '2026-08-20'
 tags:
   - Midea MAD50C1ZWS
   - dehumidifier
   - humidity control
   - home appliance
   - energy cost
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: dehumidifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-createdAt: '2026-08-19T10:15:32.351Z'
 modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-08-20T00:38:49.174Z'
+updatedAt: '2026-08-20T07:48:44.525Z'
 coverImageAlt: >-
   A serene minimalist bedroom scene featuring a white bedside table and a
   kettle. — dehumidifier review context
@@ -33,6 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: 3347540
 coverImageSourceUrl: 'https://images.pexels.com/photos/3347540/pexels-photo-3347540.jpeg'
 coverImageCredit: Photo by Ansel Lee / Pexels
+publishedAt: '2026-08-20T07:48:44.525Z'
 ---
 ## Editorial Overview
 
