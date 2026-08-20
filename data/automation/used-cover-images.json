@@ -1879,6 +1879,39 @@
       "contentHash": null,
       "provider": null,
       "registeredAt": "2026-08-20T00:19:11.463Z"
+    },
+    {
+      "slug": "2026-dehumidifiers-midea-mad50c1-review",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": "local-copy",
+      "registeredAt": "2026-08-20T00:34:32.970Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-20T00:34:33.006Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "assetKey": null,
+      "hash": null,
+      "contentHash": null,
+      "provider": null,
+      "registeredAt": "2026-08-20T00:34:53.546Z"
+    },
+    {
+      "slug": "adsense-seo-checklist",
+      "url": "https://pixabay.com/get/g85ef579b984b82c768d846434d2889bb43f353c8c4712ed7dcccab2be1f95b76fbdadd3caa0822449d9352f1b23a554d1b5095efdb4aa83fb1a6fd5228b0d2b6_1280.jpg",
+      "assetKey": "pixabay:5969381",
+      "hash": "1dd865d4ec0b50f88c7a9aec61fd6fd3fa6bda032f9cbc6aaf8708ebf386ef10",
+      "contentHash": "1dd865d4ec0b50f88c7a9aec61fd6fd3fa6bda032f9cbc6aaf8708ebf386ef10",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-20T00:35:01.737Z"
     }
   ]
 }
