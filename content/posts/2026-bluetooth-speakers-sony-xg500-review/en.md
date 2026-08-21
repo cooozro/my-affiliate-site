@@ -10,7 +10,7 @@ tags:
   - party speaker
   - JBL Charge 6
   - IP66 speaker
-draft: false
+draft: true
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -28,8 +28,9 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T07:13:09.677Z'
+updatedAt: '2026-08-21T07:13:42.314Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
+createdAt: '2026-08-21T07:13:42.314Z'
 ---
 <!DOCTYPE html>
 <html lang="en">
