@@ -1,5 +1,5 @@
 {
-  "topicIndex": 25,
+  "topicIndex": 27,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
@@ -7,14 +7,15 @@
     "air-purifiers",
     "budget-monitors",
     "flagship-smartphones",
-    "bluetooth-speakers"
+    "bluetooth-speakers",
+    "tablet-budget"
   ],
   "lastPublishAt": "2026-08-21T01:52:46.207Z",
   "nextPublishAt": "2026-08-22T02:18:00.000Z",
   "scheduledGapHours": 5.3,
   "publishCountToday": 1,
   "publishDateKst": "2026-08-21",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-08-21",
   "history": [
     {
@@ -131,6 +132,12 @@
         "https://www.aipick.shop/en/blog/2026-bluetooth-speakers-sony-xg500-review",
         "https://www.aipick.shop/ko/blog/2026-bluetooth-speakers-sony-xg500-review"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "2026-budget-tablets-reading-video-scenario-guide",
+      "at": "2026-08-21T01:59:02.976Z",
+      "topic": "tablet-budget"
     }
   ],
   "lastHealthCheck": {
@@ -236,6 +243,12 @@
       "id": "bluetooth-speakers",
       "cluster": "audio",
       "at": "2026-08-21T01:52:46.232Z"
+    },
+    {
+      "id": "tablet-budget",
+      "category": "tablets",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-08-21T01:54:40.784Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-21",
@@ -246,7 +259,6 @@
     "manualReviewCount": 4
   },
   "formatDeck": [
-    "scenario-guide",
     "checklist",
     "explainer"
   ],
@@ -259,7 +271,8 @@
     "head-to-head",
     "buying-guide",
     "head-to-head",
-    "model-deep-dive"
+    "model-deep-dive",
+    "scenario-guide"
   ],
   "metaAngleHistory": [
     {

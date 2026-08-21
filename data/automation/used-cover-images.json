@@ -2004,6 +2004,15 @@
       "contentHash": "4b0898861fb7db7dbcdd7d1034ef7aee2a5d4bfcd2c52483d7912423ca781189",
       "provider": "pexels",
       "registeredAt": "2026-08-20T08:41:11.085Z"
+    },
+    {
+      "slug": "2026-budget-tablets-reading-video-scenario-guide",
+      "url": "https://images.pexels.com/photos/7695202/pexels-photo-7695202.jpeg",
+      "assetKey": "pexels:7695202",
+      "hash": "545ff3fcfe9cbf4f2fd733809c112d703f1d6b0fda9a765f5d6952dd2c77945d",
+      "contentHash": "545ff3fcfe9cbf4f2fd733809c112d703f1d6b0fda9a765f5d6952dd2c77945d",
+      "provider": "pexels",
+      "registeredAt": "2026-08-21T01:59:27.141Z"
     }
   ]
 }
