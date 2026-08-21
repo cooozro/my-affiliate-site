@@ -16,7 +16,7 @@ topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
 liveData: true
-coverImage: >-
+coverImage: /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-1.webp
   /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-cover.jpg
 coverImageAlt: Sony 소니 SRS-XG500 포터블 파티 블루투스 스피커 — 편집부 리뷰용 제품 컷
 coverImageAltKo: Sony 소니 SRS-XG500 포터블 파티 블루투스 스피커 — 편집부 리뷰용 제품 컷
