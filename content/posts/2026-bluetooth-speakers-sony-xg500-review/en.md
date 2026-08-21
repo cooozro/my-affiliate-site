@@ -16,24 +16,22 @@ topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
 liveData: true
-coverImage: >-
-  /images/posts/2026-bluetooth-speakers-sony-xg500-review/portable-bluetooth-speaker-outdoor-product-wirel-cover.jpg
+coverImage: /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-cover.jpg
 coverImageAlt: >-
-  Sony SRS-XG500 product cut for editorial deep-dive review (stock photo
-  illustration) — portable Bluetooth speaker outdoors in summer
-coverImageAltKo: Sony 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
-coverImageCredit: Photo by Tom Swinnen / Pexels
+  Sony SRS-XG500-style portable party Bluetooth speaker outdoors — editorial
+  review illustration
+coverImageAltKo: Sony SRS-XG500 스타일 야외 파티 블루투스 스피커 — 편집부 리뷰용 일러스트
+coverImageCredit: Photo by Ornán  Rodríguez Velázquez / Pexels
 coverImageProvider: pexels
 modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T07:27:47.864Z'
+updatedAt: '2026-08-21T08:57:14.117Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
-coverImageAssetId: 1034653
-coverImageSourceUrl: >-
-  https://images.pexels.com/photos/1034653/pexels-photo-1034653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+coverImageAssetId: 13658001
+coverImageSourceUrl: 'https://images.pexels.com/photos/13658001/pexels-photo-13658001.jpeg'
 imageSearchKeywords:
   - portable bluetooth speaker outdoor product
   - wireless speaker product photo
@@ -82,9 +80,13 @@ imageSearchKeywords:
 <p class="byline">Reviewed by the Editorial Audio Team | Last updated August 2026 | 9 min read</p>
 
 <h2>Editorial Overview</h2>
+<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-body-1.jpg" alt="Large portable Bluetooth party speaker outdoors — Sony SRS-XG500 review context" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Photo by Peter Fazekas / Pexels</figcaption></figure>
+
 <p>The Sony SRS-XG500 is a heavy-duty party speaker built for long outdoor sessions, not a pocket speaker. We evaluated it against Sony's stated 30-hour battery, IP66 water/dust resistance, Mega Bass tuning, and its closest mainstream rival, the JBL Charge 6. <strong>Editorial verdict:</strong> this is a deliberate buy for people who prioritize sustained volume and battery life over portability and app smarts — not a universal upgrade for every listener.</p>
 
 <h2>Introduction</h2>
+<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-body-2.jpg" alt="Wireless boombox speaker detail for outdoor use — XG500 style product context" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Photo by Ornán  Rodríguez Velázquez / Pexels</figcaption></figure>
+
 <p>Summer gatherings and outdoor listening push portable Bluetooth speakers harder than everyday use: direct sun, dust, splashes, and someone always asking for "one more hour." The Sony SRS-XG500 enters 2026 as a familiar large boombox-style speaker, but its combination of an IP66 chassis, 30-hour rated playback, USB power-bank output, and a mic/guitar input still makes it relevant for backyard parties, camping trips, and small outdoor events.</p>
 <p>In this deep-dive we focus on the XG500 as the primary model — how it sounds in real use, where it shines, where it frustrates, and whether it earns a spot in your trunk. Street prices vary by retailer and by date, so always confirm current pricing on a public storefront before buying.</p>
 
