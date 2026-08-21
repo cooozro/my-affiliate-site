@@ -10,7 +10,7 @@ tags:
   - 파티 스피커
   - JBL Charge 6
   - IP66 스피커
-draft: false
+draft: true
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -25,8 +25,9 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T01:52:46.331Z'
+updatedAt: '2026-08-21T07:13:42.314Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
+createdAt: '2026-08-21T07:13:42.314Z'
 ---
 ## 편집부 개요
 
