@@ -141,19 +141,16 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-21T02:19:15.258Z",
+    "at": "2026-08-21T02:38:08.338Z",
     "issueCount": 1,
     "issues": [
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 4329min",
+        "message": "Cursor replenish pending 4348min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-bluetooth-speakers-sony-xg500-review/en.md: publishedAt 2026-08-21T10:52:44.000Z → 2026-08-21T01:52:46.207Z",
-      "2026-bluetooth-speakers-sony-xg500-review/ko.md: publishedAt 2026-08-21T10:52:44.000Z → 2026-08-21T01:52:46.207Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
