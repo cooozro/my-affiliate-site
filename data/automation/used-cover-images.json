@@ -2021,6 +2021,24 @@
       "contentHash": "4b0898861fb7db7dbcdd7d1034ef7aee2a5d4bfcd2c52483d7912423ca781189",
       "provider": "pexels",
       "registeredAt": "2026-08-21T08:53:40.656Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "url": "https://d1ncau8tqf99kp.cloudfront.net/pdp/audio/wireless-speakers/srs-xg500/mobile/1b.jpg",
+      "assetKey": "press-kit:13658001",
+      "hash": "8195af3678bd970db54d17e40ce421326754216bbc79a421b58c35465585e74c",
+      "contentHash": "3d4ee297bff1aebe9820d7b333b45fdb34ff0845329d673c93025ef8da228562",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-21T09:27:18.367Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-sony-xg500-review-gate-probe",
+      "url": "https://d1ncau8tqf99kp.cloudfront.net/converted/94633_original_local_1200x1050_v3_converted.webp",
+      "assetKey": "press-kit:cc785ccf61",
+      "hash": "d6a04a80f674b3a7a2a285a83cdfa641faeef398c071496747285a497b095904",
+      "contentHash": "919aa855e9f35ef8402d8999941df4a80d97bb9670933a8098ae326fb9aae082",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-21T09:27:18.573Z"
     }
   ]
 }
