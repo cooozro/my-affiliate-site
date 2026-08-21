@@ -141,27 +141,18 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-21T01:52:43.846Z",
-    "issueCount": 3,
+    "at": "2026-08-21T02:19:15.258Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (0min past slot, KST 2026-08-21)",
-        "severity": "warning"
-      },
-      {
-        "code": "homepage-featured-mismatch",
-        "message": "Home featured is 2026-dehumidifiers-midea-mad50c1-review, expected latest 2026-window-ac-lg-lw1217ersm-review",
-        "severity": "warning"
-      },
-      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 4303min",
+        "message": "Cursor replenish pending 4329min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-bluetooth-speakers-sony-xg500-review/en.md: publishedAt 2026-08-21T10:52:44.000Z → 2026-08-21T01:52:46.207Z",
+      "2026-bluetooth-speakers-sony-xg500-review/ko.md: publishedAt 2026-08-21T10:52:44.000Z → 2026-08-21T01:52:46.207Z"
     ]
   },
   "topicHistory": [
