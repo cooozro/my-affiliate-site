@@ -2003,6 +2003,24 @@
       "contentHash": "997f9550a52e6132529f67d710b9883560010d38ecf200c2181796f286b0a0fe",
       "provider": "pexels",
       "registeredAt": "2026-08-21T08:53:23.327Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "url": "https://images.pexels.com/photos/18589085/pexels-photo-18589085.jpeg",
+      "assetKey": "pexels:18589085",
+      "hash": "e346f2bc2dfeb8181eaa95be6d2c0aa31c7651511613732324b280bada7263e3",
+      "contentHash": "e346f2bc2dfeb8181eaa95be6d2c0aa31c7651511613732324b280bada7263e3",
+      "provider": "pexels",
+      "registeredAt": "2026-08-21T08:53:40.587Z"
+    },
+    {
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "url": "https://images.pexels.com/photos/13981272/pexels-photo-13981272.jpeg",
+      "assetKey": "pexels:13981272",
+      "hash": "4b0898861fb7db7dbcdd7d1034ef7aee2a5d4bfcd2c52483d7912423ca781189",
+      "contentHash": "4b0898861fb7db7dbcdd7d1034ef7aee2a5d4bfcd2c52483d7912423ca781189",
+      "provider": "pexels",
+      "registeredAt": "2026-08-21T08:53:40.656Z"
     }
   ]
 }

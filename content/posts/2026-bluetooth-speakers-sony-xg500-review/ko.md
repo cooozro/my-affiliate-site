@@ -18,16 +18,28 @@ writingProvider: deepseek
 liveData: true
 coverImage: >-
   /images/posts/2026-bluetooth-speakers-sony-xg500-review/portable-bluetooth-speaker-outdoor-product-wirel-cover.jpg
-coverImageAlt: Sony 소니 SRS-XG500 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
+coverImageAlt: Sony 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
+coverImageAltKo: Sony 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
 coverImageCredit: Photo by Tom Swinnen / Pexels
 coverImageProvider: pexels
 modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T07:13:42.314Z'
+updatedAt: '2026-08-21T07:27:47.864Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
+coverImageAssetId: 1034653
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/1034653/pexels-photo-1034653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - portable bluetooth speaker outdoor product
+  - wireless speaker product photo
+  - Sony portable bluetooth speaker outdoor product
+  - product photography electronics lifestyle
+  - portable bluetooth speaker product
+  - wireless bluetooth speaker outdoor
+  - waterproof portable speaker close-up
 ---
 ## 편집부 개요
 
@@ -53,7 +65,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
 
 ## 한눈에 보는 스펙
 
-![Sony 소니 SRS-XG500 편집부 리뷰용 디테일 컷 (스톡 일러스트 사진)](/images/posts/2026-bluetooth-speakers-sony-xg500-review/body-2-8c6d8c.jpg)
+![Sony 갤럭시 Z 폴드6 편집부 리뷰용 디테일 컷 (스톡 일러스트 사진)](/images/posts/2026-bluetooth-speakers-sony-xg500-review/body-2-8c6d8c.jpg)
 
 *이미지: Photo by Vietnam Photographer / Pexels — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
 
@@ -80,7 +92,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
 
 ## 디자인과 실사용
 
-![Sony 소니 SRS-XG500 실사용 라이프스타일 장면 (스톡 일러스트 사진)](/images/posts/2026-bluetooth-speakers-sony-xg500-review/body-1-b72f06.jpg)
+![Sony 갤럭시 Z 폴드6 실사용 라이프스타일 장면 (스톡 일러스트 사진)](/images/posts/2026-bluetooth-speakers-sony-xg500-review/body-1-b72f06.jpg)
 
 *이미지: Photo by Gupta Sahil / Pexels — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*
 

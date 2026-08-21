@@ -21,7 +21,7 @@ coverImage: >-
 coverImageAlt: >-
   Sony SRS-XG500 product cut for editorial deep-dive review (stock photo
   illustration) — portable Bluetooth speaker outdoors in summer
-coverImageAltKo: Sony 소니 SRS-XG500 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
+coverImageAltKo: Sony 갤럭시 Z 폴드6 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 여름 야외의 블루투스 스피커
 coverImageCredit: Photo by Tom Swinnen / Pexels
 coverImageProvider: pexels
 modelPickId: sony-xg500
@@ -31,6 +31,17 @@ pressKitGallery: 'https://www.sony.com/'
 updatedAt: '2026-08-21T07:27:47.864Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
+coverImageAssetId: 1034653
+coverImageSourceUrl: >-
+  https://images.pexels.com/photos/1034653/pexels-photo-1034653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+imageSearchKeywords:
+  - portable bluetooth speaker outdoor product
+  - wireless speaker product photo
+  - Sony portable bluetooth speaker outdoor product
+  - product photography electronics lifestyle
+  - portable bluetooth speaker product
+  - wireless bluetooth speaker outdoor
+  - waterproof portable speaker close-up
 ---
 <!DOCTYPE html>
 <html lang="en">
