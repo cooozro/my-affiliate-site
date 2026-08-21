@@ -16,22 +16,24 @@ topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
 liveData: true
-coverImage: /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-cover.jpg
+coverImage: >-
+  /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-cover.jpg
 coverImageAlt: >-
-  Sony SRS-XG500-style portable party Bluetooth speaker outdoors — editorial
-  review illustration
-coverImageAltKo: Sony SRS-XG500 스타일 야외 파티 블루투스 스피커 — 편집부 리뷰용 일러스트
-coverImageCredit: Photo by Ornán  Rodríguez Velázquez / Pexels
-coverImageProvider: pexels
+  Sony SRS-XG500 portable party Bluetooth speaker — product photo for editorial
+  review
+coverImageAltKo: Sony 소니 SRS-XG500 포터블 파티 블루투스 스피커 — 편집부 리뷰용 제품 컷
+coverImageCredit: Sony SRS-XG500 product photo (official product / editorial review asset)
+coverImageProvider: press-kit
 modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
-pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T08:57:14.117Z'
+pressKitGallery: 'https://electronics.sony.com/'
+updatedAt: '2026-08-21T09:12:09.395Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001
-coverImageSourceUrl: 'https://images.pexels.com/photos/13658001/pexels-photo-13658001.jpeg'
+coverImageSourceUrl: >-
+  https://d1ncau8tqf99kp.cloudfront.net/PDP/Audio/Wireless-Speakers/SRS-XG500/mobile/1b.jpg
 imageSearchKeywords:
   - portable bluetooth speaker outdoor product
   - wireless speaker product photo
@@ -80,12 +82,12 @@ imageSearchKeywords:
 <p class="byline">Reviewed by the Editorial Audio Team | Last updated August 2026 | 9 min read</p>
 
 <h2>Editorial Overview</h2>
-<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-body-1.jpg" alt="Large portable Bluetooth party speaker outdoors — Sony SRS-XG500 review context" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Photo by Peter Fazekas / Pexels</figcaption></figure>
+<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-1.webp" alt="Sony SRS-XG500 product view — editorial review figure" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Sony SRS-XG500 product photo (official product / editorial review asset)</figcaption></figure>
 
 <p>The Sony SRS-XG500 is a heavy-duty party speaker built for long outdoor sessions, not a pocket speaker. We evaluated it against Sony's stated 30-hour battery, IP66 water/dust resistance, Mega Bass tuning, and its closest mainstream rival, the JBL Charge 6. <strong>Editorial verdict:</strong> this is a deliberate buy for people who prioritize sustained volume and battery life over portability and app smarts — not a universal upgrade for every listener.</p>
 
 <h2>Introduction</h2>
-<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-body-2.jpg" alt="Wireless boombox speaker detail for outdoor use — XG500 style product context" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Photo by Ornán  Rodríguez Velázquez / Pexels</figcaption></figure>
+<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-2.webp" alt="Sony SRS-XG500 detail — editorial review figure" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Sony SRS-XG500 product photo (official product / editorial review asset)</figcaption></figure>
 
 <p>Summer gatherings and outdoor listening push portable Bluetooth speakers harder than everyday use: direct sun, dust, splashes, and someone always asking for "one more hour." The Sony SRS-XG500 enters 2026 as a familiar large boombox-style speaker, but its combination of an IP66 chassis, 30-hour rated playback, USB power-bank output, and a mic/guitar input still makes it relevant for backyard parties, camping trips, and small outdoor events.</p>
 <p>In this deep-dive we focus on the XG500 as the primary model — how it sounds in real use, where it shines, where it frustrates, and whether it earns a spot in your trunk. Street prices vary by retailer and by date, so always confirm current pricing on a public storefront before buying.</p>

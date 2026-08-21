@@ -16,20 +16,22 @@ topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
 liveData: true
-coverImage: /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-cover.jpg
-coverImageAlt: Sony SRS-XG500 스타일 야외 파티 블루투스 스피커 — 편집부 리뷰용 일러스트
-coverImageAltKo: Sony SRS-XG500 스타일 야외 파티 블루투스 스피커 — 편집부 리뷰용 일러스트
-coverImageCredit: Photo by Ornán  Rodríguez Velázquez / Pexels
-coverImageProvider: pexels
+coverImage: >-
+  /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-cover.jpg
+coverImageAlt: Sony 소니 SRS-XG500 포터블 파티 블루투스 스피커 — 편집부 리뷰용 제품 컷
+coverImageAltKo: Sony 소니 SRS-XG500 포터블 파티 블루투스 스피커 — 편집부 리뷰용 제품 컷
+coverImageCredit: Sony SRS-XG500 product photo (official product / editorial review asset)
+coverImageProvider: press-kit
 modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
-pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T08:57:14.117Z'
+pressKitGallery: 'https://electronics.sony.com/'
+updatedAt: '2026-08-21T09:12:09.395Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001
-coverImageSourceUrl: 'https://images.pexels.com/photos/13658001/pexels-photo-13658001.jpeg'
+coverImageSourceUrl: >-
+  https://d1ncau8tqf99kp.cloudfront.net/PDP/Audio/Wireless-Speakers/SRS-XG500/mobile/1b.jpg
 imageSearchKeywords:
   - portable bluetooth speaker outdoor product
   - wireless speaker product photo
