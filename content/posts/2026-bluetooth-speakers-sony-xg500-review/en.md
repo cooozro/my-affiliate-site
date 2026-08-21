@@ -16,8 +16,8 @@ topicId: bluetooth-speakers
 topicCluster: audio
 writingProvider: deepseek
 liveData: true
-coverImage: /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-1.webp
-  /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-cover.jpg
+coverImage: >-
+  /images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-1.webp
 coverImageAlt: >-
   Sony SRS-XG500 portable party Bluetooth speaker — product photo for editorial
   review
@@ -28,7 +28,7 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://electronics.sony.com/'
-updatedAt: '2026-08-21T09:12:09.395Z'
+updatedAt: '2026-08-21T09:24:45.858Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001
@@ -82,7 +82,7 @@ imageSearchKeywords:
 <p class="byline">Reviewed by the Editorial Audio Team | Last updated August 2026 | 9 min read</p>
 
 <h2>Editorial Overview</h2>
-<figure class="aipick-figure"><img src="/images/posts/2026-bluetooth-speakers-sony-xg500-review/sony-xg500-press-body-1.webp" alt="Sony SRS-XG500 product view — editorial review figure" loading="lazy" style="max-width:100%;height:auto;" /><figcaption>Sony SRS-XG500 product photo (official product / editorial review asset)</figcaption></figure>
+<figure class="aipick-figure"><figcaption>Sony SRS-XG500 product photo (official product / editorial review asset)</figcaption></figure>
 
 <p>The Sony SRS-XG500 is a heavy-duty party speaker built for long outdoor sessions, not a pocket speaker. We evaluated it against Sony's stated 30-hour battery, IP66 water/dust resistance, Mega Bass tuning, and its closest mainstream rival, the JBL Charge 6. <strong>Editorial verdict:</strong> this is a deliberate buy for people who prioritize sustained volume and battery life over portability and app smarts — not a universal upgrade for every listener.</p>
 
