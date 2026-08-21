@@ -28,7 +28,7 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://www.sony.com/'
-updatedAt: '2026-08-21T07:14:38.601Z'
+updatedAt: '2026-08-21T07:27:47.864Z'
 publishedAt: '2026-08-21T01:52:46.207Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 ---
@@ -189,7 +189,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
 </ul>
 <p>This isn't a full roundup — the comparison stays brief to keep the focus on the Sony SRS-XG500.</p>
 
-<h2>Design &amp; Everyday Use</h2>
+<h2>Design & Everyday Use</h2>
 
 <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sony SRS-XG500 rated vs real-world battery life chart">
   <rect width="800" height="420" rx="16" fill="#12131a"/>
@@ -226,7 +226,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
 <p>Battery life is the headline feature: up to 30 hours under Sony's rated test conditions. In real-world use — mixed volume, LED lighting enabled, occasional USB charge-out — expect fewer hours, roughly <strong>18-24 hours</strong> depending on temperature and volume. That's still two full summer days on a moderate schedule. AC charging is quicker than a small USB-only speaker, but once fully depleted, expect a multi-hour recharge. There's no USB-C PD fast-charge input listed, so bring the AC adapter if you need a same-day turnaround.</p>
 <div class="callout"><strong>Review concern:</strong> the 30-hour figure is best-case. In hot weather, with Mega Bass and LED lighting both active, the battery drains noticeably faster. If your party starts at noon and runs late, consider turning off the LED strip and reserving the phone-charging feature for emergencies only.</div>
 
-<h2>Strengths &amp; Weaknesses</h2>
+<h2>Strengths & Weaknesses</h2>
 <p><strong>Strengths</strong></p>
 <ul>
   <li>30-hour rated battery capacity — even accounting for a realistic reduction in mixed use, it easily covers a full weekend.</li>
@@ -270,7 +270,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
   <rect x="330" y="112" width="200" height="26" rx="6" fill="#1c1e29"/>
   <text x="430" y="130" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Up to 30h</text>
   <rect x="550" y="112" width="200" height="26" rx="6" fill="#1c1e29"/>
-  <text x="650" y="130" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">~20–24h</text>
+  <text x="650" y="130" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">about 20–24h</text>
   <text x="40" y="168" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#9ea0ac">Water / dust</text>
   <rect x="330" y="152" width="200" height="26" rx="6" fill="#1c1e29"/>
   <text x="430" y="170" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">IP66</text>
@@ -333,7 +333,7 @@ createdAt: '2026-08-21T07:13:42.314Z'
 
 <h2>Related Guides</h2>
 <ul>
-  <li><a href="/en/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300">Portable Speaker Face-Off: JBL Flip 7, UE Boom 4, Sony SRS-XE300 Compared on Sound, IP Rating &amp; Battery</a></li>
+  <li><a href="/en/blog/jbl-flip-7-vs-ue-boom-4-vs-sony-srs-xe300">Portable Speaker Face-Off: JBL Flip 7, UE Boom 4, Sony SRS-XE300 Compared on Sound, IP Rating & Battery</a></li>
   <li><a href="/en/blog/2026-summer-bluetooth-speakers-guide">Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker</a></li>
   <li><a href="/en/blog/2026-action-cameras-buying-guide">Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams</a></li>
   <li><a href="/en/blog/2026-budget-power-banks-guide">Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick</a></li>
