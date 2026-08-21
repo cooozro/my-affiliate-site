@@ -17,7 +17,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-08-19T10:07:53.410Z'
+updatedAt: '2026-08-21T01:54:32.678Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
@@ -32,7 +32,6 @@ publishedAt: '2026-07-15T01:08:30.765Z'
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서 IEC 용량·공개 dB(A)·OEM 물 사용량을 기준으로 스펙을 풀어씁니다. 방학철 조리량이 늘면 **실제 플레이스 용량과 저소음 코스**가 스마트 배지보다 중요합니다.
-
 
 ## 소개: 식기세척기 숫자가 헷갈리는 이유
 

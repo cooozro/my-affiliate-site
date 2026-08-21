@@ -17,7 +17,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-08-19T10:07:54.285Z'
+updatedAt: '2026-08-21T01:54:33.551Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: 실내의 induction cooktop kitchen
@@ -32,7 +32,6 @@ publishedAt: '2026-07-16T02:44:53.000Z'
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서 공개 와트·팬 호환·안전 문서를 기준으로 인덕션을 비교합니다. 판매 슬로건은 쓰지 않습니다. {{today}} 폭염에 AC가 이미 돌아가는 주방에서는 **정밀 화력, 잔열, 회로 한도**가 “업소용” 배지보다 중요합니다.
-
 
 ## 서론: 밀폐된 여름 주방에서 인덕션이 의미 있는 이유
 

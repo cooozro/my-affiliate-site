@@ -27,13 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-19T10:07:51.676Z'
+updatedAt: '2026-08-21T01:54:30.830Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare travel action cameras using public stabilization specs, native waterproof depth ratings, and listed retail prices. For summer trips—snorkel days, ridge hikes, and scooter commutes—**mount compatibility and honest depth limits** predict real-world satisfaction more reliably than headline resolution alone.
-
 
 ## Introduction: summer travel stress-tests stabilization and seals
 

@@ -33,13 +33,12 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.440Z'
+updatedAt: '2026-08-20T08:09:44.911Z'
 publishedAt: '2026-07-17T06:30:01.360Z'
 ---
 ## Editorial Overview
 
 > AI Pick & Report compares **capacity tiers that survive school-break load** — not feature-count marketing. For 3–5 person homes in heat season, fridge fresh-food volume, washer drum throughput, shared-screen size, bedroom CADR, and stick runtime matter more than “smart” badges.
-
 
 ## Introduction: capacity beats feature count
 

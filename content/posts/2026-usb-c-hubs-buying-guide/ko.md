@@ -26,13 +26,12 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.464Z'
+updatedAt: '2026-08-20T08:09:47.433Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 공개 제조사 PD 등급·포트 맵·공식 판매가를 기준으로 USB-C 허브를 비교합니다. **여름 이동·방학 재택**처럼 노트북 포트 하나에 모니터·충전·웹캠을 동시에 물리는 주간에는, '12-in-1' 문구보다 **실제 PD 통과 와트와 HDMI가 4K60인지 4K30인지**가 만족도를 더 잘 예측합니다.
-
 
 ## 서론: USB-C 포트 하나에 책상 전체를 실을 때
 

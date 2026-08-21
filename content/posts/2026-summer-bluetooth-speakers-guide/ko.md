@@ -21,14 +21,13 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-08-20T08:09:46.834Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 휴대 블루투스 스피커를 공개 IP 등급, 배터리 사양, 공식 판매가로 비교합니다. 여름 야외 사용에서는 **방진·방수(IP)와 실사용 음량**이 드라이버 크기만큼이나 만족도를 좌우합니다.
-
 
 ## 서론: 2026년 여름 스피커 시장, '방수·휴대'가 기본 스펙이 됐다
 

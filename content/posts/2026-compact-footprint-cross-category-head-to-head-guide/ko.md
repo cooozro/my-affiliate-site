@@ -29,13 +29,12 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.431Z'
+updatedAt: '2026-08-20T08:09:44.055Z'
 publishedAt: '2026-07-17T02:23:36.986Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 마케팅의 ‘공간 절약’ 배지가 아니라 **실제 바닥·조리대·필수 여유 공간**을 비교합니다. 폭염·방학철 임대 원룸에서는 이동식 AC 호스, 제습기 물통, 에어프라이어 후면 배기, 밥솥 뚜껑, 로봇 도크가 **같은 25–40㎡**를 두고 경쟁합니다.
-
 
 ## 소개: 어떤 컴팩트 가전이 가용 공간을 가장 적게 가져가는가?
 

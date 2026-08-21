@@ -27,13 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.461Z'
+updatedAt: '2026-08-20T08:09:46.914Z'
 publishedAt: '2026-07-08T02:58:57.557Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 예산형 태블릿의 제조사 공개 스펙·판매가·공개 리뷰를 교차 검증합니다. 여름 여행과 방학 시즌에는 **밝은 기내에서의 가독성, 오프라인 영상 저장, Google Play vs 전용 스토어 제한**이 “생산성” 마케팅보다 만족도를 더 크게 좌우합니다.
-
 
 ## 서론: 여름 여행용 태블릿, 광고 속 스펙만으로 고르지 말 것
 

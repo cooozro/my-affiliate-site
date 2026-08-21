@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-08-11T06:15:03.143Z'
+updatedAt: '2026-08-20T08:09:47.055Z'
 publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## Editorial Overview
@@ -141,7 +141,6 @@ After cross-checking apartment circuit limits and noise claims, solo heat kits f
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

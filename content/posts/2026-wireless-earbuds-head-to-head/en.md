@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-20T08:09:47.928Z'
 publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare budget true wireless earbuds using public codec, ANC, and battery data from manufacturer spec sheets and open reviews — not seller APIs. In {{today}} heat-season commutes, **fit stability in sweat, subway ANC depth, and whether your phone actually uses LDAC or AAC** matter more than flagship branding.
-
 
 ## Introduction: a real summer commute case study
 

@@ -30,7 +30,7 @@ coverImageCredit: Photo by Amar Preciado / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '37489595'
 coverImageSourceUrl: 'https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg'
-updatedAt: '2026-08-11T06:15:03.269Z'
+updatedAt: '2026-08-20T08:09:45.433Z'
 publishedAt: '2026-07-22T04:40:08.419Z'
 ---
 ## Editorial Overview
@@ -191,7 +191,6 @@ After cross-checking inverter waveforms and fridge surge draws, blackout readine
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

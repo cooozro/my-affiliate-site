@@ -19,7 +19,7 @@ liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner
   - cordless vacuum hardwood floor
-updatedAt: '2026-07-17T06:30:02.092Z'
+updatedAt: '2026-08-20T08:09:44.304Z'
 coverImage: >-
   /images/posts/2026-cordless-vacuums-scenario-guide/cordless-stick-vacuum-cleaner-cover.jpg
 coverImageAlt: cordless stick vacuum cleaning a home floor
@@ -31,7 +31,6 @@ publishedAt: '2026-07-09T05:23:27.620Z'
 ## Editorial Overview
 
 > As an independent tech review publication, we match cordless stick vacuums to **real summer household routines** using public manufacturer specs, listed retail prices, and open reviews — not seller scripts or proprietary databases. In July heat season, when windows stay closed for air conditioning, families travel before vacation, and school break keeps kids home longer, **runtime per charge, HEPA filtration, and bin emptying without dust clouds** matter more than headline watt figures alone.
-
 
 ## Introduction: who this guide is for
 

@@ -27,13 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-08-20T08:09:45.377Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## 편집부 개요
 
 > AI Pick 편집부는 **실제 거실·침실 환경**에 맞춰 콘솔을 비교합니다. 제조사 공개 스펙, 공식 번들 가격, 공개 리뷰만 사용하며 셀러 API는 쓰지 않습니다. {{today}} 여름·방학 시즌 — 폭염에 에어컨을 오래 켜고 실내에 머무는 가정 — 에서는 **저장공간 여유, 구독 라이브러리, 실제 4K 출력**이 출시 당시 헤드라인 TFLOPS보다 체감 만족도를 더 좌우합니다.
-
 
 ## 서론: 누구를 위한 가이드인가
 

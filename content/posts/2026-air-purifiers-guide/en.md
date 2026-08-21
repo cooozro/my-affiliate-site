@@ -20,7 +20,7 @@ coverImageAlt: HEPA air purifier in a small bedroom
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-08-17T03:32:22.778Z'
+updatedAt: '2026-08-20T08:09:43.051Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -30,7 +30,6 @@ imageSearchKeywords:
 ## Editorial Overview
 
 > As an independent tech review publication, we compare compact air purifiers using public CADR ratings, filter specifications, and listed retail prices. For small bedrooms and dorm rooms during summer cooling season, **CADR matched to room size and honest filter replacement cost** predict satisfaction more reliably than marketing claims about “medical grade” air.
-
 
 ## Introduction: why small-room purifiers matter when AC runs all summer
 

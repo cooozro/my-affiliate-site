@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:02.505Z'
+updatedAt: '2026-08-20T08:09:45.689Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare budget over-ear ANC headphones using public manufacturer specs, listed retail prices, and open reviews. For summer travel, **ANC depth at engine and HVAC frequencies plus all-day clamp force** matter more than marketing claims about “studio” sound.
-
 
 ## Introduction: why these three models for summer travel
 

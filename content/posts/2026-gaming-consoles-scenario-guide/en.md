@@ -29,13 +29,12 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:02.369Z'
+updatedAt: '2026-08-20T08:09:45.348Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we match consoles to **real living-room setups** using public manufacturer specs, listed bundle prices, and open reviews — not seller scripts. For {{today}}, when heat season and school break keep families indoors with AC running, **storage headroom, subscription libraries, and honest 4K output** matter more than launch-day hype.
-
 
 ## Introduction: who this guide is for
 

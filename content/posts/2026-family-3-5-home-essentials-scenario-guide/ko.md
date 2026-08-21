@@ -23,7 +23,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-08-19T10:07:53.752Z'
+updatedAt: '2026-08-21T01:54:33.010Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468
@@ -34,7 +34,6 @@ publishedAt: '2026-07-14T03:03:54.000Z'
 ## 편집부 개요
 
 > AI Pick 편집부는 **대형 가전·바닥 청소 다섯 카테고리**를 실제 3–5인 가구 생활에 맞춰 비교합니다. 제조사 공개 스펙과 공시 판매가만 사용하며 셀러 API는 쓰지 않습니다. {{today}} 여름 방학철 — 아이가 집에 머무르며 냉장고 문이 자주 열리고, 세탁이 매일 돌고, 커튼 닫은 거실 TV가 오래 켜지고, 에어컨 밀폐로 발자국 먼지가 순환할 때 — **실사용 용량이 기능 메뉴보다, 처리량이 단일 사이클 라벨보다, 맞춤 청정량이 ‘온집안’ 마케팅보다 먼저**입니다.
-
 
 ## 누구를 위한 교차 카테고리 가이드인가
 

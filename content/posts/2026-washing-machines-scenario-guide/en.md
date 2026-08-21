@@ -25,13 +25,12 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
-updatedAt: '2026-07-17T06:30:03.415Z'
+updatedAt: '2026-08-20T08:09:47.489Z'
 publishedAt: '2026-07-10T07:11:46.885Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we match front-load washing machines to **real summer household routines** using public manufacturer specs, listed retail prices, and open reviews — not seller scripts or proprietary databases. In July humidity season, when laundry dries indoors because outdoor lines wilt in heat, school break sends home muddy sports uniforms, vacation departure compresses a week of loads into one weekend, and air-conditioned apartments punish loud spin cycles, **drum ventilation, stain chemistry, capacity per hour, and spin noise** matter more than a single Energy Star sticker alone.
-
 
 ## Introduction: who this guide is for
 

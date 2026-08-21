@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: 원룸의 이동식 에어컨
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-08-20T08:09:45.971Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -33,7 +33,6 @@ coverImageAltKo: 원룸의 이동식 에어컨
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 이동식·창문형 에어컨의 공개 BTU·소음·판매가 스펙을 교차 검증합니다. 여름 주거 환경 분석 결과 **창문형이 동일 BTU에서 냉방 효율이 높은 경우가 많고**, 설치가 어려울 때 **듀얼호스 이동식**이 단일호스 대비 체감 냉방에 유리합니다.
-
 
 ## 서론: 여름 설치 조건의 트레이드오프
 

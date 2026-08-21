@@ -19,7 +19,7 @@ coverImageAlt: 작은 침실의 HEPA 공기청정기
 coverImageAltKo: 작은 침실의 HEPA 공기청정기
 coverImageCredit: Uploaded via admin
 coverImageProvider: admin-upload
-updatedAt: '2026-08-19T10:07:51.880Z'
+updatedAt: '2026-08-21T01:54:31.041Z'
 publishedAt: '2026-06-30T13:06:30.000Z'
 imageSearchKeywords:
   - HEPA air purifier
@@ -29,7 +29,6 @@ imageSearchKeywords:
 ## 편집부 개요
 
 > AI Pick & Report는 공개 CADR·필터 사양·공식 판매가를 기준으로 소형 공기청정기를 비교합니다. 여름철 창문을 닫고 에어컨을 오래 쓰는 **소형 침실·원룸(약 9–17㎡)** 에서는 '메디컬 등급' 문구보다 **방 크기에 맞는 CADR과 필터 교체 비용**이 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 에어컨과 함께 쓰는 소형 공기청정기
 

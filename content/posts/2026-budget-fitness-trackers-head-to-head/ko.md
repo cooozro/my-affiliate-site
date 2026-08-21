@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-20T08:09:43.277Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 예산형 피트니스 트래커의 제조사 공개 스펙·판매가·공개 리뷰를 교차 검증합니다. 여름 방학과 폭염 시즌 출퇴근에는 **땀에 젖은 손목에서의 심박 안정성, 에어컨 밤 이후 수면 단계 해석, GPS가 밴드에 있는지 폰에 있는지**가 “건강 점수” 마케팅보다 구매 만족도를 더 크게 좌우합니다.
-
 
 ## 서론: 여름 루틴에 맞는 예산 밴드는?
 

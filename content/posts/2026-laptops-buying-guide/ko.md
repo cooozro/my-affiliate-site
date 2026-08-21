@@ -25,13 +25,12 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.449Z'
+updatedAt: '2026-08-20T08:09:45.629Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 학생용 가성비 노트북을 CPU 공개 스펙, RAM 확장 경로, 디스플레이 밝기, 배터리 Wh 데이터로 벤치마크합니다. **CPU 등급과 실사용 RAM 여유**가 색상·AI PC 스티커보다 방학·개강 전 장기 과제 성능을 더 잘 설명합니다.
-
 
 ## 서론: 2026년 학생용 가성비 노트북은 CPU·RAM·야외 가독성으로 갈린다
 

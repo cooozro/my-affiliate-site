@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:03.529Z'
+updatedAt: '2026-08-20T08:09:44.206Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## Editorial Overview
@@ -208,7 +208,6 @@ After cross-checking active water/air systems vs passive toppers, noise, leak ri
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-17T06:30:03.123Z'
+updatedAt: '2026-08-20T08:09:46.725Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -30,7 +30,6 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 ## Editorial Overview
 
 > As an independent tech review publication, we publish seasonal checklists from public specs and install requirements — not seller scripts. For summer {{today}}, verifying **BTU fit and exhaust path** before checkout prevents the most common AC returns.
-
 
 ## Introduction: use this before heat-season rush
 

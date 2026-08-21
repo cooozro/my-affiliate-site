@@ -17,7 +17,7 @@ imageSearchKeywords:
   - clothes dryer laundry room
   - laundry dryer appliance
   - heat pump dryer
-updatedAt: '2026-08-19T10:07:52.607Z'
+updatedAt: '2026-08-21T01:54:31.784Z'
 coverImage: >-
   /images/posts/2026-clothes-dryers-buying-guide/clothes-dryer-laundry-room-laundry-dryer-applian-cover.jpg
 coverImageAlt: 실내의 clothes dryer laundry room
@@ -32,7 +32,6 @@ publishedAt: '2026-07-15T06:38:55.823Z'
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서 제조사 용량·에너지 라벨·사이클·설치 매뉴얼을 교차 확인합니다. 판매자 스크립트는 쓰지 않습니다. 습한 여름·방학철에 야외 건조가 막히면 **히트펌프 효율, 센서 건조 정확도, 배기·플러그 제약**이 “대용량” 배지보다 중요합니다.
-
 
 ## 서론: 여름 습도가 바꾸는 건조기 역할
 

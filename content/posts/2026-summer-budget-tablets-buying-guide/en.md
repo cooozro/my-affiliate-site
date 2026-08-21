@@ -27,13 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:01.461Z'
+updatedAt: '2026-08-20T08:09:46.886Z'
 publishedAt: '2026-07-08T02:58:57.557Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare budget tablets using public manufacturer specs, listed retail prices, and open reviews — not seller scripts. During summer travel and school-break weeks, **display comfort in bright cabins, offline video storage, and whether Google Play or a locked store limits kids' apps** matter more than thin marketing about "productivity."
-
 
 ## Introduction: tablets for summer trips, not desk posters
 

@@ -20,7 +20,7 @@ imageSearchKeywords:
   - clothes dryer laundry room
   - laundry dryer appliance
   - heat pump dryer
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-08-20T08:09:43.759Z'
 coverImage: >-
   /images/posts/2026-clothes-dryers-buying-guide/clothes-dryer-laundry-room-laundry-dryer-applian-cover.jpg
 coverImageAlt: clothes dryer laundry room in a home interior
@@ -35,7 +35,6 @@ publishedAt: '2026-07-15T06:38:55.823Z'
 ## Editorial Overview
 
 > As an independent tech review publication, we compare clothes dryers using public manufacturer capacity, energy labels, cycle times, and install manuals — not seller scripts. During humid summer and school-break weeks when outdoor lines stay damp and washers finish mid-afternoon, **heat-pump efficiency, sensor dry accuracy, and vent or plug constraints** matter more than a single “large capacity” badge on the box.
-
 
 ## Introduction: summer humidity changes what a dryer must do
 

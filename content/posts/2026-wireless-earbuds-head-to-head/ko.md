@@ -26,13 +26,12 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:00.000Z'
+updatedAt: '2026-08-20T08:09:47.957Z'
 publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서 제조사 스펙·공개 리뷰의 코덱·ANC·배터리 데이터를 비교합니다. 판매자 API는 사용하지 않습니다. {{today}} 무더위 출퇴근에서는 **땀에도 안 빠지는 착용감, 지하철·버스 저주파 차단, LDAC vs AAC 실사용**이 브랜드보다 중요합니다.
-
 
 ## 소개: 실제 여름 출퇴근 사례
 

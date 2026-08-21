@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:02.004Z'
+updatedAt: '2026-08-20T08:09:43.854Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare home coffee machines using public manufacturer specs, listed retail prices, and open appliance reviews — not seller scripts. During summer heat waves and school-break WFH weeks, **how fast a machine heats, how much steam it dumps into a small kitchen, and how often descaling interrupts your routine** matter more than glossy café photos on the box.
-
 
 ## Introduction: three machine types, one summer kitchen
 

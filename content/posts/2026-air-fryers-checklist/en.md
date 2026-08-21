@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:03.919Z'
+updatedAt: '2026-08-20T08:09:42.957Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
 ---
 ## Editorial Overview
@@ -127,7 +127,6 @@ After cross-checking summer kitchen loads, regret tracked basket liters, honest 
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

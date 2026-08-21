@@ -29,13 +29,12 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-23T07:59:41.947Z'
+updatedAt: '2026-08-20T08:09:44.856Z'
 publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 제조사 공개 풍량(CFM)·정격 와트·공식 판매가·패드 교체 비용을 기준으로 기화식(스웜프) 쿨러를 비교합니다. 판매자 전용 스크립트는 쓰지 않습니다. {{today_locale}} 기준, 여름 더위에 이동식 에어컨 대신 저전력 제품을 찾는 수요가 늘 때 **실외·실내 습도가 낮을 때만 체감 온도가 떨어지고, 물 보충 주기·패드 3년 유지비·창문 환기가 가능한지**가 '집 전체 냉방' 문구보다 만족도를 더 잘 예측합니다. **편집부 판단:** 한국 한여름 습도는 기화식 쿨러가 힘을 잃는 구간에 자주 들어갑니다. 서울·부산형 밀폐 원룸의 기본 해법으로 보지 말고, 건조 기후·환기 가능한 작업 공간용으로 먼저 평가하세요.
-
 
 ## 서론: 공기가 건조할 때의 스웜프 쿨러, 습할 때의 한계
 

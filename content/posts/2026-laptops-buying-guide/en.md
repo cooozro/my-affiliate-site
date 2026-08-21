@@ -27,13 +27,12 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-17T06:30:02.454Z'
+updatedAt: '2026-08-20T08:09:45.602Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we benchmark budget student laptops from public CPU spec sheets, RAM upgrade paths, display brightness claims, and battery watt-hour data. **CPU tier and usable RAM headroom** explain summer-long coursework performance more reliably than chassis color or “AI PC” stickers on the box.
-
 
 ## Introduction: budget laptops for students split on CPU, RAM, and outdoor readability
 

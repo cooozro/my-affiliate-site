@@ -1,20 +1,21 @@
 {
-  "topicIndex": 22,
+  "topicIndex": 25,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
     "robot-vacuums",
     "air-purifiers",
     "budget-monitors",
-    "flagship-smartphones"
+    "flagship-smartphones",
+    "bluetooth-speakers"
   ],
-  "lastPublishAt": "2026-08-19T10:07:51.424Z",
-  "nextPublishAt": "2026-08-20T02:44:00.000Z",
-  "scheduledGapHours": 5.73,
-  "publishCountToday": 0,
-  "publishDateKst": "2026-08-20",
+  "lastPublishAt": "2026-08-21T01:52:46.207Z",
+  "nextPublishAt": "2026-08-22T02:18:00.000Z",
+  "scheduledGapHours": 5.3,
+  "publishCountToday": 1,
+  "publishDateKst": "2026-08-21",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-20",
+  "writeDateKst": "2026-08-21",
   "history": [
     {
       "action": "publish",
@@ -111,30 +112,44 @@
         "https://www.aipick.shop/en/blog/2026-window-ac-lg-lw1217ersm-review",
         "https://www.aipick.shop/ko/blog/2026-window-ac-lg-lw1217ersm-review"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "at": "2026-08-20T08:40:13.819Z",
+      "topic": "bluetooth-speakers"
+    },
+    {
+      "action": "publish",
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "topic": {
+        "id": "bluetooth-speakers",
+        "cluster": "audio"
+      },
+      "at": "2026-08-21T01:52:46.207Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-bluetooth-speakers-sony-xg500-review",
+        "https://www.aipick.shop/ko/blog/2026-bluetooth-speakers-sony-xg500-review"
+      ]
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-20T07:48:28.799Z",
-    "issueCount": 4,
+    "at": "2026-08-21T01:52:43.846Z",
+    "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (304min past slot, KST 2026-08-20)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
+        "message": "Publish ready but no post went live (0min past slot, KST 2026-08-21)",
         "severity": "warning"
       },
       {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
-        "severity": "error"
+        "code": "homepage-featured-mismatch",
+        "message": "Home featured is 2026-dehumidifiers-midea-mad50c1-review, expected latest 2026-window-ac-lg-lw1217ersm-review",
+        "severity": "warning"
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 3219min",
+        "message": "Cursor replenish pending 4303min",
         "severity": "warning"
       }
     ],
@@ -209,17 +224,28 @@
       "id": "window-ac",
       "cluster": "air-conditioning",
       "at": "2026-08-19T10:07:51.444Z"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "category": "audio",
+      "cluster": "audio",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-08-20T08:35:28.462Z"
+    },
+    {
+      "id": "bluetooth-speakers",
+      "cluster": "audio",
+      "at": "2026-08-21T01:52:46.232Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-19",
+  "lastDailyContentAuditKst": "2026-08-21",
   "lastDailyContentAudit": {
-    "at": "2026-08-19T10:07:56.983Z",
-    "postsScanned": 62,
+    "at": "2026-08-21T01:54:36.194Z",
+    "postsScanned": 64,
     "autoRepairCount": 32,
-    "manualReviewCount": 0
+    "manualReviewCount": 4
   },
   "formatDeck": [
-    "model-deep-dive",
     "scenario-guide",
     "checklist",
     "explainer"
@@ -232,7 +258,8 @@
     "model-deep-dive",
     "head-to-head",
     "buying-guide",
-    "head-to-head"
+    "head-to-head",
+    "model-deep-dive"
   ],
   "metaAngleHistory": [
     {
@@ -281,5 +308,12 @@
     "diversitySkipped": 0,
     "publishableCount": 1,
     "publishEligibleCount": 0
-  }
+  },
+  "modelPickHistory": [
+    {
+      "topicId": "bluetooth-speakers",
+      "modelId": "sony-xg500",
+      "at": "2026-08-20T08:41:11.267Z"
+    }
+  ]
 }

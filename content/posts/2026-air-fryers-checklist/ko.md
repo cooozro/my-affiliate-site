@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:03.919Z'
+updatedAt: '2026-08-20T08:09:42.989Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
 ---
 ## 편집부 개요
@@ -127,7 +127,6 @@ publishedAt: '2026-07-04T06:43:31.577Z'
 ## 1. 숏리스트 판단 앵커
 
 공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.
-
 
 ## FAQ
 

@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: portable air conditioner in an apartment room
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-07-17T06:30:02.618Z'
+updatedAt: '2026-08-20T08:09:45.943Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -33,7 +33,6 @@ coverImageAltKo: 원룸의 이동식 에어컨
 ## Editorial Overview
 
 > As an independent tech review publication, we compare portable and window air conditioners using public BTU ratings, listed retail prices, and noise specs. In summer apartment tests, **window units deliver more cooling per watt** when installation is possible; dual-hose portables close the gap when it is not.
-
 
 ## Introduction: the summer install trade-off
 

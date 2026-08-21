@@ -17,7 +17,7 @@ imageSearchKeywords:
   - window air conditioner
   - apartment cooling
   - wall air conditioner
-updatedAt: '2026-07-16T10:05:00.000Z'
+updatedAt: '2026-08-20T08:09:47.870Z'
 coverImage: >-
   /images/posts/2026-window-ac-room-scenario-guide/window-air-conditioner-apartment-cooling-cover.jpg
 coverImageAlt: 원룸의 창문형 에어컨
@@ -32,7 +32,6 @@ publishedAt: '2026-07-14T07:23:04.352Z'
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서 제조사 BTU·효율 라벨·공개 설치 가이드를 교차 확인합니다. 판매자 API는 쓰지 않습니다. {{today}} 폭염에는 **방 면적 맞춤, 샷시 키트, 밤 소음**이 박스의 최대 냉방 홍보보다 중요합니다.
-
 
 ## 소개: 올여름 창문형 에어컨이 필요한 사람
 

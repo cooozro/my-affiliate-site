@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-08-20T08:09:46.197Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we match robot vacuums to **real apartment layouts** using public suction specs, mapping technology documentation, and listed dock prices — not seller scripts. For summer {{today}}, when windows stay closed for cooling and foot traffic spikes during school break, **maintenance access and mapping accuracy** matter more than headline Pa numbers alone.
-
 
 ## Introduction: who this guide is for
 

@@ -22,13 +22,12 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-08-17T03:32:24.369Z'
+updatedAt: '2026-08-20T08:09:44.509Z'
 publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 공개 DOE 제습량·제조사 소비전력·공식 판매가를 기준으로 제습기를 비교합니다. 창문을 닫고 에어컨을 오래 쓰는 **습한 여름·방학철**에는 '4,500 sq ft 커버' 같은 문구보다 **방 크기에 맞는 DOE 제습량, 저속 소음, 하루 kWh 계산**이 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 냉방 시즌, 왜 제습기 수요가 늘까
 

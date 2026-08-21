@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-17T03:32:27.682Z'
+updatedAt: '2026-08-20T08:09:47.405Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare USB-C hubs using public manufacturer PD ratings, port maps, and listed retail prices — not seller scripts. During **summer travel and school-break WFH weeks** when one laptop port must run a monitor, charger, and webcam in hot café or dorm rooms, **honest PD pass-through watts and whether HDMI is 4K60 or 4K30** predict daily frustration more reliably than “12-in-1” marketing.
-
 
 ## Introduction: when one USB-C port carries your whole desk
 

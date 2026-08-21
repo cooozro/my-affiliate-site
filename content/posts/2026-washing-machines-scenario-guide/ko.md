@@ -21,13 +21,12 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
-updatedAt: '2026-08-19T10:07:56.232Z'
+updatedAt: '2026-08-21T01:54:35.428Z'
 publishedAt: '2026-07-10T07:11:46.885Z'
 ---
 ## 편집부 개요
 
 > AI Pick 편집부는 **실제 여름 생활 패턴**에 맞춰 전면형 세탁기를 비교합니다. 제조사 공개 스펙, 공시 판매가, 공개 리뷰만 사용하며 셀러 스크립트나 비공개 데이터베이스는 쓰지 않습니다. 7월 습기 시즌 — 더위에 실외 건조가 어렵고 실내에서 말리면 수건이 금방 냄새 나며, 방학으로 아이가 흙·진흙 묻은 운동복을 들고 오고, 휴가 전 주말에 일주일치 세탁을 몰아야 하며, 에어컨 밀실 아파트에서는 탈수 소음이 벽을 타고 전달될 때 — **드럼 환기, 얼룩 코스, 시간당 처리량, 탈수 소음**이 에너지 라벨 숫자만큼 중요합니다.
-
 
 ## 서론: 누구를 위한 가이드인가
 

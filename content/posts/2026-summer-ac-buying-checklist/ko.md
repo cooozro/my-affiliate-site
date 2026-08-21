@@ -17,7 +17,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: 여름 침실의 이동식 에어컨
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-07-16T10:00:24.068Z'
+updatedAt: '2026-08-20T08:09:46.752Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -28,7 +28,6 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 공개 설치 가이드·에너지 라벨 기준으로 시즌 체크리스트를 제공합니다. {{today}} 여름철 **BTU 적합성과 배기 경로**를 구매 전 확인하면 반품의 대부분을 피할 수 있습니다. 아래 항목은 브랜드 순위가 아니라, 집·임대 조건에 맞는지 판별하는 데 초점을 둡니다.
-
 
 ## 서론: 무더위 전에 읽는 7항목
 

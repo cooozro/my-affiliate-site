@@ -24,13 +24,12 @@ coverImage: /images/posts/2026-television-buying-guide/smart-tv-living-room-cove
 coverImageAlt: smart TV in a living room setup for summer sports and streaming
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-08-20T08:09:47.143Z'
 publishedAt: '2026-07-10T11:32:02.328Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare televisions using public manufacturer spec sheets, listed retail prices, and open reviews — not seller scripts. During Korea and US heat season when families run AC with curtains drawn, **peak HDR brightness in a closed room, reflection handling on glossy OLED glass, and whether HDMI 2.1 ports actually deliver 4K 120 Hz with VRR to a console or PC** predict daily satisfaction more reliably than vague “cinematic experience” slogans on the box.
-
 
 ## Introduction: summer couch time when the windows stay shut
 

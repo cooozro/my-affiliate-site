@@ -19,7 +19,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-07-17T06:30:01.446Z'
+updatedAt: '2026-08-20T08:09:45.519Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: induction cooktop kitchen in a home interior
@@ -34,7 +34,6 @@ publishedAt: '2026-07-16T02:44:53.000Z'
 ## Editorial Overview
 
 > As an independent tech review publication, we compare induction cooktops using public watt ratings, pan-compatibility notes, and safety documentation — not seller slogans. In {{today}} heat waves when the kitchen already shares air with a running AC, **precise power delivery, residual heat, and circuit limits** matter more than a “restaurant grade” badge.
-
 
 ## Introduction: why induction matters in a sealed summer kitchen
 

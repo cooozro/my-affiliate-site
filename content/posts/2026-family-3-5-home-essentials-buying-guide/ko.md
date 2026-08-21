@@ -29,13 +29,12 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-19T10:07:53.662Z'
+updatedAt: '2026-08-21T01:54:32.925Z'
 publishedAt: '2026-07-17T06:30:01.360Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 기능 개수 마케팅이 아니라 **방학철 부하를 버티는 용량 등급**을 비교합니다. 3–5인 가구·폭염철에는 냉장 식품실, 세탁 드럼 처리량, 공용 화면 크기, 침실 CADR, 스틱 런타임이 ‘스마트’ 배지보다 만족도를 잘 예측합니다.
-
 
 ## 서론: 용량이 기능 나열을 이긴다
 

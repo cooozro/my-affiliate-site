@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:03.672Z'
+updatedAt: '2026-08-20T08:09:45.776Z'
 publishedAt: '2026-07-18T08:40:18.328Z'
 ---
 ## Editorial Overview
@@ -208,7 +208,6 @@ After cross-checking LFP cycle claims and UPS switchover times, usable value tra
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

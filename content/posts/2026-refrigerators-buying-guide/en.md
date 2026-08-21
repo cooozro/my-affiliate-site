@@ -18,7 +18,7 @@ topicCluster: large-appliances
 draft: false
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
-updatedAt: '2026-07-17T06:30:02.666Z'
+updatedAt: '2026-08-20T08:09:46.027Z'
 imageSearchKeywords:
   - modern refrigerator kitchen
 coverImage: >-
@@ -35,7 +35,6 @@ publishedAt: '2026-07-09T03:51:46.000Z'
 ## Editorial Overview
 
 > As an independent tech review publication, we compare refrigerators using public manufacturer capacity tables, Energy Guide kWh figures, listed retail prices, and open reviews — not seller scripts. During summer when households stock more produce and cold drinks, open-plan kitchens expose compressor noise, and tiered electricity rates punish old units, **usable cubic feet per person, annual kWh on the yellow label, and honest operating dB** predict daily satisfaction more reliably than showroom lighting or vague “smart freshness” claims.
-
 
 ## Introduction: fridge size, energy, and noise when the kitchen stays busy all summer
 

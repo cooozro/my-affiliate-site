@@ -33,13 +33,12 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-07-23T07:59:41.946Z'
+updatedAt: '2026-08-20T08:09:44.827Z'
 publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare evaporative (“swamp”) coolers using public manufacturer CFM and wattage claims, listed retail prices, and published pad-replacement costs — not seller scripts. On {{today_locale}}, with summer heat pushing shoppers toward low-wattage alternatives to portable AC, **dry-bulb drop only when outdoor humidity is low, honest water refill cadence, pad three-year TCO, and whether your lease allows open-window exhaust** predict satisfaction more reliably than “whole home cooling” box copy. **Editorial judgment:** Korea’s typical midsummer humidity often sits in the range where evaporative coolers underperform; treat them as a dry-climate or well-ventilated workshop tool first, not a default Seoul apartment fix.
-
 
 ## Introduction: swamp coolers when the air is dry — and when it is not
 

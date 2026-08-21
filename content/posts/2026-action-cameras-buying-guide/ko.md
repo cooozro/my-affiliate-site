@@ -26,13 +26,12 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-17T03:32:22.575Z'
+updatedAt: '2026-08-20T08:09:42.886Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서, 공개된 손떨림 보정 스펙·본체 방수 깊이·공시 판매가를 기준으로 여행용 액션캠을 비교합니다. 방학·폭염 시즌의 스노클, 등산, 킥보드 이동에서는 **마운트 호환성과 실제 방수 한계**가 해상도 숫자보다 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 여름 여행이 손떨림 보정과 방수 실링을 검증한다
 

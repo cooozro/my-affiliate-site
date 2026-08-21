@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:04.479Z'
+updatedAt: '2026-08-20T08:09:47.668Z'
 publishedAt: '2026-07-04T01:56:28.535Z'
 ---
 ## Editorial Overview
@@ -127,7 +127,6 @@ After cross-checking WFH call recordings, regret tracked autofocus hunting, mics
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

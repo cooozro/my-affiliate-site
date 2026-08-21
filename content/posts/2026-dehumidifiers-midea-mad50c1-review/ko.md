@@ -19,7 +19,7 @@ modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-08-20T07:48:44.525Z'
+updatedAt: '2026-08-20T08:07:59.985Z'
 coverImageAlt: 실내 제습기 사용 환경 제품 컷
 coverImageAltKo: 실내 제습기 사용 환경 제품 컷
 coverImage: >-
@@ -150,11 +150,11 @@ DOE/AHAM 기준으로 하루 50파인트를 제거하므로 최대 약 4,500제�
 
 ## 관련 가이드
 
-- [2026 제습기 구매 가이드](/ko/blog/2026-dehumidifiers-guide)
-- [2026 공기청정기 가이드](/ko/blog/2026-air-purifiers-guide)
-- [2026 쿨링 매트리스 패드 구매 가이드](/ko/blog/2026-cooling-mattress-pads-buying-guide)
-- [2026 카운터탑 제빙기 구매 가이드](/ko/blog/2026-countertop-ice-makers-buying-guide)
-
+- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
+- [작은 방용 공기청정기 3종 비교: 과연 어떤 제품이 공기를 제대로 정화할까?](/ko/blog/2026-small-room-air-purifiers-head-to-head) — 작은 방에 적합한 공기청정기 3종을 CADR, 필터 방식, 소음, 유지비용으로 비교해 침실과 사무실에 맞는 제품을 고르는 데 도움을 줍니다.
+- [소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용](/ko/blog/2026-countertop-ice-makers-buying-guide) — 여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.
+- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
 ## 최종 평가
 
 Midea MAD50C1ZWS는 습한 여름에 넓은 방을 사용할 때 대부분의 사람에게 **구매**를 권합니다. 50파인트 용량, 스마트 물통 알림, 세척 가능한 필터, 강풍에서 하루 약 $1.00의 예측 가능한 에너지 비용은 실용적이고 독자 중심적인 선택입니다. 가장 큰 절충점은 내장 펌프가 없다는 점이므로, 유일한 배수 옵션이 위로 이동하는 방식이라면 Frigidaire FFAP5033W1을 선택하거나 외부 펌프를 추가하세요. 그 외의 대부분 사용자에게는 습한 지하실과 세탁실에 추천하는 대표 모델 명단에 오를 만한 믿을 수 있는 제습기입니다.

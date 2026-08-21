@@ -28,13 +28,12 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-17T03:32:23.688Z'
+updatedAt: '2026-08-20T08:09:43.881Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 가정용 커피머신의 제조사 공개 스펙·판매가·공개 리뷰를 교차 검증합니다. 폭염과 방학·재택이 겹치는 여름에는 **예열 속도, 스팀으로 주방에 쌓이는 열, 디스케일이 일상을 얼마나 끊는지**가 박스 사진의 카페 연출보다 구매 만족도를 더 크게 좌우합니다.
-
 
 ## 서론: 세 가지 타입, 하나의 여름 주방
 

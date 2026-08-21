@@ -19,7 +19,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-07-17T06:30:02.190Z'
+updatedAt: '2026-08-20T08:09:44.655Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: built-in dishwasher in a kitchen
@@ -34,7 +34,6 @@ publishedAt: '2026-07-15T01:08:30.765Z'
 ## Editorial Overview
 
 > As an independent tech review publication, we unpack dishwasher marketing specs using IEC capacity definitions, published dB(A) labels, and OEM water-use figures — not storefront slogans. During school-break cooking spikes, **honest place-setting capacity and quiet programs** matter more than “smart” badges.
-
 
 ## Introduction: why dishwasher numbers confuse buyers
 

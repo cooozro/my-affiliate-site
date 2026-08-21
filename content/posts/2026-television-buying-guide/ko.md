@@ -20,13 +20,12 @@ coverImage: /images/posts/2026-television-buying-guide/smart-tv-living-room-cove
 coverImageAlt: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
-updatedAt: '2026-07-17T06:30:03.289Z'
+updatedAt: '2026-08-20T08:09:47.174Z'
 publishedAt: '2026-07-10T11:32:02.328Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 독립 기술 리뷰 매체로서 텔레비전을 제조사 공개 스펙시트, 공식 판매가, 공개 리뷰로 비교합니다. 비공개 셀러 스크립트는 사용하지 않습니다. 에어컨을 켜고 커튼을 치는 한여름 거실에서는 **어두운 방에서의 HDR 피크 밝기, 유광 OLED 유리의 반사, HDMI 2.1 포트가 콘솔·PC에 4K 120Hz VRR을 실제로 전달하는지**가 박스의 막연한 '시네마 경험' 문구보다 만족도를 더 잘 가릅니다.
-
 
 ## 서론: 창문 닫고 즐기는 여름 거실 시청
 

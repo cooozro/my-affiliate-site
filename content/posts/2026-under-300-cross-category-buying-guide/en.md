@@ -28,7 +28,7 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-08-11T06:15:04.369Z'
+updatedAt: '2026-08-20T08:09:47.232Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## Editorial Overview
@@ -167,7 +167,6 @@ After cross-checking $300 street prices, display, air quality, and mobile power 
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

@@ -31,13 +31,12 @@ coverImageProvider: pexels
 coverImageAssetId: 10024297
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-19T10:07:55.234Z'
+updatedAt: '2026-08-21T01:54:34.453Z'
 publishedAt: '2026-07-13T12:13:57.000Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 {{today}} 기준 제조사 공개 스펙과 공식 판매가를 바탕으로 교차 카테고리 체크리스트를 제공합니다. 여름철 창문을 닫고 냉방하는 1인 세대에게는 **설치 면적, 회로 부하, 유지보수 접근성**이 「카테고리별 1위」 스펙보다 중요합니다.
-
 
 ## 서론: 장바구니 다섯 개 쌓기 전에
 

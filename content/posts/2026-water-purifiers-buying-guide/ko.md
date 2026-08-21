@@ -22,13 +22,12 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-08-19T10:07:56.311Z'
+updatedAt: '2026-08-21T01:54:35.511Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## 편집부 개요
 
 > 독립 기술 리뷰 매체로서, 우리는 판매자 스크립트가 아닌 공개 NSF 인증 목록, 제조사 필터 수명 표, 공시 소매가, 공개 사용자 리뷰를 바탕으로 정수기를 비교합니다. 무더위에 가족 음수량이 늘고 아이들이 활동 사이 물병을 채우며, 미사용 가전에 누진 요금이 붙는 여름철에는 **상판형 발림 vs 싱크대 하부 설치비, 필터 교체 비용의 정직한 계산, 수돗물에서 TDS(총 용존 고형물) 저감이 실제로 필요한지**가 “99.9% 정화” 같은 막연한 문구보다 일상 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 더위가 갈증을 키울 때, 주방에서 차가운 물을 어떻게 확보할까
 

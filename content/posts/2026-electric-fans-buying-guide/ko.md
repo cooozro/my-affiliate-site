@@ -28,13 +28,12 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-07-16T10:12:37.677Z'
+updatedAt: '2026-08-20T08:09:44.771Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## 편집부 개요
 
 > AI Pick & Report는 제조사 공개 CFM·정격 와트·공식 판매가를 기준으로 선풍기를 비교합니다. **폭염·방학철**에 전기요금이 올라가고 하루 종일 방을 쓰는 가구가 늘 때, '온실 전체 냉방' 같은 문구보다 **와트당 풍량, 저속 소음, 에어컨 가동을 얼마나 늦출 수 있는지**가 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 에어컨 없이, 선풍기만으로 버틸 수 있을까
 

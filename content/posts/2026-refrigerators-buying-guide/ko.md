@@ -17,7 +17,7 @@ draft: false
 liveData: false
 imageSearchKeywords:
   - modern refrigerator kitchen
-updatedAt: '2026-07-17T06:30:02.698Z'
+updatedAt: '2026-08-20T08:09:46.057Z'
 coverImage: >-
   /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
 coverImageAlt: modern refrigerator kitchen
@@ -32,7 +32,6 @@ publishedAt: '2026-07-09T03:51:46.000Z'
 ## 편집부 개요
 
 > AI Pick & Report는 제조사 공개 용량표, 에너지 가이드 kWh, 공식 판매가, 공개 리뷰로 냉장고를 비교합니다. **여름철** 수박·음료·방학 간식으로 문 여는 횟수가 늘고, 오픈형 주방에서 압축기 소음이 거실까지 닿으며, 누진 요금에 낡은 냉장고가 부담될 때, '스마트 신선' 같은 문구보다 **실사용 식품실 용량, 연간 kWh, 운전 소음(dB)** 이 만족도를 더 잘 예측합니다.
-
 
 ## 서론: 1–4인 가구, 여름 주방에서 냉장고를 바꿀 때
 

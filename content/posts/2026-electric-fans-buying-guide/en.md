@@ -28,13 +28,12 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-07-17T06:30:02.235Z'
+updatedAt: '2026-08-20T08:09:44.742Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## Editorial Overview
 
 > As an independent tech review publication, we compare electric fans using public manufacturer CFM claims, wattage labels, and listed retail prices — not seller scripts. During summer heat waves when AC bills spike and school-break traffic keeps rooms occupied all day, **airflow per watt, honest noise at low speed, and whether a fan can delay AC startup** predict comfort more reliably than vague “whole room cooling” marketing.
-
 
 ## Introduction: fans vs AC when the forecast stays above 90°F
 

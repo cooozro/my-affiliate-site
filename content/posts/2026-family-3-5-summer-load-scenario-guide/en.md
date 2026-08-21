@@ -32,7 +32,7 @@ coverImageCredit: Photo by Vecislavas Popa / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1571468'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
-updatedAt: '2026-08-11T06:15:03.795Z'
+updatedAt: '2026-08-20T08:09:45.095Z'
 publishedAt: '2026-07-22T09:17:40.568Z'
 ---
 ## Editorial Overview
@@ -322,7 +322,6 @@ After cross-checking simultaneous-load circuits and laundry bottlenecks, 3–5 p
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 

@@ -16,7 +16,7 @@ topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-08-11T06:15:02.962Z'
+updatedAt: '2026-08-20T08:09:48.299Z'
 coverImage: /images/posts/under-300-cross-category-best-value-2026/cover-3184292.jpg
 coverImageAlt: >-
   Home desk with budget monitor air purifier and power bank under 300 value
@@ -144,7 +144,6 @@ After cross-checking listed specs and street prices, a $300 budget usually retur
 ## 1. Shortlist decision anchors
 
 After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 
 ## FAQ
 
