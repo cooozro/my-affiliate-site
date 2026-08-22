@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-21T01:54:32.925Z'
+updatedAt: '2026-08-22T02:34:57.473Z'
 publishedAt: '2026-07-17T06:30:01.360Z'
 ---
 ## 편집부 개요

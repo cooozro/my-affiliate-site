@@ -1,26 +1,26 @@
 ---
 title: '독서와 영상 시청, 필기까지? 보급형 태블릿 디스플레이·저장공간·S펜 지원 시나리오 가이드'
 description: '독서·스트리밍·S펜 필기를 위한 보급형 태블릿 시나리오별 추천. 디스플레이, 저장공간, 스타일러스 지원을 비교해 보세요.'
-date: '2026-08-21'
+date: '2026-08-22'
 tags:
   - 보급형 태블릿
   - 독서 태블릿
   - 영상 시청 태블릿
   - S펜 태블릿
   - 태블릿 비교
-draft: true
+draft: false
 contentProfile: scenario-guide
 topicId: tablet-budget
 topicCluster: tablets
 writingProvider: deepseek
-createdAt: '2026-08-21T01:59:02.976Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-tablets-reading-video-scenario-guide/budget-tablet-reading-video-budget-tablet-cover.jpg
 coverImageAlt: 책상 위의 태블릿
 coverImageCredit: Photo by Ksenia Chernaya / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-21T01:59:27.283Z'
+updatedAt: '2026-08-22T02:33:09.209Z'
+publishedAt: '2026-08-22T11:33:07.000Z'
 ---
 ## 편집부 개요
 
@@ -140,12 +140,11 @@ updatedAt: '2026-08-21T01:59:27.283Z'
 
 ## 관련 가이드
 
-- [2026 보급형 무선 이어폰 TOP 5](/ko/blog/2026-budget-wireless-earbuds-top5)
-- [2026 300달러 미만 보급형 스마트폰 가이드](/ko/blog/2026-budget-smartphones-under-300)
-- [2026 보급형 모니터 구매 가이드](/ko/blog/2026-budget-monitors-buying-guide)
-- [2026 보급형 보조배터리 가이드](/ko/blog/2026-budget-power-banks-guide)
-- [2026 보급형 기계식 키보드 가이드](/ko/blog/2026-budget-mechanical-keyboards-guide)
-
+- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
+- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 ## 최종 평가
 
 최고의 보급형 태블릿은 전적으로 사용 사례에 달려 있습니다. 독서와 오프라인 미디어에는 Amazon Fire HD 10이 150달러 미만에서 확실한 가성비 선택입니다. 동영상 스트리밍에는 Samsung Galaxy Tab A9+가 90Hz 디스플레이와 쿼드 스피커로 더 나은 올라운더입니다. S펜 필기에는 Samsung Galaxy Tab S6 Lite가 박스에 S펜이 포함되어 있어 여전히 단연 돋보입니다.

@@ -1,7 +1,7 @@
 {
-  "dateKst": "2026-08-21",
-  "scannedAt": "2026-08-21T01:54:36.194Z",
-  "postsScanned": 64,
+  "dateKst": "2026-08-22",
+  "scannedAt": "2026-08-22T02:35:00.812Z",
+  "postsScanned": 65,
   "autoRepairCount": 32,
   "autoRepairs": [
     {
@@ -127,10 +127,33 @@
       ]
     }
   ],
-  "manualReviewCount": 4,
+  "manualReviewCount": 5,
   "manualReview": [
     {
       "order": 1,
+      "slug": "2026-bluetooth-speakers-sony-xg500-review",
+      "phase": "draft",
+      "issues": [
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: need at least 3 H2 sections (found 0)",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing methodology section (Google E-E-A-T)",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Editorial Overview section",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Related guides / 관련 가이드 internal links section",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: model-deep-dive needs at least 4 H2 sections (found 0)",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Final Verdict section",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)",
+        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing FAQ / 자주 묻는 질문 section",
+        "2026-bluetooth-speakers-sony-xg500-review/ko.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/2026-bluetooth-speakers-sony-xg500-review",
+        "ko": "https://www.aipick.shop/ko/blog/2026-bluetooth-speakers-sony-xg500-review",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/2026-bluetooth-speakers-sony-xg500-review?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/2026-bluetooth-speakers-sony-xg500-review?locale=ko"
+      }
+    },
+    {
+      "order": 2,
       "slug": "2026-dehumidifiers-midea-mad50c1-review",
       "phase": "publish",
       "issues": [
@@ -146,7 +169,7 @@
       }
     },
     {
-      "order": 2,
+      "order": 3,
       "slug": "2026-window-ac-lg-lw1217ersm-review",
       "phase": "publish",
       "issues": [
@@ -162,7 +185,7 @@
       }
     },
     {
-      "order": 3,
+      "order": 4,
       "slug": "electric-blanket-safety-timers-wash-care-2026",
       "phase": "publish",
       "issues": [
@@ -177,7 +200,7 @@
       }
     },
     {
-      "order": 4,
+      "order": 5,
       "slug": "humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
       "phase": "publish",
       "issues": [
