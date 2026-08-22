@@ -154,33 +154,21 @@
     }
   ],
   "lastHealthCheck": {
-    "at": "2026-08-22T02:33:06.506Z",
-    "issueCount": 4,
+    "at": "2026-08-22T07:25:38.205Z",
+    "issueCount": 2,
     "issues": [
-      {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (15min past slot, KST 2026-08-22)",
-        "severity": "error"
-      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
-        "code": "homepage-featured-mismatch",
-        "message": "Home featured is 2026-dehumidifiers-midea-mad50c1-review, expected latest 2026-bluetooth-speakers-sony-xg500-review",
-        "severity": "warning"
-      },
-      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 5783min",
+        "message": "Cursor replenish pending 6076min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "marked-slot-catch-up"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
