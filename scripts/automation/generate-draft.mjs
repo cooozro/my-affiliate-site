@@ -18,6 +18,10 @@ import {
   mergePressAndStockFigures,
 } from "../lib/press-kit-images.mjs";
 import {
+  auditModelDeepDiveImageRelevance,
+  passesModelDeepDiveCandidate,
+} from "../lib/model-image-gate.mjs";
+import {
   countDrafts,
   slugExists,
   validatePostFiles,
@@ -295,9 +299,11 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     topicCluster: topic.topicCluster ?? topic.category,
     topic,
     topicId: topic.id,
+    contentProfile,
+    modelPick,
   };
 
-  // Model deep-dive: bias cover search toward category product-cut stock (not OEM scrapes).
+  // Model deep-dive: bias search toward brand+SKU first; press-kit preferred, stock gated.
   if (contentProfile === "model-deep-dive" && modelPick?.primary) {
     const queries = buildModelDeepDiveSearchQueries(modelPick.primary, topic);
     imageInput.imageQuery = queries[0];
@@ -350,6 +356,31 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     console.log(`Cover from press kit: ${pressCover.path}`);
   } else {
     imageMeta = await fetchCoverImage(slug, imageInput);
+    if (
+      contentProfile === "model-deep-dive" &&
+      modelPick?.primary &&
+      imageMeta
+    ) {
+      const gate = passesModelDeepDiveCandidate(
+        {
+          provider: imageMeta.coverImageProvider,
+          providerAlt: `${imageMeta.coverImageAlt || ""} ${imageMeta.coverImageAltKo || ""}`,
+          imageUrl: imageMeta.coverImageSourceUrl,
+        },
+        modelPick.primary,
+        { role: "cover" },
+      );
+      if (!gate.ok) {
+        throw new Error(
+          `model-deep-dive cover rejected (wrong/generic product): ${gate.reason}`,
+        );
+      }
+    }
+    if (contentProfile === "model-deep-dive" && modelPick?.primary && !imageMeta) {
+      throw new Error(
+        `model-deep-dive cover missing — press-kit empty and stock failed relevance gate for ${modelPick.primary.brand} ${modelPick.primary.name}`,
+      );
+    }
   }
 
   let enBody = article.en.body;
@@ -369,26 +400,48 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       );
       let stockFigures = [];
       if (needStock > 0) {
-        const extras = await fetchAdditionalImages(slug, bodyInput, {
+        const extras = await fetchAdditionalImages(slug, {
+          ...bodyInput,
+          contentProfile,
+          modelPick,
+          modelImageRole: "body",
+        }, {
           count: needStock,
           filenamePrefix: "body",
           skipCurated: true,
         });
         const roles = ["lifestyle", "detail"];
-        stockFigures = extras.map((img, i) => {
-          const alts = buildModelDeepDiveAlts(
-            modelPick.primary,
-            topic.id,
-            roles[i] ?? "detail",
-          );
-          return {
-            path: img.path,
-            altEn: alts.en,
-            altKo: alts.ko,
-            credit: img.credit,
-            source: "stock",
-          };
-        });
+        stockFigures = extras
+          .map((img, i) => {
+            const alts = buildModelDeepDiveAlts(
+              modelPick.primary,
+              topic.id,
+              roles[i] ?? "detail",
+            );
+            const candidate = {
+              provider: img.provider || "stock",
+              providerAlt: img.providerAlt || img.relevanceText || "",
+              imageUrl: img.sourceUrl || img.path,
+              searchQuery: img.searchQuery || "",
+            };
+            const gate = passesModelDeepDiveCandidate(
+              candidate,
+              modelPick.primary,
+              { role: "body" },
+            );
+            if (!gate.ok) {
+              console.warn(`Body stock rejected: ${gate.reason}`);
+              return null;
+            }
+            return {
+              path: img.path,
+              altEn: alts.en,
+              altKo: alts.ko,
+              credit: img.credit,
+              source: "stock",
+            };
+          })
+          .filter(Boolean);
       }
       const pressForBody = pressImages.filter((p) => p.path !== pressCover?.path);
       let figures = mergePressAndStockFigures(pressForBody, stockFigures, 2);
@@ -463,6 +516,13 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
   if (!shared.coverImage || !imageRefExists(siteRoot, shared.coverImage)) {
     throw new Error(
       `Cover image not on disk for ${slug} — draft aborted (phantom coverImage forbidden)`,
+    );
+  }
+
+  const relevanceErrors = auditModelDeepDiveImageRelevance(slug, shared, enBody);
+  if (relevanceErrors.length > 0) {
+    throw new Error(
+      `model-deep-dive image relevance gate failed: ${relevanceErrors.join("; ")}`,
     );
   }
 

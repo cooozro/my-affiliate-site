@@ -13,6 +13,7 @@ import {
   fetchGaSummary,
   readGithubFile,
   tryReadGithubJson,
+  writeGithubFile,
 } from "@/lib/admin-services";
 import {
   assertGithubAdminConfigured,
@@ -37,8 +38,14 @@ import {
   isAdminPublishBlocked,
   isAutomationBufferDraft,
 } from "@/lib/admin-only-posts";
+import {
+  filterHealthIssuesForAdmin,
+  filterManualReviewQueue,
+  shouldHideReplenishBanner,
+} from "@/lib/admin-alert-filter";
 import matter from "gray-matter";
 import { markdownBodyToHtml } from "@/lib/markdown-to-html";
+import { notifySelahimAipickSync } from "@/lib/selahim-sync";
 
 export type AutomationStatus = {
   mode: "publish-only";
@@ -304,35 +311,39 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
         issues?: Array<{ code: string; message: string; severity?: string }>;
       }
     | undefined;
-  const healthIssues = (lastHealthCheck?.issues ?? [])
-    .filter(
-      (issue) => issue.severity === "error" || issue.severity === "warning",
-    )
-    .map((issue) => ({
-      code: issue.code,
-      message: issue.message,
-      severity: issue.severity ?? "info",
-    }));
+  const healthIssues = filterHealthIssuesForAdmin(
+    (lastHealthCheck?.issues ?? [])
+      .filter(
+        (issue) => issue.severity === "error" || issue.severity === "warning",
+      )
+      .map((issue) => ({
+        code: issue.code,
+        message: issue.message,
+        severity: issue.severity ?? "info",
+      })),
+  );
 
   const dailyAudit = await loadDailyContentAudit();
   const manualReviewRaw = dailyAudit?.manualReview;
-  const manualReviewQueue = Array.isArray(manualReviewRaw)
-    ? (manualReviewRaw as Array<{
-        order?: number;
-        slug: string;
-        issues?: string[];
-        urls?: { en?: string; ko?: string; admin?: string };
-      }>).map((item, index) => ({
-        order: item.order ?? index + 1,
-        slug: item.slug,
-        issues: Array.isArray(item.issues) ? item.issues : [],
-        urls: {
-          en: item.urls?.en ?? "",
-          ko: item.urls?.ko ?? "",
-          admin: item.urls?.admin ?? "https://www.aipick.shop/admin",
-        },
-      }))
-    : [];
+  const manualReviewQueue = filterManualReviewQueue(
+    Array.isArray(manualReviewRaw)
+      ? (manualReviewRaw as Array<{
+          order?: number;
+          slug: string;
+          issues?: string[];
+          urls?: { en?: string; ko?: string; admin?: string };
+        }>).map((item, index) => ({
+          order: item.order ?? index + 1,
+          slug: item.slug,
+          issues: Array.isArray(item.issues) ? item.issues : [],
+          urls: {
+            en: item.urls?.en ?? "",
+            ko: item.urls?.ko ?? "",
+            admin: item.urls?.admin ?? "https://www.aipick.shop/admin",
+          },
+        }))
+      : [],
+  );
 
   const lastDailyContentAuditKst =
     typeof state.lastDailyContentAuditKst === "string"
@@ -348,7 +359,9 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
     targetDraftCount: TARGET_DRAFT_COUNT,
     cursorDraftNeeded,
     draftLabel,
-    needsReplenish: draftCount < TARGET_DRAFT_COUNT || cursorDraftPending,
+    needsReplenish:
+      (draftCount < TARGET_DRAFT_COUNT || cursorDraftPending) &&
+      !shouldHideReplenishBanner(request),
     replenishNote,
     cursorDraftPending,
     cursorDraftTopic,
@@ -397,6 +410,14 @@ async function validateForPublish(slug: string): Promise<string[]> {
   const { integrityIssuesFlat, runPublishIntegrityGate } = await import(
     "../scripts/lib/publish-integrity.mjs"
   );
+  try {
+    const { repairRelatedGuidesForPost } = await import(
+      "../scripts/lib/related-guides.mjs"
+    );
+    repairRelatedGuidesForPost(process.cwd(), slug, { includeDrafts: true });
+  } catch {
+    /* best-effort */
+  }
   const { state } = await loadAutomationState();
   const applyRepair = !usesRemotePostStore();
   const result = runPublishIntegrityGate(process.cwd(), slug, {
@@ -450,6 +471,7 @@ export async function publishPost(slug: string) {
       delete next.createdAt;
       return { data: next, content: repaired.body };
     });
+    void notifySelahimAipickSync({ slug, refillBuffer: false });
     return { mode: "github" as const };
   }
 
@@ -465,6 +487,7 @@ export async function publishPost(slug: string) {
     }
   }
   publishPostLocally(slug);
+  void notifySelahimAipickSync({ slug, refillBuffer: false });
   return { mode: "local" as const };
 }
 
@@ -485,10 +508,12 @@ export async function draftPost(slug: string) {
       },
       content,
     }));
+    void notifySelahimAipickSync({ slug, refillBuffer: false });
     return { mode: "github" as const };
   }
 
   draftPostLocally(slug);
+  void notifySelahimAipickSync({ slug, refillBuffer: false });
   return { mode: "local" as const };
 }
 
@@ -496,6 +521,7 @@ export async function deletePost(slug: string) {
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
     await deletePostOnGithub(slug);
+    void notifySelahimAipickSync({ slug, refillBuffer: false });
     return { mode: "github" as const };
   }
 
@@ -504,6 +530,7 @@ export async function deletePost(slug: string) {
   }
 
   deletePostLocally(slug);
+  void notifySelahimAipickSync({ slug, refillBuffer: false });
   return { mode: "local" as const };
 }
 
@@ -635,6 +662,7 @@ export async function saveAdminPostContent(
       `chore(admin): update HTML/content for ${slug}`,
       sha,
     );
+    void notifySelahimAipickSync({ slug, refillBuffer: false });
     return { mode: "github" };
   }
 
@@ -645,7 +673,92 @@ export async function saveAdminPostContent(
     nextMarkdown.endsWith("\n") ? nextMarkdown : `${nextMarkdown}\n`,
     "utf8",
   );
+  void notifySelahimAipickSync({ slug, refillBuffer: false });
   return { mode: "local" };
+}
+
+function slugifyManual(input: string): string {
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
+/** Admin manual write — excluded from automation buffer / scheduler counts. */
+export async function createManualPost(input: {
+  slug?: string;
+  titleEn: string;
+  titleKo?: string;
+  bodyEn?: string;
+  bodyKo?: string;
+}): Promise<{ slug: string; mode: "local" | "github" }> {
+  const titleEn = input.titleEn.trim();
+  if (!titleEn) throw new Error("titleEn is required");
+
+  const baseSlug = slugifyManual(input.slug?.trim() || titleEn);
+  if (!baseSlug) throw new Error("slug is required");
+
+  let slug = baseSlug;
+  let n = 2;
+  while (slugExists(slug)) {
+    slug = `${baseSlug}-${n}`;
+    n += 1;
+  }
+
+  const now = new Date().toISOString();
+  const date = kstDateString();
+  const shared = {
+    draft: true,
+    date,
+    createdAt: now,
+    updatedAt: now,
+    manualOrigin: true,
+    automationBuffer: false,
+    writingProvider: "manual",
+    contentProfile: "editorial",
+  };
+
+  const writeLocale = (locale: "en" | "ko", title: string, body: string) => {
+    writePostFile(
+      slug,
+      locale,
+      {
+        ...shared,
+        title,
+      },
+      body.trim() || `<p>${title}</p>`,
+    );
+  };
+
+  if (usesRemotePostStore()) {
+    assertGithubAdminConfigured();
+    for (const locale of ["en", "ko"] as const) {
+      const title = locale === "en" ? titleEn : (input.titleKo?.trim() || titleEn);
+      const body =
+        locale === "en"
+          ? (input.bodyEn?.trim() || `<p>${titleEn}</p>`)
+          : (input.bodyKo?.trim() || input.bodyEn?.trim() || `<p>${title}</p>`);
+      const serialized = matter.stringify(body, { ...shared, title });
+      await writeGithubFile(
+        `content/posts/${slug}/${locale}.md`,
+        serialized,
+        `admin: create manual ${slug} (${locale})`,
+      );
+    }
+    void notifySelahimAipickSync({ slug, refillBuffer: false });
+    return { slug, mode: "github" };
+  }
+
+  writeLocale("en", titleEn, input.bodyEn?.trim() || `<p>${titleEn}</p>`);
+  writeLocale(
+    "ko",
+    input.titleKo?.trim() || titleEn,
+    input.bodyKo?.trim() || input.bodyEn?.trim() || `<p>${input.titleKo?.trim() || titleEn}</p>`,
+  );
+  void notifySelahimAipickSync({ slug, refillBuffer: false });
+  return { slug, mode: "local" };
 }
 
 export async function uploadCoverImage(

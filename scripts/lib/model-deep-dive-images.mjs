@@ -92,14 +92,18 @@ const TOPIC_PRODUCT_QUERIES = {
 export function buildModelDeepDiveSearchQueries(model, topic) {
   const topicId = topic?.id ?? "";
   const brand = model?.brand ?? "";
+  const name = model?.name ?? "";
   const category = TOPIC_PRODUCT_QUERIES[topicId] ?? [
     topic?.imageQuery ?? "consumer electronics product photo",
     "gadget product photo desk",
   ];
 
+  // Brand+SKU first so stock fallback is model-biased (still gated by model-image-gate).
   return [
-    ...category,
+    brand && name ? `${brand} ${name} product photo` : null,
+    brand && name ? `${brand} ${name} ${category[0]}` : null,
     brand ? `${brand} ${category[0]}` : null,
+    ...category,
     "product photography electronics lifestyle",
   ].filter(Boolean);
 }

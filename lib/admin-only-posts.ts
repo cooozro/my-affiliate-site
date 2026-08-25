@@ -23,6 +23,7 @@ export function isAdminPublishBlocked(slug: string): boolean {
 
 export function isAutomationBufferDraft(row: AdminPostRow): boolean {
   if (!row.draft || ADMIN_DRAFT_EXCLUDE.has(row.slug)) return false;
+  if (row.manualOrigin === true) return false;
   // Selahim / editorial stubs: visible in admin, never fill publish buffer.
   if (row.automationBuffer === false) return false;
   return true;

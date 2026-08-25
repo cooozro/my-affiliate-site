@@ -33,12 +33,14 @@ export const MAX_DESCRIPTION_CHARS = 160;
 
 const FORBIDDEN_PATTERNS = FORBIDDEN_AD_PATTERNS;
 
-const METHODOLOGY_PATTERN =
-  /##\s*(분석 방법론|Analysis methodology|Methodology)/i;
-const EDITORS_NOTE_PATTERN =
-  /##\s*(Editorial Overview|편집부 개요)/i;
-const FINAL_VERDICT_PATTERN =
-  /##\s*(Final Verdict|최종 평가)/i;
+import {
+  countH2Sections,
+  countInBodyPostImages,
+  hasEditorialOverviewSection,
+  hasFinalVerdictSection,
+  hasMethodologySection,
+  hasRelatedGuidesSection,
+} from "./content-body-utils.mjs";
 const WHO_SHOULD_BUY_PATTERN =
   /(Who should buy|이런 분께 추천|이런 분에게 추천)/i;
 const WHO_SHOULD_SKIP_PATTERN =
@@ -212,15 +214,15 @@ function auditShared(root, slug, locale, raw, profile, options) {
     return issues;
   }
 
-  if (!METHODOLOGY_PATTERN.test(body)) {
+  if (!hasMethodologySection(body)) {
     issues.push(`${label}: missing methodology section (Google E-E-A-T)`);
   }
 
-  if (!EDITORS_NOTE_PATTERN.test(body)) {
+  if (!hasEditorialOverviewSection(body)) {
     issues.push(`${label}: missing Editorial Overview section`);
   }
 
-  if (!/##\s*(Related guides|관련 가이드)/i.test(body)) {
+  if (!hasRelatedGuidesSection(body)) {
     issues.push(`${label}: missing Related guides / 관련 가이드 internal links section`);
   }
 
@@ -230,7 +232,7 @@ function auditShared(root, slug, locale, raw, profile, options) {
 function auditBuyingGuide(body, label) {
   const issues = [];
 
-  const h2Count = (body.match(/^##\s+/gm) ?? []).length;
+  const h2Count = countH2Sections(body);
   if (h2Count < 4) {
     issues.push(`${label}: need at least 4 H2 sections (found ${h2Count})`);
   }
@@ -239,7 +241,7 @@ function auditBuyingGuide(body, label) {
     issues.push(`${label}: missing comparison table`);
   }
 
-  if (!FINAL_VERDICT_PATTERN.test(body)) {
+  if (!hasFinalVerdictSection(body)) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
@@ -273,12 +275,12 @@ function auditHeadToHead(body, label) {
 
   if (
     !/(Scenario winners|시나리오별 승자|Scenario winner)/i.test(body) &&
-    !FINAL_VERDICT_PATTERN.test(body)
+    !hasFinalVerdictSection(body)
   ) {
     issues.push(`${label}: missing Scenario winners or Final Verdict section`);
   }
 
-  if (!FINAL_VERDICT_PATTERN.test(body)) {
+  if (!hasFinalVerdictSection(body)) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
@@ -313,7 +315,7 @@ function auditScenarioGuide(body, label) {
     issues.push(`${label}: missing comparison table`);
   }
 
-  if (!FINAL_VERDICT_PATTERN.test(body)) {
+  if (!hasFinalVerdictSection(body)) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
@@ -345,7 +347,7 @@ function auditChecklist(body, label) {
     issues.push(`${label}: checklist needs at least 7 numbered items (found ${listItems})`);
   }
 
-  if (!FINAL_VERDICT_PATTERN.test(body)) {
+  if (!hasFinalVerdictSection(body)) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
@@ -356,7 +358,7 @@ function auditModelDeepDive(body, label, data = {}, options = {}) {
   const { locale = "en" } = options;
   const issues = [];
 
-  const h2Count = (body.match(/^##\s+/gm) ?? []).length;
+  const h2Count = countH2Sections(body);
   if (h2Count < 4) {
     issues.push(`${label}: model-deep-dive needs at least 4 H2 sections (found ${h2Count})`);
   }
@@ -400,12 +402,11 @@ function auditModelDeepDive(body, label, data = {}, options = {}) {
     issues.push(`${label}: missing Who should skip / 이런 분은 패스 section`);
   }
 
-  if (!FINAL_VERDICT_PATTERN.test(body)) {
+  if (!hasFinalVerdictSection(body)) {
     issues.push(`${label}: missing Final Verdict section`);
   }
 
-  const bodyImgs = (body.match(/!\[[^\]]*]\(\/images\/posts\/[^)]+\)/g) ?? [])
-    .length;
+  const bodyImgs = countInBodyPostImages(body);
   if (bodyImgs < 1) {
     issues.push(
       `${label}: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)`,

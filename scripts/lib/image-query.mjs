@@ -1615,6 +1615,12 @@ export function resolveImageContext(slug, input = {}) {
     seasonContext,
     requiredAnchors: requiredProductAnchors(productKeywords, topicCluster, topicId, slug),
     imageSearchKeywords: productKeywords,
+    contentProfile: meta.contentProfile ?? null,
+    modelPick: meta.modelPick ?? null,
+    modelPickBrand: meta.modelPickBrand ?? meta.modelPick?.primary?.brand ?? null,
+    modelPickName: meta.modelPickName ?? meta.modelPick?.primary?.name ?? null,
+    modelPickId: meta.modelPickId ?? meta.modelPick?.primary?.id ?? null,
+    modelImageRole: meta.modelImageRole ?? "cover",
   };
 }
 

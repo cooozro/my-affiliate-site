@@ -9,7 +9,6 @@ import path from "path";
 import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
-import { loadEnvFile } from "../lib/load-env.mjs";
 import { fetchCoverImage, fetchAdditionalImages } from "../lib/cover-image.mjs";
 import {
   buildModelDeepDiveAlts,
@@ -22,6 +21,7 @@ import {
 } from "../lib/press-kit-images.mjs";
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import { writePost } from "./posts-fs.mjs";
+import { passesModelDeepDiveCandidate } from "../lib/model-image-gate.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const siteRoot =
@@ -30,12 +30,11 @@ process.chdir(siteRoot);
 
 const slug = process.argv[2];
 if (!slug) {
-  console.error("Usage: node enrich-model-deep-dive-images.mjs <slug> [--fresh]");
+  console.error("Usage: node enrich-model-deep-dive-images.mjs <slug>");
   process.exit(1);
 }
 
 ensureImageApiEnv();
-loadEnvFile();
 
 const enPath = path.join(siteRoot, "content/posts", slug, "en.md");
 const koPath = path.join(siteRoot, "content/posts", slug, "ko.md");
@@ -48,20 +47,6 @@ const model = {
   nameKo: "갤럭시 Z 폴드6",
   id: en.data.modelPickId || "galaxy-z-fold-6",
 };
-
-if (process.argv.includes("--fresh")) {
-  const cacheFile = path.join(siteRoot, "data/automation/press-kit-cache.json");
-  if (fs.existsSync(cacheFile)) {
-    try {
-      const cache = JSON.parse(fs.readFileSync(cacheFile, "utf8"));
-      delete cache[String(model.id).toLowerCase()];
-      fs.writeFileSync(cacheFile, `${JSON.stringify(cache, null, 2)}\n`);
-      console.log("Press-kit cache cleared for", model.id);
-    } catch {
-      /* ignore */
-    }
-  }
-}
 const topic = {
   id: en.data.topicId || "flagship-smartphones",
   imageQuery: "flagship smartphone product photo",
@@ -81,6 +66,8 @@ const imageInput = {
   imageSearchKeywords: queries,
   topicId: topic.id,
   topic,
+  contentProfile: "model-deep-dive",
+  modelPick: { primary: model },
 };
 
 console.log("Enrich images for", slug, "→", model.brand, model.name);
@@ -111,6 +98,22 @@ if (pressCover) {
   if (coverMeta) {
     coverMeta.coverImageAlt = `${coverAlts.en} — ${baseAlts.en}`.slice(0, 200);
     coverMeta.coverImageAltKo = `${coverAlts.ko} — ${baseAlts.ko}`.slice(0, 200);
+    const gate = passesModelDeepDiveCandidate(
+      {
+        provider: coverMeta.coverImageProvider,
+        providerAlt: `${coverMeta.coverImageAlt} ${coverMeta.coverImageAltKo}`,
+        imageUrl: coverMeta.coverImageSourceUrl,
+      },
+      model,
+      { role: "cover" },
+    );
+    if (!gate.ok) {
+      console.error(`Cover rejected by model gate: ${gate.reason}`);
+      process.exit(2);
+    }
+  } else {
+    console.error("Cover missing after press-kit + stock — abort");
+    process.exit(2);
   }
   console.log("Cover: stock", coverMeta?.coverImage || "(none)");
 }
@@ -121,20 +124,40 @@ let stockFigures = [];
 if (needStock > 0) {
   const extras = await fetchAdditionalImages(
     slug,
-    { ...imageInput, imageQuery: queries[1] ?? queries[0] },
+    {
+      ...imageInput,
+      imageQuery: queries[1] ?? queries[0],
+      modelImageRole: "body",
+    },
     { count: needStock, filenamePrefix: "body", skipCurated: true },
   );
   const roles = ["lifestyle", "detail"];
-  stockFigures = extras.map((img, i) => {
-    const alts = buildModelDeepDiveAlts(model, topic.id, roles[i] ?? "detail");
-    return {
-      path: img.path,
-      altEn: alts.en,
-      altKo: alts.ko,
-      credit: img.credit,
-      source: "stock",
-    };
-  });
+  stockFigures = extras
+    .map((img, i) => {
+      const alts = buildModelDeepDiveAlts(model, topic.id, roles[i] ?? "detail");
+      const gate = passesModelDeepDiveCandidate(
+        {
+          provider: img.provider || "stock",
+          providerAlt: img.providerAlt || img.relevanceText || "",
+          imageUrl: img.sourceUrl || img.path,
+          searchQuery: img.searchQuery || "",
+        },
+        model,
+        { role: "body" },
+      );
+      if (!gate.ok) {
+        console.warn(`Body stock rejected: ${gate.reason}`);
+        return null;
+      }
+      return {
+        path: img.path,
+        altEn: alts.en,
+        altKo: alts.ko,
+        credit: img.credit,
+        source: "stock",
+      };
+    })
+    .filter(Boolean);
 }
 
 let figures = mergePressAndStockFigures(pressForBody, stockFigures, 2);

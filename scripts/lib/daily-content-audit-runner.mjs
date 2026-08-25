@@ -17,7 +17,7 @@ import {
 import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
 import { repairAllFaqSectionsWithLlm } from "./faq-section-repair.mjs";
-import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
+import { isOperationalAuditIssue } from "./admin-alert-filter.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
   process.cwd(),
@@ -112,6 +112,7 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
     if (!result.ok && !result.exempt && !result.neverPublish) {
       const issues = integrityIssuesFlat(result).filter(
         (issue) =>
+          !isOperationalAuditIssue(issue) &&
           !issue.includes("Related guides has") &&
           !issue.includes("English body too short"),
       );

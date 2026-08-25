@@ -39,6 +39,7 @@ import {
   fetchPressKitImages,
   parseModelsFromTitle,
 } from "./press-kit-images.mjs";
+import { passesModelDeepDiveCandidate } from "./model-image-gate.mjs";
 
 const PEXELS_SEARCH = "https://api.pexels.com/v1/search";
 const PIXABAY_SEARCH = "https://pixabay.com/api/";
@@ -132,17 +133,41 @@ function passesAnchorWithSearchQuery(altText, searchQuery, anchors) {
   return anchors.every((anchor) => query.includes(String(anchor).toLowerCase()));
 }
 
+function focusModelFromCtx(ctx) {
+  const primary = ctx?.modelPick?.primary;
+  if (primary?.brand && primary?.name) return primary;
+  if (ctx?.modelPickBrand && ctx?.modelPickName) {
+    return {
+      brand: ctx.modelPickBrand,
+      name: ctx.modelPickName,
+      id: ctx.modelPickId,
+    };
+  }
+  return null;
+}
+
 function rankText(candidates, ctx) {
   const anchors = ctx.requiredAnchors ?? [];
+  const focusModel = focusModelFromCtx(ctx);
+  const role = ctx.modelImageRole === "body" ? "body" : "cover";
   return candidates
     .filter((candidate) => {
       const altText =
         String(candidate.providerAlt ?? candidate.relevanceText ?? "").trim() ||
         String(candidate.searchQuery ?? "");
-      return (
-        passesAnchorWithSearchQuery(altText, candidate.searchQuery, anchors) &&
-        passesVacuumTypeAltGate(altText, ctx.topicId, ctx.slug)
-      );
+      if (
+        !(
+          passesAnchorWithSearchQuery(altText, candidate.searchQuery, anchors) &&
+          passesVacuumTypeAltGate(altText, ctx.topicId, ctx.slug)
+        )
+      ) {
+        return false;
+      }
+      if (focusModel && ctx.contentProfile === "model-deep-dive") {
+        const gate = passesModelDeepDiveCandidate(candidate, focusModel, { role });
+        if (!gate.ok) return false;
+      }
+      return true;
     })
     .map((candidate) => {
       const altBlob = (
@@ -164,6 +189,12 @@ function rankText(candidates, ctx) {
           textScore += 5;
           break;
         }
+      }
+      if (focusModel) {
+        const brand = String(focusModel.brand || "").toLowerCase();
+        const name = String(focusModel.name || "").toLowerCase();
+        if (brand && altBlob.includes(brand)) textScore += 8;
+        if (name && altBlob.includes(name)) textScore += 12;
       }
       return {
         ...candidate,
@@ -791,6 +822,8 @@ export async function fetchAdditionalImages(slug, queryOrContext, options = {}) 
         assetId: winner.assetId,
         sourceUrl: winner.imageUrl,
         searchQuery: winner.searchQuery,
+        providerAlt: winner.providerAlt ?? winner.relevanceText ?? "",
+        relevanceText: winner.relevanceText ?? winner.providerAlt ?? "",
       });
     } catch (error) {
       console.warn(`Body image download failed: ${error.message}`);

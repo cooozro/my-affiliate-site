@@ -3,7 +3,7 @@ import {
   canAccessAdmin,
   getAdminSessionFromCookies,
 } from "@/lib/admin-auth";
-import { getAdminAnalytics, getAutomationStatus, getAdminPosts, coverApisReady } from "@/lib/admin-actions";
+import { getAdminAnalytics, getAutomationStatus, getAdminPosts, coverApisReady, createManualPost } from "@/lib/admin-actions";
 import { isServerlessRuntime } from "@/lib/posts-admin";
 
 async function requireAdmin(request: Request) {
@@ -40,5 +40,35 @@ export async function GET(request: Request) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("Admin posts API error:", message);
     return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+export async function POST(request: Request) {
+  if (!(await requireAdmin(request))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  try {
+    const body = (await request.json()) as {
+      slug?: string;
+      titleEn?: string;
+      titleKo?: string;
+      bodyEn?: string;
+      bodyKo?: string;
+    };
+    if (!body.titleEn?.trim()) {
+      return NextResponse.json({ error: "titleEn required" }, { status: 400 });
+    }
+    const result = await createManualPost({
+      slug: body.slug,
+      titleEn: body.titleEn,
+      titleKo: body.titleKo,
+      bodyEn: body.bodyEn,
+      bodyKo: body.bodyKo,
+    });
+    return NextResponse.json({ ok: true, ...result });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Create failed";
+    return NextResponse.json({ error: message }, { status: 400 });
   }
 }

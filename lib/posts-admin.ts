@@ -22,6 +22,8 @@ export type AdminPostRow = {
   liveData: boolean;
   /** false = admin-visible draft that must not fill the publish buffer */
   automationBuffer?: boolean;
+  /** true = human-written in admin — excluded from scheduler write/publish counts */
+  manualOrigin?: boolean;
 };
 
 function sortAdminRows(rows: AdminPostRow[]): AdminPostRow[] {
@@ -73,6 +75,7 @@ export function listPostsForAdmin(): AdminPostRow[] {
       let createdAt: string | undefined;
       let liveData = false;
       let automationBuffer: boolean | undefined;
+      let manualOrigin: boolean | undefined;
 
       if (hasEn) {
         const en = readPostFile(slug, "en");
@@ -87,6 +90,9 @@ export function listPostsForAdmin(): AdminPostRow[] {
         liveData = Boolean(en.data.liveData);
         if (typeof en.data.automationBuffer === "boolean") {
           automationBuffer = en.data.automationBuffer;
+        }
+        if (en.data.manualOrigin === true || en.data.writingProvider === "manual") {
+          manualOrigin = true;
         }
       }
 
@@ -115,6 +121,7 @@ export function listPostsForAdmin(): AdminPostRow[] {
         hasKo,
         liveData,
         automationBuffer,
+        manualOrigin,
       };
     })
     .filter((row) => row.hasEn || row.hasKo);
@@ -131,6 +138,7 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
   let createdAt: string | undefined;
   let liveData = false;
   let automationBuffer: boolean | undefined;
+  let manualOrigin: boolean | undefined;
   let hasEn = false;
   let hasKo = false;
 
@@ -151,6 +159,9 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
         liveData = Boolean(data.liveData);
         if (typeof data.automationBuffer === "boolean") {
           automationBuffer = data.automationBuffer;
+        }
+        if (data.manualOrigin === true || data.writingProvider === "manual") {
+          manualOrigin = true;
         }
       }
       if (locale === "ko") {
@@ -183,6 +194,7 @@ async function buildAdminRowFromGithub(slug: string): Promise<AdminPostRow | nul
     hasKo,
     liveData,
     automationBuffer,
+    manualOrigin,
   };
 }
 

@@ -12,8 +12,13 @@ import {
   LEGACY_TEMPLATE_QUESTIONS_KO,
 } from "./faq-quality.mjs";
 
-export const FAQ_HEADING_RE =
-  /^##\s*(FAQ|자주 묻는 질문|Frequently [Aa]sked(?:\s+[Qq]uestions)?)\s*$/m;
+import {
+  extractFaqSectionBounds,
+  FAQ_MARKDOWN_RE,
+  hasFaqHeading,
+} from "./content-body-utils.mjs";
+
+export { FAQ_MARKDOWN_RE as FAQ_HEADING_RE };
 
 export const MIN_FAQ_BY_PROFILE = {
   "buying-guide": 3,
@@ -30,16 +35,6 @@ const TEMPLATE_FAQ_SIGNATURES = {
   en: LEGACY_TEMPLATE_QUESTIONS_EN,
 };
 
-function extractFaqSectionBounds(body) {
-  const start = body.search(FAQ_HEADING_RE);
-  if (start < 0) return null;
-
-  const afterHeading = body.slice(start);
-  const nextH2 = afterHeading.slice(1).search(/^##\s+/m);
-  const end = nextH2 >= 0 ? start + 1 + nextH2 : body.length;
-  return { start, end };
-}
-
 export function extractFaqSectionText(body) {
   const bounds = extractFaqSectionBounds(body);
   if (!bounds) return "";
@@ -49,7 +44,9 @@ export function extractFaqSectionText(body) {
 export function countFaqInBody(body) {
   const section = extractFaqSectionText(body);
   if (!section) return 0;
-  return (section.match(/^###\s+/gm) ?? []).length;
+  const md = (section.match(/^###\s+/gm) ?? []).length;
+  const html = (section.match(/<h3[^>]*>/gi) ?? []).length;
+  return Math.max(md, html);
 }
 
 export function isTemplatedFaqBody(body, locale) {
@@ -97,7 +94,7 @@ export function auditFaqSection(body, label, profile) {
   const minFaq = MIN_FAQ_BY_PROFILE[profile] ?? 0;
   if (minFaq <= 0) return [];
 
-  if (!FAQ_HEADING_RE.test(body)) {
+  if (!hasFaqHeading(body)) {
     return [`${label}: missing FAQ / 자주 묻는 질문 section`];
   }
 
