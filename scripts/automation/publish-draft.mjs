@@ -45,6 +45,7 @@ import {
   resetDailyCounters,
   saveState,
 } from "./state.mjs";
+import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.aipick.shop";
 
@@ -133,6 +134,12 @@ function publishSlug(slug) {
 export async function publishOneDraft(options = {}) {
   const { force = false } = options;
   const state = loadState();
+  if (!force && isSchedulerPaused(state)) {
+    console.log(
+      "Publish skipped: scheduler paused (set schedulerPaused=false in state.json or Selahim resume)",
+    );
+    return null;
+  }
   const stateBefore = JSON.stringify(state);
   const drafts = listDrafts();
 

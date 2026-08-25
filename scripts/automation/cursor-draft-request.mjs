@@ -17,6 +17,8 @@ import {
   prepareDraftStrategy,
 } from "../lib/guardian/content-strategy.mjs";
 import { loadEnvFile } from "../lib/load-env.mjs";
+import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
+import { loadState } from "./state.mjs";
 
 /**
  * Meta angles often reuse the same slugHint as an already-published post.
@@ -314,6 +316,10 @@ export async function ensurePublishableDraftBuffer() {
 /** Queue Cursor replenish when buffer is below target and no request is in flight. */
 export async function ensureDraftReplenishQueued(publishedSlug = null) {
   if (process.env.AUTOMATION_MODE !== "publish-only") {
+    return false;
+  }
+
+  if (isSchedulerPaused(loadState())) {
     return false;
   }
 

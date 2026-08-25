@@ -153,6 +153,7 @@
       ]
     }
   ],
+  "schedulerPaused": true,
   "lastHealthCheck": {
     "at": "2026-08-22T09:13:06.644Z",
     "issueCount": 2,
@@ -339,5 +340,7 @@
       "modelId": "sony-xg500",
       "at": "2026-08-20T08:41:11.267Z"
     }
-  ]
+  ],
+  "schedulerPausedAt": "2026-08-25T02:44:53.283Z",
+  "schedulerPausedReason": "Selahim scheduler stop — manual ops hold"
 }

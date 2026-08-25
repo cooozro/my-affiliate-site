@@ -51,6 +51,8 @@ import { notifySelahimAipickSync } from "@/lib/selahim-sync";
 
 export type AutomationStatus = {
   mode: "publish-only";
+  schedulerPaused: boolean;
+  schedulerPausedReason: string | null;
   draftCount: number;
   targetDraftCount: number;
   cursorDraftNeeded: number;
@@ -83,12 +85,15 @@ export type AutomationStatus = {
     reportUpdatedAt: string | null;
     publishedPostCount: number;
     formatMix: Array<{ profile: string; count: number; ratio: number }>;
+    formatRotationTarget: Array<{ profile: string; targetRatio: number }>;
+    formatDeckRemaining: string[];
     uniqueTopicCount: number;
     scheduler: {
       maxPublishPerDay: number;
       targetDraftCount: number;
       nextPublishAtKst: string | null;
       scheduledGapHours: number | null;
+      paused: boolean;
     };
     exposureChannels: string[];
     topicSelectionMethod: string[];
@@ -120,6 +125,7 @@ async function buildOperationsBrief(
   posts: AdminPostRow[],
   schedule: ReturnType<typeof previewPublishSchedule>,
   state: Record<string, unknown>,
+  schedulerPaused: boolean,
 ) {
   const published = posts.filter(
     (post) => !post.draft && !isAdminPublishBlocked(post.slug),
@@ -152,17 +158,36 @@ async function buildOperationsBrief(
     (p) => p.slug === "aipick-seo-precision-report",
   )?.updatedAt;
 
+  const { CONTENT_PROFILES } = await import(
+    "../scripts/lib/content-profiles.mjs"
+  );
+  const targetRatio = Math.round(100 / CONTENT_PROFILES.length);
+  const formatRotationTarget = CONTENT_PROFILES.map((profile: string) => ({
+    profile,
+    targetRatio,
+  }));
+  const formatDeckRemaining = Array.isArray(state.formatDeck)
+    ? (state.formatDeck as unknown[]).filter(
+        (p): p is string => typeof p === "string",
+      )
+    : [];
+
   return {
     reportSlug: "aipick-seo-precision-report",
     reportUpdatedAt: reportUpdatedAt ?? null,
     publishedPostCount: published.length,
     formatMix,
+    formatRotationTarget,
+    formatDeckRemaining,
     uniqueTopicCount,
     scheduler: {
       maxPublishPerDay: MAX_PUBLISH_PER_DAY,
       targetDraftCount: TARGET_DRAFT_COUNT,
-      nextPublishAtKst: schedule.nextPublishAtKst,
-      scheduledGapHours: schedule.scheduledGapHours,
+      nextPublishAtKst: schedulerPaused
+        ? "중단됨"
+        : schedule.nextPublishAtKst,
+      scheduledGapHours: schedulerPaused ? null : schedule.scheduledGapHours,
+      paused: schedulerPaused,
     },
     exposureChannels: [
       "Google Indexing API (EN/KO URL_UPDATED)",
@@ -305,15 +330,22 @@ async function revalidateManualReviewQueue(
   return kept.map((item, index) => ({ ...item, order: index + 1 }));
 }
 
+function isSchedulerPausedFromState(state: Record<string, unknown>): boolean {
+  if (process.env.AIPICK_SCHEDULER_PAUSED === "true") return true;
+  return state.schedulerPaused === true;
+}
+
 export async function getAutomationStatus(): Promise<AutomationStatus> {
   const { state, source: stateSource } = await loadAutomationState();
+  const schedulerPaused = isSchedulerPausedFromState(state);
   const schedule = previewPublishSchedule(state);
 
   const posts = await listPostsForAdminLive();
   const draftCount = countAutomationDrafts(posts);
 
   const request = await loadCursorDraftRequest();
-  const cursorDraftPending = request?.status === "pending";
+  const cursorDraftPending =
+    !schedulerPaused && request?.status === "pending";
   const cursorDraftTopic =
     typeof (request?.topic as { id?: string } | undefined)?.id === "string"
       ? (request?.topic as { id: string }).id
@@ -340,8 +372,9 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       ? Math.floor(cursorDraftPendingSinceMs / 60_000)
       : null;
 
-  const draftLabel =
-    cursorDraftPending && cursorDraftNeeded > 0
+  const draftLabel = schedulerPaused
+    ? `${draftCount} / ${TARGET_DRAFT_COUNT} · 스케줄러 중단`
+    : cursorDraftPending && cursorDraftNeeded > 0
       ? cursorDraftLastError
         ? `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 보충 재시도 중)`
         : cursorDraftPendingMinutes != null && cursorDraftPendingMinutes >= 20
@@ -349,7 +382,9 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
           : `${draftCount} / ${TARGET_DRAFT_COUNT} (+${cursorDraftNeeded} 작성 중)`
       : `${draftCount} / ${TARGET_DRAFT_COUNT}`;
 
-  const replenishNote = cursorDraftPending
+  const replenishNote = schedulerPaused
+    ? "발행·임시글 자동화가 중단되었습니다. Selahim MONITOR에서 스케줄러 실행 시 workflow_dispatch로만 동작합니다."
+    : cursorDraftPending
     ? cursorDraftLastError
       ? `Cursor API 보충이 실패해 GitHub Actions가 5분마다 재시도 중입니다${cursorDraftTopic ? ` (주제: ${cursorDraftTopic})` : ""}. OpenAI 키는 필요 없습니다 — 아래 실패 메시지를 확인하세요.`
       : cursorDraftPendingMinutes != null && cursorDraftPendingMinutes >= 20
@@ -407,27 +442,44 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
       : typeof dailyAudit?.dateKst === "string"
         ? dailyAudit.dateKst
         : null;
-  const operationsBrief = await buildOperationsBrief(posts, schedule, state);
+  const operationsBrief = await buildOperationsBrief(
+    posts,
+    schedule,
+    state,
+    schedulerPaused,
+  );
+
+  const schedulerPausedReason =
+    schedulerPaused && typeof state.schedulerPausedReason === "string"
+      ? state.schedulerPausedReason
+      : schedulerPaused
+        ? "Scheduler paused"
+        : null;
 
   return {
     mode: "publish-only",
+    schedulerPaused,
+    schedulerPausedReason,
     draftCount,
     targetDraftCount: TARGET_DRAFT_COUNT,
-    cursorDraftNeeded,
+    cursorDraftNeeded: schedulerPaused ? 0 : cursorDraftNeeded,
     draftLabel,
     needsReplenish:
+      !schedulerPaused &&
       (draftCount < TARGET_DRAFT_COUNT || cursorDraftPending) &&
       !shouldHideReplenishBanner(request),
     replenishNote,
     cursorDraftPending,
-    cursorDraftTopic,
-    cursorDraftPendingSince,
-    cursorDraftLastError,
-    nextPublishAt: schedule.nextPublishAt,
-    nextPublishAtKst: schedule.nextPublishAtKst,
-    scheduledGapHours: schedule.scheduledGapHours,
-    gapLabel: schedule.gapLabel,
-    slotOverdue: schedule.slotOverdue,
+    cursorDraftTopic: schedulerPaused ? null : cursorDraftTopic,
+    cursorDraftPendingSince: schedulerPaused ? null : cursorDraftPendingSince,
+    cursorDraftLastError: schedulerPaused ? null : cursorDraftLastError,
+    nextPublishAt: schedulerPaused ? null : schedule.nextPublishAt,
+    nextPublishAtKst: schedulerPaused
+      ? "중단됨 (Selahim dispatch only)"
+      : schedule.nextPublishAtKst,
+    scheduledGapHours: schedulerPaused ? null : schedule.scheduledGapHours,
+    gapLabel: schedulerPaused ? "—" : schedule.gapLabel,
+    slotOverdue: schedulerPaused ? false : schedule.slotOverdue,
     publishCountToday: schedule.publishCountToday,
     maxPublishPerDay: MAX_PUBLISH_PER_DAY,
     lastPublishAt:

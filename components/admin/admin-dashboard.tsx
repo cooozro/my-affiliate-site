@@ -66,6 +66,8 @@ type GaSummary = {
 
 type AutomationStatus = {
   mode: "publish-only";
+  schedulerPaused: boolean;
+  schedulerPausedReason: string | null;
   draftCount: number;
   targetDraftCount: number;
   cursorDraftNeeded: number;
@@ -98,12 +100,15 @@ type AutomationStatus = {
     reportUpdatedAt: string | null;
     publishedPostCount: number;
     formatMix: Array<{ profile: string; count: number; ratio: number }>;
+    formatRotationTarget: Array<{ profile: string; targetRatio: number }>;
+    formatDeckRemaining: string[];
     uniqueTopicCount: number;
     scheduler: {
       maxPublishPerDay: number;
       targetDraftCount: number;
       nextPublishAtKst: string | null;
       scheduledGapHours: number | null;
+      paused: boolean;
     };
     exposureChannels: string[];
     topicSelectionMethod: string[];
@@ -139,8 +144,11 @@ export function AdminDashboard() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const publishTriggerRef = useRef(false);
 
-  async function maybeTriggerOverduePublish(slotOverdue: boolean) {
-    if (!slotOverdue || publishTriggerRef.current) return;
+  async function maybeTriggerOverduePublish(
+    slotOverdue: boolean,
+    schedulerPaused: boolean,
+  ) {
+    if (!slotOverdue || schedulerPaused || publishTriggerRef.current) return;
 
     const storageKey = "admin-publish-slot-trigger";
     const last = Number(sessionStorage.getItem(storageKey) ?? "0");
@@ -193,7 +201,10 @@ export function AdminDashboard() {
     setPosts(data.posts);
     setAnalytics(data.analytics);
     setAutomation(data.automation);
-    void maybeTriggerOverduePublish(data.automation.slotOverdue);
+    void maybeTriggerOverduePublish(
+      data.automation.slotOverdue,
+      data.automation.schedulerPaused,
+    );
     setCoverApisReady(data.coverApisReady ?? true);
     setMutations(data.mutations ?? null);
     setLoading(false);
@@ -499,11 +510,18 @@ export function AdminDashboard() {
             />
             <MetricCard label="다음 간격" value={automation.gapLabel} />
           </div>
-          {automation.slotOverdue ? (
+          {automation.schedulerPaused ? (
+            <p className="mt-3 rounded-lg border border-violet-500/40 bg-violet-500/10 px-4 py-3 text-sm font-medium text-violet-800 dark:text-violet-200">
+              스케줄러 중단됨 — 자동 발행·임시글 보충 없음. Selahim MONITOR에서
+              스케줄러 실행 시 GitHub workflow_dispatch로만 동작합니다.
+              {automation.schedulerPausedReason
+                ? ` (${automation.schedulerPausedReason})`
+                : null}
+            </p>
+          ) : automation.slotOverdue ? (
             <p className="mt-3 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-600 dark:text-red-400">
-              예정 시각이 지났습니다. publish-slot 워크플로가 5분마다 catch-up
-              발행을 시도합니다. 지연 시 이 페이지 접속 시 워크플로를 자동으로
-              한 번 더 요청합니다.
+              예정 시각이 지났습니다. Selahim에서 publish-slot을 dispatch하거나
+              이 페이지 접속 시 workflow를 한 번 요청합니다 (자동 cron 없음).
             </p>
           ) : null}
           {automation.healthIssues && automation.healthIssues.length > 0 ? (
@@ -595,11 +613,15 @@ export function AdminDashboard() {
                 ? "GitHub Actions가 pending 신청을 재시도합니다 (DeepSeek → Cursor → OpenAI, PC 불필요)."
                 : "아직 작성 요청 전이면 다음 publish-slot에서 자동 등록됩니다."}
             </p>
+          ) : automation.schedulerPaused ? (
+            <p className="mt-4 text-sm text-muted-foreground">
+              {automation.replenishNote}
+            </p>
           ) : (
             <p className="mt-4 text-sm text-muted-foreground">
-              임시글 보관함 버퍼가 충분합니다. publish-slot 워크플로가 5분마다 자동
-              발행을 확인합니다. 아래 Posts에서 Draft 배지 글을 Preview로 검토한 뒤
-              발행 여부를 판단하세요.
+              임시글 보관함 버퍼가 충분합니다. Selahim 스케줄러 실행 시
+              publish-slot workflow_dispatch로 발행합니다. 아래 Posts에서 Draft
+              배지 글을 Preview로 검토한 뒤 발행 여부를 판단하세요.
             </p>
           )}
           {pinnedBufferSlugs.length > 0 ? (
@@ -660,7 +682,7 @@ export function AdminDashboard() {
               스케줄: 다음 발행 {automation.operationsBrief.scheduler.nextPublishAtKst ?? "미정"} / 간격{" "}
               {automation.operationsBrief.scheduler.scheduledGapHours ?? "—"}h
             </p>
-            <p className="mt-3 text-xs font-medium">포맷 비율 (published)</p>
+            <p className="mt-3 text-xs font-medium">포맷 비율 — 누적 발행 (legacy)</p>
             <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
               {automation.operationsBrief.formatMix.map((item) => (
                 <li key={item.profile}>
@@ -668,6 +690,24 @@ export function AdminDashboard() {
                 </li>
               ))}
             </ul>
+            <p className="mt-3 text-xs font-medium">
+              작성 로테이션 목표 (6포맷 균등 ~
+              {automation.operationsBrief.formatRotationTarget[0]?.targetRatio ?? 17}
+              % each, model-deep-dive 포함)
+            </p>
+            <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
+              {automation.operationsBrief.formatRotationTarget.map((item) => (
+                <li key={item.profile}>
+                  {item.profile}: 목표 ~{item.targetRatio}%
+                </li>
+              ))}
+            </ul>
+            {automation.operationsBrief.formatDeckRemaining.length > 0 ? (
+              <p className="mt-2 text-xs text-muted-foreground">
+                다음 formatDeck:{" "}
+                {automation.operationsBrief.formatDeckRemaining.join(" → ")}
+              </p>
+            ) : null}
             <p className="mt-3 text-xs font-medium">주제 선정 로직</p>
             <ul className="mt-1 list-inside list-disc text-xs text-muted-foreground">
               {automation.operationsBrief.topicSelectionMethod.map((item) => (

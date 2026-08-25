@@ -19,6 +19,7 @@ const DEFAULT_STATE = {
   writeCountToday: 0,
   writeDateKst: null,
   history: [],
+  schedulerPaused: false,
 };
 
 export function loadState() {
