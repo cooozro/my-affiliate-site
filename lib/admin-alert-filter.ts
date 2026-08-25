@@ -16,13 +16,29 @@ export function isOperationalAuditIssue(issue: string): boolean {
   return OFF_SEASON_RE.test(issue);
 }
 
+/** Publish gate treats these as repairable — already-live posts need not block admin banners. */
+export const REPAIRABLE_PUBLISH_ISSUE_RE =
+  /in-body product\/lifestyle image|Who should buy|이런 분께 추천|Who should skip|이런 분은 패스/i;
+
+export function isRepairablePublishIssue(issue: string): boolean {
+  return REPAIRABLE_PUBLISH_ISSUE_RE.test(issue);
+}
+
+const AUDIT_ISSUE_NOISE_RE = /Related guides has|English body too short/i;
+
+export function isManualReviewNoiseIssue(issue: string): boolean {
+  return (
+    isOperationalAuditIssue(issue) || AUDIT_ISSUE_NOISE_RE.test(issue)
+  );
+}
+
 export function filterManualReviewQueue<
   T extends { issues: string[] },
 >(items: T[]): T[] {
   return items
     .map((item) => ({
       ...item,
-      issues: item.issues.filter((issue) => !isOperationalAuditIssue(issue)),
+      issues: item.issues.filter((issue) => !isManualReviewNoiseIssue(issue)),
     }))
     .filter((item) => item.issues.length > 0);
 }

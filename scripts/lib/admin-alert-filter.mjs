@@ -21,12 +21,26 @@ export function isOperationalAuditIssue(issue) {
   return OFF_SEASON_RE.test(text);
 }
 
+export const REPAIRABLE_PUBLISH_ISSUE_RE =
+  /in-body product\/lifestyle image|Who should buy|이런 분께 추천|Who should skip|이런 분은 패스/i;
+
+export function isRepairablePublishIssue(issue) {
+  return REPAIRABLE_PUBLISH_ISSUE_RE.test(String(issue ?? ""));
+}
+
+const AUDIT_ISSUE_NOISE_RE = /Related guides has|English body too short/i;
+
+export function isManualReviewNoiseIssue(issue) {
+  const text = String(issue ?? "");
+  return isOperationalAuditIssue(text) || AUDIT_ISSUE_NOISE_RE.test(text);
+}
+
 export function filterManualReviewQueue(items) {
   if (!Array.isArray(items)) return [];
   return items
     .map((item) => {
       const issues = (item.issues ?? []).filter(
-        (issue) => !isOperationalAuditIssue(issue),
+        (issue) => !isManualReviewNoiseIssue(issue),
       );
       return { ...item, issues };
     })

@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
 import { listPublishedSlugs } from "./content-quality.mjs";
+import { hasRelatedGuidesSection } from "./content-body-utils.mjs";
 
 export const MAX_RELATED_GUIDE_LINKS = 5;
 export const MIN_RELATED_GUIDE_LINKS = 3;
@@ -248,6 +249,11 @@ export function repairRelatedGuidesInBody(
 ) {
   const repairs = [];
   if (!index.has(slug)) {
+    return { body, repairs, changed: false };
+  }
+
+  // HTML drafts already carry Related guides — skip markdown insertion (prevents duplicate H2).
+  if (hasRelatedGuidesSection(body) && /<html[\s>]|<h2[\s>]/i.test(body)) {
     return { body, repairs, changed: false };
   }
 

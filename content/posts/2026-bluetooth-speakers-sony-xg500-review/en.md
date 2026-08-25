@@ -28,7 +28,7 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://electronics.sony.com/'
-updatedAt: '2026-08-25T11:22:43.000Z'
+updatedAt: '2026-08-25T02:33:14.285Z'
 publishedAt: '2026-08-25T11:22:43.000Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001

@@ -262,12 +262,12 @@
       "at": "2026-08-22T02:33:09.051Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-22",
+  "lastDailyContentAuditKst": "2026-08-25",
   "lastDailyContentAudit": {
-    "at": "2026-08-22T02:35:00.812Z",
+    "at": "2026-08-25T02:35:17.155Z",
     "postsScanned": 65,
     "autoRepairCount": 32,
-    "manualReviewCount": 5
+    "manualReviewCount": 0
   },
   "formatDeck": [
     "checklist",

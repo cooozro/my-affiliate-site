@@ -41,6 +41,8 @@ import {
 import {
   filterHealthIssuesForAdmin,
   filterManualReviewQueue,
+  isManualReviewNoiseIssue,
+  isRepairablePublishIssue,
   shouldHideReplenishBanner,
 } from "@/lib/admin-alert-filter";
 import matter from "gray-matter";
@@ -252,6 +254,57 @@ async function loadDailyContentAudit(): Promise<Record<string, unknown> | null> 
   return readLocalJson(localPath);
 }
 
+type ManualReviewItem = {
+  order: number;
+  slug: string;
+  issues: string[];
+  urls: { en: string; ko: string; admin: string };
+};
+
+/** Re-check queued slugs with current integrity gate — stale audit JSON must not mislead admin. */
+async function revalidateManualReviewQueue(
+  items: ManualReviewItem[],
+  posts: AdminPostRow[],
+): Promise<ManualReviewItem[]> {
+  if (items.length === 0) return [];
+
+  const { integrityIssuesFlat, runPublishIntegrityGate } = await import(
+    "../scripts/lib/publish-integrity.mjs"
+  );
+  const draftBySlug = new Map(posts.map((post) => [post.slug, post.draft]));
+  const kept: ManualReviewItem[] = [];
+
+  for (const item of items) {
+    const draft = draftBySlug.get(item.slug) ?? true;
+    const phase = draft ? "draft" : "publish";
+    try {
+      const result = runPublishIntegrityGate(process.cwd(), item.slug, {
+        phase,
+        applyRepair: false,
+      });
+      if (result.ok || result.exempt || result.neverPublish) continue;
+
+      let issues = integrityIssuesFlat(result).filter(
+        (issue) => !isManualReviewNoiseIssue(issue),
+      );
+      if (
+        !draft &&
+        issues.length > 0 &&
+        issues.every((issue) => isRepairablePublishIssue(issue))
+      ) {
+        continue;
+      }
+      if (issues.length === 0) continue;
+
+      kept.push({ ...item, issues });
+    } catch {
+      /* drop unreadable slugs */
+    }
+  }
+
+  return kept.map((item, index) => ({ ...item, order: index + 1 }));
+}
+
 export async function getAutomationStatus(): Promise<AutomationStatus> {
   const { state, source: stateSource } = await loadAutomationState();
   const schedule = previewPublishSchedule(state);
@@ -325,24 +378,27 @@ export async function getAutomationStatus(): Promise<AutomationStatus> {
 
   const dailyAudit = await loadDailyContentAudit();
   const manualReviewRaw = dailyAudit?.manualReview;
-  const manualReviewQueue = filterManualReviewQueue(
-    Array.isArray(manualReviewRaw)
-      ? (manualReviewRaw as Array<{
-          order?: number;
-          slug: string;
-          issues?: string[];
-          urls?: { en?: string; ko?: string; admin?: string };
-        }>).map((item, index) => ({
-          order: item.order ?? index + 1,
-          slug: item.slug,
-          issues: Array.isArray(item.issues) ? item.issues : [],
-          urls: {
-            en: item.urls?.en ?? "",
-            ko: item.urls?.ko ?? "",
-            admin: item.urls?.admin ?? "https://www.aipick.shop/admin",
-          },
-        }))
-      : [],
+  const manualReviewQueue = await revalidateManualReviewQueue(
+    filterManualReviewQueue(
+      Array.isArray(manualReviewRaw)
+        ? (manualReviewRaw as Array<{
+            order?: number;
+            slug: string;
+            issues?: string[];
+            urls?: { en?: string; ko?: string; admin?: string };
+          }>).map((item, index) => ({
+            order: item.order ?? index + 1,
+            slug: item.slug,
+            issues: Array.isArray(item.issues) ? item.issues : [],
+            urls: {
+              en: item.urls?.en ?? "",
+              ko: item.urls?.ko ?? "",
+              admin: item.urls?.admin ?? "https://www.aipick.shop/admin",
+            },
+          }))
+        : [],
+    ),
+    posts,
   );
 
   const lastDailyContentAuditKst =

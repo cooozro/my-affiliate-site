@@ -1,6 +1,6 @@
 {
-  "dateKst": "2026-08-22",
-  "scannedAt": "2026-08-22T02:35:00.812Z",
+  "dateKst": "2026-08-25",
+  "scannedAt": "2026-08-25T02:35:17.155Z",
   "postsScanned": 65,
   "autoRepairCount": 32,
   "autoRepairs": [
@@ -127,92 +127,6 @@
       ]
     }
   ],
-  "manualReviewCount": 5,
-  "manualReview": [
-    {
-      "order": 1,
-      "slug": "2026-bluetooth-speakers-sony-xg500-review",
-      "phase": "draft",
-      "issues": [
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: need at least 3 H2 sections (found 0)",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing methodology section (Google E-E-A-T)",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Editorial Overview section",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Related guides / 관련 가이드 internal links section",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: model-deep-dive needs at least 4 H2 sections (found 0)",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing Final Verdict section",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)",
-        "2026-bluetooth-speakers-sony-xg500-review/en.md: missing FAQ / 자주 묻는 질문 section",
-        "2026-bluetooth-speakers-sony-xg500-review/ko.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-bluetooth-speakers-sony-xg500-review",
-        "ko": "https://www.aipick.shop/ko/blog/2026-bluetooth-speakers-sony-xg500-review",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-bluetooth-speakers-sony-xg500-review?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-bluetooth-speakers-sony-xg500-review?locale=ko"
-      }
-    },
-    {
-      "order": 2,
-      "slug": "2026-dehumidifiers-midea-mad50c1-review",
-      "phase": "publish",
-      "issues": [
-        "2026-dehumidifiers-midea-mad50c1-review/en.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)",
-        "2026-dehumidifiers-midea-mad50c1-review/ko.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-dehumidifiers-midea-mad50c1-review",
-        "ko": "https://www.aipick.shop/ko/blog/2026-dehumidifiers-midea-mad50c1-review",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-dehumidifiers-midea-mad50c1-review?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-dehumidifiers-midea-mad50c1-review?locale=ko"
-      }
-    },
-    {
-      "order": 3,
-      "slug": "2026-window-ac-lg-lw1217ersm-review",
-      "phase": "publish",
-      "issues": [
-        "2026-window-ac-lg-lw1217ersm-review/en.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)",
-        "2026-window-ac-lg-lw1217ersm-review/ko.md: model-deep-dive needs ≥1 in-body product/lifestyle image with ALT (pipeline stock)"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-window-ac-lg-lw1217ersm-review",
-        "ko": "https://www.aipick.shop/ko/blog/2026-window-ac-lg-lw1217ersm-review",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-window-ac-lg-lw1217ersm-review?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-window-ac-lg-lw1217ersm-review?locale=ko"
-      }
-    },
-    {
-      "order": 4,
-      "slug": "electric-blanket-safety-timers-wash-care-2026",
-      "phase": "publish",
-      "issues": [
-        "electric-blanket-safety-timers-wash-care-2026: off-season topic electric-blankets for summer (KST) — blocked until in-season"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/electric-blanket-safety-timers-wash-care-2026",
-        "ko": "https://www.aipick.shop/ko/blog/electric-blanket-safety-timers-wash-care-2026",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/electric-blanket-safety-timers-wash-care-2026?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/electric-blanket-safety-timers-wash-care-2026?locale=ko"
-      }
-    },
-    {
-      "order": 5,
-      "slug": "humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-      "phase": "publish",
-      "issues": [
-        "humidifier-types-explained-ultrasonic-evaporative-mold-prevention: off-season topic humidifiers for summer (KST) — blocked until in-season"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-        "ko": "https://www.aipick.shop/ko/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/humidifier-types-explained-ultrasonic-evaporative-mold-prevention?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/humidifier-types-explained-ultrasonic-evaporative-mold-prevention?locale=ko"
-      }
-    }
-  ]
+  "manualReviewCount": 0,
+  "manualReview": []
 }
