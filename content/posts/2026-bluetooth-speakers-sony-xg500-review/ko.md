@@ -3,14 +3,14 @@ title: '소니 SRS-XG500 리뷰: 30시간 배터리와 IP66 파티 사운드 —
 description: >-
   소니 SRS-XG500 리뷰: 30시간 배터리, IP66 방진방수, 마이크 입력. 야외 여름 파티용으로 JBL Charge 6와 비교한
   솔직한 평가.
-date: '2026-08-21'
+date: '2026-08-25'
 tags:
   - 소니 SRS-XG500
   - 휴대용 블루투스 스피커
   - 파티 스피커
   - JBL Charge 6
   - IP66 스피커
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -26,8 +26,8 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://electronics.sony.com/'
-updatedAt: '2026-08-25T02:22:29.741Z'
-publishedAt: '2026-08-21T01:52:46.207Z'
+updatedAt: '2026-08-25T11:22:43.000Z'
+publishedAt: '2026-08-25T11:22:43.000Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001
 coverImageSourceUrl: >-

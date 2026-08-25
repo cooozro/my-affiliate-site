@@ -3,14 +3,14 @@ title: 'Sony SRS-XG500 Review: 30-Hour Battery and IP66 Party Sound — Honest V
 description: >-
   We review the Sony SRS-XG500: 30-hour battery, IP66 build, karaoke input, and
   how it compares with JBL Charge 6 for outdoor summer parties.
-date: '2026-08-21'
+date: '2026-08-25'
 tags:
   - Sony SRS-XG500
   - portable Bluetooth speaker
   - party speaker
   - JBL Charge 6
   - IP66 speaker
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -28,8 +28,8 @@ modelPickId: sony-xg500
 modelPickBrand: Sony
 modelPickName: SRS-XG500
 pressKitGallery: 'https://electronics.sony.com/'
-updatedAt: '2026-08-21T09:24:45.858Z'
-publishedAt: '2026-08-21T01:52:46.207Z'
+updatedAt: '2026-08-25T11:22:43.000Z'
+publishedAt: '2026-08-25T11:22:43.000Z'
 createdAt: '2026-08-21T07:13:42.314Z'
 coverImageAssetId: 13658001
 coverImageSourceUrl: >-
