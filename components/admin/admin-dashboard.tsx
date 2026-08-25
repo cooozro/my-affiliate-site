@@ -10,7 +10,6 @@ import {
 } from "@/lib/admin-only-posts";
 import { TARGET_DRAFT_COUNT } from "@/lib/publish-schedule";
 import { AdminHtmlEditorModal } from "@/components/admin/admin-html-editor-modal";
-import { AdminManualPostModal } from "@/components/admin/admin-manual-post-modal";
 
 type AdminPostRow = {
   slug: string;
@@ -33,6 +32,7 @@ type AdminPostRow = {
   coverFlagReason?: string;
   coverImageProvider?: string;
   coverImageAssetId?: string | number;
+  manualOrigin?: boolean;
 };
 
 function adminWrittenDateLabel(post: AdminPostRow): string {
@@ -134,7 +134,6 @@ export function AdminDashboard() {
     locale: "en" | "ko";
     title: string;
   } | null>(null);
-  const [manualPostOpen, setManualPostOpen] = useState(false);
   const [uploadSlug, setUploadSlug] = useState<string | null>(null);
   const [imageVersion, setImageVersion] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -708,7 +707,13 @@ export function AdminDashboard() {
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
-              onClick={() => setManualPostOpen(true)}
+              onClick={() => {
+                window.open(
+                  "/admin/write",
+                  "_blank",
+                  "noopener,noreferrer,width=1200,height=900",
+                );
+              }}
               className="rounded-lg border border-violet-500/50 bg-violet-500/15 px-3 py-1.5 text-xs font-medium text-violet-800 dark:text-violet-200"
             >
               수동 글쓰기
@@ -823,19 +828,35 @@ export function AdminDashboard() {
                   </td>
                   <td className="px-3 py-3">
                     <div className="flex flex-wrap gap-2">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setHtmlEditor({
-                            slug: post.slug,
-                            locale: previewLocale,
-                            title: post.titleKo || post.titleEn || post.slug,
-                          })
-                        }
-                        className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
-                      >
-                        수정
-                      </button>
+                      {post.manualOrigin ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            window.open(
+                              `/admin/write/${post.slug}`,
+                              "_blank",
+                              "noopener,noreferrer,width=1200,height=900",
+                            );
+                          }}
+                          className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
+                        >
+                          수동편집
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setHtmlEditor({
+                              slug: post.slug,
+                              locale: previewLocale,
+                              title: post.titleKo || post.titleEn || post.slug,
+                            })
+                          }
+                          className="rounded border border-violet-500/50 bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-800 hover:bg-violet-500/25 dark:text-violet-200"
+                        >
+                          수정
+                        </button>
+                      )}
                       <button
                         type="button"
                         disabled={htmlCopyBusy === post.slug}
@@ -961,20 +982,6 @@ export function AdminDashboard() {
           </table>
         </div>
       </section>
-
-      <AdminManualPostModal
-        open={manualPostOpen}
-        onClose={() => setManualPostOpen(false)}
-        onCreated={(slug) => {
-          setMessage(`수동 글 생성됨: ${slug}`);
-          setError("");
-          void loadData();
-        }}
-        onError={(msg) => {
-          setError(msg);
-          setMessage("");
-        }}
-      />
 
       <AdminHtmlEditorModal
         open={Boolean(htmlEditor)}

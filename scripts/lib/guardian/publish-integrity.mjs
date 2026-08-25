@@ -138,7 +138,11 @@ function countRelatedGuideLinks(body) {
   );
   const section = mdSection?.[0] ?? htmlSection?.[0] ?? "";
   if (!section) return 0;
-  return (section.match(INTERNAL_BLOG_LINK_RE) ?? []).length;
+  const mdLinks = section.match(INTERNAL_BLOG_LINK_RE) ?? [];
+  const htmlLinks =
+    section.match(/<a[^>]+href=["']\/(en|ko)\/blog\/[a-z0-9][a-z0-9-]*["']/gi) ??
+    [];
+  return mdLinks.length + htmlLinks.length;
 }
 
 function kstYear() {
