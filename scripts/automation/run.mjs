@@ -44,7 +44,7 @@ async function main() {
     case "buffer":
       if (publishOnly) {
         console.log(
-          `Publish-only mode: draft buffer is ${countDrafts()}/2. Add drafts via Cursor.`,
+          `Publish-only mode: draft buffer is ${countDrafts()}/${TARGET_DRAFT_COUNT}. Add drafts via Cursor.`,
         );
         break;
       }

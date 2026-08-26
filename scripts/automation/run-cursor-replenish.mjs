@@ -45,7 +45,7 @@ import {
   validateDraftPublishReady,
   writePost,
 } from "./posts-fs.mjs";
-import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
+import { TARGET_DRAFT_COUNT, isDeepseekDiscountUtc } from "../lib/publish-schedule.mjs";
 import { loadEnvFile } from "../lib/load-env.mjs";
 import {
   formatOutlineForPrompt,
@@ -525,6 +525,13 @@ function releaseReplenishLock() {
 
 async function main() {
   loadEnvFile();
+
+  if (!isDeepseekDiscountUtc()) {
+    console.log(
+      "Replenish skipped: outside DeepSeek discount window (UTC 16:30–00:30 / KST 01:30–09:30) — request stays pending",
+    );
+    return;
+  }
 
   let request = readCursorDraftRequest();
   if (!request || request.status !== "pending") {

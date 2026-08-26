@@ -18,7 +18,6 @@ import {
 } from "../lib/guardian/content-strategy.mjs";
 import { loadEnvFile } from "../lib/load-env.mjs";
 import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
-import { loadState } from "./state.mjs";
 
 /**
  * Meta angles often reuse the same slugHint as an already-published post.

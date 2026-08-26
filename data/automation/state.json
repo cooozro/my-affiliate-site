@@ -11,12 +11,12 @@
     "tablet-budget"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-25T00:19:58.527Z",
-  "scheduledGapHours": 4.67,
+  "nextPublishAt": "2026-08-27T02:00:00.000Z",
+  "scheduledGapHours": 5,
   "publishCountToday": 0,
-  "publishDateKst": "2026-08-25",
+  "publishDateKst": "2026-08-26",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-22",
+  "writeDateKst": "2026-08-26",
   "history": [
     {
       "action": "publish",
@@ -153,23 +153,21 @@
       ]
     }
   ],
-  "schedulerPaused": true,
+  "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-22T09:13:06.644Z",
-    "issueCount": 2,
+    "at": "2026-08-26T10:14:12.106Z",
+    "issueCount": 1,
     "issues": [
       {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 6183min",
-        "severity": "warning"
+        "code": "low-draft-buffer",
+        "message": "Draft buffer 0/6",
+        "severity": "info"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "2026-bluetooth-speakers-sony-xg500-review/en.md: publishedAt 2026-08-25T11:22:43.000Z → 2026-08-21T01:52:46.207Z",
+      "2026-bluetooth-speakers-sony-xg500-review/ko.md: publishedAt 2026-08-25T11:22:43.000Z → 2026-08-21T01:52:46.207Z"
+    ]
   },
   "topicHistory": [
     {
@@ -340,7 +338,5 @@
       "modelId": "sony-xg500",
       "at": "2026-08-20T08:41:11.267Z"
     }
-  ],
-  "schedulerPausedAt": "2026-08-25T02:44:53.283Z",
-  "schedulerPausedReason": "Selahim scheduler stop — manual ops hold"
+  ]
 }

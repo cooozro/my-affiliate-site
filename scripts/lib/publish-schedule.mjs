@@ -1,7 +1,13 @@
 export const MAX_PUBLISH_PER_DAY = 1;
-export const TARGET_DRAFT_COUNT = 1;
+/** Ready drafts waiting to go live — filled during the DeepSeek discount window. */
+export const TARGET_DRAFT_COUNT = 6;
 export const MIN_PUBLISH_GAP_HOURS = 4;
 export const MAX_PUBLISH_GAP_HOURS = 6;
+/** Off-peak DeepSeek window (UTC). Wraps midnight: 16:30 → 00:30. */
+export const DEEPSEEK_DISCOUNT_UTC_START =
+  process.env.DEEPSEEK_DISCOUNT_UTC_START?.trim() || "16:30";
+export const DEEPSEEK_DISCOUNT_UTC_END =
+  process.env.DEEPSEEK_DISCOUNT_UTC_END?.trim() || "00:30";
 /** First publish anchor each KST day (06:00) plus a 4–6h random offset. */
 export const KST_DAY_START_HOUR = 6;
 
@@ -42,6 +48,25 @@ export function randomFirstSlotOffsetMs() {
 export function kstDayAnchorUtc(dateString, hour = KST_DAY_START_HOUR) {
   const { year, month, day } = parseKstDateString(dateString);
   return kstWallClockToUtc(year, month, day, hour, 0);
+}
+
+function parseUtcHm(value) {
+  const [hour, minute] = String(value ?? "")
+    .split(":")
+    .map((part) => Number(part));
+  const h = Number.isFinite(hour) ? hour : 0;
+  const m = Number.isFinite(minute) ? minute : 0;
+  return h * 60 + m;
+}
+
+/** True during DeepSeek off-peak hours (default 16:30–00:30 UTC = 01:30–09:30 KST). */
+export function isDeepseekDiscountUtc(date = new Date()) {
+  const start = parseUtcHm(DEEPSEEK_DISCOUNT_UTC_START);
+  const end = parseUtcHm(DEEPSEEK_DISCOUNT_UTC_END);
+  const minutes = date.getUTCHours() * 60 + date.getUTCMinutes();
+  if (start === end) return true;
+  if (start < end) return minutes >= start && minutes < end;
+  return minutes >= start || minutes < end;
 }
 
 /** 주6일 — 일요일만 휴무 (토요일 포함). */

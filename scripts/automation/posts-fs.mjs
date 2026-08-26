@@ -81,6 +81,9 @@ export function listDrafts() {
     if (isNeverPublishSlug(slug)) continue;
 
     const en = readPost(slug, "en");
+    if (isNeverPublishSlug(slug)) continue;
+    if (en.data.automationBuffer === false) continue;
+    if (en.data.tags?.includes?.("internal")) continue;
     if (!en.data.draft) continue;
     if (en.data.automationBuffer === false) continue;
     if (en.data.tags?.includes?.("internal")) continue;

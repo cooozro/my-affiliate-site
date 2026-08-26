@@ -41,9 +41,10 @@ import {
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
 import {
-  MAX_PUBLISH_PER_DAY,
   TARGET_DRAFT_COUNT,
+  isDeepseekDiscountUtc,
 } from "../lib/publish-schedule.mjs";
+import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
 import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../lib/season-topics.mjs";
 import {
   formatStockCaption,
@@ -52,8 +53,8 @@ import {
 } from "../lib/site-engine/index.mjs";
 import { pickSectionSkeleton } from "../lib/variants/section-skeletons.mjs";
 
-/** Writes track publish cadence: one ready draft waiting after each go-live. */
-const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
+/** Fill the 6-draft buffer during the DeepSeek discount window (not 1 write/day). */
+const MAX_WRITES_PER_DAY = TARGET_DRAFT_COUNT;
 const TARGET_DRAFT_BUFFER = TARGET_DRAFT_COUNT;
 
 /**
@@ -178,6 +179,18 @@ export async function generateOneDraft(options = {}) {
   const { bypassWriteCap = false } = options;
   const state = loadState();
   resetDailyCounters(state);
+
+  if (!bypassWriteCap && isSchedulerPaused(state)) {
+    console.log("Write skipped: scheduler paused");
+    return null;
+  }
+
+  if (!bypassWriteCap && !isDeepseekDiscountUtc()) {
+    console.log(
+      "Write skipped: outside DeepSeek discount window (UTC 16:30–00:30 / KST 01:30–09:30)",
+    );
+    return null;
+  }
 
   if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
     console.log(`Daily write limit reached (${MAX_WRITES_PER_DAY}/day KST)`);
@@ -574,8 +587,20 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 }
 
 export async function maintainDraftBuffer(options = {}) {
-  const { bypassWriteCap = false, maxCreate } = options;
+  const { bypassWriteCap = false, maxCreate = 1 } = options;
   let created = 0;
+
+  if (!bypassWriteCap && isSchedulerPaused(loadState())) {
+    console.log("Buffer skipped: scheduler paused");
+    return 0;
+  }
+
+  if (!bypassWriteCap && !isDeepseekDiscountUtc()) {
+    console.log(
+      "Buffer skipped: outside DeepSeek discount window (UTC 16:30–00:30 / KST 01:30–09:30)",
+    );
+    return 0;
+  }
 
   while (countDrafts() < TARGET_DRAFT_BUFFER) {
     if (maxCreate !== undefined && created >= maxCreate) break;
