@@ -9,7 +9,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { listPublishedSlugs } from "../content-quality.mjs";
-import { getTopicFormatCoverage } from "../topic-coverage.mjs";
+import { getTopicFormatCoverage, listFamilyOccupants } from "../topic-coverage.mjs";
 import { inferPostTopic } from "../infer-post-topic.mjs";
 import { isMetaTopicId } from "../content-angles.mjs";
 
@@ -66,7 +66,7 @@ export function validateReplenishWrittenSlug(slug, slugsBefore, root = process.c
   return { ok: true };
 }
 
-/** Same topic is OK in format-rotation if the contentProfile is new. */
+/** Same topic family is occupied by live, draft, AND noindex posts. */
 export function validateReplenishTopicUnique(slug, root = process.cwd()) {
   const enPath = path.join(root, "content", "posts", slug, "en.md");
   if (!fs.existsSync(enPath)) {
@@ -76,24 +76,16 @@ export function validateReplenishTopicUnique(slug, root = process.cwd()) {
   const { data } = matter(fs.readFileSync(enPath, "utf8"));
   const topic = inferPostTopic(slug, data);
   const profile = String(data.contentProfile ?? "buying-guide");
-  const coverage = getTopicFormatCoverage(root);
-  const entry = coverage.get(topic.id);
-
-  if (!entry) return { ok: true };
-
-  const others = entry.slugs.filter((s) => s !== slug);
-  const sameFormat = [];
-  for (const other of others) {
-    const otherPath = path.join(root, "content", "posts", other, "en.md");
-    if (!fs.existsSync(otherPath)) continue;
-    const { data: otherData } = matter(fs.readFileSync(otherPath, "utf8"));
-    const otherProfile = String(otherData.contentProfile ?? "buying-guide");
-    if (otherProfile === profile) sameFormat.push(other);
-  }
-  if (sameFormat.length > 0) {
+  const occupants = listFamilyOccupants(topic.id, profile, root).filter(
+    (post) => post.slug !== slug,
+  );
+  if (occupants.length > 0) {
+    const names = occupants
+      .map((post) => `${post.slug}${post.noindex ? "(noindex)" : post.draft ? "(draft)" : ""}`)
+      .join(", ");
     return {
       ok: false,
-      reason: `Topic "${topic.id}" already has ${profile}: ${sameFormat.join(", ")}`,
+      reason: `Topic "${topic.id}" already covered in this format family by ${names}`,
     };
   }
 

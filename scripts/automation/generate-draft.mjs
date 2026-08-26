@@ -1,6 +1,7 @@
 import { buildGenerationPrompt } from "./prompts.mjs";
 import { chatJsonCompletion } from "./llm-chat.mjs";
 import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
+import { acquireWriteLock } from "../lib/write-lock.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
 import fs from "fs";
@@ -177,10 +178,10 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
 
 export async function generateOneDraft(options = {}) {
   const { bypassWriteCap = false } = options;
-  const state = loadState();
-  resetDailyCounters(state);
+  const early = loadState();
+  resetDailyCounters(early);
 
-  if (!bypassWriteCap && isSchedulerPaused(state)) {
+  if (!bypassWriteCap && isSchedulerPaused(early)) {
     console.log("Write skipped: scheduler paused");
     return null;
   }
@@ -192,29 +193,49 @@ export async function generateOneDraft(options = {}) {
     return null;
   }
 
-  if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
+  if (!bypassWriteCap && early.writeCountToday >= MAX_WRITES_PER_DAY) {
     console.log(`Daily write limit reached (${MAX_WRITES_PER_DAY}/day KST)`);
-    saveState(state);
+    saveState(early);
     return null;
   }
 
-  const contentProfile = pickContentProfile(state);
-  const profilesToTry = [
-    contentProfile,
-    ...CONTENT_PROFILES.filter((p) => p !== contentProfile),
-  ];
-
-  let lastError = null;
-  for (const profile of profilesToTry) {
-    try {
-      const topic = pickTopic(state, { contentProfile: profile });
-      return await generateDraftForTopic(topic, profile, { bypassWriteCap, state });
-    } catch (error) {
-      lastError = error;
+  const releaseLock = await acquireWriteLock();
+  let picked = null;
+  try {
+    const state = loadState();
+    resetDailyCounters(state);
+    if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
+      saveState(state);
+      return null;
     }
+    const contentProfile = pickContentProfile(state);
+    const profilesToTry = [
+      contentProfile,
+      ...CONTENT_PROFILES.filter((p) => p !== contentProfile),
+    ];
+    let lastError = null;
+    for (const profile of profilesToTry) {
+      try {
+        const topic = pickTopic(state, { contentProfile: profile });
+        saveState(state);
+        picked = { topic, profile, state };
+        lastError = null;
+        break;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    if (!picked) {
+      throw lastError ?? new Error("No topics available for any content profile");
+    }
+  } finally {
+    releaseLock();
   }
 
-  throw lastError ?? new Error("No topics available for any content profile");
+  return generateDraftForTopic(picked.topic, picked.profile, {
+    bypassWriteCap,
+    state: picked.state,
+  });
 }
 
 function normalizeRequestTopic(raw) {

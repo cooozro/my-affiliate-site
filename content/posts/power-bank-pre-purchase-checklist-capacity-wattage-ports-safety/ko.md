@@ -9,6 +9,7 @@ tags:
   - 배터리 안전
   - 구매 체크리스트
 draft: true
+automationBuffer: false
 contentProfile: checklist
 topicId: power-banks
 topicCluster: accessories

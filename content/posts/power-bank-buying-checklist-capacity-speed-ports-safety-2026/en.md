@@ -11,6 +11,7 @@ tags:
   - fast charging
   - power bank safety
 draft: true
+automationBuffer: false
 contentProfile: checklist
 topicId: power-banks
 topicCluster: accessories

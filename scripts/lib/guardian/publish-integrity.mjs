@@ -14,6 +14,7 @@ import {
   resolveContentProfile,
   MAX_DESCRIPTION_CHARS,
 } from "../content-quality.mjs";
+import { listCorpusPosts, coverageFamily } from "../topic-coverage.mjs";
 import {
   auditContentPolicyText,
   auditContentPolicyTitle,
@@ -127,29 +128,17 @@ function titleSimilarity(a, b) {
 }
 
 function listH2Headings(body) {
-  const md = (body.match(/^##\s+(.+)$/gm) ?? []).map((line) =>
+  return (body.match(/^##\s+(.+)$/gm) ?? []).map((line) =>
     line.replace(/^##\s+/, "").trim(),
   );
-  const html = (body.match(/<h2[^>]*>([\s\S]*?)<\/h2>/gi) ?? []).map((tag) =>
-    tag.replace(/<[^>]+>/g, "").trim(),
-  );
-  return [...md, ...html].filter(Boolean);
 }
 
 function countRelatedGuideLinks(body) {
-  const mdSection = body.match(
+  const section = body.match(
     /##\s*(Related guides|관련 가이드)[\s\S]*?(?=\n##\s|$)/i,
   );
-  const htmlSection = body.match(
-    /<h2[^>]*>\s*(Related guides|관련 가이드)\s*<\/h2>[\s\S]*?(?=<h2[\s>]|$)/i,
-  );
-  const section = mdSection?.[0] ?? htmlSection?.[0] ?? "";
   if (!section) return 0;
-  const mdLinks = section.match(INTERNAL_BLOG_LINK_RE) ?? [];
-  const htmlLinks =
-    section.match(/<a[^>]+href=["']\/(en|ko)\/blog\/[a-z0-9][a-z0-9-]*["']/gi) ??
-    [];
-  return mdLinks.length + htmlLinks.length;
+  return (section[0].match(INTERNAL_BLOG_LINK_RE) ?? []).length;
 }
 
 function kstYear() {
@@ -679,23 +668,20 @@ function auditPostLevel(root, slug, phase, bucket, state) {
     }
   }
 
-  for (const other of publishedSlugs) {
-    if (other === slug) continue;
-    const otherFile = readLocaleFile(root, other, "en");
-    if (!otherFile) continue;
-    const sim = titleSimilarity(enFile.data.title, otherFile.data.title);
-    if (sim >= TITLE_SIMILARITY_BLOCK) {
-      if (phase === "publish") {
-        addError(
-          bucket,
-          `${slug}: title too similar to published "${other}" (${Math.round(sim * 100)}%)`,
-        );
-      } else {
-        addWarning(
-          bucket,
-          `${slug}: title similar to "${other}" (${Math.round(sim * 100)}%)`,
-        );
-      }
+  const corpus = listCorpusPosts(root);
+  const topicId = inferPostTopic(slug, enFile.data).id;
+  const family = coverageFamily(profile);
+  for (const other of corpus) {
+    if (other.slug === slug) continue;
+    const sameFamily =
+      other.topicId === topicId && coverageFamily(other.profile) === family;
+    const sim = titleSimilarity(enFile.data.title, other.title);
+    if (sameFamily || sim >= TITLE_SIMILARITY_BLOCK) {
+      const where = other.noindex ? "noindex" : other.draft ? "draft" : "published";
+      const detail = sameFamily
+        ? `topic "${topicId}" ${family} already occupied by ${where} "${other.slug}"`
+        : `title too similar to ${where} "${other.slug}" (${Math.round(sim * 100)}%)`;
+      addError(bucket, `${slug}: ${detail}`);
       break;
     }
   }

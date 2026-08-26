@@ -1,5 +1,8 @@
 /**
  * Track topic × format and topicCluster × format coverage on disk.
+ *
+ * Corpus includes drafts AND noindex/quarantined posts. Those pages must not
+ * be Related-link targets, but they still occupy the topic for new writes.
  */
 
 import fs from "fs";
@@ -7,6 +10,16 @@ import path from "path";
 import matter from "gray-matter";
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import { POST_TOPIC_IDS, PRODUCT_TOPICS } from "./product-taxonomy.mjs";
+import {
+  coverageFamily,
+  isTopicFamilyBlocked,
+} from "./coverage-family.mjs";
+
+export {
+  COVERAGE_FAMILY,
+  coverageFamily,
+  isTopicFamilyBlocked,
+} from "./coverage-family.mjs";
 
 const TOPIC_CLUSTER_BY_ID = new Map(
   PRODUCT_TOPICS.map((t) => [t.id, t.topicCluster ?? t.cluster ?? null]),
@@ -109,18 +122,51 @@ export function getClusterFormatCoverage(root = process.cwd()) {
   return coverage;
 }
 
+function isNoindexFrontmatter(data) {
+  if (data?.noindex === true || data?.noindex === "true") return true;
+  return /\bnoindex\b/i.test(String(data?.robots ?? ""));
+}
+
 /** @deprecated */
 export function getTopicCoverage(root = process.cwd()) {
   return getTopicFormatCoverage(root);
 }
 
 export function isTopicFormatBlocked(topicId, contentProfile, coverage) {
-  if (!contentProfile) return false;
-  const entry = coverage.get(topicId);
-  if (!entry) return false;
-  if (entry.publishedFormats.has(contentProfile)) return true;
-  if (entry.draftFormats.has(contentProfile)) return true;
-  return false;
+  return isTopicFamilyBlocked(topicId, contentProfile, coverage);
+}
+
+/** Every post dir with en.md (draft + live + noindex). */
+export function listCorpusPosts(root = process.cwd()) {
+  const postsDir = path.join(root, "content", "posts");
+  const posts = [];
+  if (!fs.existsSync(postsDir)) return posts;
+
+  for (const entry of fs.readdirSync(postsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const enPath = path.join(postsDir, entry.name, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = matter(fs.readFileSync(enPath, "utf8"));
+    const inferred = inferPostTopic(entry.name, data);
+    posts.push({
+      slug: entry.name,
+      title: String(data.title ?? entry.name),
+      topicId: resolveTopicId(entry.name, data),
+      cluster: resolveCluster(resolveTopicId(entry.name, data), data, inferred),
+      profile: String(data.contentProfile ?? "buying-guide"),
+      draft: Boolean(data.draft),
+      noindex: isNoindexFrontmatter(data),
+    });
+  }
+  return posts;
+}
+
+export function listFamilyOccupants(topicId, contentProfile, root = process.cwd()) {
+  const family = coverageFamily(contentProfile);
+  return listCorpusPosts(root).filter(
+    (post) =>
+      post.topicId === topicId && coverageFamily(post.profile) === family,
+  );
 }
 
 /**

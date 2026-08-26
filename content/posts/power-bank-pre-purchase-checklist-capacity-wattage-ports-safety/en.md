@@ -11,6 +11,7 @@ tags:
   - battery safety
   - buying checklist
 draft: true
+automationBuffer: false
 contentProfile: checklist
 topicId: power-banks
 topicCluster: accessories

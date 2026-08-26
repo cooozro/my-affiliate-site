@@ -9,6 +9,7 @@ tags:
   - 고속 충전
   - 보조배터리 안전
 draft: true
+automationBuffer: false
 contentProfile: checklist
 topicId: power-banks
 topicCluster: accessories

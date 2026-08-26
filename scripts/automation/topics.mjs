@@ -7,7 +7,7 @@ import { pickSeasonalTopic, filterTopicsInSeason } from "../lib/season-topics.mj
 import {
   getTopicFormatCoverage,
   getClusterFormatCoverage,
-  isTopicFormatBlocked,
+  isTopicFamilyBlocked,
   isClusterFormatBlocked,
   listBlockedTopicFormats,
   listBlockedClusterFormats,
@@ -67,7 +67,7 @@ function sortByFreshness(candidates, coverage, clusterCoverage, recentlyUsed, ro
 
 function formatBlockedFn(topic, contentProfile, coverage, clusterCoverage) {
   return (
-    isTopicFormatBlocked(topic.id, contentProfile, coverage) ||
+    isTopicFamilyBlocked(topic.id, contentProfile, coverage) ||
     isClusterFormatBlocked(topic, contentProfile, clusterCoverage)
   );
 }
@@ -158,10 +158,16 @@ export function pickTopic(state, options = {}) {
 
   if (candidates.length === 0 && roadmapPhase === "format-rotation") {
     console.warn(
-      "No fresh topic×format pairs — relaxing diversity guard for this profile",
+      "No fresh topic×family pairs — relaxing consecutive-diversity only (noindex/draft occupancy still applies)",
     );
     candidates = sortByFreshness(
-      filterTopicsInSeason(POST_TOPICS.filter(formatAvailable)),
+      filterTopicsInSeason(
+        POST_TOPICS.filter(
+          (t) =>
+            formatAvailable(t) &&
+            !isTopicFamilyBlocked(t.id, contentProfile, coverage),
+        ),
+      ),
       coverage,
       clusterCoverage,
       new Set(),

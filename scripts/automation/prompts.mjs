@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import { getTemplatePath } from "../lib/content-profiles.mjs";
 import { getCurrentSeason, getActiveSeasonalEvents } from "../lib/season-topics.mjs";
 import { modelSlugToken } from "../lib/popular-model-picks.mjs";
@@ -8,27 +6,38 @@ import {
   pickSectionSkeleton,
   PROMPT_DIVERSITY_RULE,
 } from "../lib/variants/section-skeletons.mjs";
+import { listCorpusPosts } from "../lib/topic-coverage.mjs";
 
-function listPublishedSlugsSafe(root) {
+function listOccupiedHint(root) {
   try {
-    const postsDir = path.join(root, "content", "posts");
-    if (!fs.existsSync(postsDir)) return [];
-    return fs
-      .readdirSync(postsDir, { withFileTypes: true })
-      .filter((entry) => entry.isDirectory())
-      .map((entry) => entry.name)
-      .filter((slug) => {
-        const en = path.join(postsDir, slug, "en.md");
-        const ko = path.join(postsDir, slug, "ko.md");
-        if (!fs.existsSync(en) || !fs.existsSync(ko)) return false;
-        const raw = fs.readFileSync(en, "utf8");
-        if (/^draft:\s*true\b/m.test(raw)) return false;
-        if (/^noindex:\s*true\b/m.test(raw)) return false;
-        if (/^robots:.*\bnoindex\b/im.test(raw)) return false;
-        return true;
-      });
+    return listCorpusPosts(root)
+      .map((post) => {
+        const flags = [
+          post.draft ? "draft" : "live",
+          post.noindex ? "noindex" : null,
+        ]
+          .filter(Boolean)
+          .join("+");
+        return `${post.slug} [${flags} topic=${post.topicId} profile=${post.profile}]`;
+      })
+      .sort()
+      .slice(0, 40)
+      .join("; ");
   } catch {
-    return [];
+    return "";
+  }
+}
+
+function listIndexableSlugsHint(root) {
+  try {
+    return listCorpusPosts(root)
+      .filter((post) => !post.draft && !post.noindex)
+      .map((post) => post.slug)
+      .sort()
+      .slice(0, 20)
+      .join(", ");
+  } catch {
+    return "";
   }
 }
 
@@ -71,7 +80,8 @@ ${modelPick.rival ? `- One short rival comparison only: ${modelPick.rival.brand}
         `\nTone variant: ${toneVariant ?? benchmarkOutline.toneVariant ?? "editorial"}\n`
       : "";
 
-  const publishedHint = listPublishedSlugsSafe(process.cwd()).sort().slice(0, 20).join(", ");
+  const publishedHint = listIndexableSlugsHint(process.cwd());
+  const occupiedHint = listOccupiedHint(process.cwd());
 
   return `You are the lead editor of "AI Pick & Report", a data-driven IT review site (smartphones, gadgets, consumer electronics, home appliances).
 
@@ -94,6 +104,7 @@ MANDATORY RULES (violations = rejection):
 6. Methodology: do NOT claim proprietary seller APIs, sale_price_usd fields, or private databases. Use honest editorial sources (manufacturer specs, listed retail prices, public reviews). Do NOT include "## Analysis methodology" / "## 분석 방법론" in the article body — that source table lives on /about. A transparency notice is injected by the pipeline.
 7. Follow the assigned SECTION VARIANT, not a one-spine template. Always include Related guides internal links to **indexable published** posts only (/en/blog/slug or /ko/blog/slug — no deleted, draft, or noindex/quarantined slugs). English primary, Korean faithful translation (not a summary).
    Example indexable slugs you may link (pick 3–5 relevant): ${publishedHint || "(resolved at runtime on the live site)"}.
+7b. DO NOT rewrite an already-covered topic/keyword. These slugs already exist (draft + live + AdSense noindex all count as occupied): ${occupiedHint || "(resolved at runtime)"}. A noindex post is still a written article — pick a different aisle.
 8. Season framing: tie the angle to current season (${season}) when the topic is seasonal (AC in summer, etc.). **Evergreen tech** (smartphones, laptops, earbuds, monitors): focus on named 2025–2026 models and specs — do NOT force a summer-heat narrative.
 9. **Model depth**: for \`head-to-head\` or \`flagship-smartphones\` / \`budget-smartphones\` / \`laptops\`: name **2–3 specific current retail models** (generation + SKU-style token for the writing year — e.g. in mid-2026: Galaxy S26 Ultra, iPhone 17 Pro, Pixel 10 Pro) in H2 sections — not generic "Model A/B" and not two-cycles-old phones labeled as "current / 현세대". Each model section needs strengths, weaknesses, and a scenario verdict.
 9b. **Model deep-dive** (\`model-deep-dive\`): when FOCUS MODEL block is present, the article is a single-product editorial review — spec sheet, strengths/weaknesses, who should buy/skip, one rival section max, Final Verdict with buy/wait/skip. Do **not** invent body image markdown URLs — the pipeline injects 1–2 figures with ALT (prefer manufacturer Press Kit / Media Gallery when curated; else copyright-safe stock).
