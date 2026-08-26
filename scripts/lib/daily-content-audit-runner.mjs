@@ -18,6 +18,7 @@ import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
 import { repairAllFaqSectionsWithLlm } from "./faq-section-repair.mjs";
 import { isOperationalAuditIssue, isManualReviewNoiseIssue, isRepairablePublishIssue } from "./admin-alert-filter.mjs";
+import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
   process.cwd(),
