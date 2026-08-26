@@ -1,5 +1,5 @@
 {
-  "topicIndex": 27,
+  "topicIndex": 8,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
@@ -8,14 +8,15 @@
     "budget-monitors",
     "flagship-smartphones",
     "bluetooth-speakers",
-    "tablet-budget"
+    "tablet-budget",
+    "dehumidifiers"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
   "nextPublishAt": "2026-08-26T10:45:42.795Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-26",
-  "writeCountToday": 0,
+  "writeCountToday": 1,
   "writeDateKst": "2026-08-26",
   "history": [
     {
@@ -151,6 +152,12 @@
         "https://www.aipick.shop/en/blog/2026-budget-tablets-reading-video-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-budget-tablets-reading-video-scenario-guide"
       ]
+    },
+    {
+      "action": "write",
+      "slug": "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+      "at": "2026-08-26T11:32:08.669Z",
+      "topic": "dehumidifiers"
     }
   ],
   "schedulerPaused": false,
@@ -278,6 +285,12 @@
       "id": "tablet-budget",
       "cluster": "tablets",
       "at": "2026-08-22T02:33:09.051Z"
+    },
+    {
+      "id": "dehumidifiers",
+      "category": "home-appliances",
+      "taxonomyGroup": "계절가전/냉방",
+      "at": "2026-08-26T11:27:17.264Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-25",
@@ -287,9 +300,7 @@
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },
-  "formatDeck": [
-    "explainer"
-  ],
+  "formatDeck": [],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
@@ -301,7 +312,8 @@
     "head-to-head",
     "model-deep-dive",
     "scenario-guide",
-    "checklist"
+    "checklist",
+    "explainer"
   ],
   "metaAngleHistory": [
     {

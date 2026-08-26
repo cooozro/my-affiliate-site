@@ -2065,6 +2065,15 @@
       "contentHash": "97e4413eb4513b3c7d0dbd88fc244729695087e44085070ddcac900700f155eb",
       "provider": "pexels",
       "registeredAt": "2026-08-26T11:04:43.115Z"
+    },
+    {
+      "slug": "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+      "url": "https://pixabay.com/get/gfb508c4309c4b5a839fecc3e746d319ed3a8493e20b3768ffbf4ce4fddcf8c510441701e6b1f3dc84b9eec23bf5fcca94eca8e983f91004a45a78a80a5a212ae_1280.jpg",
+      "assetKey": "pixabay:1558376",
+      "hash": "6d21b8acbe8d4922904fa359d5a762d54f55db00ba8669a412fd0e1995ba2a40",
+      "contentHash": "6d21b8acbe8d4922904fa359d5a762d54f55db00ba8669a412fd0e1995ba2a40",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T11:32:52.040Z"
     }
   ]
 }
