@@ -14,7 +14,7 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-26T13:21:40.193Z",
+  "nextPublishAt": "2026-08-26T13:25:43.307Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-26",
@@ -168,7 +168,7 @@
       "topic": "bidets"
     }
   ],
-  "schedulerPaused": false,
+  "schedulerPaused": true,
   "lastHealthCheck": {
     "at": "2026-08-26T13:00:22.898Z",
     "issueCount": 3,
@@ -331,7 +331,8 @@
     "scenario-guide",
     "explainer",
     "buying-guide",
-    "model-deep-dive"
+    "model-deep-dive",
+    "checklist"
   ],
   "metaAngleHistory": [
     {
@@ -402,5 +403,7 @@
       "modelId": "bio-bidet-bb-2000",
       "at": "2026-08-26T13:20:01.213Z"
     }
-  ]
+  ],
+  "schedulerPausedReason": "요미 12-draft AdSense batch (serial writes)",
+  "schedulerPausedAt": "2026-08-26T13:25:18.087Z"
 }
