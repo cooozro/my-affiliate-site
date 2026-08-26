@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: portable power bank on a travel desk
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-08-14T01:38:50.635Z'
+updatedAt: '2026-08-26T01:40:02.079Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707
@@ -69,9 +69,9 @@ Snapshot as of {{today}}.
 
 | Rank | Model | Price (USD / KRW) | Capacity | Max PD | Weight | Wh | Certs | Review | PBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Anker 733 PowerBank** | $29.9 / ~{{krw:29.9}} | 10,000mAh | 30W | 212g | 37Wh | UL, CE | 4.8 | **9.1** |
+| 1 | **Anker 733 Power Bank** | $29.9 / ~{{krw:29.9}} | 10,000mAh | 30W | 212g | 37Wh | UL, CE | 4.8 | **9.1** |
 | 2 | **Xiaomi Power Bank 3 20000** | $26.5 / ~{{krw:26.5}} | 20,000mAh | 22.5W | 434g | 74Wh | CE, PSE | 4.6 | **8.9** |
-| 3 | **Baseus 65W 20000mAh** | $34.9 / ~{{krw:34.9}} | 20,000mAh | 65W | 480g | 74Wh | CE, FCC | 4.5 | **8.7** |
+| 3 | **Baseus 65W 20000m Ah** | $34.9 / ~{{krw:34.9}} | 20,000mAh | 65W | 480g | 74Wh | CE, FCC | 4.5 | **8.7** |
 | 4 | **Samsung 25W 10000** | $31.0 / ~{{krw:31.0}} | 10,000mAh | 25W | 228g | 37Wh | KC, CE | 4.7 | **8.5** |
 | 5 | **Romoss Sense 8+ 30000** | $27.9 / ~{{krw:27.9}} | 30,000mAh | 18W | 640g | 111Wh | CE | 4.4 | **8.2** |
 

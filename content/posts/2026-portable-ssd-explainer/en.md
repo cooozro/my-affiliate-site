@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-22T02:34:58.375Z'
+updatedAt: '2026-08-26T01:40:02.263Z'
 publishedAt: '2026-07-05T03:33:06.533Z'
 ---
 ## Editorial Overview
@@ -125,31 +125,23 @@ Speed and TBW only matter inside a workflow that survives lost bags and fried po
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking sustained-write benches, portable SSD bottlenecks were cables and thermal throttle more than TBW marketing.
 
 | Brand | Model | Evidence | Note |
 | --- | --- | --- | --- |
-| Samsung | T7Shield2TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| SanDisk | ExtremePro2TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Crucial | X10Pro4TB | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| WD | WDMyPassSSD2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| LaCie | LaCieRugged32 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Samsung | T7 Shield 2TB | Official drop / IP rating | IP65 shell for bag drops and splash |
+| SanDisk | Extreme Pro 2TB | Published sustained-write spec | Sustained write for video dumps; watch thermal throttle |
+| Crucial | X10 Pro 4TB | Official capacity / USB4 page | 4TB and high bandwidth; confirm the laptop is USB4 first |
+| WD | My Passport SSD | Published hardware-encryption spec | Hardware encryption over peak speed; password the travel copy |
+| LaCie | Rugged 2TB | Official ruggedization page | Bumper shell for field carry; overkill as a desk SSD |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: explainer prose can look unanchored, so OEM codes are listed.**
 
 **Total cost of ownership (3-year): cables, dual-backup copies, and capacity upgrades can exceed sticker.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

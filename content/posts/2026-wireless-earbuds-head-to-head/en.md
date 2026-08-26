@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 4560166
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4560166/pexels-photo-4560166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:47.928Z'
+updatedAt: '2026-08-26T01:40:02.349Z'
 publishedAt: '2026-07-13T08:28:50.000Z'
 ---
 ## Editorial Overview
@@ -67,7 +67,7 @@ Retail marketing leads with **flagship-class ANC and hi-fi** badges, but on a tw
 | Model | MSRP (USD / KRW) | Codecs | Battery (ANC on, buds) | IP | Multipoint |
 | --- | --- | --- | --- | --- | --- |
 | **Sony WF-C700N** | $119 / ~{{krw:119}} | SBC, AAC, **LDAC** | up to 7.5 h | IPX4 | 2 devices |
-| **Samsung Galaxy Buds3** | $149 / ~{{krw:149}} | SBC, AAC, **SSC** | up to 6 h | IP57 | 2 devices |
+| **Samsung Galaxy Buds 3** | $149 / ~{{krw:149}} | SBC, AAC, **SSC** | up to 6 h | IP57 | 2 devices |
 | **Soundcore Liberty 4 NC** | $99 / ~{{krw:99}} | SBC, AAC, **LDAC** | up to 8 h | IPX4 | 2 devices |
 
 ---
@@ -165,7 +165,7 @@ After cross-checking the public specs, no single bud wins every summer commute. 
 | Model | Buy if you… |
 | --- | --- |
 | **Sony WF-C700N** | Want reliable LDAC multipoint under $130 |
-| **Samsung Galaxy Buds3** | Carry a Galaxy phone through humid outdoor commutes |
+| **Samsung Galaxy Buds 3** | Carry a Galaxy phone through humid outdoor commutes |
 | **Soundcore Liberty 4 NC** | Need strong bus ANC and long ANC battery on a budget |
 
 ### Who should skip?
@@ -173,5 +173,5 @@ After cross-checking the public specs, no single bud wins every summer commute. 
 | Model | Skip if you… |
 | --- | --- |
 | **Sony WF-C700N** | Require IP57-level outdoor protection |
-| **Samsung Galaxy Buds3** | Use iPhone as your only phone and want lowest price |
+| **Samsung Galaxy Buds 3** | Use iPhone as your only phone and want lowest price |
 | **Soundcore Liberty 4 NC** | Dislike app tuning or want the lightest case |

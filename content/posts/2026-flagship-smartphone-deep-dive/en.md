@@ -24,7 +24,7 @@ coverImageAlt: flagship smartphone on a desk for editorial comparison
 coverImageAltKo: 편집부 비교용 책상 위 플래그십 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-18T02:09:26.044Z'
+updatedAt: '2026-08-26T01:40:02.188Z'
 publishedAt: '2026-08-18T02:09:25.841Z'
 ---
 ## Editorial Overview
@@ -66,10 +66,10 @@ We also keep **Galaxy S25 Ultra** and **iPhone 16 Pro** in the table as previous
 | Model | Chipset | Main camera | Battery | US list price | Best for |
 | --- | --- | --- | --- | --- | --- |
 | Samsung Galaxy S26 Ultra | Snapdragon 8 Elite Gen 5 | 200MP main + 50MP ultrawide + 10MP 3x + 50MP 5x | 5,000 mAh | $1,299 | All-round Android power users |
-| Apple iPhone 17 Pro | A19 Pro | 48MP Fusion main + 48MP ultrawide + 48MP 4x tetraprism | about 3,998 mAh | $1,099 | iOS video and ecosystem |
+| Apple i Phone 17 Pro | A19 Pro | 48MP Fusion main + 48MP ultrawide + 48MP 4x tetraprism | about 3,998 mAh | $1,099 | iOS video and ecosystem |
 | Google Pixel 10 Pro | Tensor G5 | 50MP main + 48MP ultrawide + 48MP 5x telephoto | 4,870 mAh | $999 | Computational photography and clean Android |
 | Samsung Galaxy S25 Ultra | Snapdragon 8 Elite for Galaxy | 200MP main + 50MP ultrawide + 10MP 3x + 50MP 5x | 5,000 mAh | often discounted | Previous Ultra on a deal |
-| Apple iPhone 16 Pro | A18 Pro | 48MP Fusion main + 48MP ultrawide + 12MP 5x | about 3,582 mAh | often discounted | iOS buyers chasing price |
+| Apple i Phone 16 Pro | A18 Pro | 48MP Fusion main + 48MP ultrawide + 12MP 5x | about 3,582 mAh | often discounted | iOS buyers chasing price |
 
 Prices are list references and shift with carrier promos and trade-in. Treat them as a baseline for value, not a locked quote. Battery figures for iPhone vary slightly by Nano-SIM vs eSIM-only SKUs.
 
@@ -183,7 +183,7 @@ Plan $50–$100 beyond the phone for a fast charger, case, and screen protector.
 | Model | Buy if |
 | --- | --- |
 | Samsung Galaxy S26 Ultra | You want real zoom, an S Pen, 60W charging, and a no-compromise Android toolkit |
-| Apple iPhone 17 Pro | You are deep in Apple’s ecosystem and value video, compact Pro size, and A19 Pro consistency |
+| Apple i Phone 17 Pro | You are deep in Apple’s ecosystem and value video, compact Pro size, and A19 Pro consistency |
 | Google Pixel 10 Pro | You want the best point-and-shoot night stills, clean Android, and the longest software runway |
 
 ### Who should skip
@@ -191,7 +191,7 @@ Plan $50–$100 beyond the phone for a fast charger, case, and screen protector.
 | Model | Skip if |
 | --- | --- |
 | Samsung Galaxy S26 Ultra | You rarely use zoom or the S Pen and prefer a lighter, cheaper phone |
-| Apple iPhone 17 Pro | Battery endurance is your top priority or you refuse MagSafe accessories |
+| Apple i Phone 17 Pro | Battery endurance is your top priority or you refuse MagSafe accessories |
 | Google Pixel 10 Pro | You play graphics-heavy games or edit 4K video on-device every day |
 
 All three are excellent **current** flagships; the right choice is which trade-offs you can live with for three years. If you are still unsure, try each in a store for ten minutes at night and in portrait mode — the effortless shutter is usually the one to buy. Previous-gen S25 Ultra / iPhone 16 Pro only make sense when the discount is large enough to outweigh newer silicon and charging.

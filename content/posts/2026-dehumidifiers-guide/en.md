@@ -23,7 +23,7 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-08-20T08:09:44.479Z'
+updatedAt: '2026-08-26T01:40:02.154Z'
 publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## Editorial Overview
@@ -77,9 +77,9 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | **Frigidaire Gallery FFAP5033W1** | $279 | 35 | 16 pt (7.6 L) | Pump + hose | 530 | 47 | about $0.64 | 4.6 | **9.1** |
 | 2 | **Midea MAD50S1QWT** | $249 | 35 | 16 pt (7.6 L) | Hose + pump opt. | 510 | 46 | about $0.61 | 4.5 | **9.0** |
-| 3 | **hOmeLabs HME020031N** | $199 | 35 | 14 pt (6.6 L) | Hose | 520 | 50 | about $0.62 | 4.4 | **8.7** |
+| 3 | **h Ome Labs HME020031N** | $199 | 35 | 14 pt (6.6 L) | Hose | 520 | 50 | about $0.62 | 4.4 | **8.7** |
 | 4 | **Honeywell TP50WKN** | $229 | 32 | 14 pt (6.6 L) | Hose | 540 | 51 | about $0.65 | 4.3 | **8.4** |
-| 5 | **GoveeLife Smart 50 Pint** | $219 | 34 | 15 pt (7.1 L) | Hose | 500 | 48 | about $0.60 | 4.2 | **8.3** |
+| 5 | **Govee Life Smart 50 Pint** | $219 | 34 | 15 pt (7.1 L) | Hose | 500 | 48 | about $0.60 | 4.2 | **8.3** |
 
 ---
 
@@ -217,9 +217,9 @@ After cross-checking the public specs, summer dehumidifier value still means mat
 | --- | --- |
 | **Frigidaire FFAP5033W1** | Need a built-in pump and Wi-Fi scheduling for a basement without a floor drain |
 | **Midea MAD50S1QWT** | Want app humidity targets and the quietest low-fan experience near a bedroom |
-| **hOmeLabs HME020031N** | Have a gravity drain nearby and want the lowest upfront cost in the 35 DOE class |
+| **h Ome Labs HME020031N** | Have a gravity drain nearby and want the lowest upfront cost in the 35 DOE class |
 | **Honeywell TP50WKN** | Prefer mechanical controls and a familiar HVAC brand for a finished basement |
-| **GoveeLife Smart 50 Pint** | Already use Govee sensors and want the lowest rated wattage with smart triggers |
+| **Govee Life Smart 50 Pint** | Already use Govee sensors and want the lowest rated wattage with smart triggers |
 
 ### Who should skip?
 
@@ -227,8 +227,8 @@ After cross-checking the public specs, summer dehumidifier value still means mat
 | --- | --- |
 | **Frigidaire FFAP5033W1** | Have a simple floor drain and do not need pump lift — you pay for unused hardware |
 | **Midea MAD50S1QWT** | Refuse app setup or need a built-in pump in the box without accessories |
-| **hOmeLabs HME020031N** | Sleep in the same open room and need sub-48 dB — 50 dB low fan may annoy light sleepers |
+| **h Ome Labs HME020031N** | Sleep in the same open room and need sub-48 dB — 50 dB low fan may annoy light sleepers |
 | **Honeywell TP50WKN** | Need maximum DOE pints per dollar or smart scheduling at the same price tier |
-| **GoveeLife Smart 50 Pint** | Require a built-in pump or want a decade-long service track record before trusting a newer brand |
+| **Govee Life Smart 50 Pint** | Require a built-in pump or want a decade-long service track record before trusting a newer brand |
 
 Before checkout, confirm hose and pump kit compatibility with your drain height, verify return policy if low-fan noise exceeds tolerance, and recheck room measurements — an undersized unit running on high all summer adds kWh and compressor wear without reaching 50% RH.

@@ -30,7 +30,7 @@ coverImageCredit: Photo by Amar Preciado / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '37489595'
 coverImageSourceUrl: 'https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg'
-updatedAt: '2026-08-20T08:09:45.433Z'
+updatedAt: '2026-08-26T01:40:02.203Z'
 publishedAt: '2026-07-22T04:40:08.419Z'
 ---
 ## Editorial Overview
@@ -166,31 +166,23 @@ A larger station can have a lower cost per usable Wh, but that does not automati
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking inverter waveforms and fridge surge draws, blackout readiness hinges on surge watts and recharge inputs more than Wh stickers.
 
 | Brand | Model | Evidence | Note |
 | --- | --- | --- | --- |
-| Anker | AnkerC1000X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| EcoFlow | EcoFlowD2Max | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Bluetti | BluettiAC180 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Jackery | Explorer1000v2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Goal Zero | Yet400X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Anker | C1000X | Official GaN / PD input watts | GaN fast AC recharge, ~1 kWh LFP; apartment-door carry weight |
+| EcoFlow | DELTA 2 Max | Maker extra-battery / solar input spec | Expandable pack + high solar input; fridge surge headroom |
+| Bluetti | AC180 | Published Wh vs weight sheet | Wh-per-kilo for balcony/entryway short outages |
+| Jackery | Explorer 1000 v2 | Official pass-through / app page | Pass-through + app SoC; stay plugged during restoration |
+| Goal Zero | Yeti 400X | Published Wh and output cap | Small lighting/comms kit; not a fridge runtime pick |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: long checklists can feel model-free, so we anchor the guide with a named shortlist.**
 
 **Total cost of ownership (3-year): expanders, solar input, and cell fade often push spend to 1.4–1.8× sticker.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

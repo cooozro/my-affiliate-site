@@ -25,7 +25,7 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-08-11T06:15:41.931Z'
+updatedAt: '2026-08-26T01:40:02.322Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## 편집부 개요
@@ -173,32 +173,24 @@ $300 **한 개**를 고를지, **어느 카테고리에** $300을 쓸지가 다�
 
 {{today}} 예산표에 카테고리 두 칸을 먼저 채운 뒤, 단일 카테고리 가이드로 모델을 고르세요.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, $300 교차 비교에서는 디스플레이·공기질·모바일 전원이 체감 효용이 가장 안정적이었습니다.
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-| Dell | S2721QS | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Vornado | Vornado660B | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Anker | A737PowerBank | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| JBL | Charge5Plus | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Coway | Airmega150 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| AOC | Q27G2SX | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| 브랜드 | 모델 |
+| --- | --- |
+| Dell | S2721QS |
+| Vornado | 660 |
+| Anker | 737 Power Bank |
+| JBL | Charge 5 |
+| Coway | Airmega 150 |
+| AOC | Q27G2SX |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 교차 추천은 모델 근거가 흐려지기 쉬워 OEM 코드를 고정합니다.**
 
 **총 소유 비용(3년): 필터·케이블·거치 액세서리를 합산해 비교하세요.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.
 
 ### 추가 편집부 메모
 

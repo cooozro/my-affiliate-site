@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:46.111Z'
+updatedAt: '2026-08-26T01:40:02.290Z'
 publishedAt: '2026-07-05T02:44:08.822Z'
 ---
 ## Editorial Overview
@@ -120,31 +120,23 @@ Treat preset count as a tiebreaker **after** you confirm heating type (conventio
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking fuzzy/IH claims against pot mass and keep-warm variance, cooking consistency tracked hardware more than menu names.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Cuckoo | CRP-ST1009F | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Zojirushi | NP-HCC10XH | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Tiger | TigerJBVA10U | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Panasonic | SR-ZG185 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Toshiba | ToshibaRC10V | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Cuckoo | CRP-ST1009F |
+| Zojirushi | NP-HCC10XH |
+| Tiger | Tiger JBVA10U |
+| Panasonic | SR-ZG185 |
+| Toshiba | Toshiba RC10V |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: mechanism explainers need named references, so OEM models are listed.**
 
 **Total cost of ownership (3-year): inner pots, gaskets, and standby power add to sticker.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

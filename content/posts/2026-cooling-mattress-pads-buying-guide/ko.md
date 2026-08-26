@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:03.529Z'
+updatedAt: '2026-08-26T01:40:02.121Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## 편집부 개요
@@ -245,28 +245,20 @@ publishedAt: '2026-07-18T03:46:35.985Z'
 
 **실제 구매 기준으로 보면** 여름 수면자 대부분은 **상변화 레이어 + 똑똑한 냉방·선풍 계획**으로 시작하고, 매일 밤 정말 열이 오를 때만 능동 수냉·송풍으로 올리는 편이 낫습니다. 능동으로 갈 때는 무관리를 원하면 송풍, 가장 깊은 유지를 원하면 수냉을 고르고, 정가만이 아니라 구독료·물 보충·3년 운영비까지 세어 보고 결정하세요.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 냉감 원단 광고보다 능동 수냉·송풍의 소음·누수·유지비가 체감 차이를 만들었습니다.
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-| Eight Sleep | Pod4Ultra | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| BedJet | BedJet30X | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Tempur | TempurAdaptC1 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| ChiliSleep | ChiliDockPro1 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Sleepme | SleepmeCube01 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| 브랜드 | 모델 |
+| --- | --- |
+| Eight Sleep | Pod 4Ultra |
+| BedJet | Bed Jet 30X |
+| Tempur | Tempur Adapt C1 |
+| ChiliSleep | Chili Dock Pro 1 |
+| Sleepme | Sleepme Cube 01 |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 한글 제품명만 있으면 OEM 식별이 어려워, 영문 모델 코드를 병기합니다.**
 
 **총 소유 비용(3년): 구독·펌프 교체·전기요금이 패드 본체보다 커질 수 있습니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

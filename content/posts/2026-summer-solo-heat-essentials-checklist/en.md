@@ -34,7 +34,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-08-20T08:09:47.055Z'
+updatedAt: '2026-08-26T01:40:02.318Z'
 publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## Editorial Overview
@@ -116,32 +116,24 @@ We score each check by **hours of daily utility**, **forced clearance**, and **c
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking apartment circuit limits and noise claims, solo heat kits fail more often on amps, dB, and drain paths than on peak BTU marketing.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Dreo | DR-HAF001S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Lasko | T42950 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Midea | MAP12S1TBL | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| hOmeLabs | HME020031N | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Honeywell | HTF210B | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Levoit | Core300S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Dreo | DR-HAF001S |
+| Lasko | T42950 |
+| Midea | MAP12S1TBL |
+| hOmeLabs | HME020031N |
+| Honeywell | HTF210B |
+| Levoit | Core 300S |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: checklists can hide model variance, so we pin representative OEM codes.**
 
 **Total cost of ownership (3-year): dehumidifier filters, AC hoses, and electricity can exceed sticker price.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

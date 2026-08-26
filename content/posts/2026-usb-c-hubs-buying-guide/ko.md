@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:47.433Z'
+updatedAt: '2026-08-26T01:40:02.330Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## 편집부 개요
@@ -70,7 +70,7 @@ publishedAt: '2026-07-06T02:59:37.169Z'
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | **Anker 555 8-in-1 (A8380)** | $49.99 | 85W 통과 | 4K60 HDMI | 2 | 둘 다 | 1× HDMI 2.0 | 4.6 | **9.0** |
 | 2 | **Satechi Multiport Adapter V2** | $79.99 | 100W 통과 | 4K60 HDMI | 1 | microSD | 1× HDMI 2.0 | 4.5 | **8.9** |
-| 3 | **CalDigit TS4 Thunderbolt 4 Dock** | $399.95 | 98W | 듀얼 4K60 | 5 | UHS-II SD | 2× DP/HDMI | 4.4 | **8.8** |
+| 3 | **Cal Digit TS4 Thunderbolt 4 Dock** | $399.95 | 98W | 듀얼 4K60 | 5 | UHS-II SD | 2× DP/HDMI | 4.4 | **8.8** |
 | 4 | **Ugreen Revodok Pro 209** | $44.99 | 100W 통과 | 4K60 HDMI | 3 | 둘 다 | 1× HDMI 2.0 | 4.4 | **8.6** |
 | 5 | **Baseus Metal Gleam 9-in-1** | $34.99 | 100W 통과 | 4K30 HDMI | 2 | 둘 다 | 1× HDMI 1.4 | 4.3 | **8.2** |
 
@@ -228,7 +228,7 @@ PD·4K HDMI·USB-A 저장을 동시에 쓰면 PMIC 부하가 커지고, 실내 3
 | --- | --- |
 | **Anker 555** | 4K60·SD·85W PD를 이동용 크기로 |
 | **Satechi Multiport V2** | 100W·4K60 슬림 MacBook 일상 |
-| **CalDigit TS4** | 듀얼 모니터·이더넷·원케이블 고정 데스크 |
+| **Cal Digit TS4** | 듀얼 모니터·이더넷·원케이블 고정 데스크 |
 | **Ugreen Revodok Pro 209** | 5만 원대·USB-A 3개·100W PD |
 | **Baseus 9-in-1** | 4K30 수용·최저가 기숙사·게스트룸 |
 
@@ -238,7 +238,7 @@ PD·4K HDMI·USB-A 저장을 동시에 쓰면 PMIC 부하가 커지고, 실내 3
 | --- | --- |
 | **Anker 555** | 16인치 풀 와트+듀얼 디스플레이 동시 |
 | **Satechi Multiport V2** | USB-A 여러 개·이더넷 필수 |
-| **CalDigit TS4** | 백팩 이동만 — 가격·어댑터 부피 부담 |
+| **Cal Digit TS4** | 백팩 이동만 — 가격·어댑터 부피 부담 |
 | **Ugreen Revodok Pro 209** | 알루미늄·QC를 포트 수보다 우선 |
 | **Baseus 9-in-1** | 4K60·고주사율 대형 모니터 필수 |
 

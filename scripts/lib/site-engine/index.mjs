@@ -96,8 +96,127 @@ export function stripMethodologySections(body) {
   return out.join("\n").replace(/\n{3,}/g, "\n\n").trimStart();
 }
 
+const HTML_COMMENT_RE = /<!--[\s\S]*?-->/g;
+const ESCAPED_HTML_COMMENT_RE = /&lt;!--[\s\S]*?--&gt;/gi;
+const SHORTLIST_ANCHOR_RE =
+  /^#{2,3}\s*(?:\d+\.\s*)?(숏리스트\s*판단\s*앵커|Shortlist\s+decision\s+anchors?)\s*$/i;
+
+function collapseBlankLines(text) {
+  return text.replace(/\n{3,}/g, "\n\n").trimStart();
+}
+
+export function stripPipelineHtmlComments(body) {
+  return collapseBlankLines(
+    String(body || "")
+      .replace(HTML_COMMENT_RE, "")
+      .replace(ESCAPED_HTML_COMMENT_RE, ""),
+  );
+}
+
+export function stripOrphanShortlistAnchors(body) {
+  const lines = String(body || "").split("\n");
+  const out = [];
+  let skipping = false;
+  for (const line of lines) {
+    if (SHORTLIST_ANCHOR_RE.test(line.trim())) {
+      skipping = true;
+      continue;
+    }
+    if (skipping && /^#{1,3}\s+\S/.test(line)) skipping = false;
+    if (!skipping) out.push(line);
+  }
+  return collapseBlankLines(out.join("\n"));
+}
+
+function splitTableRow(line) {
+  let s = line.trim();
+  if (s.startsWith("|")) s = s.slice(1);
+  if (s.endsWith("|")) s = s.slice(0, -1);
+  return s.split("|").map((cell) => cell.trim());
+}
+
+function isSeparatorRow(line) {
+  const cells = splitTableRow(line);
+  return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+}
+
+function joinTableRow(cells) {
+  return `| ${cells.join(" | ")} |`;
+}
+
+function dropIndexes(arr, drop) {
+  return arr.filter((_, i) => !drop.has(i));
+}
+
+export function dropIdenticalShortlistColumns(body) {
+  const lines = String(body || "").split("\n");
+  const out = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    const next = lines[i + 1];
+    if (line.trim().startsWith("|") && next && isSeparatorRow(next)) {
+      const block = [line, next];
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith("|")) {
+        block.push(lines[i]);
+        i += 1;
+      }
+      out.push(...rewriteClonedTableBlock(block));
+      continue;
+    }
+    out.push(line);
+    i += 1;
+  }
+  return collapseBlankLines(out.join("\n"));
+}
+
+function rewriteClonedTableBlock(block) {
+  if (block.length < 3) return block;
+  const headers = splitTableRow(block[0]);
+  const dataRows = block.slice(2).map(splitTableRow);
+  if (dataRows.length < 2) return block;
+  const colCount = headers.length;
+  if (dataRows.some((row) => row.length !== colCount)) return block;
+  const drop = new Set();
+  headers.forEach((name, idx) => {
+    if (!/^(근거|evidence|basis|메모|노트|note|memo|notes)$/i.test(name)) return;
+    const values = dataRows.map((row) => row[idx] ?? "");
+    const first = values[0] ?? "";
+    if (!first) return;
+    if (values.every((v) => v === first)) drop.add(idx);
+  });
+  if (drop.size === 0) return block;
+  const nextHeaders = dropIndexes(headers, drop);
+  if (nextHeaders.length < 2) return block;
+  const sep = splitTableRow(block[1]);
+  return [
+    joinTableRow(nextHeaders),
+    joinTableRow(dropIndexes(sep, drop)),
+    ...dataRows.map((row) => joinTableRow(dropIndexes(row, drop))),
+  ];
+}
+
+export function sanitizePipelineArtifacts(body) {
+  let next = stripPipelineHtmlComments(body);
+  next = stripOrphanShortlistAnchors(next);
+  next = dropIdenticalShortlistColumns(next);
+  return next;
+}
+
+export function hasPipelineHtmlComment(body) {
+  return /<!--|&lt;!--/.test(String(body || ""));
+}
+
+export function hasOrphanShortlistAnchor(body) {
+  return /(^|\n)#{2,3}\s*(?:\d+\.\s*)?(숏리스트\s*판단\s*앵커|Shortlist\s+decision\s+anchors?)\s*(\n|$)/i.test(
+    String(body || ""),
+  );
+}
+
 export function prepareArticleBody(body, locale, options = {}) {
   let next = stripMethodologySections(body);
+  next = sanitizePipelineArtifacts(next);
   next = ensureTransparencyMarkdown(next, locale);
   next = applyPriceFallback(next, locale, { marketOk: options.marketOk });
   return next;

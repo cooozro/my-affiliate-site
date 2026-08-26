@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:04.479Z'
+updatedAt: '2026-08-26T01:40:02.340Z'
 publishedAt: '2026-07-04T01:56:28.535Z'
 ---
 ## 편집부 개요
@@ -130,28 +130,20 @@ publishedAt: '2026-07-04T01:56:28.535Z'
 
 순서는 **네이티브 해상도 → 오토포커스 → 마이크 → 저조도 → 화각 → 거치 → USB**입니다. 브랜드·할인율보다 AF와 마이크를 먼저 통과시키는 편이 매일의 불편을 줄입니다. 모니터 두께, 방 소음, 평소 조명 조건을 메모해 둔 뒤 검증된 스펙으로 모델을 좁히고, 모니터·오디오 가이드로 여름 재택 세트를 완성하세요.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 재택 웹캠 후회는 4K 마케팅보다 오토포커스 헌팅·마이크·조명이었습니다.
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-| Logitech | C920s | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Dell | WB7022 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Anker | PowerConfC200 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Microsoft | LifeCamHD3000 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Razer | RazerKiyoPro | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| 브랜드 | 모델 |
+| --- | --- |
+| Logitech | C920s |
+| Dell | WB7022 |
+| Anker | Power Conf C200 |
+| Microsoft | Life Cam HD3000 |
+| Razer | Razer Kiyo Pro |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 체크리스트만으로는 근거가 약해 보여 대표 모델을 명시합니다.**
 
 **총 소유 비용(3년): 조명·붐암·교체 주기까지 포함하면 본체보다 주변기기가 클 수 있습니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

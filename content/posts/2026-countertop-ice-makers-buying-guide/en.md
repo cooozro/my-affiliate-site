@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '11931271'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/11931271/pexels-photo-11931271.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-20T08:28:51.448Z'
+updatedAt: '2026-08-26T01:40:02.143Z'
 publishedAt: '2026-07-20T08:28:51.349Z'
 ---
 ## Editorial Overview
@@ -101,7 +101,7 @@ Reference prices as listed on manufacturer and major US storefronts around {{tod
 | 1 | **GE Profile Opal 2.0 Ultra** | about $449–$499 | Nugget / chewable | up to 38 | Side tank (about 0.75 gal) + filter | Advanced clean + scale filter | about $35–55 | **9.1** |
 | 2 | **Frigidaire EFIC117** | about $119–$149 | Bullet | up to about 26 | Removable tank | Cycle on many retail configs | about $25–40 | **8.7** |
 | 3 | **Igloo ICEB26** | about $89–$119 | Bullet | up to about 26 | Removable tank | Self-clean on ICEB26 line | about $25–40 | **8.4** |
-| 4 | **hOmeLabs Portable Ice Maker** | about $110–$140 | Bullet | up to about 26 class | Removable tank | Manual / cycle varies by SKU | about $25–45 | **8.2** |
+| 4 | **h Ome Labs Portable Ice Maker** | about $110–$140 | Bullet | up to about 26 class | Removable tank | Manual / cycle varies by SKU | about $25–45 | **8.2** |
 | 5 | **Silonn self-cleaning countertop** | about $90–$130 | Bullet | about 26 class | Removable tank | Dedicated self-clean cycle | about $25–40 | **8.0** |
 
 ---
@@ -255,7 +255,7 @@ Not wisely in hard-water regions. Scale reduces efficiency, clouds ice, and shor
 | **GE Profile Opal 2.0 Ultra** | Want chewable nugget ice, will use a side tank, and accept filter + premium price |
 | **Frigidaire EFIC117** | Need a proven portable bullet maker for everyday summer drinks |
 | **Igloo ICEB26** | Want the cheapest compact trial unit with a self-clean cycle |
-| **hOmeLabs portable** | Host often and want bullet ice size options in the mid-budget tier |
+| **h Ome Labs portable** | Host often and want bullet ice size options in the mid-budget tier |
 | **Silonn self-cleaning** | Care most about an explicit clean cycle at a value price |
 
 ### Who should skip
@@ -265,7 +265,7 @@ Not wisely in hard-water regions. Scale reduces efficiency, clouds ice, and shor
 | **Opal 2.0 Ultra** | Only need hard bullet ice or refuse filter/descaling spend |
 | **Frigidaire EFIC117** | Require soft nugget texture for sodas |
 | **Igloo ICEB26** | Need premium quiet build and long brand-parts familiarity |
-| **hOmeLabs portable** | Want a single unambiguous OEM SKU without listing sprawl |
+| **h Ome Labs portable** | Want a single unambiguous OEM SKU without listing sprawl |
 | **Silonn self-cleaning** | Prefer Frigidaire/GE support channels over value-brand retail |
 
 **Judged by real purchase criteria**, most summer apartments should pick a **bullet portable in the Frigidaire / Igloo / hOmeLabs class** unless chewable ice is the entire point — in which case the **Opal 2.0 Ultra** earns its counter space. Count **electricity for hot months, descaling supplies, and any filters**, not just lbs/day on the box, and confirm tank lifts and rear clearance fit your galley before heat-season return windows close.

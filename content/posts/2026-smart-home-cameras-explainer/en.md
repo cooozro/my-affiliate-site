@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-22T02:34:58.880Z'
+updatedAt: '2026-08-26T01:40:02.295Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
 ---
 ## Editorial Overview
@@ -94,31 +94,23 @@ If the OEM offers **end-to-end encryption** for live view, understand the trade-
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking local vs cloud storage bills, night noise and subscription fees explained TCO gaps more than 4K marketing.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| eufy | SoloCamS340 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Google | NestCamBatt2 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Amazon | BlinkOut4Gen | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Arlo | ArloPro5S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Reolink | Argus3Pro | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| eufy | Solo Cam S340 |
+| Google | Nest Cam Batt 2 |
+| Amazon | Blink Out 4Gen |
+| Arlo | Arlo Pro 5S |
+| Reolink | Argus 3Pro |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: short camera explainers look thin without models, so we add a shortlist and editorial read.**
 
 **Total cost of ownership (3-year): cloud plans frequently exceed camera sticker price.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

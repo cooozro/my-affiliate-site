@@ -29,7 +29,7 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-08-20T08:09:47.232Z'
+updatedAt: '2026-08-26T01:40:02.325Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## Editorial Overview
@@ -64,7 +64,7 @@ We do **not** use proprietary seller APIs. Each category keeps its native metric
 | --- | --- | --- | --- | --- | --- |
 | 1 | Monitor | **Dell S2721QS** | $299 / ~{{krw:299}} | 27" 4K IPS | WFH text clarity |
 | 2 | Electric fan | **Vornado 660** | $99 / ~{{krw:99}} | 237 CFM | Delay AC hours |
-| 3 | Power bank | **Anker 737 (PowerCore 24K)** | $149 / ~{{krw:149}} | 24,000 mAh | Travel + laptop top-up |
+| 3 | Power bank | **Anker 737 (Power Core 24K)** | $149 / ~{{krw:149}} | 24,000 mAh | Travel + laptop top-up |
 | 4 | Bluetooth speaker | **JBL Charge 5** | $179 / ~{{krw:179}} | IP67 | Patio / beach weekends |
 | 5 | Air purifier | **Coway Airmega 150** | $199 / ~{{krw:199}} | 161 CFM CADR (smoke) | Closed-window pollen |
 
@@ -142,32 +142,24 @@ We do **not** use proprietary seller APIs. Each category keeps its native metric
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking $300 street prices, display, air quality, and mobile power stayed the most stable utility buys.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Dell | S2721QS | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Vornado | Vornado660B | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Anker | A737PowerBank | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| JBL | Charge5Plus | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Coway | Airmega150 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| AOC | Q27G2SX | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Dell | S2721QS |
+| Vornado | 660 |
+| Anker | 737 Power Bank |
+| JBL | Charge 5 |
+| Coway | Airmega 150 |
+| AOC | Q27G2SX |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: cross-category lists blur models, so OEM codes are pinned.**
 
 **Total cost of ownership (3-year): include filters, cables, and mounts in the comparison.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

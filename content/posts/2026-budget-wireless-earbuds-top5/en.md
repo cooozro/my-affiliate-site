@@ -25,7 +25,7 @@ imageSearchKeywords:
   - true wireless earphones
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
-updatedAt: '2026-08-14T01:38:50.797Z'
+updatedAt: '2026-08-26T01:40:02.089Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
 noindex: true
 ---
@@ -67,10 +67,10 @@ Snapshot as of {{today}}.
 
 | Rank | Model | Price | Driver | Codec | ANC | Battery (buds+case) | IP | Review | VBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **SoundPeats Air5 Pro** | $28.9 / ~{{krw:28.9}} | 12mm | LDAC, aptX Adaptive | -45dB | 9h + 36h | IPX5 | 4.7 | **9.2** |
-| 2 | **EarFun Air Pro 4** | $32.5 / ~{{krw:32.5}} | Dual 10+6mm | LDAC, aptX Lossless | -43dB | 8h + 32h | IPX5 | 4.6 | **8.9** |
+| 1 | **Sound Peats Air 5 Pro** | $28.9 / ~{{krw:28.9}} | 12mm | LDAC, aptX Adaptive | -45dB | 9h + 36h | IPX5 | 4.7 | **9.2** |
+| 2 | **Ear Fun Air Pro 4** | $32.5 / ~{{krw:32.5}} | Dual 10+6mm | LDAC, aptX Lossless | -43dB | 8h + 32h | IPX5 | 4.6 | **8.9** |
 | 3 | **Anker Soundcore P40i** | $35.0 / ~{{krw:35.0}} | 11mm | LDAC, AAC | -42dB | 10h + 40h | IPX5 | 4.8 | **8.7** |
-| 4 | **QCY MeloBuds Pro** | $24.9 / ~{{krw:24.9}} | 10mm | AAC, SBC | -40dB | 7h + 28h | IPX4 | 4.5 | **8.5** |
+| 4 | **QCY Melo Buds Pro** | $24.9 / ~{{krw:24.9}} | 10mm | AAC, SBC | -40dB | 7h + 28h | IPX4 | 4.5 | **8.5** |
 | 5 | **Redmi Buds 5 Pro** | $38.0 / ~{{krw:38.0}} | Dual 10+6mm | LHDC 5.0, AAC | -46dB | 8h + 30h | IP54 | 4.6 | **8.4** |
 
 ---
@@ -206,20 +206,20 @@ After cross-checking the public specs, budget TWS in 2026 still rewards matching
 
 | Model | Buy if you… |
 | --- | --- |
-| **SoundPeats Air5 Pro** | Want the strongest sound-and-ANC value under $30 with LDAC |
-| **EarFun Air Pro 4** | Multitask across phone and laptop with low gaming latency |
+| **Sound Peats Air 5 Pro** | Want the strongest sound-and-ANC value under $30 with LDAC |
+| **Ear Fun Air Pro 4** | Multitask across phone and laptop with low gaming latency |
 | **Anker Soundcore P40i** | Prefer long battery life and the lowest return-rate risk |
-| **QCY MeloBuds Pro** | Need the cheapest way to test ANC or want a backup pair |
+| **QCY Melo Buds Pro** | Need the cheapest way to test ANC or want a backup pair |
 | **Redmi Buds 5 Pro** | Use a Xiaomi/Redmi phone and want LHDC plus deepest ANC |
 
 ### Who should skip?
 
 | Model | Skip if you… |
 | --- | --- |
-| **SoundPeats Air5 Pro** | Need swim-level IP or flawless windy-street calls |
-| **EarFun Air Pro 4** | Only listen on iPhone and want maximum LDAC value (see SoundPeats) |
+| **Sound Peats Air 5 Pro** | Need swim-level IP or flawless windy-street calls |
+| **Ear Fun Air Pro 4** | Only listen on iPhone and want maximum LDAC value (see SoundPeats) |
 | **Anker Soundcore P40i** | Chase the absolute lowest price or highest treble detail |
-| **QCY MeloBuds Pro** | Ride loud transit daily and need strong ANC (-42dB or better) |
+| **QCY Melo Buds Pro** | Ride loud transit daily and need strong ANC (-42dB or better) |
 | **Redmi Buds 5 Pro** | Are on iPhone or want the best dollars-per-codec on Android |
 
 **On a cost-effectiveness basis,** this report starts with SoundPeats Air5 Pro on Android LDAC phones and Anker Soundcore P40i on iPhone. Three-year ownership splits on tip replacements, firmware gaps, and codec-mismatch returns more than MSRP gaps alone. Check real-time pricing and firmware versions on {{today}} before you buy—deals and codec support shift every quarter.

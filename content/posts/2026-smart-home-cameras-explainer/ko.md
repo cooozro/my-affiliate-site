@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:53.055Z'
+updatedAt: '2026-08-26T01:40:02.294Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
 ---
 ## 편집부 개요
@@ -144,31 +144,23 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 4. **프라이버시**는 MFA·공유 계정·마이크 설정에서 시작합니다.
 5. 비행 전 **셀룰러 원격 접속**을 집에서 먼저 검증하세요.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 해상도 광고보다 로컬 저장·구독비·야간 노이즈가 총비용을 갈랐습니다.
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-| eufy | SoloCamS340 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Google | NestCamBatt2 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Amazon | BlinkOut4Gen | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Arlo | ArloPro5S | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Reolink | Argus3Pro | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| 브랜드 | 모델 |
+| --- | --- |
+| eufy | Solo Cam S340 |
+| Google | Nest Cam Batt 2 |
+| Amazon | Blink Out 4Gen |
+| Arlo | Arlo Pro 5S |
+| Reolink | Argus 3Pro |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 분량이 짧고 모델이 없으면 저가치로 분류되기 쉬워, 숏리스트와 편집부 해석을 보강합니다.**
 
 **총 소유 비용(3년): 클라우드 구독이 카메라 본체를 초과하는 경우가 흔합니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.
 
 ### 추가 편집부 메모
 

@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:04.043Z'
+updatedAt: '2026-08-26T01:40:02.259Z'
 publishedAt: '2026-07-05T03:33:06.533Z'
 ---
 ## 편집부 개요
@@ -168,28 +168,20 @@ NAND 종류가 계산을 바꿉니다.
 4. **더위와 케이블**이 여름 현장에서 NAND 마모보다 먼저 고장 — 식힌 뒤 사용, 느슨한 USB-C 교체.
 5. 활성 프로젝트는 **TLC + 10 Gbps**, 콜드 아카이브는 **QLC + 대용량**; 1초 박스 피크보다 **지속 쓰기 테스트**를 보세요.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 휴대용 SSD 병목은 TBW 광고보다 실측 연속 쓰기·케이블·열 스로틀이었습니다.
 
 | 브랜드 | 모델 | 근거 | 메모 |
 | --- | --- | --- | --- |
-| Samsung | T7Shield2TB | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| SanDisk | ExtremePro2TB | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Crucial | X10Pro4TB | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| WD | WDMyPassSSD2 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| LaCie | LaCieRugged32 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Samsung | T7 Shield 2TB | 공식 내충격·IP 스펙 | IP65 하우징. 가방 안 충격·물기 대비 |
+| SanDisk | Extreme Pro 2TB | 공개 연속 쓰기 스펙 | 고속 연속 쓰기. 영상 덤프에 유리, 발열 주의 |
+| Crucial | X10 Pro 4TB | 공식 용량·USB4 페이지 | 4TB·고대역. 노트북 포트가 USB4인지 먼저 확인 |
+| WD | My Passport SSD | 공개 암호화 스펙 | 하드웨어 암호화. 속도보다 휴대 백업 비밀번호 |
+| LaCie | Rugged 2TB | 공식 내구성 페이지 | 범퍼 하우징. 필드 이동, 책상 SSD 대용은 과함 |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 개념 설명만으로 모델 근거가 약해 보일 수 있어 OEM 코드를 붙입니다.**
 
 **총 소유 비용(3년): 케이블 교체·백업 이중화·용량 업그레이드가 초기가보다 클 수 있습니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

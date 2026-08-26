@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:42.886Z'
+updatedAt: '2026-08-26T01:40:02.044Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## 편집부 개요
@@ -68,10 +68,10 @@ publishedAt: '2026-07-01T07:26:11.000Z'
 
 | 순위 | 모델 | 가격 (USD / KRW) | 손떨림 | 본체 방수 | 무게 | 최대 영상 | 마운트 | 리뷰 | ACI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **GoPro HERO13 Black** | $399 / ~₩539,000 | HyperSmooth 6.0 | 10 m / 33 ft | 154 g | 5.3K60 | GoPro | 4.7 | **9.2** |
+| 1 | **Go Pro HERO13 Black** | $399 / ~₩539,000 | HyperSmooth 6.0 | 10 m / 33 ft | 154 g | 5.3K60 | GoPro | 4.7 | **9.2** |
 | 2 | **DJI Osmo Action 5 Pro** | $349 / ~₩471,000 | RockSteady 3.0+ | 20 m / 65 ft | 146 g | 4K120 | GoPro+DJI | 4.6 | **9.1** |
-| 3 | **Insta360 Ace Pro 2** | $379 / ~₩512,000 | FlowState | 12 m / 39 ft | 177 g | 8K30 | GoPro | 4.5 | **8.9** |
-| 4 | **Insta360 GO 3S** | $399 / ~₩539,000 | FlowState(팟) | 5 m / 16 ft | 39 g(본체) | 4K | 자석 | 4.4 | **8.6** |
+| 3 | **Insta 360 Ace Pro 2** | $379 / ~₩512,000 | FlowState | 12 m / 39 ft | 177 g | 8K30 | GoPro | 4.5 | **8.9** |
+| 4 | **Insta 360 GO 3S** | $399 / ~₩539,000 | FlowState(팟) | 5 m / 16 ft | 39 g(본체) | 4K | 자석 | 4.4 | **8.6** |
 | 5 | **AKASO Brave 8** | $149 / ~₩201,000 | EIS 2.0 | 10 m / 33 ft | 154 g | 4K60 | GoPro | 4.3 | **8.4** |
 
 표의 KRW는 참고용 원화 환산입니다.
@@ -228,20 +228,20 @@ publishedAt: '2026-07-01T07:26:11.000Z'
 
 | 모델 | 추천 대상 |
 | --- | --- |
-| **GoPro HERO13 Black** | 혼합 액티비티에서 마운트 선택지·HyperSmooth가 최우선 |
+| **Go Pro HERO13 Black** | 혼합 액티비티에서 마운트 선택지·HyperSmooth가 최우선 |
 | **DJI Osmo Action 5 Pro** | 20 m 본체 방수·듀얼 스크린으로 스노클+브이로그 |
-| **Insta360 Ace Pro 2** | 야시장·캠프파이어·협곡 그늘 등 저조도 촬영 |
-| **Insta360 GO 3S** | 모자·가슴 POV로 도보·테마파크 |
+| **Insta 360 Ace Pro 2** | 야시장·캠프파이어·협곡 그늘 등 저조도 촬영 |
+| **Insta 360 GO 3S** | 모자·가슴 POV로 도보·테마파크 |
 | **AKASO Brave 8** | GoPro 마운트 호환을 최저가로 풀·트레일 |
 
 ### 이런 분은 패스
 
 | 모델 | 패스 권장 |
 | --- | --- |
-| **GoPro HERO13 Black** | 다이브 케이스 없이 20 m가 필요하거나 최저가만 원할 때 |
+| **Go Pro HERO13 Black** | 다이브 케이스 없이 20 m가 필요하거나 최저가만 원할 때 |
 | **DJI Osmo Action 5 Pro** | 기존 GoPro 다이브 하우징 생태계를 유지할 때 |
-| **Insta360 Ace Pro 2** | 초경량 등산만 하거나 한낮 밝은 장면만 촬영할 때 |
-| **Insta360 GO 3S** | 스노클 주력·교환 렌즈가 필요할 때 |
+| **Insta 360 Ace Pro 2** | 초경량 등산만 하거나 한낮 밝은 장면만 촬영할 때 |
+| **Insta 360 GO 3S** | 스노클 주력·교환 렌즈가 필요할 때 |
 | **AKASO Brave 8** | 거친 MTB·오프로드에서 최상급 EIS가 필수일 때 |
 
 결제 직전, 선택 모델의 공식 방수 깊이·마운트 규격 페이지를 한 번 더 열어 두고, 여행 보험·분실 대비까지 포함해 총 소유 비용을 비교하는 것을 권합니다.

@@ -20,6 +20,18 @@ export function transparencyNoticeMarkdown(locale: SiteEngineLocale): string {
   return `> **${label}:** ${text}`;
 }
 
+export function ensureTransparencyMarkdown(
+  body: string,
+  locale: SiteEngineLocale,
+): string {
+  const marker =
+    locale === "ko"
+      ? "직접 실물 기기를 테스트한 리뷰가 아닙니다"
+      : "not a hands-on review";
+  if (String(body || "").includes(marker)) return body;
+  return `${transparencyNoticeMarkdown(locale)}\n\n${String(body || "").trimStart()}`;
+}
+
 export const PRICE_FALLBACK_EN =
   "Confirm live prices and promotions on the official retailer or manufacturer storefront. This page does not invent or hard-code a current street price.";
 
@@ -102,6 +114,126 @@ export function stripMethodologySections(body: string): string {
     if (!skipping) out.push(line);
   }
   return out.join("\n").replace(/\n{3,}/g, "\n\n").trimStart();
+}
+
+const HTML_COMMENT_RE = /<!--[\s\S]*?-->/g;
+const ESCAPED_HTML_COMMENT_RE = /&lt;!--[\s\S]*?--&gt;/gi;
+const SHORTLIST_ANCHOR_RE =
+  /^#{2,3}\s*(?:\d+\.\s*)?(숏리스트\s*판단\s*앵커|Shortlist\s+decision\s+anchors?)\s*$/i;
+
+function collapseBlankLines(text: string): string {
+  return text.replace(/\n{3,}/g, "\n\n").trimStart();
+}
+
+export function stripPipelineHtmlComments(body: string): string {
+  return collapseBlankLines(
+    String(body || "")
+      .replace(HTML_COMMENT_RE, "")
+      .replace(ESCAPED_HTML_COMMENT_RE, ""),
+  );
+}
+
+export function stripOrphanShortlistAnchors(body: string): string {
+  const lines = String(body || "").split("\n");
+  const out: string[] = [];
+  let skipping = false;
+  for (const line of lines) {
+    if (SHORTLIST_ANCHOR_RE.test(line.trim())) {
+      skipping = true;
+      continue;
+    }
+    if (skipping && /^#{1,3}\s+\S/.test(line)) skipping = false;
+    if (!skipping) out.push(line);
+  }
+  return collapseBlankLines(out.join("\n"));
+}
+
+function splitTableRow(line: string): string[] {
+  let s = line.trim();
+  if (s.startsWith("|")) s = s.slice(1);
+  if (s.endsWith("|")) s = s.slice(0, -1);
+  return s.split("|").map((cell) => cell.trim());
+}
+
+function isSeparatorRow(line: string): boolean {
+  const cells = splitTableRow(line);
+  return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+}
+
+function joinTableRow(cells: string[]): string {
+  return `| ${cells.join(" | ")} |`;
+}
+
+function dropIndexes<T>(arr: T[], drop: Set<number>): T[] {
+  return arr.filter((_, i) => !drop.has(i));
+}
+
+export function dropIdenticalShortlistColumns(body: string): string {
+  const lines = String(body || "").split("\n");
+  const out: string[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i]!;
+    const next = lines[i + 1];
+    if (line.trim().startsWith("|") && next && isSeparatorRow(next)) {
+      const block: string[] = [line, next];
+      i += 2;
+      while (i < lines.length && lines[i]!.trim().startsWith("|")) {
+        block.push(lines[i]!);
+        i += 1;
+      }
+      out.push(...rewriteClonedTableBlock(block));
+      continue;
+    }
+    out.push(line);
+    i += 1;
+  }
+  return collapseBlankLines(out.join("\n"));
+}
+
+function rewriteClonedTableBlock(block: string[]): string[] {
+  if (block.length < 3) return block;
+  const headers = splitTableRow(block[0]!);
+  const dataRows = block.slice(2).map(splitTableRow);
+  if (dataRows.length < 2) return block;
+  const colCount = headers.length;
+  if (dataRows.some((row) => row.length !== colCount)) return block;
+  const drop = new Set<number>();
+  headers.forEach((name, idx) => {
+    if (!/^(근거|evidence|basis|메모|노트|note|memo|notes)$/i.test(name)) return;
+    const values = dataRows.map((row) => row[idx] ?? "");
+    const first = values[0] ?? "";
+    if (!first) return;
+    if (values.every((v) => v === first)) drop.add(idx);
+  });
+  if (drop.size === 0) return block;
+  const nextHeaders = dropIndexes(headers, drop);
+  if (nextHeaders.length < 2) return block;
+  const sep = splitTableRow(block[1]!);
+  return [
+    joinTableRow(nextHeaders),
+    joinTableRow(dropIndexes(sep, drop)),
+    ...dataRows.map((row) => joinTableRow(dropIndexes(row, drop))),
+  ];
+}
+
+export function sanitizePipelineArtifacts(body: string): string {
+  let next = stripPipelineHtmlComments(body);
+  next = stripOrphanShortlistAnchors(next);
+  next = dropIdenticalShortlistColumns(next);
+  return next;
+}
+
+export function prepareArticleBody(
+  body: string,
+  locale: SiteEngineLocale,
+  options?: { marketOk?: boolean },
+): string {
+  let next = stripMethodologySections(body);
+  next = sanitizePipelineArtifacts(next);
+  next = ensureTransparencyMarkdown(next, locale);
+  next = applyPriceFallback(next, locale, options);
+  return next;
 }
 
 export function stripTransparencyMarkdown(body: string): string {

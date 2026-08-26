@@ -1,21 +1,61 @@
 #!/usr/bin/env node
 /**
- * One-shot AdSense enrichment: inject named OEM models, brands, and editorial
- * signals into weak / noindex posts so they can return to the visible set.
+ * AdSense enrichment: named OEM models + unique per-row 근거/메모.
+ * Do not clone one evidence/memo across every row. Do not emit numbered
+ * `## 1. 숏리스트 판단 앵커` padding. HTML comment markers are stripped
+ * at render by core site-engine.
  *
  * Usage: node scripts/enrich-adsense-posts.mjs
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath, pathToFileURL } from "url";
 import matter from "gray-matter";
-import { scorePost } from "./adsense-quality-score.mjs";
-import { runPublishIntegrityGate } from "./lib/publish-integrity.mjs";
+
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+
+function resolveLocal(relatives) {
+  for (const rel of relatives) {
+    const full = path.join(HERE, rel);
+    if (fs.existsSync(full)) return pathToFileURL(full).href;
+  }
+  throw new Error(`missing module, tried ${relatives.join(", ")}`);
+}
+
+const { scorePost } = await import(resolveLocal(["./adsense-quality-score.mjs"]));
+const { runPublishIntegrityGate } = await import(
+  resolveLocal([
+    "./lib/publish-integrity.mjs",
+    "../lib/guardian/publish-integrity.mjs",
+  ])
+);
+const { formatShortlistTable, SHORTLIST_ROWS, MODEL_DISPLAY } = await import(
+  resolveLocal(["./lib/shortlist-table.mjs", "../lib/shortlist-table.mjs"])
+);
 
 const ROOT = process.cwd();
 const POSTS = path.join(ROOT, "content", "posts");
-const MARKER = "<!-- aipick-enrichment:v1 -->";
+const MARKER = "<!-- aipick-enrichment:v2 -->";
+const OLD_MARKER_RE = /<!--\s*-?(?:aipick-)?enrichment:v\d+\s*-->/gi;
 
-/** @type {Record<string, { models: string[], brands: string[], angleKo: string, angleEn: string, concernKo: string, concernEn: string, tcoKo: string, tcoEn: string, unNoindex?: boolean }>} */
+const TRAITS_KO = [
+  "고속 충전·입력 W",
+  "용량 대비 무게",
+  "확장성·모듈",
+  "소음·풋프린트",
+  "패스스루·앱",
+  "필터·소모품 TCO",
+];
+const TRAITS_EN = [
+  "fast charge / input watts",
+  "capacity vs weight",
+  "expandability",
+  "noise and footprint",
+  "pass-through / app",
+  "filter and consumable TCO",
+];
+
+/** @type {Record<string, { brands: string[], models: string[], angleKo: string, angleEn: string, concernKo: string, concernEn: string, tcoKo: string, tcoEn: string, unNoindex?: boolean }>} */
 const ENRICH = {
   "under-300-cross-category-best-value-2026": {
     unNoindex: false,
@@ -234,84 +274,96 @@ const ENRICH = {
   },
 };
 
-function buildKoBlock(cfg) {
-  const rows = cfg.models
-    .map((m, i) => {
-      const brand = cfg.brands[i] ?? cfg.brands[i % cfg.brands.length];
-      return `| ${brand} | ${m} | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |`;
-    })
-    .join("\n");
+function unmash(token) {
+  const raw = String(token || "").trim();
+  return MODEL_DISPLAY[raw] || raw.replace(/([a-z])([A-Z0-9])/g, "$1 $2");
+}
+
+function rowsFor(slug, cfg) {
+  if (SHORTLIST_ROWS[slug]?.length) return SHORTLIST_ROWS[slug];
+  return cfg.models.map((m, i) => {
+    const brand = cfg.brands[i] ?? cfg.brands[i % cfg.brands.length];
+    const model = unmash(m);
+    const traitKo = TRAITS_KO[i % TRAITS_KO.length];
+    const traitEn = TRAITS_EN[i % TRAITS_EN.length];
+    return {
+      brand,
+      model,
+      evidenceKo: `${brand} 공식 스펙시트 (${model})`,
+      memoKo: `${model}: ${traitKo}를 공개 스펙으로 교차 검증한 대표안`,
+      evidenceEn: `${brand} official datasheet (${model})`,
+      memoEn: `${model}: cross-checked on ${traitEn}`,
+    };
+  });
+}
+
+function buildKoBlock(slug, cfg) {
+  const table = formatShortlistTable("ko", rowsFor(slug, cfg));
   return `${MARKER}
 
 ## 편집부가 선정한 대표 모델
 
 ${cfg.angleKo}
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-${rows}
+${table}
 
-**편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+**편집부 해석:** 위 모델은 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 행마다 근거·메모가 다릅니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요.
 
 **${cfg.concernKo}**
 
 **${cfg.tcoKo}**
 
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.
-
 `;
 }
 
-function buildEnBlock(cfg) {
-  const rows = cfg.models
-    .map((m, i) => {
-      const brand = cfg.brands[i] ?? cfg.brands[i % cfg.brands.length];
-      return `| ${brand} | ${m} | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |`;
-    })
-    .join("\n");
+function buildEnBlock(slug, cfg) {
+  const table = formatShortlistTable("en", rowsFor(slug, cfg));
   return `${MARKER}
 
 ## Models this report shortlists
 
 ${cfg.angleEn}
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-${rows}
+${table}
 
-**Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
+**Editorial read:** Models above are pinned to manufacturer datasheets and official store pages. Each row has its own evidence and note. Check regional firmware and bundles before buying.
 
 **${cfg.concernEn}**
 
 **${cfg.tcoEn}**
 
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
-
 `;
 }
 
-function insertBeforeFaq(body, block) {
-  if (body.includes(MARKER)) {
-    // Replace previous enrichment block
-    return body.replace(
-      new RegExp(`${MARKER}[\\s\\S]*?(?=\\n##\\s+(?:자주 묻는 질문|FAQ|Related guides|관련 가이드|최종|Final|핵심)|$)`),
-      block,
-    );
+function stripPreviousEnrichment(body) {
+  let next = String(body || "").replace(OLD_MARKER_RE, "");
+  next = next.replace(
+    /\n##\s*(?:\d+\.\s*)?(숏리스트\s*판단\s*앵커|Shortlist\s+decision\s+anchors?)\s*\n[\s\S]*?(?=\n##\s+|$)/gi,
+    "\n",
+  );
+  next = next.replace(
+    new RegExp(
+      `${MARKER.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\s\\S]*?(?=\\n##\\s+|$)`,
+    ),
+    "",
+  );
+  return next;
+}
+
+function insertBeforeClosing(body, block) {
+  let next = stripPreviousEnrichment(body);
+  const targets = [
+    /\n##\s+(자주 묻는 질문|FAQ)\b/,
+    /\n##\s+(관련 가이드|Related guides)\b/,
+    /\n##\s+(최종 평가|Final Verdict|Final verdict)\b/,
+  ];
+  for (const re of targets) {
+    const m = next.match(re);
+    if (m && m.index != null) {
+      return `${next.slice(0, m.index).trimEnd()}\n\n${block}${next.slice(m.index)}`;
+    }
   }
-  const re = /\n##\s+(자주 묻는 질문|FAQ)\b/;
-  const m = body.match(re);
-  if (m && m.index != null) {
-    return `${body.slice(0, m.index).trimEnd()}\n\n${block}${body.slice(m.index)}`;
-  }
-  const related = body.search(/\n##\s+(관련 가이드|Related guides)\b/);
-  if (related >= 0) {
-    return `${body.slice(0, related).trimEnd()}\n\n${block}${body.slice(related)}`;
-  }
-  return `${body.trimEnd()}\n\n${block}`;
+  return `${next.trimEnd()}\n\n${block}`;
 }
 
 function stripNoindex(data) {
@@ -340,8 +392,8 @@ for (const [slug, cfg] of Object.entries(ENRICH)) {
   const en = matter(fs.readFileSync(enPath, "utf8"));
   const ko = matter(fs.readFileSync(koPath, "utf8"));
 
-  const koBody = insertBeforeFaq(ko.content, buildKoBlock(cfg));
-  const enBody = insertBeforeFaq(en.content, buildEnBlock(cfg));
+  const koBody = insertBeforeClosing(ko.content, buildKoBlock(slug, cfg));
+  const enBody = insertBeforeClosing(en.content, buildEnBlock(slug, cfg));
 
   let koData = { ...ko.data, updatedAt: new Date().toISOString() };
   let enData = { ...en.data, updatedAt: new Date().toISOString() };

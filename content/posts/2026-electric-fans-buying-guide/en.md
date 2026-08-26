@@ -29,7 +29,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-08-20T08:09:44.742Z'
+updatedAt: '2026-08-26T01:40:02.171Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## Editorial Overview
@@ -83,7 +83,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | **Vornado 660** | $99 | 584 | 39 | 58 | Fixed aim | about $0.07 | 4.7 | **9.2** |
 | 2 | **Rowenta VU5670 Turbo Silence** | $129 | 410 | 35 | 55 | 90° | about $0.07 | 4.5 | **9.0** |
-| 3 | **Honeywell HT-900 TurboForce** | $18 | 185 | 41 | 35 | 90° tilt | about $0.04 | 4.4 | **8.8** |
+| 3 | **Honeywell HT-900 Turbo Force** | $18 | 185 | 41 | 35 | 90° tilt | about $0.04 | 4.4 | **8.8** |
 | 4 | **Lasko Wind Curve T42951** | $65 | 336 | 48 | 45 | 90° sweep | about $0.05 | 4.3 | **8.5** |
 | 5 | **Dreo Nomad One DR-HTF007S** | $79 | 348 | 44 | 42 | 90° + app | about $0.05 | 4.4 | **8.4** |
 

@@ -33,7 +33,7 @@ coverImageCredit: Photo by Vecislavas Popa / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1571468'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
-updatedAt: '2026-08-20T08:09:45.095Z'
+updatedAt: '2026-08-26T01:40:02.184Z'
 publishedAt: '2026-07-22T09:17:40.568Z'
 ---
 ## Editorial Overview
@@ -298,31 +298,23 @@ Dyson’s V15 Detect class adds laser dust visibility and detailed particle read
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking simultaneous-load circuits and laundry bottlenecks, 3–5 person summer stress shows up in amps and airflow before ‘bigger appliance’ marketing.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Samsung | RF28R7351SG | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| LG | WM4000HWA | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Winix | WinixC545A | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Dyson | V15Detect | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Roborock | RoborockS8PU | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Samsung | RF28R7351SG |
+| LG | WM4000HWA |
+| Winix | Winix C545A |
+| Dyson | V15Detect |
+| Roborock | Roborock S8PU |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: scenario prose can look unanchored without named models, so OEM codes are attached.**
 
 **Total cost of ownership (3-year): filters, detergent, and peak-rate electricity often outweigh sticker price in felt cost.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

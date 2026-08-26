@@ -31,7 +31,7 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-08-11T06:15:03.404Z'
+updatedAt: '2026-08-26T01:40:02.298Z'
 publishedAt: '2026-07-24T07:56:24.703Z'
 ---
 ## 편집부 개요
@@ -229,29 +229,21 @@ publishedAt: '2026-07-24T07:56:24.703Z'
 
 먼저 재고, 다음 순서를 정하고, 브랜드는 그다음입니다.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 원룸 필수템은 ‘전부 풀세트’보다 소음·풋프린트·멀티탭 여유가 먼저였습니다.
 
 | 브랜드 | 모델 | 근거 | 메모 |
 | --- | --- | --- | --- |
-| Levoit | Core300S | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Dreo | DR-HSH004 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Anker | AnkerA1257PD | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Cosori | CAF-LI211 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| eufy | eufyC28Pro | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Roborock | RoborockQRevo | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| Levoit | Core 300S | 공개 CADR·앱 스펙 | 원룸 CADR·앱 스케줄. 필터 TCO를 3년에 넣으세요 |
+| Dreo | DR-HSH004 | 공개 W·전도 스위치 | 저소음 PTC. 원룸 회로 용량부터 확인 |
+| Anker | A1257 PD | 공식 PD 출력 W | 고속 PD 보조배터리. 멀티탭 여유를 대체하지 않음 |
+| Cosori | CAF-LI211 | 공개 바스켓 L·W | 컴팩트 바스켓. 세척 난이도가 프리셋 수보다 중요 |
+| eufy | C28 Pro | 공개 흡입력·도킹 | 소형 도킹. 원룸 문턱·케이블 걸림부터 재세요 |
+| Roborock | Q Revo | 공개 열세척·맵핑 | 열세척 도킹. 1인 가구엔 풋프린트가 클 수 있음 |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 메타 체크리스트는 모델명이 비기 쉬워, OEM 코드를 명시합니다.**
 
 **총 소유 비용(3년): 필터·논스틱 교체·배터리 사이클이 초기 합산가의 상당 부분을 차지합니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

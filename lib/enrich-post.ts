@@ -10,7 +10,10 @@ import {
 import type { Locale } from "@/lib/i18n/config";
 import { getUsdKrwRate } from "@/lib/market-data";
 import type { Post } from "@/lib/posts";
-import { stripMethodologySections } from "@/lib/site-engine";
+import {
+  sanitizePipelineArtifacts,
+  stripMethodologySections,
+} from "@/lib/site-engine";
 
 export type EnrichedPost = Post & {
   liveDataNote?: string;
@@ -39,7 +42,7 @@ export async function enrichPost(
   const base = coverImage && coverImage !== post.coverImage ? { ...post, coverImage } : post;
   const stripped = {
     ...base,
-    content: stripMethodologySections(base.content),
+    content: sanitizePipelineArtifacts(stripMethodologySections(base.content)),
   };
 
   if (!base.liveData) {

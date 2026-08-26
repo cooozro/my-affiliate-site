@@ -12,7 +12,7 @@ const BRANDS =
   /\b(Samsung|LG|Sony|Apple|Dyson|Bosch|Frigidaire|Midea|Whirlpool|GE|Electrolux|Dell|AOC|Xiaomi|Shark|Roborock|iRobot|Bissell|Tineco|Duxtop|Empava|Vornado|Rowenta|Honeywell|Lasko|Dreo|Winix|Levoit|TCL|Maytag|Anker|Soundcore|Fitbit|Amazfit|Cosori|eufy|Bose|JBL|Google|Amazon|Haier|Govee|hOmeLabs|CalDigit|Keychron|Logitech|Sony|GoPro|DJI|Brita|TOTO|Panasonic|Nespresso|Breville|Sony|Sony)\b/gi;
 const PICK = /\*\*(추천|Recommended pick)[:：]?[^*\n]*\*\*/gi;
 const SCENARIO = /^##\s*(시나리오:|Scenario:)/gim;
-const PRODUCT_H2 = /^##\s*\d+\.\s+/gm;
+const PRODUCT_H2 = /^##\s*\d+\.\s+(?!숏리스트\s*판단\s*앵커|Shortlist\s+decision)/gm;
 const EXPERIENCE =
   /(편집부\s*(현장\s*검증|분석|교차\s*검증)|공개\s*스펙\s*(교차\s*검증|재검토)|교차\s*검증한\s*결과|field\s*check|cross-check|cross-checked|Editorial\s*finding|editorial\s*field|After\s+cross-checking|this\s+report)/i;
 const WHY =

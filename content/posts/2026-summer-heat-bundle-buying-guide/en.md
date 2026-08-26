@@ -17,7 +17,7 @@ topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-08-12T04:34:10.511Z'
+updatedAt: '2026-08-26T01:40:02.314Z'
 coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
 coverImageAlt: electric fan
 coverImageAltKo: 선풍기
@@ -78,7 +78,7 @@ We focus on real, widely available models that solve the closed-window summer pr
 | --- | --- | --- | --- | --- |
 | Dyson Pure Cool TP07 | Fan/Purifier | 40W | Air multiplier + HEPA | {{krw:599}} |
 | Midea U-Shaped 8K BTU | Window AC | 550W | Inverter, quiet | {{krw:399}} |
-| LG PuriCare 50-pint | Dehumidifier | 650W | Smart control, large tank | {{krw:299}} |
+| LG Puri Care 50-pint | Dehumidifier | 650W | Smart control, large tank | {{krw:299}} |
 | Ninja Foodi 8QT | Air Fryer | 1500W (peak) | Dual heat, low oil | {{krw:199}} |
 | Brita Insulated Bottle | Hydration | 0W | 24h cold retention | {{krw:25}} |
 
@@ -232,7 +232,7 @@ Portable ACs are easier to install and can be moved from room to room, but they'
 | --- | --- |
 | Dyson Pure Cool TP07 | You want clean, moving air without the energy cost of AC |
 | Midea U-Shaped AC | You need efficient, quiet cooling for one room |
-| LG PuriCare Dehumidifier | You struggle with humidity and want to make AC more effective |
+| LG Puri Care Dehumidifier | You struggle with humidity and want to make AC more effective |
 | Ninja Foodi Air Fryer | You want to cook without heating up the kitchen |
 | Brita Insulated Bottle | You want cold, filtered water on the go |
 
@@ -242,7 +242,7 @@ Portable ACs are easier to install and can be moved from room to room, but they'
 | --- | --- |
 | Dyson Pure Cool TP07 | You're on a tight budget and already have AC |
 | Midea U-Shaped AC | Your windows don't open horizontally or you can't install it |
-| LG PuriCare Dehumidifier | You live in a dry climate or have a small space |
+| LG Puri Care Dehumidifier | You live in a dry climate or have a small space |
 | Ninja Foodi Air Fryer | You rarely cook at home or have limited counter space |
 | Brita Insulated Bottle | You prefer tap water and don't need portability |
 

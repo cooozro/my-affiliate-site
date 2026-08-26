@@ -22,7 +22,7 @@ coverImageAlt: humidifier in a home interior
 coverImageAltKo: 실내의 가습기
 coverImageCredit: Photo by asundermeier / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-12T04:34:10.542Z'
+updatedAt: '2026-08-26T01:40:02.363Z'
 publishedAt: '2026-08-12T04:33:58.635Z'
 ---
 ## Editorial Overview
@@ -151,7 +151,7 @@ The following models illustrate the principles above. They are not endorsements 
 | Model | Type | Tank size | Key feature |
 | --- | --- | --- | --- |
 | **Levoit LV600HH** | Ultrasonic | 1.5 gal | Built-in humidistat, warm/cool mist, aroma box |
-| **Vornado Evap40** | Evaporative | 4 gal | High output, wide tank opening, basic operation |
+| **Vornado Evap 40** | Evaporative | 4 gal | High output, wide tank opening, basic operation |
 | **Honeywell HCM-350** | Evaporative | 1 gal | UV-C light, quiet, dishwasher-safe parts |
 | **Dyson AM10** | Ultrasonic | 0.8 gal | UV-C clean cycle, air multiplier, sleek design |
 | **Sharp KC850U** | Evaporative + PlasmaCluster | 1.8 gal | Ion-technology for mold/mite reduction |

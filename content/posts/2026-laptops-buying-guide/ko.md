@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:45.629Z'
+updatedAt: '2026-08-26T01:40:02.212Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## 편집부 개요
@@ -69,10 +69,10 @@ publishedAt: '2026-07-06T03:36:25.166Z'
 
 | 순위 | 모델 | 가격 (USD) | CPU | RAM / 확장 | nits | 배터리 | 무게 | 리뷰 | SLBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Lenovo IdeaPad Slim 3 15ABR8** | {{krw:499}} | Ryzen 5 7530U | 16GB 납땜 | 300 | 47Wh | 1.62kg | 4.5 | **9.1** |
+| 1 | **Lenovo Idea Pad Slim 3 15ABR8** | {{krw:499}} | Ryzen 5 7530U | 16GB 납땜 | 300 | 47Wh | 1.62kg | 4.5 | **9.1** |
 | 2 | **Acer Aspire 5 A515-58** | {{krw:449}} | Core i5-1335U | 8GB+1슬롯 | 250 | 50Wh | 1.76kg | 4.4 | **8.9** |
 | 3 | **ASUS Vivobook Go 15 E1504FA** | {{krw:429}} | Ryzen 5 7520U | 16GB 납땜 | 250 | 42Wh | 1.63kg | 4.3 | **8.8** |
-| 4 | **HP Laptop 15-fd0123dx** | {{krw:479}} | Core i5-1334U | 8GB+1슬롯 | 250 | 41Wh | 1.69kg | 4.4 | **8.7** |
+| 4 | **HP Laptop 15-fd 0123dx** | {{krw:479}} | Core i5-1334U | 8GB+1슬롯 | 250 | 41Wh | 1.69kg | 4.4 | **8.7** |
 | 5 | **Dell Inspiron 15 3535** | {{krw:459}} | Ryzen 5 7520U | 8GB+1슬롯 | 250 | 41Wh | 1.65kg | 4.3 | **8.6** |
 
 가격은 참고 USD 리스트이며, 원화는 {{usd_krw_rate}} 환율 플레이스홀더 기준입니다.
@@ -199,20 +199,20 @@ publishedAt: '2026-07-06T03:36:25.166Z'
 
 | 모델 | 이런 분께 |
 | --- | --- |
-| **IdeaPad Slim 3 15ABR8** | 16GB·배터리·300nit를 출하 그대로 원할 때 |
+| **Idea Pad Slim 3 15ABR8** | 16GB·배터리·300nit를 출하 그대로 원할 때 |
 | **Acer Aspire 5 A515-58** | 저렴한 RAM 증설·큰 배터리가 필요할 때 |
 | **Vivobook Go 15 E1504FA** | 최저가 16GB·가벼운 이동이 목표일 때 |
-| **HP Laptop 15-fd0123dx** | HP AS에 RAM·외장 저장을 더할 때 |
+| **HP Laptop 15-fd 0123dx** | HP AS에 RAM·외장 저장을 더할 때 |
 | **Dell Inspiron 15 3535** | AMD·512GB·확장 슬롯 균형을 원할 때 |
 
 ### 이런 분은 패스
 
 | 모델 | 이런 분은 |
 | --- | --- |
-| **IdeaPad Slim 3 15ABR8** | RAM 증설·무냉방 여름방 조용함이 필수일 때 |
+| **Idea Pad Slim 3 15ABR8** | RAM 증설·무냉방 여름방 조용함이 필수일 때 |
 | **Acer Aspire 5 A515-58** | 당장 RAM 추가 없이 무거운 멀티태스킹할 때 |
 | **Vivobook Go 15 E1504FA** | 보조배터리 없이 종일 도서관에 있을 때 |
-| **HP Laptop 15-fd0123dx** | 256GB만으로 대용량 영상 편집할 때 |
+| **HP Laptop 15-fd 0123dx** | 256GB만으로 대용량 영상 편집할 때 |
 | **Dell Inspiron 15 3535** | 본체 개봉 없이 당장 16GB가 필요할 때 |
 
 결제 전 {{today_locale}} 기준 **학생 할인·반품 기간**을 확인하고, 게임·4K 편집처럼 **외장 GPU**가 필요한 과목인지 과목표와 맞춰 보세요. 이 다섯 모델은 게이밍·4K 편집 타깃이 아닙니다.

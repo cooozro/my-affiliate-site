@@ -23,7 +23,7 @@ imageSearchKeywords:
   - true wireless earphones
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
-updatedAt: '2026-08-14T01:38:50.823Z'
+updatedAt: '2026-08-26T01:40:02.088Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
 noindex: true
 ---
@@ -204,20 +204,20 @@ noindex: true
 
 | 모델 | 이런 분께 맞습니다 |
 | --- | --- |
-| **SoundPeats Air5 Pro** | 3만 원대에서 LDAC·ANC 균형을 원하는 분 |
-| **EarFun Air Pro 4** | 폰·노트북 멀티포인트와 게임 지연을 중시하는 통근족 |
+| **Sound Peats Air 5 Pro** | 3만 원대에서 LDAC·ANC 균형을 원하는 분 |
+| **Ear Fun Air Pro 4** | 폰·노트북 멀티포인트와 게임 지연을 중시하는 통근족 |
 | **Anker Soundcore P40i** | 배터리·반품률·장기 신뢰를 최우선하는 분 |
-| **QCY MeloBuds Pro** | ANC 입문·서브 이어폰을 최저가로 원하는 분 |
+| **QCY Melo Buds Pro** | ANC 입문·서브 이어폰을 최저가로 원하는 분 |
 | **Redmi Buds 5 Pro** | 샤오미·레드미 폰과 LHDC·강한 ANC를 쓰고 싶은 분 |
 
 ### 이런 분은 패스
 
 | 모델 | 이런 분은 피하세요 |
 | --- | --- |
-| **SoundPeats Air5 Pro** | 수영·완전 방수나 바람 많은 야외 통화가 필수인 분 |
-| **EarFun Air Pro 4** | 아이폰만 쓰며 LDAC 가성비를 최우선하는 분 |
+| **Sound Peats Air 5 Pro** | 수영·완전 방수나 바람 많은 야외 통화가 필수인 분 |
+| **Ear Fun Air Pro 4** | 아이폰만 쓰며 LDAC 가성비를 최우선하는 분 |
 | **Anker Soundcore P40i** | 최저가만 보려는 분 또는 고음 해상도 극대화를 원하는 분 |
-| **QCY MeloBuds Pro** | 지하철 등 고소음 통근에 강한 ANC(-42dB+)가 필요한 분 |
+| **QCY Melo Buds Pro** | 지하철 등 고소음 통근에 강한 ANC(-42dB+)가 필요한 분 |
 | **Redmi Buds 5 Pro** | 아이폰 사용자이거나 안드로이드 코덱 가성비만 보려는 분 |
 
 **실제 구매 기준으로 보면** 안드로이드 LDAC면 SoundPeats Air5 Pro, 아이폰이면 Anker Soundcore P40i부터 보겠습니다. 3년 소유 비용은 이어팁·케이스 교체·펌웨어 공백·코덱 불일치 반품이 MSRP 차이보다 **일일 통근 만족도**를 더 크게 갈라놓습니다. 구매 직전 {{today_locale}} 기준 실시간 할인가와 펌웨어 버전을 한 번 더 확인하세요.

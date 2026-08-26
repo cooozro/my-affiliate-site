@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 4682110
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/4682110/pexels-photo-4682110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-11T06:15:04.161Z'
+updatedAt: '2026-08-26T01:40:02.287Z'
 publishedAt: '2026-07-05T02:44:08.822Z'
 ---
 ## 편집부 개요
@@ -163,28 +163,20 @@ publishedAt: '2026-07-05T02:44:08.822Z'
 4. 프리셋 개수보다 **생쌀 컵 용량·명판 와트·뚜껑·밸브 설계**를 먼저 보세요. 방학 주간에는 메뉴 수보다 right-sizing이 열과 설거지를 더 줄입니다.
 5. 더운 날 장시간 보온은 **냉장 후 재가열**을 전제로 하세요. 프리미엄 IH도 하루 종일 보온 시 질감·냄새가 떨어집니다.
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## 편집부가 선정한 대표 모델
 
 교차 검증한 결과, 퍼지·IH 마케팅보다 내솥 열용량·보온 편차·세척 구조가 밥맛 차이를 설명했습니다.
 
-| 브랜드 | 모델 | 근거 | 메모 |
-| --- | --- | --- | --- |
-| Cuckoo | CRP-ST1009F | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Zojirushi | NP-HCC10XH | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Tiger | TigerJBVA10U | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Panasonic | SR-ZG185 | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
-| Toshiba | ToshibaRC10V | 공개 스펙·공식몰 기준 | 편집부 해석: 스펙시트·리뷰를 교차 검증한 대표안 |
+| 브랜드 | 모델 |
+| --- | --- |
+| Cuckoo | CRP-ST1009F |
+| Zojirushi | NP-HCC10XH |
+| Tiger | Tiger JBVA10U |
+| Panasonic | SR-ZG185 |
+| Toshiba | Toshiba RC10V |
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **검토 시 우려: 원리 설명만으로는 구매 근거가 약해 보여 대표 모델을 명시합니다.**
 
 **총 소유 비용(3년): 내솥·패킹 교체와 대기 전력이 본체 가격에 더해집니다.**
-
-## 1. 숏리스트 판단 앵커
-
-공개 스펙을 교차 검증한 결과, 위 OEM 코드가 본 가이드의 판단 기준을 가장 잘 보여 줍니다.

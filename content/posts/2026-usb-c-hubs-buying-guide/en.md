@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:47.405Z'
+updatedAt: '2026-08-26T01:40:02.333Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
@@ -72,7 +72,7 @@ Reference prices checked July 2026; USD list values before discounts.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | **Anker 555 8-in-1 (A8380)** | $49.99 | 85W pass-through | 4K60 HDMI | 2 | Both | 1× HDMI 2.0 | 4.6 | **9.0** |
 | 2 | **Satechi Multiport Adapter V2** | $79.99 | 100W pass-through | 4K60 HDMI | 1 | microSD | 1× HDMI 2.0 | 4.5 | **8.9** |
-| 3 | **CalDigit TS4 Thunderbolt 4 Dock** | $399.95 | 98W to host | Dual 4K60 | 5 | UHS-II SD | 2× DP/HDMI | 4.4 | **8.8** |
+| 3 | **Cal Digit TS4 Thunderbolt 4 Dock** | $399.95 | 98W to host | Dual 4K60 | 5 | UHS-II SD | 2× DP/HDMI | 4.4 | **8.8** |
 | 4 | **Ugreen Revodok Pro 209** | $44.99 | 100W pass-through | 4K60 HDMI | 3 | Both | 1× HDMI 2.0 | 4.4 | **8.6** |
 | 5 | **Baseus Metal Gleam 9-in-1** | $34.99 | 100W pass-through | 4K30 HDMI | 2 | Both | 1× HDMI 1.4 | 4.3 | **8.2** |
 
@@ -230,7 +230,7 @@ After cross-checking the public PD and HDMI specs, 2026 hub value still means ma
 | --- | --- |
 | **Anker 555** | Need 4K60 HDMI, SD slots, and 85W PD in a travel-friendly shell |
 | **Satechi Multiport V2** | Want a slim 100W MacBook daily adapter with 4K60 |
-| **CalDigit TS4** | Run a fixed desk with dual displays, Ethernet, and one-cable dock life |
+| **Cal Digit TS4** | Run a fixed desk with dual displays, Ethernet, and one-cable dock life |
 | **Ugreen Revodok Pro 209** | Need three USB-A ports and 100W PD under $50 |
 | **Baseus 9-in-1** | Accept 4K30 HDMI for the lowest upfront dorm or guest-room cost |
 
@@ -240,7 +240,7 @@ After cross-checking the public PD and HDMI specs, 2026 hub value still means ma
 | --- | --- |
 | **Anker 555** | Must charge a 16" pro laptop at full OEM watts while driving dual displays |
 | **Satechi Multiport V2** | Need multiple USB-A devices or Ethernet without another adapter |
-| **CalDigit TS4** | Only travel with a backpack — price and brick size punish mobility |
+| **Cal Digit TS4** | Only travel with a backpack — price and brick size punish mobility |
 | **Ugreen Revodok Pro 209** | Want aluminum build and tight QC over maximum port count per dollar |
 | **Baseus 9-in-1** | Need 4K60 for spreadsheets, gaming, or fast UI on a large monitor |
 

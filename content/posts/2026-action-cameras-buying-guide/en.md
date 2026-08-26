@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-22T02:34:55.269Z'
+updatedAt: '2026-08-26T01:40:02.057Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview
@@ -69,10 +69,10 @@ Reference prices from OEM and major US storefront listings (July 2026).
 
 | Rank | Model | Price (USD / KRW) | Stabilization | Native depth | Weight | Max video | Mount std. | Review | ACI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **GoPro HERO13 Black** | $399 / ~₩539,000 | HyperSmooth 6.0 | 10 m / 33 ft | 154 g | 5.3K60 | GoPro | 4.7 | **9.2** |
+| 1 | **Go Pro HERO13 Black** | $399 / ~₩539,000 | HyperSmooth 6.0 | 10 m / 33 ft | 154 g | 5.3K60 | GoPro | 4.7 | **9.2** |
 | 2 | **DJI Osmo Action 5 Pro** | $349 / ~₩471,000 | RockSteady 3.0+ | 20 m / 65 ft | 146 g | 4K120 | GoPro + DJI | 4.6 | **9.1** |
-| 3 | **Insta360 Ace Pro 2** | $379 / ~₩512,000 | FlowState | 12 m / 39 ft | 177 g | 8K30 | GoPro | 4.5 | **8.9** |
-| 4 | **Insta360 GO 3S** | $399 / ~₩539,000 | FlowState (pod) | 5 m / 16 ft | 39 g (cam) | 4K | Magnetic | 4.4 | **8.6** |
+| 3 | **Insta 360 Ace Pro 2** | $379 / ~₩512,000 | FlowState | 12 m / 39 ft | 177 g | 8K30 | GoPro | 4.5 | **8.9** |
+| 4 | **Insta 360 GO 3S** | $399 / ~₩539,000 | FlowState (pod) | 5 m / 16 ft | 39 g (cam) | 4K | Magnetic | 4.4 | **8.6** |
 | 5 | **AKASO Brave 8** | $149 / ~₩201,000 | EIS 2.0 | 10 m / 33 ft | 154 g | 4K60 | GoPro | 4.3 | **8.4** |
 
 ---
@@ -223,20 +223,20 @@ After re-checking the published specs, summer travel action-cam value still mean
 
 | Model | Buy if you… |
 | --- | --- |
-| **GoPro HERO13 Black** | Want the broadest mount library and HyperSmooth for mixed adventure travel |
+| **Go Pro HERO13 Black** | Want the broadest mount library and HyperSmooth for mixed adventure travel |
 | **DJI Osmo Action 5 Pro** | Prioritize 20 m native waterproofing and dual screens for snorkel plus vlog |
-| **Insta360 Ace Pro 2** | Shoot dusk markets, campfires, and canyon shade where sensor size matters |
-| **Insta360 GO 3S** | Need discreet hat or chest POV for walking tours and theme-park days |
+| **Insta 360 Ace Pro 2** | Shoot dusk markets, campfires, and canyon shade where sensor size matters |
+| **Insta 360 GO 3S** | Need discreet hat or chest POV for walking tours and theme-park days |
 | **AKASO Brave 8** | Want GoPro-compatible mounts at the lowest upfront cost for pool and trail trips |
 
 ### Who should skip?
 
 | Model | Skip if you… |
 | --- | --- |
-| **GoPro HERO13 Black** | Need 20 m native depth without a dive case or want the lowest price |
+| **Go Pro HERO13 Black** | Need 20 m native depth without a dive case or want the lowest price |
 | **DJI Osmo Action 5 Pro** | Already own a deep GoPro housing ecosystem you plan to keep |
-| **Insta360 Ace Pro 2** | Count grams on ultralight hikes or only shoot bright midday scenes |
-| **Insta360 GO 3S** | Plan primary snorkel footage or need interchangeable lens options |
+| **Insta 360 Ace Pro 2** | Count grams on ultralight hikes or only shoot bright midday scenes |
+| **Insta 360 GO 3S** | Plan primary snorkel footage or need interchangeable lens options |
 | **AKASO Brave 8** | Ride rough MTB lines where top-tier EIS is non-negotiable |
 
 Before checkout, confirm spare batteries ship to your destination, verify return policy if you test waterproof seals on the first swim, and budget SD cards rated for your chosen frame rate—high-bitrate 4K fills storage faster than phone video on a week-long trip.

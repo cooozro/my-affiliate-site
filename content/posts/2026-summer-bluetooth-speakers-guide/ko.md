@@ -21,7 +21,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-08-20T08:09:46.834Z'
+updatedAt: '2026-08-26T01:40:02.302Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
@@ -77,7 +77,7 @@ coverImageAltKo: 여름 야외의 블루투스 스피커
 | 순위 | 모델 | 가격 (USD / KRW) | IP 등급 | 배터리 | 무게 | BT | 최대 출력 | 리뷰 | PSI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | **Anker Soundcore 2** | $29.99 / ~{{krw:29.99}} | IPX7 | 12h | 414g | 5.0 | 12W | 4.7 | **9.0** |
-| 2 | **Tribit StormBox Micro 2** | $54.9 / ~{{krw:54.9}} | IP67 | 10h | 341g | 5.3 | 9W | 4.6 | **8.9** |
+| 2 | **Tribit Storm Box Micro 2** | $54.9 / ~{{krw:54.9}} | IP67 | 10h | 341g | 5.3 | 9W | 4.6 | **8.9** |
 | 3 | **Ultimate Ears WONDERBOOM 3** | $99.0 / ~{{krw:99.0}} | IP67 | 14h | 425g | 5.2 | — | 4.8 | **8.8** |
 | 4 | **JBL Flip 6** | $129.0 / ~{{krw:129.0}} | IP67 | 12h | 550g | 5.1 | 20W | 4.7 | **8.6** |
 | 5 | **Sony SRS-XE200** | $69.0 / ~{{krw:69.0}} | IP67 | 16h | 800g | 5.2 | — | 4.5 | **8.3** |
@@ -224,7 +224,7 @@ coverImageAltKo: 여름 야외의 블루투스 스피커
 | 모델 | 추천 대상 |
 | --- | --- |
 | **Anker Soundcore 2** | 가장 저렴한 IPX7로 가벼운 마당·피크닉을 원할 때 |
-| **Tribit StormBox Micro 2** | 초소형 IP67, 스트랩·자전거 마운트, 긴급 폰 충전이 필요할 때 |
+| **Tribit Storm Box Micro 2** | 초소형 IP67, 스트랩·자전거 마운트, 긴급 폰 충전이 필요할 때 |
 | **UE WONDERBOOM 3** | 수영장·호수에서 부력 있는 360° 스피커가 필요할 때 |
 | **JBL Flip 6** | 야외 단체 모임용 가장 큰 IP67 음량·신뢰를 원할 때 |
 | **Sony SRS-XE200** | 캠핑·테일게이트처럼 16시간 배터리가 최우선일 때 |
@@ -234,7 +234,7 @@ coverImageAltKo: 여름 야외의 블루투스 스피커
 | 모델 | 패스 권장 |
 | --- | --- |
 | **Anker Soundcore 2** | 스테레오 확산, IP67 방진, 수영장 부력이 필요할 때 |
-| **Tribit StormBox Micro 2** | 크기보다 대형 모임 음량이 더 중요할 때 |
+| **Tribit Storm Box Micro 2** | 크기보다 대형 모임 음량이 더 중요할 때 |
 | **UE WONDERBOOM 3** | 최저가 방수 또는 중립적 음향 튜닝을 원할 때 |
 | **JBL Flip 6** | 예산이 빡빡하거나 최경량 데이팩 스피커가 필요할 때 |
 | **Sony SRS-XE200** | 종일 들고 다니거나 가격 대비 최대 베이스를 원할 때 |

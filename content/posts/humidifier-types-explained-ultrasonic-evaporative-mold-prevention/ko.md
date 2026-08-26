@@ -19,7 +19,7 @@ coverImage: >-
 coverImageAlt: 실내의 가습기
 coverImageCredit: Photo by asundermeier / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-12T04:34:10.543Z'
+updatedAt: '2026-08-26T01:40:02.360Z'
 publishedAt: '2026-08-12T04:33:58.635Z'
 ---
 ## 편집부 개요
@@ -148,7 +148,7 @@ publishedAt: '2026-08-12T04:33:58.635Z'
 | 모델 | 타입 | 탱크 용량 | 주요 특징 |
 | --- | --- | --- | --- |
 | **Levoit LV600HH** | 초음파 | 5.7 L | 내장 습도 조절기, 온·냉 분무, 아로마 박스 |
-| **Vornado Evap40** | 증발식 | 15 L | 고출력, 넓은 탱크 입구, 기본 조작 |
+| **Vornado Evap 40** | 증발식 | 15 L | 고출력, 넓은 탱크 입구, 기본 조작 |
 | **Honeywell HCM-350** | 증발식 | 3.8 L | UV-C 조명, 저소음, 식기세척기 가능 부품 |
 | **Dyson AM10** | 초음파 | 3.0 L | UV-C 살균 사이클, 에어 멀티플라이어, 세련된 디자인 |
 | **Sharp KC850U** | 증발식 + 플라즈마클러스터 | 6.8 L | 곰팡이·진드기 저감 이온 기술 |

@@ -35,7 +35,7 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-08-20T08:09:46.548Z'
+updatedAt: '2026-08-26T01:40:02.299Z'
 publishedAt: '2026-07-24T07:56:24.703Z'
 ---
 ## Editorial Overview
@@ -182,32 +182,24 @@ We do **not** claim proprietary seller APIs or private commerce databases. Specs
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking footprint and noise claims, solo apartments benefit more from quiet compact units than from owning every category at once.
 
 | Brand | Model | Evidence | Note |
 | --- | --- | --- | --- |
-| Levoit | Core300S | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Dreo | DR-HSH004 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Anker | AnkerA1257PD | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Cosori | CAF-LI211 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| eufy | eufyC28Pro | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Roborock | RoborockQRevo | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Levoit | Core 300S | Published CADR / app spec | Studio CADR + app schedule; put filter TCO on the 3-year bill |
+| Dreo | DR-HSH004 | Published watts / tip-over switch | Quiet PTC heat; check the studio circuit before the dB claim |
+| Anker | A1257 PD | Official PD watt output | High-watt PD bank; it does not replace spare outlets |
+| Cosori | CAF-LI211 | Published basket liters / watts | Compact basket; washability beats preset count |
+| eufy | C28 Pro | Published suction / dock spec | Compact dock; measure thresholds and cable snags first |
+| Roborock | Q Revo | Published hot-wash / mapping spec | Hot-wash dock; footprint can be large for one person |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: meta checklists go generic fast, so we name OEM codes.**
 
 **Total cost of ownership (3-year): filters, nonstick wear, and battery cycles take a large share of lifetime spend.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 

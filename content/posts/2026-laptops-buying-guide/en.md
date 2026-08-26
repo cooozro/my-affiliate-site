@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:45.602Z'
+updatedAt: '2026-08-26T01:40:02.216Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -71,10 +71,10 @@ Snapshot as of {{today}}.
 
 | Rank | Model | Price (USD) | CPU tier | RAM / upgrade | Display nits | Battery | Weight | Review | SLBI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | **Lenovo IdeaPad Slim 3 15ABR8** | {{krw:499}} | Ryzen 5 7530U | 16GB soldered | 300 nits | 47Wh | 1.62 kg | 4.5 | **9.1** |
+| 1 | **Lenovo Idea Pad Slim 3 15ABR8** | {{krw:499}} | Ryzen 5 7530U | 16GB soldered | 300 nits | 47Wh | 1.62 kg | 4.5 | **9.1** |
 | 2 | **Acer Aspire 5 A515-58** | {{krw:449}} | Core i5-1335U | 8GB + 1 slot | 250 nits | 50Wh | 1.76 kg | 4.4 | **8.9** |
 | 3 | **ASUS Vivobook Go 15 E1504FA** | {{krw:429}} | Ryzen 5 7520U | 16GB soldered | 250 nits | 42Wh | 1.63 kg | 4.3 | **8.8** |
-| 4 | **HP Laptop 15-fd0123dx** | {{krw:479}} | Core i5-1334U | 8GB + 1 slot | 250 nits | 41Wh | 1.69 kg | 4.4 | **8.7** |
+| 4 | **HP Laptop 15-fd 0123dx** | {{krw:479}} | Core i5-1334U | 8GB + 1 slot | 250 nits | 41Wh | 1.69 kg | 4.4 | **8.7** |
 | 5 | **Dell Inspiron 15 3535** | {{krw:459}} | Ryzen 5 7520U | 8GB + 1 slot | 250 nits | 41Wh | 1.65 kg | 4.3 | **8.6** |
 
 Prices are reference USD list values; Confirm live KRW prices on the official retailer.
@@ -193,20 +193,20 @@ After cross-checking the public specs, budget student laptops look identical in 
 
 | Model | Buy if you… |
 | --- | --- |
-| **IdeaPad Slim 3 15ABR8** | Want 16GB and the best battery plus 300-nit readability out of the box |
+| **Idea Pad Slim 3 15ABR8** | Want 16GB and the best battery plus 300-nit readability out of the box |
 | **Acer Aspire 5 A515-58** | Plan a cheap RAM upgrade and need a larger battery |
 | **Vivobook Go 15 E1504FA** | Need the lowest-price 16GB laptop for light travel |
-| **HP Laptop 15-fd0123dx** | Prefer HP support and can add RAM plus external storage |
+| **HP Laptop 15-fd 0123dx** | Prefer HP support and can add RAM plus external storage |
 | **Dell Inspiron 15 3535** | Want AMD value, 512GB storage, and an upgrade slot |
 
 ### Who should skip?
 
 | Model | Skip if you… |
 | --- | --- |
-| **IdeaPad Slim 3 15ABR8** | Must upgrade RAM later or need silent fans in uncooled summer rooms |
+| **Idea Pad Slim 3 15ABR8** | Must upgrade RAM later or need silent fans in uncooled summer rooms |
 | **Acer Aspire 5 A515-58** | Cannot add RAM soon and run heavy multitasking today |
 | **Vivobook Go 15 E1504FA** | Need all-day battery without carrying a power bank |
-| **HP Laptop 15-fd0123dx** | Edit large video files locally on 256GB only |
+| **HP Laptop 15-fd 0123dx** | Edit large video files locally on 256GB only |
 | **Dell Inspiron 15 3535** | Want 16GB today without opening the chassis |
 
 Before checkout on {{today_locale}}, confirm student discounts, return windows, and whether your course load needs a **dedicated GPU**—none of these five targets gaming or 4K editing.

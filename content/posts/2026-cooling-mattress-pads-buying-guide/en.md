@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:44.206Z'
+updatedAt: '2026-08-26T01:40:02.128Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## Editorial Overview
@@ -85,7 +85,7 @@ Our **Sleep Cooling Index (SCI)** weights sustained cooling, quiet operation nea
 | Rank | Type | Model | List price (USD) | Cooling mechanism | Running cost / energy | SCI |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Active water | **Sleepme Dock Pro** | about $1,199 | Hydronic pad, 13–46 °C | Pump runs nightly; water refills | **9.1** |
-| 2 | Active air | **BedJet 3** | about $489 | Forced air, biorhythm modes | Fan runs nightly; no water | **8.8** |
+| 2 | Active air | **Bed Jet 3** | about $489 | Forced air, biorhythm modes | Fan runs nightly; no water | **8.8** |
 | 3 | Active smart | **Eight Sleep Pod 4** | about $2,049 | Water + sensors + autopilot | Pump + about $199/yr subscription | **8.3** |
 | 4 | Passive foam | **TEMPUR-Adapt Cooling** | about $419 | Gel-foam heat spreading | No running cost | **7.6** |
 | 5 | Passive PCM | **Slumber Cloud Cumulus** | about $189 | Phase-change fabric, washable | No running cost | **7.4** |
@@ -184,31 +184,23 @@ Our **Sleep Cooling Index (SCI)** weights sustained cooling, quiet operation nea
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking active water/air systems vs passive toppers, noise, leak risk, and service cost explain comfort gaps more than ‘cooling fabric’ claims.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Eight Sleep | Pod4Ultra | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| BedJet | BedJet30X | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Tempur | TempurAdaptC1 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| ChiliSleep | ChiliDockPro1 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Sleepme | SleepmeCube01 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Eight Sleep | Pod 4Ultra |
+| BedJet | Bed Jet 30X |
+| Tempur | Tempur Adapt C1 |
+| ChiliSleep | Chili Dock Pro 1 |
+| Sleepme | Sleepme Cube 01 |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: localized marketing names obscure OEM IDs, so Latin model codes are listed.**
 
 **Total cost of ownership (3-year): subscriptions, pump replacements, and electricity can exceed the pad itself.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 
@@ -258,7 +250,7 @@ Often yes. A Cumulus-style PCM protector layered under a sensible AC and fan str
 | Model | Buy if |
 | --- | --- |
 | **Sleepme Dock Pro** | You overheat nightly and want silent, set-and-hold cooling |
-| **BedJet 3** | You want zero maintenance and both heating and cooling |
+| **Bed Jet 3** | You want zero maintenance and both heating and cooling |
 | **Eight Sleep Pod 4** | Sensors and autopilot justify a about $199/yr subscription |
 | **TEMPUR-Adapt Cooling** | You want silent, no-cost relief in a moderately cooled room |
 | **Slumber Cloud Cumulus** | You want affordable, washable cooling to pair with AC |
@@ -268,7 +260,7 @@ Often yes. A Cumulus-style PCM protector layered under a sensible AC and fan str
 | Model | Skip if |
 | --- | --- |
 | **Dock Pro** | A nightstand unit and water routine will annoy you |
-| **BedJet 3** | Fan noise or dry airflow ruins your sleep |
+| **Bed Jet 3** | Fan noise or dry airflow ruins your sleep |
 | **Eight Sleep Pod 4** | You only want to sleep cooler for less money |
 | **TEMPUR-Adapt** | Your room stays genuinely hot until dawn |
 | **Cumulus** | You need controllable, all-night active cooling |

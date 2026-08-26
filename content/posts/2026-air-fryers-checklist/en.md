@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:42.957Z'
+updatedAt: '2026-08-26T01:40:02.061Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
 ---
 ## Editorial Overview
@@ -103,31 +103,23 @@ Treat preset count as a tiebreaker after capacity and wattage fit your counter a
 
 ---
 
-<!-- -enrichment:v1 -->
-
-<!-- aipick-enrichment:v1 -->
-
 ## Models this report shortlists
 
 After cross-checking summer kitchen loads, regret tracked basket liters, honest watts, and washability more than preset count.
 
-| Brand | Model | Evidence | Note |
-| --- | --- | --- | --- |
-| Cosori | CAF-LI211 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Ninja | AF101 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Instant | InstantVP6Qt | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Philips | HD9252 | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
-| Samsung | NQ70M6650DS | Public datasheet / official store | Editorial read: cross-checked shortlist anchor |
+| Brand | Model |
+| --- | --- |
+| Cosori | CAF-LI211 |
+| Ninja | AF101 |
+| Instant | Instant VP6Qt |
+| Philips | HD9252 |
+| Samsung | NQ70M6650DS |
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
 **Review concern: checklist-only pages look thin without named models, so we shortlist OEM units.**
 
 **Total cost of ownership (3-year): nonstick wear, spare baskets, and electricity take a large share of lifetime spend.**
-
-## 1. Shortlist decision anchors
-
-After cross-checking public specs, the OEM codes above best illustrate this guide's decision criteria.
 
 ## FAQ
 
