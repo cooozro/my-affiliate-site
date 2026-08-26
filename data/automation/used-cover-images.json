@@ -2164,6 +2164,15 @@
       "contentHash": "4145b16c93d5def9ed1a680caa0fd9d29b26a1e29938d5e9ba35bfe201b9f38a",
       "provider": "press-kit",
       "registeredAt": "2026-08-26T12:34:50.955Z"
+    },
+    {
+      "slug": "2026-budget-smartphones-scenario-guide",
+      "url": "https://images.pexels.com/photos/6694952/pexels-photo-6694952.jpeg",
+      "assetKey": "pexels:6694952",
+      "hash": "d9fa44099c77b57af407d9ba044ab642345ad3bbad3859963942945b5d29e48b",
+      "contentHash": "d9fa44099c77b57af407d9ba044ab642345ad3bbad3859963942945b5d29e48b",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T12:40:45.291Z"
     }
   ]
 }
