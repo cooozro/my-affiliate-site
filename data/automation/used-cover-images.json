@@ -2317,6 +2317,15 @@
       "contentHash": "572b556a8cf0d83b5194d82b85093f1526c6ca96b9fa569f2a7700eb0d55d0ea",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:28:23.689Z"
+    },
+    {
+      "slug": "2026-washing-machines-buying-guide",
+      "url": "https://images.pexels.com/photos/8774565/pexels-photo-8774565.jpeg",
+      "assetKey": "pexels:8774565",
+      "hash": "ff545d0e7111e15978cd3e9b82d7500d73b567dfc52d4c8bbcfbe0c1725edfea",
+      "contentHash": "ff545d0e7111e15978cd3e9b82d7500d73b567dfc52d4c8bbcfbe0c1725edfea",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:29:34.435Z"
     }
   ]
 }
