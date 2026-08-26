@@ -86,7 +86,7 @@ export function stripMethodologySections(body) {
   const out = [];
   let skipping = false;
   for (const line of lines) {
-    if (/^#{2,3}\s*(Analysis methodology|분석 방법론)\b/i.test(line)) {
+    if (/^#{2,3}\s*(Analysis methodology|분석 방법론)/i.test(line)) {
       skipping = true;
       continue;
     }
