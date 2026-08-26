@@ -14,7 +14,7 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-26T13:12:43.269Z",
+  "nextPublishAt": "2026-08-26T13:14:43.286Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-26",
@@ -162,7 +162,7 @@
       "topic": "dehumidifiers"
     }
   ],
-  "schedulerPaused": false,
+  "schedulerPaused": true,
   "lastHealthCheck": {
     "at": "2026-08-26T13:00:22.898Z",
     "issueCount": 3,
@@ -323,7 +323,8 @@
     "checklist",
     "head-to-head",
     "scenario-guide",
-    "explainer"
+    "explainer",
+    "buying-guide"
   ],
   "metaAngleHistory": [
     {
@@ -389,5 +390,7 @@
       "modelId": "sony-xg500",
       "at": "2026-08-20T08:41:11.267Z"
     }
-  ]
+  ],
+  "schedulerPausedReason": "요미 12-draft AdSense batch (serial writes)",
+  "schedulerPausedAt": "2026-08-26T13:13:54.283Z"
 }

@@ -23,6 +23,7 @@ coverImageAltKo: coffee machine kitchen espresso
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Ketut Subiyanto / Pexels
 coverImageProvider: pexels
 updatedAt: '2026-08-26T13:09:03.516Z'
+publishAfter: '2026-09-02'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
@@ -68,8 +69,11 @@ The table below matches typical kitchen scenarios with the machine type that fit
 
 **Editorial read:** The scenario matrix shows that no single type wins. Capsule machines win on convenience and footprint, but lose on per-cup cost and customization. Semi-autos win on control and cost per cup, but demand skill and time. Fully automatics win on consistency and ease, but cost more upfront and need more counter space.
 
-## FAQ
+1. **Capacity and power** — match real use and the outlet/circuit you actually have.
+2. **Upkeep cost** — price filters, descaling, and parts over three years.
+3. **Install and service** — check footprint, plumbing, and a reachable service center before you buy.
 
+## FAQ
 ### Do capsule machines make weaker coffee than espresso machines?
 
 Not necessarily. The strength of the coffee depends on the amount of ground coffee in the pod and the brew ratio, not the machine type. Nespresso Vertuo pods contain more coffee than original line pods, and the machine adjusts the brew parameters to produce a crema-rich cup. That said, capsule coffee is pre-ground and roasted to a specific profile, so you cannot adjust the grind or dose. If you prefer a very strong, custom shot, a semi-auto with fresh beans will give you more control. But for a standard cup, a capsule machine can be just as strong as a semi-auto.

@@ -26,7 +26,8 @@ coverImageAlt: gaming console controller setup
 coverImageAltKo: gaming console controller setup
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Erik Mclean / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:10:08.585Z'
+updatedAt: '2026-08-26T13:13:53.737Z'
+automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
@@ -94,8 +95,11 @@ If you subscribe to Game Pass Ultimate ($17/month), the Xbox total rises to abou
 
 **Total cost of ownership note:** The console is the cheapest part. The real cost is games, accessories, and subscriptions. Set a monthly gaming budget and stick to it.
 
-## FAQ
+1. **Capacity and power** — match real use and the outlet/circuit you actually have.
+2. **Upkeep cost** — price filters, descaling, and parts over three years.
+3. **Install and service** — check footprint, plumbing, and a reachable service center before you buy.
 
+## FAQ
 ### Do I need a 4K TV to enjoy a PS5 or Xbox Series X?
 
 No. Both consoles look great on a 1080p TV, and many games run at 1080p/60fps with high settings. You’ll miss the sharpness of 4K, but the gameplay experience is identical. If you’re planning to buy a new TV soon, look for HDMI 2.1 and VRR support—those features matter more than raw resolution.

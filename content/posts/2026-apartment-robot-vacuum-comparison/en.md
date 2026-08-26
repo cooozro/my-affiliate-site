@@ -23,7 +23,8 @@ coverImageAlt: robot vacuum on a hardwood floor
 coverImageAltKo: 마루 바닥의 로봇 청소기
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Andrey Matveev / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:11:44.038Z'
+updatedAt: '2026-08-26T13:13:53.904Z'
+automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
@@ -103,8 +104,11 @@ The sticker price is only the beginning. Over three years, the cost of owning a 
 
 **Total cost of ownership note:** Over three years, the difference between the Q5 Pro and the X40 Ultra is roughly $1,000. That is a meaningful amount for an apartment dweller, and it should be weighed against the convenience of not touching a mop pad or dustbin.
 
-## FAQ
+1. **Capacity and power** — match real use and the outlet/circuit you actually have.
+2. **Upkeep cost** — price filters, descaling, and parts over three years.
+3. **Install and service** — check footprint, plumbing, and a reachable service center before you buy.
 
+## FAQ
 ### Do I need a robot vacuum with LiDAR for a small apartment?
 
 LiDAR is helpful but not essential. In a small apartment, a robot with gyroscope navigation can still cover the floor, but it will be less efficient and may miss spots. LiDAR is worth the extra cost if you have multiple rooms, rugs, or furniture that you want the robot to avoid. If you have a simple open layout, a cheaper model can work fine.
