@@ -42,7 +42,7 @@ import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
 import {
   TARGET_DRAFT_COUNT,
-  isDeepseekDiscountUtc,
+  isDeepseekDiscountKst,
 } from "../lib/publish-schedule.mjs";
 import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
 import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../lib/season-topics.mjs";
@@ -185,9 +185,9 @@ export async function generateOneDraft(options = {}) {
     return null;
   }
 
-  if (!bypassWriteCap && !isDeepseekDiscountUtc()) {
+  if (!bypassWriteCap && !isDeepseekDiscountKst()) {
     console.log(
-      "Write skipped: outside DeepSeek discount window (UTC 16:30–00:30 / KST 01:30–09:30)",
+      "Write skipped: outside DeepSeek off-peak (KST weekday 10:00–13:00 / 15:00–19:00 peak; weekend all day off-peak)",
     );
     return null;
   }
@@ -595,9 +595,9 @@ export async function maintainDraftBuffer(options = {}) {
     return 0;
   }
 
-  if (!bypassWriteCap && !isDeepseekDiscountUtc()) {
+  if (!bypassWriteCap && !isDeepseekDiscountKst()) {
     console.log(
-      "Buffer skipped: outside DeepSeek discount window (UTC 16:30–00:30 / KST 01:30–09:30)",
+      "Buffer skipped: outside DeepSeek off-peak (KST weekday 10:00–13:00 / 15:00–19:00 peak; weekend all day off-peak)",
     );
     return 0;
   }
