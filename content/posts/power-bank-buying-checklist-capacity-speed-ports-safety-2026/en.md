@@ -23,7 +23,7 @@ coverImageAlt: portable power bank
 coverImageAltKo: 보조배터리
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Markus Winkler / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T10:41:30.889Z'
+updatedAt: '2026-08-26T10:59:11.283Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
@@ -114,7 +114,6 @@ Review concern: A few high-output packs run warm during simultaneous laptop and 
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
-
 ## FAQ
 
 ### Do mAh ratings tell the full story?

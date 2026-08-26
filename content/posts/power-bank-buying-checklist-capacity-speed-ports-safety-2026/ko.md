@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: 보조배터리
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Markus Winkler / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T10:41:30.922Z'
+updatedAt: '2026-08-26T10:59:12.027Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -109,9 +109,8 @@ updatedAt: '2026-08-26T10:41:30.922Z'
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
-- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
-
 ## 자주 묻는 질문
 
 ### mAh 표기가 모든 것을 말해주나요?

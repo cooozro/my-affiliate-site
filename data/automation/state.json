@@ -155,16 +155,38 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-26T10:32:52.564Z",
-    "issueCount": 1,
+    "at": "2026-08-26T10:59:11.022Z",
+    "issueCount": 5,
     "issues": [
       {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (13min past slot, KST 2026-08-26)",
+        "severity": "error"
+      },
+      {
+        "code": "draft-integrity-issues",
+        "message": "2 draft(s) have publish gate issues",
+        "severity": "warning"
+      },
+      {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
+      },
+      {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 0/6",
+        "message": "Draft buffer 2/6",
         "severity": "info"
+      },
+      {
+        "code": "duplicate-topic-drafts",
+        "message": "Duplicate topic drafts: power-banks×2",
+        "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -323,15 +345,16 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-20T07:48:29.246Z",
+    "at": "2026-08-26T10:59:12.490Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
-      "2026-dehumidifiers-midea-mad50c1-review"
+      "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
+      "power-bank-buying-checklist-capacity-speed-ports-safety-2026"
     ],
     "deferredSkipped": 0,
-    "integritySkipped": 1,
+    "integritySkipped": 2,
     "diversitySkipped": 0,
-    "publishableCount": 1,
+    "publishableCount": 2,
     "publishEligibleCount": 0
   },
   "modelPickHistory": [
