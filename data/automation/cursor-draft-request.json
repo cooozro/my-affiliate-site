@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "cancelled",
   "needed": 1,
   "publishedSlug": null,
   "requestedAt": "2026-08-26T10:44:41.805Z",
@@ -38,5 +38,7 @@
   "instructions": "Write one bilingual draft (en+ko, draft:true) with contentProfile:model-deep-dive. Writing mode: stable. Tone: scenario-first. Follow docs/templates/model-deep-dive.md and docs/CONTENT_STANDARDS.md. Season priority: summer; active events: 개학·신학기, 여름·방학, 폭염·냉방. Publish-ready before complete: description 50–160 chars (en+ko), \"## FAQ\" / \"## 자주 묻는 질문\" with ≥3 ### Q&A pairs (profile minimum), coverImage on disk, profile template sections. Cover: never copy another post cover. If no local PEXELS/PIXABAY keys, omit coverImage, push, let GHA \"Fetch missing draft covers\" run (repo Secrets), then git pull. Draft frontmatter: set createdAt to now; date = today KST (publish overwrites at go-live) — never future date on buffer drafts. Run `npm run content:integrity:repair` (or `node scripts/check-integrity.mjs {slug} --draft --repair`) — must pass with zero errors. Do NOT use `npm run content:validate` alone (published posts only). Then set status to complete.",
   "lastError": null,
   "unblockReason": "no-publish-eligible-drafts",
-  "note": "Publish unblock (no-publish-eligible-drafts): product topic required — buffer may exceed 6 until slot clears"
+  "note": "Publish unblock (no-publish-eligible-drafts): product topic required — buffer may exceed 6 until slot clears",
+  "cancelledAt": "2026-08-26T13:01:56.251Z",
+  "cancelReason": "요미 12-draft AdSense batch (serial writes)"
 }
