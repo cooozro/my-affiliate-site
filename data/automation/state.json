@@ -303,9 +303,9 @@
       "at": "2026-08-13T04:26:55.197Z"
     },
     {
-      "id": "summer-heat-bundle",
-      "type": "use-case-bundle",
-      "at": "2026-08-26T10:44:37.734Z"
+      "id": "solo-apartment-essentials",
+      "type": "household-type",
+      "at": "2026-08-26T10:44:37.773Z"
     }
   ],
   "roadmapPhase": "format-rotation",
