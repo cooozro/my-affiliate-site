@@ -1,5 +1,5 @@
 {
-  "topicIndex": 8,
+  "topicIndex": 23,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
@@ -9,7 +9,8 @@
     "flagship-smartphones",
     "bluetooth-speakers",
     "tablet-budget",
-    "dehumidifiers"
+    "dehumidifiers",
+    "wireless-earbuds"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
   "nextPublishAt": "2026-08-26T10:45:42.795Z",
@@ -162,17 +163,17 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-26T11:27:14.916Z",
-    "issueCount": 5,
+    "at": "2026-08-26T11:52:02.321Z",
+    "issueCount": 4,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (41min past slot, KST 2026-08-26)",
+        "message": "Publish ready but no post went live (66min past slot, KST 2026-08-26)",
         "severity": "error"
       },
       {
         "code": "draft-integrity-issues",
-        "message": "3 draft(s) have publish gate issues",
+        "message": "2 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
@@ -182,13 +183,8 @@
       },
       {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 3/6",
+        "message": "Draft buffer 2/6",
         "severity": "info"
-      },
-      {
-        "code": "duplicate-topic-drafts",
-        "message": "Duplicate topic drafts: power-banks×2",
-        "severity": "error"
       }
     ],
     "repairs": [
@@ -291,6 +287,12 @@
       "category": "home-appliances",
       "taxonomyGroup": "계절가전/냉방",
       "at": "2026-08-26T11:27:17.264Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "category": "audio",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-08-26T11:52:04.115Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-25",
@@ -300,7 +302,13 @@
     "autoRepairCount": 32,
     "manualReviewCount": 0
   },
-  "formatDeck": [],
+  "formatDeck": [
+    "model-deep-dive",
+    "checklist",
+    "head-to-head",
+    "scenario-guide",
+    "explainer"
+  ],
   "formatHistory": [
     "buying-guide",
     "scenario-guide",
@@ -313,7 +321,8 @@
     "model-deep-dive",
     "scenario-guide",
     "checklist",
-    "explainer"
+    "explainer",
+    "buying-guide"
   ],
   "metaAngleHistory": [
     {
@@ -357,17 +366,16 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-26T11:27:16.919Z",
+    "at": "2026-08-26T11:52:03.752Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
-      "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
-      "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
-      "portable-ac-apartment-myth-bust-2026"
+      "portable-ac-apartment-myth-bust-2026",
+      "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026"
     ],
     "deferredSkipped": 0,
-    "integritySkipped": 3,
+    "integritySkipped": 2,
     "diversitySkipped": 0,
-    "publishableCount": 3,
+    "publishableCount": 2,
     "publishEligibleCount": 0
   },
   "modelPickHistory": [

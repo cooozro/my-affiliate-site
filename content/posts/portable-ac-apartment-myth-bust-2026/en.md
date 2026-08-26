@@ -23,7 +23,7 @@ coverImageAlt: portable air conditioner in an apartment room
 coverImageAltKo: 원룸의 이동식 에어컨
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Rafael Gonzales / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T11:27:16.323Z'
+updatedAt: '2026-08-26T11:52:03.166Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
