@@ -2335,6 +2335,24 @@
       "contentHash": "5dbef9a73cb9587e8738612a2188fd5ac8995bea4095fec0d0c7bf26898eb56d",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:30:39.909Z"
+    },
+    {
+      "slug": "2026-robot-vacuums-ecovacs-deebot-x8-review",
+      "url": "https://images.pexels.com/photos/844874/pexels-photo-844874.jpeg",
+      "assetKey": "pexels:844874",
+      "hash": "434209d96a2746f0f31be3bf68d18e9f3b700b3f55eb6e354760130997852e4b",
+      "contentHash": "434209d96a2746f0f31be3bf68d18e9f3b700b3f55eb6e354760130997852e4b",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:30:56.103Z"
+    },
+    {
+      "slug": "2026-robot-vacuums-ecovacs-deebot-x8-review",
+      "url": "https://images.pexels.com/photos/8566433/pexels-photo-8566433.jpeg",
+      "assetKey": "pexels:8566433",
+      "hash": "eaf706285419d4658c66e445e89fd3ec92c05a71033ddc7736d3c33e3aac4de5",
+      "contentHash": "eaf706285419d4658c66e445e89fd3ec92c05a71033ddc7736d3c33e3aac4de5",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:30:56.652Z"
     }
   ]
 }
