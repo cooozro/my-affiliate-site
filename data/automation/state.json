@@ -162,7 +162,7 @@
       "topic": "dehumidifiers"
     }
   ],
-  "schedulerPaused": false,
+  "schedulerPaused": true,
   "lastHealthCheck": {
     "at": "2026-08-26T12:15:54.588Z",
     "issueCount": 2,
@@ -298,7 +298,6 @@
     "manualReviewCount": 0
   },
   "formatDeck": [
-    "scenario-guide",
     "explainer"
   ],
   "formatHistory": [
@@ -317,7 +316,8 @@
     "buying-guide",
     "model-deep-dive",
     "checklist",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide"
   ],
   "metaAngleHistory": [
     {
@@ -378,5 +378,7 @@
       "modelId": "sony-xg500",
       "at": "2026-08-20T08:41:11.267Z"
     }
-  ]
+  ],
+  "schedulerPausedReason": "요미 12-draft AdSense batch (serial writes)",
+  "schedulerPausedAt": "2026-08-26T12:46:41.279Z"
 }
