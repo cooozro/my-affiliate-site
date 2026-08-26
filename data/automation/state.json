@@ -164,21 +164,28 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-26T12:15:54.588Z",
-    "issueCount": 2,
+    "at": "2026-08-26T13:00:22.898Z",
+    "issueCount": 3,
     "issues": [
       {
-        "code": "no-publishable-drafts",
-        "message": "No publishable drafts (1 deferred)",
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (2min past slot, KST 2026-08-26)",
         "severity": "warning"
       },
       {
-        "code": "low-draft-buffer",
-        "message": "Draft buffer 1/6",
-        "severity": "info"
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
+        "severity": "warning"
+      },
+      {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -360,15 +367,20 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-26T12:15:54.712Z",
-    "reason": "all-deferred",
+    "at": "2026-08-26T13:00:23.804Z",
+    "reason": "integrity-gate",
     "triedSlugs": [
-      "2026-portable-ssd-samsung-t9-review"
+      "2026-portable-ssd-samsung-t9-review",
+      "2026-power-banks-anker-737-review",
+      "2026-window-wall-ac-checklist",
+      "2026-budget-laptops-students-cpu-ram-display-battery",
+      "2026-budget-smartphones-scenario-guide",
+      "2026-budget-noise-cancelling-headphones-anc-codecs-explainer"
     ],
-    "deferredSkipped": 1,
-    "integritySkipped": 0,
+    "deferredSkipped": 5,
+    "integritySkipped": 1,
     "diversitySkipped": 0,
-    "publishableCount": 0,
+    "publishableCount": 1,
     "publishEligibleCount": 0
   },
   "modelPickHistory": [
