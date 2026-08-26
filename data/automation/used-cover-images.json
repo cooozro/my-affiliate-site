@@ -2074,6 +2074,15 @@
       "contentHash": "6d21b8acbe8d4922904fa359d5a762d54f55db00ba8669a412fd0e1995ba2a40",
       "provider": "pixabay",
       "registeredAt": "2026-08-26T11:32:52.040Z"
+    },
+    {
+      "slug": "2026-budget-wireless-earbuds-spec-comparison",
+      "url": "https://images.pexels.com/photos/30981656/pexels-photo-30981656.jpeg",
+      "assetKey": "pexels:30981656",
+      "hash": "9c5bfc2c4830c38c8ba1d09afa4cb09c838d2f60af018062fcc6b61c2b5280ca",
+      "contentHash": "9c5bfc2c4830c38c8ba1d09afa4cb09c838d2f60af018062fcc6b61c2b5280ca",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T11:56:13.096Z"
     }
   ]
 }
