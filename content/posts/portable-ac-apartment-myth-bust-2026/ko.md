@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: 원룸의 이동식 에어컨
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Rafael Gonzales / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T11:04:43.243Z'
+updatedAt: '2026-08-26T11:27:15.323Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -73,7 +73,6 @@ updatedAt: '2026-08-26T11:04:43.243Z'
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
-
 ## FAQ
 
 ### BTU가 높은 휴대용 에어컨이 아파트를 더 빨리 식힐까요?

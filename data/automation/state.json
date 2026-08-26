@@ -155,17 +155,17 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-26T10:59:11.022Z",
+    "at": "2026-08-26T11:27:14.916Z",
     "issueCount": 5,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (13min past slot, KST 2026-08-26)",
+        "message": "Publish ready but no post went live (41min past slot, KST 2026-08-26)",
         "severity": "error"
       },
       {
         "code": "draft-integrity-issues",
-        "message": "2 draft(s) have publish gate issues",
+        "message": "3 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
@@ -175,7 +175,7 @@
       },
       {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 2/6",
+        "message": "Draft buffer 3/6",
         "severity": "info"
       },
       {
@@ -345,16 +345,17 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-26T10:59:12.490Z",
+    "at": "2026-08-26T11:27:16.919Z",
     "reason": "no-publish-eligible-drafts",
     "triedSlugs": [
       "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
-      "power-bank-buying-checklist-capacity-speed-ports-safety-2026"
+      "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+      "portable-ac-apartment-myth-bust-2026"
     ],
     "deferredSkipped": 0,
-    "integritySkipped": 2,
+    "integritySkipped": 3,
     "diversitySkipped": 0,
-    "publishableCount": 2,
+    "publishableCount": 3,
     "publishEligibleCount": 0
   },
   "modelPickHistory": [
