@@ -266,7 +266,6 @@
     "manualReviewCount": 0
   },
   "formatDeck": [
-    "checklist",
     "explainer"
   ],
   "formatHistory": [
@@ -279,7 +278,8 @@
     "buying-guide",
     "head-to-head",
     "model-deep-dive",
-    "scenario-guide"
+    "scenario-guide",
+    "checklist"
   ],
   "metaAngleHistory": [
     {
@@ -301,6 +301,11 @@
       "id": "compact-footprint-appliances",
       "type": "capacity-tier",
       "at": "2026-08-13T04:26:55.197Z"
+    },
+    {
+      "id": "summer-heat-bundle",
+      "type": "use-case-bundle",
+      "at": "2026-08-26T10:44:37.734Z"
     }
   ],
   "roadmapPhase": "format-rotation",
