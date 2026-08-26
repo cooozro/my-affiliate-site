@@ -14,7 +14,7 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-26T13:32:19.690Z",
+  "nextPublishAt": "2026-08-26T13:33:49.709Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-26",
@@ -341,7 +341,8 @@
     "checklist",
     "head-to-head",
     "scenario-guide",
-    "buying-guide"
+    "buying-guide",
+    "model-deep-dive"
   ],
   "metaAngleHistory": [
     {

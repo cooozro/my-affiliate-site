@@ -22,7 +22,7 @@ createdAt: '2026-08-26T13:30:12.440Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-ecovacs-deebot-x8-review/ecovacs-deebot-x8-pro-omni-product-photo-ecovacs-cover.jpg
-coverImageAlt: 'Ecovacs Deebot X8 PRO OMNI robot vacuum on a hardwood floor'
+coverImageAlt: Ecovacs Deebot X8 PRO OMNI robot vacuum on a hardwood floor
 coverImageAltKo: >-
   Ecovacs 에코백스 X8 PRO OMNI 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 마루 바닥의 Ecovacs DEEBOT
   X8 PRO
@@ -34,6 +34,7 @@ modelPickName: DEEBOT X8 PRO OMNI
 pressKitGallery: >-
   https://www.google.com/search?q=Ecovacs%20DEEBOT%20X8%20PRO%20OMNI%20press%20kit
 updatedAt: '2026-08-26T13:30:56.725Z'
+publishAfter: '2026-09-09'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

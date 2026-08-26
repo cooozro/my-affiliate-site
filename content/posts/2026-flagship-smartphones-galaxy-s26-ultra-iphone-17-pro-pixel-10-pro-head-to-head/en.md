@@ -27,6 +27,7 @@ coverImageAltKo: 책상 위의 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
 updatedAt: '2026-08-26T13:27:23.686Z'
+automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

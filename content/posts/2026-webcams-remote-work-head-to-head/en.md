@@ -25,6 +25,7 @@ coverImageAltKo: 웹캠
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by geralt / Pixabay
 coverImageProvider: pixabay
 updatedAt: '2026-08-26T13:26:39.064Z'
+publishAfter: '2026-09-05'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
