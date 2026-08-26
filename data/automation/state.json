@@ -166,6 +166,12 @@
       "slug": "2026-bidets-bio-bidet-bb-2000-review",
       "at": "2026-08-26T13:18:52.673Z",
       "topic": "bidets"
+    },
+    {
+      "action": "write",
+      "slug": "2026-budget-monitors-scenario-guide",
+      "at": "2026-08-26T13:28:12.794Z",
+      "topic": "budget-monitors"
     }
   ],
   "schedulerPaused": true,
@@ -333,7 +339,8 @@
     "buying-guide",
     "model-deep-dive",
     "checklist",
-    "head-to-head"
+    "head-to-head",
+    "scenario-guide"
   ],
   "metaAngleHistory": [
     {

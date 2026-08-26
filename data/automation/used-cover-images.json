@@ -2308,6 +2308,15 @@
       "contentHash": "b91c954e8f46ba3a05137566b57aaedbf477dc8a6544c7c14f5f12a374144cbb",
       "provider": "pixabay",
       "registeredAt": "2026-08-26T13:26:38.937Z"
+    },
+    {
+      "slug": "2026-budget-monitors-scenario-guide",
+      "url": "https://images.pexels.com/photos/6489043/pexels-photo-6489043.jpeg",
+      "assetKey": "pexels:6489043",
+      "hash": "572b556a8cf0d83b5194d82b85093f1526c6ca96b9fa569f2a7700eb0d55d0ea",
+      "contentHash": "572b556a8cf0d83b5194d82b85093f1526c6ca96b9fa569f2a7700eb0d55d0ea",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:28:23.689Z"
     }
   ]
 }
