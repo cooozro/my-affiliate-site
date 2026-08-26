@@ -148,5 +148,35 @@
         "altHintKo": "Samsung T9 Portable SSD 공식 프레스킷 제품컷"
       }
     ]
+  },
+  "apple-iphone-17-pro": {
+    "at": "2026-08-26T12:34:50.790Z",
+    "query": "iPhone 17 Pro Apple official press product OR media kit site:apple.com/newsroom",
+    "images": [
+      {
+        "url": "https://www.apple.com/newsroom/images/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/tile/Apple-iPhone-17-Pro-camera-close-up-250909-lp.jpg.landing-big_2x.jpg",
+        "role": "cover",
+        "altHint": "Apple iPhone 17 Pro official press kit product photo",
+        "altHintKo": "Apple iPhone 17 Pro 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg",
+        "role": "lifestyle",
+        "altHint": "Apple iPhone 17 Pro official press kit product photo",
+        "altHintKo": "Apple iPhone 17 Pro 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/article/Apple-iPhone-17-Pro-cosmic-orange-250909_inline.jpg.large.jpg",
+        "role": "detail",
+        "altHint": "Apple iPhone 17 Pro official press kit product photo",
+        "altHintKo": "Apple iPhone 17 Pro 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/images/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/article/Apple-iPhone-17-Pro-color-lineup-250909_inline.jpg.large.jpg",
+        "role": "detail",
+        "altHint": "Apple iPhone 17 Pro official press kit product photo",
+        "altHintKo": "Apple iPhone 17 Pro 공식 프레스킷 제품컷"
+      }
+    ]
   }
 }

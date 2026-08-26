@@ -2137,6 +2137,33 @@
       "contentHash": "b2245f7a06754fa28cfd27e6c485c1a70cc44c31bde62117ae81d487fbd87c3a",
       "provider": "unsplash",
       "registeredAt": "2026-08-26T12:20:45.700Z"
+    },
+    {
+      "slug": "2026-window-wall-ac-checklist",
+      "url": "https://images.pexels.com/photos/27134985/pexels-photo-27134985.jpeg",
+      "assetKey": "pexels:27134985",
+      "hash": "c32db2ebe57daf341d5b2eddd8eae91e87ed7955bfcfbd0b632b3f156116121d",
+      "contentHash": "c32db2ebe57daf341d5b2eddd8eae91e87ed7955bfcfbd0b632b3f156116121d",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T12:29:58.520Z"
+    },
+    {
+      "slug": "2026-budget-laptops-students-cpu-ram-display-battery",
+      "url": "https://images.pexels.com/photos/35730146/pexels-photo-35730146.jpeg",
+      "assetKey": "pexels:35730146",
+      "hash": "ce3b7074b94bed8bfbab1a1e70cd27edbd79834d2dbb1e202938ee6e9e5f5fc6",
+      "contentHash": "ce3b7074b94bed8bfbab1a1e70cd27edbd79834d2dbb1e202938ee6e9e5f5fc6",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T12:33:55.291Z"
+    },
+    {
+      "slug": "2026-flagship-smartphones-galaxy-s26-ultra-iphone-17-pro-pixel-10-pro-head-to-head",
+      "url": "https://www.apple.com/newsroom/images/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max/tile/apple-iphone-17-pro-camera-close-up-250909-lp.jpg.landing-big_2x.jpg",
+      "assetKey": "press-kit:27827bbed3",
+      "hash": "4145b16c93d5def9ed1a680caa0fd9d29b26a1e29938d5e9ba35bfe201b9f38a",
+      "contentHash": "4145b16c93d5def9ed1a680caa0fd9d29b26a1e29938d5e9ba35bfe201b9f38a",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-26T12:34:50.955Z"
     }
   ]
 }
