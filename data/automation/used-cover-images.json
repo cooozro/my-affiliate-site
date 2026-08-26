@@ -2290,6 +2290,15 @@
       "contentHash": "538431ff37eb32f688b97c163c6423344ee00fd580d4648bbdfa04eda10b33f0",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:20:00.989Z"
+    },
+    {
+      "slug": "2026-budget-fitness-trackers-checklist",
+      "url": "https://pixabay.com/get/g3fdcea6b5350f9f2021857a54e83df2b42093fc9af76fc54660bf0cff6dc038d71daeb0aa40106f7f6d038fea0e8a9a8e84e2eedb5b195795d70a2bde837dd3e_1280.jpg",
+      "assetKey": "pixabay:2562323",
+      "hash": "a9f64d0a12b1bba9fef1f210d2b95ec02b9c1ce52619871bfbe907513b00d5e4",
+      "contentHash": "a9f64d0a12b1bba9fef1f210d2b95ec02b9c1ce52619871bfbe907513b00d5e4",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T13:21:17.421Z"
     }
   ]
 }
