@@ -2173,6 +2173,15 @@
       "contentHash": "d9fa44099c77b57af407d9ba044ab642345ad3bbad3859963942945b5d29e48b",
       "provider": "pexels",
       "registeredAt": "2026-08-26T12:40:45.291Z"
+    },
+    {
+      "slug": "2026-budget-noise-cancelling-headphones-anc-codecs-explainer",
+      "url": "https://images.pexels.com/photos/3394656/pexels-photo-3394656.jpeg",
+      "assetKey": "pexels:3394656",
+      "hash": "0ab695694376a565a789e378f696934a58ba919c7359b1902591cfca487c2932",
+      "contentHash": "0ab695694376a565a789e378f696934a58ba919c7359b1902591cfca487c2932",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T12:47:51.348Z"
     }
   ]
 }
