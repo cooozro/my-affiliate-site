@@ -9,6 +9,7 @@ tags:
   - 이중 호스 에어컨
   - SACC 등급
 draft: true
+automationBuffer: false
 contentProfile: explainer
 topicId: portable-ac
 topicCluster: air-conditioning

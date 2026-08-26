@@ -13,6 +13,7 @@ tags:
   - codec comparison
   - audio buying guide
 draft: true
+automationBuffer: false
 contentProfile: buying-guide
 topicId: wireless-earbuds
 topicCluster: audio

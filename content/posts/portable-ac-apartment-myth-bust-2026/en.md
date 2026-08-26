@@ -11,6 +11,7 @@ tags:
   - dual hose AC
   - SACC rating
 draft: true
+automationBuffer: false
 contentProfile: explainer
 topicId: portable-ac
 topicCluster: air-conditioning

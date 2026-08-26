@@ -2083,6 +2083,60 @@
       "contentHash": "9c5bfc2c4830c38c8ba1d09afa4cb09c838d2f60af018062fcc6b61c2b5280ca",
       "provider": "pexels",
       "registeredAt": "2026-08-26T11:56:13.096Z"
+    },
+    {
+      "slug": "2026-portable-ssd-samsung-t9-review",
+      "url": "https://img.global.news.samsung.com/global/wp-content/uploads/2023/09/portable-ssd-t9-pr_thumb728.jpg",
+      "assetKey": "press-kit:400afe1a54",
+      "hash": "42c0671b8c1b2f471eafe941b5940dd480c1c316d79ee2344ec57c80402721bd",
+      "contentHash": "42c0671b8c1b2f471eafe941b5940dd480c1c316d79ee2344ec57c80402721bd",
+      "provider": "press-kit",
+      "registeredAt": "2026-08-26T12:09:18.207Z"
+    },
+    {
+      "slug": "2026-portable-ssd-samsung-t9-review",
+      "url": "https://pixabay.com/get/gd78c8c65fbbc0bb38991dfe23d81f29569632a2d32084c78b86225ea69c853a82de37fbc21b6fc8e8870521e8c134dfecb86365f11d6ad91b3228117259db1a2_1280.jpg",
+      "assetKey": "pixabay:4721544",
+      "hash": "f7a906f23ee888f3223ddfe4b3f661b1969e73f467172cc185d1261979d8cb39",
+      "contentHash": "f7a906f23ee888f3223ddfe4b3f661b1969e73f467172cc185d1261979d8cb39",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T12:09:36.113Z"
+    },
+    {
+      "slug": "2026-portable-ssd-samsung-t9-review",
+      "url": "https://pixabay.com/get/gf0f9dbe1fa00e1a8df909e879fa86e9cc27098914da54e4e8d3969ac627ee3277d2c2780b138e63b31ef275c19b1688b6ffa9668a88b5919495b91e85a894764_1280.jpg",
+      "assetKey": "pixabay:4721541",
+      "hash": "dd1f19b8cab56713ec32e36cbfe21fce05a40d73332c5bb5dc4f81b8a3134e92",
+      "contentHash": "dd1f19b8cab56713ec32e36cbfe21fce05a40d73332c5bb5dc4f81b8a3134e92",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T12:09:36.483Z"
+    },
+    {
+      "slug": "2026-power-banks-anker-737-review",
+      "url": "https://images.pexels.com/photos/17263156/pexels-photo-17263156.jpeg",
+      "assetKey": "pexels:17263156",
+      "hash": "5fb5ba15d44014c2c48cb3daa522b087d83e9422e33389109f0e8a8283ebe920",
+      "contentHash": "5fb5ba15d44014c2c48cb3daa522b087d83e9422e33389109f0e8a8283ebe920",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T12:20:36.377Z"
+    },
+    {
+      "slug": "2026-power-banks-anker-737-review",
+      "url": "https://pixabay.com/get/g7cc986ea1b29e9447a8d2b91450a5326c2987ee8a6d3b483cbc9b9dc45ad46570ff024e0210e05f0adb9c7b0972f54ca3b342d4fa4b7f8e6527c41743605a219_1280.jpg",
+      "assetKey": "pixabay:694795",
+      "hash": "228e224f9eedbe3a1c68d6c808820ef98b53d5bf1aa5fc1a72db4189b3792c77",
+      "contentHash": "228e224f9eedbe3a1c68d6c808820ef98b53d5bf1aa5fc1a72db4189b3792c77",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T12:20:45.663Z"
+    },
+    {
+      "slug": "2026-power-banks-anker-737-review",
+      "url": "https://images.unsplash.com/photo-1516163024308-a3328ec040bd",
+      "assetKey": "unsplash:t5Q8c72qCwI",
+      "hash": "b2245f7a06754fa28cfd27e6c485c1a70cc44c31bde62117ae81d487fbd87c3a",
+      "contentHash": "b2245f7a06754fa28cfd27e6c485c1a70cc44c31bde62117ae81d487fbd87c3a",
+      "provider": "unsplash",
+      "registeredAt": "2026-08-26T12:20:45.700Z"
     }
   ]
 }

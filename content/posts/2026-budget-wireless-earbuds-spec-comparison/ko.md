@@ -9,6 +9,7 @@ tags:
   - 코덱 비교
   - 오디오 구매 가이드
 draft: true
+automationBuffer: false
 contentProfile: buying-guide
 topicId: wireless-earbuds
 topicCluster: audio

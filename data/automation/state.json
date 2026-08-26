@@ -1,5 +1,5 @@
 {
-  "topicIndex": 23,
+  "topicIndex": 28,
   "usedTopicIds": [
     "space-heaters",
     "space-heaters",
@@ -10,10 +10,11 @@
     "bluetooth-speakers",
     "tablet-budget",
     "dehumidifiers",
-    "wireless-earbuds"
+    "wireless-earbuds",
+    "power-banks"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-26T10:45:42.795Z",
+  "nextPublishAt": "2026-08-26T12:15:54.682Z",
   "scheduledGapHours": 0,
   "publishCountToday": 0,
   "publishDateKst": "2026-08-26",
@@ -163,33 +164,21 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-26T11:52:02.321Z",
-    "issueCount": 4,
+    "at": "2026-08-26T12:15:54.588Z",
+    "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (66min past slot, KST 2026-08-26)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "2 draft(s) have publish gate issues",
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (1 deferred)",
         "severity": "warning"
       },
       {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
-        "severity": "error"
-      },
-      {
         "code": "low-draft-buffer",
-        "message": "Draft buffer 2/6",
+        "message": "Draft buffer 1/6",
         "severity": "info"
       }
     ],
-    "repairs": [
-      "marked-slot-catch-up"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
@@ -293,6 +282,12 @@
       "category": "audio",
       "taxonomyGroup": "IT/모바일",
       "at": "2026-08-26T11:52:04.115Z"
+    },
+    {
+      "id": "power-banks",
+      "category": "accessories",
+      "taxonomyGroup": "IT/모바일",
+      "at": "2026-08-26T12:15:55.126Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-25",
@@ -303,7 +298,6 @@
     "manualReviewCount": 0
   },
   "formatDeck": [
-    "model-deep-dive",
     "checklist",
     "head-to-head",
     "scenario-guide",
@@ -322,7 +316,8 @@
     "scenario-guide",
     "checklist",
     "explainer",
-    "buying-guide"
+    "buying-guide",
+    "model-deep-dive"
   ],
   "metaAngleHistory": [
     {
@@ -366,16 +361,15 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-26T11:52:03.752Z",
-    "reason": "no-publish-eligible-drafts",
+    "at": "2026-08-26T12:15:54.712Z",
+    "reason": "all-deferred",
     "triedSlugs": [
-      "portable-ac-apartment-myth-bust-2026",
-      "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026"
+      "2026-portable-ssd-samsung-t9-review"
     ],
-    "deferredSkipped": 0,
-    "integritySkipped": 2,
+    "deferredSkipped": 1,
+    "integritySkipped": 0,
     "diversitySkipped": 0,
-    "publishableCount": 2,
+    "publishableCount": 0,
     "publishEligibleCount": 0
   },
   "modelPickHistory": [

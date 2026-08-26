@@ -118,5 +118,35 @@
         "altHintKo": "Sony SRS-XG500 공식 프레스킷 제품컷"
       }
     ]
+  },
+  "samsung-t9": {
+    "at": "2026-08-26T12:09:16.505Z",
+    "query": "T9 Portable SSD Samsung official press product OR media kit site:news.samsung.com OR site:samsungmobilepress.com OR site:img.global.news.samsung.com",
+    "images": [
+      {
+        "url": "https://img.us.news.samsung.com/us/wp-content/uploads/2023/10/09165157/Samsung-T9-Creator-1.jpg",
+        "role": "cover",
+        "altHint": "Samsung T9 Portable SSD official press kit product photo",
+        "altHintKo": "Samsung T9 Portable SSD 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://img.us.news.samsung.com/us/wp-content/uploads/2023/09/06093904/samsung-990-pro-4tb-f.jpg",
+        "role": "lifestyle",
+        "altHint": "Samsung T9 Portable SSD official press kit product photo",
+        "altHintKo": "Samsung T9 Portable SSD 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://img.global.news.samsung.com/global/wp-content/uploads/2023/09/Portable-SSD-T9-PR_Thumb728.jpg",
+        "role": "detail",
+        "altHint": "Samsung T9 Portable SSD official press kit product photo",
+        "altHintKo": "Samsung T9 Portable SSD 공식 프레스킷 제품컷"
+      },
+      {
+        "url": "https://img.us.news.samsung.com/us/wp-content/uploads/2026/08/25170915/P9-PSSD_Lifestyle_08-2.png",
+        "role": "detail",
+        "altHint": "Samsung T9 Portable SSD official press kit product photo",
+        "altHintKo": "Samsung T9 Portable SSD 공식 프레스킷 제품컷"
+      }
+    ]
   }
 }

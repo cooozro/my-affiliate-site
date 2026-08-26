@@ -9,6 +9,7 @@ tags:
   - 전기요금
   - 가전제품
 draft: true
+automationBuffer: false
 contentProfile: explainer
 topicId: dehumidifiers
 topicCluster: home-appliances
