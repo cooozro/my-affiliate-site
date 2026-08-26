@@ -45,6 +45,12 @@ import {
   TARGET_DRAFT_COUNT,
 } from "../lib/publish-schedule.mjs";
 import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../lib/season-topics.mjs";
+import {
+  formatStockCaption,
+  isStockImageProvider,
+  prepareArticleBody,
+} from "../lib/site-engine/index.mjs";
+import { pickSectionSkeleton } from "../lib/variants/section-skeletons.mjs";
 
 /** Writes track publish cadence: one ready draft waiting after each go-live. */
 const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
@@ -83,7 +89,7 @@ Do NOT include a "ko" object in this pass. Keep EN body complete and publish-rea
     system,
     user: `PASS 2 of 2 — Korean locale for the same article.
 
-Translate faithfully (not a summary). Same H2/H3 structure, tables, FAQ count, methodology, and AdSense model-name depth as the English draft.
+Translate faithfully (not a summary). Same H2/H3 structure, tables, FAQ count, and AdSense model-name depth as the English draft. Do not add an Analysis methodology section.
 
 English source (do not rewrite EN; output KO only):
 ${JSON.stringify(
@@ -266,11 +272,16 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     );
   }
 
+  const skeleton = pickSectionSkeleton(
+    contentProfile,
+    `${topic.id}|${topic.angle}|${contentProfile}`,
+  );
   const prompt = buildGenerationPrompt(topic, year, contentProfile, {
     writingMode: options.writingMode,
     toneVariant: options.toneVariant,
     benchmarkOutline: options.benchmarkOutline,
     modelPick,
+    skeleton,
   });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
@@ -383,8 +394,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     }
   }
 
-  let enBody = article.en.body;
-  let koBody = article.ko.body;
+  let enBody = prepareArticleBody(article.en.body, "en");
+  let koBody = prepareArticleBody(article.ko.body, "ko");
 
   if (contentProfile === "model-deep-dive" && modelPick?.primary) {
     const bodyQueries = buildModelDeepDiveSearchQueries(modelPick.primary, topic);
@@ -437,7 +448,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
               path: img.path,
               altEn: alts.en,
               altKo: alts.ko,
-              credit: img.credit,
+              credit: formatStockCaption("en", img.credit),
               source: "stock",
             };
           })
@@ -509,6 +520,10 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       : {}),
   };
 
+  if (shared.coverImageProvider && isStockImageProvider(shared.coverImageProvider)) {
+    shared.coverImageCredit = formatStockCaption("ko", shared.coverImageCredit);
+  }
+
   const enFm = buildFrontmatter("en", article.en, shared);
   const koFm = buildFrontmatter("ko", article.ko, shared);
 
@@ -528,6 +543,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 
   enBody = repairModelDeepDiveBody(enFm, enBody, "en", { root: siteRoot }).body;
   koBody = repairModelDeepDiveBody(koFm, koBody, "ko", { root: siteRoot }).body;
+  enBody = prepareArticleBody(enBody, "en");
+  koBody = prepareArticleBody(koBody, "ko");
 
   writePost(slug, "en", enFm, enBody);
   writePost(slug, "ko", koFm, koBody);

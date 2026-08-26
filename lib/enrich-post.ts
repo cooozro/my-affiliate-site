@@ -10,6 +10,7 @@ import {
 import type { Locale } from "@/lib/i18n/config";
 import { getUsdKrwRate } from "@/lib/market-data";
 import type { Post } from "@/lib/posts";
+import { stripMethodologySections } from "@/lib/site-engine";
 
 export type EnrichedPost = Post & {
   liveDataNote?: string;
@@ -36,16 +37,20 @@ export async function enrichPost(
 ): Promise<EnrichedPost> {
   const coverImage = resolveCoverImageSrc(post);
   const base = coverImage && coverImage !== post.coverImage ? { ...post, coverImage } : post;
+  const stripped = {
+    ...base,
+    content: stripMethodologySections(base.content),
+  };
 
   if (!base.liveData) {
-    return base;
+    return stripped;
   }
 
   const market = await getUsdKrwRate();
 
   return {
-    ...base,
-    content: resolveContentPlaceholders(base.content, { locale, market }),
+    ...stripped,
+    content: resolveContentPlaceholders(stripped.content, { locale, market }),
     liveDataNote: liveDataDisclaimer(locale, market),
   };
 }

@@ -5,7 +5,7 @@ Absolute rules for every article. Agents and authors must follow these before pu
 ## 1. Google Content Guidelines (mandatory)
 
 - Write **original, helpful, people-first** content — not SEO filler or copied manufacturer copy.
-- Cite **verifiable specs and sources**; state methodology when comparing products.
+- Cite **verifiable specs and sources**. The site-wide analysis methodology (manufacturer specs, listed retail prices, open reviews; no seller APIs) lives on `/about` — do **not** repeat a formulaic “Analysis methodology / 분석 방법론” stump in every article body.
 - No misleading claims, clickbait titles, or thin affiliate-only pages.
 - Match the promise of the title in the body (E-E-A-T: experience, expertise, authority, trust).
 
@@ -31,10 +31,11 @@ Run before commit: `npm run content:validate`
 ## 3. SEO & indexing (mandatory)
 
 - Unique `title` and `description` (description ≥ 50 chars) per locale
-- **Professional review format:** `docs/templates/` by `contentProfile` (`buying-guide`, `head-to-head`, `scenario-guide`, `explainer`, `checklist`). Auto replenish uses **equal round-robin** (each format once per cycle, then reshuffle) — see `scripts/lib/content-profiles.mjs`. `editorial` is admin/internal only (not in the auto deck). **English primary;** Korean is a faithful translation. No personal operator details in posts.
+- **Professional review format:** `docs/templates/` by `contentProfile` (`buying-guide`, `head-to-head`, `scenario-guide`, `explainer`, `checklist`). See `scripts/lib/content-profiles.mjs` for rotation. **English primary;** Korean is a faithful translation. No personal operator details in posts.
 - **Season-first topics:** `scripts/lib/season-topics.mjs` — spring/summer/fall/winter, school terms, and heat-season appliances (AC, purifiers) are prioritized when picking topics.
 - **Varied headlines** — avoid repeating `2026 가성비 X TOP 5 — …` on every post; see `scripts/lib/editorial-standards.mjs`
-- **Honest sourcing** — never claim proprietary seller APIs or fake database field names (`sale_price_usd`, `판매자 API`, etc.); cite public manufacturer specs, listed prices, and open reviews
+- **Honest sourcing** — never claim proprietary seller APIs or fake database field names (`sale_price_usd`, `판매자 API`, etc.); cite public manufacturer specs, listed prices, and open reviews. Methodology belongs on `/about`.
+- **Section variants** — each draft is assigned one of 3 H2 skeletons per content profile so posts do not share a single spine. Vary sentence structure, transitions, and table layout versus other articles on this site.
 - Both **`en.md` and `ko.md`** for every public post
 - **Korean Hangul only** — no Hanja/CJK ideographs in `ko.md` (use `과대`, `독창적`, etc.). Auto-repair + validation: `scripts/lib/guardian/content-policy.mjs`
 - Semantic headings (`##`, `###`), tables for comparisons, internal links where natural
@@ -60,7 +61,9 @@ For posts with `liveData: true` in frontmatter, the site resolves at render time
 
 A data disclaimer is shown automatically below the cover image.
 
-**Do not hardcode exchange rates or “as of” dates** in `liveData` posts.
+**Do not hardcode exchange rates or “as of” dates** in `liveData` posts. If the FX API is down, the renderer must show the official-retailer fallback — never a invented USD/KRW number.
+
+Every article also shows a **transparency notice**: the report is a spec + open-review cross-check, not a hands-on lab test of a physical unit.
 
 ---
 
@@ -95,10 +98,12 @@ Images are saved to `public/images/posts/{slug}/cover.jpg` and referenced in fro
 ```yaml
 coverImage: "/images/posts/my-slug/cover.jpg"
 coverImageAlt: "Descriptive alt text for accessibility and SEO"
-coverImageCredit: "Photo by Name / Pexels"
-coverImageProvider: "pexels"   # optional: pexels | pixabay (set by fetch script)
+coverImageCredit: "연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Name / Pexels"
+coverImageProvider: "pexels"   # optional: pexels | pixabay | press-kit
 liveData: true   # optional, for FX/date placeholders
 ```
+
+Stock covers **must not** put a product model name in the caption. Press-kit images keep the manufacturer credit.
 
 ### Note on prior “blog automation” server
 

@@ -58,26 +58,6 @@ All public profiles require: Editorial Overview, methodology, Related guides.
 Season-first topic selection: scripts/lib/season-topics.mjs
 `.trim();
 
-export const METHODOLOGY_BLOCK_KO = `## 분석 방법론
+export const METHODOLOGY_BLOCK_KO = `분석 방법론은 본문이 아니라 /about 에 있습니다. 제조사 공개 스펙·공식 판매가·공개 리뷰만 교차 검증하고, 자체 판매 API나 비공개 셀러 DB는 쓰지 않습니다. 기사에 "## 분석 방법론" 상투 블록을 넣지 마세요.`;
 
-본 비교는 **제조사 공개 스펙·공식 판매가·공개 리뷰**를 교차 검증한 편집부 분석입니다. 자체 판매 API나 비공개 셀러 데이터베이스를 사용하지 않으며, 독자가 직접 확인할 수 있는 출처만 포함합니다.
-
-| 항목 | 수집 출처 | 활용 목적 |
-| --- | --- | --- |
-| 판매가 | 제조사·공식몰·주요 쇼핑몰 공시 가격 | 참고가 비교 |
-| 제품 스펙 | 제조사 스펙시트·인증 문서 | 정량 스펙 비교 |
-| 사용자 평점 | 공개 리뷰 플랫폼 평균 | 품질 신뢰도 참고 |
-| 시장 관심도 | 검색·리뷰 작성량 추이 | 수요 참고 |
-| 품질 리스크 | 공개 후기·불량 언급 비율 | 상대적 리스크 참고 |`;
-
-export const METHODOLOGY_BLOCK_EN = `## Analysis methodology
-
-This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
-
-| Item | Source | Purpose |
-| --- | --- | --- |
-| Retail price | OEM sites and major storefronts | Reference price comparison |
-| Product specs | Manufacturer spec sheets | Quantitative comparison |
-| User rating | Public review platform averages | Quality signal |
-| Market interest | Search and review volume trends | Demand context |
-| Quality risk | Defect mentions in public reviews | Relative risk signal |`;
+export const METHODOLOGY_BLOCK_EN = `Methodology lives on /about, not in the article body. Cross-check public manufacturer specs, listed retail prices, and open reviews. Do not use proprietary seller APIs. Do not emit an "## Analysis methodology" stump.`;

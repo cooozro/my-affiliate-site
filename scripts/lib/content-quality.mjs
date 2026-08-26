@@ -214,13 +214,8 @@ function auditShared(root, slug, locale, raw, profile, options) {
     return issues;
   }
 
-  if (!hasMethodologySection(body)) {
-    issues.push(`${label}: missing methodology section (Google E-E-A-T)`);
-  }
-
-  if (!hasEditorialOverviewSection(body)) {
-    issues.push(`${label}: missing Editorial Overview section`);
-  }
+  // Analysis methodology belongs on /about. Editorial Overview is no longer a required stamp;
+  // section order comes from per-draft variants.
 
   if (!hasRelatedGuidesSection(body)) {
     issues.push(`${label}: missing Related guides / 관련 가이드 internal links section`);

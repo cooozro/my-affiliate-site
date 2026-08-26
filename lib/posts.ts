@@ -17,6 +17,7 @@ export type PostMeta = {
   coverImage?: string;
   coverImageAlt?: string;
   coverImageCredit?: string;
+  coverImageProvider?: string;
   coverImageSourceUrl?: string;
   liveData?: boolean;
   draft?: boolean;
@@ -107,6 +108,9 @@ function parsePostFile(slug: string, locale: Locale): Post {
     coverImageAlt: data.coverImageAlt ? String(data.coverImageAlt) : undefined,
     coverImageCredit: data.coverImageCredit
       ? String(data.coverImageCredit)
+      : undefined,
+    coverImageProvider: data.coverImageProvider
+      ? String(data.coverImageProvider)
       : undefined,
     coverImageSourceUrl: data.coverImageSourceUrl
       ? String(data.coverImageSourceUrl)

@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n/config";
 import type { MarketSnapshot } from "@/lib/market-data";
+import { applyPriceFallback, priceFallbackText } from "@/lib/site-engine";
 
 export type ContentVarContext = {
   locale: Locale;
@@ -33,36 +34,40 @@ export function resolveContentPlaceholders(
 ): string {
   const now = context.now ?? new Date();
   const { locale, market } = context;
+
+  let result = content;
+  result = result.replaceAll("{{today}}", formatToday("en", now));
+  result = result.replaceAll("{{today_ko}}", formatToday("ko", now));
+  result = result.replaceAll("{{today_locale}}", formatToday(locale, now));
+
+  if (!market.ok || market.usdKrwRate == null || market.usdKrwRate <= 0) {
+    return applyPriceFallback(result, locale, { marketOk: false });
+  }
+
   const rateFormatted = new Intl.NumberFormat(
     locale === "ko" ? "ko-KR" : "en-US",
   ).format(market.usdKrwRate);
 
-  let result = content;
-
   result = result.replaceAll("{{usd_krw_rate}}", rateFormatted);
-  result = result.replaceAll("{{today}}", formatToday("en", now));
-  result = result.replaceAll("{{today_ko}}", formatToday("ko", now));
-  result = result.replaceAll(
-    "{{today_locale}}",
-    formatToday(locale, now),
-  );
-
   result = result.replace(/\{\{krw:([\d.]+)\}\}/g, (_, usdRaw: string) => {
     const usd = Number.parseFloat(usdRaw);
     if (!Number.isFinite(usd)) {
       return usdRaw;
     }
-
-    return formatKrw(usdToKrw(usd, market.usdKrwRate), locale);
+    return formatKrw(usdToKrw(usd, market.usdKrwRate as number), locale);
   });
 
-  return result;
+  return applyPriceFallback(result, locale);
 }
 
 export function liveDataDisclaimer(
   locale: Locale,
   market: MarketSnapshot,
 ): string {
+  if (!market.ok || market.usdKrwRate == null) {
+    return priceFallbackText(locale);
+  }
+
   const rate = new Intl.NumberFormat(
     locale === "ko" ? "ko-KR" : "en-US",
   ).format(market.usdKrwRate);

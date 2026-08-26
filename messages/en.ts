@@ -61,9 +61,9 @@ const en = {
     metaDescription:
       "Get in touch with the AI Pick & Report editorial team for questions, corrections, or partnership inquiries.",
     intro:
-      "We welcome reader feedback, product tips, and partnership inquiries. Please contact us only through the form below.",
+      "We welcome reader feedback, product tips, and partnership inquiries. Use the form below and include a reply email — the editorial team answers there.",
     formNotice:
-      "For privacy and a timely response, we do not accept inquiries by direct email. Please use this contact form.",
+      "The supported channel is this contact form. Include a reply email in the form and the editorial team will answer there.",
     emailLabel: "Your email",
     nameLabel: "Name",
     messageLabel: "Message",
@@ -110,7 +110,7 @@ const en = {
       },
       contact: {
         title: "Contact Us",
-        body: "If you have questions about this Privacy Policy, please reach out through the Contact page on this website. We do not accept privacy-related inquiries via direct email.",
+        body: "If you have questions about this Privacy Policy, please reach out through the Contact page on this website.",
       },
     },
   },

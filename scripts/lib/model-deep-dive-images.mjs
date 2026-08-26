@@ -3,6 +3,7 @@
  * Prefer manufacturer Press Kit / Media Gallery (allowlisted newsroom hosts),
  * then copyright-safe stock (Pexels/Pixabay). ALT names the focus model for SEO.
  */
+import { formatStockCaption } from "./site-engine/index.mjs";
 
 /** Generic category product-cut queries (no trademarked SKU as search key). */
 const TOPIC_PRODUCT_QUERIES = {
@@ -151,21 +152,21 @@ export function insertModelDeepDiveBodyImages(body, images, locale = "en", optio
     locale === "ko"
       ? [
           {
-            re: /^##\s*(디자인과 실사용|디자인과 일상|디자인)\s*$/m,
+            re: /^##\s*(디자인과 실사용|디자인과 일상|디자인|하루 동안의 사용|실제 공간에서의 거동)\s*$/m,
             idx: 0,
           },
           {
-            re: /^##\s*(한눈에 보는 스펙|핵심 성능|스펙)\s*$/m,
+            re: /^##\s*(한눈에 보는 스펙|핵심 성능|스펙|의미 있는 스펙)\s*$/m,
             idx: 1,
           },
         ]
       : [
           {
-            re: /^##\s*(Design & everyday use|Design and everyday use|Design)\s*$/m,
+            re: /^##\s*(Design & everyday use|Design and everyday use|Design|A day with the device|How it behaves in real rooms)\s*$/m,
             idx: 0,
           },
           {
-            re: /^##\s*(At-a-glance spec sheet|Core performance|Spec)\s*$/m,
+            re: /^##\s*(At-a-glance spec sheet|Core performance|Spec|Spec sheet that matters)\s*$/m,
             idx: 1,
           },
         ];
@@ -177,18 +178,14 @@ export function insertModelDeepDiveBodyImages(body, images, locale = "en", optio
             const c = img.creditKo || img.credit || "제조사 공식 프레스킷";
             return `\n*이미지: ${c} — 보도자료·미디어 갤러리 배포용(편집 인용).*\n`;
           }
-          return img.credit
-            ? `\n*이미지: ${img.credit} — 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*\n`
-            : "\n*이미지: 저작권 안전한 스톡 사진(제품 카테고리 일러스트).*\n";
+          return `\n*${formatStockCaption("ko", img.credit)}*\n`;
         }
       : (img) => {
           if (img.source === "press-kit") {
             const c = img.credit || "Official manufacturer press kit";
             return `\n*Image: ${c} — press release / media gallery (editorial use).*\n`;
           }
-          return img.credit
-            ? `\n*Image: ${img.credit} — copyright-safe stock (category illustration).*\n`
-            : "\n*Image: copyright-safe stock (category illustration).*\n";
+          return `\n*${formatStockCaption("en", img.credit)}*\n`;
         };
 
   for (const slot of slots) {

@@ -6,23 +6,20 @@ Use for **`contentProfile: checklist`**. Fast, actionable pre-purchase checks.
 
 "Things to check before buying X", "AC buying checklist", featured-snippet style lists.
 
-## Section order
+## Do not stamp
 
-1. **Editorial Overview** / **편집부 개요**
-2. **Introduction** — when to use this checklist
-3. **Analysis methodology** / **분석 방법론** (brief)
-4. **## The checklist** / **## 구매 전 체크리스트** — **≥7 numbered items**, each with:
-   - **What to check**
-   - **Why it matters** (2–3 sentences with a concrete example)
-   - **Red flag** (what to avoid, 1–2 sentences)
-5. **Quick reference table** — optional spec thresholds
-6. **FAQ** / **자주 묻는 질문** — ≥3 `###` Q&A pairs
-7. **Related guides** / **관련 가이드**
-8. **Final Verdict** / **최종 평가** — 1–2 paragraphs summarizing priority order
+Do **not** include **Analysis methodology / 분석 방법론** in the body (`/about` holds the source table).
 
-## Rules
+## Assigned variants (pipeline picks one)
 
-- Minimum **7** numbered checklist items (`1.`, `2.`, …)
+1. **numbered-risk** — when to use this checklist → pre-purchase checks → red flags → FAQ → priority order
+2. **grouped-risk** — fit/power/install first → the checklist → quick thresholds → FAQ → verdict
+3. **sequence** — do these in order → pre-purchase checks → consumables and three-year cost → FAQ → what to decide today
+
+## Quality rules
+
+- **≥7 numbered items**, each with What to check / Why it matters (2–3 sentences) / Red flag
 - Minimum body: EN ≥ **5,000** UTF-8 bytes; KO ≥ **2,500** characters
-- Seasonal hook in title or intro when relevant (summer AC, back-to-school, etc.)
+- FAQ ≥3 `###` pairs; Related guides
+- Seasonal hook in title or intro when relevant
 - English primary; Korean faithful translation

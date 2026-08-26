@@ -12,6 +12,11 @@ import {
 import { ARTICLE_SHELL } from "@/lib/layout";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
+import {
+  coverCaption,
+  stripTransparencyMarkdown,
+  transparencyNoticeText,
+} from "@/lib/site-engine";
 import { siteConfig } from "@/lib/site";
 import type { Dictionary } from "@/messages/en";
 
@@ -100,6 +105,13 @@ export function ArticleLayout({
   const publishedIso = post.publishedAt ?? post.date;
   const modifiedIso = post.updatedAt ?? publishedIso;
   const sharePlacements = ARTICLE_CHROME_RULES.shareBar.placements;
+  const figcaption = coverCaption(
+    locale,
+    post.coverImageCredit,
+    post.coverImageProvider,
+  );
+  const body = stripTransparencyMarkdown(post.content);
+  const noticeLabel = locale === "ko" ? "투명성 고지" : "Transparency";
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -158,13 +170,22 @@ export function ArticleLayout({
               sizes="(max-width: 768px) 100vw, 768px"
               draggable={false}
             />
-            {post.coverImageCredit ? (
+            {figcaption ? (
               <figcaption className="border-t border-border/60 bg-muted/40 px-4 py-2 font-sans text-xs text-muted-foreground">
-                {post.coverImageCredit}
+                {figcaption}
               </figcaption>
             ) : null}
           </figure>
         ) : null}
+
+        <aside
+          className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground"
+          data-site-engine="transparency"
+          role="note"
+        >
+          <strong className="text-foreground">{noticeLabel}:</strong>{" "}
+          {transparencyNoticeText(locale)}
+        </aside>
 
         {post.liveDataNote ? (
           <p className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground">
@@ -172,7 +193,7 @@ export function ArticleLayout({
           </p>
         ) : null}
 
-        <div className="article-body">{renderArticleBody(post.content, locale)}</div>
+        <div className="article-body">{renderArticleBody(body, locale)}</div>
       </ArticleProtection>
 
       {sharePlacements.includes("bottom") ? (

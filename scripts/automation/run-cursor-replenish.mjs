@@ -121,7 +121,8 @@ Content requirements (each locale):
 - Meet minimum length for profile ${contentProfile}
 - Meta description **50–160 characters** (frontmatter \`description\`)
 - **FAQ section** (\`## FAQ\` EN / \`## 자주 묻는 질문\` KO) with ≥3 \`###\` Q&A pairs — required for publish gate
-- Analysis methodology table (editorial sources only — no seller API claims)
+- Honest sourcing (manufacturer specs, listed prices, open reviews). Do NOT include an Analysis methodology section in the body — that lives on /about
+- Vary sentence structure, transitions, and table layout versus other articles on this site
 - Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these published slugs: ${publishedSlugs}
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
