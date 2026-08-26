@@ -1,7 +1,7 @@
 ---
-title: 2026 가성비 피트니스 트래커 구매 전 확인할 7가지 체크리스트
+title: 가성비 피트니스 트래커 구매 전 확인할 7가지 체크리스트
 description: '가성비 피트니스 트래커 구매 전 심박수 정확도, 수면 추적, 앱 생태계를 확인하세요. 7가지 체크리스트로 흔한 실수를 피하세요.'
-date: '2026-08-26'
+date: '-08-26'
 tags:
   - 피트니스 트래커
   - 심박수 정확도
@@ -13,15 +13,15 @@ contentProfile: checklist
 topicId: fitness-trackers
 topicCluster: wearables
 writingProvider: deepseek
-createdAt: '2026-08-26T13:20:50.769Z'
+createdAt: '-08-26T13:20:50.769Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-checklist/fitness-tracker-wrist-activity-fitness-tracker-w-cover.jpg
 coverImageAlt: 여름 야외 운동의 피트니스 트래커
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by StockSnap / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-26T13:25:17.675Z'
-publishAfter: '2026-09-04'
+updatedAt: '2026-08-26T13:34:46.317Z'
+publishAfter: '-09-04'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -143,9 +143,9 @@ publishAfter: '2026-09-04'
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
-- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 최종 평가
 
-가성비 피트니스 트래커는 기대치를 관리한다면 현명한 구매입니다. 앱, 센서 품질, 배터리 수명에 집중하세요. 샤오미 스마트 밴드 9와 화웨이 밴드 9는 2026년에 이길 수 있는 두 모델입니다. 위의 위험 신호 체크를 통과하지 못하는 트래커는 건너뛰세요. 즐거운 트래킹 되세요!
+가성비 피트니스 트래커는 기대치를 관리한다면 현명한 구매입니다. 앱, 센서 품질, 배터리 수명에 집중하세요. 샤오미 스마트 밴드 9와 화웨이 밴드 9는 년에 이길 수 있는 두 모델입니다. 위의 위험 신호 체크를 통과하지 못하는 트래커는 건너뛰세요. 즐거운 트래킹 되세요!
 
 지금 사기 / 기다리기 / 건너뛰기: 본문 스펙과 사용 시나리오를 기준으로 판단하세요.

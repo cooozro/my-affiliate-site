@@ -40,7 +40,7 @@ publishAfter: '2026-09-09'
 
 ## What it costs to keep, not just to buy
 
-When you look at the Ecovacs DEEBOT X8 PRO OMNI, the first number that jumps out is the purchase price. But for anyone living in an apartment, the real question is what this robot vacuum costs to keep running over three years. The OMNI station is the centerpiece—it auto-empties the dustbin, washes and dries the mop pads, and refills the water tank. That convenience comes with consumables you will need to replace: dust bags, mop pads, filters, and cleaning solution. Over 36 months, we estimate the total cost of ownership lands around **$1,100 to $1,300** when you factor in the initial price and parts. That is roughly **{{krw:29.99}}** per month in consumables alone, which is modest compared to the time you save.
+When you look at the Ecovacs DEEBOT X8 PRO OMNI, the first number that jumps out is the purchase price. But for anyone living in an apartment, the real question is what this robot vacuum costs to keep running over three years. The OMNI station is the centerpiece—it auto-empties the dustbin, washes and dries the mop pads, and refills the water tank. That convenience comes with consumables you will need to replace: dust bags, mop pads, filters, and cleaning solution. Over 36 months, we estimate the total cost of ownership lands around **$1,100 to $1,300** when you factor in the initial price and parts. That is roughly **$30** per month in consumables alone, which is modest compared to the time you save.
 
 **Editorial read:** The X8 PRO OMNI is not the cheapest robot vacuum to run, but the maintenance burden is far lower than a model that forces you to empty the bin every few days. For an apartment dweller who values convenience, the extra cost is often worth it.
 

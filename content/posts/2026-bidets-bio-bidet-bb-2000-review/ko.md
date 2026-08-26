@@ -11,6 +11,7 @@ tags:
   - 진동 노즐
   - 온열 시트
 draft: true
+liveData: true
 publishAfter: '2026-09-03'
 contentProfile: model-deep-dive
 topicId: bidets

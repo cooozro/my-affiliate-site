@@ -14,9 +14,9 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-08-22T02:33:09.027Z",
-  "nextPublishAt": "2026-08-26T13:33:49.709Z",
-  "scheduledGapHours": 0,
-  "publishCountToday": 0,
+  "nextPublishAt": "2026-08-27T02:00:00.000Z",
+  "scheduledGapHours": 5,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-26",
   "writeCountToday": 1,
   "writeDateKst": "2026-08-26",
@@ -191,7 +191,7 @@
       },
       {
         "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "message": "Every queued draft failed publish gates \u2014 repair drafts or replenish",
         "severity": "error"
       }
     ],
@@ -208,13 +208,13 @@
     {
       "id": "space-heaters",
       "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
+      "taxonomyGroup": "\uacc4\uc808\uac00\uc804/\ub09c\ubc29\u00b7\uac00\uc2b5",
       "at": "2026-08-13T03:31:03.827Z"
     },
     {
       "id": "space-heaters",
       "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
+      "taxonomyGroup": "\uacc4\uc808\uac00\uc804/\ub09c\ubc29\u00b7\uac00\uc2b5",
       "at": "2026-08-13T04:08:37.687Z"
     },
     {
@@ -226,13 +226,13 @@
       "id": "robot-vacuums",
       "category": "smart-home",
       "cluster": "floor-care",
-      "taxonomyGroup": "생활가전/청소",
+      "taxonomyGroup": "\uc0dd\ud65c\uac00\uc804/\uccad\uc18c",
       "at": "2026-08-14T06:08:02.741Z"
     },
     {
       "id": "air-purifiers",
       "category": "home-appliances",
-      "taxonomyGroup": "생활가전/청소",
+      "taxonomyGroup": "\uc0dd\ud65c\uac00\uc804/\uccad\uc18c",
       "at": "2026-08-14T06:08:36.937Z"
     },
     {
@@ -254,7 +254,7 @@
     {
       "id": "flagship-smartphones",
       "category": "smartphones",
-      "taxonomyGroup": "IT/모바일",
+      "taxonomyGroup": "IT/\ubaa8\ubc14\uc77c",
       "at": "2026-08-17T03:13:00.869Z"
     },
     {
@@ -271,7 +271,7 @@
       "id": "bluetooth-speakers",
       "category": "audio",
       "cluster": "audio",
-      "taxonomyGroup": "IT/모바일",
+      "taxonomyGroup": "IT/\ubaa8\ubc14\uc77c",
       "at": "2026-08-20T08:35:28.462Z"
     },
     {
@@ -282,7 +282,7 @@
     {
       "id": "tablet-budget",
       "category": "tablets",
-      "taxonomyGroup": "IT/모바일",
+      "taxonomyGroup": "IT/\ubaa8\ubc14\uc77c",
       "at": "2026-08-21T01:54:40.784Z"
     },
     {
@@ -293,19 +293,19 @@
     {
       "id": "dehumidifiers",
       "category": "home-appliances",
-      "taxonomyGroup": "계절가전/냉방",
+      "taxonomyGroup": "\uacc4\uc808\uac00\uc804/\ub0c9\ubc29",
       "at": "2026-08-26T11:27:17.264Z"
     },
     {
       "id": "wireless-earbuds",
       "category": "audio",
-      "taxonomyGroup": "IT/모바일",
+      "taxonomyGroup": "IT/\ubaa8\ubc14\uc77c",
       "at": "2026-08-26T11:52:04.115Z"
     },
     {
       "id": "power-banks",
       "category": "accessories",
-      "taxonomyGroup": "IT/모바일",
+      "taxonomyGroup": "IT/\ubaa8\ubc14\uc77c",
       "at": "2026-08-26T12:15:55.126Z"
     }
   ],
@@ -381,7 +381,7 @@
       "slug": "2026-compact-dishwasher-vs-portable-washer",
       "fallbackFrom": null,
       "fallbackReason": null,
-      "keyword": "compact small apartment appliances size comparison guide 후기",
+      "keyword": "compact small apartment appliances size comparison guide \ud6c4\uae30",
       "at": "2026-08-13T04:56:27.757Z"
     }
   ],

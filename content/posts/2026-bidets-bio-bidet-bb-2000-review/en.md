@@ -11,6 +11,7 @@ tags:
   - oscillating nozzle
   - heated seat
 draft: true
+liveData: true
 publishAfter: '2026-09-03'
 contentProfile: model-deep-dive
 topicId: bidets

@@ -1,5 +1,5 @@
 ---
-title: 'Budget Fitness Trackers: 7 Checks Before You Buy One in 2026'
+title: 'Budget Fitness Trackers: 7 Checks Before You Buy One'
 description: >-
   Before buying a budget fitness tracker, check heart rate accuracy, sleep
   tracking, and app ecosystem. Use our 7-point checklist to avoid common
