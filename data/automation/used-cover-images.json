@@ -2299,6 +2299,15 @@
       "contentHash": "a9f64d0a12b1bba9fef1f210d2b95ec02b9c1ce52619871bfbe907513b00d5e4",
       "provider": "pixabay",
       "registeredAt": "2026-08-26T13:21:17.421Z"
+    },
+    {
+      "slug": "2026-webcams-remote-work-head-to-head",
+      "url": "https://pixabay.com/get/g6c4af6dd9af75e5044b25defebb55c4bb0c69ccb882f87603b286c4bb07b3763f3a8f69806f8a926f4db91ef3b40cdbaa0f87154fb8f1b568af15d90f42edacd_1280.jpg",
+      "assetKey": "pixabay:3871774",
+      "hash": "b91c954e8f46ba3a05137566b57aaedbf477dc8a6544c7c14f5f12a374144cbb",
+      "contentHash": "b91c954e8f46ba3a05137566b57aaedbf477dc8a6544c7c14f5f12a374144cbb",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T13:26:38.937Z"
     }
   ]
 }
