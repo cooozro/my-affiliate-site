@@ -206,7 +206,7 @@ In sealed, air-conditioned apartments above roughly 28 °C indoor humidity, stag
 - [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — cut particle load when AC recirculates sealed-room air all summer
 - [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — pair with mopping setups in humid apartments
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — seal and cool the same rooms you automate for cleaning
-- [How We Review Tech Products](/en/blog/welcome) — how we score products and update live price placeholders
+- [How We Review Tech Products](/en/blog/welcome) — how we score products and cite public list prices
 ## Final Verdict
 
 After cross-checking the public specs, apartment robot vacuums are not one-size-fits-all: **mapping tech and dock maintenance** separate smooth ownership from daily rescues. **On a cost-effectiveness basis,** this report would start with **Roborock Q7 Max+** in a tight studio, prioritize **Roomba Combo j5+** brush and obstacle tooling for pet households, and budget **eufy X10 Pro Omni** pad washing if I truly need mop automation through sticky summer humidity — skipping that step leads to the most common one-star complaints. **Shark Matrix Plus 2-in-1** wins when clutter shifts often but I refuse to pay omni-station prices.

@@ -77,7 +77,7 @@ Snapshot as of {{today}}.
 | 4 | **HP Laptop 15-fd0123dx** | {{krw:479}} | Core i5-1334U | 8GB + 1 slot | 250 nits | 41Wh | 1.69 kg | 4.4 | **8.7** |
 | 5 | **Dell Inspiron 15 3535** | {{krw:459}} | Ryzen 5 7520U | 8GB + 1 slot | 250 nits | 41Wh | 1.65 kg | 4.3 | **8.6** |
 
-Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
+Prices are reference USD list values; Confirm live KRW prices on the official retailer.
 
 ---
 

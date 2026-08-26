@@ -220,7 +220,7 @@ Series S fits **subscription-first buyers, smaller TVs, and upscaled 4K** — no
 - [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — if you split a desk between work and console capture or streaming
 - [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — keep the same room cool when a console and TV run for hours
 - [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — low-latency voice chat without waking the household
-- [How We Review Tech Products](/en/blog/welcome) — how we score products and update live price placeholders
+- [How We Review Tech Products](/en/blog/welcome) — how we score products and cite public list prices
 ## Final Verdict
 
 After cross-checking the public scenarios, {{today}} console value still means **where you play, how you buy games, and how fast storage fills during sale season**—not raw teraflops marketing. **On a cost-effectiveness basis,** this report would lock play location and purchase style first. For most families on a 4K living-room TV through summer break, **Xbox Series X** balances native resolution with Game Pass. Story buyers who want discs and Sony-only releases should default to **PS5 Slim (Disc)** and budget an approved M.2 before the next 80 GB patch. Tight budgets with a rotating library fit **Xbox Series S** if you accept upscaled 4K. When the living-room TV is contested, **Switch OLED** keeps peace—buy a microSD on day one.

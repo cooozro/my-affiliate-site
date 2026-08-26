@@ -67,7 +67,7 @@ Snapshot as of {{today}}.
 | 4 | **Xiaomi G34WQi** | {{krw:249}} | 34" | 3440×1440 | VA | 180Hz | Tilt | 4.4 | **8.7** |
 | 5 | **MSI G2412** | {{krw:119}} | 24" | 1080p | IPS | 144Hz | Tilt | 4.3 | **8.5** |
 
-Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
+Prices are reference USD list values; Confirm live KRW prices on the official retailer.
 
 ---
 

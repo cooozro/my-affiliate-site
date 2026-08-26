@@ -72,7 +72,7 @@ The **Summer Living Room Index (SLRI)** in the table favors what actually matter
 
 ## TOP 5 comparison table
 
-Snapshot as of {{today}}. Prices reference 65-inch class listings on manufacturer and major US storefronts in mid-2026; KRW uses live FX placeholder.
+Snapshot as of {{today}}. Prices reference 65-inch class listings on manufacturer and major US storefronts in mid-2026; Confirm live KRW prices on the official retailer.
 
 | Rank | Model | Price (USD) | Panel | Peak HDR (claim) | HDMI 2.1 | VRR / ALLM | OS | Review | SLRI |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ Snapshot as of {{today}}. Prices reference 65-inch class listings on manufacture
 | 4 | **Hisense U8 (U8N)** | {{krw:899}} | Mini-LED 4K 144 Hz | about 2,000 nits | 4× 48 Gbps | Yes / Yes | Google TV | 4.4 | **8.9** |
 | 5 | **Sony X90L** | {{krw:1199}} | Full-array LED 4K 120 Hz | about 1,100 nits | 2× 48 Gbps | Yes / Yes | Google TV | 4.5 | **8.7** |
 
-Prices are reference USD list values; KRW uses {{usd_krw_rate}} FX placeholder.
+Prices are reference USD list values; Confirm live KRW prices on the official retailer.
 
 ---
 
