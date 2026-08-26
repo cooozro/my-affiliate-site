@@ -2263,6 +2263,15 @@
       "contentHash": "528fb424581adf0716dbedf80307f78890c53823fd0bc931b58dc85cab19d7a3",
       "provider": "pixabay",
       "registeredAt": "2026-08-26T13:16:47.022Z"
+    },
+    {
+      "slug": "2026-bidets-bio-bidet-bb-2000-review",
+      "url": "https://images.pexels.com/photos/930705/pexels-photo-930705.jpeg",
+      "assetKey": "pexels:930705",
+      "hash": "5a6ddd01dd66433800994cdc0c3348d27ab99441433233105b203f9dfded993e",
+      "contentHash": "5a6ddd01dd66433800994cdc0c3348d27ab99441433233105b203f9dfded993e",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:19:29.964Z"
     }
   ]
 }
