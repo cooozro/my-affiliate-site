@@ -18,9 +18,7 @@ writingProvider: deepseek
 createdAt: '2026-08-26T13:14:37.009Z'
 coverImage: >-
   /images/posts/2026-usb-c-hubs-caldigit-ts4-review/caldigit-ts4-thunderbolt-4-dock-product-photo-ca-cover.jpg
-coverImageAlt: laptop  >-
-  CalDigit TS4 Thunderbolt 4 Dock product cut for editorial deep-dive review
-  (stock photo illustration) — CalDigit TS4 Thunderbolt 4
+coverImageAlt: CalDigit TS4 Thunderbolt 4 dock for laptop — editorial product photo
 coverImageAltKo: CalDigit 캘디짓 TS4 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — CalDigit TS4 Thunderbolt 4
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by viarami / Pixabay
 coverImageProvider: pixabay
@@ -30,6 +28,7 @@ modelPickName: TS4 Thunderbolt 4 Dock
 pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
 updatedAt: '2026-08-26T13:15:19.392Z'
+automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
