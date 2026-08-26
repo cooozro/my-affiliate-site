@@ -2056,6 +2056,15 @@
       "contentHash": "17c8925071618fced460f33cee226a2b41ac47be444d66744476c2e03e45c6d0",
       "provider": "pexels",
       "registeredAt": "2026-08-26T11:04:04.929Z"
+    },
+    {
+      "slug": "portable-ac-apartment-myth-bust-2026",
+      "url": "https://images.pexels.com/photos/5207800/pexels-photo-5207800.jpeg",
+      "assetKey": "pexels:5207800",
+      "hash": "97e4413eb4513b3c7d0dbd88fc244729695087e44085070ddcac900700f155eb",
+      "contentHash": "97e4413eb4513b3c7d0dbd88fc244729695087e44085070ddcac900700f155eb",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T11:04:43.115Z"
     }
   ]
 }
