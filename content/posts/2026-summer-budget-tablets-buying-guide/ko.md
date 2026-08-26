@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:46.914Z'
+updatedAt: '2026-08-26T14:14:08.771Z'
 publishedAt: '2026-07-08T02:58:57.557Z'
 ---
 ## 편집부 개요
@@ -196,11 +196,11 @@ HD 영화 1–2편은 들어가지만, 아이 드라마 시리즈와 앱을 합�
 
 ## 관련 가이드
 
-- [여름 이동·방학 WFH, USB-C 허브는 PD 통과·포트 구성으로 고른다](/ko/blog/2026-usb-c-hubs-buying-guide) — 여름 이동·방학 재택용 USB-C 허브 5종을 PD 통과 전력, 4K HDMI, 포트 구성, 노트북 호환 기준으로 비교한 구매 가이드입니다.
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 당일치기 태블릿 충전
-- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 여행 폰과 태블릿 다운로드 조합
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 호텔 방 스피커
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 여행 폰과 태블릿 다운로드 조합
 ## 최종 평가
 
 공개 스펙과 가격표를 재검토한 결과, 여름 25만 원대 태블릿 가성비는 **90Hz·11인치** 스티커가 아니라 **저장 용량·앱 스토어·야외 가독성**을 비행·방학 시나리오에 맞추는 일이습니다. **실제 구매 기준으로 보면** Google Play가 필요한 가정엔 **Galaxy Tab A9+**를 먼저 보고, 다운로드가 병목이면 **M11** 128GB, Prime만 쓰면 **Fire Max 11**, 테라스 눈부심이면 **TCL NXTPAPER** 순으로 고르는 편이 유리합니다. 3년 소유 비용은 저장 업그레이드·사이드로드 시간·구독·케이스가 **90Hz 스티커보다** 반품·일상 마찰을 더 크게 갈라놓습니다.

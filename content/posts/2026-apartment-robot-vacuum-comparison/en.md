@@ -23,7 +23,7 @@ coverImageAlt: robot vacuum on a hardwood floor
 coverImageAltKo: 마루 바닥의 로봇 청소기
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Andrey Matveev / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:13:53.904Z'
+updatedAt: '2026-08-26T14:14:08.608Z'
 automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
@@ -168,6 +168,5 @@ Buy this if your real-world use matches the scenarios in this report.
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
-
 ## Final Verdict
 Buy / wait / skip: decide from the specs and scenarios in this report, not from a marketing slogan.

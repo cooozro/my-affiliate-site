@@ -29,7 +29,7 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-08-26T01:40:02.325Z'
+updatedAt: '2026-08-26T14:14:08.783Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## Editorial Overview
@@ -183,11 +183,11 @@ No — use this to **choose the aisle**, then read the dedicated guide for that 
 
 ## Related guides
 
-- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — airflow math after you pick comfort
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — CADR sizing after you pick air quality
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio detail
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — panel deep dive after you pick display
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Wh and airline limits
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
 ## Five checks before you buy at this tier
 
 1. **Name your top two daily pains** — eyes, heat, air, travel, or audio — before choosing one $300 SKU.

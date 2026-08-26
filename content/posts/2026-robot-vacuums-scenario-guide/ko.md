@@ -25,7 +25,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:46.226Z'
+updatedAt: '2026-08-26T14:14:08.753Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## 편집부 개요
@@ -198,11 +198,11 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 냉방 경로와 청소 도크 위치 모두 평면에 달림
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 여름에 AC로 밀폐된 실내 먼지 부담을 줄일 때
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 습한 아파트에서 물걸레 로봇과 함께 볼 때
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 냉방하는 같은 방에 도크를 둘 때
-- [제품 리뷰 방법론](/ko/blog/welcome) — 제품 평가 방식과 liveData 가격 갱신
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
 공개 스펙과 가격표를 재검토한 결과, 아파트용 로봇청소기는 **매핑 기술과 도크 유지보수**가 체감 만족도를 가릅니다. **실제 구매 기준으로 보면** 좁은 원룸엔 **Roborock Q7 Max+**부터, 반려 가구는 **Roomba Combo j5+** 브러시·장애물 도구를 우선하고, 끈적한 여름 습기까지 물걸레 자동화를 원하면 **eufy X10 Pro Omni** 패드 세척 예산을 아끼지 않겠습니다 — 여기서 줄이면 별점 하락의 대부분이 냄새습니다. clutter가 잦지만 옴니 값은 거절하면 **Shark Matrix Plus 2-in-1**이 현실적입니다.

@@ -20,7 +20,7 @@ coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg
 coverImageAlt: 원룸의 이동식 에어컨
 coverImageCredit: Photo by Geri Tech / Pexels
-updatedAt: '2026-08-20T08:09:45.971Z'
+updatedAt: '2026-08-26T14:14:08.731Z'
 publishedAt: '2026-06-27T07:15:04.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 32737485
@@ -145,11 +145,11 @@ re 창문형** | 소음·효율 최우수 |
 
 ## 관련 가이드
 
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 25–55㎡ 아파트 시나리오별 추천 — 흡입력·LiDAR 매핑·물걸레 유지보수·여름 냉방 중 실내 먼지까지, 공개 스펙 기준 편집부 비교.
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 냉방된 방에서 재택 작업
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 에어컨 타이머·에너지 앱 연동
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폭염·정전 시 모바일·공유기 백업
 ## 최종 평가
 
 공개 스펙과 가격표를 재검토한 결과, 창문 설치가 가능하면 **창문형이 소음·전기요금에서 유리**했습니다. 이동식만 쓸 때는 **듀얼호스가 단일호스보다 종일 거주에 적합**합니다. **실제 구매 기준으로 보면** 임대인 동의부터 확인하고, ‘간편 설치’ 문구만 보고 단일호스를 하루 종일 방 기준으로 고르지 마세요.

@@ -26,7 +26,7 @@ coverImageAlt: gaming console controller setup
 coverImageAltKo: gaming console controller setup
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Erik Mclean / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:13:53.737Z'
+updatedAt: '2026-08-26T14:14:08.690Z'
 automationBuffer: false
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
@@ -159,6 +159,5 @@ Buy this if your real-world use matches the scenarios in this report.
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
-
 ## Final Verdict
 Buy / wait / skip: decide from the specs and scenarios in this report, not from a marketing slogan.

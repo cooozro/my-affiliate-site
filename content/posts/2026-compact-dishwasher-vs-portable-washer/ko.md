@@ -19,7 +19,7 @@ coverImage: >-
 coverImageAlt: 식기세척기
 coverImageCredit: Photo by AS Photography / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-20T08:09:43.966Z'
+updatedAt: '2026-08-26T14:14:08.644Z'
 publishedAt: '2026-08-14T01:37:15.074Z'
 coverImageAltKo: 식기세척기
 imageSearchKeywords:
@@ -146,11 +146,11 @@ COMFEE는 카운터 위에 놓고 주방 수도꼭지를 사용하므로 임대 
 
 ## 관련 가이드
 
-- [소형 가전 시나리오 가이드: 좁은 집에서 자리를 줄 제품은?](/ko/blog/2026-compact-footprint-cross-category-scenario-guide) — 냉방, 습도, 간편 조리, 밥, 바닥 청소를 다섯 생활 시나리오로 나눠 설치 면적과 전기료, 소모품, 관리 부담까지 비교합니다.
-- [소형 주방 카운터톱 제빙기: 너겟 vs 총알 얼음, 생산량, 3년 비용](/ko/blog/2026-countertop-ice-makers-buying-guide) — 여름 원룸·소형 주방용 제빙기를 너겟 vs 총알 얼음, 일일 생산량, 탱크 vs 연속 급수, 소음·세척·3년 총비용으로 비교합니다.
-- [식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하는 것](/ko/blog/2026-dishwashers-explainer) — 콤팩트·빌트인 식기세척기의 플레이스 세팅, 소음(dB), 사이클당 물 사용량(L)을 비교할 때 헷갈리는 스펙을 정리합니다.
-- [히트펌프 vs 배기형 건조기: 습한 여름 실내 빨래를 위한 5가지](/ko/blog/2026-clothes-dryers-buying-guide) — 습한 여름 실내 건조에 맞춘 히트펌프·배기형 의류건조기 비교 — 전력, 용량, 센서 건조, 설치 제약을 공개 스펙으로 정리합니다.
-- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 여름 무선 스틱 청소기 시나리오 — 냉방 먼지, 휴가 전후 청소, 반려 털, 방학 생활 먼지를 공개 스펙 기준으로 비교.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 최종 평가
 
 **COMFEE CDC17P1AWW를 구매해야 할 사람**

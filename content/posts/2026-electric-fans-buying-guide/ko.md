@@ -29,7 +29,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-08-26T01:40:02.168Z'
+updatedAt: '2026-08-26T14:14:08.662Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## 편집부 개요
@@ -201,11 +201,11 @@ CFM은 **환기·혼합** 지표이지 냉방 능력이 아닙니다. 584 CFM �
 
 ## 관련 가이드
 
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — AC 용량을 먼저 맞춘 뒤 순환 추가
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 선풍기로 충분한지, 냉매 냉방이 필요한지
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 눅눅한 더위는 바람만으로 부족할 때
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 창문 닫는 계절 실내 미세먼지
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폭우·정전 시 선풍기 백업
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 구매 전 다섯 가지 확인
 
 1. **형태를 용도에 맞출 것** — 실 전체 혼합은 서큘레이터, 재택 책상은 소형 터보, 좁은 평면은 타워. 25㎡ 원룸에 책상형만 사면 구석 더위가 남습니다.
@@ -240,4 +240,4 @@ CFM은 **환기·혼합** 지표이지 냉방 능력이 아닙니다. 584 CFM �
 | **Lasko Wind Curve T42951** | 45 dB 이하 정적 수면이 필요할 때 |
 | **Dreo Nomad One** | 앱 설정을 거부하거나 Vornado급 AC 보조가 필요할 때 |
 
-결제 전 코드 길이·오실 여유·임대 창문 규정을 다시 확인하세요. 선풍기는 **순환**을, 폭염 한계를 넘기면 [창문형 AC 설치 여유](/ko/blog/2026-summer-ac-buying-checklist)가 여전히 필요합니다.
+결제 전 코드 길이·오실 여유·임대 창문 규정을 다시 확인하세요. 선풍기는 **순환**을, 폭염 한계를 넘기면 창문형 AC 설치 여유가 여전히 필요합니다.

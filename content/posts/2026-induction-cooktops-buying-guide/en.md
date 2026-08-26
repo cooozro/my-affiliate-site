@@ -20,7 +20,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-08-20T08:09:45.519Z'
+updatedAt: '2026-08-26T14:14:08.696Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: induction cooktop kitchen in a home interior
@@ -185,10 +185,10 @@ Often no — two high draws can trip a 15–20 A shared circuit. Use separate ci
 
 ## Related guides
 
-- [Closed Windows, Bright Rooms: Five TVs for Summer Sports, Streaming, and HDMI 2.1 Gaming](/en/blog/2026-television-buying-guide) — Five TVs compared for summer sports glare, HDMI 2.1 gaming, and HDR brightness with AC-on…
-- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — open-kitchen heat and appliance noise together
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
-- [Capsule vs Semi-Auto vs Fully Automatic: Summer Kitchen Heat and Milk Systems](/en/blog/2026-coffee-machines-head-to-head) — morning watt draw near the same outlet
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — multi-burner household demand
 ## Five checks before you buy
 

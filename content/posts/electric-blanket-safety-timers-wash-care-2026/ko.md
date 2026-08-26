@@ -14,7 +14,7 @@ contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances
 writingProvider: deepseek
-updatedAt: '2026-08-09T02:02:07.527Z'
+updatedAt: '2026-08-26T14:14:08.814Z'
 coverImage: /images/posts/electric-blanket-safety-timers-wash-care-2026/cover-1037995.jpg
 coverImageProvider: pexels
 coverImageAssetId: 1037995
@@ -175,11 +175,11 @@ KC는 판매 합법성의 기본 조건이지만, 밤새 사용은 자동 꺼짐
 
 ## 관련 가이드
 
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
-- [여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리](/ko/blog/2026-summer-solo-heat-essentials-checklist) — 1인 폭염 원룸 구매 전 7가지 점검 — 냉방·공기·습도·책상 부하·저열 조리까지 가전 난립 없이 순서대로.
-- [1인 아파트 필수 가전 체크리스트: 여름 입주 전 교차 카테고리 7가지 점검](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide) — 1인 아파트 교차 카테고리 7항목 — 선풍기·공기청정기·무선 이어폰·에어프라이어·로봇청소기, 밀폐 냉방 여름 전 점검. 스튜디오·원룸 회로·발코니 제약 포함.
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 핵심 정리
 
 1. **항상 안전 인증을 확인하십시오** — UL, ETL, CE, KC. 이것이 첫 번째 방어선입니다.

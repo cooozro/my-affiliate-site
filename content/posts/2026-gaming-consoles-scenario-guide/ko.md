@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:45.377Z'
+updatedAt: '2026-08-26T14:14:08.694Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## 편집부 개요
@@ -214,11 +214,11 @@ Series S는 **구독 중심·작은 TV·1080p약 1440p 업스케일**에 잘 맞
 
 ## 관련 가이드
 
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 밀폐 냉방 시 콘솔 통풍구 먼지
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 업무·캡처 겸용 데스크
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 콘솔·TV를 오래 켤 때 같은 공간 냉방
-- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 가족 수면 방해 없는 보이스 채팅
-- [제품 리뷰 방법론](/ko/blog/welcome) — liveData 가격·날짜 갱신 방식
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
 공개 스펙과 시장 가격을 교차 검증한 결과, {{today}} 콘솔 가성비는 테라플롭스 마케팅보다 **어디서, 어떻게 게임을 사고, 세일 시즌에 저장이 얼마나 빨리 차는지**에 달립니다. **실제 구매 기준으로 보면** 플레이 장소·구매 방식부터 잠그세요. 여름 방학 4K TV 거실이면 **Xbox Series X**가 해상도와 Game Pass를 균형 있게 맞춥니다. 소니 독점·디스크·저장장치 확장이 필수면 **PS5 Slim 디스크**와 인증 M.2를 예산에 넣으세요. 업스케일을 받아들이면 **Xbox Series S**, TV 다툼이 잦으면 **Switch OLED**와 microSD가 현실적입니다.

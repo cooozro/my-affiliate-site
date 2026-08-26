@@ -34,7 +34,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:44.911Z'
+updatedAt: '2026-08-26T14:14:08.664Z'
 publishedAt: '2026-07-17T06:30:01.360Z'
 ---
 ## Editorial Overview
@@ -212,10 +212,10 @@ Tape the **install envelope** — fridge depth past counters, washer vibration c
 ## Related guides
 
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — layout-first scenarios
-- [Open-Kitchen Summer: Five Refrigerators for 1–4 Person Homes by Capacity, kWh, and dB](/en/blog/2026-refrigerators-buying-guide) — kWh and fresh cu ft detail
-- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — stick runtime by task
-- [Summer Washing Machines: Humid Laundry, Sports Loads, Vacation Prep, and Quiet AC Apartments](/en/blog/2026-washing-machines-scenario-guide) — drum and cycle tradeoffs
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — CADR and filter TCO
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Five checks before you buy
 
 1. Count **people × summer drink liters** before trusting fridge total cu ft ads.  

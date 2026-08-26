@@ -25,7 +25,7 @@ coverImage: /images/posts/2026-television-buying-guide/smart-tv-living-room-cove
 coverImageAlt: smart TV in a living room setup for summer sports and streaming
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
-updatedAt: '2026-08-20T08:09:47.143Z'
+updatedAt: '2026-08-26T14:14:08.781Z'
 publishedAt: '2026-07-10T11:32:02.328Z'
 ---
 ## Editorial Overview
@@ -202,10 +202,10 @@ Mid-year clearance on **LG C4, Samsung S90D, and TCL QM8** often beats launch pr
 ## Related guides
 
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio when the living-room TV stays on AC
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — desk gaming display picks that complement a living-room HDMI 2.1 set
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — second-screen streaming when the main TV is on sports
-- [Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC](/en/blog/2026-noise-cancelling-headphones-head-to-head) — quiet late-night viewing when roommates sleep
-- [School-Break Couch Gaming: Which Console Fits Storage, Exclusives, and 4K Output?](/en/blog/2026-gaming-consoles-scenario-guide) — match your console HDMI output to the TV ports you actually have free
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 ## Five checks before you buy
 
 1. **Count HDMI 2.1 devices** — PS5, Xbox, PC, and soundbar eARC each need a plan; two-port TVs force a switch or 4K 60 Hz compromise.

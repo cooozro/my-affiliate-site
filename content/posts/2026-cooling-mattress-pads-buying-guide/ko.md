@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '8801681'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8801681/pexels-photo-8801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.121Z'
+updatedAt: '2026-08-26T14:14:08.649Z'
 publishedAt: '2026-07-18T03:46:35.985Z'
 ---
 ## 편집부 개요
@@ -206,11 +206,11 @@ publishedAt: '2026-07-18T03:46:35.985Z'
 
 ## 관련 가이드
 
-- [휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선](/ko/blog/2026-portable-power-stations-buying-guide) — 여름 캠핑·로드트립·장마철 정전용 파워스테이션을 용량 우선으로 비교합니다 — 인산철 수명, 충전 시간, 3년 사이클당 비용까지 따집니다.
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로 비교. 2026 여름 소형 주거 냉방 선택 가이드.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 구매 전 다섯 가지 점검
 
 1. 능동 제어 본체가 들어갈 **협탁 공간**을 넣을 수 있다고 가정하기 전에 먼저 재세요.

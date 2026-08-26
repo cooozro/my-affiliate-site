@@ -31,7 +31,7 @@ coverImageCredit: Photo by Max Vakhtbovych / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '6980571'
 coverImageSourceUrl: 'https://images.pexels.com/photos/6980571/pexels-photo-6980571.jpeg'
-updatedAt: '2026-07-21T10:10:21.603Z'
+updatedAt: '2026-08-26T14:14:08.646Z'
 publishedAt: '2026-07-21T10:10:16.000Z'
 ---
 ## Editorial Overview
@@ -121,7 +121,7 @@ The LG 6,000 BTU DOE-class portable is a more modest option for a smaller enclos
 
 **TCO impact:** Cooling dominates ownership cost. A rough example at 1.0 kW average input, eight hours per night, 60 hot nights, and $0.18/kWh is about **$86 per summer** before standby use; real inverter cycling can lower or raise that. Over three summers, electricity can approach the initial price difference between portable tiers. Washable filters still need cleaning every few weeks, window foam may need replacement, and condensate handling adds labor in very humid weather. There are no routine disposable bags, but a neglected filter raises runtime and cost.
 
-**Buy or skip:** Buy only if heat is the limiting condition and a fixed window unit is not permitted. Skip a portable entirely if a properly installed window AC is legal, because the window category usually provides better cooling per watt and preserves more floor area. The installation trade-offs are covered in the [portable vs window AC comparison](/en/blog/2026-portable-vs-window-ac-head-to-head).
+**Buy or skip:** Buy only if heat is the limiting condition and a fixed window unit is not permitted. Skip a portable entirely if a properly installed window AC is legal, because the window category usually provides better cooling per watt and preserves more floor area. The installation trade-offs are covered in the portable vs window AC comparison.
 
 ---
 
@@ -162,7 +162,7 @@ The GE 22-pint class is a conventional upright alternative. It lacks the Cube’
 
 **TCO impact:** At an illustrative 0.35 kW, six compressor-hours per day, 75 humid days, and $0.18/kWh, energy is about **$28 per summer**. A wetter room may double active hours. The washable intake filter costs little but needs lint removal; there are no routine bags. Hose replacement is minor, while coil cleaning and correct off-season drying prevent odor and corrosion. Over three summers, wasted runtime from an RH target set too low can cost more than choosing the conventional runner-up.
 
-**Buy or skip:** Buy when measured relative humidity repeatedly stays above roughly 55–60 percent and moisture—not heat—is causing discomfort. Skip when one short ventilation change or fixing a leak solves the source. For capacity, drain, and energy detail, see the [dehumidifier buying guide](/en/blog/2026-dehumidifiers-guide).
+**Buy or skip:** Buy when measured relative humidity repeatedly stays above roughly 55–60 percent and moisture—not heat—is causing discomfort. Skip when one short ventilation change or fixing a leak solves the source. For capacity, drain, and energy detail, see the dehumidifier buying guide.
 
 ---
 
@@ -285,7 +285,7 @@ Roborock lists LiDAR mapping, no-go zones, 5,500 Pa maximum suction, and an auto
 
 **TCO impact:** Robot travel itself uses relatively little electricity; charging and cleaning may total only a few kilowatt-hours per month in a small home. Consumables dominate: allow roughly **$40–80 per year** for bags, filters, and brushes depending on genuine-part pricing and debris load. Monthly sensor wiping and hair removal are mandatory. A robot that requires five minutes of floor pickup before every run still saves labor, but a robot that needs daily rescues does not justify its dock footprint.
 
-**Buy or skip:** Buy when hard floors dominate, the wall and approach lane pass a tape test, and daily dry debris is the recurring problem. Skip an auto-empty dock when the home lacks a permanent clear approach; a hang-and-store cordless vacuum returns the floor after use. For more layout-specific choices, read the [robot vacuum scenario guide](/en/blog/2026-robot-vacuums-scenario-guide).
+**Buy or skip:** Buy when hard floors dominate, the wall and approach lane pass a tape test, and daily dry debris is the recurring problem. Skip an auto-empty dock when the home lacks a permanent clear approach; a hang-and-store cordless vacuum returns the floor after use. For more layout-specific choices, read the robot vacuum scenario guide.
 
 ---
 
@@ -337,11 +337,11 @@ A dehumidifier on a verified continuous drain and a robot in a cleared dry-floor
 
 ## Related guides
 
-- [Compact Footprint Face-Off: Portable AC vs Dehumidifier vs Air Fryer vs Robot Dock](/en/blog/2026-compact-footprint-cross-category-head-to-head-guide) — compares the geometry of these categories before a scenario gets the space.
-- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — matches dock and navigation choices to apartment layouts.
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — expands the capacity, drain, and energy calculations.
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — explains efficiency, installation, and hose trade-offs.
-- [Portable vs Built-In Induction: Five Cooktops for Cooler Summer Kitchens](/en/blog/2026-induction-cooktops-buying-guide) — covers another high-draw option competing for compact kitchen space.
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 Compact living rewards **task frequency and working clearance**, not the smallest box. For a heatwave sleep problem, buy the **Midea Duo MAP12S1TBL** only when fixed window cooling is unavailable and the hose can remain short and sealed. For a room that is already cool but damp, buy the **Midea Cube MAD20S1QWT** and solve the drain path first. On the counter, choose **Ninja AF101** for frequent crisp meals or **Zojirushi NS-LGC05** for daily rice—do not keep both out by default. For floors, buy the **eufy C10** only when its dock approach remains clear through a normal school-break week.

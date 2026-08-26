@@ -14,7 +14,7 @@ contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-updatedAt: '2026-08-15T10:58:39.823Z'
+updatedAt: '2026-08-26T14:14:08.755Z'
 coverImage: >-
   /images/posts/2026-small-room-air-purifiers-head-to-head/air-purifier-small-room-cover.jpg
 coverImageAlt: HEPA 공기청정기
@@ -152,11 +152,11 @@ AP-1012C는 작은 방에서 최고의 정화 성능을 제공하지만, 어느 
 
 ## 관련 가이드
 
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실·원룸·기숙사용 소형 공기청정기 5종을 CADR 적합도, HEPA·탄소 필터, 수면 소음, 연간 전기·필터 비용 기준으로 비교한 2026년 여름 구매 가이드…
-- [초음파 vs 증발식 가습기: 작동 원리와 곰팡이 예방까지, 어떤 타입을 골라야 할까?](/ko/blog/humidifier-types-explained-ultrasonic-evaporative-mold-prevention) — 초음파 가습기와 증발식 가습기의 작동 원리, 적정 물탱크 크기, 곰팡이 예방법을 상세히 분석하여 가습기 선택을 돕는 정보를 제공합니다.
-- [전기장판 안전 인증, 타이머, 세탁 관리 — 라벨이 말하는 진짜 의미](/ko/blog/electric-blanket-safety-timers-wash-care-2026) — 전기장판 안전 인증, 타이머 기능, 세탁 규칙을 이해하기 쉽게 설명합니다. 안전하게 따뜻한 침구를 선택하고 관리하는 방법을 다룹니다.
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
-- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 ## 최종 평가
 
 ### 구매를 추천하는 경우

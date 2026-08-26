@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:45.689Z'
+updatedAt: '2026-08-26T14:14:08.709Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## Editorial Overview
@@ -162,11 +162,11 @@ With ANC on, JBL Tune 770NC claims the longest runtime in this trio — roughly 
 
 ## Related guides
 
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool down the room you return to after travel
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio once you land at the beach or park
-- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep phones and tablets topped up during long transit days
-- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — when in-ear ANC fits better than over-ears for gym or pool days
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 ## Final Verdict
 
 After cross-checking the public specs, summer-travel headphone value still means **cancellation depth, weight, codec, and battery** against your flight and commute—not “studio” marketing. **On a cost-effectiveness basis,** this report would lock primary phone, wear hours, and in-flight sleep needs first. **Sony WH-CH720N** balances weight and LDAC for mixed weeks; **Soundcore Space Q45** is the cancellation specialist if you can handle heavier cups; **JBL Tune 770NC** stays relevant when price and battery trump codec depth.

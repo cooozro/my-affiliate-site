@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.216Z'
+updatedAt: '2026-08-26T14:14:08.701Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## Editorial Overview
@@ -170,11 +170,11 @@ Indoor desk work often tolerates **250 nits**, but summer sun through a dorm win
 
 ## Related guides
 
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — extend your desk setup when the laptop stays closed
-- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — typing comfort for long essay sessions
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power for library days and summer travel
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 ## Five checks before you buy
 
 1. **CPU tier** — Ryzen 5 / Core i5 minimum for tab-heavy research; Ryzen 3 / i3 save money but age faster.

@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.295Z'
+updatedAt: '2026-08-26T14:14:08.757Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
 ---
 ## Editorial Overview
@@ -138,11 +138,11 @@ RTSP needs **static IPs or mDNS**, **firewall holes**, and **NVR software** that
 
 ## Related guides
 
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — exporting clip archives before cloud retention expires
-- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — pet motion false alerts overlapping camera zones
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — porch audio without sharing camera speaker load
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — phone battery for alert storms on travel days
 ## Final Verdict
 
 Home IP cameras are **storage and access products**, not just megapixels. For most summer travelers, **2K with microSD plus optional cloud motion backup** balances cost and recovery. Enable **MFA**, test **remote live view** on cellular before departure, and export clips you cannot afford to lose.

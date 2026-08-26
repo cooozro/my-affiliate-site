@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:43.277Z'
+updatedAt: '2026-08-26T14:14:08.622Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## 편집부 개요
@@ -151,10 +151,10 @@ Premium은 수면 인사이트·운동 영상·일부 기록을 열어 주지만
 
 ## 관련 가이드
 
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
-- [방학·기숙사·과제: 학생용 가성비 노트북은 CPU·RAM·nits부터 본다](/ko/blog/2026-laptops-buying-guide) — 원격 근무·운동 기록을 한 가방에
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 폰 GPS 러닝 때 배터리 보조
-- [여름 장거리 비행용 노이즈캔슬링 헤드폰, 소니·사운드코어·JBL 맞대결](/ko/blog/2026-noise-cancelling-headphones-head-to-head) — 여행 피로와 함께 보는 웨어러블 선택
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 실외 스트레칭 때 스피커 부담 줄이기
 ## 최종 평가
 

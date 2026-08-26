@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1643383'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-22T02:34:57.473Z'
+updatedAt: '2026-08-26T14:14:08.668Z'
 publishedAt: '2026-07-17T06:30:01.360Z'
 ---
 ## 편집부 개요
@@ -208,10 +208,10 @@ publishedAt: '2026-07-17T06:30:01.360Z'
 ## 관련 가이드
 
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 평면·동선 우선
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — kWh·식품실 상세
-- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 작업별 런타임
-- [여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음](/ko/blog/2026-washing-machines-scenario-guide) — 드럼·사이클
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — CADR·필터 TCO
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
 ## 구매 전 다섯 가지 점검
 
 1. 냉장고 총용량 광고 전에 **인원 × 여름 음료 리터**를 세어 보세요.  

@@ -18,7 +18,7 @@ imageSearchKeywords:
   - window air conditioner
   - apartment cooling
   - wall air conditioner
-updatedAt: '2026-08-20T08:09:47.870Z'
+updatedAt: '2026-08-26T14:14:08.798Z'
 coverImage: >-
   /images/posts/2026-window-ac-room-scenario-guide/window-air-conditioner-apartment-cooling-cover.jpg
 coverImageAlt: 원룸의 창문형 에어컨
@@ -42,7 +42,7 @@ publishedAt: '2026-07-14T07:23:04.352Z'
 
 2026년 주류 창문형 세 모델을 세 시나리오에 대입합니다. 참고 가격은 제조사·주요 쇼핑몰 공시가이며, 구매 전 프로모션을 다시 확인하세요. 달러 가격은 약 {{usd_krw_rate}}원 환산(예: ~{{krw:249}})을 참고합니다.
 
-**핵심 요약:** 18㎡ 전후 원룸·침실엔 **Frigidaire FHWW083WBE**(8,000 BTU), 아이방·낮잠엔 U자형 **Midea MAW08V1QWT**, 폭염 밤·거실 부하엔 **GE AHY12LZ**(12,000 BTU + 드라이)가 각각 맞습니다. 샷시가 U자 키트와 맞지 않으면 [이동식 vs 창문형](/ko/blog/2026-portable-vs-window-ac-head-to-head)으로 넘어가세요.
+**핵심 요약:** 18㎡ 전후 원룸·침실엔 **Frigidaire FHWW083WBE**(8,000 BTU), 아이방·낮잠엔 U자형 **Midea MAW08V1QWT**, 폭염 밤·거실 부하엔 **GE AHY12LZ**(12,000 BTU + 드라이)가 각각 맞습니다. 샷시가 U자 키트와 맞지 않으면 이동식 vs 창문형으로 넘어가세요.
 
 ---
 
@@ -72,7 +72,7 @@ publishedAt: '2026-07-14T07:23:04.352Z'
 
 **추천: Frigidaire FHWW083WBE** (8,000 BTU, 정가 약 $249)
 
-Frigidaire는 FHWW083WBE에 **8,000 BTU**, **CEER 12.1**, **52 dB** 운전 소음(제조사 표기)을 공개합니다. 12–18㎡ 침실·작은 원룸 표에 맞는 용량이며, [이동식 vs 창문형](/ko/blog/2026-portable-vs-window-ac-head-to-head) 비교에서 동일 BTU대 **소음·전력 효율**이 유리한 편이었습니다. 표준 수평 이중창 키트와 단순 기계식 다이얼로 정전 후에도 설정이 유지됩니다. 폭염 주 **종일 가동** 시 CEER가 낮은 대용량보다 일일 kWh 추정이 낮은 경우가 많습니다.
+Frigidaire는 FHWW083WBE에 **8,000 BTU**, **CEER 12.1**, **52 dB** 운전 소음(제조사 표기)을 공개합니다. 12–18㎡ 침실·작은 원룸 표에 맞는 용량이며, 이동식 vs 창문형 비교에서 동일 BTU대 **소음·전력 효율**이 유리한 편이었습니다. 표준 수평 이중창 키트와 단순 기계식 다이얼로 정전 후에도 설정이 유지됩니다. 폭염 주 **종일 가동** 시 CEER가 낮은 대용량보다 일일 kWh 추정이 낮은 경우가 많습니다.
 
 **편집부 해석:** $249·CEER 12.1·8,000 BTU는 **12–18㎡ 원룸·종일 8시간 가동** 시 12k 과대 용량보다 **일일 kWh·52 dB** 균형이 유리한 편입니다.
 
@@ -146,7 +146,7 @@ GE AHY12LZ는 **12,000 BTU**, **CEER 12.4**, **드라이 모드·Wi-Fi 예약**�
 
 **검토 시 우려:** 15㎡ 그늘 침실에 12k는 **짧은 사이클·잔여 습기**로 꿉꿉함을 남길 수 있어, 면적·일사 가산 없이 12k만 고르지 마세요.
 
-**차선:** Frigidaire FHWW123WBE — 스마트 기능 없이 12,000 BTU 고정 냉방만 필요할 때. 드라이가 약하면 [제습기 가이드](/ko/blog/2026-dehumidifiers-guide) 병행을 검토하세요.
+**차선:** Frigidaire FHWW123WBE — 스마트 기능 없이 12,000 BTU 고정 냉방만 필요할 때. 드라이가 약하면 제습기 가이드 병행을 검토하세요.
 
 | 요소 | GE AHY12LZ | Frigidaire FHWW123WBE |
 | --- | --- | --- |
@@ -192,14 +192,14 @@ GE AHY12LZ는 **12,000 BTU**, **CEER 12.4**, **드라이 모드·Wi-Fi 예약**�
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 고정 섀시를 쓰기 어려울 때
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — AC 끄거나 드라이 모드일 때 순환
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 시원함만으로 부족한 꿉꿉한 밤
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 방 식힌 뒤 야외 청취
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — BTU·설치·소음·효율
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
-공개 스펙과 가격표를 재검토한 결과, 창문형은 중앙 냉방이 없는 폭염 아파트에서 여전히 유효하지만 **BTU·임대 가능 키트·수면 소음**을 한 번에 맞춰야 했습니다. **원룸·작은 침실**엔 Frigidaire FHWW083WBE, **아이방·낮잠·환기**엔 Midea MAW08V1QWT, **폭염 밤·개방형 침실**엔 GE AHY12LZ를 먼저 보세요. **실제 구매 기준으로 보면** 샷시가 U자 키트와 맞지 않을 때는 억지로 고정하지 않고 [이동식 대결](/ko/blog/2026-portable-vs-window-ac-head-to-head)로 넘기겠습니다. 시원함만으로 부족한 꿉꿉한 밤엔 [제습기 가이드](/ko/blog/2026-dehumidifiers-guide) 병행도 검토하세요.
+공개 스펙과 가격표를 재검토한 결과, 창문형은 중앙 냉방이 없는 폭염 아파트에서 여전히 유효하지만 **BTU·임대 가능 키트·수면 소음**을 한 번에 맞춰야 했습니다. **원룸·작은 침실**엔 Frigidaire FHWW083WBE, **아이방·낮잠·환기**엔 Midea MAW08V1QWT, **폭염 밤·개방형 침실**엔 GE AHY12LZ를 먼저 보세요. **실제 구매 기준으로 보면** 샷시가 U자 키트와 맞지 않을 때는 억지로 고정하지 않고 이동식 대결로 넘기겠습니다. 시원함만으로 부족한 꿉꿉한 밤엔 제습기 가이드 병행도 검토하세요.
 
 ### 이런 분께 추천
 
@@ -215,4 +215,4 @@ GE AHY12LZ는 **12,000 BTU**, **CEER 12.4**, **드라이 모드·Wi-Fi 예약**�
 | --- | --- |
 | 모든 키트 | 창 옆 접지 콘센트 없음 |
 | GE AHY12LZ | 15㎡ 그늘 침실 — 8k로 과대 |
-| 고정형 | 자주 이사 — [이동식](/ko/blog/2026-portable-vs-window-ac-head-to-head) 선택 |
+| 고정형 | 자주 이사 — 이동식 선택 |

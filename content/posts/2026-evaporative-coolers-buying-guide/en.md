@@ -34,7 +34,7 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-08-20T08:09:44.827Z'
+updatedAt: '2026-08-26T14:14:08.663Z'
 publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## Editorial Overview
@@ -200,7 +200,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 ### Do evaporative coolers work in humid climates like Korea’s summer?
 
-Often poorly as a **primary** cooler. Evaporation needs dry air capacity. When outdoor or indoor RH sits high — common in Korean July–August monsoon stretches — temperature drop shrinks and indoor air can feel damper. **Editorial judgment:** for many Korean apartments, prioritize [portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) or pair a [dehumidifier](/en/blog/2026-dehumidifiers-guide) with a strong [fan](/en/blog/2026-electric-fans-buying-guide) instead of expecting swamp-cooler comfort.
+Often poorly as a **primary** cooler. Evaporation needs dry air capacity. When outdoor or indoor RH sits high — common in Korean July–August monsoon stretches — temperature drop shrinks and indoor air can feel damper. **Editorial judgment:** for many Korean apartments, prioritize portable vs window AC or pair a dehumidifier with a strong fan instead of expecting swamp-cooler comfort.
 
 ### How is a swamp cooler different from a portable air conditioner?
 
@@ -212,7 +212,7 @@ Plan on **multiple gallons per day** at higher fan speeds in dry heat — tank s
 
 ### Can I run an evaporative cooler in a sealed apartment with no open window?
 
-You should not expect good results. The process raises absolute humidity; without a path for moist air to leave and drier air to enter, comfort plateaus or worsens. If your building rules block window venting, choose refrigerant cooling per the [summer AC checklist](/en/blog/2026-summer-ac-buying-checklist).
+You should not expect good results. The process raises absolute humidity; without a path for moist air to leave and drier air to enter, comfort plateaus or worsens. If your building rules block window venting, choose refrigerant cooling per the summer AC checklist.
 
 ### Are evaporative coolers quieter than portable AC?
 
@@ -224,17 +224,17 @@ On nameplate math in this guide, many units land near **$0.08–$0.30/day** for 
 
 ### What about blackouts or limited circuits?
 
-Lower wattage helps on shared apartment breakers and can pair with careful [portable power station](/en/blog/2026-portable-power-stations-buying-guide) budgeting better than compressor AC — but pumps still need stable power, and water logistics remain. Low watts do not fix high humidity.
+Lower wattage helps on shared apartment breakers and can pair with careful portable power station budgeting better than compressor AC — but pumps still need stable power, and water logistics remain. Low watts do not fix high humidity.
 
 ---
 
 ## Related guides
 
-- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — airflow assist without adding moisture
-- [Portable Power Stations Buying Guide: Watt-Hours First for Camping, Trips, and Blackouts](/en/blog/2026-portable-power-stations-buying-guide) — low-watt cooler budgeting during outages
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — refrigerant options when humidity kills swamp-cooler math
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — when sticky air is the real bottleneck
-- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — size true AC when evaporative cooling is the wrong tool
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 ## Five checks before you buy
 
 1. **Measure humidity before you buy hardware** — If afternoon RH regularly clears about 60%, evaporative cooling is likely the wrong primary appliance. A $10–20 hygrometer is cheaper than a wrong cooler.
@@ -269,4 +269,4 @@ After re-checking the published figures on {{today_locale}}, evaporative cooler 
 | **Portacool Jetstream 250** | Want quiet bedroom aesthetics or sub-$300 apartment gear |
 | **Luma Comfort EC45S** | Hate refill chores or need large open-plan CFM |
 
-Before checkout, verify RH with a sensor, confirm lease-friendly venting, and re-read whether your summer is dry-heat or sticky-heat. When humidity wins, step up to [portable vs window AC](/en/blog/2026-portable-vs-window-ac-head-to-head) and the [summer AC checklist](/en/blog/2026-summer-ac-buying-checklist) instead of forcing evaporative physics to do a refrigerant’s job.
+Before checkout, verify RH with a sensor, confirm lease-friendly venting, and re-read whether your summer is dry-heat or sticky-heat. When humidity wins, step up to portable vs window AC and the summer AC checklist instead of forcing evaporative physics to do a refrigerant’s job.

@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.230Z'
+updatedAt: '2026-08-26T14:14:08.723Z'
 publishedAt: '2026-07-18T08:40:18.328Z'
 ---
 ## 편집부 개요
@@ -206,11 +206,11 @@ publishedAt: '2026-07-18T08:40:18.328Z'
 
 ## 관련 가이드
 
-- [3~5인 가구 용량 우선 구매 가이드: 냉장고·세탁기·TV·공기청정·스틱](/ko/blog/2026-family-3-5-home-essentials-buying-guide) — 3–5인 가정용 용량 기준 — 냉장 식품실, 세탁 드럼, TV 시청거리, 침실 CADR, 스틱 런타임을 방학·폭염 부하에 맞춰 고릅니다.
-- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 미디어 이동식·LG 듀얼호스·프리지다이어 창문형 8,000BTU를 소음·설치·전기요금 기준으로 비교. 2026 여름 소형 주거 냉방 선택 가이드.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
 ## 구매 전 다섯 가지 점검
 
 1. 가장 큰 기기가 아니라 **동시 소비 와트와 시간**을 더해 와트시를 솔직히 잡으세요.

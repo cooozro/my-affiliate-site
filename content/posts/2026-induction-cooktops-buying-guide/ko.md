@@ -18,7 +18,7 @@ imageSearchKeywords:
   - induction cooktop kitchen
   - portable induction burner
   - modern kitchen stove
-updatedAt: '2026-08-22T02:34:58.066Z'
+updatedAt: '2026-08-26T14:14:08.697Z'
 coverImage: >-
   /images/posts/2026-induction-cooktops-buying-guide/induction-cooktop-kitchen-portable-induction-bur-cover.jpg
 coverImageAlt: 실내의 induction cooktop kitchen
@@ -183,11 +183,11 @@ OEM 와트 표·조리기구 호환 안내·공시 정가를 교차 확인합니
 
 ## 관련 가이드
 
-- [창문 닫고 시원하게: 여름 스포츠·스트리밍·HDMI 2.1 게이밍 TV 5선](/ko/blog/2026-television-buying-guide) — 여름 스포츠 눈부심, HDMI 2.1 게이밍, 에어컨 켠 HDR 시청 기준 TV 5종 비교. OLED 대 미니 LED 선택 가이드.
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — 오픈 주방 열·소음
-- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
-- [캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르는 법](/ko/blog/2026-coffee-machines-head-to-head) — 같은 콘센트 아침 전력
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 다구 수요
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 사기 전 5가지 체크
 
 1. 반품 전에 **자성 팬** 호환을 확인하세요.

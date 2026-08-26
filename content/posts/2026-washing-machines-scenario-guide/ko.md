@@ -22,7 +22,7 @@ coverImageAlt: white front load washing machine in a laundry room
 coverImageAltKo: 세탁실에 있는 흰색 전면형 세탁기
 coverImageCredit: Photo by PlanetCare / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/symELidEVhs'
-updatedAt: '2026-08-22T02:34:59.996Z'
+updatedAt: '2026-08-26T14:14:08.790Z'
 publishedAt: '2026-07-10T07:11:46.885Z'
 ---
 ## 편집부 개요
@@ -207,7 +207,7 @@ Bosch는 800 시리즈 WAW285에 **EcoSilence 모터 10년 보증**, 세탁 **47
 
 ### 건조기까지 돌렸는데 다음 날 아침 수건이 시큼해요. 뭐부터 해야 하나요?
 
-습한 실내 건조는 개스킷 접힘에 물기를 남기고, 창문 닫은 냉방 실은 세탁실 공기를 갱신하지 않습니다. 마지막 세탁 후 도어를 살짝 열어두고, 고무 립을 주 1회 닦으며 OEM **통세척** 주기를 지키세요. **GE UltraFresh** 같은 환기 드럼이나 세탁실 옆 **소형 제습기**가 고 RPM 탈수만 바꾸는 것보다 냄새를 먼저 잡는 경우가 많습니다. 방 전체가 축축하면 [제습기 가이드](/ko/blog/2026-dehumidifiers-guide)도 함께 보세요.
+습한 실내 건조는 개스킷 접힘에 물기를 남기고, 창문 닫은 냉방 실은 세탁실 공기를 갱신하지 않습니다. 마지막 세탁 후 도어를 살짝 열어두고, 고무 립을 주 1회 닦으며 OEM **통세척** 주기를 지키세요. **GE UltraFresh** 같은 환기 드럼이나 세탁실 옆 **소형 제습기**가 고 RPM 탈수만 바꾸는 것보다 냄새를 먼저 잡는 경우가 많습니다. 방 전체가 축축하면 제습기 가이드도 함께 보세요.
 
 ### 진흙이 굳은 축구 유니폼을 28분 Super Speed에 바로 넣어도 되나요?
 
@@ -221,11 +221,11 @@ Bosch는 800 시리즈 WAW285에 **EcoSilence 모터 10년 보증**, 세탁 **47
 
 ## 관련 가이드
 
-- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — 세탁기로 가는 진흙·모래는 현관·바닥에서 먼저 시작합니다
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 실내 건조가 필수일 때 세탁실 제습기와 환기 드럼 세탁기를 함께 고려
-- [습한 여름·방학 손님철, 비데 시트는 수압·건조·변기 규격부터 확인한다](/ko/blog/2026-bidets-checklist) — 실내 세탁 습기는 비데 설치 환기 계획과 겹칩니다
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — 탈수 소음이 문제인 밀폐 냉방 실은 주방 가전 소음도 함께 봐야 합니다
-- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 더위에 수분 보충이 늘면 주방·세탁 업그레이드를 같은 효율 체크리스트로 보세요
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
 공개 스펙과 가격표를 재검토한 결과, 여름 전면형 세탁기는 **습기·방학 오염·냉방 밀실 소음** 세 축에 맞추는 게 먼저습니다. 실내 건조 냄새 주간엔 **GE GFW550SSNWW** UltraFresh 환기·Microban이 핵심입니다. 진흙·유니폼은 **Whirlpool WFW5620HW** Load & Go·얼룩 프리셋이 실용적이고, 토요일 하루에 침구와 일주일치를 비우려면 **Samsung WF53BB8700AVUS** 용량·Super Speed를 보세요. **실제 구매 기준으로 보면** 침실과 벽을 공유하는 세탁실엔 **Bosch WAW285H2UC** 탈수 소음을 직접 들어보고 예산형 74 dBA 이상 모델은 피하겠습니다.

@@ -23,7 +23,7 @@ imageSearchKeywords:
   - home dehumidifier
   - room dehumidifier appliance
 coverImageAltKo: 습한 실내의 제습기
-updatedAt: '2026-08-26T01:40:02.154Z'
+updatedAt: '2026-08-26T14:14:08.654Z'
 publishedAt: '2026-07-01T01:41:46.782Z'
 ---
 ## Editorial Overview
@@ -192,11 +192,11 @@ Manufacturer low-speed dB ratings usually describe the fan, not the compressor k
 
 ## Related guides
 
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
-- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — right-size cooling first; AC alone rarely fixes a wet basement
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor gear storage needs dry closets; pair with basement dehumidifying
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — sealed install choices affect how much moisture stays indoors
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — storm-season outages can stop pumps; know your backup plan
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 ## Five checks before you buy
 
 1. **Match DOE pints to space and leak source** — A 35 DOE pint unit suits many 800–1,200 sq ft zones; unfinished basements with active seepage may need pro waterproofing, not just a bigger bucket.

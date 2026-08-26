@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 16423102
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/16423102/pexels-photo-16423102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.294Z'
+updatedAt: '2026-08-26T14:14:08.758Z'
 publishedAt: '2026-07-08T07:17:54.698Z'
 ---
 ## 편집부 개요
@@ -120,11 +120,11 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 
 ## 관련 가이드
 
-- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 클라우드 만료 전 클립 아카이브
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 반려동물 오탐과 카메라 존 겹침
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 현관 오디오와 카메라 스피커 분리
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 여행 중 알림 폭주 대비
 ## 최종 평가
 
 홈 IP 카메라는 **저장·접근 제품**입니다. 여름 여행객에게는 **2K + microSD + 선택적 클라우드 모션 백업**이 균형적입니다. **MFA**를 켜고, 출발 전 **셀룰러 라이브 뷰**를 테스트하세요.

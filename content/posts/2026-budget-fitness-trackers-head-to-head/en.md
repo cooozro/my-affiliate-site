@@ -31,7 +31,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6846257
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:43.242Z'
+updatedAt: '2026-08-26T14:14:08.620Z'
 publishedAt: '2026-07-07T04:35:40.875Z'
 ---
 ## Editorial Overview
@@ -153,11 +153,11 @@ Premium unlocks deeper sleep insights, workout videos, and some historical trend
 
 ## Related guides
 
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
-- [Dorm Heat, Long Lectures: Budget Laptop Specs Students Should Actually Weigh](/en/blog/2026-laptops-buying-guide) — remote work + workout logging from one bag
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep phone GPS sessions alive on day trips
-- [Summer Travel ANC: Sony WH-CH720N vs Soundcore Q45 vs JBL Tune 770NC](/en/blog/2026-noise-cancelling-headphones-head-to-head) — long-flight comfort alongside vacation fitness
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor recovery sessions without phone speaker strain
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 ## Final Verdict
 
 ### Who should buy

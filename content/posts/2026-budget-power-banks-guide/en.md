@@ -19,7 +19,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: portable power bank on a travel desk
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-08-26T01:40:02.079Z'
+updatedAt: '2026-08-26T14:14:08.631Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707
@@ -185,11 +185,11 @@ For phones alone, 30W is often enough for satisfying fast top-ups. The Anker 733
 
 ## Related guides
 
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — Five budget monitors compared by panel type, resolution, refresh rate, and ergonomics. Wo…
-- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — Five entry mechanical keyboards compared by switch type, layout, hot-swap, and price. Sce…
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — match PD output to your phone's fast-charge rating
-- [Beach to Ridge: Stabilization, Depth, and Mounts for Travel Action Cams](/en/blog/2026-action-cameras-buying-guide) — Five action cameras compared for summer travel—electronic stabilization, native waterproo…
-- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — portable audio gear for the same travel use case
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 ## Five checks before you buy
 
 1. **Match PD watts** — Compare your phone or laptop charger label with the bank’s max output. An 18W bank on a 45W phone feels slow.

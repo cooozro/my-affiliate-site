@@ -34,7 +34,7 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:44.025Z'
+updatedAt: '2026-08-26T14:14:08.644Z'
 publishedAt: '2026-07-17T02:23:36.986Z'
 ---
 ## Editorial Overview
@@ -246,11 +246,11 @@ Tape the **walking lane** left after the unit plus its forced clearance. If less
 
 ## Related guides
 
-- [Solo Apartment Home Essentials: Five Scenarios From Cooling to Floor Care](/en/blog/2026-solo-apartment-home-essentials-scenario-guide) — whole-home priority order
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — hose vs sash install tradeoffs
-- [Small-Apartment Robot Vacuums: Which Mapping and Mop Setup Fits Your Floor Plan?](/en/blog/2026-robot-vacuums-scenario-guide) — dock footprint by apartment layout
-- [Cordless Stick Vacuums for Summer: AC-Sealed Rooms, Pet Hair, and School-Break Messes](/en/blog/2026-cordless-vacuums-scenario-guide) — hang-and-store stick runtime
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — DOE pint, tank, and drain detail
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 ## Final Verdict
 
 Compact summer living is a **geometry problem first** and a capacity problem second. Editorial standard: measure the rectangle you are willing to lose for three months of heat season, then assign it to the category that removes the biggest daily friction — temperature, humidity, cooking heat, or floor dust — not the loudest marketing badge.

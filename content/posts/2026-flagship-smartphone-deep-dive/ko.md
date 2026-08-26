@@ -19,7 +19,7 @@ coverImage: /images/posts/2026-flagship-smartphone-deep-dive/press-cover-45e5e9c
 coverImageAlt: 편집부 비교용 책상 위 플래그십 스마트폰
 coverImageCredit: Official press image courtesy of Apple (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-18T02:09:26.046Z'
+updatedAt: '2026-08-26T14:14:08.688Z'
 publishedAt: '2026-08-18T02:09:25.841Z'
 ---
 ## 편집부 개요
@@ -158,11 +158,11 @@ S26 울트라의 5,000mAh와 60W 유선 충전이 헤비 유즈 하루 사용에
 
 ## 관련 가이드
 
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
-- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
-- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 사기 전 다섯 가지 점검
 
 1. **지금 배터리 상태를 확인하세요.** 2년 차이고 건강도가 85% 이상이라면 8만 원대 이하 배터리 교체가 2년을 더 살릴 수 있습니다.

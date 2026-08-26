@@ -29,7 +29,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-08-26T01:40:02.171Z'
+updatedAt: '2026-08-26T14:14:08.661Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## Editorial Overview
@@ -201,11 +201,11 @@ Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM ci
 
 ## Related guides
 
-- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — size AC first, then add circulation
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — when fans are enough vs when you need refrigerant cooling
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — sticky heat often needs dehumidifying, not just airflow
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — closed-window season also raises particulate load indoors
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — outage backup for fans and small appliances during storm season
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 ## Five checks before you buy
 
 1. **Match fan type to room job** — Whole-room mixing favors circulators (Vornado-style); personal desk work favors compact turbo units; narrow floors favor towers. Buying a desk fan for a 25 m² studio leaves hot corners untouched.
@@ -240,4 +240,4 @@ After re-checking the published figures, summer fan value still means matching *
 | **Lasko Wind Curve T42951** | Sleep in silence under 45 dB — 48 dB low speed may annoy light sleepers |
 | **Dreo Nomad One** | Refuse app setup or need Vornado-class throw for AC assist |
 
-Before checkout, confirm cord length to your outlet layout, verify oscillation clearance, and recheck whether your lease or building rules restrict window hardware — fans solve circulation, but [window AC still needs install clearance](/en/blog/2026-summer-ac-buying-checklist) when heat waves exceed what airflow alone can handle.
+Before checkout, confirm cord length to your outlet layout, verify oscillation clearance, and recheck whether your lease or building rules restrict window hardware — fans solve circulation, but window AC still needs install clearance when heat waves exceed what airflow alone can handle.

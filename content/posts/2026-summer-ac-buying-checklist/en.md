@@ -20,7 +20,7 @@ coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
 coverImageAlt: portable air conditioner in a summer bedroom
 coverImageCredit: Photo by Shuaizhi Tian / Pexels
-updatedAt: '2026-08-20T08:09:46.725Z'
+updatedAt: '2026-08-26T14:14:08.767Z'
 publishedAt: '2026-06-28T08:36:05.216Z'
 coverImageProvider: pexels
 coverImageAssetId: 28165595
@@ -161,11 +161,11 @@ During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap
 
 ## Related guides
 
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — compare install types after the checklist
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — Five compact air purifiers compared for bedrooms and dorms — CADR fit, HEPA filter types,…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — outdoor audio for pool and picnic days
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — backup power during summer outages
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 After walking through this checklist, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **On a cost-effectiveness basis,** clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.

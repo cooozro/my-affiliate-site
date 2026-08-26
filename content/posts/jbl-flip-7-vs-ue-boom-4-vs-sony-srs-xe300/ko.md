@@ -22,7 +22,7 @@ coverImage: >-
 coverImageAlt: JBL Flip 7 휴대용 스피커 공식 프레스킷 제품컷
 coverImageCredit: Official press image courtesy of JBL (Press Kit / Media Gallery)
 coverImageProvider: press-kit
-updatedAt: '2026-08-17T03:04:42.226Z'
+updatedAt: '2026-08-26T14:14:08.819Z'
 coverImageAssetId: 8aa5d58b1d
 coverImageSourceUrl: >-
   https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69f217e6/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=535&sh=535
@@ -169,11 +169,11 @@ Sony SRS-XE300만 내장 마이크가 있어 스피커폰으로 사용할 수 �
 
 ## 관련 가이드
 
-- [냉각 매트리스 패드·토퍼 구매 가이드: 폭염 수면을 위한 능동식 vs 수동식](/ko/blog/2026-cooling-mattress-pads-buying-guide) — 폭염 열대야용 냉각 패드를 능동 수냉·강제 송풍·수동 토퍼로 비교합니다 — 전기료, 유지관리, 3년 총비용까지 따집니다.
-- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
-- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 2026년 가성비 무선 이어폰 5종을 배터리·코덱·ANC·가격 데이터로 비교 분석했습니다. 예산별 최적 선택 가이드.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 최종 평가
 
 사운드, 내구성, 배터리 수명, 실제 사용 편의성을 비교한 결과, 대부분의 사람에게는 **JBL Flip 7**을 최종 추천합니다. 음질, 휴대성, 가격의 균형이 가장 뛰어납니다. 그룹 환경에서 360° 사운드와 깊은 저음을 우선시한다면 **UE Boom 4**가 좋은 선택입니다. 배터리 지속 시간과 최대 음량이 필수라면 **Sony SRS-XE300**이 승리하며, 스피커폰 기능도 유일하게 지원합니다.

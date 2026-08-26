@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.333Z'
+updatedAt: '2026-08-26T14:14:08.785Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## Editorial Overview
@@ -205,11 +205,11 @@ No — you need **HDMI 2.0 or DisplayPort Alt Mode** with sufficient bandwidth. 
 
 ## Related guides
 
-- [Summer Budget Tablets: Reading, Travel Video, and Kids Screen Time](/en/blog/2026-summer-budget-tablets-buying-guide) — Five sub-$250 tablets compared on display, storage, stylus support, and app stores for su…
-- [Portable vs Built-In Induction: Five Cooktops for Cooler Summer Kitchens](/en/blog/2026-induction-cooktops-buying-guide) — Portable and built-in induction cooktops compared on watt zones, pan fit, safety locks, a…
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — pair the right hub HDMI bandwidth with your monitor resolution
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — when the laptop charges from a hub, the wall brick wattage still matters
-- [First Mechanical Keyboard? Hot-Swap and Switch Type Beat the Hype](/en/blog/2026-budget-mechanical-keyboards-guide) — USB-A ports on hubs keep legacy keyboard dongles alive
+- [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 ## Five checks before you buy
 
 1. **Match PD pass-through to your charger** — Read the laptop OEM brick label. Below 65W pass-through on a 96W machine means slow or negative charge under load.

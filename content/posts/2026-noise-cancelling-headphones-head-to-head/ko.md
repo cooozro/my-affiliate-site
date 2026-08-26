@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 610945
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:45.717Z'
+updatedAt: '2026-08-26T14:14:08.711Z'
 publishedAt: '2026-07-03T07:10:50.785Z'
 ---
 ## 편집부 개요
@@ -169,11 +169,11 @@ ANC 켠 상태 기준으로 JBL Tune 770NC가 55시간급으로 이 셋 중 가�
 
 ## 관련 가이드
 
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 여행 후 돌아올 방 냉방 선택
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 도착 후 해변·공원 야외 청취
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문형·이동식 공통 구매 체크리스트 — BTU·임대 규정·배기·소음·에너지라벨·배수·필터. 폭염 전에 확인할 항목.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 장거리 이동 중 폰·태블릿 충전
-- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 수영·헬스처럼 오버이어보다 이어형 ANC가 나은 경우
 ## 최종 평가
 
 공개 스펙과 시장 가격을 교차 검증한 결과, 여름 이동 헤드폰 가성비는 **차단 깊이·무게·코덱·배터리**를 비행·통근 루틴에 맞추는 일입니다. 「스튜디오」 마케팅만 따라가면 안 맞습니다. **실제 구매 기준으로 보면** 주 사용 기기·평균 착용 시간·기내 수면 여부부터 잠그세요. **WH-CH720N**은 무게와 LDAC 균형, **Space Q45**는 차단력 특화(무게 감수), **Tune 770NC**는 가격·배터리 특화입니다.

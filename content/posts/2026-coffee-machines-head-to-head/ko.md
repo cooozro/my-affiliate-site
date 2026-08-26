@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-20T08:09:43.881Z'
+updatedAt: '2026-08-26T14:14:08.642Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
@@ -164,11 +164,11 @@ publishedAt: '2026-07-07T03:34:46.035Z'
 
 ## 관련 가이드
 
-- [이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지](/ko/blog/2026-induction-cooktops-buying-guide) — 이동식·빌트인 인덕션을 화력(W), 팬 호환, 잠금, 여름 주방 열기 기준으로 비교합니다. 공개 스펙만 사용합니다.
-- [식기세척기 플레이스 세팅·데시벨·리터: 스펙이 실제로 뜻하는 것](/ko/blog/2026-dishwashers-explainer) — 콤팩트·빌트인 식기세척기의 플레이스 세팅, 소음(dB), 사이클당 물 사용량(L)을 비교할 때 헷갈리는 스펙을 정리합니다.
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 아침 커피와 오후 폭염이 겹칠 때 냉방 전략
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 보일러·오븐과 함께 돌릴 때 실내 쾌적함 유지
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 해안 여름 습도·우유 보관·주방 쾌적함
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 ## 최종 평가
 
 공개 스펙과 시장 가격을 교차 검증한 결과, 여름 주방 가성비는 **열·캡슐 단가·우유 질감·디스케일 부담**을 루틴에 맞추는 일입니다. 카페 마케팅 사진만 따라가면 타입을 잘못 고르습니다. **실제 구매 기준으로 보면** 아침 동선부터 잠그고 고르세요. **네스프레소 버투오 팝+**는 열·초기비용·캡슐 생활, **브레빌 밤비노 플러스**는 속도·우유·원두 경제 균형, **드롱기 매그니피카 에보**는 가족 원터치 우유 음료에 맞습니다.

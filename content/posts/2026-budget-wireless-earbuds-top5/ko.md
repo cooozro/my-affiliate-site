@@ -23,7 +23,7 @@ imageSearchKeywords:
   - true wireless earphones
   - TWS earbuds case
 coverImageAltKo: 책상 위의 무선 이어폰
-updatedAt: '2026-08-26T01:40:02.088Z'
+updatedAt: '2026-08-26T14:14:08.638Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
 noindex: true
 ---
@@ -181,10 +181,10 @@ noindex: true
 
 ## 관련 가이드
 
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
-- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — TWS 구매 전 코덱 지원 확인
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 이동 중 폰·이어폰 충전
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
 ## 구매 전 반드시 확인할 5가지
 

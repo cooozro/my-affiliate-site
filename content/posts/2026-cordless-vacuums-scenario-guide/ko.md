@@ -22,7 +22,7 @@ coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
-updatedAt: '2026-08-22T02:34:56.839Z'
+updatedAt: '2026-08-26T14:14:08.651Z'
 publishedAt: '2026-07-09T05:23:27.620Z'
 ---
 ## 편집부 개요
@@ -201,11 +201,11 @@ Tineco는 A10 Hero 본체를 **약 2.5kg**, **맥스 모드 최대 25분**으로
 
 ## 관련 가이드
 
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 에어컨 가동 중 일상 먼지는 로봇, 계단·가구는 스틱으로 보완
-- [습한 여름·방학철, 제습기는 DOE 제습량·소음·하루 전기료로 고른다](/ko/blog/2026-dehumidifiers-guide) — 폭염·냉방 시즌 원룸·지하실용 제습기 5종을 DOE 제습량, 수면 소음(dB), 배수 방식, 하루 예상 전기료 기준으로 비교한 2026년 여름 구매 가이드입니다.
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
-- [여름 에어컨 사기 전 7가지 체크](/ko/blog/2026-summer-ac-buying-checklist) — 창문 닫은 날 청소하는 같은 공간 냉방 점검
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 여름 내내 창문 닫을 때 입자 부하 줄이기
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
 공개 스펙과 가격표를 재검토한 결과, 무선 스틱은 **실내 공기가 갱신되지 않고** 먼지 빈도가 늘어나는 여름에 수납 공간 값어치를 했습니다. 마케팅 최대 와트보다 **런타임·헤파·시나리오 핏**이 만족도를 가릅니다. 냉방 밀실·알레르기 민감 가정엔 **Dyson V15 Detect**, 휴가 전후 집 전체는 **Shark Stratos**, 더위 털갈이는 **Bissell ICONpet**, 방학 낮 부스러기는 **Tineco A10 Hero**. **실제 구매 기준으로 보면** 우리 집 주 시나리오 하나부터 고르고, 그다음 무게·필터비를 보겠습니다.

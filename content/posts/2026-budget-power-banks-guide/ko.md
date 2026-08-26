@@ -18,7 +18,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: 책상 위의 보조배터리
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-08-14T01:38:50.663Z'
+updatedAt: '2026-08-26T14:14:08.632Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707
@@ -184,11 +184,11 @@ Wh(와트시)가 100 이하인지가 첫 번째입니다. Xiaomi 20,000(74Wh)이
 
 ## 관련 가이드
 
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 2026년 가성비 모니터 5종을 패널 타입, 해상도, 주사율, 거치대 데이터로 비교했습니다. 재택·게임 시나리오별 구매 가이드.
-- [첫 기계식 키보드, 핫스왑·적축 이거 하나만 체크해도 된다](/ko/blog/2026-budget-mechanical-keyboards-guide) — 2026년 가성비 기계식 키보드 5종을 스위치 타입, 레이아웃, 핫스왑, 가격 데이터로 비교했습니다. 타이핑·게임별 입문 가이드.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — PD 출력과 폰 고속 충전 스펙 맞추기
-- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행용 액션캠 5종 비교—전자 손떨림 보정, 본체 방수 깊이, 헬멧·스노클·도시 POV용 마운트 호환. 하이킹·스노클링·방학 여행 시나리오별 추천.
-- [5만 원 이하 무선 이어폰, LDAC·ANC 스펙만 놓고 골라본다](/ko/blog/2026-budget-wireless-earbuds-top5) — 같은 여행·통근 시나리오의 휴대 오디오
 ## 구매 전 반드시 확인할 5가지
 
 1. **PD 와트 매칭** — 폰·노트북 충전기 라벨의 최대 와트와 보조배터리 출력이 맞는지 확인하세요. 18W 배터리로 45W 폰을 쓰면 체감 속도가 크게 떨어집니다.

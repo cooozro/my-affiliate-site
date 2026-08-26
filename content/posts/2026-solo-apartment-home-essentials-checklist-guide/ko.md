@@ -32,7 +32,7 @@ coverImageProvider: pexels
 coverImageAssetId: 10024297
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/10024297/pexels-photo-10024297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-22T02:34:58.991Z'
+updatedAt: '2026-08-26T14:14:08.761Z'
 publishedAt: '2026-07-13T12:13:57.000Z'
 ---
 ## 편집부 개요
@@ -184,11 +184,11 @@ publishedAt: '2026-07-13T12:13:57.000Z'
 
 ## 관련 가이드
 
-- [1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 체크 통과 후 모델 예시가 필요할 때
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 중앙 냉방 없이 식힐 때 CFM 표
-- [이동식 vs 창문형 에어컨, 여름 원룸은 뭐가 더 시원한가](/ko/blog/2026-portable-vs-window-ac-head-to-head) — 팬만으로 부족할 때
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 15–25 m² 밀폐 실 연간 필터 계산
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
 ## 최종 평가
 
 공개 스펙과 시장 가격을 교차 검증한 결과, 1인 아파트 가성비는 **평면 구역 → 냉각 경로 → 청정량 적합 → 통근 오디오 → 에어프라이어 와트 → 도크 여유 → 회로 지도 → 필터·봉투 유지비** 순입니다. 레이아웃·암페어를 건너뛰면 브랜드 실수보다 후회가 커지습니다. 「전 공간」 마케팅보다 **실제 동선·회로**가 만족도를 가릅니다. **실제 구매 기준으로 보면** 평면과 암페어부터 잠그고, 그다음 카테고리별로 좁히세요. 3년 소유 비용은 필터·봉투·여름 누진 전기가 **브랜드 프리미엄보다** 밀폐 1인 생활 만족도를 더 크게 갈라놓습니다.

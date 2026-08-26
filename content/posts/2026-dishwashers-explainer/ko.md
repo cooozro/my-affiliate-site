@@ -18,7 +18,7 @@ imageSearchKeywords:
   - dishwasher kitchen
   - compact dishwasher
   - built-in dishwasher
-updatedAt: '2026-08-22T02:34:57.198Z'
+updatedAt: '2026-08-26T14:14:08.660Z'
 coverImage: >-
   /images/posts/2026-dishwashers-explainer/dishwasher-kitchen-compact-dishwasher-cover.jpg
 coverImageAlt: 주방에 설치된 식기세척기
@@ -183,11 +183,11 @@ Bosch SHPM65Z55N은 **14 place setting**, **3rd rack**을 공개합니다. 3–5
 
 ## 관련 가이드
 
-- [이동식 vs 빌트인 인덕션: 여름 주방을 덜 덥히는 5가지](/ko/blog/2026-induction-cooktops-buying-guide) — 이동식·빌트인 인덕션을 화력(W), 팬 호환, 잠금, 여름 주방 열기 기준으로 비교합니다. 공개 스펙만 사용합니다.
-- [캡슐·세미오토·풀오토, 폭염 주방에서 커피머신 고르는 법](/ko/blog/2026-coffee-machines-head-to-head) — 싱크 근처 또 다른 물 사용
-- [방학·기숙사·과제: 학생용 가성비 노트북은 CPU·RAM·nits부터 본다](/ko/blog/2026-laptops-buying-guide) — CPU·RAM 확장·디스플레이 nits·배터리 기준 학생용 가성비 노트북 5종. 여름 기숙사·방학·캠퍼스 시나리오 가이드.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 다인 가구 주방 부하
-- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 경수 지역에서 세척기 급수
 ## 핵심 정리
 
 공개 스펙과 가격표를 재검토한 결과, 식기세척기 가치는 **우리 집 저녁 적재·같은 코스 dB·에코 리터 하한**을 바비큐·방학 설거지에 맞추는 일이습니다. 마케팅 배지보다 **하단 랙 높이·예약·건조 방식**이 만족도를 가릅니다.
