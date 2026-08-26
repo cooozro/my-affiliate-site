@@ -11,6 +11,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { getUsdKrwRate } from "@/lib/market-data";
 import type { Post } from "@/lib/posts";
 import {
+  resolveLivePlaceholders,
   sanitizePipelineArtifacts,
   stripMethodologySections,
 } from "@/lib/site-engine";
@@ -45,8 +46,15 @@ export async function enrichPost(
     content: sanitizePipelineArtifacts(stripMethodologySections(base.content)),
   };
 
-  if (!base.liveData) {
-    return stripped;
+  const needsFx =
+    Boolean(base.liveData) ||
+    /\{\{\s*(?:krw:|usd_krw_rate)/i.test(stripped.content);
+
+  if (!needsFx) {
+    return {
+      ...stripped,
+      content: resolveLivePlaceholders(stripped.content, locale),
+    };
   }
 
   const market = await getUsdKrwRate();
@@ -54,6 +62,6 @@ export async function enrichPost(
   return {
     ...stripped,
     content: resolveContentPlaceholders(stripped.content, { locale, market }),
-    liveDataNote: liveDataDisclaimer(locale, market),
+    liveDataNote: base.liveData ? liveDataDisclaimer(locale, market) : undefined,
   };
 }

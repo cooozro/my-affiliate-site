@@ -63,6 +63,49 @@ export function applyPriceFallback(
   return out;
 }
 
+function formatToday(locale: SiteEngineLocale, now: Date): string {
+  return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(now);
+}
+
+export function formatKrwAmount(amount: number, locale: SiteEngineLocale): string {
+  const formatted = new Intl.NumberFormat(
+    locale === "ko" ? "ko-KR" : "en-US",
+  ).format(amount);
+  return locale === "ko" ? `${formatted}원` : `₩${formatted}`;
+}
+
+export function resolveLivePlaceholders(
+  content: string,
+  locale: SiteEngineLocale,
+  options?: { now?: Date; usdKrwRate?: number },
+): string {
+  const now = options?.now ?? new Date();
+  let result = String(content || "");
+  result = result.replace(/\{\{\s*today\s*\}\}/gi, formatToday("en", now));
+  result = result.replace(/\{\{\s*today_ko\s*\}\}/gi, formatToday("ko", now));
+  result = result.replace(/\{\{\s*today_locale\s*\}\}/gi, formatToday(locale, now));
+
+  const rate = options?.usdKrwRate;
+  const rateOk = Number.isFinite(rate) && (rate as number) > 0;
+  if (rateOk) {
+    const rateFmt = new Intl.NumberFormat(
+      locale === "ko" ? "ko-KR" : "en-US",
+    ).format(rate as number);
+    result = result.replace(/\{\{\s*usd_krw_rate\s*\}\}/gi, rateFmt);
+    result = result.replace(/\{\{\s*krw:([\d.]+)\s*\}\}/gi, (_, usdRaw: string) => {
+      const usd = Number.parseFloat(usdRaw);
+      if (!Number.isFinite(usd)) return priceFallbackText(locale);
+      return formatKrwAmount(Math.round(usd * (rate as number)), locale);
+    });
+  }
+
+  return applyPriceFallback(result, locale, { marketOk: false });
+}
+
 export const STOCK_CAPTION_EN =
   "Staged category example image (not a photo of the actual product).";
 export const STOCK_CAPTION_KO =
