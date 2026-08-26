@@ -2200,6 +2200,15 @@
       "contentHash": "4519087a9a85605f6331f794c267cd67eb2ab60d8da48993ea514726934da128",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:10:08.357Z"
+    },
+    {
+      "slug": "2026-apartment-robot-vacuum-comparison",
+      "url": "https://images.pexels.com/photos/35147280/pexels-photo-35147280.jpeg",
+      "assetKey": "pexels:35147280",
+      "hash": "485526b80082e1e7d0966df4f86bce2bed8ec06e159f741f14a78238094ed300",
+      "contentHash": "485526b80082e1e7d0966df4f86bce2bed8ec06e159f741f14a78238094ed300",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:11:43.783Z"
     }
   ]
 }
