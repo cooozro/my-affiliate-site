@@ -1327,7 +1327,14 @@ export function scoreImageRelevance(text, productKeywords, negatives, seasonCont
 
   if (seasonContext?.sceneReject) {
     for (const term of seasonContext.sceneReject) {
-      if (blob.includes(term.toLowerCase())) return -100;
+      const t = String(term).toLowerCase();
+      if (t.length <= 3) {
+        if (new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(blob)) {
+          return -100;
+        }
+      } else if (blob.includes(t)) {
+        return -100;
+      }
     }
   }
 

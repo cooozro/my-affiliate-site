@@ -201,7 +201,12 @@ function rankText(candidates, ctx) {
         textScore,
       };
     })
-    .filter((c) => c.textScore >= TEXT_MIN_SCORE)
+    .filter((c) => {
+      // Long keyword phrases rarely appear verbatim in Pexels alts.
+      // Token-hit scoring often lands at 4; keep those when no alt-anchors.
+      const minScore = anchors.length > 0 ? TEXT_MIN_SCORE : Math.min(TEXT_MIN_SCORE, 4);
+      return c.textScore >= minScore;
+    })
     .sort((a, b) => b.textScore - a.textScore);
 }
 
@@ -483,7 +488,7 @@ async function pickWinnerFromPool(pool, ctx, registry, slug, options) {
     ? VACUUM_TEXT_MIN_SCORE
     : speakerMode
       ? SPEAKER_TEXT_MIN_SCORE
-      : DEFAULT_TEXT_MIN_SCORE;
+      : Math.min(DEFAULT_TEXT_MIN_SCORE, 4);
   const strongText = pool.filter((c) => c.textScore >= minText);
   const winner = strongText[0] ?? null;
   if (winner) {

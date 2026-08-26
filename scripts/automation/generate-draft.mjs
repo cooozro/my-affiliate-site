@@ -53,6 +53,7 @@ import {
   prepareArticleBody,
 } from "../lib/site-engine/index.mjs";
 import { pickSectionSkeleton } from "../lib/variants/section-skeletons.mjs";
+import { salvageWrittenDraft } from "../lib/draft-salvage.mjs";
 
 /** Fill the 6-draft buffer during the DeepSeek discount window (not 1 write/day). */
 const MAX_WRITES_PER_DAY = TARGET_DRAFT_COUNT;
@@ -582,6 +583,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 
   writePost(slug, "en", enFm, enBody);
   writePost(slug, "ko", koFm, koBody);
+  salvageWrittenDraft(slug, contentProfile);
 
   const issues = validatePostFiles(slug, {
     phase: "draft",
