@@ -12,6 +12,7 @@ tags:
   - travel headphones
   - ANC depth
 draft: true
+publishAfter: '2026-09-01'
 contentProfile: explainer
 topicId: noise-cancelling-headphones
 topicCluster: audio
