@@ -22,7 +22,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-08-26T01:40:02.303Z'
+updatedAt: '2026-08-26T09:45:03.395Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---
@@ -182,16 +182,16 @@ If drops are likely, the UE WONDERBOOM 3's float design saves a lot of panic at 
 
 ## Related guides
 
-- [Humid Summer Rooms: Pint Capacity, dB, and Daily kWh Before You Buy](/en/blog/2026-dehumidifiers-guide) — Five dehumidifiers for humid summers — DOE pint ratings, sleep noise, drain options, and…
-- [7 Checks Before You Buy a Summer Air Conditioner](/en/blog/2026-summer-ac-buying-checklist) — Pre-purchase checklist for window and portable AC — BTU fit, install rules, noise, energy…
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — keep phones charged for playlists and maps on summer trips
-- [Portable vs Window AC: Which Cools a Small Apartment Better in Summer?](/en/blog/2026-portable-vs-window-ac-head-to-head) — cool indoor recovery after hot outdoor days
-- [Budget Wireless Earbuds: When LDAC and ANC Beat Brand Names](/en/blog/2026-budget-wireless-earbuds-top5) — private listening when shared speakers are too loud
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
+- [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 ## Five checks before you buy
 
 1. **Decode IP ratings** — IPX7 handles splashes and brief dunking; IP67 adds dust protection for beach sand. Neither means infinite depth or saltwater immunity—rinse after pool or ocean use.
 2. **Match loudness to space** — A 12W class speaker fills a picnic table; park-wide volume needs 20W+ or Outdoor Boost modes. Test return windows if unsure.
-3. **Weight vs carry style** — Under 350g clips to bags; 500g+ belongs in a tote or fixed spot. Pair with a [power bank](/en/blog/2026-budget-power-banks-guide) if the speaker lacks pass-through charging.
+3. **Weight vs carry style** — Under 350g clips to bags; 500g+ belongs in a tote or fixed spot. Pair with a power bank if the speaker lacks pass-through charging.
 4. **Bluetooth version** — 5.0+ improves range outdoors. Multipoint (5.3 on Tribit) helps switch between phone and tablet without re-pairing.
 5. **Return rate and seal integrity** — Speakers with swollen ports or dead drivers after one season often trace to cracked gaskets. Prefer models with sub-5% return mentions in public reviews.
 

@@ -24,7 +24,7 @@ Paraphrase the assigned headings. Keep FAQ, Related guides, and a closing verdic
 - Include `**Editorial read:**` / `**편집부 해석:**`, `**Review concern:**` / `**검토 시 우려:**`, and a short **total cost of ownership** / **총 소유 비용** (3-year) note
 - Cross-check language: public specs only (`교차 검증` / `cross-checked`)
 - ≥1 comparison table; FAQ ≥3 `###` pairs
-- Related guides / 관련 가이드 — published slugs only
+- Related guides / 관련 가이드 — indexable published slugs only (never noindex)
 - Never ship category fluff without named models/brands
 
 ## Related guides

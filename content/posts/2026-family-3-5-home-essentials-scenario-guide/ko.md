@@ -23,7 +23,7 @@ coverImageAlt: family living room home
 coverImageAltKo: family living room home
 imageSearchKeywords:
   - family living room home appliances
-updatedAt: '2026-08-22T02:34:57.559Z'
+updatedAt: '2026-08-26T09:45:03.372Z'
 coverImageCredit: Photo by Surprising_Media / Pixabay
 coverImageProvider: pixabay
 coverImageAssetId: 7244468
@@ -139,7 +139,7 @@ Samsung은 **총 28.0 cu ft**, **신선 19.4 cu ft**를 공시합니다. Twin Co
 
 ### 처리량이 완벽 한 사이클보다 중요
 
-금요일 전 **네 명이 여덟 세트 타월**을 쓰면 울 사이클 하나로는 부족합니다. 드럼 cu ft × 하루 사이클 수가 여가 시간입니다. 습기·탈수 소음은 [세탁기 시나리오 가이드](/ko/blog/2026-washing-machines-scenario-guide)를 참고하세요.
+금요일 전 **네 명이 여덟 세트 타월**을 쓰면 울 사이클 하나로는 부족합니다. 드럼 cu ft × 하루 사이클 수가 여가 시간입니다. 습기·탈수 소음은 세탁기 시나리오 가이드를 참고하세요.
 
 ---
 
@@ -241,7 +241,7 @@ Samsung은 **총 28.0 cu ft**, **신선 19.4 cu ft**를 공시합니다. Twin Co
 
 ### 무선 vs 로봇은 ‘또는’이 아니라 ‘그리고’
 
-오전 10시 로봇은 **오후 4시 젖은 모래**를 못 고칩니다. 스틱만으로는 재택 부모가 하루 두 번 밀어야 합니다. **로봇 유지 + 스틱 스파이크** 조합이 흔합니다. [로봇청소기 시나리오 가이드](/ko/blog/2026-robot-vacuums-scenario-guide)에서 도크·물걸레를 확인하세요.
+오전 10시 로봇은 **오후 4시 젖은 모래**를 못 고칩니다. 스틱만으로는 재택 부모가 하루 두 번 밀어야 합니다. **로봇 유지 + 스틱 스파이크** 조합이 흔합니다. 로봇청소기 시나리오 가이드에서 도크·물걸레를 확인하세요.
 
 ---
 
@@ -275,11 +275,11 @@ Samsung은 **총 28.0 cu ft**, **신선 19.4 cu ft**를 공시합니다. Twin Co
 
 ## 관련 가이드
 
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — RF28T5001SR 너머 프렌치 도어 5종
-- [창문 닫고 시원하게: 여름 스포츠·스트리밍·HDMI 2.1 게이밍 TV 5선](/ko/blog/2026-television-buying-guide) — OLED vs 미니 LED 심화
-- [여름 세탁기: 습한 실내 건조, 방학 운동복, 휴가 전 세탁, 냉방 실내 소음](/ko/blog/2026-washing-machines-scenario-guide) — 실내 건조·탈수 소음
-- [여름 무선 스틱 청소기: 에어컨 실내, 반려 털, 방학 청소 시나리오](/ko/blog/2026-cordless-vacuums-scenario-guide) — Dyson·Bissell 대안
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 침실용 보조 유닛
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 ## 최종 평가
 
 편집부가 다섯 축을 다시 맞춰보니, 3–5인 가구는 **기능만 사고 용량을 놓칠 때** 실패했습니다. 방학 현실에 맞추세요: **신선 cu ft**, **드럼·사이클 처리량**, **낮 HDR**, **거실 청정량**, **스틱 즉시 줍기 + 선택적 로봇**. 마케팅 ‘온집안’ 문구보다 **처리량과 전기·필터 예산**이 만족도를 가릅니다. **실제 구매 기준으로 보면** 인원·평면부터 잠그고, 그다음 카테고리별로 좁히면 됩니다.

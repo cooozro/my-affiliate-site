@@ -1,5 +1,6 @@
 /**
  * Auto-repair Related guides / 관련 가이드 sections by topic relevance.
+ * Indexable pool only — noindex/quarantined posts are never offered as related picks.
  */
 
 import fs from "fs";
@@ -8,7 +9,6 @@ import matter from "gray-matter";
 
 import { inferPostTopic } from "./infer-post-topic.mjs";
 import { writeLocaleFileWithBump } from "./post-updated-at.mjs";
-import { listPublishedSlugs } from "./content-quality.mjs";
 import { hasRelatedGuidesSection } from "./content-body-utils.mjs";
 
 export const MAX_RELATED_GUIDE_LINKS = 5;
@@ -24,6 +24,29 @@ const BULLET_LINK_RE =
 
 function postsDir(root) {
   return path.join(root, "content", "posts");
+}
+
+function listPublishedSlugs(root) {
+  const slugs = new Set();
+  const dir = postsDir(root);
+  if (!fs.existsSync(dir)) return slugs;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const enPath = path.join(dir, entry.name, "en.md");
+    if (!fs.existsSync(enPath)) continue;
+    const { data } = matter(fs.readFileSync(enPath, "utf8"));
+    if (!data.draft) slugs.add(entry.name);
+  }
+  return slugs;
+}
+
+export function isNoindexData(data) {
+  if (data?.noindex === true || data?.noindex === "true") return true;
+  return /\bnoindex\b/i.test(String(data?.robots ?? ""));
+}
+
+export function isNoindexMarkdown(raw) {
+  return /^noindex:\s*true\b/m.test(raw) || /^robots:.*\bnoindex\b/im.test(raw);
 }
 
 function truncateBlurb(text, max = 90) {
@@ -43,6 +66,19 @@ function defaultBlurb(candidate, locale) {
   const blurb = truncateBlurb(desc);
   if (blurb) return blurb;
   return locale === "ko" ? "관련 가이드" : "Related guide";
+}
+
+function syntheticSource(slug, options = {}) {
+  return {
+    slug,
+    topic: options.topic ?? null,
+    tags: options.tags ?? [],
+    titleEn: options.titleEn ?? slug,
+    titleKo: options.titleKo ?? slug,
+    descriptionEn: options.descriptionEn ?? "",
+    descriptionKo: options.descriptionKo ?? "",
+    publishedAt: options.publishedAt ?? null,
+  };
 }
 
 /** @returns {Map<string, object>} */
@@ -67,12 +103,7 @@ export function loadPublishedPostIndex(root) {
       if (!fs.existsSync(filePath)) continue;
       const { data } = matter(fs.readFileSync(filePath, "utf8"));
       if (locale === "en") {
-        const robots = String(data.robots ?? "").toLowerCase();
-        if (
-          data.noindex === true ||
-          data.noindex === "true" ||
-          /\bnoindex\b/.test(robots)
-        ) {
+        if (isNoindexData(data)) {
           // Quarantined for AdSense quality — keep slug valid for links, skip related picks
           continue;
         }
@@ -97,8 +128,12 @@ export function loadPublishedPostIndex(root) {
   return index;
 }
 
+export function listIndexablePublishedSlugs(root) {
+  return [...loadPublishedPostIndex(root).keys()];
+}
+
 export function scoreRelatedness(source, candidate) {
-  if (source.slug === candidate.slug) return -1;
+  if (!source || !candidate || source.slug === candidate.slug) return -1;
 
   let score = 0;
   const srcTopic = source.topic ?? {};
@@ -171,14 +206,14 @@ function parseExistingLinks(sectionText, locale, selfSlug, index) {
     links.push({
       slug: targetSlug,
       blurb: blurb?.trim() || null,
-      score: scoreRelatedness(index.get(selfSlug), index.get(targetSlug)),
+      score: scoreRelatedness(index.get(selfSlug) ?? { slug: selfSlug }, index.get(targetSlug)),
     });
   }
 
   return links;
 }
 
-function pickRelatedSlugs(source, index, existingLinks, options = {}) {
+export function pickRelatedSlugs(source, index, existingLinks, options = {}) {
   const maxLinks = options.maxLinks ?? MAX_RELATED_GUIDE_LINKS;
   const minLinks = options.minLinks ?? MIN_RELATED_GUIDE_LINKS;
   const others = [...index.keys()].filter((s) => s !== source.slug);
@@ -186,6 +221,7 @@ function pickRelatedSlugs(source, index, existingLinks, options = {}) {
 
   const selected = new Map();
   for (const link of existingLinks) {
+    if (!index.has(link.slug) || link.slug === source.slug) continue;
     selected.set(link.slug, {
       slug: link.slug,
       blurb: link.blurb,
@@ -239,6 +275,27 @@ function insertHeadingIndex(lines) {
   return lines.length;
 }
 
+/**
+ * Drop markdown links to published-but-noindex (or missing) posts.
+ * Keeps the visible anchor text so the sentence still reads.
+ */
+export function unlinkNonIndexableBlogLinks(body, locale, index, selfSlug) {
+  const prefix = `/${locale}/blog/`;
+  const escaped = prefix.replaceAll("/", "\\/");
+  const re = new RegExp(`\\[([^\\]]+)\\]\\(${escaped}([a-z0-9][a-z0-9-]*)\\)`, "g");
+  const repairs = [];
+  const next = body.replace(re, (full, text, target) => {
+    if (target === selfSlug || index.has(target)) return full;
+    repairs.push(`unlinked /${locale}/blog/${target}`);
+    return text;
+  });
+  return {
+    body: next,
+    changed: next !== body,
+    repairs,
+  };
+}
+
 /** @returns {{ body: string, repairs: string[], changed: boolean }} */
 export function repairRelatedGuidesInBody(
   body,
@@ -248,16 +305,13 @@ export function repairRelatedGuidesInBody(
   options = {},
 ) {
   const repairs = [];
-  if (!index.has(slug)) {
-    return { body, repairs, changed: false };
-  }
+  const source = index.get(slug) ?? options.source ?? syntheticSource(slug, options);
 
   // HTML drafts already carry Related guides — skip markdown insertion (prevents duplicate H2).
   if (hasRelatedGuidesSection(body) && /<html[\s>]|<h2[\s>]/i.test(body)) {
     return { body, repairs, changed: false };
   }
 
-  const source = index.get(slug);
   const lines = body.split("\n");
   const range = findRelatedSectionRange(lines, locale);
   const existingSectionText = range
@@ -297,7 +351,7 @@ export function repairRelatedGuidesInBody(
   const afterCount = picked.length;
   if (newBody !== body.trim()) {
     repairs.push(
-      `${slug}/${locale}.md: Related guides ${beforeCount} → ${afterCount} links (relevance order, max ${MAX_RELATED_GUIDE_LINKS})`,
+      `${slug}/${locale}.md: Related guides ${beforeCount} → ${afterCount} links (indexable only, max ${MAX_RELATED_GUIDE_LINKS})`,
     );
   }
 
@@ -321,16 +375,34 @@ export function repairRelatedGuidesForPost(root, slug, options = {}) {
     const { data, content } = matter(raw);
     if (data.draft && !options.includeDrafts) continue;
 
-    const result = repairRelatedGuidesInBody(
-      content.trim(),
-      locale,
+    const source = index.get(slug) ?? {
       slug,
-      index,
-      options,
-    );
+      topic: inferPostTopic(slug, data),
+      tags: Array.isArray(data.tags) ? data.tags : [],
+      titleEn: String(data.title ?? slug),
+      titleKo: String(data.title ?? slug),
+      descriptionEn: String(data.description ?? ""),
+      descriptionKo: String(data.description ?? ""),
+      publishedAt: data.publishedAt ?? data.date ?? null,
+    };
 
-    if (result.changed) {
-      writeLocaleFileWithBump(filePath, data, result.body, fs, matter);
+    let body = content.trim();
+    const result = repairRelatedGuidesInBody(body, locale, slug, index, {
+      ...options,
+      source,
+    });
+    if (result.changed) body = result.body;
+
+    const unlinked = unlinkNonIndexableBlogLinks(body, locale, index, slug);
+    if (unlinked.changed) {
+      body = unlinked.body;
+      allRepairs.push(
+        ...unlinked.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+      );
+    }
+
+    if (result.changed || unlinked.changed) {
+      writeLocaleFileWithBump(filePath, data, body, fs, matter);
       anyChanged = true;
     }
     allRepairs.push(...result.repairs);

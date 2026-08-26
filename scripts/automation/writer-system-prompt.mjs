@@ -113,7 +113,7 @@ Target **band A (≥75)** and avoid low-value flags. Every draft MUST hit these 
 - Ad placeholders, AdSense scripts, sponsored filler
 - Formulaic TOP-5 title templates
 - Hanja/CJK ideographs in Korean; hangul-latin typos
-- Draft/preview URLs or unpublished slugs in Related guides
+- Draft/preview URLs, unpublished slugs, or noindex/quarantined slugs in Related guides
 - Thin FAQ or template FAQ questions
 - In-article "## Analysis methodology" / "## 분석 방법론" stump
 - Missing named models/brands (triggers \`generic-no-models\` AdSense flag)

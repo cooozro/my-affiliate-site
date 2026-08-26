@@ -20,7 +20,7 @@ imageSearchKeywords:
   - rechargeable fan LED lantern power bank
   - family heatwave preparedness
   - portable power station home outage
-updatedAt: '2026-08-26T01:40:02.200Z'
+updatedAt: '2026-08-26T09:45:41.030Z'
 coverImage: >-
   /images/posts/2026-heatwave-blackout-home-readiness-checklist/portable-power-station-cover.jpg
 coverImageAlt: portable power station and power bank carried for apartment blackout readiness
@@ -212,11 +212,11 @@ publishedAt: '2026-07-22T04:40:08.419Z'
 
 ## 관련 가이드
 
-- [휴대용 파워스테이션 구매 가이드: 캠핑·여행·정전을 위한 와트시 우선](/ko/blog/2026-portable-power-stations-buying-guide) — 여름 캠핑·로드트립·장마철 정전용 파워스테이션을 용량 우선으로 비교합니다 — 인산철 수명, 충전 시간, 3년 사이클당 비용까지 따집니다.
-- [무더위 수분 보충: 정수기 5종 비교 — 상판형 vs 싱크대 하부, 필터 수명, TDS, 설치비](/ko/blog/2026-water-purifiers-buying-guide) — 2026 여름 주방용 정수기 5종 — 상판형·싱크대 하부 설치, 필터 교체 비용, TDS 저감, 무더위 수분 보충 시나리오별 추천.
-- [여름 주방·오픈형 평면, 1~4인 가구 냉장고는 용량·kWh·소음으로 고른다](/ko/blog/2026-refrigerators-buying-guide) — LG·삼성·GE·Frigidaire·Haier 프렌치 도어 5종 — 가구당 용량, kWh, 오픈 주방 소음을 비교한 2026 여름 구매 가이드.
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — 여름 침실·재택 공간용 전기 선풍기 5종을 풍량(CFM), 수면 소음(dB), 에어컨 대비 소비전력 기준으로 비교한 2026년 구매 가이드입니다.
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 2026년 가성비 보조배터리 5종을 용량, USB-C PD 와트, 무게, 인증, 반품률 데이터로 비교했습니다. 여행·출퇴근별 최적 선택 가이드.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 ## 최종 평가
 
 우선순위는 **공공 지침, 실제로 갈 수 있는 냉방 장소, 가족 통신, 물과 식품 판단, 그다음 예비 제품**입니다. 지역 기관이 이동을 안내하거나 누군가 즉시 위험한 상태라면 떠나거나 도움을 요청하세요. 선풍기, 랜턴, 대형 배터리가 있다는 이유로 더운 아파트를 안전하다고 오해하면 안 됩니다.

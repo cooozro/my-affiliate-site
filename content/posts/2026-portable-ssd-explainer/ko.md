@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 13595074
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/13595074/pexels-photo-13595074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T01:40:02.259Z'
+updatedAt: '2026-08-26T09:45:03.389Z'
 publishedAt: '2026-07-05T03:33:06.533Z'
 ---
 ## 편집부 개요
@@ -155,11 +155,11 @@ NAND 종류가 계산을 바꿉니다.
 
 ## 관련 가이드
 
-- [여름용 예산 태블릿: 여행 독서·영상·방학 스크린 타임](/ko/blog/2026-summer-budget-tablets-buying-guide) — 25만 원대 이하 태블릿 5종을 디스플레이·저장공간·스타일러스·앱 스토어 기준으로 비교. 여름 여행 독서·기내 영상·방학 스크린 타임에 맞춘 구매 가이드.
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 기숙사·원룸 이사 때 케이블·책상 공간과 백업 드라이브
-- [여행 액션캠: 방수 깊이·손떨림 보정·마운트 생태계로 고르기](/ko/blog/2026-action-cameras-buying-guide) — 여름 여행에서 SSD를 가장 빨리 채우는 4K·60 fps
-- [가성비 모니터, 1080p·1440p보다 패널 타입이 먼저다](/ko/blog/2026-budget-monitors-buying-guide) — 외장 저장 4K 미리보기로 USB 대역을 쓰는 편집 환경
-- [비행기에 들고 탈 보조배터리, Wh·PD만 보면 선택이 쉬워진다](/ko/blog/2026-budget-power-banks-guide) — 콘센트가 부족한 야외에서 노트북·폰 충전
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
+- [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 ## 핵심 정리
 
 1. **USB 속도 등급**(5 vs 10 vs 20 Gbps)은 포트·케이블·외장함이 맞을 때만 의미 있고, 아니면 못 쓰는 여유만 삽니다.

@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: '3183150'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-07-20T08:28:51.477Z'
+updatedAt: '2026-08-26T09:45:03.397Z'
 publishedAt: '2026-07-20T00:05:21.473Z'
 ---
 ## Editorial Overview
@@ -244,11 +244,11 @@ Reserve **15–20%** for the hidden kit: HDMI cable and VESA arm (monitor), extr
 
 ## Related guides
 
-- [Travel-Ready Power Banks: How Wh and PD Wattage Change the Pick](/en/blog/2026-budget-power-banks-guide) — Anker-class PD cross-check
+- [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
+- [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
+- [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — portable audio scenarios
-- [Can a Fan Cut Your Summer AC Bill? Five Models by CFM, dB, and Daily kWh](/en/blog/2026-electric-fans-buying-guide) — circulator vs tower detail
-- [Small-Room Air Purifiers: CADR, Filter Math, Noise, and Running Costs](/en/blog/2026-air-purifiers-guide) — HEPA sizing and filter TCO
-- [1080p vs 1440p on a Budget: Panel Type Decides More Than the Logo](/en/blog/2026-budget-monitors-buying-guide) — QHD vs FHD desk picks
+- [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
 ## Final Verdict
 
 Under a hard **$300 / {{krw:300}}** ceiling, the winning aisle is the one that removes the **most repeated summer friction**, not the one with the flashiest unboxing. Editorial standard after cross-checks: fund **heat sensation or sealed-room air quality** before leisure audio when nights are miserable; fund **desk pixels** when weekday screen hours dominate; fund **portable Wh** when the household lives between outlets outdoors.

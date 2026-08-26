@@ -22,6 +22,7 @@ import {
 } from "./content-policy.mjs";
 import {
   repairRelatedGuidesInBody,
+  unlinkNonIndexableBlogLinks,
   MAX_RELATED_GUIDE_LINKS,
   loadPublishedPostIndex,
 } from "../related-guides.mjs";
@@ -46,6 +47,12 @@ import {
   dedupeEditorialBlocks,
   countConsecutiveDuplicateParagraphs,
 } from "../editorial-block-dedupe.mjs";
+import { repairShortlistTables, hasClonedShortlistCells } from "../shortlist-table.mjs";
+import { auditEditorialTransparency } from "../editorial-transparency.mjs";
+import {
+  hasOrphanShortlistAnchor,
+  hasPipelineHtmlComment,
+} from "../site-engine/index.mjs";
 import { repairModelDeepDiveBody } from "../repair-model-deep-dive-body.mjs";
 import {
   coverFileExists,
@@ -259,12 +266,30 @@ export function repairPostLocale(root, slug, locale) {
   }
 
   const postIndex = loadPublishedPostIndex(root);
-  // New drafts are not in the published index — still rewrite Related guides to live slugs.
+  // New drafts are not in the published index — still rewrite Related guides to indexable slugs.
   if (!isIntegrityExempt(slug, data)) {
-    const related = repairRelatedGuidesInBody(body, locale, slug, postIndex);
+    const related = repairRelatedGuidesInBody(body, locale, slug, postIndex, {
+      source: {
+        slug,
+        topic: inferPostTopic(slug, data),
+        tags: Array.isArray(data.tags) ? data.tags : [],
+        titleEn: String(data.title ?? slug),
+        titleKo: String(data.title ?? slug),
+        descriptionEn: String(data.description ?? ""),
+        descriptionKo: String(data.description ?? ""),
+        publishedAt: data.publishedAt ?? data.date ?? null,
+      },
+    });
     if (related.changed) {
       body = related.body;
       repairs.push(...related.repairs);
+    }
+    const unlinked = unlinkNonIndexableBlogLinks(body, locale, postIndex, slug);
+    if (unlinked.changed) {
+      body = unlinked.body;
+      repairs.push(
+        ...unlinked.repairs.map((r) => `${slug}/${locale}.md: ${r}`),
+      );
     }
   }
 
@@ -295,6 +320,16 @@ export function repairPostLocale(root, slug, locale) {
     if (deduped.changed) {
       body = deduped.body;
       repairs.push(...deduped.repairs);
+    }
+  }
+
+  if (!isIntegrityExempt(slug, data)) {
+    const shortlist = repairShortlistTables(body, locale, slug);
+    if (shortlist.changed) {
+      body = shortlist.body;
+      repairs.push(
+        `${slug}/${locale}.md: repaired shortlist table / pipeline comments / numbered stump`,
+      );
     }
   }
 
@@ -353,6 +388,21 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
   }
 
   const relatedCount = countRelatedGuideLinks(body);
+  const relatedSection = body.match(
+    /##\s*(Related guides|관련 가이드)[\s\S]*?(?=\n##\s|$)/i,
+  );
+  if (relatedSection) {
+    const indexable = loadPublishedPostIndex(root);
+    for (const match of relatedSection[0].matchAll(INTERNAL_BLOG_LINK_RE)) {
+      const target = match[2];
+      if (target !== slug && !indexable.has(target)) {
+        addError(
+          bucket,
+          `${label}: Related guides links to noindex/unpublished ${target}`,
+        );
+      }
+    }
+  }
   if (relatedCount < MIN_RELATED_GUIDES_PUBLISH) {
     if (phase === "publish") {
       addError(
@@ -415,6 +465,16 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
       bucket,
       `${label}: ${dupParagraphs} consecutive duplicate paragraph(s) (editorial stump / pad loop)`,
     );
+  }
+
+  if (hasPipelineHtmlComment(body)) {
+    addError(bucket, `${label}: pipeline HTML comment leaked into body`);
+  }
+  if (hasOrphanShortlistAnchor(body)) {
+    addError(bucket, `${label}: numbered shortlist decision-anchor stump`);
+  }
+  if (hasClonedShortlistCells(body)) {
+    addError(bucket, `${label}: shortlist 근거/메모 (or Evidence/Note) cloned across rows`);
   }
 
   for (const issue of auditContentPolicyTitle(String(data.title ?? ""), locale, label)) {
@@ -482,6 +542,19 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
         `${label}: currency placeholders without liveData:true — will leak raw template text`,
       );
     }
+  }
+
+  const editorial = auditEditorialTransparency(body, {
+    profile,
+    title: String(data.title ?? ""),
+    liveData: Boolean(data.liveData),
+  });
+  for (const message of editorial.errors) {
+    if (phase === "publish") addError(bucket, `${label}: ${message}`);
+    else addWarning(bucket, `${label}: ${message}`);
+  }
+  for (const message of editorial.warnings) {
+    addWarning(bucket, `${label}: ${message}`);
   }
 
   if (/20\d{2}/.test(String(data.title ?? ""))) {

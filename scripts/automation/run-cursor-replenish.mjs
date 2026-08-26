@@ -53,7 +53,7 @@ import {
 } from "../lib/guardian/content-strategy.mjs";
 import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { isMetaTopicId } from "../lib/content-angles.mjs";
-import { listPublishedSlugs } from "../lib/content-quality.mjs";
+import { loadPublishedPostIndex } from "../lib/related-guides.mjs";
 import {
   isRequestTopicStale,
   removeReplenishSlugArtifacts,
@@ -74,7 +74,9 @@ function buildCursorPrompt(request) {
   const contentProfile = request.contentProfile ?? "buying-guide";
   const writingMode = request.writingMode ?? "stable";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
-  const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
+  const publishedSlugs = [...loadPublishedPostIndex(process.cwd()).keys()]
+    .sort()
+    .join(", ");
   const reservedSlugs = reservedSlugListForPrompt().join(", ");
   const coverage = getTopicFormatCoverage();
   const roadmapPhase = getRoadmapPhase(coverage);
@@ -123,7 +125,7 @@ Content requirements (each locale):
 - **FAQ section** (\`## FAQ\` EN / \`## 자주 묻는 질문\` KO) with ≥3 \`###\` Q&A pairs — required for publish gate
 - Honest sourcing (manufacturer specs, listed prices, open reviews). Do NOT include an Analysis methodology section in the body — that lives on /about
 - Vary sentence structure, transitions, and table layout versus other articles on this site
-- Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these published slugs: ${publishedSlugs}
+- Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these indexable (non-noindex) published slugs: ${publishedSlugs}
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:

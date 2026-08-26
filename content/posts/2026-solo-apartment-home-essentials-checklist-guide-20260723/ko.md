@@ -31,7 +31,7 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-08-26T01:40:02.298Z'
+updatedAt: '2026-08-26T09:45:03.394Z'
 publishedAt: '2026-07-24T07:56:24.703Z'
 ---
 ## 편집부 개요
@@ -208,11 +208,11 @@ publishedAt: '2026-07-24T07:56:24.703Z'
 
 ## 관련 가이드
 
-- [여름 1인 원룸 폭염 체크리스트: 선풍기·공기·습도·책상·저열 조리](/ko/blog/2026-summer-solo-heat-essentials-checklist) — 폭염 초점 동반 점검
-- [1인 가구 필수 가전 5시나리오 — 냉방·공기·이어폰·에어프라이어·로봇청소](/ko/blog/2026-solo-apartment-home-essentials-scenario-guide) — 게이트 통과 후 시나리오 픽
-- [원룸·투룸 로봇청소기, 바닥·반려·여름 습기에 맞는 시나리오별 선택](/ko/blog/2026-robot-vacuums-scenario-guide) — 여유 통과 후 도크·일정 시나리오
-- [폭염·방학철 작은 방, 선풍기는 풍량·소음·전기료로 고른다](/ko/blog/2026-electric-fans-buying-guide) — CFM·수면 소음 심층 표
-- [폭염·냉방 시즌, 소형방 공기청정기는 CADR과 필터비로 고른다](/ko/blog/2026-air-purifiers-guide) — 15–25㎡ 밀폐 방 필터 TCO
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 ## 최종 평가
 
 사례 원룸은 브랜드가 틀려서가 아니라 **평면도를 테이프로 재기 전에 다섯 카테고리가 결제**되어서 실패했습니다. 1인 여름 임대에서 우선순위는 **통로 여유 → 선풍기/냉각 경로 → CADR 맞춤 청정기 → 회로 안전 에어프라이어 → 이어폰 소음 예산 → 도크 공간이 있을 때만 로봇** — 그다음 {{today_ko}} 기준 필터·봉투·kWh 3년 표입니다.
