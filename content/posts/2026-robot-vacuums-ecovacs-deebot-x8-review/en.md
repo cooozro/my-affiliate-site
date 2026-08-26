@@ -22,9 +22,7 @@ createdAt: '2026-08-26T13:30:12.440Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-ecovacs-deebot-x8-review/ecovacs-deebot-x8-pro-omni-product-photo-ecovacs-cover.jpg
-coverImageAlt: 'Ecovacs Deebot X8 robot vacuum product photo'
-  Ecovacs DEEBOT X8 PRO OMNI product cut for editorial deep-dive review (stock
-  photo illustration) — Ecovacs DEEBOT X8 PRO on a hardwood floor
+coverImageAlt: 'Ecovacs Deebot X8 PRO OMNI robot vacuum on a hardwood floor'
 coverImageAltKo: >-
   Ecovacs 에코백스 X8 PRO OMNI 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — 마루 바닥의 Ecovacs DEEBOT
   X8 PRO
