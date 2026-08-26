@@ -12,6 +12,7 @@ contentProfile: buying-guide
 topicId: induction-cooktops
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - induction cooktop kitchen

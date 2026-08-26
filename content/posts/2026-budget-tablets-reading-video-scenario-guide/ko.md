@@ -9,6 +9,7 @@ tags:
   - S펜 태블릿
   - 태블릿 비교
 draft: false
+noindex: true
 contentProfile: scenario-guide
 topicId: tablet-budget
 topicCluster: tablets

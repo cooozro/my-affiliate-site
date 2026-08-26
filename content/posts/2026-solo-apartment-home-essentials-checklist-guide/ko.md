@@ -16,6 +16,7 @@ topicId: meta-solo-apartment-essentials
 topicCluster: household-solo
 writingMode: benchmark
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-solo-apartment-home-essentials-checklist-guide/small-apartment-studio-essentials-cover.jpg

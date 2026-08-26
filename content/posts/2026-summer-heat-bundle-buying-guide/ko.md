@@ -11,6 +11,7 @@ tags:
   - 수분 보충
   - 폭염
 draft: false
+noindex: true
 contentProfile: buying-guide
 topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting

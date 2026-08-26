@@ -14,6 +14,7 @@ tags:
 contentProfile: buying-guide
 topicId: action-cameras
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-action-cameras-buying-guide/action-camera-outdoor-summer-action-cam-travel-m-cover.jpg

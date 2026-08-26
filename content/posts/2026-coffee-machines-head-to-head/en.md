@@ -14,6 +14,7 @@ contentProfile: head-to-head
 topicId: coffee-machines
 writingMode: stable
 draft: false
+noindex: true
 liveData: false
 coverImage: >-
   /images/posts/2026-coffee-machines-head-to-head/espresso-coffee-machine-kitchen-coffee-maker-cover.jpg

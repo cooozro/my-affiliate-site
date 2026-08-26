@@ -12,6 +12,7 @@ contentProfile: head-to-head
 topicId: wireless-earbuds
 writingMode: benchmark
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - wireless earbuds

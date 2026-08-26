@@ -9,6 +9,7 @@ tags:
   - 타이머
   - 세탁 관리
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances

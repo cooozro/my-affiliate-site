@@ -11,6 +11,7 @@ tags:
   - JBL Charge 6
   - IP66 speaker
 draft: false
+noindex: true
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio

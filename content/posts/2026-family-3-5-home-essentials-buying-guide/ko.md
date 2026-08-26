@@ -15,6 +15,7 @@ topicCluster: household-family
 writingMode: benchmark
 toneVariant: question-led
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - family living room home appliances

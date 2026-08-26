@@ -13,6 +13,7 @@ tags:
 contentProfile: checklist
 topicId: webcams
 draft: false
+noindex: true
 liveData: false
 coverImage: /images/posts/2026-webcams-checklist/webcams-remote-work-cover.jpg
 coverImageAlt: webcam in a home interior

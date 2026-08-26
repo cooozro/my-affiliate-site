@@ -16,6 +16,7 @@ contentProfile: buying-guide
 topicId: refrigerators
 topicCluster: large-appliances
 draft: false
+noindex: true
 liveData: false
 createdAt: '2026-07-09T00:20:00.000Z'
 updatedAt: '2026-08-20T08:09:46.027Z'

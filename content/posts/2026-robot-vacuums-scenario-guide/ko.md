@@ -11,6 +11,7 @@ tags:
 contentProfile: scenario-guide
 topicId: robot-vacuums
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-scenario-guide/robot-vacuum-smart-home-robot-vacuum-hardwood-fl-cover.jpg

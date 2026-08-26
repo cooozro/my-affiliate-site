@@ -14,6 +14,7 @@ topicId: meta-under-300-cross-category
 topicCluster: price-tier-300
 writingMode: benchmark
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - budget gadgets

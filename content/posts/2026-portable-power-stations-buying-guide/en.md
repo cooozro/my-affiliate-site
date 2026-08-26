@@ -18,6 +18,7 @@ topicCluster: power-charging
 writingMode: stable
 toneVariant: scenario-first
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - portable power station camping

@@ -11,6 +11,7 @@ tags:
   - Energy Star
   - Midea U-Shaped
 draft: false
+noindex: true
 contentProfile: model-deep-dive
 topicId: window-ac
 topicCluster: air-conditioning

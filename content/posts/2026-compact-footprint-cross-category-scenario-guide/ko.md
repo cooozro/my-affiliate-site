@@ -15,6 +15,7 @@ topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: data-driven
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - compact appliances small apartment

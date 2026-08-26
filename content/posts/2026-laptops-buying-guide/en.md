@@ -14,6 +14,7 @@ contentProfile: buying-guide
 topicId: laptops
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-laptops-buying-guide/laptop-desk-workspace-student-laptop-cover.jpg

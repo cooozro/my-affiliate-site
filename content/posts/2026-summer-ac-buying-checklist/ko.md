@@ -12,6 +12,7 @@ contentProfile: checklist
 topicId: portable-ac
 topicCluster: air-conditioning
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg

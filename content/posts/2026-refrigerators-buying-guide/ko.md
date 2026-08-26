@@ -14,6 +14,7 @@ contentProfile: buying-guide
 topicId: refrigerators
 topicCluster: large-appliances
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - modern refrigerator kitchen

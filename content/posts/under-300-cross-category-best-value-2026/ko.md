@@ -9,6 +9,7 @@ tags:
   - 여름 가전
   - 구매 가이드
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: meta-under-300-cross-category
 topicCluster: cross-cutting

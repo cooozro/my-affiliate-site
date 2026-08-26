@@ -13,6 +13,7 @@ tags:
   - home appliance
   - energy cost
 draft: false
+noindex: true
 contentProfile: model-deep-dive
 topicId: dehumidifiers
 topicCluster: home-appliances

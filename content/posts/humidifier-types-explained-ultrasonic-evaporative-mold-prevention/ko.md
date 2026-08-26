@@ -9,6 +9,7 @@ tags:
   - 곰팡이 방지
   - 가전제품
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: humidifiers
 topicCluster: home-appliances

@@ -17,6 +17,7 @@ topicCluster: household-type
 writingMode: benchmark
 toneVariant: case-study
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - family summer kitchen appliances

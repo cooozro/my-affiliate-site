@@ -6,6 +6,7 @@ description: >-
 date: '2026-06-25'
 contentProfile: editorial
 draft: false
+noindex: true
 tags:
   - 방법론
   - 기술 리뷰

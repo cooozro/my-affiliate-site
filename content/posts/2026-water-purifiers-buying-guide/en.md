@@ -16,6 +16,7 @@ contentProfile: buying-guide
 topicId: water-purifiers
 topicCluster: kitchen-appliances
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - water purifier

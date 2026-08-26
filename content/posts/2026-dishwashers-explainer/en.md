@@ -14,6 +14,7 @@ contentProfile: explainer
 topicId: dishwashers
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - dishwasher kitchen

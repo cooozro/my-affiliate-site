@@ -14,6 +14,7 @@ contentProfile: head-to-head
 topicId: fitness-trackers
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-head-to-head/fitness-tracker-wrist-cover.jpg

@@ -13,6 +13,7 @@ tags:
   - Pixel 10 Pro
   - smartphone buying guide
 draft: false
+noindex: true
 contentProfile: buying-guide
 topicId: flagship-smartphones
 topicCluster: smartphones

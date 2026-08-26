@@ -10,6 +10,7 @@ tags:
   - 구매 가이드
 contentProfile: buying-guide
 draft: false
+noindex: true
 liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
 coverImageAlt: 책상의 모니터

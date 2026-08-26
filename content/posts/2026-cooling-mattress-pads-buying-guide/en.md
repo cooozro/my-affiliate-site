@@ -18,6 +18,7 @@ topicCluster: home-comfort
 writingMode: stable
 toneVariant: scenario-first
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - cooling mattress pad bed

@@ -15,6 +15,7 @@ tags:
 contentProfile: scenario-guide
 topicId: gaming-consoles
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-gaming-consoles-scenario-guide/game-console-living-room-playstation-xbox-contro-cover.jpg

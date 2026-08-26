@@ -14,6 +14,7 @@ contentProfile: buying-guide
 topicId: tablet-budget
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 coverImage: /images/posts/2026-summer-budget-tablets-buying-guide/tablet-on-desk-cover.jpg
 coverImageAlt: 책상 위 태블릿

@@ -15,6 +15,7 @@ tags:
 contentProfile: scenario-guide
 topicId: cordless-vacuums
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - cordless stick vacuum cleaner

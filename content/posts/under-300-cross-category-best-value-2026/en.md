@@ -11,6 +11,7 @@ tags:
   - summer tech
   - buying guide
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: meta-under-300-cross-category
 topicCluster: cross-cutting

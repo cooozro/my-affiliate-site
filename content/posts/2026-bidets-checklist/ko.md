@@ -13,6 +13,7 @@ tags:
 contentProfile: checklist
 topicId: bidets
 draft: false
+noindex: true
 coverImage: /images/posts/2026-bidets-checklist/modern-bathroom-toilet-seat-cover.jpg
 coverImageAlt: 현대적인 욕실의 변기 시트 커버
 coverImageCredit: Photo by Curology / Unsplash

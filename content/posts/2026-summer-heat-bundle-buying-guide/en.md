@@ -11,6 +11,7 @@ tags:
   - hydration
   - heat wave
 draft: false
+noindex: true
 contentProfile: buying-guide
 topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting

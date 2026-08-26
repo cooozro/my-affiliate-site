@@ -14,6 +14,7 @@ contentProfile: head-to-head
 topicId: portable-ac
 topicCluster: air-conditioning
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-portable-vs-window-ac-head-to-head/portable-air-conditioner-window-air-conditioner--cover.jpg

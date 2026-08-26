@@ -14,6 +14,7 @@ tags:
   - sony srs-xe300
   - summer audio
 draft: false
+noindex: true
 contentProfile: head-to-head
 topicId: bluetooth-speakers
 topicCluster: audio

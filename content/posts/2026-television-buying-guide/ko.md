@@ -11,6 +11,7 @@ tags:
 contentProfile: buying-guide
 topicId: television
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - smart TV

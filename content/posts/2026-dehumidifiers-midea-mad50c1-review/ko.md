@@ -11,6 +11,7 @@ tags:
   - 가전제품
   - 전기요금
 draft: false
+noindex: true
 contentProfile: model-deep-dive
 topicId: dehumidifiers
 topicCluster: home-appliances

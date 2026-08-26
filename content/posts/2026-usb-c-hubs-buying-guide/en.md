@@ -14,6 +14,7 @@ contentProfile: buying-guide
 writingMode: stable
 topicId: usb-c-hubs
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - usb c hub laptop

@@ -11,6 +11,7 @@ tags:
 contentProfile: scenario-guide
 topicId: washing-machines
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - front load washing machine

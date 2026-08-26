@@ -13,6 +13,7 @@ tags:
 contentProfile: checklist
 topicId: air-fryers
 draft: false
+noindex: true
 liveData: false
 coverImage: /images/posts/2026-air-fryers-checklist/air-fryer-kitchen-cover.jpg
 coverImageAlt: air fryer in a home interior

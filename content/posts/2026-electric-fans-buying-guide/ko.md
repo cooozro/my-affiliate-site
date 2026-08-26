@@ -14,6 +14,7 @@ contentProfile: buying-guide
 topicId: electric-fans
 topicCluster: air-conditioning
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - electric fan

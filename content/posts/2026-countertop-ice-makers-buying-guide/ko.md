@@ -12,6 +12,7 @@ contentProfile: buying-guide
 topicId: ice-makers
 topicCluster: kitchen-appliances
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - countertop ice maker kitchen

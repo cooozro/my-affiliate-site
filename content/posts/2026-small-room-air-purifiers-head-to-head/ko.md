@@ -9,6 +9,7 @@ tags:
   - HEPA 필터
   - 유지비용
 draft: false
+noindex: true
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances

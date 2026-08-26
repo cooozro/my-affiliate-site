@@ -19,6 +19,7 @@ topicCluster: household-type
 writingMode: benchmark
 toneVariant: data-driven
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - solo apartment living room summer

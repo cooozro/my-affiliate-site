@@ -11,6 +11,7 @@ tags:
   - mold prevention
   - home appliances
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: humidifiers
 topicCluster: home-appliances

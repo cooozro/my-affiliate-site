@@ -12,6 +12,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-dehumidifiers-guide/home-dehumidifier-room-dehumidifier-appliance-cover.jpg

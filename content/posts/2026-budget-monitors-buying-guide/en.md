@@ -13,6 +13,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 draft: false
+noindex: true
 liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
 coverImageAlt: computer monitor on a workspace desk

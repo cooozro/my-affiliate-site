@@ -3,6 +3,7 @@ title: '[aipick SEO 정밀 분석: 최상단 노출 리포트]'
 description: '어드민 전용 SEO 자율 분석 리포트 — SERP 구조, JSON-LD, 저품질 방어, GA4 7일 유입.'
 date: '2026-08-14'
 draft: true
+noindex: true
 contentProfile: editorial
 tags:
   - SEO

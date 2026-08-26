@@ -9,6 +9,7 @@ tags:
   - 픽셀 10 프로
   - 스마트폰 구매 가이드
 draft: false
+noindex: true
 contentProfile: buying-guide
 topicId: flagship-smartphones
 topicCluster: smartphones

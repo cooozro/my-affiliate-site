@@ -11,6 +11,7 @@ tags:
   - timer
   - wash care
 draft: false
+noindex: true
 contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances

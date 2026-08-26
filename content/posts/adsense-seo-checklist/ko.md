@@ -3,6 +3,7 @@ title: 애드센스 승인을 위한 SEO 체크리스트
 description: 구글 애드센스 승인과 검색 노출을 동시에 잡기 위한 필수 SEO 점검 항목을 정리했습니다.
 date: '2026-08-11'
 draft: true
+noindex: true
 tags:
   - SEO
   - internal

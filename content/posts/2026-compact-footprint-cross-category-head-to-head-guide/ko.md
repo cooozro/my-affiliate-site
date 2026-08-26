@@ -15,6 +15,7 @@ topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: question-led
 draft: false
+noindex: true
 liveData: false
 imageSearchKeywords:
   - compact appliances small kitchen

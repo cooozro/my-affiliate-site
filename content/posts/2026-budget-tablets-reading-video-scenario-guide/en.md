@@ -13,6 +13,7 @@ tags:
   - stylus tablets
   - tablet comparison
 draft: false
+noindex: true
 contentProfile: scenario-guide
 topicId: tablet-budget
 topicCluster: tablets

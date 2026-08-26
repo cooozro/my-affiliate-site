@@ -14,6 +14,7 @@ contentProfile: explainer
 topicId: smart-home-cameras
 writingMode: stable
 draft: false
+noindex: true
 liveData: false
 coverImage: /images/posts/2026-smart-home-cameras-explainer/home-security-camera-cover.jpg
 coverImageAlt: 실내의 홈 보안 카메라

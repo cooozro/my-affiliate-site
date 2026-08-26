@@ -14,6 +14,7 @@ contentProfile: explainer
 topicId: rice-cookers
 writingMode: stable
 draft: false
+noindex: true
 liveData: false
 coverImage: >-
   /images/posts/2026-rice-cookers-explainer/electric-rice-cooker-kitchen-cover.jpg

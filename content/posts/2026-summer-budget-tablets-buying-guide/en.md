@@ -14,6 +14,7 @@ contentProfile: buying-guide
 topicId: tablet-budget
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 coverImage: /images/posts/2026-summer-budget-tablets-buying-guide/tablet-on-desk-cover.jpg
 coverImageAlt: tablet on a minimalist desk for reading

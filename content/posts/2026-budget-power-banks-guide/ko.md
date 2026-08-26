@@ -12,6 +12,7 @@ tags:
   - 구매 가이드
 contentProfile: buying-guide
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg

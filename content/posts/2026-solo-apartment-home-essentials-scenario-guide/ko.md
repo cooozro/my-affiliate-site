@@ -15,6 +15,7 @@ contentAngle: solo-apartment-essentials
 topicId: meta-solo-apartment-essentials
 topicCluster: household-solo
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-solo-apartment-home-essentials-scenario-guide/small-apartment-living-room-essentials-cover.jpg

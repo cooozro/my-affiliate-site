@@ -11,6 +11,7 @@ tags:
   - Sony SRS-XE300
   - 여름 오디오
 draft: false
+noindex: true
 contentProfile: head-to-head
 topicId: bluetooth-speakers
 topicCluster: audio

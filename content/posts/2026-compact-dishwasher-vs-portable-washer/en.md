@@ -13,6 +13,7 @@ tags:
   - small-space appliances
   - appliance head-to-head
 draft: false
+noindex: true
 contentProfile: head-to-head
 topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting

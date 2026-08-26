@@ -12,6 +12,7 @@ contentProfile: buying-guide
 topicId: clothes-dryers
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - clothes dryer laundry room

@@ -14,6 +14,7 @@ topicCluster: cooling
 writingMode: stable
 toneVariant: data-driven
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - evaporative cooler

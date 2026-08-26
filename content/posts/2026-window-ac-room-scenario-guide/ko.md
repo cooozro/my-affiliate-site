@@ -12,6 +12,7 @@ contentProfile: scenario-guide
 topicId: window-ac
 writingMode: stable
 draft: false
+noindex: true
 liveData: true
 imageSearchKeywords:
   - window air conditioner

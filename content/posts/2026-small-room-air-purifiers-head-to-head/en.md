@@ -13,6 +13,7 @@ tags:
   - HEPA filter
   - running costs
 draft: false
+noindex: true
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances

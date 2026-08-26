@@ -27,6 +27,7 @@ imageSearchKeywords:
 coverImageAltKo: 책상 위의 무선 이어폰
 updatedAt: '2026-08-14T01:38:50.797Z'
 publishedAt: '2026-06-25T08:00:00.000Z'
+noindex: true
 ---
 ## Editorial Overview
 

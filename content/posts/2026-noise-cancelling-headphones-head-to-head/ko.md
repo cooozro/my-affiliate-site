@@ -13,6 +13,7 @@ tags:
 contentProfile: head-to-head
 topicId: noise-cancelling-headphones
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-noise-cancelling-headphones-head-to-head/noise-cancelling-headphones-travel-audio-cover.jpg

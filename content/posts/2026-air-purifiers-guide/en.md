@@ -13,6 +13,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 draft: false
+noindex: true
 liveData: true
 coverImage: >-
   /images/posts/2026-air-purifiers-guide/hepa-air-purifier-room-air-cleaner-device-cover.jpg
