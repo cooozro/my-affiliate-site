@@ -2182,6 +2182,15 @@
       "contentHash": "0ab695694376a565a789e378f696934a58ba919c7359b1902591cfca487c2932",
       "provider": "pexels",
       "registeredAt": "2026-08-26T12:47:51.348Z"
+    },
+    {
+      "slug": "2026-coffee-machine-types-buying-guide",
+      "url": "https://images.pexels.com/photos/4349951/pexels-photo-4349951.jpeg",
+      "assetKey": "pexels:4349951",
+      "hash": "bc7b5abcea5391ed40ec678b60f76864275859416bb5023f7515c2a323feb314",
+      "contentHash": "bc7b5abcea5391ed40ec678b60f76864275859416bb5023f7515c2a323feb314",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:09:03.398Z"
     }
   ]
 }
