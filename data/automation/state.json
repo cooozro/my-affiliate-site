@@ -160,6 +160,12 @@
       "slug": "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
       "at": "2026-08-26T11:32:08.669Z",
       "topic": "dehumidifiers"
+    },
+    {
+      "action": "write",
+      "slug": "2026-bidets-bio-bidet-bb-2000-review",
+      "at": "2026-08-26T13:18:52.673Z",
+      "topic": "bidets"
     }
   ],
   "schedulerPaused": true,
@@ -324,7 +330,8 @@
     "head-to-head",
     "scenario-guide",
     "explainer",
-    "buying-guide"
+    "buying-guide",
+    "model-deep-dive"
   ],
   "metaAngleHistory": [
     {
@@ -389,6 +396,11 @@
       "topicId": "bluetooth-speakers",
       "modelId": "sony-xg500",
       "at": "2026-08-20T08:41:11.267Z"
+    },
+    {
+      "topicId": "bidets",
+      "modelId": "bio-bidet-bb-2000",
+      "at": "2026-08-26T13:20:01.213Z"
     }
   ],
   "schedulerPausedReason": "요미 12-draft AdSense batch (serial writes)",

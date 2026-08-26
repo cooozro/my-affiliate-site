@@ -2272,6 +2272,24 @@
       "contentHash": "5a6ddd01dd66433800994cdc0c3348d27ab99441433233105b203f9dfded993e",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:19:29.964Z"
+    },
+    {
+      "slug": "2026-bidets-bio-bidet-bb-2000-review",
+      "url": "https://pixabay.com/get/g772234bb7ccfb52a47a14271ba1e3344dd96f409763116ccbbc4d7279591267bd2c92b95116c07ae430fa18e38ff8b0358cce2643319ba3a9af2ab8dd4440fcf_1280.jpg",
+      "assetKey": "pixabay:775267",
+      "hash": "f505dd3e623956a61cbed76a8aa43e99a66c2f1818c40a3da0d70feffcb859fc",
+      "contentHash": "f505dd3e623956a61cbed76a8aa43e99a66c2f1818c40a3da0d70feffcb859fc",
+      "provider": "pixabay",
+      "registeredAt": "2026-08-26T13:20:00.786Z"
+    },
+    {
+      "slug": "2026-bidets-bio-bidet-bb-2000-review",
+      "url": "https://images.pexels.com/photos/12870153/pexels-photo-12870153.jpeg",
+      "assetKey": "pexels:12870153",
+      "hash": "538431ff37eb32f688b97c163c6423344ee00fd580d4648bbdfa04eda10b33f0",
+      "contentHash": "538431ff37eb32f688b97c163c6423344ee00fd580d4648bbdfa04eda10b33f0",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T13:20:00.989Z"
     }
   ]
 }

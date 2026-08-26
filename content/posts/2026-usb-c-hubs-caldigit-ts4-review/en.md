@@ -18,7 +18,7 @@ writingProvider: deepseek
 createdAt: '2026-08-26T13:14:37.009Z'
 coverImage: >-
   /images/posts/2026-usb-c-hubs-caldigit-ts4-review/caldigit-ts4-thunderbolt-4-dock-product-photo-ca-cover.jpg
-coverImageAlt: >-
+coverImageAlt: laptop  >-
   CalDigit TS4 Thunderbolt 4 Dock product cut for editorial deep-dive review
   (stock photo illustration) — CalDigit TS4 Thunderbolt 4
 coverImageAltKo: CalDigit 캘디짓 TS4 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — CalDigit TS4 Thunderbolt 4
