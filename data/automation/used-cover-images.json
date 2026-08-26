@@ -2039,6 +2039,15 @@
       "contentHash": "919aa855e9f35ef8402d8999941df4a80d97bb9670933a8098ae326fb9aae082",
       "provider": "press-kit",
       "registeredAt": "2026-08-21T09:27:18.573Z"
+    },
+    {
+      "slug": "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+      "url": "https://images.pexels.com/photos/4072683/pexels-photo-4072683.jpeg",
+      "assetKey": "pexels:4072683",
+      "hash": "1ab3900da867b774e82322304f7831bfb6cb38ef9b99f9e7b765b35b74e31ef7",
+      "contentHash": "1ab3900da867b774e82322304f7831bfb6cb38ef9b99f9e7b765b35b74e31ef7",
+      "provider": "pexels",
+      "registeredAt": "2026-08-26T10:41:30.798Z"
     }
   ]
 }
