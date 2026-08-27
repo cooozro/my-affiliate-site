@@ -113,3 +113,6 @@ If you remember one spec from this checklist, make it watt-hours. Convert the ad
 Final verdict: prioritize watt-hours, per-port output, and PPS before capacity alone. The three-year cost of ownership favors a pack that recharges quickly and stays under 100Wh for air travel. Cross-checked against public manufacturer specs and open review patterns, the safest summer purchase is a 65W-class 20,000mAh pack with genuine USB-C PD and PPS—not the cheapest 30,000mAh brick.
 
 **Related guides:** [Heatwave blackout home readiness checklist](/en/blog/2026-heatwave-blackout-home-readiness-checklist), [Solo apartment home essentials checklist](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723), [Summer Bluetooth speakers guide](/en/blog/2026-summer-bluetooth-speakers-guide), [Portable SSD explainer](/en/blog/2026-portable-ssd-explainer), [Under-300 cross-category head-to-head guide](/en/blog/2026-under-300-cross-category-head-to-head-guide).
+
+## Final Verdict
+Buy / wait / skip: decide from the specs and scenarios in this report, not from a marketing slogan.

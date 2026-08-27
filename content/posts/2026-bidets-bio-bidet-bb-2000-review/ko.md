@@ -27,7 +27,7 @@ modelPickId: bio-bidet-bb-2000
 modelPickBrand: Bio Bidet
 modelPickName: BB-2000 Bliss
 pressKitGallery: 'https://www.google.com/search?q=Bio%20Bidet%20BB-2000%20Bliss%20press%20kit'
-updatedAt: '2026-08-26T13:33:56.517Z'
+updatedAt: '2026-08-27T02:02:26.373Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

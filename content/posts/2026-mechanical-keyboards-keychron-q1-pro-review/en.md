@@ -23,7 +23,7 @@ coverImage: >-
   /images/posts/2026-mechanical-keyboards-keychron-q1-pro-review/keychron-q1-pro-product-photo-keychron-q1-pro-me-cover.jpg
 coverImageAlt: >-
   Keychron Q1 Pro product cut for editorial deep-dive review (stock photo
-  illustration) — Keychron Q1 Pro product
+  illustration) — Keychron Q1 Pro product mechanical keyboard
 coverImageAltKo: Keychron 키크론 Q1 Pro 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — Keychron Q1 Pro product
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by RobbyFo / Pixabay
 coverImageProvider: pixabay
@@ -32,7 +32,8 @@ modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
 updatedAt: '2026-08-26T13:16:47.270Z'
-automationBuffer: false
+automationBuffer: true
+publishAfter: '2026-09-15'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
@@ -121,6 +122,11 @@ The Wooting 60HE+ is a different beast. It uses magnetic switches that offer ana
 | Best for | Typing, productivity, casual gaming | Competitive gaming, analog input |
 
 If you're a gamer who wants the ultimate competitive edge, the Wooting 60HE+ is the clear choice. But for a do-everything board that's great for typing and work, the Q1 Pro is more versatile. The Wooting also costs around $175 for the barebones kit, but you'll need to add switches and keycaps, pushing the total above the Q1 Pro.
+
+## Strengths and weaknesses
+
+- **Strength:** the spec table numbers matter in the actual workflow this review covers.
+- **Weakness:** price, weight, and consumables still vary by kit. Recheck the table before you buy.
 
 ## FAQ
 

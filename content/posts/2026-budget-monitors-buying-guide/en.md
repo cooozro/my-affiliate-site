@@ -18,7 +18,7 @@ liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
 coverImageAlt: computer monitor on a workspace desk
 coverImageCredit: Photo by sebagee / Pixabay
-updatedAt: '2026-08-26T14:14:08.627Z'
+updatedAt: '2026-08-27T02:02:27.451Z'
 publishedAt: '2026-06-27T01:16:46.000Z'
 coverImageProvider: pixabay
 coverImageAltKo: 책상의 모니터

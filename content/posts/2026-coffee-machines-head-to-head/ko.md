@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-26T14:14:08.642Z'
+updatedAt: '2026-08-27T02:02:29.139Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
@@ -168,7 +168,7 @@ publishedAt: '2026-07-07T03:34:46.035Z'
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
-- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 ## 최종 평가
 
 공개 스펙과 시장 가격을 교차 검증한 결과, 여름 주방 가성비는 **열·캡슐 단가·우유 질감·디스케일 부담**을 루틴에 맞추는 일입니다. 카페 마케팅 사진만 따라가면 타입을 잘못 고르습니다. **실제 구매 기준으로 보면** 아침 동선부터 잠그고 고르세요. **네스프레소 버투오 팝+**는 열·초기비용·캡슐 생활, **브레빌 밤비노 플러스**는 속도·우유·원두 경제 균형, **드롱기 매그니피카 에보**는 가족 원터치 우유 음료에 맞습니다.

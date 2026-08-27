@@ -3,20 +3,19 @@ title: '삼성 T9 포터블 SSD 리뷰: 2,000 MB/s 속도, 백업용으로 가�
 description: >-
   삼성 T9 포터블 SSD를 실사용 관점에서 살펴봅니다. USB 3.2 Gen 2x2 속도, TBW 내구성, 실제 백업 작업 흐름, 구매 추천
   대상과 건너뛰어야 할 사람을 다룹니다.
-date: '2026-08-26'
+date: '2026-08-27'
 tags:
   - 삼성 T9
   - 포터블 SSD
   - USB 3.2 Gen 2x2
   - 백업 드라이브
   - SSD 리뷰
-draft: true
+draft: false
 publishAfter: '2026-08-27'
 contentProfile: model-deep-dive
 topicId: portable-ssd
 topicCluster: accessories
 writingProvider: deepseek
-createdAt: '2026-08-26T12:09:15.761Z'
 coverImage: /images/posts/2026-portable-ssd-samsung-t9-review/press-detail-400afe1a54.jpg
 coverImageAlt: Samsung T9 Portable SSD 공식 프레스킷 제품컷
 coverImageCredit: Official press image courtesy of Samsung (Press Kit / Media Gallery)
@@ -25,7 +24,8 @@ modelPickId: samsung-t9
 modelPickBrand: Samsung
 modelPickName: T9 Portable SSD
 pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/t9-portable-ssd'
-updatedAt: '2026-08-26T13:33:55.374Z'
+updatedAt: '2026-08-27T02:02:32.909Z'
+publishedAt: '2026-08-27T02:00:02.665Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

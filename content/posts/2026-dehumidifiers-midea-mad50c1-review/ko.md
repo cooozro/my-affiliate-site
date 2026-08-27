@@ -20,7 +20,7 @@ modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-08-26T14:14:08.659Z'
+updatedAt: '2026-08-27T02:02:30.408Z'
 coverImageAlt: 실내 제습기 사용 환경 제품 컷
 coverImageAltKo: 실내 제습기 사용 환경 제품 컷
 coverImage: >-
@@ -155,7 +155,7 @@ DOE/AHAM 기준으로 하루 50파인트를 제거하므로 최대 약 4,500제�
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
-- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3~5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
+- [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 ## 최종 평가
 
 Midea MAD50C1ZWS는 습한 여름에 넓은 방을 사용할 때 대부분의 사람에게 **구매**를 권합니다. 50파인트 용량, 스마트 물통 알림, 세척 가능한 필터, 강풍에서 하루 약 $1.00의 예측 가능한 에너지 비용은 실용적이고 독자 중심적인 선택입니다. 가장 큰 절충점은 내장 펌프가 없다는 점이므로, 유일한 배수 옵션이 위로 이동하는 방식이라면 Frigidaire FFAP5033W1을 선택하거나 외부 펌프를 추가하세요. 그 외의 대부분 사용자에게는 습한 지하실과 세탁실에 추천하는 대표 모델 명단에 오를 만한 믿을 수 있는 제습기입니다.

@@ -1,7 +1,5 @@
 ---
-title: >-
-  What Should You Actually Buy in a Budget Phone? Three Real-Life
-  Scenarios
+title: What Should You Actually Buy in a Budget Phone? Three Real-Life Scenarios
 description: >-
   We break down budget smartphones by real use cases: gaming, camera, and
   battery life. See which chipset, camera, and battery specs matter most for

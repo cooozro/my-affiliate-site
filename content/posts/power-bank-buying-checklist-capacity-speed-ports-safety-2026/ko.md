@@ -106,7 +106,6 @@ updatedAt: '2026-08-26T11:27:16.203Z'
 검토 시 우려: 일부 고출력 팩은 노트북과 휴대폰 동시 충전 중 따뜻해집니다. 공개 리뷰에 따르면 통풍이 나쁘면 140W 이상의 지속 출력이 20–30분 후에 스로틀링될 수 있습니다. 이것이 안전하지 않다는 뜻은 아니지만 기대할 수 있는 실제 속도가 달라집니다.
 
 ## 관련 가이드
-
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
@@ -144,3 +143,7 @@ AI Pick & Report 관련 가이드:
 - [여름 정전 대비 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist)
 - [가족 친화적 여름 장비: 시나리오 가이드](/ko/blog/2026-family-3-5-home-essentials-scenario-guide)
 - [소형 아파트 필수품: 실용 체크리스트](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723)
+
+## 최종 평가
+
+지금 사기 / 기다리기 / 건너뛰기: 본문 스펙과 사용 시나리오를 기준으로 판단하세요.

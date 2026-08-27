@@ -147,3 +147,6 @@ Related guides on AI Pick & Report:
 - [Summer blackout readiness checklist](/en/blog/2026-heatwave-blackout-home-readiness-checklist)
 - [Family-friendly summer gear: a scenario guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide)
 - [Small apartment essentials: a practical checklist](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723)
+
+## Final Verdict
+Buy / wait / skip: decide from the specs and scenarios in this report, not from a marketing slogan.

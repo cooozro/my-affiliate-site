@@ -3,20 +3,19 @@ title: 'Samsung T9 Portable SSD Review: Is 2,000 MB/s Worth It for Backup?'
 description: >-
   Hands-on look at the Samsung T9 Portable SSD: USB 3.2 Gen 2x2 speeds, TBW
   endurance, real-world backup workflows, and who should buy or skip it.
-date: '2026-08-26'
+date: '2026-08-27'
 tags:
   - Samsung T9
   - portable SSD
   - USB 3.2 Gen 2x2
   - backup drive
   - SSD review
-draft: true
+draft: false
 publishAfter: '2026-08-27'
 contentProfile: model-deep-dive
 topicId: portable-ssd
 topicCluster: accessories
 writingProvider: deepseek
-createdAt: '2026-08-26T12:09:15.761Z'
 coverImage: /images/posts/2026-portable-ssd-samsung-t9-review/press-detail-400afe1a54.jpg
 coverImageAlt: Samsung T9 Portable SSD official press kit product photo
 coverImageAltKo: Samsung T9 Portable SSD 공식 프레스킷 제품컷
@@ -26,7 +25,8 @@ modelPickId: samsung-t9
 modelPickBrand: Samsung
 modelPickName: T9 Portable SSD
 pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/t9-portable-ssd'
-updatedAt: '2026-08-26T12:09:36.585Z'
+updatedAt: '2026-08-27T11:00:00.000Z'
+publishedAt: '2026-08-27T02:00:02.665Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

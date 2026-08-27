@@ -18,7 +18,9 @@ writingProvider: deepseek
 createdAt: '2026-08-26T13:16:08.731Z'
 coverImage: >-
   /images/posts/2026-mechanical-keyboards-keychron-q1-pro-review/keychron-q1-pro-product-photo-keychron-q1-pro-me-cover.jpg
-coverImageAlt: Keychron 키크론 Q1 Pro 편집부 딥다이브용 제품 컷 (스톡 일러스트 사진) — Keychron Q1 Pro product
+coverImageAlt: >-
+  Keychron Q1 Pro product cut for editorial deep-dive review (stock photo
+  illustration) — Keychron Q1 Pro product mechanical keyboard
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by RobbyFo / Pixabay
 coverImageProvider: pixabay
 modelPickId: keychron-q1-pro
@@ -26,7 +28,8 @@ modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
 updatedAt: '2026-08-26T13:16:47.302Z'
-automationBuffer: false
+automationBuffer: true
+publishAfter: '2026-09-15'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -149,7 +152,6 @@ Wooting 60HE+는 다른 종류의 제품입니다. 자기 스위치를 사용하
 **편집부 해석:** Q1 Pro는 몇 년간 사용할 수 있는 안전하고 고품질의 구매입니다. 망설임 없이 다시 구매할 의향이 있습니다.
 
 ## 관련 가이드
-
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…

@@ -23,7 +23,8 @@ coverImageAlt: gaming console controller setup
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Erik Mclean / Pexels
 coverImageProvider: pexels
 updatedAt: '2026-08-26T13:13:53.768Z'
-automationBuffer: false
+automationBuffer: true
+publishAfter: '2026-09-14'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -131,7 +132,6 @@ Game Pass Ultimate(월 17달러)에 가입하면 Xbox 총액은 3년 동안 약 
 **건너뛰어야 할 사람:** 이 브랜드에 대한 보증 지원이 부족한 지역에 거주하거나, 다른 플랫폼에 이미 큰 디지털 라이브러리가 있다면 전환 비용이 아깝지 않을 수 있습니다. 또한 팬 소음에 민감하다면 구매 전에 조용한 방에서 콘솔을 테스트하세요.
 
 ## 관련 가이드
-
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 2026년 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?

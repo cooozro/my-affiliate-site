@@ -1,5 +1,5 @@
 ---
-title: 'Which Budget Monitor Should You Buy? A Scenario Guide'
+title: Which Budget Monitor Should You Buy? A Scenario Guide
 description: >-
   Find the best budget monitor for work, gaming, or dual use. Panel, resolution,
   refresh rate explained with real 2026 models.
