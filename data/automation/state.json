@@ -189,17 +189,22 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-27T08:31:37.042Z",
-    "issueCount": 2,
+    "at": "2026-08-27T08:43:03.958Z",
+    "issueCount": 3,
     "issues": [
       {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (17 deferred)",
         "severity": "warning"
       },
       {
+        "code": "duplicate-topic-drafts",
+        "message": "Duplicate topic drafts: robot-vacuums×2",
+        "severity": "error"
+      },
+      {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 1306min",
+        "message": "Cursor replenish pending 1318min",
         "severity": "warning"
       }
     ],
