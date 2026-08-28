@@ -345,12 +345,12 @@
       "at": "2026-08-28T06:53:41.481Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-27",
+  "lastDailyContentAuditKst": "2026-08-28",
   "lastDailyContentAudit": {
-    "at": "2026-08-27T02:02:38.465Z",
-    "postsScanned": 78,
-    "autoRepairCount": 128,
-    "manualReviewCount": 31
+    "at": "2026-08-28T06:53:54.886Z",
+    "postsScanned": 83,
+    "autoRepairCount": 133,
+    "manualReviewCount": 30
   },
   "formatDeck": [],
   "formatHistory": [

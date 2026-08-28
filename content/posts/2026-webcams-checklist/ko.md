@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 6937666
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/6937666/pexels-photo-6937666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-27T02:02:36.822Z'
+updatedAt: '2026-08-28T06:53:53.412Z'
 publishedAt: '2026-07-04T01:56:28.535Z'
 ---
 ## 편집부 개요

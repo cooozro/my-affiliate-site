@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 30708285
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/30708285/pexels-photo-30708285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-27T02:02:36.159Z'
+updatedAt: '2026-08-28T06:53:52.609Z'
 publishedAt: '2026-07-06T02:59:37.169Z'
 ---
 ## 편집부 개요

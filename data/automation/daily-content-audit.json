@@ -1,8 +1,8 @@
 {
-  "dateKst": "2026-08-27",
-  "scannedAt": "2026-08-27T02:02:38.465Z",
-  "postsScanned": 78,
-  "autoRepairCount": 128,
+  "dateKst": "2026-08-28",
+  "scannedAt": "2026-08-28T06:53:54.886Z",
+  "postsScanned": 83,
+  "autoRepairCount": 133,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -24,6 +24,13 @@
       "repairs": [
         "2026-air-purifiers-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "2026-air-purifiers-guide/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
+      ]
+    },
+    {
+      "slug": "2026-apartment-robot-vacuum-comparison",
+      "repairs": [
+        "2026-apartment-robot-vacuum-comparison/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-apartment-robot-vacuum-comparison/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
       ]
     },
     {
@@ -227,6 +234,12 @@
       ]
     },
     {
+      "slug": "2026-mechanical-keyboards-keychron-q1-pro-review",
+      "repairs": [
+        "2026-mechanical-keyboards-keychron-q1-pro-review/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
       "slug": "2026-portable-power-stations-buying-guide",
       "repairs": [
         "2026-portable-power-stations-buying-guide/en.md: repaired shortlist table / pipeline comments / numbered stump",
@@ -363,6 +376,13 @@
       ]
     },
     {
+      "slug": "2026-usb-c-hubs-caldigit-ts4-review",
+      "repairs": [
+        "2026-usb-c-hubs-caldigit-ts4-review/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "2026-usb-c-hubs-caldigit-ts4-review/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
+      ]
+    },
+    {
       "slug": "2026-washing-machines-buying-guide",
       "repairs": [
         "2026-washing-machines-buying-guide/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
@@ -433,7 +453,7 @@
       ]
     }
   ],
-  "manualReviewCount": 31,
+  "manualReviewCount": 30,
   "manualReview": [
     {
       "order": 1,
@@ -752,23 +772,6 @@
     },
     {
       "order": 19,
-      "slug": "2026-power-banks-anker-737-review",
-      "phase": "draft",
-      "issues": [
-        "2026-power-banks-anker-737-review/en.md: coverImageAlt must mention product (power bank | charger)",
-        "2026-power-banks-anker-737-review/en.md: missing Strengths & weaknesses section",
-        "2026-power-banks-anker-737-review/ko.md: missing Strengths & weaknesses section"
-      ],
-      "urls": {
-        "en": "https://www.aipick.shop/en/blog/2026-power-banks-anker-737-review",
-        "ko": "https://www.aipick.shop/ko/blog/2026-power-banks-anker-737-review",
-        "admin": "https://www.aipick.shop/admin",
-        "previewEn": "https://www.aipick.shop/admin/preview/2026-power-banks-anker-737-review?locale=en",
-        "previewKo": "https://www.aipick.shop/admin/preview/2026-power-banks-anker-737-review?locale=ko"
-      }
-    },
-    {
-      "order": 20,
       "slug": "2026-solo-apartment-home-essentials-checklist-guide",
       "phase": "publish",
       "issues": [
@@ -786,7 +789,7 @@
       }
     },
     {
-      "order": 21,
+      "order": 20,
       "slug": "2026-solo-apartment-home-essentials-checklist-guide-20260723",
       "phase": "publish",
       "issues": [
@@ -804,7 +807,7 @@
       }
     },
     {
-      "order": 22,
+      "order": 21,
       "slug": "2026-solo-apartment-home-essentials-scenario-guide",
       "phase": "publish",
       "issues": [
@@ -835,7 +838,7 @@
       }
     },
     {
-      "order": 23,
+      "order": 22,
       "slug": "2026-summer-ac-buying-checklist",
       "phase": "publish",
       "issues": [
@@ -850,7 +853,7 @@
       }
     },
     {
-      "order": 24,
+      "order": 23,
       "slug": "2026-summer-bluetooth-speakers-guide",
       "phase": "publish",
       "issues": [
@@ -866,7 +869,7 @@
       }
     },
     {
-      "order": 25,
+      "order": 24,
       "slug": "2026-summer-heat-bundle-buying-guide",
       "phase": "publish",
       "issues": [
@@ -890,7 +893,7 @@
       }
     },
     {
-      "order": 26,
+      "order": 25,
       "slug": "2026-summer-solo-heat-essentials-checklist",
       "phase": "publish",
       "issues": [
@@ -905,7 +908,7 @@
       }
     },
     {
-      "order": 27,
+      "order": 26,
       "slug": "2026-television-buying-guide",
       "phase": "publish",
       "issues": [
@@ -930,7 +933,7 @@
       }
     },
     {
-      "order": 28,
+      "order": 27,
       "slug": "2026-under-300-cross-category-buying-guide",
       "phase": "publish",
       "issues": [
@@ -945,7 +948,7 @@
       }
     },
     {
-      "order": 29,
+      "order": 28,
       "slug": "2026-under-300-cross-category-head-to-head-guide",
       "phase": "publish",
       "issues": [
@@ -968,7 +971,7 @@
       }
     },
     {
-      "order": 30,
+      "order": 29,
       "slug": "2026-wireless-earbuds-head-to-head",
       "phase": "publish",
       "issues": [
@@ -984,7 +987,7 @@
       }
     },
     {
-      "order": 31,
+      "order": 30,
       "slug": "under-300-cross-category-best-value-2026",
       "phase": "publish",
       "issues": [

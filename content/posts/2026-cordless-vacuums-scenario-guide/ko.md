@@ -22,7 +22,7 @@ coverImageAlt: cordless stick vacuum cleaning a home floor
 coverImageAltKo: 집 바닥을 청소하는 무선 스틱 청소기
 coverImageCredit: Photo by eMotion Tech / Unsplash
 coverImageSourceUrl: 'https://unsplash.com/photos/tmw-sC48Rb8'
-updatedAt: '2026-08-27T02:02:29.921Z'
+updatedAt: '2026-08-28T06:53:46.192Z'
 publishedAt: '2026-07-09T05:23:27.620Z'
 ---
 ## 편집부 개요

@@ -18,7 +18,7 @@ noindex: true
 liveData: false
 imageSearchKeywords:
   - modern refrigerator kitchen
-updatedAt: '2026-08-27T02:02:33.366Z'
+updatedAt: '2026-08-28T06:53:49.954Z'
 coverImage: >-
   /images/posts/2026-refrigerators-buying-guide/modern-refrigerator-kitchen-cover.jpg
 coverImageAlt: modern refrigerator kitchen

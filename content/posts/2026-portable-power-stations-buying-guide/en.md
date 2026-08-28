@@ -33,7 +33,7 @@ coverImageProvider: pexels
 coverImageAssetId: '37489593'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/37489593/pexels-photo-37489593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-27T02:02:32.578Z'
+updatedAt: '2026-08-28T06:53:49.160Z'
 publishedAt: '2026-07-18T08:40:18.328Z'
 ---
 ## Editorial Overview

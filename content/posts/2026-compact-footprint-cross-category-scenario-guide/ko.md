@@ -29,7 +29,7 @@ coverImageCredit: Photo by Max Vakhtbovych / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '6980571'
 coverImageSourceUrl: 'https://images.pexels.com/photos/6980571/pexels-photo-6980571.jpeg'
-updatedAt: '2026-08-27T02:02:29.610Z'
+updatedAt: '2026-08-28T06:53:45.878Z'
 publishedAt: '2026-07-21T10:10:16.000Z'
 ---
 ## 편집부 개요
