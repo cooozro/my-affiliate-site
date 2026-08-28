@@ -24,7 +24,7 @@ coverImageAltKo: 여름 침실의 창문형 에어컨
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by FOX ^.ᆽ.^= ∫ / Pexels
 coverImageProvider: pexels
 updatedAt: '2026-08-28T15:53:37.000Z'
-publishedAt: '2026-08-28T15:53:37.000Z'
+publishedAt: '2026-08-28T06:53:41.458Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
