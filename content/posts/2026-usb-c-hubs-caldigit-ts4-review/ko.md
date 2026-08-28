@@ -26,7 +26,7 @@ modelPickBrand: CalDigit
 modelPickName: TS4 Thunderbolt 4 Dock
 pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
-updatedAt: '2026-08-26T13:20:30.160Z'
+updatedAt: '2026-08-28T06:53:41.676Z'
 automationBuffer: true
 publishAfter: '2026-09-16'
 ---
@@ -129,6 +129,7 @@ CalDigit은 긴 제품 수명 주기와 안정적인 펌웨어 업데이트로 �
 **검토 시 우려:** 가격과 짧은 포함 케이블이 우리가 지적할 두 가지입니다. 책상 레이아웃이 요구한다면 더 긴 썬더볼트 케이블을 예산에 포함하고, 실망스러운 첫 연결을 피하기 위해 호스트의 TB4 지원을 확인하세요.
 
 ## 관련 가이드
+
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…

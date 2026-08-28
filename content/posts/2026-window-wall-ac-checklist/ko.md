@@ -1,27 +1,27 @@
 ---
 title: '창문형 에어컨 vs 벽걸이 에어컨: 올여름 구매 전 7단계 체크리스트'
 description: '여름철 창문형 또는 벽걸이 에어컨 구매 전에 BTU, 창문/벽 설치 조건, 효율 등급을 확인하는 방법을 안내합니다.'
-date: '2026-08-26'
+date: '2026-08-28'
 tags:
   - 창문형 에어컨
   - 벽걸이 에어컨
   - BTU 계산
   - 효율 등급
   - 여름 냉방
-draft: true
+draft: false
 publishAfter: '2026-08-28'
 contentProfile: checklist
 topicId: window-ac
 topicCluster: air-conditioning
 writingProvider: deepseek
-createdAt: '2026-08-26T12:29:17.756Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-window-wall-ac-checklist/window-air-conditioner-unit-window-air-condition-cover.jpg
 coverImageAlt: 여름 침실의 창문형 에어컨
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by FOX ^.ᆽ.^= ∫ / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-28T06:46:38.805Z'
+updatedAt: '2026-08-28T15:53:37.000Z'
+publishedAt: '2026-08-28T15:53:37.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-08-27T02:00:02.665Z",
-  "nextPublishAt": "2026-08-28T01:40:00.000Z",
-  "scheduledGapHours": 4.67,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-28T06:53:41.458Z",
+  "nextPublishAt": "2026-08-29T02:42:00.000Z",
+  "scheduledGapHours": 5.7,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-28",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-28",
@@ -185,26 +185,29 @@
         "https://www.aipick.shop/en/blog/2026-portable-ssd-samsung-t9-review",
         "https://www.aipick.shop/ko/blog/2026-portable-ssd-samsung-t9-review"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-window-wall-ac-checklist",
+      "topic": {
+        "id": "window-ac",
+        "cluster": "air-conditioning"
+      },
+      "at": "2026-08-28T06:53:41.458Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-window-wall-ac-checklist",
+        "https://www.aipick.shop/ko/blog/2026-window-wall-ac-checklist"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-28T06:46:38.156Z",
-    "issueCount": 5,
+    "at": "2026-08-28T06:53:36.463Z",
+    "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (306min past slot, KST 2026-08-28)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "message": "Publish ready but no post went live (313min past slot, KST 2026-08-28)",
         "severity": "error"
       },
       {
@@ -214,7 +217,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2641min",
+        "message": "Cursor replenish pending 2648min",
         "severity": "warning"
       }
     ],
@@ -335,6 +338,11 @@
       "id": "portable-ssd",
       "cluster": "accessories",
       "at": "2026-08-27T02:00:02.702Z"
+    },
+    {
+      "id": "window-ac",
+      "cluster": "air-conditioning",
+      "at": "2026-08-28T06:53:41.481Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-27",

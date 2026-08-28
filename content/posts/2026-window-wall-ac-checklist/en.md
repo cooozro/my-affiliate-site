@@ -3,20 +3,19 @@ title: 'Window AC or Wall AC: A 7-Step Pre-Purchase Checklist for Summer Heat'
 description: >-
   Check BTU for room size, window/wall install limits, and efficiency labels
   before buying a window or wall AC this summer.
-date: '2026-08-26'
+date: '2026-08-28'
 tags:
   - window air conditioner
   - wall AC
   - BTU calculator
   - efficiency label
   - summer cooling
-draft: true
+draft: false
 publishAfter: '2026-08-28'
 contentProfile: checklist
 topicId: window-ac
 topicCluster: air-conditioning
 writingProvider: deepseek
-createdAt: '2026-08-26T12:29:17.756Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-window-wall-ac-checklist/window-air-conditioner-unit-window-air-condition-cover.jpg
@@ -24,7 +23,8 @@ coverImageAlt: window air conditioner in a summer bedroom
 coverImageAltKo: 여름 침실의 창문형 에어컨
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by FOX ^.ᆽ.^= ∫ / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T12:29:58.836Z'
+updatedAt: '2026-08-28T15:53:37.000Z'
+publishedAt: '2026-08-28T15:53:37.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

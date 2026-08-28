@@ -29,7 +29,7 @@ modelPickBrand: Anker
 modelPickName: 737 PowerBank (PowerCore 24K)
 pressKitGallery: >-
   https://www.google.com/search?q=Anker%20737%20PowerBank%20(PowerCore%2024K)%20press%20kit
-updatedAt: '2026-08-27T08:31:37.319Z'
+updatedAt: '2026-08-28T06:53:41.648Z'
 automationBuffer: true
 publishAfter: '2026-09-11'
 ---
@@ -135,6 +135,7 @@ PD 3.1을 최대 140W까지 지원하는 USB-C 벽면 충전기와 최소 140W �
 사용자 후기와 교차 검증에 따르면 디스플레이는 실사용에 충분히 가깝지만 실험실 수준은 아닙니다. 과부하 시 잔량이 1–2% 포인트 흔들릴 수 있고, 온도 표시는 외부 케이스 정확한 온도가 아니라 내부 센서를 반영합니다. 보정된 계측기가 아니라 유용한 지표로 보는 것이 좋습니다.
 
 ## 관련 가이드
+
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
