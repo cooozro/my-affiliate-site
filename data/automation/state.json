@@ -202,7 +202,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-28T07:06:32.798Z",
+    "at": "2026-08-28T07:26:19.080Z",
     "issueCount": 3,
     "issues": [
       {
@@ -217,14 +217,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 2661min",
+        "message": "Cursor replenish pending 2681min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-window-wall-ac-checklist/en.md: publishedAt 2026-08-28T15:53:37.000Z → 2026-08-28T06:53:41.458Z",
-      "2026-window-wall-ac-checklist/ko.md: publishedAt 2026-08-28T15:53:37.000Z → 2026-08-28T06:53:41.458Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
