@@ -24,7 +24,8 @@ export function isRepairablePublishIssue(issue: string): boolean {
   return REPAIRABLE_PUBLISH_ISSUE_RE.test(issue);
 }
 
-const AUDIT_ISSUE_NOISE_RE = /Related guides has|English body too short/i;
+const AUDIT_ISSUE_NOISE_RE =
+  /Related guides has|English body too short|already occupied|does not match a USD MSRP/i;
 
 export function isManualReviewNoiseIssue(issue: string): boolean {
   return (

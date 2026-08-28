@@ -42,7 +42,6 @@ import {
   filterHealthIssuesForAdmin,
   filterManualReviewQueue,
   isManualReviewNoiseIssue,
-  isRepairablePublishIssue,
   shouldHideReplenishBanner,
 } from "@/lib/admin-alert-filter";
 import matter from "gray-matter";
@@ -300,8 +299,9 @@ async function revalidateManualReviewQueue(
   const kept: ManualReviewItem[] = [];
 
   for (const item of items) {
-    const draft = draftBySlug.get(item.slug) ?? true;
-    const phase = draft ? "draft" : "publish";
+    const draft = draftBySlug.get(item.slug) === true;
+    if (!draft) continue;
+    const phase = "draft";
     try {
       const result = runPublishIntegrityGate(process.cwd(), item.slug, {
         phase,
@@ -312,13 +312,6 @@ async function revalidateManualReviewQueue(
       let issues = integrityIssuesFlat(result).filter(
         (issue) => !isManualReviewNoiseIssue(issue),
       );
-      if (
-        !draft &&
-        issues.length > 0 &&
-        issues.every((issue) => isRepairablePublishIssue(issue))
-      ) {
-        continue;
-      }
       if (issues.length === 0) continue;
 
       kept.push({ ...item, issues });

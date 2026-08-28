@@ -17,7 +17,7 @@ import {
 import { repairAllRelatedGuides } from "./related-guides.mjs";
 import { repairAllShortEnglishBodies } from "./body-length-repair.mjs";
 import { repairAllFaqSectionsWithLlm } from "./faq-section-repair.mjs";
-import { isOperationalAuditIssue, isManualReviewNoiseIssue, isRepairablePublishIssue } from "./admin-alert-filter.mjs";
+import { isManualReviewNoiseIssue } from "./admin-alert-filter.mjs";
 import { MAX_PUBLISH_PER_DAY } from "./publish-schedule.mjs";
 
 const AUDIT_REPORT_PATH = path.join(
@@ -111,16 +111,13 @@ export function runDailyContentAudit(root = process.cwd(), options = {}) {
     }
 
     if (!result.ok && !result.exempt && !result.neverPublish) {
+      // Live/noindex corpus is auto-repaired above. Occupancy/MSRP leftovers
+      // are write/slot gates — not a human confirm queue on already-shipped posts.
+      if (phase === "publish") continue;
       const issues = integrityIssuesFlat(result).filter(
         (issue) => !isManualReviewNoiseIssue(issue),
       );
       if (issues.length === 0) continue;
-      if (
-        phase === "publish" &&
-        issues.every((issue) => isRepairablePublishIssue(issue))
-      ) {
-        continue;
-      }
       manualReview.push({
         slug,
         phase,
