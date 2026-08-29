@@ -215,13 +215,13 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-29T02:59:33.182Z",
+    "at": "2026-08-29T08:35:06.484Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (17min past slot, KST 2026-08-29)",
-        "severity": "error"
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (15 deferred)",
+        "severity": "warning"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -230,13 +230,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 3854min",
+        "message": "Cursor replenish pending 4190min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "marked-slot-catch-up"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
