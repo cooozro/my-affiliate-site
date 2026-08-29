@@ -4,10 +4,10 @@
  * cloned Practical-Tips H2 (those increase template risk on this site).
  *
  * Mapped:
- * - approval-tone-compliance: strip ads / sponsored chrome
+ * - approval-tone-compliance: strip ads / sponsored chrome / spam CTAs
  * - voice-humanizer: EN+KO AI cliché sweep
  * - approval-format-rotation: drop the repeated methodology stump (/about holds it)
- * - pipeline heading floor: ≥4 H2
+ * - pipeline heading floor: ≥4 H2 and ≥1 H3
  */
 
 const AI_CLICHES_EN =
@@ -22,8 +22,18 @@ const AD_CHROME =
 const AD_PHRASES =
   /\b(sponsored placement|advertisement|adsense slot|광고 영역|스폰서 영역|애드센스 슬롯)\b/gi;
 
+const COMMERCIAL_EN =
+  /\b(buy now|click here|limited offer|act now|make money fast|guaranteed income|crypto pump)\b/gi;
+
+const COMMERCIAL_KO =
+  /지금\s*바로\s*구매|지금\s*구매하세요|한정\s*특가|클릭하세요|무조건\s*수익/g;
+
 function countH2(markdown) {
   return [...markdown.matchAll(/^##\s+\S/gm)].length;
+}
+
+function countH3(markdown) {
+  return [...markdown.matchAll(/^###\s+\S/gm)].length;
 }
 
 function stripMethodologyStump(markdown) {
@@ -60,12 +70,28 @@ function stripAdChrome(markdown) {
   return markdown.replace(AD_CHROME, "").replace(AD_PHRASES, "");
 }
 
+function stripCommercialCtas(markdown, locale) {
+  let n = 0;
+  const enReplacement = "learn more";
+  const koReplacement = "관련 정보를 확인";
+  let out = markdown.replace(COMMERCIAL_EN, () => {
+    n += 1;
+    return locale === "ko" ? koReplacement : enReplacement;
+  });
+  out = out.replace(COMMERCIAL_KO, () => {
+    n += 1;
+    return koReplacement;
+  });
+  return { markdown: out, commercialCtaCount: n };
+}
+
 /**
  * @param {string} markdown
  * @param {{ locale?: "en" | "ko" }} [opts]
  */
 export function applyAipickApprovalGates(markdown, opts = {}) {
   const notes = [];
+  const locale = opts.locale ?? "en";
   let body = String(markdown ?? "");
   const beforeAds = body;
   body = stripAdChrome(body);
@@ -75,6 +101,12 @@ export function applyAipickApprovalGates(markdown, opts = {}) {
   body = stripMethodologyStump(body);
   if (body !== beforeMethod) notes.push("stripped methodology stump");
 
+  const commercial = stripCommercialCtas(body, locale);
+  body = commercial.markdown;
+  if (commercial.commercialCtaCount > 0) {
+    notes.push(`softened ${commercial.commercialCtaCount} commercial CTA(s)`);
+  }
+
   const voice = humanize(body);
   body = voice.markdown;
   if (voice.aiClichéCount > 0) {
@@ -82,8 +114,12 @@ export function applyAipickApprovalGates(markdown, opts = {}) {
   }
 
   const h2Count = countH2(body);
+  const h3Count = countH3(body);
   if (h2Count < 4) {
     notes.push(`heading floor: ${h2Count} H2 < 4`);
+  }
+  if (h3Count < 1) {
+    notes.push(`heading floor: ${h3Count} H3 < 1`);
   }
 
   const originalityIndex = Math.max(0, 100 - voice.aiClichéCount * 12);
@@ -91,8 +127,9 @@ export function applyAipickApprovalGates(markdown, opts = {}) {
     markdown: body.trim() + "\n",
     notes,
     h2Count,
+    h3Count,
     originalityIndex,
-    locale: opts.locale ?? "en",
-    blocked: h2Count < 4,
+    locale,
+    blocked: h2Count < 4 || h3Count < 1,
   };
 }

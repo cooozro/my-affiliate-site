@@ -73,18 +73,15 @@ ${standards}
 ${template}
 
 ## AdSense approval metrics (scripts/adsense-quality-score.mjs + seo-audit/adsense.mjs)
-Target **band A (≥75)** and avoid low-value flags. Every draft MUST hit these signals:
+Target **band A (≥75)** without cloning the same H2 labels on every post. Hit the *signals*, not a stamp:
 
 1. **Depth (KO ≥ 4,500 chars; prefer ≥ 6,500)** — EN body ≥ 5,000 UTF-8 bytes. Thin Korean = AdSense risk.
-2. **Evidence / named products** — include ≥3 real OEM-style model tokens (e.g. \`Anker 737\`, \`LG PuriCare\`, \`Dell S2721HS\`) AND ≥2 recognizable brands from public catalogs. Add a shortlist block titled exactly:
-   - EN: \`## Models this report shortlists\`
-   - KO: \`## 편집부가 선정한 대표 모델\`
-   with **Recommended pick** / **추천** callouts for at least 3 items (or numbered \`## 1. …\` product sections for buying-guide).
-3. **Editorial judgment** — use phrases the scorer detects: Korean \`편집부 해석\`, \`검토 시 우려\`, \`분석 요약\`, \`가성비\`; English \`Editorial read\`, \`Review concern\`, \`Analysis takeaway\`, \`Who should skip\`.
-4. **Verification signal** — state cross-checking of public specs (e.g. \`교차 검증\`, \`cross-checked\`, \`Editorial finding\`).
-5. **TCO** — include a short total-cost / 3-year ownership note (\`총 소유 비용\` / \`total cost of ownership\` / \`three-year\`).
-6. **Structure** — FAQ (≥${minFaq} \`###\`), a comparison or skip/risk table, Related guides, Final Verdict / 최종 평가. Do **not** clone Editorial Overview + Analysis methodology on every post.
-7. **No low-value** — never ship generic category fluff without models/brands/editorial voice. No ad placeholders or AdSense script mentions in body.
+2. **Evidence / named products** — ≥3 real OEM-style model tokens AND ≥2 recognizable brands. A shortlist section is required, but paraphrase the heading (do not stamp \`## Models this report shortlists\` / \`## 편집부가 선정한 대표 모델\` on every article). Use Recommended pick / 추천 callouts or numbered product H2s.
+3. **Editorial judgment** — show skip/risk, a real concern, and a takeaway in natural prose. Do not paste the same \`Editorial read\` / \`편집부 해석\` stump on every post; the scorer treats those phrases as optional bonuses.
+4. **Verification signal** — state cross-checking of public specs (\`교차 검증\` / \`cross-checked\`).
+5. **TCO** — a short total-cost / 3-year ownership note where it changes the bill.
+6. **Structure** — FAQ (≥${minFaq} \`###\`), a comparison or skip/risk table, Related guides, Final Verdict / 최종 평가. Do **not** clone Editorial Overview + Analysis methodology on every post. Follow the SECTION VARIANT H2 order from the user prompt when provided.
+7. **No low-value** — never ship generic category fluff without models/brands/editorial voice. No ad placeholders, AdSense scripts, or empty ad slots in body.
 
 ## Hard rejects
 - Fake seller/API fields or proprietary database claims
