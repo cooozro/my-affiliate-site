@@ -1,6 +1,6 @@
 {
-  "dateKst": "2026-08-28",
-  "scannedAt": "2026-08-28T06:53:54.886Z",
+  "dateKst": "2026-08-29",
+  "scannedAt": "2026-08-29T03:02:11.112Z",
   "postsScanned": 83,
   "autoRepairCount": 133,
   "autoRepairs": [
@@ -454,6 +454,5 @@
     }
   ],
   "manualReviewCount": 0,
-  "manualReview": [],
-  "queueNote": "manual-review limited to unpublished drafts; live/noindex occupancy-MSRP backlog dropped"
+  "manualReview": []
 }

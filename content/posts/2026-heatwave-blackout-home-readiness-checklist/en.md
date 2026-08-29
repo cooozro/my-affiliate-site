@@ -30,7 +30,7 @@ coverImageCredit: Photo by Amar Preciado / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '37489595'
 coverImageSourceUrl: 'https://images.pexels.com/photos/37489595/pexels-photo-37489595.jpeg'
-updatedAt: '2026-08-28T06:53:48.365Z'
+updatedAt: '2026-08-29T03:02:04.539Z'
 publishedAt: '2026-07-22T04:40:08.419Z'
 ---
 ## Editorial Overview

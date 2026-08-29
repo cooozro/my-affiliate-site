@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-08-28T06:53:41.458Z",
-  "nextPublishAt": "2026-08-29T02:42:00.000Z",
-  "scheduledGapHours": 5.7,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-29T02:59:34.854Z",
+  "nextPublishAt": "2026-08-31T01:49:00.000Z",
+  "scheduledGapHours": 4.82,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-29",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-29",
@@ -198,13 +198,31 @@
         "https://www.aipick.shop/en/blog/2026-window-wall-ac-checklist",
         "https://www.aipick.shop/ko/blog/2026-window-wall-ac-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-laptops-students-cpu-ram-display-battery",
+      "topic": {
+        "id": "laptops",
+        "cluster": "computing"
+      },
+      "at": "2026-08-29T02:59:34.854Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-laptops-students-cpu-ram-display-battery",
+        "https://www.aipick.shop/ko/blog/2026-budget-laptops-students-cpu-ram-display-battery"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-29T01:21:46.970Z",
-    "issueCount": 2,
+    "at": "2026-08-29T02:59:33.182Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (17min past slot, KST 2026-08-29)",
+        "severity": "error"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
@@ -212,11 +230,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 3757min",
+        "message": "Cursor replenish pending 3854min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -336,14 +356,19 @@
       "id": "window-ac",
       "cluster": "air-conditioning",
       "at": "2026-08-28T06:53:41.481Z"
+    },
+    {
+      "id": "laptops",
+      "cluster": "computing",
+      "at": "2026-08-29T02:59:34.878Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-08-28",
+  "lastDailyContentAuditKst": "2026-08-29",
   "lastDailyContentAudit": {
-    "at": "2026-08-28T06:53:54.886Z",
+    "at": "2026-08-29T03:02:11.112Z",
     "postsScanned": 83,
     "autoRepairCount": 133,
-    "manualReviewCount": 30
+    "manualReviewCount": 0
   },
   "formatDeck": [],
   "formatHistory": [

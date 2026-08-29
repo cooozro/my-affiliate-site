@@ -23,7 +23,7 @@ coverImage: >-
 coverImageAlt: countertop water purifier dispenser in a summer kitchen
 coverImageAltKo: 여름 주방의 정수기 디스펜서
 coverImageCredit: Photo by Bluewater Sweden / Unsplash
-updatedAt: '2026-08-28T06:53:53.251Z'
+updatedAt: '2026-08-29T03:02:09.489Z'
 publishedAt: '2026-07-10T05:30:48.298Z'
 ---
 ## 편집부 개요

@@ -3,27 +3,27 @@ title: '대학생 예산 노트북, Ryzen 5 vs Core i5, 16GB RAM, 300니트 화�
 description: >-
   2026년 학생용 노트북 두 모델을 CPU, RAM 업그레이드, 화면 밝기, 배터리 수명 기준으로 비교합니다. 수업, 예산, 3년 사용
   계획에 맞는 제품을 찾아보세요.
-date: '2026-08-26'
+date: '2026-08-29'
 tags:
   - 가성비 노트북
   - 학생 노트북
   - Ryzen 5
   - Core i5
   - 노트북 배터리
-draft: true
+draft: false
 publishAfter: '2026-08-29'
 contentProfile: head-to-head
 topicId: laptops
 topicCluster: computing
 writingProvider: deepseek
-createdAt: '2026-08-26T12:33:40.523Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-laptops-students-cpu-ram-display-battery/student-laptop-on-desk-cover.jpg
 coverImageAlt: 책상의 노트북
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by khezez  | خزاز / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T12:37:46.932Z'
+updatedAt: '2026-08-29T11:59:33.000Z'
+publishedAt: '2026-08-29T11:59:33.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

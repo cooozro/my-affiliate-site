@@ -25,7 +25,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8566426
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8566426/pexels-photo-8566426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-28T06:53:50.430Z'
+updatedAt: '2026-08-29T03:02:06.682Z'
 publishedAt: '2026-07-02T01:23:30.000Z'
 ---
 ## 편집부 개요
