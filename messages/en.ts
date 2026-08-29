@@ -1,7 +1,7 @@
 const en = {
   meta: {
     siteDescription:
-      "Data-driven tech reviews and buying guides for phones, gadgets, and more.",
+      "Public-spec buying guides for phones, gadgets, and home electronics — not a hands-on hardware lab.",
   },
   nav: {
     home: "Home",
@@ -15,7 +15,7 @@ const en = {
     rss: "RSS",
     rights: "All rights reserved.",
     publicationTagline:
-      "AI Pick & Report is an independent tech review publication dedicated to data-backed buying guides.",
+      "AI Pick & Report is an independent buying-guide desk that cross-checks public specs — not a hands-on hardware lab.",
   },
   home: {
     title: "Home",
@@ -54,7 +54,7 @@ const en = {
   about: {
     title: "About Us",
     metaDescription:
-      "Learn about AI Pick & Report — an independent IT review publication focused on data-backed product analysis.",
+      "Who publishes AI Pick & Report, how we cross-check public specs, and how to request a correction.",
   },
   contact: {
     title: "Contact",
@@ -75,14 +75,14 @@ const en = {
     errorNotConfigured:
       "The contact form is temporarily unavailable. Please try again later.",
     errorActivation:
-      "The contact form needs one-time email activation. Please check the inbox for cooozro@gmail.com (including spam) for a FormSubmit activation email and click the link. Then try again.",
+      "The contact form needs one-time email activation. Check the editorial inbox (including spam) for the FormSubmit activation email, click the link, then try again.",
     responseTime: "We typically respond within 2–3 business days.",
   },
   privacy: {
     title: "Privacy Policy",
     metaDescription:
       "Privacy Policy for AI Pick & Report — how we collect, use, and protect your information.",
-    lastUpdated: "Last updated: June 25, 2026",
+    lastUpdated: "Last updated: August 29, 2026",
     sections: {
       intro: {
         title: "Introduction",
@@ -98,7 +98,7 @@ const en = {
       },
       cookies: {
         title: "Advertising",
-        body: "We partner with third-party advertising services to provide relevant content and ads. These partners may use cookies to serve ads based on your prior visits to our website or other websites across the internet. This practice adheres to Google's advertising policies and industry standards for transparency and user privacy. You may opt out of personalized advertising by visiting Google Ads Settings.",
+        body: "Third parties, including Google, may place and read cookies or use web beacons and IP addresses as a result of ad serving. See How Google uses information from sites or apps that use our services (https://policies.google.com/technologies/partner-sites). Opt out of personalized ads at Google Ads Settings (https://adssettings.google.com) or aboutads.info.",
       },
       thirdParty: {
         title: "Third-Party Services",

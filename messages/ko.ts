@@ -3,7 +3,7 @@ import type { Dictionary } from "@/messages/en";
 const ko: Dictionary = {
   meta: {
     siteDescription:
-      "데이터 기반 IT 리뷰·구매 가이드 — 스마트폰, 가전, 전자기기",
+      "공개 스펙 교차 검증 구매 가이드 — 스마트폰, 가전, 전자기기. 실물 측정 랩이 아닙니다.",
   },
   nav: {
     home: "홈",
@@ -17,7 +17,7 @@ const ko: Dictionary = {
     rss: "RSS",
     rights: "All rights reserved.",
     publicationTagline:
-      "AI Pick & Report는 데이터 기반 구매 가이드에 전념하는 독립 기술 리뷰 매체입니다.",
+      "AI Pick & Report는 공개 스펙을 교차 검증하는 독립 구매 가이드 편집부이며, 실물을 측정하는 하드웨어 랩이 아닙니다.",
   },
   home: {
     title: "홈",
@@ -56,7 +56,7 @@ const ko: Dictionary = {
   about: {
     title: "소개",
     metaDescription:
-      "AI Pick & Report — 데이터 기반 IT 제품 리뷰 전문 매체를 소개합니다.",
+      "AI Pick & Report를 누가 운영하는지, 공개 스펙을 어떻게 검증하는지, 정정 요청은 어디로 하는지 안내합니다.",
   },
   contact: {
     title: "문의",
@@ -76,13 +76,13 @@ const ko: Dictionary = {
     errorNotConfigured:
       "문의 양식을 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.",
     errorActivation:
-      "문의 양식 최초 인증이 필요합니다. cooozro@gmail.com 메일함(스팸함 포함)에서 FormSubmit 인증 메일을 찾아 링크를 클릭한 뒤 다시 시도해 주세요.",
+      "문의 양식 최초 인증이 필요합니다. 편집부 메일함(스팸함 포함)에서 FormSubmit 인증 메일을 찾아 링크를 클릭한 뒤 다시 시도해 주세요.",
     responseTime: "영업일 기준 2~3일 내 답변드립니다.",
   },
   privacy: {
     title: "개인정보처리방침",
     metaDescription: "AI Pick & Report 개인정보처리방침",
-    lastUpdated: "최종 업데이트: 2026년 6월 25일",
+    lastUpdated: "최종 업데이트: 2026년 8월 29일",
     sections: {
       intro: {
         title: "소개",
@@ -98,7 +98,7 @@ const ko: Dictionary = {
       },
       cookies: {
         title: "광고",
-        body: "당사는 관련 콘텐츠와 광고를 제공하기 위해 제3자 광고 서비스와 협력합니다. 이러한 파트너는 귀하가 당사 웹사이트 또는 인터넷상의 다른 웹사이트를 이전에 방문한 기록을 바탕으로 광고를 게재하기 위해 쿠키를 사용할 수 있습니다. 이 관행은 Google의 광고 정책 및 투명성·이용자 프라이버시에 관한 업계 표준을 준수합니다. Google 광고 설정에서 맞춤 광고를 해제할 수 있습니다.",
+        body: "Google을 포함한 제3자는 광고 게재를 위해 쿠키를 저장·읽거나 웹 비콘·IP 주소를 사용할 수 있습니다. Google의 파트너 사이트 데이터 이용: https://policies.google.com/technologies/partner-sites . 맞춤 광고 해제: https://adssettings.google.com 또는 https://www.aboutads.info .",
       },
       thirdParty: {
         title: "제3자 서비스",
