@@ -45,7 +45,7 @@ import {
   validateDraftPublishReady,
   writePost,
 } from "./posts-fs.mjs";
-import { TARGET_DRAFT_COUNT, isDeepseekDiscountKst } from "../lib/publish-schedule.mjs";
+import { TARGET_DRAFT_COUNT } from "../lib/publish-schedule.mjs";
 import { loadEnvFile } from "../lib/load-env.mjs";
 import {
   formatOutlineForPrompt,
@@ -53,7 +53,7 @@ import {
 } from "../lib/guardian/content-strategy.mjs";
 import { pickContentProfile, getTemplatePath } from "../lib/content-profiles.mjs";
 import { isMetaTopicId } from "../lib/content-angles.mjs";
-import { loadPublishedPostIndex } from "../lib/related-guides.mjs";
+import { listPublishedSlugs } from "../lib/content-quality.mjs";
 import {
   isRequestTopicStale,
   removeReplenishSlugArtifacts,
@@ -74,9 +74,7 @@ function buildCursorPrompt(request) {
   const contentProfile = request.contentProfile ?? "buying-guide";
   const writingMode = request.writingMode ?? "stable";
   const templatePath = request.templatePath ?? getTemplatePath(contentProfile);
-  const publishedSlugs = [...loadPublishedPostIndex(process.cwd()).keys()]
-    .sort()
-    .join(", ");
+  const publishedSlugs = [...listPublishedSlugs(process.cwd())].sort().join(", ");
   const reservedSlugs = reservedSlugListForPrompt().join(", ");
   const coverage = getTopicFormatCoverage();
   const roadmapPhase = getRoadmapPhase(coverage);
@@ -123,9 +121,8 @@ Content requirements (each locale):
 - Meet minimum length for profile ${contentProfile}
 - Meta description **50–160 characters** (frontmatter \`description\`)
 - **FAQ section** (\`## FAQ\` EN / \`## 자주 묻는 질문\` KO) with ≥3 \`###\` Q&A pairs — required for publish gate
-- Honest sourcing (manufacturer specs, listed prices, open reviews). Do NOT include an Analysis methodology section in the body — that lives on /about
-- Vary sentence structure, transitions, and table layout versus other articles on this site
-- Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these indexable (non-noindex) published slugs: ${publishedSlugs}
+- Spec + open-review cross-check only (methodology lives on /about; no seller API claims)
+- Related guides section with /en/blog/ or /ko/blog/ internal links — **only** these published slugs: ${publishedSlugs}
 - Varied title (avoid formulaic "2026 가성비 X TOP 5")
 
 After writing posts:
@@ -525,13 +522,6 @@ function releaseReplenishLock() {
 
 async function main() {
   loadEnvFile();
-
-  if (!isDeepseekDiscountKst()) {
-    console.log(
-      "Replenish skipped: outside DeepSeek off-peak (KST weekday 10:00–13:00 / 15:00–19:00 peak) — request stays pending",
-    );
-    return;
-  }
 
   let request = readCursorDraftRequest();
   if (!request || request.status !== "pending") {

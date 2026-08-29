@@ -54,7 +54,8 @@ Content profiles (contentProfile frontmatter):
 - editorial: docs/templates/editorial.md (admin/internal only — not in auto replenish)
 
 Auto rotation: equal round-robin shuffle deck (each public profile once per cycle).
-All public profiles require: Editorial Overview, methodology, Related guides.
+Required across public profiles: Related guides, FAQ, a skip/risk or comparison table — not a cloned methodology H2.
+Methodology lives on /about. Vary H2 order within a profile so posts do not share one spine.
 Season-first topic selection: scripts/lib/season-topics.mjs
 `.trim();
 

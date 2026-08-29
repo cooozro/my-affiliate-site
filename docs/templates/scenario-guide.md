@@ -6,20 +6,24 @@ Use for **`contentProfile: scenario-guide`**. **Use-case first**, products embed
 
 "Best X for coding", "AC for studio apartment", "monitor for WFH" — long-tail scenario queries.
 
-## Do not stamp
+## Section order
 
-Do **not** include **Analysis methodology / 분석 방법론** in the body (`/about` holds the source table).
+1. **Editorial Overview** / **편집부 개요**
+2. **Introduction** — who this guide is for
+3. Do **not** include **Analysis methodology / 분석 방법론** in the body (`/about` holds the source table)
+4. **## Scenario: [use case]** (≥3 scenarios) — each includes:
+   - What matters in this scenario (2–3 bullets)
+   - **Recommended pick** with 1–2 sentence rationale
+   - **Runner-up** (optional)
+   - Short comparison table if useful
+5. **Quick comparison table** — all recommended picks in one view
+6. **FAQ** / **자주 묻는 질문** — ≥3 `###` question/answer pairs (scenario-specific; not template filler)
+7. **Related guides** / **관련 가이드**
+8. **Final Verdict** / **최종 평가** — summary paragraph + optional buy/skip table
 
-## Assigned variants (pipeline picks one)
+## Rules
 
-1. **three-rooms** — who this guide is for → scenario one / two / three → quick comparison of picks → FAQ → verdict
-2. **constraint-then-picks** — budget/space/noise limits → tight space / long hours / shared household → picks in one view → FAQ → verdict
-3. **job-to-be-done** — the job to be done → scenario A / B / C → FAQ → what to buy for which job
-
-## Quality rules
-
-- Minimum **3** scenario sections
+- Minimum **3** scenario sections (`## Scenario:` EN / `## 시나리오:` KO)
 - Each scenario must name a concrete product recommendation
-- FAQ ≥3; Related guides; closing verdict
-- Seasonal framing encouraged when relevant
+- Seasonal framing encouraged (summer heat, back-to-school, etc.)
 - English primary; Korean faithful translation

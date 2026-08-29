@@ -1,7 +1,6 @@
 import { buildGenerationPrompt } from "./prompts.mjs";
 import { chatJsonCompletion } from "./llm-chat.mjs";
 import { buildWriterSystemPrompt } from "./writer-system-prompt.mjs";
-import { acquireWriteLock } from "../lib/write-lock.mjs";
 import { pickTopic } from "./topics.mjs";
 import { fetchCoverImage } from "./fetch-image.mjs";
 import fs from "fs";
@@ -9,6 +8,7 @@ import path from "path";
 import { fetchAdditionalImages } from "../lib/cover-image.mjs";
 import { repairModelDeepDiveBody } from "../lib/repair-model-deep-dive-body.mjs";
 import { imageRefExists } from "../lib/draft-image-integrity.mjs";
+import { applyAipickApprovalGates } from "../lib/approval-writing-gates.mjs";
 import {
   buildModelDeepDiveAlts,
   buildModelDeepDiveSearchQueries,
@@ -42,21 +42,13 @@ import {
 import { buildCoverAlts, resolveImageContext } from "../lib/image-query.mjs";
 import { ensureImageApiEnv } from "../lib/image-api-env.mjs";
 import {
+  MAX_PUBLISH_PER_DAY,
   TARGET_DRAFT_COUNT,
-  isDeepseekDiscountKst,
 } from "../lib/publish-schedule.mjs";
-import { isSchedulerPaused } from "../lib/scheduler-control.mjs";
 import { getCurrentSeason, isTopicInSeason, SEASONAL_ONLY_TOPIC_IDS } from "../lib/season-topics.mjs";
-import {
-  formatStockCaption,
-  isStockImageProvider,
-  prepareArticleBody,
-} from "../lib/site-engine/index.mjs";
-import { pickSectionSkeleton } from "../lib/variants/section-skeletons.mjs";
-import { salvageWrittenDraft } from "../lib/draft-salvage.mjs";
 
-/** Fill the 6-draft buffer during the DeepSeek discount window (not 1 write/day). */
-const MAX_WRITES_PER_DAY = TARGET_DRAFT_COUNT;
+/** Writes track publish cadence: one ready draft waiting after each go-live. */
+const MAX_WRITES_PER_DAY = MAX_PUBLISH_PER_DAY;
 const TARGET_DRAFT_BUFFER = TARGET_DRAFT_COUNT;
 
 /**
@@ -92,7 +84,7 @@ Do NOT include a "ko" object in this pass. Keep EN body complete and publish-rea
     system,
     user: `PASS 2 of 2 — Korean locale for the same article.
 
-Translate faithfully (not a summary). Same H2/H3 structure, tables, FAQ count, and AdSense model-name depth as the English draft. Do not add an Analysis methodology section.
+Translate faithfully (not a summary). Same H2/H3 structure, tables, FAQ count, methodology, and AdSense model-name depth as the English draft.
 
 English source (do not rewrite EN; output KO only):
 ${JSON.stringify(
@@ -179,64 +171,32 @@ function buildFrontmatter(locale, localeData, shared, draft = true) {
 
 export async function generateOneDraft(options = {}) {
   const { bypassWriteCap = false } = options;
-  const early = loadState();
-  resetDailyCounters(early);
+  const state = loadState();
+  resetDailyCounters(state);
 
-  if (!bypassWriteCap && isSchedulerPaused(early)) {
-    console.log("Write skipped: scheduler paused");
-    return null;
-  }
-
-  if (!bypassWriteCap && !isDeepseekDiscountKst()) {
-    console.log(
-      "Write skipped: outside DeepSeek off-peak (KST weekday 10:00–13:00 / 15:00–19:00 peak; weekend all day off-peak)",
-    );
-    return null;
-  }
-
-  if (!bypassWriteCap && early.writeCountToday >= MAX_WRITES_PER_DAY) {
+  if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
     console.log(`Daily write limit reached (${MAX_WRITES_PER_DAY}/day KST)`);
-    saveState(early);
+    saveState(state);
     return null;
   }
 
-  const releaseLock = await acquireWriteLock();
-  let picked = null;
-  try {
-    const state = loadState();
-    resetDailyCounters(state);
-    if (!bypassWriteCap && state.writeCountToday >= MAX_WRITES_PER_DAY) {
-      saveState(state);
-      return null;
+  const contentProfile = pickContentProfile(state);
+  const profilesToTry = [
+    contentProfile,
+    ...CONTENT_PROFILES.filter((p) => p !== contentProfile),
+  ];
+
+  let lastError = null;
+  for (const profile of profilesToTry) {
+    try {
+      const topic = pickTopic(state, { contentProfile: profile });
+      return await generateDraftForTopic(topic, profile, { bypassWriteCap, state });
+    } catch (error) {
+      lastError = error;
     }
-    const contentProfile = pickContentProfile(state);
-    const profilesToTry = [
-      contentProfile,
-      ...CONTENT_PROFILES.filter((p) => p !== contentProfile),
-    ];
-    let lastError = null;
-    for (const profile of profilesToTry) {
-      try {
-        const topic = pickTopic(state, { contentProfile: profile });
-        saveState(state);
-        picked = { topic, profile, state };
-        lastError = null;
-        break;
-      } catch (error) {
-        lastError = error;
-      }
-    }
-    if (!picked) {
-      throw lastError ?? new Error("No topics available for any content profile");
-    }
-  } finally {
-    releaseLock();
   }
 
-  return generateDraftForTopic(picked.topic, picked.profile, {
-    bypassWriteCap,
-    state: picked.state,
-  });
+  throw lastError ?? new Error("No topics available for any content profile");
 }
 
 function normalizeRequestTopic(raw) {
@@ -307,16 +267,11 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     );
   }
 
-  const skeleton = pickSectionSkeleton(
-    contentProfile,
-    `${topic.id}|${topic.angle}|${contentProfile}`,
-  );
   const prompt = buildGenerationPrompt(topic, year, contentProfile, {
     writingMode: options.writingMode,
     toneVariant: options.toneVariant,
     benchmarkOutline: options.benchmarkOutline,
     modelPick,
-    skeleton,
   });
 
   console.log(`Generating draft: ${topic.id} (${topic.category}, ${contentProfile})`);
@@ -429,8 +384,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
     }
   }
 
-  let enBody = prepareArticleBody(article.en.body, "en");
-  let koBody = prepareArticleBody(article.ko.body, "ko");
+  let enBody = article.en.body;
+  let koBody = article.ko.body;
 
   if (contentProfile === "model-deep-dive" && modelPick?.primary) {
     const bodyQueries = buildModelDeepDiveSearchQueries(modelPick.primary, topic);
@@ -483,7 +438,7 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
               path: img.path,
               altEn: alts.en,
               altKo: alts.ko,
-              credit: formatStockCaption("en", img.credit),
+              credit: img.credit,
               source: "stock",
             };
           })
@@ -555,10 +510,6 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
       : {}),
   };
 
-  if (shared.coverImageProvider && isStockImageProvider(shared.coverImageProvider)) {
-    shared.coverImageCredit = formatStockCaption("ko", shared.coverImageCredit);
-  }
-
   const enFm = buildFrontmatter("en", article.en, shared);
   const koFm = buildFrontmatter("ko", article.ko, shared);
 
@@ -578,12 +529,24 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 
   enBody = repairModelDeepDiveBody(enFm, enBody, "en", { root: siteRoot }).body;
   koBody = repairModelDeepDiveBody(koFm, koBody, "ko", { root: siteRoot }).body;
-  enBody = prepareArticleBody(enBody, "en");
-  koBody = prepareArticleBody(koBody, "ko");
+
+  const enGate = applyAipickApprovalGates(enBody, { locale: "en" });
+  const koGate = applyAipickApprovalGates(koBody, { locale: "ko" });
+  enBody = enGate.markdown;
+  koBody = koGate.markdown;
+  if (enGate.notes.length || koGate.notes.length) {
+    console.log(
+      `Approval gates: en=${enGate.notes.join(",") || "ok"} ko=${koGate.notes.join(",") || "ok"}`,
+    );
+  }
+  if (enGate.blocked || koGate.blocked) {
+    throw new Error(
+      `Approval heading floor failed for ${slug}: en H2=${enGate.h2Count} ko H2=${koGate.h2Count}`,
+    );
+  }
 
   writePost(slug, "en", enFm, enBody);
   writePost(slug, "ko", koFm, koBody);
-  salvageWrittenDraft(slug, contentProfile);
 
   const issues = validatePostFiles(slug, {
     phase: "draft",
@@ -610,20 +573,8 @@ async function generateDraftForTopic(topic, contentProfile, options = {}) {
 }
 
 export async function maintainDraftBuffer(options = {}) {
-  const { bypassWriteCap = false, maxCreate = 1 } = options;
+  const { bypassWriteCap = false, maxCreate } = options;
   let created = 0;
-
-  if (!bypassWriteCap && isSchedulerPaused(loadState())) {
-    console.log("Buffer skipped: scheduler paused");
-    return 0;
-  }
-
-  if (!bypassWriteCap && !isDeepseekDiscountKst()) {
-    console.log(
-      "Buffer skipped: outside DeepSeek off-peak (KST weekday 10:00–13:00 / 15:00–19:00 peak; weekend all day off-peak)",
-    );
-    return 0;
-  }
 
   while (countDrafts() < TARGET_DRAFT_BUFFER) {
     if (maxCreate !== undefined && created >= maxCreate) break;

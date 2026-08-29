@@ -1,9 +1,14 @@
 const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-9630508246667414";
 
-/** AdSense loader — place as the first child inside `<head>`. */
+/**
+ * AdSense JS paints Auto ads even without in-article slots.
+ * Keep the loader off until AdSense is approved
+ * (`NEXT_PUBLIC_ADSENSE_ENABLED=true`).
+ */
 export function GoogleAdSenseHead() {
-  if (!ADSENSE_CLIENT_ID) return null;
+  const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
+  if (!enabled || !ADSENSE_CLIENT_ID) return null;
 
   return (
     <script

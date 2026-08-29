@@ -6,20 +6,20 @@ Use for **`contentProfile: explainer`**. Educational authority content — specs
 
 "What is BTU", "LDAC vs AAC", "mAh vs Wh" — informational queries that support buying guides.
 
-## Do not stamp
+## Section order
 
-Do **not** include **Analysis methodology / 분석 방법론** in the body (`/about` holds the source table).
+1. **Editorial Overview** / **편집부 개요**
+2. **Introduction** — the question this article answers
+3. Do **not** include **Analysis methodology / 분석 방법론** in the body (`/about` holds the source table)
+4. **Core explanation** — 2–3 `##` sections breaking down the concept
+5. **Comparison or reference table** — at least one table
+6. **## FAQ** / **## 자주 묻는 질문** — ≥5 Q&A pairs (`###` per question)
+7. **Related guides** / **관련 가이드** — link to relevant buying guides on this site
+8. **Key takeaways** / **핵심 정리** — numbered list (≥3 items)
 
-## Assigned variants (pipeline picks one)
-
-1. **question-core** — the question → how the spec works → reference table → easy misreads → FAQ → key takeaways
-2. **myth-bust** — the claim to stress-test → terms that change the answer → worked example with named models → FAQ → related buying guides
-3. **layers** — marketing vs spec sheet vs ownership → what to read on the sheet → comparison/reference table → FAQ → key takeaways
-
-## Quality rules
+## Rules
 
 - Minimum **5** FAQ entries
-- At least one table; named models in the worked example when useful
 - Link to at least one `buying-guide` or `scenario-guide` on this site in Related guides
 - No fake API claims; cite public specs and standards
 - English primary; Korean faithful translation

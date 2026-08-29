@@ -97,7 +97,7 @@ export function scorePost(postsRoot, slug, options = {}) {
 
   let struct = 0;
   if (/편집부 개요|Editorial Overview/.test(koBody + enBody)) struct += 4;
-  if (/직접 실물 기기를 테스트한 리뷰가 아닙니다|not a hands-on review|분석 방법론|Analysis methodology/.test(koBody + enBody)) struct += 4;
+  if (/직접 실물 기기를 테스트한 리뷰가 아닙니다|not a hands-on review|투명성 고지|Transparency/.test(koBody + enBody)) struct += 4;
   if (tables >= 3) struct += 4;
   else if (tables >= 1) struct += 2;
   if (faq >= 3) struct += 4;
