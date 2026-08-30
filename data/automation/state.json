@@ -16,10 +16,10 @@
   "lastPublishAt": "2026-08-29T02:59:34.854Z",
   "nextPublishAt": "2026-08-31T01:49:00.000Z",
   "scheduledGapHours": 4.82,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-08-29",
+  "publishCountToday": 0,
+  "publishDateKst": "2026-08-31",
   "writeCountToday": 0,
-  "writeDateKst": "2026-08-29",
+  "writeDateKst": "2026-08-31",
   "history": [
     {
       "action": "publish",
@@ -215,14 +215,9 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-29T14:40:48.805Z",
-    "issueCount": 3,
+    "at": "2026-08-30T23:25:37.862Z",
+    "issueCount": 2,
     "issues": [
-      {
-        "code": "no-publishable-drafts",
-        "message": "No publishable drafts (15 deferred)",
-        "severity": "warning"
-      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
@@ -230,7 +225,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 4556min",
+        "message": "Cursor replenish pending 6520min",
         "severity": "warning"
       }
     ],
