@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-29T03:01:57.941Z'
+updatedAt: '2026-08-31T02:01:23.363Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## Editorial Overview

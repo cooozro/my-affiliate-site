@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: '2724749'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-29T03:02:01.874Z'
+updatedAt: '2026-08-31T02:01:27.344Z'
 publishedAt: '2026-07-17T02:23:36.986Z'
 ---
 ## 편집부 개요

@@ -25,7 +25,7 @@ coverImageProvider: press-kit
 modelPickId: galaxy-z-fold-6
 modelPickBrand: Samsung
 modelPickName: Galaxy Z Fold6
-updatedAt: '2026-08-29T03:02:04.090Z'
+updatedAt: '2026-08-31T02:01:29.590Z'
 coverImageAssetId: 9ae65cb9fd
 coverImageSourceUrl: >-
   https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_dl1-728x410.jpg

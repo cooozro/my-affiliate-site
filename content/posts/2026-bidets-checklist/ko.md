@@ -22,7 +22,7 @@ imageSearchKeywords:
   - bidet
   - toilet seat
   - bathroom
-updatedAt: '2026-08-29T03:01:58.826Z'
+updatedAt: '2026-08-31T02:01:24.281Z'
 publishedAt: '2026-07-10T05:25:29.985Z'
 ---
 ## 편집부 개요

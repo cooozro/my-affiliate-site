@@ -14,7 +14,7 @@ contentProfile: explainer
 topicId: electric-blankets
 topicCluster: home-appliances
 writingProvider: deepseek
-updatedAt: '2026-08-29T03:02:10.567Z'
+updatedAt: '2026-08-31T02:01:36.169Z'
 coverImage: /images/posts/electric-blanket-safety-timers-wash-care-2026/cover-1037995.jpg
 coverImageProvider: pexels
 coverImageAssetId: 1037995
