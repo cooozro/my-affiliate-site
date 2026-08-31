@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-08-29T02:59:34.854Z",
-  "nextPublishAt": "2026-08-31T01:49:00.000Z",
-  "scheduledGapHours": 4.82,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-08-31T01:59:00.296Z",
+  "nextPublishAt": "2026-09-01T02:29:00.000Z",
+  "scheduledGapHours": 5.48,
+  "publishCountToday": 1,
   "publishDateKst": "2026-08-31",
   "writeCountToday": 0,
   "writeDateKst": "2026-08-31",
@@ -211,13 +211,31 @@
         "https://www.aipick.shop/en/blog/2026-budget-laptops-students-cpu-ram-display-battery",
         "https://www.aipick.shop/ko/blog/2026-budget-laptops-students-cpu-ram-display-battery"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-smartphones-scenario-guide",
+      "topic": {
+        "id": "budget-smartphones",
+        "cluster": "smartphones"
+      },
+      "at": "2026-08-31T01:59:00.296Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-smartphones-scenario-guide",
+        "https://www.aipick.shop/ko/blog/2026-budget-smartphones-scenario-guide"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-31T01:39:07.684Z",
-    "issueCount": 2,
+    "at": "2026-08-31T01:58:57.047Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (9min past slot, KST 2026-08-31)",
+        "severity": "warning"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
@@ -225,11 +243,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 6654min",
+        "message": "Cursor replenish pending 6674min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -354,6 +374,11 @@
       "id": "laptops",
       "cluster": "computing",
       "at": "2026-08-29T02:59:34.878Z"
+    },
+    {
+      "id": "budget-smartphones",
+      "cluster": "smartphones",
+      "at": "2026-08-31T01:59:00.309Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-08-29",

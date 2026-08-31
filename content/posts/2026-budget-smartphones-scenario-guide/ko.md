@@ -3,27 +3,27 @@ title: '가성비 폰, 실제로 뭘 사야 할까? 세 가지 실전 시나리�
 description: >-
   게임, 카메라, 배터리 수명 등 실제 사용 목적별로 2026년 가성비 스마트폰을 분석합니다. 칩셋, 카메라, 배터리 사양 중 무엇이 중요한지
   알려드립니다.
-date: '2026-08-26'
+date: '2026-08-31'
 tags:
   - 가성비 스마트폰
   - 2026년 폰
   - 칩셋 비교
   - 카메라 폰
   - 배터리 수명
-draft: true
+draft: false
 publishAfter: '2026-08-31'
 contentProfile: scenario-guide
 topicId: budget-smartphones
 topicCluster: smartphones
 writingProvider: deepseek
-createdAt: '2026-08-26T12:40:29.505Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-smartphones-scenario-guide/budget-smartphone-in-hand-cover.jpg
 coverImageAlt: 책상 위의 스마트폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Tima Miroshnichenko / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-31T01:39:07.803Z'
+updatedAt: '2026-08-31T10:58:57.000Z'
+publishedAt: '2026-08-31T10:58:57.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

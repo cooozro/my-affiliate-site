@@ -4,20 +4,19 @@ description: >-
   We break down budget smartphones by real use cases: gaming, camera, and
   battery life. See which chipset, camera, and battery specs matter most for
   your…
-date: '2026-08-26'
+date: '2026-08-31'
 tags:
   - budget smartphones
   - 2026 phones
   - chipset comparison
   - camera phone
   - battery life
-draft: true
+draft: false
 publishAfter: '2026-08-31'
 contentProfile: scenario-guide
 topicId: budget-smartphones
 topicCluster: smartphones
 writingProvider: deepseek
-createdAt: '2026-08-26T12:40:29.505Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-smartphones-scenario-guide/budget-smartphone-in-hand-cover.jpg
@@ -25,7 +24,8 @@ coverImageAlt: budget smartphone on a desk
 coverImageAltKo: 책상 위의 스마트폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Tima Miroshnichenko / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T12:40:45.587Z'
+updatedAt: '2026-08-31T10:58:57.000Z'
+publishedAt: '2026-08-31T10:58:57.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
