@@ -228,12 +228,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-08-31T01:58:57.047Z",
+    "at": "2026-08-31T02:21:09.971Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (9min past slot, KST 2026-08-31)",
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (14 deferred)",
         "severity": "warning"
       },
       {
@@ -243,12 +243,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 6674min",
+        "message": "Cursor replenish pending 6696min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-budget-smartphones-scenario-guide/en.md: publishedAt 2026-08-31T10:58:57.000Z → 2026-08-31T01:59:00.296Z",
+      "2026-budget-smartphones-scenario-guide/ko.md: publishedAt 2026-08-31T10:58:57.000Z → 2026-08-31T01:59:00.296Z"
     ]
   },
   "topicHistory": [
