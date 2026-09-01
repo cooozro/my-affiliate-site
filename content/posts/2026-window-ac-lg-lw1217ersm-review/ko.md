@@ -26,7 +26,7 @@ modelPickId: lg-lw1217ersm
 modelPickBrand: LG
 modelPickName: LW1217ERSM
 pressKitGallery: 'https://www.lgnewsroom.com/'
-updatedAt: '2026-08-31T02:01:35.537Z'
+updatedAt: '2026-09-01T02:39:30.870Z'
 publishedAt: '2026-08-19T10:07:51.424Z'
 ---
 ## 편집부 개요

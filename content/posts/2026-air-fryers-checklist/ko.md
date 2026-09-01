@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 1370082
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1370082/pexels-photo-1370082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-31T02:01:23.582Z'
+updatedAt: '2026-09-01T02:39:18.623Z'
 publishedAt: '2026-07-04T06:43:31.577Z'
 ---
 ## 편집부 개요

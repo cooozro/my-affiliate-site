@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 8533358
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/8533358/pexels-photo-8533358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-31T02:01:33.478Z'
+updatedAt: '2026-09-01T02:39:28.658Z'
 publishedAt: '2026-07-08T02:58:57.557Z'
 ---
 ## 편집부 개요

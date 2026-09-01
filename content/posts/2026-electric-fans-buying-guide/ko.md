@@ -29,7 +29,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 3571028
 coverImageSourceUrl: >-
   https://pixabay.com/get/gc01ec4bb0cf2d5d3bba37a90ebb7f893e59ad26615992ac8c97993cb316ead329af64b7e9769974baf82d5658ba6fc833999d0de80eb9e271297d4b2c6105e43_1280.jpg
-updatedAt: '2026-08-31T02:01:28.630Z'
+updatedAt: '2026-09-01T02:39:23.766Z'
 publishedAt: '2026-07-03T02:11:09.745Z'
 ---
 ## 편집부 개요

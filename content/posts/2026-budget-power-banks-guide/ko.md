@@ -18,7 +18,7 @@ coverImage: >-
   /images/posts/2026-budget-power-banks-guide/portable-power-bank-usb-c-power-bank-cover.jpg
 coverImageAlt: 책상 위의 보조배터리
 coverImageCredit: Photo by ready made / Pexels
-updatedAt: '2026-08-31T02:01:25.725Z'
+updatedAt: '2026-09-01T02:39:20.799Z'
 publishedAt: '2026-06-25T12:06:58.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 3921707

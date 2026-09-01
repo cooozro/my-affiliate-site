@@ -26,7 +26,7 @@ coverImageProvider: pexels
 coverImageAssetId: 35745699
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/35745699/pexels-photo-35745699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-08-31T02:01:30.387Z'
+updatedAt: '2026-09-01T02:39:25.626Z'
 publishedAt: '2026-07-06T03:36:25.166Z'
 ---
 ## 편집부 개요

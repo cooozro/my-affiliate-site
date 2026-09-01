@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: 마루 바닥의 로봇 청소기
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Andrey Matveev / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-31T02:01:23.934Z'
+updatedAt: '2026-09-01T02:39:18.972Z'
 automationBuffer: true
 publishAfter: '2026-09-12'
 ---
