@@ -241,7 +241,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-01T02:59:32.382Z",
+    "at": "2026-09-01T03:19:27.907Z",
     "issueCount": 3,
     "issues": [
       {
@@ -256,14 +256,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 8174min",
+        "message": "Cursor replenish pending 8194min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-budget-noise-cancelling-headphones-anc-codecs-explainer/en.md: publishedAt 2026-09-01T11:36:51.000Z → 2026-09-01T02:36:55.338Z",
-      "2026-budget-noise-cancelling-headphones-anc-codecs-explainer/ko.md: publishedAt 2026-09-01T11:36:51.000Z → 2026-09-01T02:36:55.338Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
