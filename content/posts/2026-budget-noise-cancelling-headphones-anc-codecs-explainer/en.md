@@ -25,7 +25,7 @@ coverImageAltKo: 책상 위의 스마트폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Sound On / Pexels
 coverImageProvider: pexels
 updatedAt: '2026-09-01T11:36:51.000Z'
-publishedAt: '2026-09-01T11:36:51.000Z'
+publishedAt: '2026-09-01T02:36:55.338Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
