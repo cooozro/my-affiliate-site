@@ -4,20 +4,19 @@ description: >-
   We explain ANC depth, codec support, and comfort for budget noise-cancelling
   headphones in 2026. See real specs, avoid common myths, and find your travel
   match.
-date: '2026-08-26'
+date: '2026-09-01'
 tags:
   - noise cancelling headphones
   - budget ANC
   - headphone codecs
   - travel headphones
   - ANC depth
-draft: true
+draft: false
 publishAfter: '2026-09-01'
 contentProfile: explainer
 topicId: noise-cancelling-headphones
 topicCluster: audio
 writingProvider: deepseek
-createdAt: '2026-08-26T12:47:25.274Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-noise-cancelling-headphones-anc-codecs-explainer/noise-cancelling-headphones-travel-noise-cancell-cover.jpg
@@ -25,7 +24,8 @@ coverImageAlt: noise-cancelling headphones on a desk
 coverImageAltKo: 책상 위의 스마트폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Sound On / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T12:47:51.688Z'
+updatedAt: '2026-09-01T11:36:51.000Z'
+publishedAt: '2026-09-01T11:36:51.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

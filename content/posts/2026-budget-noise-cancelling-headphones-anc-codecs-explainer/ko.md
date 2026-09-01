@@ -3,27 +3,27 @@ title: '예산 ANC 헤드폰: 10만 원 이하에서 실제 노이즈 캔슬링�
 description: >-
   예산형 노이즈 캔슬링 헤드폰의 ANC 깊이, 코덱 지원, 착용감을 설명합니다. 실제 스펙을 확인하고 흔한 오해를 피해 여행에 맞는 제품을
   찾아보세요.
-date: '2026-08-26'
+date: '2026-09-01'
 tags:
   - 노이즈 캔슬링 헤드폰
   - 가성비 ANC
   - 헤드폰 코덱
   - 여행용 헤드폰
   - ANC 깊이
-draft: true
+draft: false
 publishAfter: '2026-09-01'
 contentProfile: explainer
 topicId: noise-cancelling-headphones
 topicCluster: audio
 writingProvider: deepseek
-createdAt: '2026-08-26T12:47:25.274Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-noise-cancelling-headphones-anc-codecs-explainer/noise-cancelling-headphones-travel-noise-cancell-cover.jpg
 coverImageAlt: 책상 위의 스마트폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Sound On / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T12:52:59.513Z'
+updatedAt: '2026-09-01T02:36:55.464Z'
+publishedAt: '2026-09-01T11:36:51.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -127,9 +127,9 @@ LDAC는 소스(휴대폰)와 귀가 차이를 인지할 수 있을 때만 도움
 ## 관련 가이드
 
 - [수영장·피크닉·공원, 여름용 블루투스 스피커는 IP 등급과 와트로 고른다](/ko/blog/2026-summer-bluetooth-speakers-guide) — 여름 야외용 휴대 블루투스 스피커 5종을 IP 등급, 배터리, 음량, 무게로 비교했습니다. 수영장·피크닉·여행 시나리오별 추천 가이드.
-- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
+- [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 ## 최종 평가
 
