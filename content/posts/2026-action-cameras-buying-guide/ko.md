@@ -27,7 +27,7 @@ coverImageProvider: pexels
 coverImageAssetId: 92723
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/92723/pexels-photo-92723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-09-01T02:39:18.451Z'
+updatedAt: '2026-09-02T01:59:19.049Z'
 publishedAt: '2026-07-01T07:26:11.000Z'
 ---
 ## 편집부 개요

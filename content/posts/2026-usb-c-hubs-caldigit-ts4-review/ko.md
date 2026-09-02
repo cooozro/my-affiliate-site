@@ -26,7 +26,7 @@ modelPickBrand: CalDigit
 modelPickName: TS4 Thunderbolt 4 Dock
 pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
-updatedAt: '2026-09-01T02:39:29.842Z'
+updatedAt: '2026-09-02T01:59:30.441Z'
 automationBuffer: true
 publishAfter: '2026-09-16'
 ---

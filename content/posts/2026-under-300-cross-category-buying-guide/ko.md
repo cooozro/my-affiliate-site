@@ -25,7 +25,7 @@ coverImageAlt: budget tech gadgets on a desk
 coverImageAltKo: 책상 위 가성비 테크 기기
 coverImageCredit: Photo by Tranmautritam / Pexels
 coverImageSourceUrl: 'https://www.pexels.com/photo/4158/'
-updatedAt: '2026-09-01T02:39:29.292Z'
+updatedAt: '2026-09-02T01:59:29.965Z'
 publishedAt: '2026-07-11T13:27:19.499Z'
 ---
 ## 편집부 개요

@@ -29,7 +29,7 @@ coverImageProvider: pexels
 coverImageAssetId: 19651262
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/19651262/pexels-photo-19651262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-09-01T02:39:22.171Z'
+updatedAt: '2026-09-02T01:59:22.723Z'
 publishedAt: '2026-07-07T03:34:46.035Z'
 ---
 ## 편집부 개요
