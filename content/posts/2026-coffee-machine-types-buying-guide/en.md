@@ -3,27 +3,27 @@ title: 'Capsule, Semi-Auto, or Fully Automatic? A Coffee Machine Myth-Busting Gu
 description: >-
   We separate capsule, semi-auto, and fully automatic coffee machine myths from
   facts, compare milk systems and descaling, and shortlist real models for 2026.
-date: '2026-08-26'
+date: '2026-09-02'
 tags:
   - coffee machines
   - capsule vs semi-auto
   - fully automatic
   - milk frother
   - descaling
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: coffee-machines
 topicCluster: kitchen
 writingProvider: deepseek
-createdAt: '2026-08-26T13:08:47.656Z'
 coverImage: >-
   /images/posts/2026-coffee-machine-types-buying-guide/coffee-machine-kitchen-espresso-cover.jpg
 coverImageAlt: coffee machine kitchen espresso
 coverImageAltKo: coffee machine kitchen espresso
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Ketut Subiyanto / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:09:03.516Z'
+updatedAt: '2026-09-02T10:56:54.000Z'
 publishAfter: '2026-09-02'
+publishedAt: '2026-09-02T10:56:54.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

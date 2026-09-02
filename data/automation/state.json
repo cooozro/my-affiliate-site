@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-01T02:36:55.338Z",
-  "nextPublishAt": "2026-09-02T01:38:00.000Z",
-  "scheduledGapHours": 4.63,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-09-02T01:56:55.980Z",
+  "nextPublishAt": "2026-09-03T01:03:00.000Z",
+  "scheduledGapHours": 4.05,
+  "publishCountToday": 1,
   "publishDateKst": "2026-09-02",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-02",
@@ -237,13 +237,31 @@
         "https://www.aipick.shop/en/blog/2026-budget-noise-cancelling-headphones-anc-codecs-explainer",
         "https://www.aipick.shop/ko/blog/2026-budget-noise-cancelling-headphones-anc-codecs-explainer"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-coffee-machine-types-buying-guide",
+      "topic": {
+        "id": "coffee-machines",
+        "cluster": "kitchen"
+      },
+      "at": "2026-09-02T01:56:55.980Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-coffee-machine-types-buying-guide",
+        "https://www.aipick.shop/ko/blog/2026-coffee-machine-types-buying-guide"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-02T01:36:57.242Z",
-    "issueCount": 2,
+    "at": "2026-09-02T01:56:54.277Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (18min past slot, KST 2026-09-02)",
+        "severity": "error"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
@@ -251,11 +269,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 9532min",
+        "message": "Cursor replenish pending 9552min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -390,6 +410,11 @@
       "id": "noise-cancelling-headphones",
       "cluster": "audio",
       "at": "2026-09-01T02:36:55.367Z"
+    },
+    {
+      "id": "coffee-machines",
+      "cluster": "kitchen",
+      "at": "2026-09-02T01:56:55.990Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-09-01",

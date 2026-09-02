@@ -1,26 +1,26 @@
 ---
 title: '캡슐, 반자동, 완전자동? 커피 머신 오해와 진실 가이드'
 description: '캡슐·반자동·완전자동 커피 머신의 오해와 진실을 분리하고, 우유 거품기와 스케일 제거를 비교하며 2026년 추천 모델을 소개합니다.'
-date: '2026-08-26'
+date: '2026-09-02'
 tags:
   - 커피 머신
   - 캡슐 vs 반자동
   - 완전자동
   - 우유 거품기
   - 스케일 제거
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: coffee-machines
 topicCluster: kitchen
 writingProvider: deepseek
-createdAt: '2026-08-26T13:08:47.656Z'
 coverImage: >-
   /images/posts/2026-coffee-machine-types-buying-guide/coffee-machine-kitchen-espresso-cover.jpg
 coverImageAlt: coffee machine kitchen espresso
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Ketut Subiyanto / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-09-02T01:36:57.357Z'
+updatedAt: '2026-09-02T10:56:54.000Z'
 publishAfter: '2026-09-02'
+publishedAt: '2026-09-02T10:56:54.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
