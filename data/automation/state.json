@@ -267,13 +267,13 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T05:55:55.681Z",
+    "at": "2026-09-03T06:09:01.375Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (292min past slot, KST 2026-09-03)",
-        "severity": "error"
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (11 deferred)",
+        "severity": "warning"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -282,12 +282,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 11231min",
+        "message": "Cursor replenish pending 11244min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-bidets-bio-bidet-bb-2000-review/en.md: publishedAt 2026-09-03T14:55:56.000Z → 2026-09-03T05:55:59.447Z",
+      "2026-bidets-bio-bidet-bb-2000-review/ko.md: publishedAt 2026-09-03T14:55:56.000Z → 2026-09-03T05:55:59.447Z"
     ]
   },
   "topicHistory": [
