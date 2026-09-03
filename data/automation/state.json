@@ -267,7 +267,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T06:09:01.375Z",
+    "at": "2026-09-03T06:28:45.886Z",
     "issueCount": 3,
     "issues": [
       {
@@ -282,14 +282,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 11244min",
+        "message": "Cursor replenish pending 11264min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-bidets-bio-bidet-bb-2000-review/en.md: publishedAt 2026-09-03T14:55:56.000Z → 2026-09-03T05:55:59.447Z",
-      "2026-bidets-bio-bidet-bb-2000-review/ko.md: publishedAt 2026-09-03T14:55:56.000Z → 2026-09-03T05:55:59.447Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
