@@ -254,12 +254,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T01:14:09.783Z",
+    "at": "2026-09-03T01:34:00.793Z",
     "issueCount": 5,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (11min past slot, KST 2026-09-03)",
+        "message": "Publish ready but no post went live (31min past slot, KST 2026-09-03)",
         "severity": "error"
       },
       {
@@ -279,7 +279,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 10949min",
+        "message": "Cursor replenish pending 10969min",
         "severity": "warning"
       }
     ],
@@ -504,16 +504,11 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-08-28T06:46:39.137Z",
+    "at": "2026-09-03T01:34:01.716Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-budget-wireless-earbuds-spec-comparison",
       "2026-power-banks-anker-737-review",
-      "2026-window-wall-ac-checklist",
-      "2026-budget-laptops-students-cpu-ram-display-battery",
-      "2026-budget-smartphones-scenario-guide",
-      "2026-budget-noise-cancelling-headphones-anc-codecs-explainer",
-      "2026-coffee-machine-types-buying-guide",
       "2026-gaming-consoles-buying-guide",
       "2026-apartment-robot-vacuum-comparison",
       "2026-usb-c-hubs-caldigit-ts4-review",
@@ -525,7 +520,7 @@
       "2026-washing-machines-buying-guide",
       "2026-robot-vacuums-ecovacs-deebot-x8-review"
     ],
-    "deferredSkipped": 16,
+    "deferredSkipped": 11,
     "integritySkipped": 1,
     "diversitySkipped": 0,
     "publishableCount": 1,
