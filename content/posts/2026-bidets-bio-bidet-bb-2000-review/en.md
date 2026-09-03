@@ -103,7 +103,7 @@ The Kohler PureWash E750 is the BB-2000's most direct competitor in the same pri
 | Warm air dryer | Yes | Yes (with adjustable temp) |
 | Heated seat | Yes | Yes |
 | Install fit | Elongated only | Elongated and round (with adapter) |
-| Price (MSRP) | {{krw:599}} | {{krw:749}} |
+| Price (MSRP) | 99 ({{krw:599}}) | 49 ({{krw:749}}) |
 
 The E750's remote control is a nice convenience, and its round-bowl adapter makes it more flexible. But the BB-2000 typically costs less and offers the same core features. If you have a round toilet or you're set on a remote, the E750 is worth the extra money. Otherwise, the BB-2000 delivers comparable performance for less.
 
@@ -138,7 +138,7 @@ Yes, the BB-2000 has multiple pressure settings for both front and rear wash. Yo
 
 **Review concern**: The install fit is the biggest barrier. Measure your toilet and check for an outlet before you buy. Also, the dryer's pace might disappoint if you expect a quick dry. Consider your patience and your bathroom's electrical setup.
 
-**Total cost of ownership**: Over three years, the BB-2000 costs around {{krw:599}} upfront plus a small monthly electricity increase. Factoring in toilet paper savings, the bidet often pays for itself in a couple of years, especially for households that go through rolls quickly.
+**Total cost of ownership**: Over three years, the BB-2000 costs around 99 ({{krw:599}}) upfront plus a small monthly electricity increase. Factoring in toilet paper savings, the bidet often pays for itself in a couple of years, especially for households that go through rolls quickly.
 
 ## Related guides
 
