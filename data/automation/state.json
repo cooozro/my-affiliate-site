@@ -254,22 +254,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T05:49:45.477Z",
-    "issueCount": 5,
+    "at": "2026-09-03T05:55:55.681Z",
+    "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (286min past slot, KST 2026-09-03)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "message": "Publish ready but no post went live (292min past slot, KST 2026-09-03)",
         "severity": "error"
       },
       {
@@ -279,7 +269,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 11225min",
+        "message": "Cursor replenish pending 11231min",
         "severity": "warning"
       }
     ],
