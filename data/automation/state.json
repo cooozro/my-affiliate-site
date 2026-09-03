@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-02T01:56:55.980Z",
-  "nextPublishAt": "2026-09-03T01:03:00.000Z",
-  "scheduledGapHours": 4.05,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-09-03T05:55:59.447Z",
+  "nextPublishAt": "2026-09-04T01:44:00.000Z",
+  "scheduledGapHours": 4.73,
+  "publishCountToday": 1,
   "publishDateKst": "2026-09-03",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-03",
@@ -250,6 +250,19 @@
         "https://www.aipick.shop/en/blog/2026-coffee-machine-types-buying-guide",
         "https://www.aipick.shop/ko/blog/2026-coffee-machine-types-buying-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-bidets-bio-bidet-bb-2000-review",
+      "topic": {
+        "id": "bidets",
+        "cluster": "home-appliances"
+      },
+      "at": "2026-09-03T05:55:59.447Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-bidets-bio-bidet-bb-2000-review",
+        "https://www.aipick.shop/ko/blog/2026-bidets-bio-bidet-bb-2000-review"
+      ]
     }
   ],
   "schedulerPaused": false,
@@ -415,11 +428,16 @@
       "id": "coffee-machines",
       "cluster": "kitchen",
       "at": "2026-09-02T01:56:55.990Z"
+    },
+    {
+      "id": "bidets",
+      "cluster": "home-appliances",
+      "at": "2026-09-03T05:55:59.458Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-09-02",
+  "lastDailyContentAuditKst": "2026-09-03",
   "lastDailyContentAudit": {
-    "at": "2026-09-02T01:59:32.658Z",
+    "at": "2026-09-03T05:56:13.333Z",
     "postsScanned": 83,
     "autoRepairCount": 133,
     "manualReviewCount": 0

@@ -18,7 +18,7 @@ imageSearchKeywords:
   - window air conditioner
   - apartment cooling
   - wall air conditioner
-updatedAt: '2026-09-02T01:59:31.612Z'
+updatedAt: '2026-09-03T05:56:12.296Z'
 coverImage: >-
   /images/posts/2026-window-ac-room-scenario-guide/window-air-conditioner-apartment-cooling-cover.jpg
 coverImageAlt: 원룸의 창문형 에어컨

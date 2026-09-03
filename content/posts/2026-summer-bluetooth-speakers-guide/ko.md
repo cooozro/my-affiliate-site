@@ -21,7 +21,7 @@ coverImageProvider: pixabay
 coverImageAssetId: 1822629
 coverImageSourceUrl: >-
   https://pixabay.com/get/g81ffd1485e67d1e44ac2c1451e2b2e4ee4fceeac6e4d6c495cd661ecdbb866f84f12e6c7a374408a9af265c66ba1f0b26e1bc12a68b3bbeee212070c0d2f404e_1280.jpg
-updatedAt: '2026-09-02T01:59:29.177Z'
+updatedAt: '2026-09-03T05:56:09.787Z'
 publishedAt: '2026-06-30T08:14:30.000Z'
 coverImageAltKo: 여름 야외의 블루투스 스피커
 ---

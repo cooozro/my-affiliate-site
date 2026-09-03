@@ -31,7 +31,7 @@ modelPickId: keychron-q1-pro
 modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
-updatedAt: '2026-09-02T01:59:26.383Z'
+updatedAt: '2026-09-03T05:56:06.891Z'
 automationBuffer: true
 publishAfter: '2026-09-15'
 ---

@@ -17,7 +17,7 @@ topicId: meta-summer-heat-bundle
 topicCluster: cross-cutting
 writingProvider: deepseek
 liveData: true
-updatedAt: '2026-09-02T01:59:29.490Z'
+updatedAt: '2026-09-03T05:56:10.152Z'
 coverImage: /images/posts/2026-summer-heat-bundle-buying-guide/electric-fan-room-cover.jpg
 coverImageAlt: 선풍기
 coverImageAltKo: 선풍기

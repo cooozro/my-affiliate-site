@@ -16,7 +16,7 @@ coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
 coverImageAlt: 책상 위의 기계식 키보드
 coverImageCredit: Photo by FOX ^.ᆽ.^= ∫ / Pexels
-updatedAt: '2026-09-02T01:59:20.686Z'
+updatedAt: '2026-09-03T05:56:01.312Z'
 publishedAt: '2026-06-26T08:03:41.000Z'
 coverImageProvider: pexels
 coverImageAssetId: 35504606

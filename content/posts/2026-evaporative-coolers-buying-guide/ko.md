@@ -30,7 +30,7 @@ coverImageCredit: Photo by Kindel Media / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '4506270'
 coverImageSourceUrl: 'https://images.pexels.com/photos/4506270/pexels-photo-4506270.jpeg'
-updatedAt: '2026-09-02T01:59:24.564Z'
+updatedAt: '2026-09-03T05:56:05.124Z'
 publishedAt: '2026-07-23T06:46:19.243Z'
 ---
 ## 편집부 개요
