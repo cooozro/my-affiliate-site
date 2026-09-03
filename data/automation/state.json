@@ -16,10 +16,10 @@
   "lastPublishAt": "2026-09-03T05:55:59.447Z",
   "nextPublishAt": "2026-09-04T01:44:00.000Z",
   "scheduledGapHours": 4.73,
-  "publishCountToday": 1,
-  "publishDateKst": "2026-09-03",
+  "publishCountToday": 0,
+  "publishDateKst": "2026-09-04",
   "writeCountToday": 0,
-  "writeDateKst": "2026-09-03",
+  "writeDateKst": "2026-09-04",
   "history": [
     {
       "action": "publish",
@@ -267,12 +267,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T11:43:07.129Z",
+    "at": "2026-09-03T23:49:26.448Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "no-publishable-drafts",
-        "message": "No publishable drafts (11 deferred)",
+        "code": "draft-integrity-issues",
+        "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
@@ -282,7 +282,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 11578min",
+        "message": "Cursor replenish pending 12304min",
         "severity": "warning"
       }
     ],
