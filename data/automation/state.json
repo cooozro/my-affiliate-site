@@ -254,12 +254,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-03T02:53:37.306Z",
+    "at": "2026-09-03T03:13:03.871Z",
     "issueCount": 5,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (110min past slot, KST 2026-09-03)",
+        "message": "Publish ready but no post went live (130min past slot, KST 2026-09-03)",
         "severity": "error"
       },
       {
@@ -279,7 +279,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 11048min",
+        "message": "Cursor replenish pending 11068min",
         "severity": "warning"
       }
     ],
@@ -504,7 +504,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-09-03T02:53:38.265Z",
+    "at": "2026-09-03T03:13:04.796Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-budget-wireless-earbuds-spec-comparison",
