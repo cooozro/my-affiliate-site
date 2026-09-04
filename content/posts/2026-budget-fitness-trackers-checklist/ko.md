@@ -1,27 +1,27 @@
 ---
 title: 가성비 피트니스 트래커 구매 전 확인할 7가지 체크리스트
 description: '가성비 피트니스 트래커 구매 전 심박수 정확도, 수면 추적, 앱 생태계를 확인하세요. 7가지 체크리스트로 흔한 실수를 피하세요.'
-date: '-08-26'
+date: '2026-09-04'
 tags:
   - 피트니스 트래커
   - 심박수 정확도
   - 수면 추적
   - 가성비 웨어러블
   - 앱 생태계
-draft: true
+draft: false
 contentProfile: checklist
 topicId: fitness-trackers
 topicCluster: wearables
 writingProvider: deepseek
-createdAt: '-08-26T13:20:50.769Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-checklist/fitness-tracker-wrist-activity-fitness-tracker-w-cover.jpg
 coverImageAlt: 여름 야외 운동의 피트니스 트래커
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by StockSnap / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-26T13:34:46.317Z'
+updatedAt: '2026-09-04T11:16:57.000Z'
 publishAfter: '2026-09-04'
+publishedAt: '2026-09-04T11:16:57.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

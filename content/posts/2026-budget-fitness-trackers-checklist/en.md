@@ -4,19 +4,18 @@ description: >-
   Before buying a budget fitness tracker, check heart rate accuracy, sleep
   tracking, and app ecosystem. Use our 7-point checklist to avoid common
   pitfalls.
-date: '2026-08-26'
+date: '2026-09-04'
 tags:
   - fitness tracker
   - heart rate accuracy
   - sleep tracking
   - budget wearables
   - app ecosystem
-draft: true
+draft: false
 contentProfile: checklist
 topicId: fitness-trackers
 topicCluster: wearables
 writingProvider: deepseek
-createdAt: '2026-08-26T13:20:50.769Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-checklist/fitness-tracker-wrist-activity-fitness-tracker-w-cover.jpg
@@ -24,8 +23,9 @@ coverImageAlt: fitness tracker during an outdoor summer workout
 coverImageAltKo: 여름 야외 운동의 피트니스 트래커
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by StockSnap / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-26T13:25:17.624Z'
+updatedAt: '2026-09-04T11:16:57.000Z'
 publishAfter: '2026-09-04'
+publishedAt: '2026-09-04T11:16:57.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

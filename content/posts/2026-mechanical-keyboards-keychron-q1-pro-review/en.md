@@ -1,7 +1,5 @@
 ---
-title: >-
-  Keychron Q1 Pro Review: Is the Gasket-Mount Wireless Custom Still Worth It in
-  2026?
+title: 'Keychron Q1 Pro Review: Is the Gasket-Mount Wireless Custom Still Worth It?'
 description: >-
   We review the Keychron Q1 Pro in 2026: gasket mount, wireless, QMK/VIA
   support, and build quality. See specs, performance, and who should buy or
@@ -31,7 +29,7 @@ modelPickId: keychron-q1-pro
 modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
-updatedAt: '2026-09-03T05:56:06.891Z'
+updatedAt: '2026-09-04T02:17:07.817Z'
 automationBuffer: true
 publishAfter: '2026-09-15'
 ---

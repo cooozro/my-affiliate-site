@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-03T05:55:59.447Z",
-  "nextPublishAt": "2026-09-04T01:44:00.000Z",
-  "scheduledGapHours": 4.73,
-  "publishCountToday": 0,
+  "lastPublishAt": "2026-09-04T02:16:59.736Z",
+  "nextPublishAt": "2026-09-05T01:16:00.000Z",
+  "scheduledGapHours": 4.27,
+  "publishCountToday": 1,
   "publishDateKst": "2026-09-04",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-04",
@@ -263,26 +263,29 @@
         "https://www.aipick.shop/en/blog/2026-bidets-bio-bidet-bb-2000-review",
         "https://www.aipick.shop/ko/blog/2026-bidets-bio-bidet-bb-2000-review"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-fitness-trackers-checklist",
+      "topic": {
+        "id": "fitness-trackers",
+        "cluster": "wearables"
+      },
+      "at": "2026-09-04T02:16:59.736Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-checklist",
+        "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-checklist"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-04T02:05:54.489Z",
-    "issueCount": 5,
+    "at": "2026-09-04T02:16:57.150Z",
+    "issueCount": 3,
     "issues": [
       {
         "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (21min past slot, KST 2026-09-04)",
-        "severity": "error"
-      },
-      {
-        "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
-        "severity": "warning"
-      },
-      {
-        "code": "all-drafts-blocked-at-slot",
-        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "message": "Publish ready but no post went live (32min past slot, KST 2026-09-04)",
         "severity": "error"
       },
       {
@@ -292,7 +295,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 12441min",
+        "message": "Cursor replenish pending 12452min",
         "severity": "warning"
       }
     ],
@@ -443,11 +446,16 @@
       "id": "bidets",
       "cluster": "home-appliances",
       "at": "2026-09-03T05:55:59.458Z"
+    },
+    {
+      "id": "fitness-trackers",
+      "cluster": "wearables",
+      "at": "2026-09-04T02:16:59.764Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-09-03",
+  "lastDailyContentAuditKst": "2026-09-04",
   "lastDailyContentAudit": {
-    "at": "2026-09-03T05:56:13.333Z",
+    "at": "2026-09-04T02:17:14.425Z",
     "postsScanned": 83,
     "autoRepairCount": 133,
     "manualReviewCount": 0

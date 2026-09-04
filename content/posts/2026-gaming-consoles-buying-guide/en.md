@@ -1,6 +1,6 @@
 ---
 title: >-
-  Which Console Fits Your Living Room in 2026? Storage, Exclusives, and 4K
+  Which Console Fits Your Living Room? Storage, Exclusives, and 4K
   Reality Check
 description: >-
   Compare PS5, Xbox Series X, and Switch 2 on storage, exclusive games,
