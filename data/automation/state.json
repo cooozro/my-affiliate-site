@@ -280,13 +280,13 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-04T02:16:57.150Z",
+    "at": "2026-09-04T02:25:51.031Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (32min past slot, KST 2026-09-04)",
-        "severity": "error"
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (10 deferred)",
+        "severity": "warning"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -295,12 +295,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 12452min",
+        "message": "Cursor replenish pending 12461min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-budget-fitness-trackers-checklist/en.md: publishedAt 2026-09-04T11:16:57.000Z → 2026-09-04T02:16:59.736Z",
+      "2026-budget-fitness-trackers-checklist/ko.md: publishedAt 2026-09-04T11:16:57.000Z → 2026-09-04T02:16:59.736Z"
     ]
   },
   "topicHistory": [
