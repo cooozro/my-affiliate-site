@@ -41,7 +41,7 @@ We’ve cross-checked public specs and open user reviews for popular budget mode
 
 What to check: Look for the sensor generation and the number of LEDs/photodiodes. Newer sensors (e.g., Xiaomi Smart Band 9 uses a 4-channel optical sensor) tend to be more accurate during steady-state runs.
 
-Why it matters: Older single-LED sensors struggle with irregular rhythms and high-intensity intervals. If you’re using the tracker for zone-based training, a weak sensor will give you misleading data.
+**Why it matters:** Older single-LED sensors struggle with irregular rhythms and high-intensity intervals. If you’re using the tracker for zone-based training, a weak sensor will give you misleading data.
 
 Red flag: The product page doesn’t mention sensor details at all, or only says “optical heart rate sensor.” That’s a sign the manufacturer isn’t confident in the hardware.
 
@@ -49,7 +49,7 @@ Red flag: The product page doesn’t mention sensor details at all, or only says
 
 What to check: Does the tracker use accelerometer-only sleep detection, or does it combine heart rate variability (HRV) for sleep staging? Budget models often rely on motion only.
 
-Why it matters: Accelerometer-only trackers misclassify wake periods and often overestimate deep sleep. If you’re tracking sleep for health reasons, you want at least basic HRV-based staging.
+**Why it matters:** Accelerometer-only trackers misclassify wake periods and often overestimate deep sleep. If you’re tracking sleep for health reasons, you want at least basic HRV-based staging.
 
 Red flag: Reviews consistently mention “sleep tracking is way off” or “it thinks I’m asleep when I’m watching TV.” That’s a dealbreaker for sleep-focused buyers.
 
@@ -57,7 +57,7 @@ Red flag: Reviews consistently mention “sleep tracking is way off” or “it 
 
 What to check: Download the app (e.g., Mi Fitness, Huawei Health, Zepp) and see if it syncs with Apple Health or Google Fit. Check if it has a web dashboard.
 
-Why it matters: A tracker is only as good as its app. If the app is cluttered with ads, requires constant permissions, or doesn’t export data, you’ll hate it within a week.
+**Why it matters:** A tracker is only as good as its app. If the app is cluttered with ads, requires constant permissions, or doesn’t export data, you’ll hate it within a week.
 
 Red flag: The app has a low rating (<3.5 stars) on the App Store/Google Play, or recent reviews mention sync failures after OS updates.
 
@@ -65,7 +65,7 @@ Red flag: The app has a low rating (<3.5 stars) on the App Store/Google Play, or
 
 What to check: Look at typical battery life with always-on display off. Xiaomi Smart Band 9 claims up to 21 days, while Huawei Band 9 offers about 14 days.
 
-Why it matters: A tracker that needs charging every 2 days is a burden. You want at least a week of battery life to make it a habit.
+**Why it matters:** A tracker that needs charging every 2 days is a burden. You want at least a week of battery life to make it a habit.
 
 Red flag: The listed battery life is “up to” a very short number (under 5 days) or the device has no power-saving mode.
 
@@ -73,7 +73,7 @@ Red flag: The listed battery life is “up to” a very short number (under 5 da
 
 What to check: Look for 5ATM or IP68 ratings. 5ATM means you can swim with it; IP68 is only for splashes.
 
-Why it matters: If you plan to swim or shower with the tracker, a wrong rating will kill it. Summer pool workouts are a common use case.
+**Why it matters:** If you plan to swim or shower with the tracker, a wrong rating will kill it. Summer pool workouts are a common use case.
 
 Red flag: The listing says “water resistant” without an ATM/IP rating. That’s vague and risky.
 
@@ -81,7 +81,7 @@ Red flag: The listing says “water resistant” without an ATM/IP rating. That�
 
 What to check: Look for AMOLED displays with high brightness (typically 600 nits or more). Budget models like the Xiaomi Smart Band 9 have AMOLED, while older ones use LCD.
 
-Why it matters: You’ll be outdoors in summer. A dim screen is impossible to read during a run.
+**Why it matters:** You’ll be outdoors in summer. A dim screen is impossible to read during a run.
 
 Red flag: Reviews mention “can’t see screen in sunlight” or “brightness is too low.”
 
@@ -89,7 +89,7 @@ Red flag: Reviews mention “can’t see screen in sunlight” or “brightness 
 
 What to check: Are there extra costs for bands, screen protectors, or premium app features? Some trackers require a subscription for advanced metrics.
 
-Why it matters: A $30 tracker can become a $60/year subscription. Check if the app’s advanced sleep or recovery scores are paywalled.
+**Why it matters:** A $30 tracker can become a $60/year subscription. Check if the app’s advanced sleep or recovery scores are paywalled.
 
 Red flag: The app has a “Pro” tier that locks basic health insights. That’s a hidden cost.
 

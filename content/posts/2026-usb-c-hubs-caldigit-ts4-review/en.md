@@ -1,5 +1,5 @@
 ---
-title: Is the CalDigit TS4 Thunderbolt 4 Dock Worth It in 2026?
+title: Is the CalDigit TS4 Thunderbolt 4 Dock Worth It?
 description: >-
   We put the CalDigit TS4 Thunderbolt 4 Dock through real-world workflows — 18
   ports, 98W charging, and compatibility. See who should buy, wait, or skip.

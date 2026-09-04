@@ -97,9 +97,9 @@ The sticker price is only the beginning. Over three years, the cost of owning a 
 
 | Model | Launch price (USD) | Estimated 3-year parts & consumables | Estimated total 3-year cost | Key maintenance note |
 | --- | --- | --- | --- | --- |
-| Roborock Q5 Pro | {{krw:299.99}} | $60–$100 (filters, side brushes, mop pads) | $360–$400 | Small dustbin needs frequent emptying; mop pad requires manual washing |
-| i Robot Roomba Combo j 5+ | {{krw:599.99}} | $80–$120 (filters, brushes, bags, mop pads) | $680–$720 | Self-emptying bag lasts about 60 days; rubber brushes resist tangles |
-| Dreame X40 Ultra | {{krw:1199.99}} | $120–$200 (filters, brushes, mop pads, cleaning solution) | $1,320–$1,400 | Self-washing mop reduces pad replacement; base station needs periodic cleaning |
+| Roborock Q5 Pro | {{krw:299.99}} (US $299.99) | $60–$100 (filters, side brushes, mop pads) | $360–$400 | Small dustbin needs frequent emptying; mop pad requires manual washing |
+| i Robot Roomba Combo j 5+ | {{krw:599.99}} (US $599.99) | $80–$120 (filters, brushes, bags, mop pads) | $680–$720 | Self-emptying bag lasts about 60 days; rubber brushes resist tangles |
+| Dreame X40 Ultra | {{krw:1199.99}} (US $1199.99) | $120–$200 (filters, brushes, mop pads, cleaning solution) | $1,320–$1,400 | Self-washing mop reduces pad replacement; base station needs periodic cleaning |
 
 **Analysis takeaway:** The Q5 Pro is the cheapest to own because the consumables are simple and inexpensive. The j5+ adds the cost of self-emptying bags, which are convenient but not free. The X40 Ultra has the highest upfront cost, but the self-washing mop means you replace pads less often, which narrows the gap slightly.
 
