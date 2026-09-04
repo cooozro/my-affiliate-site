@@ -267,13 +267,23 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-04T01:27:04.562Z",
-    "issueCount": 3,
+    "at": "2026-09-04T01:46:50.698Z",
+    "issueCount": 5,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (2min past slot, KST 2026-09-04)",
+        "severity": "warning"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
         "severity": "warning"
+      },
+      {
+        "code": "all-drafts-blocked-at-slot",
+        "message": "Every queued draft failed publish gates — repair drafts or replenish",
+        "severity": "error"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -282,11 +292,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 12402min",
+        "message": "Cursor replenish pending 12422min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -510,7 +522,7 @@
     }
   ],
   "lastPublishSkipReason": {
-    "at": "2026-09-03T05:49:46.444Z",
+    "at": "2026-09-04T01:46:51.813Z",
     "reason": "integrity-gate",
     "triedSlugs": [
       "2026-budget-wireless-earbuds-spec-comparison",
@@ -519,14 +531,13 @@
       "2026-apartment-robot-vacuum-comparison",
       "2026-usb-c-hubs-caldigit-ts4-review",
       "2026-mechanical-keyboards-keychron-q1-pro-review",
-      "2026-bidets-bio-bidet-bb-2000-review",
       "2026-budget-fitness-trackers-checklist",
       "2026-webcams-remote-work-head-to-head",
       "2026-budget-monitors-scenario-guide",
       "2026-washing-machines-buying-guide",
       "2026-robot-vacuums-ecovacs-deebot-x8-review"
     ],
-    "deferredSkipped": 11,
+    "deferredSkipped": 10,
     "integritySkipped": 1,
     "diversitySkipped": 0,
     "publishableCount": 1,
