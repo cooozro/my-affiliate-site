@@ -280,7 +280,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-04T07:40:07.627Z",
+    "at": "2026-09-04T08:00:04.215Z",
     "issueCount": 3,
     "issues": [
       {
@@ -295,7 +295,7 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 12775min",
+        "message": "Cursor replenish pending 12795min",
         "severity": "warning"
       }
     ],
