@@ -280,7 +280,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-04T02:25:51.031Z",
+    "at": "2026-09-04T02:45:29.394Z",
     "issueCount": 3,
     "issues": [
       {
@@ -295,14 +295,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 12461min",
+        "message": "Cursor replenish pending 12480min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-budget-fitness-trackers-checklist/en.md: publishedAt 2026-09-04T11:16:57.000Z → 2026-09-04T02:16:59.736Z",
-      "2026-budget-fitness-trackers-checklist/ko.md: publishedAt 2026-09-04T11:16:57.000Z → 2026-09-04T02:16:59.736Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
