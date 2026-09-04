@@ -501,9 +501,9 @@ function auditStructural(root, slug, locale, data, body, phase, bucket) {
     }
   }
 
-  if (profile === "checklist" && phase === "publish") {
+  if (profile === "checklist") {
     const items = body.match(/^\d+\.\s+/gm) ?? [];
-    const withWhy = (body.match(/\*\*(이유|Why it matters|Why):?\*\*/gi) ?? []).length;
+    const withWhy = (body.match(/(?:\*\*(?:이유|Why it matters|Why|중요한 이유):?\*\*|(?:^|\n)(?:Why it matters|중요한 이유)\s*:)/gi) ?? []).length;
     if (items.length >= 7 && withWhy < 5) {
       addError(bucket, `${label}: checklist items missing **이유** / **Why** blocks`);
     }

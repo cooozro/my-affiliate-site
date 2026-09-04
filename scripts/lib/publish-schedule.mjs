@@ -130,6 +130,13 @@ export function scheduleFirstPublishOfDay(state, from = new Date()) {
     scheduleNextDayFirstPublish(state, from);
     return;
   }
+  const todayKstEarly = kstDateString(from);
+  if (state.nextPublishAt) {
+    const next = new Date(state.nextPublishAt);
+    if (!Number.isNaN(next.getTime()) && kstDateString(next) === todayKstEarly) {
+      return;
+    }
+  }
   const offsetMs = randomFirstSlotOffsetMs();
   const todayKst = kstDateString(from);
   const anchor = kstDayAnchorUtc(todayKst, KST_DAY_START_HOUR);
