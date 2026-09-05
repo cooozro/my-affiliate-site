@@ -293,7 +293,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-05T01:43:15.620Z",
+    "at": "2026-09-05T02:02:16.002Z",
     "issueCount": 3,
     "issues": [
       {
@@ -308,14 +308,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 13858min",
+        "message": "Cursor replenish pending 13877min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-webcams-remote-work-head-to-head/en.md: publishedAt 2026-09-05T10:20:44.000Z → 2026-09-05T01:20:47.504Z",
-      "2026-webcams-remote-work-head-to-head/ko.md: publishedAt 2026-09-05T10:20:44.000Z → 2026-09-05T01:20:47.504Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
