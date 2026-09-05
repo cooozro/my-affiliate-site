@@ -25,7 +25,7 @@ coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 
 coverImageProvider: pixabay
 updatedAt: '2026-09-05T10:20:44.000Z'
 publishAfter: '2026-09-05'
-publishedAt: '2026-09-05T10:20:44.000Z'
+publishedAt: '2026-09-05T01:20:47.504Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

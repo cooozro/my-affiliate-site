@@ -22,7 +22,7 @@ coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 
 coverImageProvider: pixabay
 updatedAt: '2026-09-05T01:23:23.473Z'
 publishAfter: '2026-09-05'
-publishedAt: '2026-09-05T10:20:44.000Z'
+publishedAt: '2026-09-05T01:20:47.504Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
