@@ -30,7 +30,7 @@ coverImageProvider: pexels
 coverImageAssetId: '1571460'
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280
-updatedAt: '2026-09-04T02:17:11.283Z'
+updatedAt: '2026-09-05T01:23:21.771Z'
 publishedAt: '2026-07-21T02:01:11.150Z'
 ---
 ## 편집부 개요

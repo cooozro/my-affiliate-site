@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: 책상 위의 태블릿
 coverImageCredit: Photo by Ksenia Chernaya / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-09-04T02:17:03.289Z'
+updatedAt: '2026-09-05T01:23:13.666Z'
 publishedAt: '2026-08-22T02:33:09.027Z'
 ---
 ## 편집부 개요

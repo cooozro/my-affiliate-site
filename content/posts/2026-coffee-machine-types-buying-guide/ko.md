@@ -18,7 +18,7 @@ coverImage: >-
 coverImageAlt: coffee machine kitchen espresso
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Ketut Subiyanto / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-09-04T02:17:03.985Z'
+updatedAt: '2026-09-05T01:23:14.349Z'
 publishAfter: '2026-09-02'
 publishedAt: '2026-09-02T01:56:55.980Z'
 ---

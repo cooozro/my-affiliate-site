@@ -30,7 +30,7 @@ imageSearchKeywords:
   - small apartment
   - studio essentials
   - compact home
-updatedAt: '2026-09-04T02:17:10.484Z'
+updatedAt: '2026-09-05T01:23:20.936Z'
 publishedAt: '2026-07-11T08:43:16.000Z'
 ---
 ## 편집부 개요

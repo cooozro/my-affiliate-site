@@ -31,7 +31,7 @@ coverImageCredit: Photo by Pixabay / Pexels
 coverImageProvider: pexels
 coverImageAssetId: '1457842'
 coverImageSourceUrl: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg'
-updatedAt: '2026-09-04T02:17:10.316Z'
+updatedAt: '2026-09-05T01:23:20.764Z'
 publishedAt: '2026-07-24T07:56:24.703Z'
 ---
 ## 편집부 개요

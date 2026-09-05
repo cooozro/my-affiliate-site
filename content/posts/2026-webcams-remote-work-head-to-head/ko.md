@@ -20,7 +20,7 @@ coverImage: >-
 coverImageAlt: 웹캠
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by geralt / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-09-05T01:20:47.676Z'
+updatedAt: '2026-09-05T01:23:23.473Z'
 publishAfter: '2026-09-05'
 publishedAt: '2026-09-05T10:20:44.000Z'
 ---
