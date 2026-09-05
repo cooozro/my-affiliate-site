@@ -5,27 +5,27 @@ title: >-
 description: >-
   We compare the Logitech Brio 505, Razer Kiyo Pro Ultra, and Insta360 Link for
   remote work: resolution, autofocus, mic quality, and value. Find your match.
-date: '2026-08-26'
+date: '2026-09-05'
 tags:
   - webcams
   - remote work
   - video call
   - Logitech Brio
   - Razer Kiyo
-draft: true
+draft: false
 contentProfile: head-to-head
 topicId: webcams
 topicCluster: peripherals
 writingProvider: deepseek
-createdAt: '2026-08-26T13:26:13.083Z'
 coverImage: >-
   /images/posts/2026-webcams-remote-work-head-to-head/webcam-home-office-setup-cover.jpg
 coverImageAlt: webcam
 coverImageAltKo: 웹캠
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by geralt / Pixabay
 coverImageProvider: pixabay
-updatedAt: '2026-08-26T13:26:39.064Z'
+updatedAt: '2026-09-05T10:20:44.000Z'
 publishAfter: '2026-09-05'
+publishedAt: '2026-09-05T10:20:44.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

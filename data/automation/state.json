@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-04T02:16:59.736Z",
-  "nextPublishAt": "2026-09-05T01:16:00.000Z",
+  "lastPublishAt": "2026-09-05T01:20:47.504Z",
+  "nextPublishAt": "2026-09-07T01:16:00.000Z",
   "scheduledGapHours": 4.27,
-  "publishCountToday": 0,
+  "publishCountToday": 1,
   "publishDateKst": "2026-09-05",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-05",
@@ -276,13 +276,31 @@
         "https://www.aipick.shop/en/blog/2026-budget-fitness-trackers-checklist",
         "https://www.aipick.shop/ko/blog/2026-budget-fitness-trackers-checklist"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-webcams-remote-work-head-to-head",
+      "topic": {
+        "id": "webcams",
+        "cluster": "peripherals"
+      },
+      "at": "2026-09-05T01:20:47.504Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-webcams-remote-work-head-to-head",
+        "https://www.aipick.shop/ko/blog/2026-webcams-remote-work-head-to-head"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-05T01:00:51.988Z",
-    "issueCount": 2,
+    "at": "2026-09-05T01:20:43.893Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (4min past slot, KST 2026-09-05)",
+        "severity": "warning"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
@@ -290,11 +308,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 13816min",
+        "message": "Cursor replenish pending 13836min",
         "severity": "warning"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
     {
@@ -444,6 +464,11 @@
       "id": "fitness-trackers",
       "cluster": "wearables",
       "at": "2026-09-04T02:16:59.764Z"
+    },
+    {
+      "id": "webcams",
+      "cluster": "peripherals",
+      "at": "2026-09-05T01:20:47.518Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-09-04",
