@@ -306,7 +306,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-07T01:50:04.149Z",
+    "at": "2026-09-07T02:07:06.784Z",
     "issueCount": 3,
     "issues": [
       {
@@ -321,14 +321,11 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 16745min",
+        "message": "Cursor replenish pending 16762min",
         "severity": "warning"
       }
     ],
-    "repairs": [
-      "2026-budget-monitors-scenario-guide/en.md: publishedAt 2026-09-07T10:30:03.000Z → 2026-09-07T01:30:06.658Z",
-      "2026-budget-monitors-scenario-guide/ko.md: publishedAt 2026-09-07T10:30:03.000Z → 2026-09-07T01:30:06.658Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
