@@ -3,20 +3,19 @@ title: Which Budget Monitor Should You Buy? A Scenario Guide
 description: >-
   Find the best budget monitor for work, gaming, or dual use. Panel, resolution,
   refresh rate explained with real 2026 models.
-date: '2026-08-26'
+date: '2026-09-07'
 tags:
   - budget monitors
   - monitor buying guide
   - IPS vs VA
   - 144Hz monitor
   - work from home
-draft: true
+draft: false
 publishAfter: '2026-09-07'
 contentProfile: scenario-guide
 topicId: budget-monitors
 topicCluster: displays
 writingProvider: deepseek
-createdAt: '2026-08-26T13:28:12.794Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-monitors-scenario-guide/budget-computer-monitor-desk-setup-cover.jpg
@@ -24,7 +23,8 @@ coverImageAlt: computer monitor
 coverImageAltKo: 모니터
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Maurício Mascaro / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T13:33:56.957Z'
+updatedAt: '2026-09-07T10:30:03.000Z'
+publishedAt: '2026-09-07T10:30:03.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
