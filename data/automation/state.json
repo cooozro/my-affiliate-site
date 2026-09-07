@@ -13,10 +13,10 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-07T01:30:06.658Z",
-  "nextPublishAt": "2026-09-08T02:42:00.000Z",
-  "scheduledGapHours": 5.7,
-  "publishCountToday": 1,
+  "lastPublishAt": "2026-09-07T05:33:56.614Z",
+  "nextPublishAt": "2026-09-08T01:27:00.000Z",
+  "scheduledGapHours": 4.45,
+  "publishCountToday": 2,
   "publishDateKst": "2026-09-07",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-07",
@@ -302,11 +302,24 @@
         "https://www.aipick.shop/en/blog/2026-budget-monitors-scenario-guide",
         "https://www.aipick.shop/ko/blog/2026-budget-monitors-scenario-guide"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-budget-wireless-earbuds-spec-comparison",
+      "topic": {
+        "id": "wireless-earbuds",
+        "cluster": "audio"
+      },
+      "at": "2026-09-07T05:33:56.614Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-budget-wireless-earbuds-spec-comparison",
+        "https://www.aipick.shop/ko/blog/2026-budget-wireless-earbuds-spec-comparison"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-07T05:17:01.673Z",
+    "at": "2026-09-07T05:33:51.625Z",
     "issueCount": 1,
     "issues": [
       {
@@ -475,6 +488,11 @@
       "id": "budget-monitors",
       "cluster": "displays",
       "at": "2026-09-07T01:30:06.674Z"
+    },
+    {
+      "id": "wireless-earbuds",
+      "cluster": "audio",
+      "at": "2026-09-07T05:33:56.638Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-09-07",

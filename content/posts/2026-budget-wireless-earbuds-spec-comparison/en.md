@@ -5,20 +5,19 @@ title: >-
 description: >-
   We compare real battery, codec, and ANC data across Soundcore, EarFun, and
   Samsung budget earbuds to show where the money actually goes.
-date: '2026-08-26'
+date: '2026-09-07'
 tags:
   - wireless earbuds
   - budget earbuds
   - ANC earbuds
   - codec comparison
   - audio buying guide
-draft: true
+draft: false
 automationBuffer: true
 contentProfile: buying-guide
 topicId: wireless-earbuds
 topicCluster: audio
 writingProvider: deepseek
-createdAt: '2026-08-26T11:55:59.295Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-wireless-earbuds-spec-comparison/budget-wireless-earbuds-desk-case-cover.jpg
@@ -26,7 +25,8 @@ coverImageAlt: wireless earbuds on a desk
 coverImageAltKo: 책상 위의 무선 이어폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by HS Studio By Hussnain / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-26T11:56:13.214Z'
+updatedAt: '2026-09-07T14:33:54.000Z'
+publishedAt: '2026-09-07T14:33:54.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 
