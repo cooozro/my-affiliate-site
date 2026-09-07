@@ -319,7 +319,7 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-07T05:51:29.018Z",
+    "at": "2026-09-07T06:09:02.992Z",
     "issueCount": 1,
     "issues": [
       {
@@ -328,10 +328,7 @@
         "severity": "error"
       }
     ],
-    "repairs": [
-      "2026-budget-wireless-earbuds-spec-comparison/en.md: publishedAt 2026-09-07T14:33:54.000Z → 2026-09-07T05:33:56.614Z",
-      "2026-budget-wireless-earbuds-spec-comparison/ko.md: publishedAt 2026-09-07T14:33:54.000Z → 2026-09-07T05:33:56.614Z"
-    ]
+    "repairs": []
   },
   "topicHistory": [
     {
