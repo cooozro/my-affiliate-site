@@ -14,8 +14,8 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-09-07T01:30:06.658Z",
-  "nextPublishAt": "2026-09-07T05:30:06.000Z",
-  "scheduledGapHours": 4.0,
+  "nextPublishAt": "2026-09-07T05:30:06.658Z",
+  "scheduledGapHours": 4,
   "publishCountToday": 1,
   "publishDateKst": "2026-09-07",
   "writeCountToday": 0,
@@ -306,16 +306,18 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-07T03:10:48.799Z",
-    "issueCount": 3,
+    "at": "2026-09-07T03:15:53.178Z",
+    "issueCount": 1,
     "issues": [
       {
         "code": "duplicate-topic-drafts",
-        "message": "Duplicate topic drafts: robot-vacuums×2",
+        "message": "Duplicate topic drafts: power-banks×3, robot-vacuums×2",
         "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap"
+    ]
   },
   "topicHistory": [
     {
