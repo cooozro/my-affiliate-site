@@ -28,7 +28,7 @@ coverImageProvider: pexels
 coverImageAssetId: 9071502
 coverImageSourceUrl: >-
   https://images.pexels.com/photos/9071502/pexels-photo-9071502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-updatedAt: '2026-09-05T01:23:17.597Z'
+updatedAt: '2026-09-07T01:32:36.615Z'
 publishedAt: '2026-07-02T03:15:31.755Z'
 ---
 ## 편집부 개요
