@@ -9,7 +9,6 @@ tags:
   - 스마트 세탁기
   - 빨래 가이드
 draft: true
-publishAfter: '2026-09-08'
 contentProfile: buying-guide
 topicId: washing-machines
 topicCluster: large-appliances

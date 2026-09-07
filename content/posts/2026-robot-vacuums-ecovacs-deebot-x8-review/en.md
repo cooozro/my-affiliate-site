@@ -34,7 +34,6 @@ modelPickName: DEEBOT X8 PRO OMNI
 pressKitGallery: >-
   https://www.google.com/search?q=Ecovacs%20DEEBOT%20X8%20PRO%20OMNI%20press%20kit
 updatedAt: '2026-08-26T13:30:56.725Z'
-publishAfter: '2026-09-09'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

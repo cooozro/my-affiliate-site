@@ -11,7 +11,6 @@ tags:
   - 플래그십 비교
   - 스마트폰 업그레이드
 draft: true
-publishAfter: '2026-09-05'
 contentProfile: head-to-head
 topicId: flagship-smartphones
 topicCluster: smartphones

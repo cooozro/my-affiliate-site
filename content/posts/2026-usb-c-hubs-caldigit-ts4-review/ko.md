@@ -28,7 +28,6 @@ pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
 updatedAt: '2026-09-07T01:32:41.518Z'
 automationBuffer: true
-publishAfter: '2026-09-16'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

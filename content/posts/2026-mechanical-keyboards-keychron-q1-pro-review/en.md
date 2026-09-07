@@ -31,7 +31,6 @@ modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
 updatedAt: '2026-09-07T01:32:37.252Z'
 automationBuffer: true
-publishAfter: '2026-09-15'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

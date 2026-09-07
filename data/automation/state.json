@@ -14,8 +14,8 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-09-07T01:30:06.658Z",
-  "nextPublishAt": "2026-09-08T01:08:00.000Z",
-  "scheduledGapHours": 4.13,
+  "nextPublishAt": "2026-09-07T05:30:06.000Z",
+  "scheduledGapHours": 4.0,
   "publishCountToday": 1,
   "publishDateKst": "2026-09-07",
   "writeCountToday": 0,
@@ -310,19 +310,9 @@
     "issueCount": 3,
     "issues": [
       {
-        "code": "no-publishable-drafts",
-        "message": "No publishable drafts (8 deferred)",
-        "severity": "warning"
-      },
-      {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: robot-vacuums×2",
         "severity": "error"
-      },
-      {
-        "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 16826min",
-        "severity": "warning"
       }
     ],
     "repairs": []

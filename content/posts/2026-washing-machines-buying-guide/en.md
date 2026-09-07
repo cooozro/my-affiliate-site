@@ -11,7 +11,6 @@ tags:
   - smart washer
   - laundry guide
 draft: true
-publishAfter: '2026-09-08'
 contentProfile: buying-guide
 topicId: washing-machines
 topicCluster: large-appliances

@@ -27,7 +27,6 @@ coverImageAltKo: 책상 위의 무선 이어폰
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by HS Studio By Hussnain / Pexels
 coverImageProvider: pexels
 updatedAt: '2026-08-26T11:56:13.214Z'
-publishAfter: '2026-09-10'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

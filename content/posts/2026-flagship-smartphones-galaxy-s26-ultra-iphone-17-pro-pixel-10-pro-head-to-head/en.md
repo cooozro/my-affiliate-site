@@ -13,7 +13,6 @@ tags:
   - flagship comparison
   - smartphone upgrade
 draft: true
-publishAfter: '2026-09-05'
 contentProfile: head-to-head
 topicId: flagship-smartphones
 topicCluster: smartphones
