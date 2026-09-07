@@ -306,13 +306,13 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-07T01:30:02.132Z",
+    "at": "2026-09-07T01:50:04.149Z",
     "issueCount": 3,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (14min past slot, KST 2026-09-07)",
-        "severity": "error"
+        "code": "no-publishable-drafts",
+        "message": "No publishable drafts (8 deferred)",
+        "severity": "warning"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -321,12 +321,13 @@
       },
       {
         "code": "stale-cursor-replenish",
-        "message": "Cursor replenish pending 16725min",
+        "message": "Cursor replenish pending 16745min",
         "severity": "warning"
       }
     ],
     "repairs": [
-      "marked-slot-catch-up"
+      "2026-budget-monitors-scenario-guide/en.md: publishedAt 2026-09-07T10:30:03.000Z → 2026-09-07T01:30:06.658Z",
+      "2026-budget-monitors-scenario-guide/ko.md: publishedAt 2026-09-07T10:30:03.000Z → 2026-09-07T01:30:06.658Z"
     ]
   },
   "topicHistory": [
