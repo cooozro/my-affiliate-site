@@ -336,23 +336,24 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-08T01:45:54.051Z",
+    "at": "2026-09-08T02:05:07.680Z",
     "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (18min past slot, KST 2026-09-08)",
-        "severity": "error"
+        "code": "publish-gap-wait",
+        "message": "Slot passed; waiting 29min for 4h gap after last publish (KST 2026-09-08)",
+        "severity": "info"
       },
       {
         "code": "duplicate-topic-drafts",
-        "message": "Duplicate topic drafts: power-banks×3, robot-vacuums×2",
+        "message": "Duplicate topic drafts: power-banks×3",
         "severity": "error"
       }
     ],
     "repairs": [
       "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-apartment-robot-vacuum-comparison/en.md: publishedAt 2026-09-08T10:45:55.000Z → 2026-09-08T01:45:57.258Z",
+      "2026-apartment-robot-vacuum-comparison/ko.md: publishedAt 2026-09-08T10:45:55.000Z → 2026-09-08T01:45:57.258Z"
     ]
   },
   "topicHistory": [
