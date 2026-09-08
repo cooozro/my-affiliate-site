@@ -13,14 +13,14 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-07T05:33:56.614Z",
+  "lastPublishAt": "2026-09-08T01:45:57.258Z",
   "nextPublishAt": "2026-09-08T01:27:00.000Z",
   "scheduledSlots": [
     "2026-09-08T01:27:00.000Z",
-    "2026-09-08T07:27:00.000Z"
+    "2026-09-08T17:38:00.000Z"
   ],
-  "scheduledGapHours": 25.88,
-  "publishCountToday": 0,
+  "scheduledGapHours": 19.97,
+  "publishCountToday": 1,
   "publishDateKst": "2026-09-08",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-08",
@@ -319,27 +319,43 @@
         "https://www.aipick.shop/en/blog/2026-budget-wireless-earbuds-spec-comparison",
         "https://www.aipick.shop/ko/blog/2026-budget-wireless-earbuds-spec-comparison"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-apartment-robot-vacuum-comparison",
+      "topic": {
+        "id": "robot-vacuums",
+        "cluster": "floor-care"
+      },
+      "at": "2026-09-08T01:45:57.258Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-apartment-robot-vacuum-comparison",
+        "https://www.aipick.shop/ko/blog/2026-apartment-robot-vacuum-comparison"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-08T01:26:39.440Z",
-    "issueCount": 1,
+    "at": "2026-09-08T01:45:54.051Z",
+    "issueCount": 2,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (18min past slot, KST 2026-09-08)",
+        "severity": "error"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: power-banks×3, robot-vacuums×2",
         "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
-    {
-      "id": "flagship-smartphones",
-      "cluster": "smartphones",
-      "at": "2026-08-13T02:51:56.959Z"
-    },
     {
       "id": "space-heaters",
       "category": "home-appliances",
@@ -497,6 +513,11 @@
       "id": "wireless-earbuds",
       "cluster": "audio",
       "at": "2026-09-07T05:33:56.638Z"
+    },
+    {
+      "id": "robot-vacuums",
+      "cluster": "floor-care",
+      "at": "2026-09-08T01:45:57.273Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-09-07",

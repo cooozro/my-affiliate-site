@@ -3,19 +3,18 @@ title: 'Robot Vacuums for Apartments: Which Specs Actually Matter in a Small Spa
 description: >-
   Compare suction, mapping, mop features, and maintenance across three robot
   vacuums sized for apartments. See which one fits your budget and floor plan.
-date: '2026-08-26'
+date: '2026-09-08'
 tags:
   - robot vacuum
   - apartment cleaning
   - robot vacuum mop
   - smart home
   - floor care
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: robot-vacuums
 topicCluster: floor-care
 writingProvider: deepseek
-createdAt: '2026-08-26T13:11:16.036Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-apartment-robot-vacuum-comparison/robot-vacuum-cleaning-apartment-floor-robot-vacu-cover.jpg
@@ -23,8 +22,9 @@ coverImageAlt: robot vacuum on a hardwood floor
 coverImageAltKo: 마루 바닥의 로봇 청소기
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Andrey Matveev / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-08-28T06:53:41.567Z'
+updatedAt: '2026-09-08T10:45:55.000Z'
 automationBuffer: true
+publishedAt: '2026-09-08T10:45:55.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

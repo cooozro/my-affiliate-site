@@ -28,8 +28,8 @@ coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 
 coverImageProvider: pexels
 updatedAt: '2026-08-28T06:53:41.628Z'
 automationBuffer: true
-scheduledPublishAt: 2026-09-08T07:27:00.000Z
-publishAfter: 2026-09-08
+scheduledPublishAt: 2026-09-08T17:38:00.000Z
+publishAfter: 2026-09-09
 
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.

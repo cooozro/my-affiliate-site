@@ -1,27 +1,27 @@
 ---
 title: '아파트용 로봇청소기: 작은 공간에서 실제로 중요한 스펙은?'
 description: '아파트에 맞는 세 가지 로봇청소기의 흡입력, 매핑, 물걸레 기능, 유지보수를 비교합니다. 예산과 평면도에 맞는 제품을 찾아보세요.'
-date: '2026-08-26'
+date: '2026-09-08'
 tags:
   - 로봇청소기
   - 아파트 청소
   - 로봇청소기 물걸레
   - 스마트홈
   - 바닥 관리
-draft: true
+draft: false
 contentProfile: buying-guide
 topicId: robot-vacuums
 topicCluster: floor-care
 writingProvider: deepseek
-createdAt: '2026-08-26T13:11:16.036Z'
 liveData: true
 coverImage: >-
   /images/posts/2026-apartment-robot-vacuum-comparison/robot-vacuum-cleaning-apartment-floor-robot-vacu-cover.jpg
 coverImageAlt: 마루 바닥의 로봇 청소기
 coverImageCredit: 연출된 카테고리 예시 이미지 (실제 제품 실물 사진이 아님) Photo by Andrey Matveev / Pexels
 coverImageProvider: pexels
-updatedAt: '2026-09-08T01:26:39.542Z'
+updatedAt: '2026-09-08T10:45:55.000Z'
 automationBuffer: true
+publishedAt: '2026-09-08T10:45:55.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
