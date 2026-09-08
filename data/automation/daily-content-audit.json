@@ -1,8 +1,8 @@
 {
-  "dateKst": "2026-09-07",
-  "scannedAt": "2026-09-07T01:32:43.806Z",
-  "postsScanned": 83,
-  "autoRepairCount": 133,
+  "dateKst": "2026-09-08",
+  "scannedAt": "2026-09-08T14:03:25.528Z",
+  "postsScanned": 88,
+  "autoRepairCount": 140,
   "autoRepairs": [
     {
       "slug": "2026-action-cameras-buying-guide",
@@ -439,6 +439,13 @@
       ]
     },
     {
+      "slug": "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+      "repairs": [
+        "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
+      ]
+    },
+    {
       "slug": "electric-blanket-safety-timers-wash-care-2026",
       "repairs": [
         "electric-blanket-safety-timers-wash-care-2026/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
@@ -451,8 +458,95 @@
         "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
         "humidifier-types-explained-ultrasonic-evaporative-mold-prevention/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
       ]
+    },
+    {
+      "slug": "portable-ac-apartment-myth-bust-2026",
+      "repairs": [
+        "portable-ac-apartment-myth-bust-2026/en.md: removed draft/preview URL links"
+      ]
+    },
+    {
+      "slug": "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+      "repairs": [
+        "power-bank-buying-checklist-capacity-speed-ports-safety-2026/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "power-bank-buying-checklist-capacity-speed-ports-safety-2026/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
+      ]
+    },
+    {
+      "slug": "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
+      "repairs": [
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/ko.md: replaced 1 ASCII tilde range(s) with en-dash (GFM strikethrough fix)",
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/ko.md: Related guides 5 → 5 links (indexable only, max 5)"
+      ]
     }
   ],
-  "manualReviewCount": 0,
-  "manualReview": []
+  "manualReviewCount": 4,
+  "manualReview": [
+    {
+      "order": 1,
+      "slug": "dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+      "phase": "draft",
+      "issues": [
+        "Topic \"dehumidifiers\" already covered in this format family by 2026-dehumidifiers-guide(noindex)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+        "ko": "https://www.aipick.shop/ko/blog/dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/dehumidifier-pint-capacity-noise-energy-cost-humid-summer-2026?locale=ko"
+      }
+    },
+    {
+      "order": 2,
+      "slug": "portable-ac-apartment-myth-bust-2026",
+      "phase": "draft",
+      "issues": [
+        "Topic \"portable-ac\" already covered in this format family by 2026-summer-ac-buying-checklist(noindex)"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/portable-ac-apartment-myth-bust-2026",
+        "ko": "https://www.aipick.shop/ko/blog/portable-ac-apartment-myth-bust-2026",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/portable-ac-apartment-myth-bust-2026?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/portable-ac-apartment-myth-bust-2026?locale=ko"
+      }
+    },
+    {
+      "order": 3,
+      "slug": "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+      "phase": "draft",
+      "issues": [
+        "Topic \"power-banks\" already covered in this format family by 2026-budget-power-banks-guide(noindex), power-bank-pre-purchase-checklist-capacity-wattage-ports-safety(draft)",
+        "power-bank-buying-checklist-capacity-speed-ports-safety-2026/en.md: checklist items missing **이유** / **Why** blocks",
+        "power-bank-buying-checklist-capacity-speed-ports-safety-2026/ko.md: checklist items missing **이유** / **Why** blocks"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+        "ko": "https://www.aipick.shop/ko/blog/power-bank-buying-checklist-capacity-speed-ports-safety-2026",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/power-bank-buying-checklist-capacity-speed-ports-safety-2026?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/power-bank-buying-checklist-capacity-speed-ports-safety-2026?locale=ko"
+      }
+    },
+    {
+      "order": 4,
+      "slug": "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
+      "phase": "draft",
+      "issues": [
+        "Topic \"power-banks\" already covered in this format family by 2026-budget-power-banks-guide(noindex), power-bank-buying-checklist-capacity-speed-ports-safety-2026(draft)",
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/en.md: checklist items missing **이유** / **Why** blocks",
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/ko.md: Korean body has hangul-latin mixed tokens (repair or fix manually)",
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/ko.md: Korean body has hangul-latin mixed tokens",
+        "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety/ko.md: checklist items missing **이유** / **Why** blocks"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
+        "ko": "https://www.aipick.shop/ko/blog/power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/power-bank-pre-purchase-checklist-capacity-wattage-ports-safety?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/power-bank-pre-purchase-checklist-capacity-wattage-ports-safety?locale=ko"
+      }
+    }
+  ]
 }

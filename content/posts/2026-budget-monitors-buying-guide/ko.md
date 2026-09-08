@@ -15,7 +15,7 @@ liveData: true
 coverImage: /images/posts/2026-budget-monitors-buying-guide/cover.jpg
 coverImageAlt: 책상의 모니터
 coverImageCredit: Photo by sebagee / Pixabay
-updatedAt: '2026-09-07T01:32:31.570Z'
+updatedAt: '2026-09-08T14:03:12.512Z'
 publishedAt: '2026-06-27T01:16:46.000Z'
 coverImageProvider: pixabay
 coverImageAltKo: 책상의 모니터

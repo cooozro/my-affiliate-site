@@ -3,19 +3,18 @@ title: 'CalDigit TS4 썬더볼트 4 독, 살 가치가 있을까?'
 description: >-
   CalDigit TS4 썬더볼트 4 독을 실제 작업 흐름에 적용해 보았습니다. 18개 포트, 98W 충전, 호환성까지. 사야 할 사람,
   기다려야 할 사람, 건너뛸 사람을 확인하세요.
-date: '2026-08-26'
+date: '2026-09-09'
 tags:
   - CalDigit TS4
   - 썬더볼트 4 독
   - USB-C 허브
   - 노트북 독
   - 책상 셋업
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: usb-c-hubs
 topicCluster: accessories
 writingProvider: deepseek
-createdAt: '2026-08-26T13:14:37.009Z'
 coverImage: >-
   /images/posts/2026-usb-c-hubs-caldigit-ts4-review/caldigit-ts4-thunderbolt-4-dock-product-photo-ca-cover.jpg
 coverImageAlt: 노트북용 CalDigit TS4 Thunderbolt 4 독 제품 사진
@@ -26,8 +25,9 @@ modelPickBrand: CalDigit
 modelPickName: TS4 Thunderbolt 4 Dock
 pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
-updatedAt: '2026-09-08T11:44:42.991Z'
+updatedAt: '2026-09-09T02:53:56.000Z'
 automationBuffer: true
+publishedAt: '2026-09-09T02:53:56.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 

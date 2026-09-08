@@ -3,19 +3,18 @@ title: Is the CalDigit TS4 Thunderbolt 4 Dock Worth It?
 description: >-
   We put the CalDigit TS4 Thunderbolt 4 Dock through real-world workflows — 18
   ports, 98W charging, and compatibility. See who should buy, wait, or skip.
-date: '2026-08-26'
+date: '2026-09-09'
 tags:
   - CalDigit TS4
   - Thunderbolt 4 dock
   - USB-C hub
   - laptop dock
   - desk setup
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: usb-c-hubs
 topicCluster: accessories
 writingProvider: deepseek
-createdAt: '2026-08-26T13:14:37.009Z'
 coverImage: >-
   /images/posts/2026-usb-c-hubs-caldigit-ts4-review/caldigit-ts4-thunderbolt-4-dock-product-photo-ca-cover.jpg
 coverImageAlt: CalDigit TS4 Thunderbolt 4 dock for laptop — editorial product photo
@@ -27,8 +26,9 @@ modelPickBrand: CalDigit
 modelPickName: TS4 Thunderbolt 4 Dock
 pressKitGallery: >-
   https://www.google.com/search?q=CalDigit%20TS4%20Thunderbolt%204%20Dock%20press%20kit
-updatedAt: '2026-08-26T13:15:19.392Z'
+updatedAt: '2026-09-09T02:53:56.000Z'
 automationBuffer: true
+publishedAt: '2026-09-09T02:53:56.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

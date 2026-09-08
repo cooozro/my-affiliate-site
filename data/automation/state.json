@@ -13,17 +13,17 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-08T01:45:57.258Z",
-  "nextPublishAt": "2026-09-08T17:38:00.000Z",
+  "lastPublishAt": "2026-09-08T17:53:58.171Z",
+  "nextPublishAt": "2026-09-09T17:55:00.000Z",
   "scheduledSlots": [
-    "2026-09-08T01:27:00.000Z",
-    "2026-09-08T17:38:00.000Z"
+    "2026-09-08T17:38:00.000Z",
+    "2026-09-09T17:55:00.000Z"
   ],
-  "scheduledGapHours": 15.87,
+  "scheduledGapHours": 24.02,
   "publishCountToday": 1,
-  "publishDateKst": "2026-09-08",
+  "publishDateKst": "2026-09-09",
   "writeCountToday": 0,
-  "writeDateKst": "2026-09-08",
+  "writeDateKst": "2026-09-09",
   "history": [
     {
       "action": "publish",
@@ -332,28 +332,43 @@
         "https://www.aipick.shop/en/blog/2026-apartment-robot-vacuum-comparison",
         "https://www.aipick.shop/ko/blog/2026-apartment-robot-vacuum-comparison"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-usb-c-hubs-caldigit-ts4-review",
+      "topic": {
+        "id": "usb-c-hubs",
+        "cluster": "accessories"
+      },
+      "at": "2026-09-08T17:53:58.171Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-usb-c-hubs-caldigit-ts4-review",
+        "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-caldigit-ts4-review"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-08T11:44:42.894Z",
-    "issueCount": 1,
+    "at": "2026-09-08T17:53:54.706Z",
+    "issueCount": 2,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (15min past slot, KST 2026-09-09)",
+        "severity": "error"
+      },
       {
         "code": "duplicate-topic-drafts",
         "message": "Duplicate topic drafts: power-banks×3",
         "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
-    {
-      "id": "space-heaters",
-      "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
-      "at": "2026-08-13T03:31:03.827Z"
-    },
     {
       "id": "space-heaters",
       "category": "home-appliances",
@@ -510,14 +525,19 @@
       "id": "robot-vacuums",
       "cluster": "floor-care",
       "at": "2026-09-08T01:45:57.273Z"
+    },
+    {
+      "id": "usb-c-hubs",
+      "cluster": "accessories",
+      "at": "2026-09-08T17:53:58.195Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-09-07",
+  "lastDailyContentAuditKst": "2026-09-08",
   "lastDailyContentAudit": {
-    "at": "2026-09-07T01:32:43.806Z",
-    "postsScanned": 83,
-    "autoRepairCount": 133,
-    "manualReviewCount": 0
+    "at": "2026-09-08T14:03:25.528Z",
+    "postsScanned": 88,
+    "autoRepairCount": 140,
+    "manualReviewCount": 4
   },
   "formatDeck": [],
   "formatHistory": [

@@ -20,7 +20,7 @@ modelPickId: midea-mad50c1
 modelPickBrand: Midea
 modelPickName: MAD50C1ZWS
 pressKitGallery: 'https://www.google.com/search?q=Midea%20MAD50C1ZWS%20press%20kit'
-updatedAt: '2026-09-07T01:32:34.796Z'
+updatedAt: '2026-09-08T14:03:15.806Z'
 coverImageAlt: 실내 제습기 사용 환경 제품 컷
 coverImageAltKo: 실내 제습기 사용 환경 제품 컷
 coverImage: >-
