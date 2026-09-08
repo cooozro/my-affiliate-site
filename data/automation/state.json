@@ -336,12 +336,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-08T02:05:07.680Z",
+    "at": "2026-09-08T02:24:03.362Z",
     "issueCount": 2,
     "issues": [
       {
         "code": "publish-gap-wait",
-        "message": "Slot passed; waiting 29min for 4h gap after last publish (KST 2026-09-08)",
+        "message": "Slot passed; waiting 10min for 4h gap after last publish (KST 2026-09-08)",
         "severity": "info"
       },
       {
@@ -351,9 +351,7 @@
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "2026-apartment-robot-vacuum-comparison/en.md: publishedAt 2026-09-08T10:45:55.000Z → 2026-09-08T01:45:57.258Z",
-      "2026-apartment-robot-vacuum-comparison/ko.md: publishedAt 2026-09-08T10:45:55.000Z → 2026-09-08T01:45:57.258Z"
+      "aligned-slot-with-min-gap"
     ]
   },
   "topicHistory": [
