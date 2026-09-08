@@ -31,6 +31,9 @@ pressKitGallery: >-
   https://www.google.com/search?q=Anker%20737%20PowerBank%20(PowerCore%2024K)%20press%20kit
 updatedAt: '2026-09-08T01:08:18.424Z'
 automationBuffer: true
+scheduledPublishAt: 2026-09-08T01:27:00.000Z
+publishAfter: 2026-09-08
+
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
