@@ -2353,6 +2353,15 @@
       "contentHash": "eaf706285419d4658c66e445e89fd3ec92c05a71033ddc7736d3c33e3aac4de5",
       "provider": "pexels",
       "registeredAt": "2026-08-26T13:30:56.652Z"
+    },
+    {
+      "slug": "oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026",
+      "url": "https://images.pexels.com/photos/34538295/pexels-photo-34538295.jpeg",
+      "assetKey": "pexels:34538295",
+      "hash": "c16396906d5fbe0da4a1032e10962cea25144cd690d394c44fd75f71f9bdabfe",
+      "contentHash": "c16396906d5fbe0da4a1032e10962cea25144cd690d394c44fd75f71f9bdabfe",
+      "provider": "pexels",
+      "registeredAt": "2026-09-08T18:25:14.380Z"
     }
   ]
 }
