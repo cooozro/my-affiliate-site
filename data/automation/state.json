@@ -336,13 +336,13 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-08T02:24:03.362Z",
+    "at": "2026-09-08T02:43:37.959Z",
     "issueCount": 2,
     "issues": [
       {
-        "code": "publish-gap-wait",
-        "message": "Slot passed; waiting 10min for 4h gap after last publish (KST 2026-09-08)",
-        "severity": "info"
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (76min past slot, KST 2026-09-08)",
+        "severity": "error"
       },
       {
         "code": "duplicate-topic-drafts",
@@ -351,7 +351,8 @@
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap"
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
     ]
   },
   "topicHistory": [
