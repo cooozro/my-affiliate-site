@@ -2362,6 +2362,15 @@
       "contentHash": "c16396906d5fbe0da4a1032e10962cea25144cd690d394c44fd75f71f9bdabfe",
       "provider": "pexels",
       "registeredAt": "2026-09-08T18:25:14.380Z"
+    },
+    {
+      "slug": "2026-webcams-elgato-facecam-pro-review",
+      "url": "https://pixabay.com/get/gef3592613f308699691a56d0b4773e8c6fa9b9b3d05ef491a930208eb1c6419b9db39356794c7c00dfb7e0e3171e6d45ad83462c2457c15936248f9b1c2c71d1_1280.jpg",
+      "assetKey": "pixabay:1721375",
+      "hash": "8cd6fcb69b23b673224e30e9b42af6da8bb640961caf57205143c6933614209f",
+      "contentHash": "8cd6fcb69b23b673224e30e9b42af6da8bb640961caf57205143c6933614209f",
+      "provider": "pixabay",
+      "registeredAt": "2026-09-09T01:06:03.208Z"
     }
   ]
 }
