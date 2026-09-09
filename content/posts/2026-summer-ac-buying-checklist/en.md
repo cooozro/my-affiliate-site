@@ -124,7 +124,7 @@ A checklist alone doesn’t checkout. These three are my **install / noise / BTU
 
 ### Frigidaire FHWW083WBE (8,000 BTU)
 
-the listed product category for small bedrooms/studios with honest CEER/noise labels.
+Window unit for small bedrooms/studios with honest CEER/noise labels.
 
 **Editorial read:** $249 and 8,000 BTU typically wins on **daily kWh and 52 dB sleep** in 12–18 m² rooms run six to eight hours versus rolling portables.
 
@@ -165,7 +165,7 @@ During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
-- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 After walking through this checklist, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **On a cost-effectiveness basis,** clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.

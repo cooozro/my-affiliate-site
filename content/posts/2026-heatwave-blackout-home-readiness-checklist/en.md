@@ -36,7 +36,7 @@ noindex: false
 ---
 ## Editorial Overview
 
-> A the listed product category outage is first a **communication, cooling-location, and household coordination problem**—not a reason to buy the largest battery on the shelf. An apartment family needs to know where official alerts arrive, which nearby cooled public location is open, who requires extra help, and when to leave an unsafe indoor space. Only then should backup gear support a short, defined load plan: phones, a rechargeable DC fan, LED lighting, and essential information access.
+> A heatwave outage is first a **communication, cooling-location, and household coordination problem**—not a reason to buy the largest battery on the shelf. An apartment family needs to know where official alerts arrive, which nearby cooled public location is open, who requires extra help, and when to leave an unsafe indoor space. Only then should backup gear support a short, defined load plan: phones, a rechargeable DC fan, LED lighting, and essential information access.
 
 This checklist separates public guidance from product specifications. It uses publicly listed battery capacity, continuous output, surge output, port standards, and appliance labels; it does not claim private seller feeds or hands-on endurance tests. A portable power station can keep modest electronics running, but it is not whole-home backup, cannot make an apartment safe indefinitely, and should never delay a move to a cooler location when local authorities advise it.
 

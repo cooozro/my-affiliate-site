@@ -36,9 +36,9 @@ noindex: false
 ---
 ## Editorial Overview
 
-> As an independent tech review publication, AI Pick & Report compares **five unrelated summer home-tech categories at one hard ceiling — about $300 / {{krw:300}}** — using public mid-2026 list prices and manufacturer specs as of {{today}}. This is not a single-aisle TOP 5. When a the listed product category apartment or school-break household can fund only one cart near that ceiling, opportunity cost decides: a 27-inch QHD monitor, a whole-room air circulator, a 24,000 mAh power bank, a patio Bluetooth speaker, and a compact HEPA purifier each buy different kinds of daily comfort. We cross-check category winners against each other so you spend the tier once, deliberately.
+> As an independent tech review publication, AI Pick & Report compares **five unrelated summer home-tech categories at one hard ceiling — about $300 / {{krw:300}}** — using public mid-2026 list prices and manufacturer specs as of {{today}}. This is not a single-aisle TOP 5. When a heatwave apartment or school-break household can fund only one cart near that ceiling, opportunity cost decides: a 27-inch QHD monitor, a whole-room air circulator, a 24,000 mAh power bank, a patio Bluetooth speaker, and a compact HEPA purifier each buy different kinds of daily comfort. We cross-check category winners against each other so you spend the tier once, deliberately.
 
-## Introduction: the listed product category home — which $300 aisle buys the most daily comfort?
+## Introduction: heatwave home — which $300 aisle buys the most daily comfort?
 
 A July evening in a sealed rental often looks the same: AC already running hard, kids home for school break, one remaining discretionary budget near **$300**. Do you stretch that money into **desk pixels** for remote work, **air movement** so the thermostat can sit one degree higher, **mobile power** for park days, **outdoor audio** for the balcony, or **particle cleanup** while windows stay shut?
 
@@ -81,7 +81,7 @@ Editorial public listings and manufacturer spec sheets: if two categories both f
 | Category | Reference model (class) | Approx. list | Native headline | 3-year TCO signal | Best when… |
 | --- | --- | --- | --- | --- | --- |
 | Budget monitor | **Dell S2721DS** or **AOC 27B3HM** | about $150–250 / {{krw:150}}–{{krw:250}} | 27" QHD / FHD IPS | Stand/arm + cable kit | WFH text clarity daily |
-| Electric fan | **Vornado 660** or **Dreo tower** | about $50–100 / {{krw:50}}–{{krw:100}} | Whole-room CFM / quiet tower | Low kWh vs AC hours | the listed product category perceived relief |
+| Electric fan | **Vornado 660** or **Dreo tower** | about $50–100 / {{krw:50}}–{{krw:100}} | Whole-room CFM / quiet tower | Low kWh vs AC hours | Heatwave perceived relief |
 | Power bank | **Anker 737 / PowerCore 24K class** | about $80–120 / {{krw:80}}–{{krw:120}} | about 24,000 mAh / high-watt PD | Cell wear + cable | Travel + laptop top-up |
 | Bluetooth speaker | **Soundcore Motion Boom / JBL Flip class** | about $80–130 / {{krw:80}}–{{krw:130}} | Portable bass / IPX rating | Battery cycles | Patio / park weekends |
 | Air purifier | **Levoit Core 300 / Winix compact** | about $100–200 / {{krw:100}}–{{krw:200}} | HEPA CADR for mid rooms | Filter packs yearly | Closed-window pollen / dust |
@@ -90,7 +90,7 @@ Editorial public listings and manufacturer spec sheets: if two categories both f
 
 ## 1. Heat comfort: whole-room fan vs compact HEPA purifier
 
-**Question this section answers:** With windows shut under a the listed product category and AC already present, should the next about $100–200 claim go to air **movement** or air **cleaning**?
+**Question this section answers:** With windows shut under a heatwave and AC already present, should the next about $100–200 claim go to air **movement** or air **cleaning**?
 
 ### Vornado 660 / Dreo tower class (electric fan)
 
@@ -206,7 +206,7 @@ Editorial public listings and manufacturer spec sheets: if two categories both f
 
 | Scenario | Winner | Why |
 | --- | --- | --- |
-| the listed product category; AC bill spiking; mild allergies | **Vornado 660 / Dreo class** | Perceived cool + low kWh TCO |
+| Heatwave; AC bill spiking; mild allergies | **Vornado 660 / Dreo class** | Perceived cool + low kWh TCO |
 | Sealed AC room; pollen / pet dander primary | **Levoit Core 300 / Winix compact** | CADR beats another gadget |
 | Laptop-only WFH every weekday | **Dell S2721DS / AOC 27B3HM** | Daily hour density |
 | School-break balcony and park evenings | **Soundcore / JBL Flip class** | Portable IPX audio |
@@ -221,7 +221,7 @@ Editorial public listings and manufacturer spec sheets: if two categories both f
 
 Often yes. Editorial field checks show whole-room fans let many rentals raise the thermostat **1 °F** while sleep comfort holds, cutting compressor hours. That electricity saving over three summers can exceed the fan’s list price. Skip the fan only when the room is already evenly mixed and the real complaint is moisture or particles — then a dehumidifier or purifier wins the same budget.
 
-### Can a Levoit Core 300-class purifier replace opening windows during a the listed product category?
+### Can a Levoit Core 300-class purifier replace opening windows during a heatwave?
 
 No. It cleans recirculated indoor air; it does not remove heat or CO₂ the way ventilation does. Use it when windows stay shut for AC efficiency and outdoor AQI or pollen is poor. Budget **filter replacement** in three-year TCO (often tens of dollars per year at high run hours) or the “under $300” purchase becomes a recurring subscription by year two.
 
@@ -270,12 +270,12 @@ Under a hard **$300 / {{krw:300}}** ceiling, the winning aisle is the one that r
 | Skip | If… |
 | --- | --- |
 | Another speaker | Desk neck strain is the daily complaint |
-| Premium monitor near $299 | You still lack any air movement in a the listed product category bedroom |
+| Premium monitor near $299 | You still lack any air movement in a heatwave bedroom |
 | Huge power bank | You rarely leave home outlets and nights are the real pain |
 | Purifier without filter budget | You will run turbo 24/7 and ignore year-two filter cost |
 | Any aisle by impulse unboxing | You cannot name the weekly friction it removes |
 
-**On a cost-effectiveness basis**, most the listed product category and school-break homes should treat the $300 tier as a **priority auction across categories** — win the auction with the category that buys the most daily comfort hours, then stack a second small box only if headroom remains after honest TCO math.
+**On a cost-effectiveness basis**, most heatwave and school-break homes should treat the $300 tier as a **priority auction across categories** — win the auction with the category that buys the most daily comfort hours, then stack a second small box only if headroom remains after honest TCO math.
 
 <!-- aipick-approval-modules:v1 -->
 

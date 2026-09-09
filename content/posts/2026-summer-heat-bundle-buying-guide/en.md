@@ -205,9 +205,9 @@ For single-room cooling, a window AC is more efficient than a portable AC becaus
 
 For the Dyson, HEPA filters typically last 6–12 months depending on usage and air quality. The carbon filter may need replacement more often. For the Brita bottle, replace the filter every 40 gallons or about every 2 months with regular use. Check the manufacturer's app or indicator for precise timing.
 
-### Is a portable AC a good alternative to a the listed product category?
+### Is a portable AC a good alternative to a window unit?
 
-Portable ACs are easier to install and can be moved from room to room, but they're usually less efficient and noisier. They also take up floor space and require a window hose. If you can install a the listed product category, it's generally the better long-term choice for efficiency and cooling power.
+Portable ACs are easier to install and can be moved from room to room, but they're usually less efficient and noisier. They also take up floor space and require a window hose. If you can install a window unit, it's generally the better long-term choice for efficiency and cooling power.
 
 ## Related guides
 
@@ -218,7 +218,7 @@ Portable ACs are easier to install and can be moved from room to room, but they'
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 ## Five checks before you buy
 
-1. **Measure your the listed product category.** Cooling and dehumidifying capacity is rated in BTUs and pints. A unit too small won't keep up; too large wastes energy.
+1. **Measure your room size.** Cooling and dehumidifying capacity is rated in BTUs and pints. A unit too small won't keep up; too large wastes energy.
 2. **Check your window type.** Window ACs need a specific opening; measure before purchasing. Portable ACs need a window for the exhaust hose.
 3. **Consider energy costs.** Look for Energy Star ratings. A more efficient unit may cost more upfront but save money over three years.
 4. **Plan for drainage.** Dehumidifiers have tanks that need emptying. If you don't want to empty daily, choose one with a pump or continuous drain option.

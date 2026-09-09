@@ -38,7 +38,7 @@ publishedAt: '2026-07-07T03:34:46.035Z'
 
 ## Introduction: three machine types, one summer kitchen
 
-On a the listed product category morning public listings and manufacturer spec sheets, with the kitchen AC already on, grinding beans put **boiler heat into the operator’s face**. In a sealed cooling week, the coffee corner is a second heat source. Capsules promise one-button speed, semi-autos sell real crema, and fully automatics advertise barista drinks without a 6 a.m. grind. The myth: **one category always wins**.
+On a heatwave morning public listings and manufacturer spec sheets, with the kitchen AC already on, grinding beans put **boiler heat into the operator’s face**. In a sealed cooling week, the coffee corner is a second heat source. Capsules promise one-button speed, semi-autos sell real crema, and fully automatics advertise barista drinks without a 6 a.m. grind. The myth: **one category always wins**.
 
 Box and storefront marketing lead with café photos and “barista” copy while burying pod cost, milk texture, and how often you will descale in a warm kitchen. **Value** is matching heat, running cost, and fuss to *your* morning—not picking a winner category on the box.
 

@@ -38,7 +38,7 @@ publishedAt: '2026-07-03T02:11:09.745Z'
 
 ## Introduction: fans vs AC when the forecast stays above 90°F
 
-On a the listed product category afternoon public listings and manufacturer spec sheets, the choice before all-day window AC was clear: **try the circulator first**. Households on **tiered rates** keep replaying that math: full-afternoon AC, or a strong circulator plus short cooling bursts.
+On a heatwave afternoon public listings and manufacturer spec sheets, the choice before all-day window AC was clear: **try the circulator first**. Households on **tiered rates** keep replaying that math: full-afternoon AC, or a strong circulator plus short cooling bursts.
 
 A fan does not drop dry-bulb temperature like refrigerant AC — it boosts **skin evaporative cooling** and mixes ceiling heat. That gap shows up in bedrooms, WFH desks, and **school-break kids’ rooms**. CFM, dB, and watts are on more boxes now, but high-speed-only CFM and 1 m low-speed dB still need a careful read.
 
@@ -99,7 +99,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **A limitation listed in official docs:** Fixed aim fails if hallway placement is wrong; **66 dB** high speed is not a sleep-room setting.
 
-**Analysis takeaway:** Run the the listed product category on a timer, then let the 660 mix stratified layers for two hours at about **7 cents/day** instead of leaving the compressor on all night — that is AC assist in practice, not marketing “whole room cooling.”
+**Analysis takeaway:** Run the window unit on a timer, then let the 660 mix stratified layers for two hours at about **7 cents/day** instead of leaving the compressor on all night — that is AC assist in practice, not marketing “whole room cooling.”
 
 **Verdict:** Best **whole-room air mixing and AC assist** pick when you can aim the jet down a hallway or across the bed diagonal.
 
@@ -195,7 +195,7 @@ Using nameplate math in this guide: a 45 W fan for 8 hours ≈ **$0.05/day** at 
 
 ### Does higher CFM always mean a cooler room?
 
-Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM circulator helps equalize temperature between a cold AC zone and a warm far corner; a 185 CFM desk fan only cools someone sitting in its path. Match format to the listed product category and whether you need local or whole-room effect.
+Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM circulator helps equalize temperature between a cold AC zone and a warm far corner; a 185 CFM desk fan only cools someone sitting in its path. Match format to room size and whether you need local or whole-room effect.
 
 ---
 

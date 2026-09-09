@@ -41,9 +41,9 @@ In a studio public listings and manufacturer spec sheets with a single-hose port
 
 When heat indexes climb in {{today}}, renters face the same fork: **portable for flexibility, or window for efficiency?** Single-hose units roll in easily but struggle above about 15 m²; window units need brackets and landlord approval, yet usually win on noise and kWh at the same BTU label.
 
-From a marketing lens, storefronts splash **10,000 BTU and 14,000 BTU** headlines while **EER and exhaust seal quality** predict daily cost more honestly. The $130 gap between a $249 (~{{krw:249}}) the listed product category and a $379 (~{{krw:379}}) single-hose portable shrinks fast over one August bill. Small tip: wiggle the vent kit by hand — if it leaks, warm outdoor air recirculates regardless of the BTU sticker.
+From a marketing lens, storefronts splash **10,000 BTU and 14,000 BTU** headlines while **EER and exhaust seal quality** predict daily cost more honestly. The $130 gap between a $249 (~{{krw:249}}) window unit and a $379 (~{{krw:379}}) single-hose portable shrinks fast over one August bill. Small tip: wiggle the vent kit by hand — if it leaks, warm outdoor air recirculates regardless of the BTU sticker.
 
-This head-to-head compares **one the listed product category and two portables (single-hose vs dual-hose)** on public specs so you can match hardware to lease and layout before peak summer demand.
+This head-to-head compares **one window unit and two portables (single-hose vs dual-hose)** on public specs so you can match hardware to lease and layout before peak summer demand.
 
 ---
 
@@ -170,7 +170,7 @@ After cross-checking the public specs, window AC still wins on **noise and runni
 | --- | --- |
 | **Frigidaire window** | Have casement windows or no exterior vent path |
 | **Midea portable** | Expect all-day cooling in 25 m²+ open plans |
-| **LG dual-hose** | Can install a the listed product category instead — save money long term |
+| **LG dual-hose** | Can install a window unit instead — save money long term |
 
 <!-- aipick-approval-modules:v1 -->
 

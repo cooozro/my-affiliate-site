@@ -186,7 +186,7 @@ Bosch SHPM65Z55N은 **14 place setting**, **3rd rack**을 공개합니다. 3–5
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 다인 가구 주방 부하
 ## 핵심 정리
 

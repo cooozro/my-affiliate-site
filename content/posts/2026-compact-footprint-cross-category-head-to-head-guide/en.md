@@ -99,11 +99,11 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 ### Midea MAP10S1TBL (10,000 BTU single-hose portable)
 
-**Strengths:** No permanent window bracket like a sash AC; moves between rooms; listed for rooms that cannot install a the listed product category. Single-hose kits install faster than dual-hose towers for many renters.
+**Strengths:** No permanent window bracket like a sash AC; moves between rooms; listed for rooms that cannot install a window unit. Single-hose kits install faster than dual-hose towers for many renters.
 
 **Weaknesses:** Single-hose designs pull makeup air and can lose efficiency if the exhaust seal is loose; the hose and window panel permanently tax one window; floor rectangle plus hose radius often exceeds the chassis alone.
 
-**Editorial read:** At about $379 and 10,000 BTU, the MAP10S1TBL buys **short-window sleep cooling** without landlord sash work, but three-summer ownership still carries higher kWh than a properly sealed the listed product category — and the hose permanently spends **one walk-lane corner**.
+**Editorial read:** At about $379 and 10,000 BTU, the MAP10S1TBL buys **short-window sleep cooling** without landlord sash work, but three-summer ownership still carries higher kWh than a properly sealed window unit — and the hose permanently spends **one walk-lane corner**.
 
 **A limitation listed in official docs:** On open studios over about 18–20 m² run all day, a loose exhaust kit can reintroduce hot outdoor air so the compressor runs longer than the BTU label implies.
 

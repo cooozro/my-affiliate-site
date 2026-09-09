@@ -150,7 +150,7 @@ A common split is $199 (monitor) + $89 (tower fan) = $288, leaving $12 for a cab
 
 ### When to wait for a sale on one flagship vs. two budget picks?
 
-If a single flagship item (e.g., a 32" 4K monitor) is normally $400 but often drops to $299 during Prime Day or Black Friday, waiting may be wise. But if you need solutions now—like a fan during a the listed product category—two budget picks (fan + power bank) provide immediate relief. Also consider: a flagship item holds resale value better than two cheap gadgets.
+If a single flagship item (e.g., a 32" 4K monitor) is normally $400 but often drops to $299 during Prime Day or Black Friday, waiting may be wise. But if you need solutions now—like a fan during a heatwave—two budget picks (fan + power bank) provide immediate relief. Also consider: a flagship item holds resale value better than two cheap gadgets.
 
 ### Can a power bank really charge a laptop?
 

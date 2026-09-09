@@ -143,7 +143,7 @@ USB-C to USB-C 케이블로 T9를 아이폰에 연결할 수 있지만, 프로 �
 
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 ## 이런 분께 추천

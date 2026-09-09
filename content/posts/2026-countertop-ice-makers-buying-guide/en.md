@@ -42,7 +42,7 @@ publishedAt: '2026-07-20T08:28:51.349Z'
 
 ## Introduction: ice demand spikes when the heat does
 
-On a the listed product category afternoon public listings and manufacturer spec sheets in a compact galley kitchen, the freezer tray could not keep up — kids home for school break, iced coffee after outdoor hours, and guests expecting drinks that stay cold past the first sip. From the public spec sheet: fridge ice makers in mid-size apartments are often slow, noisy, and shared with frozen food volume; a **dedicated countertop unit** answers volume, but only if you match ice type and refill habit to how you actually entertain.
+On a heatwave afternoon public listings and manufacturer spec sheets in a compact galley kitchen, the freezer tray could not keep up — kids home for school break, iced coffee after outdoor hours, and guests expecting drinks that stay cold past the first sip. From the public spec sheet: fridge ice makers in mid-size apartments are often slow, noisy, and shared with frozen food volume; a **dedicated countertop unit** answers volume, but only if you match ice type and refill habit to how you actually entertain.
 
 This buying guide answers one question: **for a summer apartment or small kitchen without a plumbed ice line, which countertop ice maker earns its counter space over three years of electricity, vinegar or descaler, and optional filters?** The reference models below span chewable nugget, portable bullet, budget compact, higher-output bullet, and self-cleaning / continuous-fill oriented designs:
 

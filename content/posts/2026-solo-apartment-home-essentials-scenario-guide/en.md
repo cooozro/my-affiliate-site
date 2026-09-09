@@ -108,7 +108,7 @@ Vornado publishes **high-speed airflow near 584 CFM** on the 660 line with a 66 
 
 ### Window vs portable vs fan-only tradeoffs
 
-Window units cool efficiently but need **landlord approval** and sill strength. Portable ACs fit rental clauses more often but vent hot air through a hose — in 25 m², the heat dump can negate gains. Fan-only is the default **first purchase** when install is blocked; pair with our electric fans buying guide if you need CFM tables by the listed product category.
+Window units cool efficiently but need **landlord approval** and sill strength. Portable ACs fit rental clauses more often but vent hot air through a hose — in 25 m², the heat dump can negate gains. Fan-only is the default **first purchase** when install is blocked; pair with our electric fans buying guide if you need CFM tables by room size.
 
 ---
 
@@ -276,7 +276,7 @@ Never daisy-chain a 1,500 W air fryer on the same strip as a fridge compressor a
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
-- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 After cross-checking the public specs, solo-apartment value is not **five “best in class” stickers** — it is matching **circuit load, square meters, and filter spend on one map**. **On a cost-effectiveness basis,** this report would mix air with the Vornado 660 first, filter sealed-room dust with the Levoit Core 300S, and plug the Cosori Pro LE into a dedicated kitchen socket only. Shortlist the Roborock Q7 Max+ only when 40 cm of dock clearance is real, not hopeful.

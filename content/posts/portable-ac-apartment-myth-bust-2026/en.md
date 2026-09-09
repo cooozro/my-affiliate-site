@@ -76,11 +76,11 @@ Who should skip: renters with casement or vertical windows should skip any unit 
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
-- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## FAQ
 
 ### Does a higher BTU portable AC cool my apartment faster?
-Not always. The unit’s SACC, hose design, and window-seal quality determine how much of that the listed product category actually reaches the room. A 14,000 BTU single-hose model can feel weaker than a 12,000 SACC dual-hose model because the former pulls hot hallway air into the room. For a 200–300 square foot bedroom, 9,000–12,000 SACC is usually enough if the room is sealed.
+Not always. The unit’s SACC, hose design, and window-seal quality determine how much of that BTU rating actually reaches the room. A 14,000 BTU single-hose model can feel weaker than a 12,000 SACC dual-hose model because the former pulls hot hallway air into the room. For a 200–300 square foot bedroom, 9,000–12,000 SACC is usually enough if the room is sealed.
 
 ### Can I use a portable AC in a room with a casement window?
 Yes, but you will likely need a custom acrylic or plexiglass panel with a vent hole, not the stock sliding-window kit. Some manufacturers sell casement kits, but most require measuring the window opening and cutting a panel to fit. A poor seal will leak cooled air and shorten compressor life because the unit works harder.
@@ -96,7 +96,7 @@ A 10,000 SACC unit with a CEER of 13 typically draws 800–1,000 watts on high. 
 
 ## Related guides on AI Pick & Report
 
-- [Heat-wave blackout readiness checklist](/en/blog/2026-the listed product category-blackout-home-readiness-checklist)
+- [Heat-wave blackout readiness checklist](/en/blog/2026-heatwave-blackout-home-readiness-checklist)
 - [Solo apartment home essentials checklist](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723)
 - [Family 3–5 home essentials scenario guide](/en/blog/2026-family-3-5-home-essentials-scenario-guide)
 - [Under-$300 cross-category head-to-head guide](/en/blog/2026-under-300-cross-category-head-to-head-guide)
