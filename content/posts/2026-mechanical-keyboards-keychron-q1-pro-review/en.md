@@ -4,19 +4,18 @@ description: >-
   We review the Keychron Q1 Pro in 2026: gasket mount, wireless, QMK/VIA
   support, and build quality. See specs, performance, and who should buy or
   skip.
-date: '2026-08-26'
+date: '2026-09-09'
 tags:
   - Keychron Q1 Pro
   - mechanical keyboard
   - gasket mount
   - wireless keyboard
   - QMK VIA
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: mechanical-keyboards
 topicCluster: peripherals
 writingProvider: deepseek
-createdAt: '2026-08-26T13:16:08.731Z'
 coverImage: >-
   /images/posts/2026-mechanical-keyboards-keychron-q1-pro-review/keychron-q1-pro-product-photo-keychron-q1-pro-me-cover.jpg
 coverImageAlt: >-
@@ -29,8 +28,9 @@ modelPickId: keychron-q1-pro
 modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
-updatedAt: '2026-09-09T00:38:27.744Z'
+updatedAt: '2026-09-09T09:57:57.000Z'
 automationBuffer: true
+publishedAt: '2026-09-09T09:57:57.000Z'
 ---
 > **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
 

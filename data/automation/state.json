@@ -13,14 +13,14 @@
     "wireless-earbuds",
     "power-banks"
   ],
-  "lastPublishAt": "2026-09-08T17:53:58.171Z",
-  "nextPublishAt": "2026-09-09T00:57:36.388Z",
+  "lastPublishAt": "2026-09-09T00:57:59.835Z",
+  "nextPublishAt": "2026-09-10T02:33:00.000Z",
   "scheduledSlots": [
     "2026-09-08T17:38:00.000Z",
     "2026-09-09T17:55:00.000Z"
   ],
-  "scheduledGapHours": 4,
-  "publishCountToday": 1,
+  "scheduledGapHours": 5.55,
+  "publishCountToday": 2,
   "publishDateKst": "2026-09-09",
   "writeCountToday": 0,
   "writeDateKst": "2026-09-09",
@@ -345,13 +345,31 @@
         "https://www.aipick.shop/en/blog/2026-usb-c-hubs-caldigit-ts4-review",
         "https://www.aipick.shop/ko/blog/2026-usb-c-hubs-caldigit-ts4-review"
       ]
+    },
+    {
+      "action": "publish",
+      "slug": "2026-mechanical-keyboards-keychron-q1-pro-review",
+      "topic": {
+        "id": "mechanical-keyboards",
+        "cluster": "peripherals"
+      },
+      "at": "2026-09-09T00:57:59.835Z",
+      "urls": [
+        "https://www.aipick.shop/en/blog/2026-mechanical-keyboards-keychron-q1-pro-review",
+        "https://www.aipick.shop/ko/blog/2026-mechanical-keyboards-keychron-q1-pro-review"
+      ]
     }
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-09T00:38:27.685Z",
-    "issueCount": 2,
+    "at": "2026-09-09T00:57:56.492Z",
+    "issueCount": 3,
     "issues": [
+      {
+        "code": "overdue-publish-slot",
+        "message": "Publish ready but no post went live (0min past slot, KST 2026-09-09)",
+        "severity": "warning"
+      },
       {
         "code": "draft-integrity-issues",
         "message": "1 draft(s) have publish gate issues",
@@ -363,15 +381,12 @@
         "severity": "error"
       }
     ],
-    "repairs": []
+    "repairs": [
+      "aligned-slot-with-min-gap",
+      "marked-slot-catch-up"
+    ]
   },
   "topicHistory": [
-    {
-      "id": "space-heaters",
-      "category": "home-appliances",
-      "taxonomyGroup": "계절가전/난방·가습",
-      "at": "2026-08-13T04:08:37.687Z"
-    },
     {
       "id": "meta-compact-footprint-appliances",
       "cluster": "cross-cutting",
@@ -527,6 +542,11 @@
       "id": "usb-c-hubs",
       "cluster": "accessories",
       "at": "2026-09-08T17:53:58.195Z"
+    },
+    {
+      "id": "mechanical-keyboards",
+      "cluster": "peripherals",
+      "at": "2026-09-09T00:57:59.856Z"
     }
   ],
   "lastDailyContentAuditKst": "2026-09-08",

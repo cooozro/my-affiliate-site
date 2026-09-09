@@ -3,19 +3,18 @@ title: '키크론 Q1 Pro 리뷰: 가스켓 마운트 무선 커스텀 키보드�
 description: >-
   2026년 키크론 Q1 Pro를 리뷰합니다: 가스켓 마운트, 무선, QMK/VIA 지원, 빌드 품질. 스펙, 성능, 구매 추천 대상과 건너뛸
   대상을 확인하세요.
-date: '2026-08-26'
+date: '2026-09-09'
 tags:
   - 키크론 Q1 Pro
   - 기계식 키보드
   - 가스켓 마운트
   - 무선 키보드
   - QMK VIA
-draft: true
+draft: false
 contentProfile: model-deep-dive
 topicId: mechanical-keyboards
 topicCluster: peripherals
 writingProvider: deepseek
-createdAt: '2026-08-26T13:16:08.731Z'
 coverImage: >-
   /images/posts/2026-mechanical-keyboards-keychron-q1-pro-review/keychron-q1-pro-product-photo-keychron-q1-pro-me-cover.jpg
 coverImageAlt: >-
@@ -27,8 +26,9 @@ modelPickId: keychron-q1-pro
 modelPickBrand: Keychron
 modelPickName: Q1 Pro
 pressKitGallery: 'https://www.google.com/search?q=Keychron%20Q1%20Pro%20press%20kit'
-updatedAt: '2026-08-28T06:53:41.642Z'
+updatedAt: '2026-09-09T09:57:57.000Z'
 automationBuffer: true
+publishedAt: '2026-09-09T09:57:57.000Z'
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
