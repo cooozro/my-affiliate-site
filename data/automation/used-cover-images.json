@@ -2371,6 +2371,24 @@
       "contentHash": "8cd6fcb69b23b673224e30e9b42af6da8bb640961caf57205143c6933614209f",
       "provider": "pixabay",
       "registeredAt": "2026-09-09T01:06:03.208Z"
+    },
+    {
+      "slug": "2026-webcams-elgato-facecam-pro-review",
+      "url": "https://pixabay.com/get/g828caea9dc1400fcf9973d64d2732cfe20b1814767442c51c9dd30bf74fb750aa3a9af93d91e9ba2b0278c66012a94c3bf906dd5c2bcf6d07a0e27d0c6d4b765_1280.jpg",
+      "assetKey": "pixabay:1902610",
+      "hash": "f8ece73f99e234fd4090f1c4f4da8ceda4d9efc557cf8de916ec273126ceaed6",
+      "contentHash": "f8ece73f99e234fd4090f1c4f4da8ceda4d9efc557cf8de916ec273126ceaed6",
+      "provider": "pixabay",
+      "registeredAt": "2026-09-09T01:06:18.584Z"
+    },
+    {
+      "slug": "2026-webcams-elgato-facecam-pro-review",
+      "url": "https://pixabay.com/get/gabf0bc1f5947c34b9338c3192937e230181b65c8aaa7a09d6a7020dc4d3a9bb355695f803546e689826e35ae80aa1754591706af65d84a014d89e8c661f00a4e_1280.jpg",
+      "assetKey": "pixabay:1721379",
+      "hash": "665b7d1a68b9f86b9d76189e2d244797ff811da49f0326f42e4ffa5bebce6531",
+      "contentHash": "665b7d1a68b9f86b9d76189e2d244797ff811da49f0326f42e4ffa5bebce6531",
+      "provider": "pixabay",
+      "registeredAt": "2026-09-09T01:06:18.855Z"
     }
   ]
 }
