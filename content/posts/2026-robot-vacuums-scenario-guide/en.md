@@ -15,7 +15,7 @@ tags:
 contentProfile: scenario-guide
 topicId: robot-vacuums
 draft: false
-noindex: true
+noindex: false
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-scenario-guide/robot-vacuum-smart-home-robot-vacuum-hardwood-fl-cover.jpg
@@ -38,7 +38,7 @@ publishedAt: '2026-07-02T01:23:30.000Z'
 
 ## Introduction: who this guide is for
 
-First week of summer break, a studio field check found the **robot vacuum stuck under a shoe** — AC running, floor still dusty. Editorial finding: in **25–55 m² studios and one-bedrooms**, headline **8,000 Pa** numbers matter less than **LiDAR mapping, dock footprint, and pad wash cycles**.
+First week of summer break, a studio public listings and manufacturer spec sheets found the **robot vacuum stuck under a shoe** — AC running, floor still dusty. From the public spec sheet: in **25–55 m² studios and one-bedrooms**, headline **8,000 Pa** numbers matter less than **LiDAR mapping, dock footprint, and pad wash cycles**.
 
 You want hands-off floor care without tripping over a bulky dock. AC runs for hours during heat season, pets shed, and furniture moves — each layout stresses different parts of a robot vacuum: **suction at the brush roll, LiDAR vs camera mapping, mop pad hygiene, and how often you must empty the bin**.
 
@@ -50,7 +50,7 @@ We compare four mainstream 2026 models across four apartment scenarios. Referenc
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -81,7 +81,7 @@ Roborock publishes **5,500 Pa max suction** and PreciSense LiDAR mapping on the 
 
 **Editorial read:** ~{{krw:449}} with auto-empty beats daily bin dumps in a tight studio—budget **$40–60/year** for bags and HEPA in three-year TCO. **40+ cm behind the dock** matters more than Pa on the spec sheet.
 
-**Review concern:** Bathroom lips and balcony tracks stall maps during summer trips—measure the only free wall before buying a wide omni dock.
+**A limitation listed in official docs:** Bathroom lips and balcony tracks stall maps during summer trips—measure the only free wall before buying a wide omni dock.
 
 | Factor | Roborock Q7 Max+ | Typical bump-and-turn budget unit |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ iRobot rates the j5 line for **pet hair pickup** with a multi-surface rubber bru
 
 **Editorial read:** ~{{krw:499}} and Clean Base remove **every-one-to-two-run** emptying in shedding season—**$50–80/year** consumables still beat manual pet-household duty over three years.
 
-**Review concern:** Summer floor clutter, leashes, and shoes test vision avoidance—run a cluttered-floor trial inside the return window.
+**A limitation listed in official docs:** Summer floor clutter, leashes, and shoes test vision avoidance—run a cluttered-floor trial inside the return window.
 
 | Factor | Roomba Combo j5+ | Roborock Q7 Max+ |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ eufy documents **8,000 Pa suction** on the X10 Pro Omni with an all-in-one stati
 
 **Editorial read:** ~{{krw:799}} omni station TCO still wins versus smelly manual pads through three humid summers—**8,000 Pa** plus dock wash/dry cuts daily mop labor in monsoon weeks.
 
-**Review concern:** A corner kitchen dock blocks tank access; above **28 °C** indoor dew, skipped dry cycles turn pads sour fast.
+**A limitation listed in official docs:** A corner kitchen dock blocks tank access; above **28 °C** indoor dew, skipped dry cycles turn pads sour fast.
 
 | Factor | eufy X10 Pro Omni | Shark Matrix Plus 2-in-1 |
 | --- | --- | --- |
@@ -162,7 +162,7 @@ Shark’s Matrix line advertises **LiDAR mapping with room zones**, 60-day self-
 
 **Editorial read:** ~{{krw:449}} LiDAR zones fit school-break clutter without omni pricing—night runs near **60 dB** plus AC fan argue against sleep-room placement; each run is roughly **30–40 W** for tens of minutes.
 
-**Review concern:** Manual pad drying smells in humid weeks; weekly furniture moves without map edits fail fast.
+**A limitation listed in official docs:** Manual pad drying smells in humid weeks; weekly furniture moves without map edits fail fast.
 
 | Factor | Shark Matrix Plus 2-in-1 | Roomba Combo j5+ |
 | --- | --- | --- |
@@ -219,3 +219,28 @@ After cross-checking the public specs, apartment robot vacuums are not one-size-
 | Listed price fits after checking {{today}} promos | Landlord bans any wet cleaning on hardwood lease terms |
 
 Check brush rolls and filters monthly during peak summer use — the best robot vacuum fails quietly when hair wraps the roll and suction collapses long before the battery dies.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

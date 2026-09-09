@@ -13,7 +13,7 @@ tags:
   - HEPA filter
   - running costs
 draft: false
-noindex: true
+noindex: false
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
@@ -46,7 +46,7 @@ If you're shopping for an air purifier for a room under 200 square feet, you mig
 
 We picked three models that represent different approaches to small-room purification: the **Coway Airmega AP-1012C**, the **Levoit Core 300S**, and the **Blueair Blue Pure 411 Auto**. Each has a distinct filter design, noise profile, and running cost. We'll compare them side by side, then give you scenario-based recommendations.
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -159,7 +159,7 @@ Yes, most modern purifiers have a sleep mode that reduces fan speed and noise. T
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 ## Final Verdict
 
@@ -191,3 +191,28 @@ The Levoit Core 300S offers the best value over three years, with lower running 
 ## Models this report shortlists
 
 This report shortlists three models: Coway Airmega AP-1012C, Levoit Core 300S, and Blueair Blue Pure 411 Auto. Recommended pick: Levoit Core 300S for overall value, Blueair for quiet operation, and Coway for maximum CADR.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

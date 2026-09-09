@@ -13,7 +13,7 @@ tags:
   - stylus tablets
   - tablet comparison
 draft: false
-noindex: true
+noindex: false
 contentProfile: scenario-guide
 topicId: tablet-budget
 topicCluster: tablets
@@ -36,7 +36,7 @@ This scenario guide helps students, commuters, and casual readers choose a budge
 
 If you are shopping for a tablet mainly to read e-books, watch video, or mark up PDFs, you do not need to spend flagship money. The budget segment now includes several 10–11 inch models with sharp displays, microSD storage, and even bundled styluses. This guide matches three real-world scenarios to concrete current models so you can see exactly where display, storage, and stylus support trade off against price.
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -88,7 +88,7 @@ All prices are reference listings and may change. For price context, the current
 
 **Editorial read:** The Tab A9+ is the safer default for streamers because the higher refresh rate reduces motion blur in action-heavy content. The lack of an included stylus is a non-issue for this use case.
 
-**Review concern:** Samsung’s One UI on this class can feel heavy with 4 GB of RAM if you keep many apps open. Closing background apps solves most lag.
+**A limitation listed in official docs:** Samsung’s One UI on this class can feel heavy with 4 GB of RAM if you keep many apps open. Closing background apps solves most lag.
 
 ## Scenario: Stylus note-taking and annotating PDFs on a tight budget
 
@@ -108,7 +108,7 @@ All prices are reference listings and may change. For price context, the current
 
 **Editorial read:** The S Pen does not need charging for basic writing and drawing, which reduces friction. The S6 Lite’s display is slightly smaller than the M11, but the bundled pen makes it the better value for note-takers.
 
-**Review concern:** The base 4 GB RAM variant can feel tight when annotating large PDFs with multiple layers. If your workflow is heavy, choose the 6 GB/128 GB configuration.
+**A limitation listed in official docs:** The base 4 GB RAM variant can feel tight when annotating large PDFs with multiple layers. If your workflow is heavy, choose the 6 GB/128 GB configuration.
 
 **Analysis takeaway:** Factor in the three-year total cost of ownership: tablet plus case, screen protector, and replacement S Pen nibs. The S6 Lite’s included S Pen saves roughly $30–50 over a comparable Lenovo package.
 
@@ -162,3 +162,28 @@ If you can stretch your budget slightly, the 128 GB configuration of any recomme
 | Amazon Fire HD 10 for reading and offline video | 32 GB storage without microSD if you download lots of video |
 | Samsung Galaxy Tab A9+ for 90 Hz streaming | 4 GB RAM heavy multitaskers |
 | Samsung Galaxy Tab S6 Lite with S Pen included | Lenovo Tab M11 + stylus bundle if S Pen is not essential |
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

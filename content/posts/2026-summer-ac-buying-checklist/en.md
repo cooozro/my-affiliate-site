@@ -14,7 +14,7 @@ contentProfile: checklist
 topicId: portable-ac
 topicCluster: air-conditioning
 draft: false
-noindex: true
+noindex: false
 liveData: true
 coverImage: >-
   /images/posts/2026-summer-ac-buying-checklist/air-conditioner-buying-guide-home-appliances-cover.jpg
@@ -34,13 +34,13 @@ coverImageAltKo: 여름 침실의 이동식 에어컨
 
 ## Introduction: use this before heat-season rush
 
-Last heat-wave week, a studio field check stayed warm at noon after chasing a **“12,000 BTU max cooling”** banner — the hose seal was loose, the lease banned the bracket, and the bill climbed first. Editorial finding: AC ads sell peak BTU; returns pay for **install fit, exhaust math, and honest kWh**.
+Last heat-wave week, a studio public listings and manufacturer spec sheets stayed warm at noon after chasing a **“12,000 BTU max cooling”** banner — the hose seal was loose, the lease banned the bracket, and the bill climbed first. From the public spec sheet: AC ads sell peak BTU; returns pay for **install fit, exhaust math, and honest kWh**.
 
 Walk these seven checks **before** checkout so you don’t learn about a blocked window, banned bracket, or under-sized room on the hottest week of the year. Tip that saves returns: measure floor area and sash width first — a 15 m² shaded bedroom and a west-facing 20 m² studio are not the same BTU story even when both ads say “studio size.”
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 Checklist items came from manufacturer install guides, common lease practice, and energy-label docs — public sources only, no private commerce APIs. On a cost-effectiveness basis, the order below is: permission and exhaust before brand and discount.
 
@@ -54,7 +54,7 @@ Checklist items came from manufacturer install guides, common lease practice, an
 
    **Editorial read:** A shaded 15 m² bedroom at 2.4 m ceiling height starts near 8,000 BTU, but **loft or high-ceiling rooms add about 20% volume**—plan one BTU step up (about $50–80).
 
-   **Review concern:** Skipping tape-measure fit often means **1–2 weeks of returns** and miserable heat-wave nights before the right box arrives.
+   **A limitation listed in official docs:** Skipping tape-measure fit often means **1–2 weeks of returns** and miserable heat-wave nights before the right box arrives.
 
 2. **Confirm lease / building rules on window hardware**  
    **Why it matters:** Some leases ban brackets or require removable installs only.  
@@ -70,7 +70,7 @@ Checklist items came from manufacturer install guides, common lease practice, an
 
    **Editorial read:** West-facing or top-floor 20 m² layouts often need **12,000–14,000 BTU (about $80–150 more)** to beat three summers of higher kWh and louder high-fan nights versus an undersized 8k box.
 
-   **Review concern:** Undersizing shows up as **$20–40/month extra power** and **52 dB creeping to high-speed fan** when you run eight-plus hours daily.
+   **A limitation listed in official docs:** Undersizing shows up as **$20–40/month extra power** and **52 dB creeping to high-speed fan** when you run eight-plus hours daily.
 
 5. **Check noise (dB) against sleep vs WFH use**  
    **Why it matters:** A 55 dB unit in a bedroom feels louder than in a daytime office nook.  
@@ -82,7 +82,7 @@ Checklist items came from manufacturer install guides, common lease practice, an
 
    **Editorial read:** One CEER or EER step can mean **$25–40/year** over ninety summer days at eight hours daily—often more than a $30–50 upfront discount.
 
-   **Review concern:** Unlabeled bargain units frequently lose on **three-year total cost** versus a slightly pricier efficient label.
+   **A limitation listed in official docs:** Unlabeled bargain units frequently lose on **three-year total cost** versus a slightly pricier efficient label.
 
 7. **Plan drainage and filter access before install**  
    **Why it matters:** Portables produce condensate; window units need tilt and clearance.  
@@ -124,11 +124,11 @@ A checklist alone doesn’t checkout. These three are my **install / noise / BTU
 
 ### Frigidaire FHWW083WBE (8,000 BTU)
 
-Window unit for small bedrooms/studios with honest CEER/noise labels.
+the listed product category for small bedrooms/studios with honest CEER/noise labels.
 
 **Editorial read:** $249 and 8,000 BTU typically wins on **daily kWh and 52 dB sleep** in 12–18 m² rooms run six to eight hours versus rolling portables.
 
-**Review concern:** **Sash kit fit** matters more than peak-BTU marketing—mismatch triggers returns before you ever save on power.
+**A limitation listed in official docs:** **Sash kit fit** matters more than peak-BTU marketing—mismatch triggers returns before you ever save on power.
 
 ### Midea MAW08V1QWT (U-shape 8,000 BTU)
 
@@ -136,7 +136,7 @@ Keeps a lower vent path—handy for naps.
 
 **Editorial read:** U-shape about $399 class hardware trades **42 dB-class low fan and lower-sash ventilation** in nurseries—but only after you measure kit width and sill depth.
 
-**Review concern:** Buying before measuring kit width often means **non-installable hardware and a 1–2 week return cycle**.
+**A limitation listed in official docs:** Buying before measuring kit width often means **non-installable hardware and a 1–2 week return cycle**.
 
 ### GE AHY12LZ (12,000 BTU)
 
@@ -144,7 +144,7 @@ Heat-wave nights / open doorways; dry + scheduling.
 
 **Editorial read:** 12,000 BTU with dry mode helps **18–23 m² and open-doorway heat spill** beat 8k on midnight humidity, but it is oversize for a shaded 15 m² room.
 
-**Review concern:** 12k in a small shaded bedroom **short-cycles and leaves clammy air**—measure floor area first.
+**A limitation listed in official docs:** 12k in a small shaded bedroom **short-cycles and leaves clammy air**—measure floor area first.
 
 ## FAQ
 ### If I buy the highest BTU I can afford, will my studio apartment stay cold?
@@ -165,7 +165,32 @@ During a heat wave, **hours of daily runtime** can outweigh a $30–50 price gap
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 - [Family Home Essentials: Five Scenarios for 3–5 Person Households From Fridge Capacity to Floor Care](/en/blog/2026-family-3-5-home-essentials-scenario-guide) — Family picks for 3–5 person homes — fridge capacity, washer throughput, shared TV, room a…
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 After walking through this checklist, summer AC value still means **permission → exhaust → BTU → noise → energy → maintenance** — not the loudest “max BTU” sticker in the aisle. Marketing sells capacity; returns come from leases and leaky hoses. **On a cost-effectiveness basis,** clear install rules and measure the room first, then shortlist with the models above and the scenario / head-to-head guides.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

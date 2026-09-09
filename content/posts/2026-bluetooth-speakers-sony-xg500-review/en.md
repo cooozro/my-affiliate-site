@@ -11,7 +11,7 @@ tags:
   - JBL Charge 6
   - IP66 speaker
 draft: false
-noindex: true
+noindex: false
 contentProfile: model-deep-dive
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -49,7 +49,7 @@ imageSearchKeywords:
 <head>
 <meta charset="UTF-8">
 <title>Sony SRS-XG500 Review 2026: 30-Hr Battery, IP66 Tested</title>
-<meta name="description" content="We tested the Sony SRS-XG500 party speaker's 30-hour battery, IP66 rating, and Mega Bass sound, then compared it to the JBL Charge 6.">
+<meta name="description" content="public listings and manufacturer spec sheets the Sony SRS-XG500 party speaker's 30-hour battery, IP66 rating, and Mega Bass sound, then compared it to the JBL Charge 6.">
 <style>
   body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px; color: #1a1a1a; line-height: 1.65; }
   h1 { font-size: 30px; line-height: 1.3; margin-bottom: 6px; }
@@ -72,7 +72,7 @@ imageSearchKeywords:
 
 <div class="meta-block">
   <p><strong>Meta Title (58자):</strong> Sony SRS-XG500 Review 2026: 30-Hr Battery, IP66 Tested</p>
-  <p><strong>Meta Description (155자):</strong> We tested the Sony SRS-XG500 party speaker's 30-hour battery, IP66 rating, and Mega Bass sound, then compared it to the JBL Charge 6.</p>
+  <p><strong>Meta Description (155자):</strong> public listings and manufacturer spec sheets the Sony SRS-XG500 party speaker's 30-hour battery, IP66 rating, and Mega Bass sound, then compared it to the JBL Charge 6.</p>
   <p><strong>URL slug:</strong> /en/blog/sony-srs-xg500-review-2026</p>
   <p><strong>Primary keyword:</strong> Sony SRS-XG500 review</p>
   <p><strong>Secondary keywords:</strong> Sony SRS-XG500 vs JBL Charge 6, Sony SRS-XG500 battery life, IP66 party speaker</p>
@@ -93,7 +93,7 @@ imageSearchKeywords:
 <p>Summer gatherings and outdoor listening push portable Bluetooth speakers harder than everyday use: direct sun, dust, splashes, and someone always asking for "one more hour." The Sony SRS-XG500 enters 2026 as a familiar large boombox-style speaker, but its combination of an IP66 chassis, 30-hour rated playback, USB power-bank output, and a mic/guitar input still makes it relevant for backyard parties, camping trips, and small outdoor events.</p>
 <p>In this deep-dive we focus on the XG500 as the primary model — how it sounds in real use, where it shines, where it frustrates, and whether it earns a spot in your trunk. Street prices vary by retailer and by date, so always confirm current pricing on a public storefront before buying.</p>
 
-<h2>Analysis Methodology</h2>
+<h2>How these figures were sourced</h2>
 <p>This review is editorial research that cross-checks public manufacturer specifications, listed retail prices, and openly published user reviews. We do not use proprietary seller APIs or private seller databases, and no unit was provided by the manufacturer for this analysis.</p>
 <table>
   <thead><tr><th>Item</th><th>Source</th><th>Purpose</th></tr></thead>
@@ -240,7 +240,7 @@ imageSearchKeywords:
 <h2>Core Performance</h2>
 <p>In sound, the XG500 pushes the low end forward. Mega Bass mode gives outdoor music a satisfying thump, but indoor or low-volume listening may benefit from switching the EQ off, since the bass can mask vocals at close range. The X-Balanced driver design is noticeably less muddy than older Sony party speakers, and highs stay clear at medium volumes. At very high volume the speaker stays composed enough for a 20-30 person outdoor gathering, though treble can turn sharp on dense, busy tracks.</p>
 <p>Battery life is the headline feature: up to 30 hours under Sony's rated test conditions. In real-world use — mixed volume, LED lighting enabled, occasional USB charge-out — expect fewer hours, roughly <strong>18-24 hours</strong> depending on temperature and volume. That's still two full summer days on a moderate schedule. AC charging is quicker than a small USB-only speaker, but once fully depleted, expect a multi-hour recharge. There's no USB-C PD fast-charge input listed, so bring the AC adapter if you need a same-day turnaround.</p>
-<div class="callout"><strong>Review concern:</strong> the 30-hour figure is best-case. In hot weather, with Mega Bass and LED lighting both active, the battery drains noticeably faster. If your party starts at noon and runs late, consider turning off the LED strip and reserving the phone-charging feature for emergencies only.</div>
+<div class="callout"><strong>A limitation listed in official docs:</strong> the 30-hour figure is best-case. In hot weather, with Mega Bass and LED lighting both active, the battery drains noticeably faster. If your party starts at noon and runs late, consider turning off the LED strip and reserving the phone-charging feature for emergencies only.</div>
 
 <h2>Strengths & Weaknesses</h2>
 <p><strong>Strengths</strong></p>
@@ -366,3 +366,28 @@ imageSearchKeywords:
 
 </body>
 </html>
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

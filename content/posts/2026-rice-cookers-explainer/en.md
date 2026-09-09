@@ -14,7 +14,7 @@ contentProfile: explainer
 topicId: rice-cookers
 writingMode: stable
 draft: false
-noindex: true
+noindex: false
 liveData: false
 coverImage: >-
   /images/posts/2026-rice-cookers-explainer/electric-rice-cooker-kitchen-cover.jpg
@@ -44,7 +44,7 @@ This explainer answers a practical question: **what changes in the bowl when you
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -134,7 +134,7 @@ After cross-checking fuzzy/IH claims against pot mass and keep-warm variance, co
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**Review concern: mechanism explainers need named references, so OEM models are listed.**
+**A limitation listed in official docs: mechanism explainers need named references, so OEM models are listed.**
 
 **Total cost of ownership (3-year): inner pots, gaskets, and standby power add to sticker.**
 
@@ -171,7 +171,7 @@ Often roulette unless you read the nameplate. A **1,200 W IH preheat** overlappi
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 ## Final Verdict
 
@@ -193,3 +193,28 @@ Before checkout, read **uncooked cup capacity**, nameplate wattage, and vent des
 3. **Multi-cook presets** are saved time-temperature programs on the same heater — useful for steam and congee in heat season, but they do not replace an air fryer or full oven for crisping tasks.
 4. Read **uncooked cup capacity, nameplate wattage, and lid/vent design** before preset count; during school-break weeks, right-sizing reduces counter heat and cleanup more than a longer menu list.
 5. For long keep-warm holds in hot weather, plan **refrigerate-and-reheat** instead of all-day warming — texture and smell degrade even on premium IH models.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

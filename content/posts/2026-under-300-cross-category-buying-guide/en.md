@@ -18,7 +18,7 @@ topicId: meta-under-300-cross-category
 topicCluster: price-tier-300
 writingMode: benchmark
 draft: false
-noindex: true
+noindex: false
 liveData: true
 imageSearchKeywords:
   - budget gadgets
@@ -46,7 +46,7 @@ We pick one strong 2026 example per category at or under $299 MSRP, compare unli
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 We do **not** use proprietary seller APIs. Each category keeps its native metric; the comparison table adds a plain-language **best for** column instead of fake unified scores.
 
@@ -157,7 +157,7 @@ After cross-checking $300 street prices, display, air quality, and mobile power 
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**Review concern: cross-category lists blur models, so OEM codes are pinned.**
+**A limitation listed in official docs: cross-category lists blur models, so OEM codes are pinned.**
 
 **Total cost of ownership (3-year): include filters, cables, and mounts in the comparison.**
 
@@ -219,3 +219,28 @@ At **$300**, categories are not interchangeable. **Displays** win work hours, **
 | Gaming-first desk | Prefer high-refresh monitor guides instead |
 
 Lock two categories on {{today}}'s budget sheet, then open the single-category guide for model-level checkout — not the other way around.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

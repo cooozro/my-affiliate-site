@@ -9,7 +9,7 @@ tags:
   - HEPA 필터
   - 유지비용
 draft: false
-noindex: true
+noindex: false
 contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
@@ -42,7 +42,7 @@ publishedAt: '2026-08-15T10:58:23.783Z'
 
 우리는 소형 방 정화에 서로 다른 접근 방식을 대표하는 세 가지 모델을 선정했습니다: **코웨이 에어메가 AP-1012C**, **레보이트 코어 300S**, **블루에어 블루 퓨어 411 오토**. 각 제품은 필터 설계, 소음 프로필, 유지비용이 다릅니다. 나란히 비교한 후, 시나리오별 추천을 제공하겠습니다.
 
-## 분석 방법론
+## 이 수치를 어디서 확인했는지
 
 본 비교는 **제조사 공개 스펙·공식 판매가·공개 리뷰**를 교차 검증한 편집부 분석입니다. 자체 판매 API나 비공개 셀러 데이터베이스를 사용하지 않으며, 독자가 직접 확인할 수 있는 출처만 포함합니다.
 
@@ -155,7 +155,7 @@ AP-1012C는 작은 방에서 최고의 정화 성능을 제공하지만, 어느 
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 ## 최종 평가
 
@@ -187,3 +187,28 @@ AP-1012C는 작은 방에서 최고의 정화 성능을 제공하지만, 어느 
 ## 편집부가 선정한 대표 모델
 
 이 보고서는 코웨이 에어메가 AP-1012C, 레보이트 코어 300S, 블루에어 블루 퓨어 411 오토 세 가지 모델을 선정했습니다. 추천: 전반적인 가성비는 레보이트 코어 300S, 조용한 작동은 블루에어, 최대 CADR은 코웨이입니다.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

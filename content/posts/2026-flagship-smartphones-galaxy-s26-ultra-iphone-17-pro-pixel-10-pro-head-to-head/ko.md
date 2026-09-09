@@ -128,4 +128,29 @@ automationBuffer: false
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 - [30만 원대 교차 비교: 모니터 vs 선풍기 vs 보조배터리 vs 스피커 vs 공기청정기](/ko/blog/2026-under-300-cross-category-head-to-head-guide) — 약 30만 원 한도에서 여름 홈테크 카테고리를 맞대결합니다. 폭염·방학 가정에 가장 많은 일상 쾌적함을 사는 축은 무엇인지 정리했습니다.
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

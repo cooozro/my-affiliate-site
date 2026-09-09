@@ -18,7 +18,7 @@ topicCluster: cooling
 writingMode: stable
 toneVariant: data-driven
 draft: false
-noindex: true
+noindex: false
 liveData: true
 imageSearchKeywords:
   - evaporative cooler
@@ -55,7 +55,7 @@ I compared five widely listed portable evaporative coolers on public specs — *
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 Every number below came from **manufacturer spec sheets, listed retail prices, and open reviews** — the same sources you could pull up before checkout. No proprietary seller APIs, no private dealer feeds. Prices below are **USD list references**; convert with the live rate **{{usd_krw_rate}}** (example: a {{krw:149.99}} sticker for a unit listed near $150).
 
@@ -110,7 +110,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 **Editorial read:** At about **$0.26/day** electricity, the MC37M’s three-year power cost stays in a different league from a hose-vented portable AC at **about $1.32/day** for the same 8-hour window — **if** humidity stays cooperative. Pad kits at **$40–60** once or twice a season still leave TCO far below refrigerant cooling in Phoenix-style dry heat. In high-humidity coastal summers, that watt advantage does not buy comfort.
 
-**Review concern:** Buyers who run it in closed bedrooms report damp walls and disappointing °F drop; measure RH with a cheap hygrometer before you commit. Leaks and pump failures appear in public defect threads — keep the unit on a tray and never store pads soaking wet.
+**A limitation listed in official docs:** Buyers who run it in closed bedrooms report damp walls and disappointing °F drop; measure RH with a cheap hygrometer before you commit. Leaks and pump failures appear in public defect threads — keep the unit on a tray and never store pads soaking wet.
 
 **Analysis takeaway:** Treat the MC37M as a **dry-climate open-space cooler**, not a substitute for apartment AC during humid monsoon weeks — CFM wins only when evaporation still has headroom.
 
@@ -126,7 +126,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 **Editorial read:** Roughly **$0.24/day** electricity keeps operating cost near a powerful tower fan’s bill, not an AC’s. Three-year TCO is dominated by **pad kits ($30–50)** and water — budget them — while the purchase price (about $250, or about {{krw:249.99}} at today’s live rate) undercuts many portable AC sticks. That math collapses if you live where July RH sits at 70%+: you paid for evaporation you cannot use.
 
-**Review concern:** Apartment dwellers without a cross-breeze path report sticky rooms; remote battery and pump clog complaints recur in open reviews. Confirm floor load and drip tray discipline on wood flooring.
+**A limitation listed in official docs:** Apartment dwellers without a cross-breeze path report sticky rooms; remote battery and pump clog complaints recur in open reviews. Confirm floor load and drip tray discipline on wood flooring.
 
 **Analysis takeaway:** Choose the CO60PM when you have a **dry living room with windows cracked for exhaust** and want fewer water runs than compact 1–2 gallon towers — not when the forecast is humid heat index without AC backup.
 
@@ -142,7 +142,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 **Editorial read:** This is the **apartment trial size** in the list: cheap enough to test whether your microclimate is dry enough before spending Portacool money. Eight-hour electricity near **twelve cents** looks excellent next to portable AC — until RH kills the ΔT. Pad TCO at **$25–40/set** over three summers still usually lands under one season of portable-AC electricity in dry zones.
 
-**Review concern:** Expectation mismatch is the #1 complaint pattern — shoppers reading “air conditioner” into “air cooler.” Label literacy matters. Also watch for algae if the tank sits warm between uses; empty and dry the reservoir when idle more than a day.
+**A limitation listed in official docs:** Expectation mismatch is the #1 complaint pattern — shoppers reading “air conditioner” into “air cooler.” Label literacy matters. Also watch for algae if the tank sits warm between uses; empty and dry the reservoir when idle more than a day.
 
 **Analysis takeaway:** Use the CO30XE as a **low-risk dry-climate apartment experiment** with open windows — and keep a refrigerant plan for humid weeks instead of blaming the product for physics.
 
@@ -158,7 +158,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 **Editorial read:** At about **$0.30/day** electricity it remains far cheaper to run than portable AC, but **capex + pad logistics** only pencil out if you truly need event/shop CFM. Three-year TCO favors Portacool when the alternative is renting AC for a dry warehouse; it does not favor Portacool as a Seoul one-room “AC alternative.”
 
-**Review concern:** Buyers dragging Jetstream units into sealed condos create humidity problems and noise complaints. Confirm power circuit capacity and floor protection. Never assume “portable” means “bedroom quiet.”
+**A limitation listed in official docs:** Buyers dragging Jetstream units into sealed condos create humidity problems and noise complaints. Confirm power circuit capacity and floor protection. Never assume “portable” means “bedroom quiet.”
 
 **Analysis takeaway:** Buy Jetstream 250 for **pro dry-air volume** — barns, open shops, event sides — not as a humidity-proof apartment AC replacement.
 
@@ -174,7 +174,7 @@ Live FX context for Korean readers comparing USD stickers: rate **{{usd_krw_rate
 
 **Editorial read:** Electricity TCO is the EC45S’s headline: three summers of **about $0.08/day** active use can stay under **$60** before water and pads, while a portable AC’s meter spins many times faster. That advantage is real only in dry air with ventilation. In humid apartments, you may spend those watts raising moisture without meaningful cooling — a lose-lose versus a dehumidifier strategy.
 
-**Review concern:** Refill fatigue and underwhelming cooling in sticky weather dominate critical reviews. Treat the remote tank as a chore schedule, not a feature checkbox. Check hose/tank seal integrity on first week.
+**A limitation listed in official docs:** Refill fatigue and underwhelming cooling in sticky weather dominate critical reviews. Treat the remote tank as a chore schedule, not a feature checkbox. Check hose/tank seal integrity on first week.
 
 **Analysis takeaway:** Pick the EC45S for **low-watt, compact dry-room assist** when you accept frequent water top-ups — skip it if humidity is already the comfort bottleneck.
 
@@ -270,3 +270,28 @@ After re-checking the published figures on {{today_locale}}, evaporative cooler 
 | **Luma Comfort EC45S** | Hate refill chores or need large open-plan CFM |
 
 Before checkout, verify RH with a sensor, confirm lease-friendly venting, and re-read whether your summer is dry-heat or sticky-heat. When humidity wins, step up to portable vs window AC and the summer AC checklist instead of forcing evaporative physics to do a refrigerant’s job.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

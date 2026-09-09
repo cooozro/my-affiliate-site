@@ -123,3 +123,28 @@ QN90F는 밝고 여러 명이 앉는 혼합 콘텐츠 방에서 승리한다. �
 | 구글 TV와 소니 프로세싱을 선호한다 | Sony Bravia 8 | 예산이 빠듯하고 브랜드 프리미엄이 필요 없다면 피할 것 |
 
 소유 비용 3년 메모: 두 패널 유형 모두 일반 사용에서 전기 요금을 의미 있게 바꾸지 않는다. 더 큰 비용 변수는 화면 크기, 벽걸이 설치, 연장 보증 선택이다. 구매 전에 선택한 화면 크기에서 정확한 HDMI 2.1 포트 수와 스마트 OS 버전을 확인하라. 지역에 따라 스펙이 달라질 수 있다.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

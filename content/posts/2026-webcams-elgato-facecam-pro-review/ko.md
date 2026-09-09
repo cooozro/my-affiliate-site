@@ -174,3 +174,28 @@ Windows 또는 macOS 컴퓨터에 충분한 성능의 USB 3.0 이상 포트와 �
 
 - 다른 폼팩터(이동식·벽걸이 등)가 더 맞는 집
 - 창틀·전원 조건 때문에 설치 자체가 어려운 경우
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

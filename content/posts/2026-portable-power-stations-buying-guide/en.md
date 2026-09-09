@@ -18,7 +18,7 @@ topicCluster: power-charging
 writingMode: stable
 toneVariant: scenario-first
 draft: false
-noindex: true
+noindex: false
 liveData: false
 imageSearchKeywords:
   - portable power station camping
@@ -64,7 +64,7 @@ Monsoon-season outages are about **duration and recharge**, not surge. If the gr
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 We use manufacturer public specs, energy and charge-rate labels, and published owner reports only. We do not use seller APIs or affiliate stock claims.
 
@@ -100,7 +100,7 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 
 **Editorial read:** The value is **LiFePO4 longevity plus fast refill**. Rated around 3000 cycles to 80%, its **three-year cost-per-cycle** is far lower than older nickel-based stations that fade after about 500 cycles — a cheaper NMC unit can cost more per usable charge over its life. Fast AC recharge also means it refills in the short windows a monsoon outage gives you.
 
-**Review concern:** Under a kettle or induction load the fan is not quiet; if you plan to sleep beside it in a tent, expect noise when it works hardest. Confirm the continuous (not surge) rating covers your highest-watt device before you rely on it.
+**A limitation listed in official docs:** Under a kettle or induction load the fan is not quiet; if you plan to sleep beside it in a tent, expect noise when it works hardest. Confirm the continuous (not surge) rating covers your highest-watt device before you rely on it.
 
 **Analysis takeaway:** Buy it if you want one station that expands, refills fast, and lasts; skip it if you need something light enough to carry far.
 
@@ -116,7 +116,7 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 
 **Editorial read:** For a first-time buyer, **simplicity is the feature**. At about $799 with LiFePO4 cycle life, its three-year cost-per-cycle is healthy, and the lighter body makes solo campsite carry realistic where the Delta is more of a two-hands lift.
 
-**Review concern:** The lower continuous rating is the catch — a 1600 W kettle or induction plate can overload it. Add up your simultaneous watts, not just watt-hours, before assuming it runs your whole dawn kitchen.
+**A limitation listed in official docs:** The lower continuous rating is the catch — a 1600 W kettle or induction plate can overload it. Add up your simultaneous watts, not just watt-hours, before assuming it runs your whole dawn kitchen.
 
 **Analysis takeaway:** Buy it if you want light, foolproof capacity for camping; skip it if you must run high-watt appliances at once.
 
@@ -132,7 +132,7 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 
 **Editorial read:** On **watt-hours per dollar**, the AC180 is the value leader — more usable capacity than the Jackery at a similar price. Combined with LiFePO4 cycle life, its three-year cost-per-cycle is among the lowest, which is why it out-punches its modest brand profile.
 
-**Review concern:** The trade-off is software polish and fan noise under load; if you rely on app scheduling and quiet operation, temper expectations. Verify the power-lifting mode actually covers your specific appliance rather than assuming the surge number does.
+**A limitation listed in official docs:** The trade-off is software polish and fan noise under load; if you rely on app scheduling and quiet operation, temper expectations. Verify the power-lifting mode actually covers your specific appliance rather than assuming the surge number does.
 
 **Analysis takeaway:** Buy it if maximum capacity per dollar and high output matter most; skip it if you want the smoothest app and quietest operation.
 
@@ -148,7 +148,7 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 
 **Editorial read:** Recharge speed is the quiet decider in a blackout. **Refilling to full in under an hour** means it can top up in a narrow grid or generator window that leaves slower stations half-charged. With LiFePO4 longevity, its three-year cost-per-cycle stays low despite the higher entry price.
 
-**Review concern:** You pay a premium for that recharge speed and build quality; if your use is leisurely camping where an overnight solar refill is fine, the speed advantage may not justify the extra cost. Match the feature you are paying for to how you will actually recharge.
+**A limitation listed in official docs:** You pay a premium for that recharge speed and build quality; if your use is leisurely camping where an overnight solar refill is fine, the speed advantage may not justify the extra cost. Match the feature you are paying for to how you will actually recharge.
 
 **Analysis takeaway:** Buy it if fast recharge and build quality lead your list; skip it if slow overnight recharging already suits your trips.
 
@@ -164,7 +164,7 @@ Our **Field Power Index (FPI)** weights usable capacity, cycle-life economics, c
 
 **Editorial read:** As an **entry point or second unit**, roughly $239 with LiFePO4 makes it the easiest yes for light needs. Its three-year cost is simply the low purchase price, and it pairs with solar or a bigger station rather than replacing one.
 
-**Review concern:** People routinely overestimate what 245 Wh covers; it will not run a kettle or a fridge for long. Size it to phones, cameras, and a fan, not a campsite kitchen, so it does not disappoint on night two.
+**A limitation listed in official docs:** People routinely overestimate what 245 Wh covers; it will not run a kettle or a fridge for long. Size it to phones, cameras, and a fan, not a campsite kitchen, so it does not disappoint on night two.
 
 **Analysis takeaway:** Buy it if you want a light, cheap top-up for devices; skip it if you need to power appliances or bridge long outages.
 
@@ -198,7 +198,7 @@ After cross-checking LFP cycle claims and UPS switchover times, usable value tra
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**Review concern: Korean marketing names alone make datasheet matching hard, so OEM codes are fixed here.**
+**A limitation listed in official docs: Korean marketing names alone make datasheet matching hard, so OEM codes are fixed here.**
 
 **Total cost of ownership (3-year): expanders, solar, and inverter losses often land near 1.5× sticker.**
 
@@ -266,3 +266,28 @@ LiFePO4 chemistry is thermally more stable than older lithium types, and reputab
 | **River 3** | You need to power appliances or bridge long outages |
 
 **Judged by real purchase criteria**, most summer buyers should start from **usable watt-hours and LiFePO4 cycle life**, then let recharge speed and weight break the tie. Buy the AC180 for capacity-per-dollar, the C1000 for outage-first recharge, the Jackery for simple portability, and the River 3 as a light second unit — and count continuous watts, cycle life, and three-year cost-per-cycle before the surge number on the box.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

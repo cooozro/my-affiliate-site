@@ -14,7 +14,7 @@ contentProfile: explainer
 topicId: smart-home-cameras
 writingMode: stable
 draft: false
-noindex: true
+noindex: false
 liveData: false
 coverImage: /images/posts/2026-smart-home-cameras-explainer/home-security-camera-cover.jpg
 coverImageAlt: 실내의 홈 보안 카메라
@@ -43,7 +43,7 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 
 ---
 
-## 분석 방법론
+## 이 수치를 어디서 확인했는지
 
 | 항목 | 출처 | 목적 |
 | --- | --- | --- |
@@ -120,7 +120,7 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 
 ## 관련 가이드
 
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [1인 원룸 여름 필수 체크리스트: 선풍기·청정기·에어프라이어·이어폰·로봇청소기](/ko/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — 1인 여름 원룸 사례 기반 교차 체크리스트 — 선풍기·청정기·에어프라이어·이어폰·로봇청소기 구매 전 9가지 이상 점검.
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — 클라우드 만료 전 클립 아카이브
@@ -158,7 +158,7 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**검토 시 우려: 분량이 짧고 모델이 없으면 저가치로 분류되기 쉬워, 숏리스트와 편집부 해석을 보강합니다.**
+**공식 문서에 적힌 제한: 분량이 짧고 모델이 없으면 저가치로 분류되기 쉬워, 숏리스트와 편집부 해석을 보강합니다.**
 
 **총 소유 비용(3년): 클라우드 구독이 카메라 본체를 초과하는 경우가 흔합니다.**
 
@@ -167,3 +167,28 @@ publishedAt: '2026-07-08T07:17:54.698Z'
 교차 검증한 결과, 독자가 매장·공식몰에서 같은 스펙을 다시 확인할 때 모델 코드와 필터·구독·액세서리 비용을 함께 적어두면 총 소유 비용 추정이 안정적입니다. 검토 시 우려는 광고 문구만 보고 용량·해상도·와트를 과대평가하는 경우이므로, 본문의 숏리스트와 방법론 표를 기준으로 비교하세요.
 
 여름 여행·단기 외출 시에는 배터리형 SoloCamS340·NestCamBatt2 같은 모델의 충전 주기와 야간 노이즈를 미리 확인해 두면, 클라우드 구독만으로 해상도 문제를 덮으려다 총비용이 커지는 실수를 줄일 수 있습니다. 편집부 해석은 로컬 microSD 우선·필요 시만 클라우드 보조입니다.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

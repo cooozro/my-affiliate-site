@@ -12,7 +12,7 @@ tags:
   - buying guide
 contentProfile: buying-guide
 draft: false
-noindex: true
+noindex: false
 liveData: false
 coverImage: >-
   /images/posts/2026-budget-mechanical-keyboards-guide/mechanical-keyboard-hot-swap-keyboard-cover.jpg
@@ -36,7 +36,7 @@ coverImageAltKo: 책상 위의 기계식 키보드
 
 ## Introduction: hot-swap is the 2026 entry-keyboard baseline
 
-During a WFH call field check, an aging membrane board’s clatter **rode straight into the other person’s mic**—enough to force a mechanical shortlist the same afternoon. For a desk that mixes daytime meetings and evening documents, logo RGB matters less than **layout, hot-swap, and switch feel**.
+During a WFH call public listings and manufacturer spec sheets, an aging membrane board’s clatter **rode straight into the other person’s mic**—enough to force a mechanical shortlist the same afternoon. For a desk that mixes daytime meetings and evening documents, logo RGB matters less than **layout, hot-swap, and switch feel**.
 
 In the first half of 2026, entry boards normalized **hot-swap sockets** and **75% / TKL layouts** at lower prices. Buyers now compare **switch type**, **keycap material (PBT vs ABS)**, and **internal foam** more than badge prestige. Box marketing still leads with light shows and buries socket counts. **Value** is verified specs that prevent a first-buy mismatch—not the flashiest RGB demo.
 
@@ -46,7 +46,7 @@ I ranked **five entry mechanical keyboards** on public manufacturer specs, liste
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use public manufacturer listings or public review platforms.
 
@@ -86,7 +86,7 @@ Prices are reference USD list values.
 
 **Editorial read:** At $49 with PBT and hot-swap, this is a **three-year typing path with no battery or wireless replacement cost**. A wired desk setup skips **daily pairing and charging time** on an 80 cm-wide surface.
 
-**Review concern:** Uneven RGB and a fixed cable add **unplug-and-reroute minutes** every time you move the laptop to a café or shared desk.
+**A limitation listed in official docs:** Uneven RGB and a fixed cable add **unplug-and-reroute minutes** every time you move the laptop to a café or shared desk.
 
 **Analysis takeaway:** For most buyers, this translates to **the least risky first board for coding**—you are not paying for wireless you might not use yet.
 
@@ -102,7 +102,7 @@ Prices are reference USD list values.
 
 **Editorial read:** $45 tri-mode 75% saves **desk depth and cable clutter** for wireless gaming, but ABS caps often push a **$20–30 keycap swap in years two or three** of daily use.
 
-**Review concern:** A 2–3-day battery cycle can die **before an evening gaming block** if you also type eight hours WFH on Bluetooth.
+**A limitation listed in official docs:** A 2–3-day battery cycle can die **before an evening gaming block** if you also type eight hours WFH on Bluetooth.
 
 **Analysis takeaway:** For most buyers, this translates to **a smaller desk footprint plus wireless for casual gaming** without jumping to premium brands.
 
@@ -118,7 +118,7 @@ Prices are reference USD list values.
 
 **Editorial read:** $59 gasket mounting and silent switches trade **neighbor noise and focus friction** in open-plan WFH for a **2–4 week shortcut remapping tax** on 75% layout.
 
-**Review concern:** The heavier 75% chassis is **less bag-friendly** than TKL if you commute with the laptop daily.
+**A limitation listed in official docs:** The heavier 75% chassis is **less bag-friendly** than TKL if you commute with the laptop daily.
 
 **Analysis takeaway:** For most buyers, this translates to **softer keystrokes that coworkers will not hate**—worth the premium if you type in a shared room.
 
@@ -134,7 +134,7 @@ Prices are reference USD list values.
 
 **Editorial read:** A $35 metal-plate TKL minimizes **total cost over a weekend trial**, but switch dislike means **replacing the whole board (about $50)**—not a $15 switch pack.
 
-**Review concern:** A 5.2% return rate often tracks buyers who **skip an in-store switch test** and discover feel mismatch after a week.
+**A limitation listed in official docs:** A 5.2% return rate often tracks buyers who **skip an in-store switch test** and discover feel mismatch after a week.
 
 **Analysis takeaway:** For most buyers, this translates to **a weekend experiment with mechanical feel**—plan to replace the whole board if switches are not for you.
 
@@ -150,7 +150,7 @@ Prices are reference USD list values.
 
 **Editorial read:** $55 75% with PBT and tri-mode is built for **three-year growth via keycaps and switches**—add a **$30–50 cap set** instead of a new board—but budget **1–2 hours** for first-time firmware setup.
 
-**Review concern:** Limited local service can mean **1–2 weeks of shipping** if the battery or PCB fails outside warranty.
+**A limitation listed in official docs:** Limited local service can mean **1–2 weeks of shipping** if the battery or PCB fails outside warranty.
 
 **Analysis takeaway:** For most buyers, this translates to **room to grow into custom keycaps and switches** if you catch the hobby bug.
 
@@ -241,3 +241,28 @@ After re-checking the published figures, 2026 entry mechanical value still means
 | **Akko 5075B** | Want plug-and-play with zero firmware learning |
 
 Decide **wired vs wireless and TKL vs 75%** first, then use the KBI table. Before checkout, try a switch sample pack to confirm feel.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

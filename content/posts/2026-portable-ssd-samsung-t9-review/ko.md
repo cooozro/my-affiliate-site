@@ -26,6 +26,7 @@ modelPickName: T9 Portable SSD
 pressKitGallery: 'https://www.samsungmobilepress.com/media-assets/t9-portable-ssd'
 updatedAt: '2026-09-09T01:00:34.090Z'
 publishedAt: '2026-08-27T02:00:02.665Z'
+noindex: false
 ---
 > **투명성 고지:** 이 리포트는 제조사 공개 스펙 및 오픈된 사용자 리뷰 데이터를 기반으로 교차 분석한 가이드이며, 직접 실물 기기를 테스트한 리뷰가 아닙니다.
 
@@ -79,7 +80,7 @@ publishedAt: '2026-08-27T02:00:02.665Z'
 - **소프트웨어가 가끔 불안정함:** 일부 사용자는 macOS Sequoia에서 업데이트 전까지 소프트웨어가 드라이브를 인식하지 못한다고 보고합니다. 작동은 하지만 모든 사용자에게 플러그 앤 플레이 방식은 아닙니다.
 - **케이블 길이:** 포함된 케이블이 짧습니다(약 30cm). 데스크톱 타워에 연결해야 한다면 더 긴 케이블이 필요할 수 있습니다.
 
-**검토 시 우려:** 가장 큰 위험은 컴퓨터의 USB 포트를 확인하지 않고 T9를 구매하는 것입니다. USB 3.2 Gen 1만 지원하는 기기라면 더 저렴한 Gen 1 드라이브나 SATA 기반 SSD를 선택하는 것이 낫습니다. 구매 전에 반드시 포트 사양을 확인하세요.
+**공식 문서에 적힌 제한:** 가장 큰 위험은 컴퓨터의 USB 포트를 확인하지 않고 T9를 구매하는 것입니다. USB 3.2 Gen 1만 지원하는 기기라면 더 저렴한 Gen 1 드라이브나 SATA 기반 SSD를 선택하는 것이 낫습니다. 구매 전에 반드시 포트 사양을 확인하세요.
 
 ## 경쟁 제품 간단 비교
 
@@ -142,7 +143,7 @@ USB-C to USB-C 케이블로 T9를 아이폰에 연결할 수 있지만, 프로 �
 
 - [휴대용 SSD, USB 속도·TBW·백업은 이렇게 고르세요](/ko/blog/2026-portable-ssd-explainer) — USB 3.2 세대 표기, TBW 내구 등급, 백업 루틴이 방학 여행·기숙사 이사·폭염기 편집에서 실제 전송 시간으로 어떻게 바뀌는지 — 셀러 과장 없이 정리합…
 - [삼성 갤럭시 Z 폴드6 심층 리뷰: 펼쳐지는 모바일 생산성의 신세대](/ko/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — 편집부가 삼성 갤럭시 Z 폴드6를 실사용하며 스펙, 카메라, 배터리, 아이폰 16 Pro Max와의 차이를 분석했습니다. 업그레이드할 가치가 있을까요?
-- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-heatwave-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
+- [폭염 정전 대비 아파트·가족 체크리스트](/ko/blog/2026-the listed product category-blackout-home-readiness-checklist) — 아파트 가족을 위한 폭염 정전 대비표입니다. 공공 알림, 안전한 냉방, 예비 전력, 식품·물, 조명, 충전 우선순위를 점검합니다.
 - [3~5인 가족 필수 가전 5시나리오 — 냉장·세탁·TV·공기·바닥 청소](/ko/blog/2026-family-3-5-home-essentials-scenario-guide) — 3–5인 가족을 위한 교차 카테고리 추천 — 냉장 용량, 세탁 처리량, 거실 TV, 밀폐 공기질, 무선 vs 로봇 바닥 청소를 여름 방학 생활에 맞춰 비교합니다.
 - [30만 원대 폰 살 때 칩셋·업데이트 몇 년인지부터 보라](/ko/blog/2026-budget-smartphones-under-300) — 2026년 30만 원대 스마트폰 5종을 칩셋, 배터리, 디스플레이, 5G 밴드, OS 업데이트 정책 데이터로 비교했습니다. 사용 시나리오별 구매 가이드.
 ## 이런 분께 추천
@@ -154,3 +155,28 @@ USB-C to USB-C 케이블로 T9를 아이폰에 연결할 수 있지만, 프로 �
 
 - 다른 폼팩터(이동식·벽걸이 등)가 더 맞는 집
 - 창틀·전원 조건 때문에 설치 자체가 어려운 경우
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

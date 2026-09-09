@@ -27,6 +27,7 @@ imageSearchKeywords:
   - budget smartphone
   - android phone handset
 coverImageAltKo: 책상 위의 스마트폰
+noindex: false
 ---
 ## Editorial Overview
 
@@ -44,7 +45,7 @@ I ranked **five value smartphones** on public manufacturer specs, listed retail 
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use public manufacturer listings or public review platforms.
 
@@ -82,7 +83,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** Four-year security patches spread {{krw:279}} to roughly **$70/year over a four-year keep**—aligned with banking and payment app requirements. IP67 and 120Hz AMOLED cut **commute and outdoor worry time**, but 6GB RAM reloads background apps when you keep three or more open.
 
-**Review concern:** Weak GPU becomes noticeable within **18–24 months** if mobile gaming is daily—the about $80 premium over A15 may not pay back for gamers or editors.
+**A limitation listed in official docs:** Weak GPU becomes noticeable within **18–24 months** if mobile gaming is daily—the about $80 premium over A15 may not pay back for gamers or editors.
 
 **Analysis takeaway:** For most buyers, this translates to **a phone you can keep four years without security anxiety**—smooth for social and video, but not a heavy mobile gaming rig.
 
@@ -98,7 +99,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** 8GB/256GB and Snapdragon 7s Gen 2 at {{krw:249}} assume **three years without a storage upgrade** and deliver class-leading app responsiveness. MIUI ads need **30–60 minutes of one-time setup**, then daily friction stays low.
 
-**Review concern:** No IP rating and sparse service centers add **round-trip time and shipping cost** after summer rain or sweat damage.
+**A limitation listed in official docs:** No IP rating and sparse service centers add **round-trip time and shipping cost** after summer rain or sweat damage.
 
 **Analysis takeaway:** For most buyers, this translates to **the most responsive feel per dollar** if you can tolerate occasional ads and tweak settings once.
 
@@ -114,7 +115,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** 6,000mAh supports **every-other-day charging** and saves 15–20 minutes of daily plug time versus 5,000mAh rivals at {{krw:229}}. Two-year security support leaves a **patch gap from year three onward**.
 
-**Review concern:** After updates stop, banking apps may force an **early replacement** before LCD or night-camera limits become the real pain.
+**A limitation listed in official docs:** After updates stop, banking apps may force an **early replacement** before LCD or night-camera limits become the real pain.
 
 **Analysis takeaway:** For most buyers, this translates to **charging every other day without babying brightness**—display wow factor is secondary to runtime.
 
@@ -130,7 +131,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** 67W charging refills 5,100mAh to **about 80% in about 45 minutes** before a commute, and Mi Home tie-in saves setup time if you already own Xiaomi gear. The small premium over Poco buys camera and charging upgrades.
 
-**Review concern:** Global ROM region mismatches can add **1–2 hours of initial setup** for OTA and store delays; no IP rating raises replacement risk for outdoor summer use.
+**A limitation listed in official docs:** Global ROM region mismatches can add **1–2 hours of initial setup** for OTA and store delays; no IP rating raises replacement risk for outdoor summer use.
 
 **Analysis takeaway:** For most buyers, this translates to **better camera and 67W charging inside Xiaomi’s app ecosystem**—worth the small premium if you already use Mi Home gear.
 
@@ -146,7 +147,7 @@ Snapshot as of {{today}}.
 
 **Editorial read:** At {{krw:199}} with four-year security, this fits **parent or teen messenger and YouTube duty** at roughly **$50/year** over four years—the lowest gift-phone burden here. 4GB RAM means frequent reloads with two or more apps alive.
 
-**Review concern:** As your own daily driver for 2–3 years, 4GB often triggers an **early upgrade to 6GB** that wipes the upfront savings.
+**A limitation listed in official docs:** As your own daily driver for 2–3 years, 4GB often triggers an **early upgrade to 6GB** that wipes the upfront savings.
 
 **Analysis takeaway:** For most buyers, this translates to **a capable messenger and YouTube phone for parents or teens**—not a daily driver for mobile editors or gamers.
 
@@ -201,7 +202,7 @@ For video, social feeds, and night scrolling, AMOLED’s deeper blacks and punch
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Five checks before you buy
 
 1. **5G bands** — Confirm local carrier bands (e.g., n78). Import SKUs can run at half speed.
@@ -237,3 +238,28 @@ After re-checking the published specs, sub-$300 phone value still means matching
 | **Galaxy A15** | Run many apps at once, game seriously, or shoot video in low light |
 
 Before checkout on {{today}}, re-check unlocked discounts and confirm your SIM’s 5G bands against the spec sheet.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

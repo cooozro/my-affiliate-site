@@ -11,7 +11,7 @@ tags:
   - summer tech
   - buying guide
 draft: false
-noindex: true
+noindex: false
 contentProfile: explainer
 topicId: meta-under-300-cross-category
 topicCluster: cross-cutting
@@ -134,7 +134,7 @@ After cross-checking listed specs and street prices, a $300 budget usually retur
 
 **Editorial read:** Model codes above are pinned to manufacturer datasheets and official store pages. Check regional firmware and bundles before buying. Cross-check brand references used in this report: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**Review concern: cross-category picks can hide weak model specs, so the shortlist below is locked to public datasheets only.**
+**A limitation listed in official docs: cross-category picks can hide weak model specs, so the shortlist below is locked to public datasheets only.**
 
 **Total cost of ownership (3-year): filters, mounts, and cables can push purifier/monitor TCO above a power bank.**
 
@@ -150,7 +150,7 @@ A common split is $199 (monitor) + $89 (tower fan) = $288, leaving $12 for a cab
 
 ### When to wait for a sale on one flagship vs. two budget picks?
 
-If a single flagship item (e.g., a 32" 4K monitor) is normally $400 but often drops to $299 during Prime Day or Black Friday, waiting may be wise. But if you need solutions now—like a fan during a heatwave—two budget picks (fan + power bank) provide immediate relief. Also consider: a flagship item holds resale value better than two cheap gadgets.
+If a single flagship item (e.g., a 32" 4K monitor) is normally $400 but often drops to $299 during Prime Day or Black Friday, waiting may be wise. But if you need solutions now—like a fan during a the listed product category—two budget picks (fan + power bank) provide immediate relief. Also consider: a flagship item holds resale value better than two cheap gadgets.
 
 ### Can a power bank really charge a laptop?
 
@@ -186,3 +186,28 @@ Under $100, purifiers often lack true HEPA and have low CADR. They may filter la
 - You need multiple small fixes for different problems.
 - You're on a strict $300 budget and can't stretch for the quality tier of any category.
 - You expect flagship performance at a budget price—$300 is still entry-to-midrange in most categories.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

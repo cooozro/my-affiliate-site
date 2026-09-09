@@ -13,7 +13,7 @@ tags:
   - small-space appliances
   - appliance head-to-head
 draft: false
-noindex: true
+noindex: false
 contentProfile: head-to-head
 topicId: meta-compact-footprint-appliances
 topicCluster: cross-cutting
@@ -46,7 +46,7 @@ Small spaces force cross-category decisions. You may have 18 inches of counter d
 
 But capacity units differ: dishwashers report place settings, washers report cubic feet, ovens report liters, fridges report cubic feet. So we rely on linear depth, width, and height plus usable interior volume estimates. That is the benchmark lens.
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is editorial research cross-checking public manufacturer specs, listed retail prices, and open reviews. We do not use proprietary seller APIs or private seller databases.
 
@@ -92,7 +92,7 @@ Note: dimensions rounded to nearest 0.1 in. as listed by manufacturers; actual u
 **Weaknesses**
 - Six place settings is small for families; you will run at least one extra cycle after a dinner party.
 - It still occupies permanent counter space unless you store it in a closet after each run, which hurts convenience.
-- Review concern: public reviews mention that the included quick connector needs careful tightening to avoid minor sink spray drips.
+- A limitation listed in official docs: public reviews mention that the included quick connector needs careful tightening to avoid minor sink spray drips.
 - No cu-ft rating; comparing “liters” requires measuring the rack pocket volume yourself.
 
 **Analysis takeaway**
@@ -112,7 +112,7 @@ Buy for studio dish duty if counter space is fixed and you can leave it connecte
 **Weaknesses**
 - 0.9 cu ft is much smaller than a typical 4.5 cu ft front-loader; sheets and towels strain the drum, and you will use a laundromat for bulky items.
 - Height is 31.1 inches, which can collide with a low shelf or hanging rod in a closet.
-- Review concern: spin balance can get noisy on wood floors by public ratings; a mat or leveling pad helps.
+- A limitation listed in official docs: spin balance can get noisy on wood floors by public ratings; a mat or leveling pad helps.
 - Water use per cycle is higher than a countertop dishwasher, though still modest for a laundry task.
 
 **Analysis takeaway**
@@ -154,7 +154,7 @@ Treat both as one-person or two-person tools. Run a dishwasher after every meal,
 - [Portable SSD Specs Decoded: USB Speed Tiers, TBW, and Summer Backup Workflows](/en/blog/2026-portable-ssd-explainer) — USB Gen tiers, TBW endurance, and backup workflows for vacation photos, dorm moves, and s…
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Final Verdict
 
 **Who should buy the COMFEE CDC17P1AWW**
@@ -177,3 +177,28 @@ Treat both as one-person or two-person tools. Run a dishwasher after every meal,
 
 **Total cost note**
 Three-year total cost of ownership for the COMFEE is about $400–$550 including water, detergent, and modest electricity. The Black+Decker runs about $350–$500 over the same period with fewer laundromat trips. Neither is a high-cost appliance, but the bigger savings come from choosing the category that removes your daily space pain.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

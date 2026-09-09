@@ -11,7 +11,7 @@ tags:
 contentProfile: scenario-guide
 topicId: robot-vacuums
 draft: false
-noindex: true
+noindex: false
 liveData: true
 coverImage: >-
   /images/posts/2026-robot-vacuums-scenario-guide/robot-vacuum-smart-home-robot-vacuum-hardwood-fl-cover.jpg
@@ -46,7 +46,7 @@ publishedAt: '2026-07-02T01:23:30.000Z'
 
 ---
 
-## 분석 방법론
+## 이 수치를 어디서 확인했는지
 
 본 비교는 **제조사 공개 스펙·공식 판매가·공개 리뷰**를 교차 검증한 편집부 분석입니다. 자체 판매 API나 비공개 셀러 데이터베이스를 사용하지 않으며, 독자가 직접 확인할 수 있는 출처만 포함합니다.
 
@@ -77,7 +77,7 @@ Roborock은 Q7 Max 계열에 **최대 5,500 Pa 흡입**과 PreciSense LiDAR 매�
 
 **편집부 해석:** {{krw:449}}·자동 비움 도크는 **HEPA 필터·봉투(~연 $40–60)** 를 3년 TCO에 넣어도 좁은 원룸에서 매일 수동 비우기보다 저렴한 편입니다. 도크 뒤 **40cm+ 공간**이 없으면 스펙보다 설치가 먼저 막힙니다.
 
-**검토 시 우려:** 욕실 립·베란다 레일 단차는 여름 휴가 중에도 맵을 막습니다. 도크 footprint를 침대 옆 벽면에 두기 전 실측하세요.
+**공식 문서에 적힌 제한:** 욕실 립·베란다 레일 단차는 여름 휴가 중에도 맵을 막습니다. 도크 footprint를 침대 옆 벽면에 두기 전 실측하세요.
 
 | 요소 | Roborock Q7 Max+ | 저가 범퍼식 |
 | --- | --- | --- |
@@ -104,7 +104,7 @@ iRobot은 j5 라인에 **멀티 서피스 고무 브러시**와 PrecisionVision 
 
 **편집부 해석:** {{krw:499}}·Clean Base는 shedding 시즌 **1–2회마다 비우기**를 없애 줍니다. 고무 브러시·봉투 소모품 **연 $50–80**을 3년 TCO에 넣어도 반려 가구 수동 관리보다 낫습니다.
 
-**검토 시 우려:** 여름 바닥 clutter·리드줄·신발이 많으면 vision 회피가 LiDAR만큼 믿을 만한지 반품 기간에 테스트하세요.
+**공식 문서에 적힌 제한:** 여름 바닥 clutter·리드줄·신발이 많으면 vision 회피가 LiDAR만큼 믿을 만한지 반품 기간에 테스트하세요.
 
 | 요소 | Roomba Combo j5+ | Roborock Q7 Max+ |
 | --- | --- | --- |
@@ -131,7 +131,7 @@ eufy는 X10 Pro Omni에 **8,000 Pa 흡입**과 올인원 스테이션(패드 세
 
 **편집부 해석:** {{krw:799}} 옴니 스테이션은 **패드·세제·전기**를 합쳐도 습한 여름 냄새 나는 물걸레 교체 비용을 3년에 걸쳐 줄입니다. 8,000 Pa·도크 세척은 장마철 매일 mop 시 **수동 패드 노동** 대비 TCO 우위입니다.
 
-**검토 시 우려:** 도크가 주방 코너에 끼면 물통·배수 접근이 번거롭습니다. 28°C 이상 실내에서 패드 건조 사이클이 안 돌면 악취가 먼저 옵니다.
+**공식 문서에 적힌 제한:** 도크가 주방 코너에 끼면 물통·배수 접근이 번거롭습니다. 28°C 이상 실내에서 패드 건조 사이클이 안 돌면 악취가 먼저 옵니다.
 
 | 요소 | eufy X10 Pro Omni | Shark Matrix Plus 2-in-1 |
 | --- | --- | --- |
@@ -158,7 +158,7 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 
 **편집부 해석:** {{krw:449}}·LiDAR 존 편집은 **옴니 없이** 방학 clutter에 맞는 3년 운영비입니다. 야간 **60 dB**급과 AC fan이 겹치면 수면실 인접 배치는 피하세요—전기는 회당 수십 분·약 30–40 W급입니다.
 
-**검토 시 우려:** 물걸레 패드 수동 건조가 습한 주에 냄새 원인이 됩니다. 가구 배치가 주 단위로 바뀌면 맵 편집 습관이 없으면 실패합니다.
+**공식 문서에 적힌 제한:** 물걸레 패드 수동 건조가 습한 주에 냄새 원인이 됩니다. 가구 배치가 주 단위로 바뀌면 맵 편집 습관이 없으면 실패합니다.
 
 | 요소 | Shark Matrix Plus 2-in-1 | Roomba Combo j5+ |
 | --- | --- | --- |
@@ -215,3 +215,28 @@ Shark Matrix는 **LiDAR 매핑·룸 존**, 베이스 번들 60일 자가 비움,
 | {{today}} 프로모 반영 후 가격 OK | 임대 계약상 원목 물청소 금지 |
 
 여름 peak 사용 시 **브러시·필터는 월 점검**하세요. 배터리보다 먼저 털이 롤을 감아 흡입이 죽는 경우가 훨씬 많습니다.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

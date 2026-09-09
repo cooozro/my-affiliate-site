@@ -14,7 +14,7 @@ tags:
   - sony srs-xe300
   - summer audio
 draft: false
-noindex: true
+noindex: false
 contentProfile: head-to-head
 topicId: bluetooth-speakers
 topicCluster: audio
@@ -48,7 +48,7 @@ We picked the JBL Flip 7, UE Boom 4, and Sony SRS-XE300 because they are direct 
 
 The table below summarizes the key specs.
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -197,3 +197,28 @@ After comparing sound, durability, battery life, and real-world usability, the *
 | You prefer a neutral, detailed sound | Sony SRS-XE300 | Bass emphasis may overpower midrange. |
 
 **Total cost of ownership (3-year):** All three models have non-removable batteries, so the three-year cost is essentially the purchase price plus a USB-C cable or two. Expected battery lifespan is 3–5 years with normal use. The JBL Flip 7’s lower price and widespread availability of replacement parts give it a slight edge in long-term value. The Sony SRS-XE300 may justify its higher upfront cost if you avoid buying a separate power bank for weekend trips. None of these speakers requires paid subscriptions or proprietary accessories.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

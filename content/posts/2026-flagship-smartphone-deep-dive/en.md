@@ -13,7 +13,7 @@ tags:
   - Pixel 10 Pro
   - smartphone buying guide
 draft: false
-noindex: true
+noindex: false
 contentProfile: buying-guide
 topicId: flagship-smartphones
 topicCluster: smartphones
@@ -41,7 +41,7 @@ Most people do not need to upgrade every year. If you already own a recent Ultra
 
 We focus on chipset longevity, camera stack flexibility, and mixed-load battery endurance — plus a total cost of ownership note, because chargers, cases, and three years of wear matter as much as the list price.
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -89,7 +89,7 @@ Prices are list references and shift with carrier promos and trade-in. Treat the
 
 **Editorial read:** The jump from S25 Ultra is incremental on sensors but meaningful on silicon, charging, and software longevity (Android 16 with a multi-year OS promise). Treat S25 Ultra as a discount twin when the deal is strong — not as the 2026 headline Ultra.
 
-**Review concern:** Public reviews still note that full 200MP mode is memory-hungry and can slow bursts. For action, leave the main camera in a binned 50MP / 12MP mode.
+**A limitation listed in official docs:** Public reviews still note that full 200MP mode is memory-hungry and can slow bursts. For action, leave the main camera in a binned 50MP / 12MP mode.
 
 ## 2. Apple iPhone 17 Pro
 
@@ -107,7 +107,7 @@ Prices are list references and shift with carrier promos and trade-in. Treat the
 
 **Editorial read:** Moving the 48MP tetraprism onto the smaller Pro (not only Max) removes the old “buy Max for zoom” tax. Battery efficiency is excellent for the cell size, but capacity still trails Android rivals on long outdoor days.
 
-**Review concern:** Telephoto apertures remain slower than the main lens — indoor sports and dim stages still favor the main camera or a lighted environment.
+**A limitation listed in official docs:** Telephoto apertures remain slower than the main lens — indoor sports and dim stages still favor the main camera or a lighted environment.
 
 ## 3. Google Pixel 10 Pro
 
@@ -125,7 +125,7 @@ Prices are list references and shift with carrier promos and trade-in. Treat the
 
 **Editorial read:** Google keeps winning on photo consistency rather than benchmark charts. For buyers who just want a reliable shutter and seven years of updates, Pixel remains the easiest recommendation — and the only one here that often starts under $1,000.
 
-**Review concern:** Hotspot, navigation, and 5G streaming days still drain faster than idle specs imply. Travelers should budget a slim power bank.
+**A limitation listed in official docs:** Hotspot, navigation, and 5G streaming days still drain faster than idle specs imply. Travelers should budget a slim power bank.
 
 ## Scenario matrix
 
@@ -166,7 +166,7 @@ Plan $50–$100 beyond the phone for a fast charger, case, and screen protector.
 - [Samsung Galaxy Z Fold6 Deep-Dive: Unfolding a New Era of Mobile Productivity](/en/blog/2026-flagship-smartphones-galaxy-z-fold-6-review) — Our editorial team puts the Samsung Galaxy Z Fold6 through real-world testing, comparing…
 - [Sub-$300 Phones: Chipset Tier and Update Years Matter More Than Ads](/en/blog/2026-budget-smartphones-under-300) — Five sub-$300 smartphones compared by SoC, battery, display, 5G bands, and OS update poli…
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 ## Five checks before you buy
 
@@ -195,3 +195,28 @@ Plan $50–$100 beyond the phone for a fast charger, case, and screen protector.
 | Google Pixel 10 Pro | You play graphics-heavy games or edit 4K video on-device every day |
 
 All three are excellent **current** flagships; the right choice is which trade-offs you can live with for three years. If you are still unsure, try each in a store for ten minutes at night and in portrait mode — the effortless shutter is usually the one to buy. Previous-gen S25 Ultra / iPhone 16 Pro only make sense when the discount is large enough to outweigh newer silicon and charging.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

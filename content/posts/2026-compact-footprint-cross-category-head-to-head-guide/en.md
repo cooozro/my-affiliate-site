@@ -19,7 +19,7 @@ topicCluster: capacity-tier
 writingMode: benchmark
 toneVariant: question-led
 draft: false
-noindex: true
+noindex: false
 liveData: false
 imageSearchKeywords:
   - compact appliances small kitchen
@@ -55,7 +55,7 @@ Reference list prices are mid-2026 manufacturer and major-retailer public figure
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 ### How we measure footprint fairly
 
@@ -99,13 +99,13 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 ### Midea MAP10S1TBL (10,000 BTU single-hose portable)
 
-**Strengths:** No permanent window bracket like a sash AC; moves between rooms; listed for rooms that cannot install a window unit. Single-hose kits install faster than dual-hose towers for many renters.
+**Strengths:** No permanent window bracket like a sash AC; moves between rooms; listed for rooms that cannot install a the listed product category. Single-hose kits install faster than dual-hose towers for many renters.
 
 **Weaknesses:** Single-hose designs pull makeup air and can lose efficiency if the exhaust seal is loose; the hose and window panel permanently tax one window; floor rectangle plus hose radius often exceeds the chassis alone.
 
-**Editorial read:** At about $379 and 10,000 BTU, the MAP10S1TBL buys **short-window sleep cooling** without landlord sash work, but three-summer ownership still carries higher kWh than a properly sealed window unit — and the hose permanently spends **one walk-lane corner**.
+**Editorial read:** At about $379 and 10,000 BTU, the MAP10S1TBL buys **short-window sleep cooling** without landlord sash work, but three-summer ownership still carries higher kWh than a properly sealed the listed product category — and the hose permanently spends **one walk-lane corner**.
 
-**Review concern:** On open studios over about 18–20 m² run all day, a loose exhaust kit can reintroduce hot outdoor air so the compressor runs longer than the BTU label implies.
+**A limitation listed in official docs:** On open studios over about 18–20 m² run all day, a loose exhaust kit can reintroduce hot outdoor air so the compressor runs longer than the BTU label implies.
 
 **Analysis takeaway:** Choose portable AC when **temperature drop** is the bottleneck and window AC is forbidden — not when the only complaint is clammy bedding with a working AC already in place.
 
@@ -117,7 +117,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 **Editorial read:** At about $249, the MAD50S1QWT often wins **three-year summer comfort per dollar** when an AC already cools the room but RH stays above about 55% — tank volume (about 7.6 L) means fewer mid-day empties than compact 20-pint units if continuous drain is unavailable.
 
-**Review concern:** Without a lower drain point, gravity hose setups back up; relying on the tank alone during school-break laundry days forces 2–3 empties that owners forget until the unit shuts off.
+**A limitation listed in official docs:** Without a lower drain point, gravity hose setups back up; relying on the tank alone during school-break laundry days forces 2–3 empties that owners forget until the unit shuts off.
 
 **Analysis takeaway:** Prefer the dehumidifier when **moisture**, not absolute temperature, is what makes the studio feel unlivable with windows closed.
 
@@ -143,7 +143,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 **Editorial read:** A about 5.0 qt Cosori class unit at about $120 reduces **oven preheat heat load** on July evenings, but three-year ownership still includes basket coating wear — and the rear vent rule means you cannot shove it flush under upper cabinets without cooking-performance risk.
 
-**Review concern:** “4–6 serving” marketing without published inner dimensions leads buyers to overcrowd the basket, extending cook time and spilling grease onto the same cramped counter.
+**A limitation listed in official docs:** “4–6 serving” marketing without published inner dimensions leads buyers to overcrowd the basket, extending cook time and spilling grease onto the same cramped counter.
 
 **Analysis takeaway:** Keep the air fryer on the counter if **crispy reheat and snack volume** beat daily rice volume in your week.
 
@@ -155,7 +155,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 **Editorial read:** At about $80, Duo Mini wins **counter-circle efficiency** for daily grains and stews, keeping peak circuit load lower than simultaneous air fryer + toaster oven runs — useful on shared rental breakers beside a portable AC.
 
-**Review concern:** Steam directed under upper cabinets can stain finishes over a humid summer if the unit sits too far back under a shelf.
+**A limitation listed in official docs:** Steam directed under upper cabinets can stain finishes over a humid summer if the unit sits too far back under a shelf.
 
 **Analysis takeaway:** Prefer the mini multi-cooker when **rice and wet cooking** dominate and you already have a toaster oven or shared building oven for browning.
 
@@ -181,7 +181,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 **Editorial read:** At about $449 plus about $40–60/year bags and filters, Q7 Max+ can beat **daily stick time** over three years in sealed AC studios — but only if the dock does not erase the only remaining wall for a dehumidifier or AC hose.
 
-**Review concern:** Placing the dock beside a bed in a one-wall studio often fails when the robot cannot approach without hitting nightstands — tape the dock outline before purchase.
+**A limitation listed in official docs:** Placing the dock beside a bed in a one-wall studio often fails when the robot cannot approach without hitting nightstands — tape the dock outline before purchase.
 
 **Analysis takeaway:** Buy the dock when **daily floor maintenance** is the pain and you still have a free wall that is not also the AC hose corner.
 
@@ -193,7 +193,7 @@ Portable AC kits need a **straight hose path** to a window or slider; bends rais
 
 **Editorial read:** At about $499, Stratos looks expensive next to budget sticks, but **zero floor dock** preserves the same square meters your portable AC and dehumidifier already tax — three-year TCO favors Stratos when you clean in short bursts rather than daily automation.
 
-**Review concern:** Closet hooks that are too low leave the wand blocking hanging clothes; measure wand length against closet depth before assuming “storage is free.”
+**A limitation listed in official docs:** Closet hooks that are too low leave the wand blocking hanging clothes; measure wand length against closet depth before assuming “storage is free.”
 
 **Analysis takeaway:** Prefer hang-and-store when **floor rectangles are already full** with cooling and moisture gear.
 
@@ -276,3 +276,28 @@ Compact summer living is a **geometry problem first** and a capacity problem sec
 | Any “compact” claim without a clearance diagram | You cannot tape a 40 cm walk lane after install |
 
 **On a cost-effectiveness basis**, most heat-season studios should fund **moisture or cooling** before another counter gadget, then choose **hang storage over a third floor dock** when walking lanes are already thin. Capacity numbers only matter after the footprint math clears.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

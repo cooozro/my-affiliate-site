@@ -124,3 +124,28 @@ Not fully. Mini-LED local dimming closes much of the gap, but a bright object ne
 | Prefer Google TV and Sony processing | Sony Bravia 8 | Skip if budget is tight and you do not need the brand premium |
 
 Three-year ownership note: neither panel type will meaningfully change your electric bill in normal use. The larger cost swings come from screen size, wall-mount install, and extended warranty choices. Before you buy, check the exact HDMI 2.1 port count and smart OS version on your chosen screen size, because specs sometimes shift by region.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

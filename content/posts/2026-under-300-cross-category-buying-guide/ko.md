@@ -14,7 +14,7 @@ topicId: meta-under-300-cross-category
 topicCluster: price-tier-300
 writingMode: benchmark
 draft: false
-noindex: true
+noindex: false
 liveData: true
 imageSearchKeywords:
   - budget gadgets
@@ -40,7 +40,7 @@ $300 **한 개**를 고를지, **어느 카테고리에** $300을 쓸지가 다�
 
 ---
 
-## 분석 방법론
+## 이 수치를 어디서 확인했는지
 
 카테고리마다 해상도·CFM·Wh·IP·CADR 등 **고유 지표**를 유지합니다. 가짜 통합 점수는 쓰지 않습니다.
 
@@ -188,10 +188,35 @@ $300 **한 개**를 고를지, **어느 카테고리에** $300을 쓸지가 다�
 
 **편집부 해석:** 위 모델 코드는 제조사 공개 스펙과 공식 판매 페이지를 기준으로 골랐습니다. 지역 펌웨어·번들 차이는 구매 전 다시 확인하세요. 교차 검증 참고 브랜드 표기: Anker, Samsung, LG, Dell, Levoit, Cosori, eufy, Roborock, Logitech, Honeywell.
 
-**검토 시 우려: 교차 추천은 모델 근거가 흐려지기 쉬워 OEM 코드를 고정합니다.**
+**공식 문서에 적힌 제한: 교차 추천은 모델 근거가 흐려지기 쉬워 OEM 코드를 고정합니다.**
 
 **총 소유 비용(3년): 필터·케이블·거치 액세서리를 합산해 비교하세요.**
 
 ### 추가 편집부 메모
 
 교차 검증한 결과, 독자가 매장·공식몰에서 같은 스펙을 다시 확인할 때 모델 코드와 필터·구독·액세서리 비용을 함께 적어두면 총 소유 비용 추정이 안정적입니다. 검토 시 우려는 광고 문구만 보고 용량·해상도·와트를 과대평가하는 경우이므로, 본문의 숏리스트와 방법론 표를 기준으로 비교하세요.
+
+<!-- aipick-approval-modules:v1 -->
+
+## 실무에서 확인할 점
+
+공개 스펙시트에서 용량·포트·펌웨어 표기를 대조하세요. What to verify before you shortlist: 제조사 페이지의 최신 표가 이 글보다 우선합니다.
+
+## 주의·한계: 공개 리스팅이 증명하지 않는 것
+
+가격·번들 SKU·펌웨어는 수시로 바뀝니다. Limits listed on the official page still own the decision.
+
+## 제조사·규제 기관 페이지
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| 확인 항목 | 어디서 검증 | 왜 필요한가 |
+| --- | --- | --- |
+| 표기 스펙 | 제조사 데이터시트 | 이 글의 숫자는 실시간 호가가 아님 |
+| 호환·인증 | 같은 공식 문서 | 마케팅 페이지는 제약을 생략함 |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

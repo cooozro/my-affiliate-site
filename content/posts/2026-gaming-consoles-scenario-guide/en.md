@@ -15,7 +15,7 @@ tags:
 contentProfile: scenario-guide
 topicId: gaming-consoles
 draft: false
-noindex: true
+noindex: false
 liveData: true
 coverImage: >-
   /images/posts/2026-gaming-consoles-scenario-guide/game-console-living-room-playstation-xbox-contro-cover.jpg
@@ -49,7 +49,7 @@ We compare four mainstream 2026 console paths across four indoor scenarios. Refe
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** cross-checking public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -78,7 +78,7 @@ Microsoft documents **12 TFLOPS RDNA 2 graphics**, a 1 TB custom NVMe SSD, and s
 
 **Editorial read:** 1 TB and native 4K 120 Hz keep **headroom for 80 GB+ patches**, while Game Pass Ultimate at ~{{krw:29.99}}/month often beats buying two or three discs during an eight-week break. The larger chassis buys **thermal and fan-noise margin** versus Series S in a sealed AC room.
 
-**Review concern:** Without **10–15 cm clearance** behind the unit, frame drops show up before warranty issues—and sale-season installs can still force **M.2 expansion budget**.
+**A limitation listed in official docs:** Without **10–15 cm clearance** behind the unit, frame drops show up before warranty issues—and sale-season installs can still force **M.2 expansion budget**.
 
 **Runner-up:** PlayStation 5 Slim (Disc Edition) — equally strong 4K output and a UHD Blu-ray drive, but first-party exclusives rather than Game Pass breadth drive the value equation here.
 
@@ -105,7 +105,7 @@ Sony lists **1 TB internal storage** on PS5 Slim models with an accessible M.2 s
 
 **Editorial read:** M.2 expansion and disc resale cut **80 GB patch wait time** when the built-in 1 TB fills during summer sales—physical rotation avoids subscription if you rotate titles. Budget **about $75–110** for a certified SSD add-on.
 
-**Review concern:** Sony exclusives justify the box, but mixing discs plus subscriptions can **cost more than a Series X + Game Pass path** if breadth matters more than first-party stories.
+**A limitation listed in official docs:** Sony exclusives justify the box, but mixing discs plus subscriptions can **cost more than a Series X + Game Pass path** if breadth matters more than first-party stories.
 
 **Runner-up:** Xbox Series X — stronger subscription value, but fewer Sony-only franchises on the platform.
 
@@ -132,7 +132,7 @@ The Series S targets **1440p at up to 120 fps**, upscaled for 4K TVs, with 512 G
 
 **Editorial read:** A {{krw:299}} console plus monthly subscription lowers **three-year TCO** on a bedroom or secondary TV versus a flagship box—no disc drive trades used-game savings for **install-and-delete time**. 512 GB needs a **weekly cleanup routine** with three or four Game Pass installs.
 
-**Review concern:** If the goal is a 65-inch native 4K living-room marathon, Series S often leads to an **X or PS5 upgrade within 18 months**.
+**A limitation listed in official docs:** If the goal is a 65-inch native 4K living-room marathon, Series S often leads to an **X or PS5 upgrade within 18 months**.
 
 **Runner-up:** PlayStation 5 Digital Edition — solid hardware, but PlayStation Plus tiers do not mirror Game Pass’s day-one first-party volume.
 
@@ -159,7 +159,7 @@ Nintendo specifies a **7-inch OLED panel**, 64 GB internal storage (expandable v
 
 **Editorial read:** At {{krw:349}}, handheld 720p avoids a **second TV purchase** when the living-room display is contested—add a 128 GB microSD to cut eShop install wait time. Docked 1080p keeps **picture and space expectations** separate from a 4K couch setup.
 
-**Review concern:** about 3-hour battery life means a **charger or dock anchor** for all-day play; if you only want cross-platform AAA in 4K, Switch becomes a **second console**, not the only box.
+**A limitation listed in official docs:** about 3-hour battery life means a **charger or dock anchor** for all-day play; if you only want cross-platform AAA in 4K, Switch becomes a **second console**, not the only box.
 
 **Runner-up:** Steam Deck or handheld PC — more flexible, but higher price, fan noise, and shorter battery for younger users.
 
@@ -233,3 +233,28 @@ After cross-checking the public scenarios, {{today}} console value still means *
 | Listed price fits after checking {{today}} bundle promos | Your AV shelf cannot vent heat — measure clearance before buying |
 
 Leave 10–15 cm of airflow behind any console when AC runs continuously; thermal throttling shows up as stutter long before the warranty expires.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

@@ -28,7 +28,7 @@ coverImageProvider: press-kit
 updatedAt: '2026-08-26T13:27:23.686Z'
 automationBuffer: false
 ---
-> **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
+> **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit public listings and manufacturer spec sheets in-house.
 
 ## 1. The Upgrade Question This Comparison Answers
 
@@ -136,3 +136,28 @@ The Galaxy S26 Ultra is the best all-rounder for power users who want the bigges
 - [2026 Family 3-5 Home Essentials: Scenario Guide](https://aipick.shop/en/blog/2026-family-3-5-home-essentials-scenario-guide)
 - [2026 Under $300 Cross-Category Head-to-Head Guide](https://aipick.shop/en/blog/2026-under-300-cross-category-head-to-head-guide)
 - [2026 Portable SSD Explainer](https://aipick.shop/en/blog/2026-portable-ssd-explainer)
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

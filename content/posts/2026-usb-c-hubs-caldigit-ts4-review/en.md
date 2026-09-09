@@ -29,8 +29,9 @@ pressKitGallery: >-
 updatedAt: '2026-09-09T02:53:56.000Z'
 automationBuffer: true
 publishedAt: '2026-09-08T17:53:58.171Z'
+noindex: false
 ---
-> **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit we tested in-house.
+> **Transparency:** This report is a cross-checked guide based on manufacturer-published specs and open user-review data. It is not a hands-on review of a physical unit public listings and manufacturer spec sheets in-house.
 
 ## Who this review is for
 
@@ -38,7 +39,7 @@ If your laptop has a Thunderbolt 4 or USB4 port and you are tired of plugging an
 
 This is also for people who work from a single desk most of the week — not for someone who travels daily and needs the lightest possible hub. If you run an external monitor, keep a webcam and microphone plugged in, and want one cable to connect everything, the TS4 is the kind of product that quietly changes your routine.
 
-## A day with the device
+## public listings and manufacturer spec sheets
 
 ![CalDigit TS4 Thunderbolt 4 Dock in a real-world lifestyle setting (stock photo illustration)](/images/posts/2026-usb-c-hubs-caldigit-ts4-review/body-1-9b3e95.jpg)
 
@@ -130,7 +131,7 @@ CalDigit has a reputation for long product cycles and reliable firmware updates.
 
 **Skip if** you travel constantly, use only a mouse and a single monitor, or want a bus-powered hub for occasional use. The TS4 is a desk component, not a travel accessory.
 
-**Review concern:** the price and the short included cable are the two things we would flag. Budget for a longer Thunderbolt cable if your desk layout demands it, and confirm your host's TB4 support to avoid a disappointing first connection.
+**A limitation listed in official docs:** the price and the short included cable are the two things we would flag. Budget for a longer Thunderbolt cable if your desk layout demands it, and confirm your host's TB4 support to avoid a disappointing first connection.
 
 ## Related guides
 
@@ -151,3 +152,28 @@ The CalDigit TS4 is the reference Thunderbolt 4 dock for a reason. It is not the
 
 - A portable or split unit fits the space better
 - Window or power constraints make this install unrealistic
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

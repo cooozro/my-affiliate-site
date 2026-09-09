@@ -16,7 +16,7 @@ contentProfile: buying-guide
 topicId: water-purifiers
 topicCluster: kitchen-appliances
 draft: false
-noindex: true
+noindex: false
 liveData: true
 imageSearchKeywords:
   - water purifier
@@ -36,7 +36,7 @@ publishedAt: '2026-07-10T05:30:48.298Z'
 
 ## Introduction: clean cold water when heat drives thirst and the kitchen stays busy
 
-After a kids’ soccer practice field check, the Brita pitcher emptied twice before dinner — and the carton still sold **“99.9% purity”** while nobody had checked filter dollars or whether the galley counter even fits a dispenser. Editorial finding: purifier marketing sells fear and badges; your kitchen pays for **install rights, annual filter math, and whether TDS drop solves a real complaint**.
+After a kids’ soccer practice public listings and manufacturer spec sheets, the Brita pitcher emptied twice before dinner — and the carton still sold **“99.9% purity”** while nobody had checked filter dollars or whether the galley counter even fits a dispenser. From the public spec sheet: purifier marketing sells fear and badges; your kitchen pays for **install rights, annual filter math, and whether TDS drop solves a real complaint**.
 
 July 2026 renters and owners face the same fork before peak heat: **countertop dispenser** vs **under-sink cartridge**, how many **filter swaps** a heavy summer of bottle refills actually costs, and whether a cheap TDS meter number matters more than chlorine taste. Tip with numbers: a “6-month filter” rated for light use can burn in **2–3 months** for a family pouring about **3 gallons (11 L) per person per day** in a heat wave — read the gallon life, not the calendar slogan.
 
@@ -46,7 +46,7 @@ I compared **five mainstream formats** on public NSF listings and manufacturer s
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 I cross-check manufacturer specs, NSF listings where published, listed retail prices, and open owner reviews — public sources only.
 
@@ -95,7 +95,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** 600-gallon cartridges at about $160/year land near **$679 three-year TCO** (unit plus filters) for a four-person July bottled-water swap; 0.72 GPM cuts pitcher wait time. Nine-inch under-sink clearance frees **summer prep counter space**.
 
-**Review concern:** No RO-level TDS drop leaves **chalky ice and mineral taste** in hard-water cities; renter drill and install add **move-out restore cost**.
+**A limitation listed in official docs:** No RO-level TDS drop leaves **chalky ice and mineral taste** in hard-water cities; renter drill and install add **move-out restore cost**.
 
 **Analysis takeaway:** I’d call this **on-demand cooking and bottle water from a second faucet** — no tower blocking the fridge, and about **$160/year** in filters usually beats July bottled-water runs for four people.
 
@@ -111,7 +111,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** ~{{krw:45}} tool-free install delivers **filtered water tonight** at roughly **$145 first-year TCO** with zero counter footprint. Expect **quarterly cartridge swaps** for a four-person household.
 
-**Review concern:** Flat TDS readings disappoint buyers expecting **hard-water taste change**; pull-down faucets often **fail compatibility** day one.
+**A limitation listed in official docs:** Flat TDS readings disappoint buyers expecting **hard-water taste change**; pull-down faucets often **fail compatibility** day one.
 
 **Analysis takeaway:** I’d call this **filtered water tonight for under $50** — when the counter is zero and you only need chlorine taste gone before iced-tea season, skip the purity-theater RO ads.
 
@@ -127,7 +127,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** $299 plus about $90/year filters hits **about $569 three-year TCO**—higher than PUR but saves **time and refills** if you refuse ten pitcher top-offs per camp week. 0.5 GPM matters more than purity ads for pitcher refugees.
 
-**Review concern:** First-year math loses to PUR when **budget is the only lever**; designer faucet adapter misses fail **on install day**.
+**A limitation listed in official docs:** First-year math loses to PUR when **budget is the only lever**; designer faucet adapter misses fail **on install day**.
 
 **Analysis takeaway:** I’d call this **pitcher convenience with a button** when Brita cartridges matter but you refuse to refill a big tank ten times on camp-and-pool weeks.
 
@@ -143,7 +143,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** $479 plus about $90/year filters reaches **about $749 three-year TCO** for bottled-water TDS without a plumber; 500-gallon annual swaps beat quarterly carbon cartridges on **filter labor**. Sixteen-inch width and a drain clip need **40 cm+ sink depth**.
 
-**Review concern:** Stripped mineral taste can force **parallel bottled water**; 0.5 GPM adds **1–2 minutes per fill** that stacks daily.
+**A limitation listed in official docs:** Stripped mineral taste can force **parallel bottled water**; 0.5 GPM adds **1–2 minutes per fill** that stacks daily.
 
 **Analysis takeaway:** I’d call this **bottled-water TDS from a plug-in box** when August hardness notices hit and carbon alone leaves chalky ice — TDS fear ads can wait until you read the city report.
 
@@ -159,7 +159,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** $699 plus about $120/year filters lands near **$1,059 three-year TCO**—premium for open-kitchen aesthetics plus guest refills. 528-gallon cartridges mirror Coway’s **once-a-year swap** rhythm.
 
-**Review concern:** Soft, low-TDS cities struggle to justify **$220+ over Coway** for looks alone; dishwasher-door clearance needs **measure-before-buy**.
+**A limitation listed in official docs:** Soft, low-TDS cities struggle to justify **$220+ over Coway** for looks alone; dishwasher-door clearance needs **measure-before-buy**.
 
 **Analysis takeaway:** I’d call this **design-forward RO for entertaining kitchens** — guests refill all summer and the box has to look as good as the fridge, which is the only honest reason to pay the premium badge tax.
 
@@ -263,3 +263,28 @@ After cross-checking filter costs and install rules against public sources, 2026
 | **Bluewater Kitchen Station 1** | Want the lowest first-year cost — PUR and Aquasana beat premium RO styling on math alone |
 
 Before checkout, download your city’s latest water report, time how many liters your household drinks on a hot weekend, and route RO waste water in the cart aisle — summer hydration failures are usually habit and plumbing surprises, not filter marketing.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

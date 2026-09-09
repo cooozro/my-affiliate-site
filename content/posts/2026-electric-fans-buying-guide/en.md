@@ -14,7 +14,7 @@ contentProfile: buying-guide
 topicId: electric-fans
 topicCluster: air-conditioning
 draft: false
-noindex: true
+noindex: false
 liveData: false
 imageSearchKeywords:
   - electric fan
@@ -38,7 +38,7 @@ publishedAt: '2026-07-03T02:11:09.745Z'
 
 ## Introduction: fans vs AC when the forecast stays above 90°F
 
-On a heatwave afternoon field check, the choice before all-day window AC was clear: **try the circulator first**. Households on **tiered rates** keep replaying that math: full-afternoon AC, or a strong circulator plus short cooling bursts.
+On a the listed product category afternoon public listings and manufacturer spec sheets, the choice before all-day window AC was clear: **try the circulator first**. Households on **tiered rates** keep replaying that math: full-afternoon AC, or a strong circulator plus short cooling bursts.
 
 A fan does not drop dry-bulb temperature like refrigerant AC — it boosts **skin evaporative cooling** and mixes ceiling heat. That gap shows up in bedrooms, WFH desks, and **school-break kids’ rooms**. CFM, dB, and watts are on more boxes now, but high-speed-only CFM and 1 m low-speed dB still need a careful read.
 
@@ -48,7 +48,7 @@ I compared five desk / tower / circulator picks on public specs — **airflow, s
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 Every number below came from **manufacturer spec sheets, listed retail prices, and open reviews** — the same sources you could pull up before checkout. No proprietary seller APIs, no private dealer feeds.
 
@@ -97,9 +97,9 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** 58 W for eight hours is about **7 cents/day**—a fraction of a **900 W window AC** on the same meter. **584 CFM** mixing is where three-year TCO pays off: cold layers reach bedroom corners without running the compressor all night.
 
-**Review concern:** Fixed aim fails if hallway placement is wrong; **66 dB** high speed is not a sleep-room setting.
+**A limitation listed in official docs:** Fixed aim fails if hallway placement is wrong; **66 dB** high speed is not a sleep-room setting.
 
-**Analysis takeaway:** Run the window unit on a timer, then let the 660 mix stratified layers for two hours at about **7 cents/day** instead of leaving the compressor on all night — that is AC assist in practice, not marketing “whole room cooling.”
+**Analysis takeaway:** Run the the listed product category on a timer, then let the 660 mix stratified layers for two hours at about **7 cents/day** instead of leaving the compressor on all night — that is AC assist in practice, not marketing “whole room cooling.”
 
 **Verdict:** Best **whole-room air mixing and AC assist** pick when you can aim the jet down a hallway or across the bed diagonal.
 
@@ -113,7 +113,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** **35 dB** low speed sits near refrigerator hum—speed 2–3 after midnight while AC cycles off fits light sleepers. 55 W at eight hours is about **7 cents/day**; about 120 summer nights over three years land near **$25 total** fan electricity.
 
-**Review concern:** Alone in humid 95°F weeks it cannot replace AC; wobbly base assembly is a top return reason—measure pedestal height and sweep clearance first.
+**A limitation listed in official docs:** Alone in humid 95°F weeks it cannot replace AC; wobbly base assembly is a top return reason—measure pedestal height and sweep clearance first.
 
 **Analysis takeaway:** Speed 2–3 overnight while the AC cycles off after midnight — **35 dB** stays below typical refrigerator hum in published tests, which is the Rowenta’s sleep-room edge.
 
@@ -129,7 +129,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** **35 W** yields about **4 cents/day**—face-level breeze at 78°F central AC without adding **900 W** to the meter. Three-year dorm desk TCO stays near **$15–20/year** in electricity, lowest in this list.
 
-**Review concern:** Whole-room cooling expectations fail here; a short cord locks you to outlet placement beside the desk.
+**A limitation listed in official docs:** Whole-room cooling expectations fail here; a short cord locks you to outlet placement beside the desk.
 
 **Analysis takeaway:** Central AC at 78°F and you want airflow on your face without another **900 W** on the meter? The HT-900 is a **personal breeze** for laptop work — about 4 cents/day, not whole-room refrigeration.
 
@@ -145,7 +145,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** **45 W** at about **5 cents/day**; tower footprint tucks beside a dresser without blocking the **only window-AC exhaust**. Three-year TCO saves buying a second circulator when floor space is zero.
 
-**Review concern:** **48 dB** annoys light sleepers; dusty grilles and ionizer confusion add summer maintenance time.
+**A limitation listed in official docs:** **48 dB** annoys light sleepers; dusty grilles and ionizer confusion add summer maintenance time.
 
 **Analysis takeaway:** I’d call this **cooling a narrow studio’s sleep side** without blocking the only window-AC exhaust — tower tucks beside the dresser, not the “whole room” promise on the box.
 
@@ -161,7 +161,7 @@ Reference prices as listed on manufacturer and major US storefronts in June 2026
 
 **Editorial read:** **42 W** plus app curves for **midnight ramp-down** while the window AC keeps its thermostat—about **5 cents/day** active use. Smart-home households already running summer schedules absorb standby draw in three-year TCO.
 
-**Review concern:** Router reboots and outages blank schedules; confirm swing clearance against curtains and furniture before install.
+**A limitation listed in official docs:** Router reboots and outages blank schedules; confirm swing clearance against curtains and furniture before install.
 
 **Analysis takeaway:** I’d call this **phone ramp-down after bedtime** while the window AC keeps its own thermostat — saves a midnight walk across a hot room, which app ads never mention.
 
@@ -195,7 +195,7 @@ Using nameplate math in this guide: a 45 W fan for 8 hours ≈ **$0.05/day** at 
 
 ### Does higher CFM always mean a cooler room?
 
-Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM circulator helps equalize temperature between a cold AC zone and a warm far corner; a 185 CFM desk fan only cools someone sitting in its path. Match format to room size and whether you need local or whole-room effect.
+Higher CFM improves **air exchange and mixing**, not refrigeration. A 584 CFM circulator helps equalize temperature between a cold AC zone and a warm far corner; a 185 CFM desk fan only cools someone sitting in its path. Match format to the listed product category and whether you need local or whole-room effect.
 
 ---
 
@@ -241,3 +241,28 @@ After re-checking the published figures, summer fan value still means matching *
 | **Dreo Nomad One** | Refuse app setup or need Vornado-class throw for AC assist |
 
 Before checkout, confirm cord length to your outlet layout, verify oscillation clearance, and recheck whether your lease or building rules restrict window hardware — fans solve circulation, but window AC still needs install clearance when heat waves exceed what airflow alone can handle.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

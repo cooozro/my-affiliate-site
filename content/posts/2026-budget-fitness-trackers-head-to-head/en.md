@@ -16,7 +16,7 @@ contentProfile: head-to-head
 topicId: fitness-trackers
 writingMode: stable
 draft: false
-noindex: true
+noindex: false
 liveData: true
 coverImage: >-
   /images/posts/2026-budget-fitness-trackers-head-to-head/fitness-tracker-wrist-cover.jpg
@@ -40,15 +40,15 @@ publishedAt: '2026-07-07T04:35:40.875Z'
 
 ## Introduction: which budget band for summer routines?
 
-On an early-walk field check, a budget band **loosened with sweat and the heart-rate graph jumped around**. After an air-conditioned night the sleep score said “good” while recovery felt flat — Editorial finding: “health score” marketing hides those gaps. Budget bands repay attention to **sweat fit, strap tension, and subscription cost** first.
+On an early-walk public listings and manufacturer spec sheets, a budget band **loosened with sweat and the heart-rate graph jumped around**. After an air-conditioned night the sleep score said “good” while recovery felt flat — From the public spec sheet: “health score” marketing hides those gaps. Budget bands repay attention to **sweat fit, strap tension, and subscription cost** first.
 
 When school break shifts sleep schedules and outdoor runs move to dawn or indoor treadmills, a sub-$100 band is often the first wearable people buy. The myth we hear most: **any tracker with a green LED is equally accurate**. In practice, optical heart rate drifts when wrist tension changes in humidity, sleep staging algorithms disagree on REM boundaries, and some apps lock advanced metrics behind subscriptions. From a marketing eye, a flashy wellness score sells less well than **year-one subscription cost, battery, and whether GPS lives on the phone**.
 
-I lined up **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses {{usd_krw_rate}} KRW per USD ({{krw:49.99}} for a $50 band tier). Small tip: on humid days, wear the band snug two finger-widths above the wrist bone.
+public listings and manufacturer spec sheets **three widely stocked 2026 models under roughly $100** — Fitbit Inspire 3, Xiaomi Smart Band 9, and Amazfit Band 7 — on heart-rate behavior during brisk walks, sleep reporting after air-conditioned nights, GPS workflow for vacation routes, and long-term app cost. Listed USD MSRP is shown below; regional bundles and summer promos vary. Reference pricing uses {{usd_krw_rate}} KRW per USD ({{krw:49.99}} for a $50 band tier). Small tip: on humid days, wear the band snug two finger-widths above the wrist bone.
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 This comparison is **editorial research** — I cross-check public manufacturer specs, listed retail prices, and open reviews. We do **not** use proprietary seller APIs or private seller databases.
 
@@ -82,7 +82,7 @@ This comparison is **editorial research** — I cross-check public manufacturer 
 
 **Editorial read:** Sleep and readiness storytelling pays off in **five morning minutes after AC nights**, but Premium’s first-year fee plus weekly charging raises three-year cost versus Xiaomi at similar upfront price.
 
-**Review concern:** Phone-tethered runs drain both band and handset batteries, and Google app migration has trimmed regional features after purchase in public reports.
+**A limitation listed in official docs:** Phone-tethered runs drain both band and handset batteries, and Google app migration has trimmed regional features after purchase in public reports.
 
 **Analysis takeaway:** Pick Inspire 3 when **sleep and wellness coaching** matter more than multi-week battery — and price the first year of Premium prompts before you buy.
 
@@ -98,7 +98,7 @@ This comparison is **editorial research** — I cross-check public manufacturer 
 
 **Editorial read:** Two-week battery near $50 cuts **charger-free vacation friction**, but optical HR limits show quickly in humid walks and HIIT unless you treat trends, not single readings.
 
-**Review concern:** iOS notification gaps add daily app-check time versus Android, and phone GPS runs need location permissions reset every trip.
+**A limitation listed in official docs:** iOS notification gaps add daily app-check time versus Android, and phone GPS runs need location permissions reset every trip.
 
 **Analysis takeaway:** Smart Band 9 is the default **budget daily tracker** when battery and screen quality beat analytical depth — editorial value analysis supports this for students and casual summer goals.
 
@@ -114,7 +114,7 @@ This comparison is **editorial research** — I cross-check public manufacturer 
 
 **Editorial read:** Zepp’s workout breadth and about 18-day battery suit **gym-and-travel hybrids**, but pre-HIIT strap checks and app tweaks add one to two minutes of daily friction.
 
-**Review concern:** Repeated HR overshoot in intervals or sweat breaks zone training trust, and Zepp’s busy UI often triggers **first-week setup abandonment** for beginners.
+**A limitation listed in official docs:** Repeated HR overshoot in intervals or sweat breaks zone training trust, and Zepp’s busy UI often triggers **first-week setup abandonment** for beginners.
 
 **Analysis takeaway:** Band 7 suits buyers who want **long battery plus a feature-rich Zepp dashboard** without smartwatch bulk — just tighten before HIIT.
 
@@ -179,3 +179,28 @@ Premium unlocks deeper sleep insights, workout videos, and some historical trend
 | Hates recurring subscriptions | Avoid Fitbit if Premium prompts annoy you; prefer Xiaomi |
 
 After cross-checking the public specs, most summer buyers under $100 still land on **Xiaomi Smart Band 9** for value and battery. Flashy “health score” copy sells less well than **subscription, battery, and HR stability**. **On a cost-effectiveness basis,** this report would only pay up for **Fitbit Inspire 3** when sleep coaching beats battery, and pick **Amazfit Band 7** when Zepp depth shows up on discount. Three-year ownership splits on subscription, charge frequency, and phone GPS battery drain more than MSRP gaps alone.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->

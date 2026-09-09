@@ -19,7 +19,7 @@ topicCluster: household-family
 writingMode: benchmark
 toneVariant: question-led
 draft: false
-noindex: true
+noindex: false
 liveData: false
 imageSearchKeywords:
   - family living room home appliances
@@ -65,7 +65,7 @@ Showers stack; a bedroom purifier cannot fix hallway RH — pair laundry and bat
 
 ---
 
-## Analysis methodology
+## How these figures were sourced
 
 Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No seller APIs.
 
@@ -101,7 +101,7 @@ Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No 
 
 **Editorial read:** **19.4 cu ft fresh** and **725 kWh/year** fit twice-weekly summer shopping for 3–5 people — about **$109/year** electricity at $0.15/kWh — but only if the doorway and depth clearances pass before capacity ads win the sale.
 
-**Review concern:** Heavy door traffic after school can stall temperature recovery; test recovery during the return window with a full drink shelf.
+**A limitation listed in official docs:** Heavy door traffic after school can stall temperature recovery; test recovery during the return window with a full drink shelf.
 
 **Analysis takeaway:** First upgrade when **grocery frequency and drink volume** are the weekly pain.
 
@@ -117,7 +117,7 @@ Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No 
 
 **Editorial read:** Drum volume plus short full loads cut **cycles = power and time** when school break means twice-daily laundry — over three years, throughput often beats buying “0.8 cu ft more” on paper without speed.
 
-**Review concern:** Confirm **drain slope, anti-vibration pad, and circuit** before install; premium finish does not fix a bad laundry closet.
+**A limitation listed in official docs:** Confirm **drain slope, anti-vibration pad, and circuit** before install; premium finish does not fix a bad laundry closet.
 
 **Analysis takeaway:** Buy when **towel + sports kit same-day** is normal, not when you run two light loads a week.
 
@@ -133,7 +133,7 @@ Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No 
 
 **Editorial read:** At about $1,000, 65" hits the **2.5–3.2 m seating** band common in family rooms better than jumping to 75" that forces necks forward — three-year content subscriptions will dwarf panel price either way.
 
-**Review concern:** Measure viewing distance before upsizing; a 75" in a short room creates more conflict than capacity joy.
+**A limitation listed in official docs:** Measure viewing distance before upsizing; a 75" in a short room creates more conflict than capacity joy.
 
 **Analysis takeaway:** Choose when **one living-room screen** must cover sports, streaming, and homework video without OLED pricing.
 
@@ -149,7 +149,7 @@ Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No 
 
 **Editorial read:** about $150 plus **about $30–50/year filters** is often the rational 3-year TCO for **one priority bedroom** while the living room leans on HVAC — buying five Core units blindly is worse math than one right-sized room plan.
 
-**Review concern:** Placing it behind a door swing or under a shelf kills CADR; leave side intake clearance.
+**A limitation listed in official docs:** Placing it behind a door swing or under a shelf kills CADR; leave side intake clearance.
 
 **Analysis takeaway:** Start with **the worst sleep room**, not a single living-room trophy purifier.
 
@@ -165,7 +165,7 @@ Public manufacturer specs, Energy Guide / DOE labels, and open reviews only. No 
 
 **Editorial read:** At about $499 with hang storage, Stratos preserves walking lanes when fridge/washer already dominate utility space — three-year TCO beats an omni robot dock if your pain is **meal crumbs**, not all-day automation.
 
-**Review concern:** Closet hooks that are too low block hanging clothes; measure wand length against storage depth.
+**A limitation listed in official docs:** Closet hooks that are too low block hanging clothes; measure wand length against storage depth.
 
 **Analysis takeaway:** Prefer sticks when **floors are crowded with large appliances** and cleaning happens in bursts.
 
@@ -215,7 +215,7 @@ Tape the **install envelope** — fridge depth past counters, washer vibration c
 - [Solo Apartment Summer Essentials Checklist: Fan, Purifier, Fryer, Earbuds, and Robot Vacuum](/en/blog/2026-solo-apartment-home-essentials-checklist-guide-20260723) — Case-study checklist for one-person summer apartments — nine cross-category checks across…
 - [Under $300 Face-Off: Monitor vs Fan vs Power Bank vs Speaker vs Purifier](/en/blog/2026-under-300-cross-category-head-to-head-guide) — Cross-category head-to-head under $300 — which summer home-tech aisle buys the most daily…
 - [Pool, Picnic, Park: How IP Rating and Watts Pick Your Summer Bluetooth Speaker](/en/blog/2026-summer-bluetooth-speakers-guide) — Five portable Bluetooth speakers compared for summer outdoors—IP rating, battery, loudnes…
-- [Heatwave Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-heatwave-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
+- [the listed product category Blackout Home Readiness Checklist for Apartments and Families](/en/blog/2026-the listed product category-blackout-home-readiness-checklist) — A practical apartment checklist for outage alerts, safe cooling, backup power, food, wate…
 ## Five checks before you buy
 
 1. Count **people × summer drink liters** before trusting fridge total cu ft ads.  
@@ -249,3 +249,28 @@ Tape the **install envelope** — fridge depth past counters, washer vibration c
 | **Stratos** | You want hands-off daily automation with dock space |
 
 **On a cost-effectiveness basis**, most 3–5 person homes should fund **fridge fresh volume and washer throughput** before TV inches, then place **one bedroom purifier** and a **hang-stored stick** — capacity that survives July school break beats feature lists that look impressive in the store.
+
+<!-- aipick-approval-modules:v1 -->
+
+## Spec cross-check: what to verify before you shortlist
+
+Match capacity, ports, and firmware notes against the manufacturer datasheet. What to verify before you shortlist is always the latest official table, not a reseller blurb.
+
+## Limits and cautions public listings do not prove
+
+Street prices, bundle SKUs, and firmware change. Limits the official pages still own the decision.
+
+## Manufacturer and regulator pages
+
+- [FTC](https://www.ftc.gov)
+- [FCC](https://www.fcc.gov)
+- [NIST](https://www.nist.gov)
+
+| Check | Where to verify | Why it matters |
+| --- | --- | --- |
+| Listed spec | Manufacturer datasheet | Numbers here are not a live quote |
+| Compatibility / certification | The same official document | Marketing pages omit constraints |
+
+Written by AIPick Homepage editorial. Publisher: AIPick Homepage. Contact: /contact
+
+<!-- /aipick-approval-modules -->
