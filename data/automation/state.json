@@ -362,17 +362,12 @@
   ],
   "schedulerPaused": false,
   "lastHealthCheck": {
-    "at": "2026-09-09T00:57:56.492Z",
-    "issueCount": 3,
+    "at": "2026-09-09T01:25:34.795Z",
+    "issueCount": 2,
     "issues": [
       {
-        "code": "overdue-publish-slot",
-        "message": "Publish ready but no post went live (0min past slot, KST 2026-09-09)",
-        "severity": "warning"
-      },
-      {
         "code": "draft-integrity-issues",
-        "message": "1 draft(s) have publish gate issues",
+        "message": "2 draft(s) have publish gate issues",
         "severity": "warning"
       },
       {
@@ -382,8 +377,8 @@
       }
     ],
     "repairs": [
-      "aligned-slot-with-min-gap",
-      "marked-slot-catch-up"
+      "2026-mechanical-keyboards-keychron-q1-pro-review/en.md: publishedAt 2026-09-09T09:57:57.000Z → 2026-09-09T00:57:59.835Z",
+      "2026-mechanical-keyboards-keychron-q1-pro-review/ko.md: publishedAt 2026-09-09T09:57:57.000Z → 2026-09-09T00:57:59.835Z"
     ]
   },
   "topicHistory": [
