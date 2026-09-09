@@ -14,12 +14,12 @@
     "power-banks"
   ],
   "lastPublishAt": "2026-09-08T17:53:58.171Z",
-  "nextPublishAt": "2026-09-09T01:02:00.000Z",
+  "nextPublishAt": "2026-09-09T00:44:21.396Z",
   "scheduledSlots": [
     "2026-09-08T17:38:00.000Z",
     "2026-09-09T17:55:00.000Z"
   ],
-  "scheduledGapHours": 4.03,
+  "scheduledGapHours": 4,
   "publishCountToday": 1,
   "publishDateKst": "2026-09-09",
   "writeCountToday": 0,
