@@ -549,12 +549,12 @@
       "at": "2026-09-09T00:57:59.856Z"
     }
   ],
-  "lastDailyContentAuditKst": "2026-09-08",
+  "lastDailyContentAuditKst": "2026-09-09",
   "lastDailyContentAudit": {
-    "at": "2026-09-08T14:03:25.528Z",
-    "postsScanned": 88,
+    "at": "2026-09-09T01:00:41.086Z",
+    "postsScanned": 89,
     "autoRepairCount": 140,
-    "manualReviewCount": 4
+    "manualReviewCount": 5
   },
   "formatDeck": [],
   "formatHistory": [

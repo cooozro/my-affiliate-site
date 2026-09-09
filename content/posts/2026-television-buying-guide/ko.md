@@ -21,7 +21,7 @@ coverImage: /images/posts/2026-television-buying-guide/smart-tv-living-room-cove
 coverImageAlt: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
 coverImageCredit: Photo by Jens Kreuter / Unsplash
 coverImageAltKo: 여름 스포츠와 스트리밍을 위한 거실 스마트 TV
-updatedAt: '2026-09-08T14:03:21.936Z'
+updatedAt: '2026-09-09T01:00:37.141Z'
 publishedAt: '2026-07-10T11:32:02.328Z'
 ---
 ## 편집부 개요

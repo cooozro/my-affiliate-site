@@ -14,7 +14,7 @@ contentProfile: head-to-head
 topicId: air-purifiers
 topicCluster: home-appliances
 writingProvider: deepseek
-updatedAt: '2026-09-08T14:03:20.291Z'
+updatedAt: '2026-09-09T01:00:35.363Z'
 coverImage: >-
   /images/posts/2026-small-room-air-purifiers-head-to-head/air-purifier-small-room-cover.jpg
 coverImageAlt: HEPA 공기청정기

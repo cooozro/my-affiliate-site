@@ -1,7 +1,7 @@
 {
-  "dateKst": "2026-09-08",
-  "scannedAt": "2026-09-08T14:03:25.528Z",
-  "postsScanned": 88,
+  "dateKst": "2026-09-09",
+  "scannedAt": "2026-09-09T01:00:41.086Z",
+  "postsScanned": 89,
   "autoRepairCount": 140,
   "autoRepairs": [
     {
@@ -480,7 +480,7 @@
       ]
     }
   ],
-  "manualReviewCount": 4,
+  "manualReviewCount": 5,
   "manualReview": [
     {
       "order": 1,
@@ -499,6 +499,22 @@
     },
     {
       "order": 2,
+      "slug": "oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026",
+      "phase": "draft",
+      "issues": [
+        "oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026/en.md: head-to-head needs at least 2 numbered product sections",
+        "oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026/ko.md: head-to-head needs at least 2 numbered product sections"
+      ],
+      "urls": {
+        "en": "https://www.aipick.shop/en/blog/oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026",
+        "ko": "https://www.aipick.shop/ko/blog/oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026",
+        "admin": "https://www.aipick.shop/admin",
+        "previewEn": "https://www.aipick.shop/admin/preview/oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026?locale=en",
+        "previewKo": "https://www.aipick.shop/admin/preview/oled-vs-qled-hdmi-2-1-screen-size-smart-os-2026?locale=ko"
+      }
+    },
+    {
+      "order": 3,
       "slug": "portable-ac-apartment-myth-bust-2026",
       "phase": "draft",
       "issues": [
@@ -513,7 +529,7 @@
       }
     },
     {
-      "order": 3,
+      "order": 4,
       "slug": "power-bank-buying-checklist-capacity-speed-ports-safety-2026",
       "phase": "draft",
       "issues": [
@@ -530,7 +546,7 @@
       }
     },
     {
-      "order": 4,
+      "order": 5,
       "slug": "power-bank-pre-purchase-checklist-capacity-wattage-ports-safety",
       "phase": "draft",
       "issues": [

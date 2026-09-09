@@ -29,7 +29,7 @@ modelPickBrand: Anker
 modelPickName: 737 PowerBank (PowerCore 24K)
 pressKitGallery: >-
   https://www.google.com/search?q=Anker%20737%20PowerBank%20(PowerCore%2024K)%20press%20kit
-updatedAt: '2026-09-08T14:03:19.438Z'
+updatedAt: '2026-09-09T01:00:34.461Z'
 automationBuffer: true
 scheduledPublishAt: 2026-09-08T01:27:00.000Z
 publishAfter: 2026-09-08T00:00:00.000Z
