@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CONTENT_SHELL } from "@/lib/layout";
 import { siteConfig } from "@/lib/site";
 
@@ -9,17 +8,20 @@ type HomeHeroProps = {
 export function HomeHero({ description }: HomeHeroProps) {
   return (
     <section className="relative mb-10 w-full overflow-hidden border-b border-border/60 sm:mb-12">
-      <Image
-        src="/images/hero/tech-art.jpg"
-        alt=""
-        width={1920}
-        height={820}
+      <video
         className="h-[48vw] min-h-[240px] w-full max-h-[560px] object-cover object-center sm:min-h-[280px] lg:max-h-[640px]"
-        priority
-        sizes="100vw"
-      />
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/images/hero/hero-poster.jpg"
+        aria-hidden
+      >
+        <source src="/images/hero/hero-loop.mp4" type="video/mp4" />
+      </video>
       <div
-        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10"
         aria-hidden
       />
       <div className="absolute inset-0 flex items-end">
