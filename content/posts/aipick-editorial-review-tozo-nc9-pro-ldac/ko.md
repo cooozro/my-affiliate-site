@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-29'
 createdAt: '2026-09-29T04:49:16.233Z'
-updatedAt: '2026-09-29T05:31:13.377Z'
+updatedAt: '2026-09-29T05:45:00.679Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -40,7 +40,7 @@ tags:
   </section>
 
 
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:80%;height:auto;" />
 
   <section class="feature-section">
     <h3>1. 첫인상과 혁신적인 하드웨어: 1.47인치 스마트 디스플레이의 탑재</h3>
@@ -49,8 +49,6 @@ tags:
       <li><strong>실사용 포인트:</strong> 스마트폰을 꺼내지 않고도 케이스 화면을 터치하거나 조작할 수 있는 환경은 유저 인터페이스 측면에서 확실히 저가형 모델들과는 차원이 다른 편리함을 제공합니다.</li>
     </ul>
   </section>
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
 
 
   <section class="feature-section">
