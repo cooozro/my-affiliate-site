@@ -56,21 +56,22 @@ export async function getAdminPreviewPost(
   slug: string,
   locale: Locale,
 ): Promise<Post> {
-  try {
-    return getPostBySlug(slug, { locale, includeDrafts: true });
-  } catch (localError) {
-    if (!(usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim())) {
-      throw localError;
-    }
+  // On Vercel, admin saves land on GitHub before the next deploy. Always prefer
+  // GitHub for preview so freshly inserted <img> tags are visible immediately.
+  if (usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim()) {
     try {
       const { content } = await readGithubFile(
         `content/posts/${slug}/${locale}.md`,
       );
-      const post = parseMarkdown(slug, content);
-      if (post.draft === false) return post;
-      return post;
-    } catch {
-      throw localError;
+      return parseMarkdown(slug, content);
+    } catch (githubError) {
+      try {
+        return getPostBySlug(slug, { locale, includeDrafts: true });
+      } catch {
+        throw githubError;
+      }
     }
   }
+
+  return getPostBySlug(slug, { locale, includeDrafts: true });
 }
