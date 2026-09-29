@@ -23,6 +23,12 @@ function markdownUrlTransform(url: string): string {
   return defaultUrlTransform(url);
 }
 
+
+function omitHastNode<T extends Record<string, unknown>>(props: T): Omit<T, "node"> {
+  const { node: _node, ...rest } = props;
+  return rest;
+}
+
 const markdownComponents: Components = {
   h2: ({ children, ...props }) => {
     const anchorId = headingIdForHelpNav(plainTextFromChildren(children));
@@ -30,7 +36,7 @@ const markdownComponents: Components = {
     <h2
       id={anchorId}
       className="mb-4 mt-10 scroll-mt-24 font-serif text-2xl font-bold leading-snug text-foreground first:mt-0"
-      {...props}
+      {...omitHastNode(props as Record<string, unknown>)}
     >
       {children}
     </h2>
@@ -39,7 +45,7 @@ const markdownComponents: Components = {
   h3: ({ children, ...props }) => (
     <h3
       className="mb-3 mt-8 font-serif text-xl font-semibold leading-snug text-foreground"
-      {...props}
+      {...omitHastNode(props as Record<string, unknown>)}
     >
       {children}
     </h3>
@@ -47,7 +53,7 @@ const markdownComponents: Components = {
   p: ({ children, ...props }) => (
     <p
       className="mb-6 font-serif text-[1.0625rem] leading-[1.85] text-foreground/90"
-      {...props}
+      {...omitHastNode(props as Record<string, unknown>)}
     >
       {children}
     </p>
