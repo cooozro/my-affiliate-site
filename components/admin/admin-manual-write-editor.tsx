@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { SHARE_PLATFORMS } from "@/lib/share";
 
 type Props = {
@@ -68,7 +68,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     })();
   }, [initialSlug, loadImages]);
 
-  async function save() {
+  async function save(bodyOverride?: string) {
     setSaving(true);
     setError("");
     setMessage("");
@@ -87,7 +87,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         body: JSON.stringify({
           titleKo,
           descriptionKo,
-          bodyKo,
+          bodyKo: bodyOverride ?? bodyKo,
           tags,
           shareTop,
           shareBottom,
@@ -156,20 +156,26 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
   function rememberBodySelection() {
     const el = bodyTextareaRef.current;
     if (!el) return;
+    // Read selection while textarea still owns it (blur/mousedown handlers rely on this).
     bodySelectionRef.current = {
-      start: el.selectionStart ?? el.value.length,
-      end: el.selectionEnd ?? el.value.length,
+      start: el.selectionStart ?? 0,
+      end: el.selectionEnd ?? 0,
     };
   }
 
-  function insertAtCursor(snippet: string) {
-    const el = bodyTextareaRef.current;
-    const value = bodyKo;
+  function preserveSelectionOnToolbarMouseDown(
+    event: ReactMouseEvent<HTMLElement>,
+  ) {
+    // Keep textarea selection when clicking toolbar/file buttons.
+    rememberBodySelection();
+    event.preventDefault();
+  }
+
+  function insertAtCursor(snippet: string, baseValue?: string) {
+    const value = baseValue ?? bodyKo;
     const sel = bodySelectionRef.current;
-    const start = el ? el.selectionStart : sel.start;
-    const end = el ? el.selectionEnd : sel.end;
-    const at = Number.isFinite(start) ? start : value.length;
-    const atEnd = Number.isFinite(end) ? end : at;
+    const at = Math.max(0, Math.min(sel.start ?? value.length, value.length));
+    const atEnd = Math.max(at, Math.min(sel.end ?? at, value.length));
     const next = `${value.slice(0, at)}${snippet}${value.slice(atEnd)}`;
     setBodyKo(next);
     const caret = at + snippet.length;
@@ -179,7 +185,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
       if (!box) return;
       box.focus();
       box.setSelectionRange(caret, caret);
+      rememberBodySelection();
     });
+    return next;
   }
 
   async function uploadCover(file: File) {
@@ -207,6 +215,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
       setError("저장 후 본문 이미지를 업로드하세요.");
       return;
     }
+    rememberBodySelection();
     const fd = new FormData();
     fd.set("file", file);
     fd.set("kind", "body");
@@ -218,9 +227,11 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? "이미지 업로드 실패");
     const insert = `\n\n<img src="${data.webPath}" alt="${(titleKo || "image").slice(0, 80)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
-    insertAtCursor(insert);
+    const nextBody = insertAtCursor(insert);
     setMessage(`커서 위치에 이미지 삽입: ${data.webPath}`);
     await loadImages(slug);
+    // Persist so preview shows the <img> immediately.
+    await save(nextBody);
   }
 
   async function removeImage(filename: string) {
@@ -236,9 +247,11 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
   }
 
   function insertImageTag(webPath: string) {
+    rememberBodySelection();
     const tag = `\n\n<img src="${webPath}" alt="${(titleKo || "image").slice(0, 60)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
-    insertAtCursor(tag);
+    const nextBody = insertAtCursor(tag);
     setMessage(`커서 위치에 이미지 삽입: ${webPath}`);
+    void save(nextBody);
   }
 
   if (loading) {
@@ -366,12 +379,13 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
       <section className="rounded-xl border border-border p-4">
         <h2 className="text-sm font-semibold">이미지</h2>
         <p className="mt-1 text-xs text-muted-foreground">
-          본문 텍스트 영역에서 커서를 둔 뒤 「본문 이미지 첨부」또는 「본문 삽입」을 누르면 그 위치에{" "}
-          <code className="rounded bg-muted px-1">&lt;img&gt;</code> 태그가 들어갑니다.
+          본문에 커서를 둔 뒤 「본문 이미지 첨부」/「본문 삽입」을 누르면 그 자리에{" "}
+          <code className="rounded bg-muted px-1">&lt;img&gt;</code>가 들어가고 자동 저장됩니다.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button
             type="button"
+            onMouseDown={preserveSelectionOnToolbarMouseDown}
             onClick={() => coverInputRef.current?.click()}
             className="rounded border border-border px-3 py-1.5 text-xs"
           >
@@ -379,6 +393,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
           </button>
           <button
             type="button"
+            onMouseDown={preserveSelectionOnToolbarMouseDown}
             onClick={() => bodyImageInputRef.current?.click()}
             className="rounded border border-border px-3 py-1.5 text-xs"
           >
@@ -430,6 +445,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
                   <button
                     type="button"
                     className="text-accent underline"
+                    onMouseDown={preserveSelectionOnToolbarMouseDown}
                     onClick={() => insertImageTag(img.webPath)}
                   >
                     본문 삽입
@@ -465,6 +481,8 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
           onSelect={rememberBodySelection}
           onClick={rememberBodySelection}
           onKeyUp={rememberBodySelection}
+          onMouseUp={rememberBodySelection}
+          onBlur={rememberBodySelection}
           rows={22}
           spellCheck={false}
           className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 font-mono text-xs leading-relaxed"

@@ -6,6 +6,7 @@ import {
   assertGithubAdminConfigured,
   usesRemotePostStore,
   slugExists,
+  slugExistsAsync,
 } from "@/lib/posts-admin";
 import {
   deleteGithubFile,
@@ -64,7 +65,7 @@ export async function uploadPostBodyImage(
   file: { buffer: Buffer; mimeType: string; originalName?: string },
   filename?: string,
 ): Promise<{ webPath: string; filename: string }> {
-  if (!slugExists(slug)) throw new Error(`Post not found: ${slug}`);
+  if (!(await slugExistsAsync(slug))) throw new Error(`Post not found: ${slug}`);
   if (!ALLOWED_MIME.has(file.mimeType)) {
     throw new Error("JPEG, PNG, WebP만 업로드할 수 있습니다.");
   }
@@ -76,14 +77,28 @@ export async function uploadPostBodyImage(
     filename?.trim() ||
     (file.originalName?.replace(/[^\w.-]+/g, "-").toLowerCase() ?? "image");
   let name = base.includes(".") ? base : `${base}.${extForMime(file.mimeType)}`;
-  const dir = postImagesDir(slug);
-  fs.mkdirSync(dir, { recursive: true });
-
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
+    // Avoid colliding filenames on GitHub.
+    let unique = name;
+    let n = 2;
+    while (true) {
+      try {
+        await readGithubFile(`public/images/posts/${slug}/${unique}`);
+        const stem = name.replace(/\.[^.]+$/, "");
+        const ext = name.split(".").pop() ?? "jpg";
+        unique = `${stem}-${n}.${ext}`;
+        n += 1;
+      } catch {
+        break;
+      }
+    }
+    name = unique;
     const repoPath = `public/images/posts/${slug}/${name}`;
     await writeGithubBinaryFile(repoPath, file.buffer, `admin: upload image ${slug}/${name}`);
   } else {
+    const dir = postImagesDir(slug);
+    fs.mkdirSync(dir, { recursive: true });
     let dest = path.join(dir, name);
     let n = 2;
     while (fs.existsSync(dest)) {
@@ -103,21 +118,25 @@ export async function deletePostBodyImage(
   slug: string,
   filename: string,
 ): Promise<void> {
-  if (!slugExists(slug)) throw new Error(`Post not found: ${slug}`);
+  if (!(await slugExistsAsync(slug))) throw new Error(`Post not found: ${slug}`);
   const safe = path.basename(filename);
-  const filePath = path.join(postImagesDir(slug), safe);
-  if (!fs.existsSync(filePath)) throw new Error("Image not found");
 
   if (usesRemotePostStore()) {
     assertGithubAdminConfigured();
     const repoPath = `public/images/posts/${slug}/${safe}`;
-    const existing = await readGithubFile(repoPath);
-    await deleteGithubFile(
-      repoPath,
-      existing.sha,
-      `admin: delete image ${slug}/${safe}`,
-    );
+    try {
+      const existing = await readGithubFile(repoPath);
+      await deleteGithubFile(
+        repoPath,
+        existing.sha,
+        `admin: delete image ${slug}/${safe}`,
+      );
+    } catch {
+      throw new Error("Image not found");
+    }
   } else {
+    const filePath = path.join(postImagesDir(slug), safe);
+    if (!fs.existsSync(filePath)) throw new Error("Image not found");
     fs.unlinkSync(filePath);
   }
 }
