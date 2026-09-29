@@ -68,7 +68,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     })();
   }, [initialSlug, loadImages]);
 
-  async function save(bodyOverride?: string) {
+  async function save(bodyOverride?: string, coverOverride?: string) {
     setSaving(true);
     setError("");
     setMessage("");
@@ -77,6 +77,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         .split(/[,，]/)
         .map((t) => t.trim())
         .filter(Boolean);
+      const nextCover = coverOverride || coverImage || undefined;
       const url = slug
         ? `/api/admin/manual-post/${encodeURIComponent(slug)}`
         : "/api/admin/manual-post";
@@ -91,8 +92,8 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
           tags,
           shareTop,
           shareBottom,
-          coverImage: coverImage || undefined,
-          coverImageAltKo: coverAltKo || undefined,
+          coverImage: nextCover,
+          coverImageAltKo: coverAltKo || titleKo || undefined,
         }),
       });
       const data = await res.json();
@@ -228,10 +229,18 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     if (!res.ok) throw new Error(data.error ?? "이미지 업로드 실패");
     const insert = `\n\n<img src="${data.webPath}" alt="${(titleKo || "image").slice(0, 80)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
     const nextBody = insertAtCursor(insert);
-    setMessage(`커서 위치에 이미지 삽입: ${data.webPath}`);
+    if (!coverImage) {
+      setCoverImage(data.webPath);
+      if (!coverAltKo) setCoverAltKo(titleKo.slice(0, 120));
+    }
+    setMessage(
+      !coverImage
+        ? `커서 위치에 이미지 삽입 + 커버(섬네일)로 설정: ${data.webPath}`
+        : `커서 위치에 이미지 삽입: ${data.webPath}`,
+    );
     await loadImages(slug);
-    // Persist so preview shows the <img> immediately.
-    await save(nextBody);
+    // Persist so preview/home cards see the <img> and cover immediately.
+    await save(nextBody, !coverImage ? data.webPath : undefined);
   }
 
   async function removeImage(filename: string) {
@@ -381,6 +390,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         <p className="mt-1 text-xs text-muted-foreground">
           본문에 커서를 둔 뒤 「본문 이미지 첨부」/「본문 삽입」을 누르면 그 자리에{" "}
           <code className="rounded bg-muted px-1">&lt;img&gt;</code>가 들어가고 자동 저장됩니다.
+          커버(섬네일)가 비어 있으면 첫 본문 이미지를 홈/어드민 목록 섬네일로 씁니다.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button

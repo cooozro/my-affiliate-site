@@ -39,6 +39,19 @@ export type ManualPostView = {
   draft: boolean;
 };
 
+
+function firstBodyImageSrc(body: string): string | undefined {
+  const m = body.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+  const src = m?.[1]?.trim();
+  if (!src) return undefined;
+  // Prefer site-local post images for cover/list cards.
+  if (src.startsWith("/images/posts/") || src.startsWith("/api/media/posts/")) {
+    return src.replace("/api/media/posts/", "/images/posts/");
+  }
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return undefined;
+}
+
 function slugify(input: string): string {
   // Strip Hangul first so leftover separators do not leave a trailing "-".
   return input
@@ -163,6 +176,24 @@ export async function saveManualPostFromKo(
   const now = new Date().toISOString();
   const date = kstDateString();
   const prevKo = slugExists(slug) ? readPostFile(slug, "ko").data : {};
+  const prevCover =
+    typeof prevKo.coverImage === "string" ? String(prevKo.coverImage) : "";
+  const coverFromBody = firstBodyImageSrc(bodyKo);
+  const coverImage =
+    (payload.coverImage && payload.coverImage.trim()) ||
+    prevCover ||
+    coverFromBody ||
+    "";
+  const coverAlt =
+    (payload.coverImageAltKo && payload.coverImageAltKo.trim()) ||
+    (typeof prevKo.coverImageAltKo === "string"
+      ? String(prevKo.coverImageAltKo)
+      : "") ||
+    (typeof prevKo.coverImageAlt === "string"
+      ? String(prevKo.coverImageAlt)
+      : "") ||
+    titleKo;
+
   const shared = {
     draft: prevKo.draft ?? true,
     date: prevKo.date ?? date,
@@ -174,11 +205,16 @@ export async function saveManualPostFromKo(
     contentProfile: "editorial",
     shareTop: payload.shareTop !== false,
     shareBottom: payload.shareBottom !== false,
-    ...(payload.coverImage ? { coverImage: payload.coverImage } : {}),
-    ...(payload.coverImageAltKo
+    ...(coverImage
       ? {
-          coverImageAltKo: payload.coverImageAltKo,
-          coverImageAlt: payload.coverImageAltKo,
+          coverImage,
+          coverImageAlt: coverAlt,
+          coverImageAltKo: coverAlt,
+          coverImageProvider:
+            prevKo.coverImageProvider ??
+            (coverFromBody && coverImage === coverFromBody
+              ? "manual-body"
+              : "admin-upload"),
         }
       : {}),
   };
