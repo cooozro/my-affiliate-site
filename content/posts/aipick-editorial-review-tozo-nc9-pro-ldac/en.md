@@ -1,8 +1,7 @@
 ---
-draft: true
+draft: false
 date: '2026-09-29'
-createdAt: '2026-09-29T02:46:33.559Z'
-updatedAt: '2026-09-29T02:46:33.559Z'
+updatedAt: '2026-09-29T02:58:46.471Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -28,6 +27,7 @@ tags:
   - 내돈내산이어폰
   - 블루투스이어폰추천
   - 고음질이어폰
+publishedAt: '2026-09-29T02:58:46.471Z'
 ---
 <article class="review-post">
   <header class="post-header">
