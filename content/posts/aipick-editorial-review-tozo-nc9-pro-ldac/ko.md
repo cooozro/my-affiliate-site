@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-29'
 createdAt: '2026-09-29T04:49:16.233Z'
-updatedAt: '2026-09-29T05:12:50.727Z'
+updatedAt: '2026-09-29T05:15:01.984Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -36,9 +36,6 @@ tags:
 
   <section class="intro-section">
     <p>테크 제품을 선택할 때 소비자들이 가장 많이 범하는 오류는 단순히 '브랜드 네임'이나 '스펙시트의 숫자'만 보고 구매했다가 실사용에서 실망하는 경우입니다. 특히 무선 이어폰 시장은 저가형 공산품부터 수십만 원대 하이엔드까지 선택지가 너무 넓어 혼란스럽기 그지없습니다.</p>
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-test.png" alt="cursor-insert-test" loading="lazy" style="max-width:100%;height:auto;" />
-
     <p>이번에 AIPICK 전문 리뷰팀이 직접 공수하여 철저히 검증한 <strong>TOZO NC9 Pro</strong>는 이러한 고민을 정면으로 돌파하는 모델입니다. 과연 이 제품이 일상과 사운드 환경에서 어떤 퍼포먼스를 보여주는지, 스펙과 실사용 경험을 바탕으로 낱낱이 파헤쳐 보겠습니다.</p>
   </section>
 
