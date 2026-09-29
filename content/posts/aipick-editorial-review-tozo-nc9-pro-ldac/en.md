@@ -1,7 +1,7 @@
 ---
-draft: false
+draft: true
 date: '2026-09-29'
-updatedAt: '2026-09-29T02:58:46.471Z'
+updatedAt: '2026-09-29T04:49:16.233Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -28,6 +28,7 @@ tags:
   - 블루투스이어폰추천
   - 고음질이어폰
 publishedAt: '2026-09-29T02:58:46.471Z'
+createdAt: '2026-09-29T04:49:16.233Z'
 ---
 <article class="review-post">
   <header class="post-header">
