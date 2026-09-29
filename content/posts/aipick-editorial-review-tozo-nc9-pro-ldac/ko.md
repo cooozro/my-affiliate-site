@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-29'
 createdAt: '2026-09-29T04:49:16.233Z'
-updatedAt: '2026-09-29T05:46:29.875Z'
+updatedAt: '2026-09-29T05:47:12.165Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -42,8 +42,10 @@ tags:
 
 <img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:8
 
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_06.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
-0%;height:auto;" />
+
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+
 
   <section class="feature-section">
     <h3>1. 첫인상과 혁신적인 하드웨어: 1.47인치 스마트 디스플레이의 탑재</h3>
