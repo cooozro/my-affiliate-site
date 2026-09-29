@@ -155,12 +155,18 @@ const markdownComponents: Components = {
       return null;
     }
 
+    // Body uploads are on GitHub before Vercel finishes copying public/.
+    // Route through /api/media so preview works immediately after insert.
+    const resolvedSrc = src.startsWith("/images/posts/")
+      ? src.replace("/images/posts/", "/api/media/posts/")
+      : src;
+
     return (
       <span className="my-8 block overflow-hidden rounded-xl border border-border/60">
         {/* Manual HTML / body uploads: native img avoids next/image remote allowlist gaps */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={resolvedSrc}
           alt={typeof alt === "string" ? alt : ""}
           className="h-auto w-full object-cover"
           loading="lazy"
