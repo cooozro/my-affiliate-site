@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-29'
 createdAt: '2026-09-29T04:49:16.233Z'
-updatedAt: '2026-09-29T05:47:12.165Z'
+updatedAt: '2026-09-29T05:47:30.840Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -44,7 +44,7 @@ tags:
 
 
 
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:80%;height:auto;" />
 
 
   <section class="feature-section">
