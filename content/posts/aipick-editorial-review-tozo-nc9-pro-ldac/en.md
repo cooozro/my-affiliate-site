@@ -1,4 +1,5 @@
 ---
+
 draft: false
 date: '2026-09-29'
 createdAt: '2026-09-29T05:50:31.314Z'
@@ -28,6 +29,9 @@ tags:
   - 내돈내산이어폰
   - 블루투스이어폰추천
   - 고음질이어폰
+coverImage: /images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg
+coverImageAlt: '[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남'
+coverImageProvider: manual-body
 ---
 <article class="review-post">
   <header class="post-header">
