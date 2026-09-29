@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-29'
 createdAt: '2026-09-29T04:49:16.233Z'
-updatedAt: '2026-09-29T05:45:53.179Z'
+updatedAt: '2026-09-29T05:46:05.485Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
