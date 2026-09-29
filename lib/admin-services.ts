@@ -56,13 +56,26 @@ export async function writeGithubFile(
   message: string,
   sha?: string,
 ) {
+  let resolvedSha = sha;
+  if (!resolvedSha) {
+    try {
+      const existing = await readGithubFile(path);
+      resolvedSha = existing.sha;
+    } catch (error) {
+      const messageText =
+        error instanceof Error ? error.message : String(error);
+      // 404 = create new file (no sha). Anything else is fatal.
+      if (!messageText.includes("404")) throw error;
+    }
+  }
+
   await githubRequest(path, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message,
       content: Buffer.from(content, "utf8").toString("base64"),
-      ...(sha ? { sha } : {}),
+      ...(resolvedSha ? { sha: resolvedSha } : {}),
     }),
   });
 }
@@ -130,13 +143,25 @@ export async function writeGithubBinaryFile(
   message: string,
   sha?: string,
 ) {
+  let resolvedSha = sha;
+  if (!resolvedSha) {
+    try {
+      const existing = await readGithubFile(filePath);
+      resolvedSha = existing.sha;
+    } catch (error) {
+      const messageText =
+        error instanceof Error ? error.message : String(error);
+      if (!messageText.includes("404")) throw error;
+    }
+  }
+
   await githubRequest(filePath, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message,
       content: buffer.toString("base64"),
-      ...(sha ? { sha } : {}),
+      ...(resolvedSha ? { sha: resolvedSha } : {}),
     }),
   });
 }
