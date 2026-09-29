@@ -1,7 +1,8 @@
 ---
 draft: false
 date: '2026-09-29'
-updatedAt: '2026-09-29T05:48:08.722Z'
+createdAt: '2026-09-29T05:50:31.314Z'
+updatedAt: '2026-09-29T05:50:31.314Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -27,7 +28,6 @@ tags:
   - 내돈내산이어폰
   - 블루투스이어폰추천
   - 고음질이어폰
-publishedAt: '2026-09-29T05:48:08.722Z'
 ---
 <article class="review-post">
   <header class="post-header">
@@ -39,13 +39,7 @@ publishedAt: '2026-09-29T05:48:08.722Z'
     <p>이번에 AIPICK 전문 리뷰팀이 직접 공수하여 철저히 검증한 <strong>TOZO NC9 Pro</strong>는 이러한 고민을 정면으로 돌파하는 모델입니다. 과연 이 제품이 일상과 사운드 환경에서 어떤 퍼포먼스를 보여주는지, 스펙과 실사용 경험을 바탕으로 낱낱이 파헤쳐 보겠습니다.</p>
   </section>
 
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:8
-
-
-
 <img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:80%;height:auto;" />
-
 
   <section class="feature-section">
     <h3>1. 첫인상과 혁신적인 하드웨어: 1.47인치 스마트 디스플레이의 탑재</h3>
