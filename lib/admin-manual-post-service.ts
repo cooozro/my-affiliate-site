@@ -163,14 +163,12 @@ export async function saveManualPostFromKo(
       bodyKo,
       tagsKo: tags,
     });
-  } catch {
-    translated = false;
-    en = {
-      titleEn: titleKo,
-      descriptionEn: (payload.descriptionKo ?? titleKo).slice(0, 160),
-      bodyEn: bodyKo,
-      tagsEn: tags,
-    };
+  } catch (error) {
+    // Do not silently publish Korean as EN — locale switch would look broken.
+    const detail = error instanceof Error ? error.message : String(error);
+    throw new Error(
+      `영문 번역 실패: ${detail}. Vercel 환경변수에 DEEPSEEK_API_KEY(또는 OPENAI_API_KEY)를 넣었는지 확인하세요.`,
+    );
   }
 
   const now = new Date().toISOString();
