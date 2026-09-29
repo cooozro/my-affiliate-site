@@ -9,7 +9,12 @@ export default async function AdminManualWriteEditPage({ params }: Props) {
   const hasSession = await getAdminSessionFromCookies();
   if (!hasSession) redirect("/admin/login");
 
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const decoded = decodeURIComponent(rawSlug);
+  const slug = decoded.replace(/-+$/g, "") || decoded;
+  if (slug !== decoded) {
+    redirect(`/admin/write/${encodeURIComponent(slug)}`);
+  }
 
   return (
     <main className="min-h-screen bg-background">

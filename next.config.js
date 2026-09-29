@@ -17,6 +17,10 @@ const nextConfig = {
   outputFileTracingExcludes: {
     "*": ["./node_modules/@cursor/**"],
   },
+  // Admin preview/publish read markdown at runtime — keep posts in every function.
+  outputFileTracingIncludes: {
+    "/*": ["./content/posts/**/*", "./scripts/lib/**/*"],
+  },
 };
 
 module.exports = nextConfig;

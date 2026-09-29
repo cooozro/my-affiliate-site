@@ -4,7 +4,9 @@ import matter from "gray-matter";
 import {
   assertGithubAdminConfigured,
   readPostFile,
+  readPostFileAsync,
   slugExists,
+  slugExistsAsync,
   usesRemotePostStore,
   writePostFile,
 } from "@/lib/posts-admin";
@@ -38,13 +40,14 @@ export type ManualPostView = {
 };
 
 function slugify(input: string): string {
+  // Strip Hangul first so leftover separators do not leave a trailing "-".
   return input
     .trim()
     .toLowerCase()
-    .replace(/[^a-z0-9가-힣]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/[가-힣]/g, "")
+    .replace(/[가-힣]+/g, " ")
+    .replace(/[^a-z0-9]+/g, "-")
     .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
     .slice(0, 80);
 }
 
@@ -90,9 +93,8 @@ async function writeBothLocales(
 }
 
 export async function loadManualPost(slug: string): Promise<ManualPostView | null> {
-  if (!slugExists(slug)) return null;
   try {
-    const { data, content } = readPostFile(slug, "ko");
+    const { data, content } = await readPostFileAsync(slug, "ko");
     return {
       slug,
       titleKo: String(data.title ?? ""),
@@ -132,7 +134,7 @@ export async function saveManualPostFromKo(
       slug = `${base}-${n}`;
       n += 1;
     }
-  } else if (!slugExists(slug)) {
+  } else if (!(await slugExistsAsync(slug))) {
     throw new Error(`글을 찾을 수 없습니다: ${slug}`);
   }
 

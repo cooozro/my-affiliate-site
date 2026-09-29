@@ -23,6 +23,7 @@ import {
   publishPostLocally,
   readPostFile,
   slugExists,
+  slugExistsAsync,
   usesRemotePostStore,
   writePostFile,
   type AdminPostRow,
@@ -507,21 +508,49 @@ export function getAdminAutomationStatus() {
   return getAutomationStatus();
 }
 
+async function materializePostRootForValidation(slug: string): Promise<string> {
+  if (slugExists(slug)) return process.cwd();
+  if (!(usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim())) {
+    throw new Error(`Post not found: ${slug}`);
+  }
+  const os = await import("node:os");
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const tmpRoot = fs.mkdtempSync(path.join(os.tmpdir(), "aipick-pub-"));
+  const dir = path.join(tmpRoot, "content", "posts", slug);
+  fs.mkdirSync(dir, { recursive: true });
+  let wrote = false;
+  for (const locale of ["en", "ko"] as const) {
+    try {
+      const { content } = await readGithubFile(
+        `content/posts/${slug}/${locale}.md`,
+      );
+      fs.writeFileSync(path.join(dir, `${locale}.md`), content, "utf8");
+      wrote = true;
+    } catch {
+      /* locale may be missing */
+    }
+  }
+  if (!wrote) throw new Error(`Post not found: ${slug}`);
+  return tmpRoot;
+}
+
 async function validateForPublish(slug: string): Promise<string[]> {
   const { integrityIssuesFlat, runPublishIntegrityGate } = await import(
     "../scripts/lib/publish-integrity.mjs"
   );
+  const root = await materializePostRootForValidation(slug);
   try {
     const { repairRelatedGuidesForPost } = await import(
       "../scripts/lib/related-guides.mjs"
     );
-    repairRelatedGuidesForPost(process.cwd(), slug, { includeDrafts: true });
+    repairRelatedGuidesForPost(root, slug, { includeDrafts: true });
   } catch {
     /* best-effort */
   }
   const { state } = await loadAutomationState();
   const applyRepair = !usesRemotePostStore();
-  const result = runPublishIntegrityGate(process.cwd(), slug, {
+  const result = runPublishIntegrityGate(root, slug, {
     phase: "publish",
     state,
     applyRepair,
@@ -536,7 +565,7 @@ export async function publishPost(slug: string) {
     );
   }
 
-  if (!slugExists(slug)) {
+  if (!(await slugExistsAsync(slug))) {
     throw new Error(`Post not found: ${slug}`);
   }
 

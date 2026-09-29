@@ -243,7 +243,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
           </button>
           {slug ? (
             <a
-              href={`/admin/preview/${slug}?locale=ko`}
+              href={`/admin/preview/${encodeURIComponent(slug)}?locale=ko`}
               target="_blank"
               rel="noreferrer"
               className="rounded-lg border border-border px-4 py-2 text-sm"

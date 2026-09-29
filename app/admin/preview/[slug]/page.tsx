@@ -6,7 +6,8 @@ import { isValidLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
 import { isAdminPublishBlocked } from "@/lib/admin-only-posts";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import { getPostSlugs } from "@/lib/posts";
+import { getAdminPreviewPost } from "@/lib/admin-preview-post";
 import { siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -27,8 +28,14 @@ export default async function AdminPreviewPage({
     redirect("/admin/login");
   }
 
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
   const { locale: localeParam } = await searchParams;
+  const decoded = decodeURIComponent(rawSlug);
+  const slug = decoded.replace(/-+$/g, "") || decoded;
+  if (slug !== decoded) {
+    const q = localeParam && isValidLocale(localeParam) ? `?locale=${localeParam}` : "";
+    redirect(`/admin/preview/${encodeURIComponent(slug)}${q}`);
+  }
 
   const defaultLocale = (): Locale => {
     if (isAdminPublishBlocked(slug)) return "ko";
@@ -44,7 +51,7 @@ export default async function AdminPreviewPage({
   let post;
   try {
     post = await enrichPost(
-      getPostBySlug(slug, { locale, includeDrafts: true }),
+      await getAdminPreviewPost(slug, locale),
       locale,
     );
   } catch {

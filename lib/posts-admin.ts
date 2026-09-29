@@ -292,6 +292,44 @@ export function slugExists(slug: string): boolean {
   return fs.existsSync(path.join(POSTS_DIR, slug));
 }
 
+/** Local bundle first, then GitHub — Vercel deploys lag behind admin saves. */
+export async function slugExistsAsync(slug: string): Promise<boolean> {
+  if (slugExists(slug)) return true;
+  if (!(usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim())) return false;
+  for (const locale of ["en", "ko"] as const) {
+    try {
+      await readGithubFile(`content/posts/${slug}/${locale}.md`);
+      return true;
+    } catch {
+      /* try other locale */
+    }
+  }
+  return false;
+}
+
+/** Read markdown from deploy bundle, or GitHub when the bundle is stale. */
+export async function readPostFileAsync(
+  slug: string,
+  locale: "en" | "ko",
+): Promise<{ data: Record<string, unknown>; content: string; filePath: string }> {
+  const filePath = path.join(POSTS_DIR, slug, `${locale}.md`);
+  if (fs.existsSync(filePath)) {
+    return readPostFile(slug, locale);
+  }
+  if (!(usesRemotePostStore() && process.env.GITHUB_TOKEN?.trim())) {
+    throw new Error(`Post file not found: ${filePath}`);
+  }
+  const { content: raw } = await readGithubFile(
+    `content/posts/${slug}/${locale}.md`,
+  );
+  const { data, content } = matter(raw);
+  return {
+    data: data as Record<string, unknown>,
+    content: content.trim(),
+    filePath: `github:content/posts/${slug}/${locale}.md`,
+  };
+}
+
 export function isServerlessRuntime(): boolean {
   return (
     process.env.VERCEL === "1" ||
