@@ -112,6 +112,8 @@ export function ArticleLayout({
   );
   const body = stripTransparencyMarkdown(post.content);
   const noticeLabel = locale === "ko" ? "투명성 고지" : "Transparency";
+  const showTransparencyNotice =
+    !(post.manualOrigin === true || post.writingProvider === "manual");
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -178,14 +180,16 @@ export function ArticleLayout({
           </figure>
         ) : null}
 
-        <aside
-          className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground"
-          data-site-engine="transparency"
-          role="note"
-        >
-          <strong className="text-foreground">{noticeLabel}:</strong>{" "}
-          {transparencyNoticeText(locale)}
-        </aside>
+        {showTransparencyNotice ? (
+          <aside
+            className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground"
+            data-site-engine="transparency"
+            role="note"
+          >
+            <strong className="text-foreground">{noticeLabel}:</strong>{" "}
+            {transparencyNoticeText(locale)}
+          </aside>
+        ) : null}
 
         {post.liveDataNote ? (
           <p className="mb-8 rounded-lg border border-border/60 bg-muted/30 px-4 py-3 font-sans text-sm text-muted-foreground">

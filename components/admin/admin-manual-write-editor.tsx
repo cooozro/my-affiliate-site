@@ -27,6 +27,8 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
   const [error, setError] = useState("");
   const coverInputRef = useRef<HTMLInputElement>(null);
   const bodyImageInputRef = useRef<HTMLInputElement>(null);
+  const bodyTextareaRef = useRef<HTMLTextAreaElement>(null);
+  const bodySelectionRef = useRef<{ start: number; end: number }>({ start: 0, end: 0 });
 
   const loadImages = useCallback(async (s: string) => {
     if (!s) return;
@@ -150,6 +152,36 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     window.close();
   }
 
+
+  function rememberBodySelection() {
+    const el = bodyTextareaRef.current;
+    if (!el) return;
+    bodySelectionRef.current = {
+      start: el.selectionStart ?? el.value.length,
+      end: el.selectionEnd ?? el.value.length,
+    };
+  }
+
+  function insertAtCursor(snippet: string) {
+    const el = bodyTextareaRef.current;
+    const value = bodyKo;
+    const sel = bodySelectionRef.current;
+    const start = el ? el.selectionStart : sel.start;
+    const end = el ? el.selectionEnd : sel.end;
+    const at = Number.isFinite(start) ? start : value.length;
+    const atEnd = Number.isFinite(end) ? end : at;
+    const next = `${value.slice(0, at)}${snippet}${value.slice(atEnd)}`;
+    setBodyKo(next);
+    const caret = at + snippet.length;
+    bodySelectionRef.current = { start: caret, end: caret };
+    requestAnimationFrame(() => {
+      const box = bodyTextareaRef.current;
+      if (!box) return;
+      box.focus();
+      box.setSelectionRange(caret, caret);
+    });
+  }
+
   async function uploadCover(file: File) {
     if (!slug) {
       setError("저장 후 커버를 업로드하세요.");
@@ -185,9 +217,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? "이미지 업로드 실패");
-    const insert = `\n\n<img src="${data.webPath}" alt="${titleKo.slice(0, 80)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
-    setBodyKo((prev) => `${prev}${insert}`);
-    setMessage(`본문에 이미지 삽입: ${data.webPath}`);
+    const insert = `\n\n<img src="${data.webPath}" alt="${(titleKo || "image").slice(0, 80)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
+    insertAtCursor(insert);
+    setMessage(`커서 위치에 이미지 삽입: ${data.webPath}`);
     await loadImages(slug);
   }
 
@@ -204,8 +236,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
   }
 
   function insertImageTag(webPath: string) {
-    const tag = `<img src="${webPath}" alt="${titleKo.slice(0, 60)}" loading="lazy" style="max-width:100%;height:auto;" />`;
-    setBodyKo((prev) => `${prev}\n\n${tag}\n`);
+    const tag = `\n\n<img src="${webPath}" alt="${(titleKo || "image").slice(0, 60)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
+    insertAtCursor(tag);
+    setMessage(`커서 위치에 이미지 삽입: ${webPath}`);
   }
 
   if (loading) {
@@ -218,7 +251,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         <div>
           <h1 className="text-xl font-semibold">수동 글쓰기</h1>
           <p className="mt-1 text-xs text-muted-foreground">
-            한국어만 작성 · 저장 시 영문(en.md) 자동 번역 · 스케줄러 카운트 제외
+            한국어 HTML/Markdown 작성 · 저장 시 영문 자동 번역 · 스케줄러 카운트 제외 · 투명성 고지 없음
           </p>
           {slug ? (
             <p className="mt-1 font-mono text-xs text-muted-foreground">{slug}</p>
@@ -332,6 +365,10 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
 
       <section className="rounded-xl border border-border p-4">
         <h2 className="text-sm font-semibold">이미지</h2>
+        <p className="mt-1 text-xs text-muted-foreground">
+          본문 텍스트 영역에서 커서를 둔 뒤 「본문 이미지 첨부」또는 「본문 삽입」을 누르면 그 위치에{" "}
+          <code className="rounded bg-muted px-1">&lt;img&gt;</code> 태그가 들어갑니다.
+        </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button
             type="button"
@@ -419,13 +456,19 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
 
       <label className="block text-sm">
         <span className="text-xs font-medium text-muted-foreground">
-          본문 (KO) — HTML/Markdown
+          본문 (KO) — HTML 붙여넣기 / Markdown 모두 가능
         </span>
         <textarea
+          ref={bodyTextareaRef}
           value={bodyKo}
           onChange={(e) => setBodyKo(e.target.value)}
+          onSelect={rememberBodySelection}
+          onClick={rememberBodySelection}
+          onKeyUp={rememberBodySelection}
           rows={22}
+          spellCheck={false}
           className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 font-mono text-xs leading-relaxed"
+          placeholder="HTML 또는 Markdown을 붙여넣으세요. <article>, <p>, <img> 등 HTML 태그 그대로 렌더됩니다."
         />
       </label>
     </div>

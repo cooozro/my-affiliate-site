@@ -31,6 +31,9 @@ export type PostMeta = {
     | "explainer"
     | "checklist"
     | "editorial";
+  /** Human-written in admin manual editor — skip automation chrome like transparency notice. */
+  manualOrigin?: boolean;
+  writingProvider?: string;
 };
 
 export type Post = PostMeta & {
@@ -121,6 +124,13 @@ function parsePostFile(slug: string, locale: Locale): Post {
     publishedAt: data.publishedAt ? String(data.publishedAt) : undefined,
     contentProfile: data.contentProfile
       ? String(data.contentProfile)
+      : undefined,
+    manualOrigin:
+      data.manualOrigin === true ||
+      data.manualOrigin === "true" ||
+      data.writingProvider === "manual",
+    writingProvider: data.writingProvider
+      ? String(data.writingProvider)
       : undefined,
     content: content.trim(),
   };

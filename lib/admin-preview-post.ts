@@ -36,9 +36,17 @@ function parseMarkdown(slug: string, raw: string): Post {
     contentProfile: data.contentProfile
       ? (String(data.contentProfile) as Post["contentProfile"])
       : undefined,
+    manualOrigin:
+      data.manualOrigin === true ||
+      data.manualOrigin === "true" ||
+      data.writingProvider === "manual",
+    writingProvider: data.writingProvider
+      ? String(data.writingProvider)
+      : undefined,
     content: content.trim(),
   };
 }
+
 
 /**
  * Admin preview must see the post immediately after GitHub save,

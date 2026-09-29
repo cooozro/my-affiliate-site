@@ -1,8 +1,8 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import type { Components } from "react-markdown";
 import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { headingIdForHelpNav } from "@/lib/help-nav";
 
 function plainTextFromChildren(children: ReactNode): string {
@@ -151,13 +151,13 @@ const markdownComponents: Components = {
 
     return (
       <span className="my-8 block overflow-hidden rounded-xl border border-border/60">
-        <Image
+        {/* Manual HTML / body uploads: native img avoids next/image remote allowlist gaps */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={src}
-          alt={alt ?? ""}
-          width={1200}
-          height={675}
+          alt={typeof alt === "string" ? alt : ""}
           className="h-auto w-full object-cover"
-          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
         />
       </span>
     );
@@ -212,6 +212,7 @@ export function MarkdownContent({ content, className = "" }: MarkdownContentProp
     <div className={`prose-custom ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={markdownComponents}
         urlTransform={markdownUrlTransform}
       >
