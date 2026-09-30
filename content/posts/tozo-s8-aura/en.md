@@ -1,8 +1,8 @@
 ---
 draft: true
 date: '2026-09-30'
-createdAt: '2026-09-30T02:39:24.766Z'
-updatedAt: '2026-09-30T02:39:24.766Z'
+createdAt: '2026-09-30T02:39:32.200Z'
+updatedAt: '2026-09-30T02:39:32.200Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
