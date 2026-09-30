@@ -176,15 +176,16 @@ export async function saveManualPostFromKo(
     });
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error);
-    const missingKey = /No LLM API key set|DEEPSEEK_API_KEY|OPENAI_API_KEY/i.test(
-      detail,
-    );
+    const missingKey =
+      /No free translate key set|GEMINI_API_KEY|GOOGLE_TRANSLATE_API_KEY|GOOGLE_SERVICE_ACCOUNT_JSON/i.test(
+        detail,
+      );
     if (!missingKey) {
       throw new Error(`영문 번역 실패: ${detail}`);
     }
 
-    // Vercel admin has no writer key; scheduler already has DeepSeek/OpenAI in
-    // GitHub Actions secrets — queue the same path instead of failing save.
+    // Vercel may lack Gemini/Google Translate keys — queue GitHub Actions
+    // which uses the free translate path (never DeepSeek for locale translate).
     translated = false;
     translationQueued = true;
     en = {

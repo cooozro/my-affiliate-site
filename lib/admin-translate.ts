@@ -1,6 +1,13 @@
 import "server-only";
 
-/** KO → EN 번역 (DeepSeek/OpenAI). HTML/Markdown 구조 유지. */
+import {
+  hasFreeTranslateConfig,
+  translatePostFields,
+} from "../scripts/automation/free-translate.mjs";
+
+export { hasFreeTranslateConfig };
+
+/** KO → EN 번역 (Gemini Free → Google Cloud Translate). DeepSeek/OpenAI 사용 안 함. */
 export async function translateManualPostKoToEn(input: {
   titleKo: string;
   descriptionKo?: string;
@@ -11,41 +18,53 @@ export async function translateManualPostKoToEn(input: {
   descriptionEn: string;
   bodyEn: string;
   tagsEn: string[];
+  provider?: string;
+  model?: string;
 }> {
-  const { chatJsonCompletion } = await import(
-    "../scripts/automation/llm-chat.mjs"
-  );
-
-  const tagsLine =
-    input.tagsKo && input.tagsKo.length
-      ? `Korean tags: ${input.tagsKo.join(", ")}`
-      : "";
-
-  const { article } = await chatJsonCompletion({
-    temperature: 0.35,
-    system: `You translate Korean affiliate blog posts to natural American English for aipick.shop.
-Preserve HTML tags, attributes, image paths (/images/posts/...), and internal link paths exactly.
-Return JSON only: { "titleEn": string, "descriptionEn": string (50-155 chars), "bodyEn": string, "tagsEn": string[] (≥3 SEO tags in English) }`,
-    user: `Title (KO): ${input.titleKo}
-${input.descriptionKo ? `Description (KO): ${input.descriptionKo}\n` : ""}${tagsLine}
-
-Body (KO):
-${input.bodyKo}`,
+  const result = await translatePostFields({
+    direction: "ko-to-en",
+    title: input.titleKo,
+    description: input.descriptionKo,
+    body: input.bodyKo,
+    tags: input.tagsKo,
   });
-
-  const parsed = article as Record<string, unknown>;
-  const titleEn = String(parsed.titleEn ?? "").trim();
-  const bodyEn = String(parsed.bodyEn ?? "").trim();
-  if (!titleEn || !bodyEn) {
-    throw new Error("번역 결과가 비어 있습니다 — LLM 키/한도를 확인하세요.");
-  }
-
   return {
-    titleEn,
-    descriptionEn: String(parsed.descriptionEn ?? "").trim().slice(0, 160),
-    bodyEn,
-    tagsEn: Array.isArray(parsed.tagsEn)
-      ? parsed.tagsEn.map((t) => String(t).trim()).filter(Boolean).slice(0, 8)
-      : [],
+    titleEn: result.titleEn,
+    descriptionEn: result.descriptionEn,
+    bodyEn: result.bodyEn,
+    tagsEn: result.tagsEn,
+    provider: result.provider,
+    model: result.model,
+  };
+}
+
+/** EN → KO 번역 (Gemini Free → Google Cloud Translate). */
+export async function translateManualPostEnToKo(input: {
+  titleEn: string;
+  descriptionEn?: string;
+  bodyEn: string;
+  tagsEn?: string[];
+}): Promise<{
+  titleKo: string;
+  descriptionKo: string;
+  bodyKo: string;
+  tagsKo: string[];
+  provider?: string;
+  model?: string;
+}> {
+  const result = await translatePostFields({
+    direction: "en-to-ko",
+    title: input.titleEn,
+    description: input.descriptionEn,
+    body: input.bodyEn,
+    tags: input.tagsEn,
+  });
+  return {
+    titleKo: result.titleKo,
+    descriptionKo: result.descriptionKo,
+    bodyKo: result.bodyKo,
+    tagsKo: result.tagsKo,
+    provider: result.provider,
+    model: result.model,
   };
 }
