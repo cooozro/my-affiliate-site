@@ -176,16 +176,12 @@ export async function saveManualPostFromKo(
     });
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error);
-    const missingKey =
-      /No free translate key set|GEMINI_API_KEY|GOOGLE_TRANSLATE_API_KEY|GOOGLE_SERVICE_ACCOUNT_JSON/i.test(
-        detail,
-      );
-    if (!missingKey) {
+    // On Vercel: never hard-fail the save on translate errors — queue Actions
+    // (main already has the chunked Gemini path). Local/dev without GitHub still throws.
+    if (!usesRemotePostStore()) {
       throw new Error(`영문 번역 실패: ${detail}`);
     }
 
-    // Vercel may lack Gemini/Google Translate keys — queue GitHub Actions
-    // which uses the free translate path (never DeepSeek for locale translate).
     translated = false;
     translationQueued = true;
     en = {
