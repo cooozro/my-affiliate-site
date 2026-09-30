@@ -10,7 +10,11 @@ import {
   usesRemotePostStore,
   writePostFile,
 } from "@/lib/posts-admin";
-import { writeGithubFile, readGithubFile } from "@/lib/admin-services";
+import {
+  writeGithubFile,
+  readGithubFile,
+  dispatchManualTranslateWorkflow,
+} from "@/lib/admin-services";
 import { translateManualPostKoToEn } from "@/lib/admin-translate";
 import { notifySelahimAipickSync } from "@/lib/selahim-sync";
 
@@ -132,7 +136,13 @@ export async function loadManualPost(slug: string): Promise<ManualPostView | nul
 export async function saveManualPostFromKo(
   payload: ManualPostPayload,
   existingSlug?: string,
-): Promise<{ slug: string; mode: "local" | "github"; translated: boolean }> {
+): Promise<{
+  slug: string;
+  mode: "local" | "github";
+  translated: boolean;
+  translationQueued?: boolean;
+  translateDetail?: string;
+}> {
   const titleKo = payload.titleKo.trim();
   const bodyKo = payload.bodyKo.trim();
   if (!titleKo) throw new Error("제목을 입력하세요.");
@@ -155,6 +165,7 @@ export async function saveManualPostFromKo(
   const tags = tagsKo.length >= 3 ? tagsKo : defaultTags(titleKo);
 
   let translated = true;
+  let translationQueued = false;
   let en: Awaited<ReturnType<typeof translateManualPostKoToEn>>;
   try {
     en = await translateManualPostKoToEn({
@@ -164,11 +175,24 @@ export async function saveManualPostFromKo(
       tagsKo: tags,
     });
   } catch (error) {
-    // Do not silently publish Korean as EN — locale switch would look broken.
     const detail = error instanceof Error ? error.message : String(error);
-    throw new Error(
-      `영문 번역 실패: ${detail}. Vercel 환경변수에 DEEPSEEK_API_KEY(또는 OPENAI_API_KEY)를 넣었는지 확인하세요.`,
+    const missingKey = /No LLM API key set|DEEPSEEK_API_KEY|OPENAI_API_KEY/i.test(
+      detail,
     );
+    if (!missingKey) {
+      throw new Error(`영문 번역 실패: ${detail}`);
+    }
+
+    // Vercel admin has no writer key; scheduler already has DeepSeek/OpenAI in
+    // GitHub Actions secrets — queue the same path instead of failing save.
+    translated = false;
+    translationQueued = true;
+    en = {
+      titleEn: titleKo,
+      descriptionEn: (payload.descriptionKo ?? titleKo).slice(0, 160),
+      bodyEn: bodyKo,
+      tagsEn: tags,
+    };
   }
 
   const now = new Date().toISOString();
@@ -231,14 +255,37 @@ export async function saveManualPostFromKo(
     tags: en.tagsEn.length >= 3 ? en.tagsEn : tags,
   };
 
+  if (translationQueued) {
+    (enData as Record<string, unknown>).enTranslationPending = true;
+  } else {
+    delete (enData as Record<string, unknown>).enTranslationPending;
+  }
+
   const mode = await writeBothLocales(
     slug,
     { data: koData, content: bodyKo },
     { data: enData, content: en.bodyEn },
   );
 
+  let translateDetail: string | undefined;
+  if (translationQueued) {
+    const dispatched = await dispatchManualTranslateWorkflow(slug);
+    translateDetail = dispatched.detail;
+    if (!dispatched.ok) {
+      throw new Error(
+        `저장은 됐지만 스케줄러 번역 큐 호출 실패: ${dispatched.detail}`,
+      );
+    }
+  }
+
   void notifySelahimAipickSync({ slug, refillBuffer: false });
-  return { slug, mode, translated };
+  return {
+    slug,
+    mode,
+    translated,
+    translationQueued,
+    translateDetail,
+  };
 }
 
 export async function readManualPostMarkdown(

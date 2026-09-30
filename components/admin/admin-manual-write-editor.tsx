@@ -105,7 +105,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
       setMessage(
         data.translated
           ? "저장 완료 — 영문(en.md) 자동 번역 반영됨"
-          : "저장 완료 (번역 API 없음 — KO와 동일 본문으로 EN 저장)",
+          : data.translationQueued
+            ? "저장 완료 — 영문은 스케줄러와 같은 GitHub Actions(DeepSeek)로 번역 예약됨. 1~2분 후 EN 확인"
+            : "저장 완료",
       );
       await loadImages(data.slug ?? slug);
     } catch (e) {

@@ -1,0 +1,46 @@
+name: Manual translate KO→EN
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Post slug under content/posts
+        required: true
+        type: string
+
+concurrency:
+  group: git-write-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Translate KO → EN (scheduler LLM keys)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          SLUG: ${{ inputs.slug }}
+        run: node scripts/automation/manual-translate-en.mjs
+      - name: Commit EN if changed
+        run: |
+          if git diff --quiet -- "content/posts/${{ inputs.slug }}/en.md"; then
+            echo "No EN changes"
+            exit 0
+          fi
+          git config user.name "aipick-automation"
+          git config user.email "automation@aipick.shop"
+          git add "content/posts/${{ inputs.slug }}/en.md"
+          git commit -m "admin: translate EN for ${{ inputs.slug }}"
+          git push origin HEAD:main

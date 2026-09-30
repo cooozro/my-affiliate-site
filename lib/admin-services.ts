@@ -203,6 +203,41 @@ export async function commitPostChanges(
   }
 }
 
+
+/** Queue KO→EN using the same GitHub Actions secrets as the scheduler writer. */
+export async function dispatchManualTranslateWorkflow(slug: string): Promise<{
+  ok: boolean;
+  detail: string;
+}> {
+  const token = process.env.GITHUB_TOKEN?.trim();
+  if (!token) {
+    return { ok: false, detail: "GITHUB_TOKEN missing — cannot dispatch translate workflow" };
+  }
+  const repo = process.env.GITHUB_REPO?.trim() ?? "cooozro/my-affiliate-site";
+  const url = `https://api.github.com/repos/${repo}/actions/workflows/manual-translate-en.yml/dispatches`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ref: "main",
+      inputs: { slug },
+    }),
+  });
+  if (res.status === 204) {
+    return { ok: true, detail: `dispatched manual-translate-en for ${slug}` };
+  }
+  const body = await res.text().catch(() => "");
+  return {
+    ok: false,
+    detail: `workflow_dispatch ${res.status}: ${body.slice(0, 300)}`,
+  };
+}
+
 export async function deletePostOnGithub(slug: string) {
   const message = `admin: delete ${slug}`;
 
