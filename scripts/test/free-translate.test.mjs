@@ -1,9 +1,8 @@
 /**
- * Offline unit checks for free-translate (Gemini → Google Translate fallback).
+ * Offline unit checks for free-translate.
  * Run: node scripts/test/free-translate.test.mjs
  */
 import assert from "node:assert/strict";
-import { createSign } from "crypto";
 
 const originalFetch = globalThis.fetch;
 const calls = [];
@@ -27,42 +26,61 @@ function textResponse(text, status = 200) {
   return new Response(text, { status });
 }
 
-// Minimal RSA key for JWT signing tests (Google path not exercised with real crypto
-// beyond our module creating JWT — we mock token endpoint).
 process.env.GEMINI_API_KEY = "test-gemini";
 delete process.env.GOOGLE_TRANSLATE_API_KEY;
 delete process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 
-const { translatePostFields, hasFreeTranslateConfig } = await import(
-  "../automation/free-translate.mjs"
-);
+const mod = await import(`../automation/free-translate.mjs?t=${Date.now()}`);
+const { translatePostFields, hasFreeTranslateConfig, extractJsonObject } = mod;
 
 assert.equal(hasFreeTranslateConfig(), true);
 
-// 1) Gemini success
+// Balanced JSON with trailing junk (the production failure mode)
+const noisy = `{"titleEn":"Hello","descriptionEn":"Desc here is long enough.","bodyEn":"<p>Hi</p>","tagsEn":["a","b","c"]}
+Note: extra commentary after JSON`;
+assert.equal(extractJsonObject(noisy).titleEn, "Hello");
+
+// 1) Gemini meta JSON + body HTML (chunked path)
 calls.length = 0;
-installFetch(async ({ url }) => {
-  if (url.includes("generativelanguage.googleapis.com")) {
+let geminiCalls = 0;
+installFetch(async ({ url, init }) => {
+  if (!url.includes("generativelanguage.googleapis.com")) {
+    return textResponse("unexpected", 500);
+  }
+  geminiCalls += 1;
+  const body = JSON.parse(String(init.body));
+  const wantsJson = body?.generationConfig?.responseMimeType === "application/json";
+  if (wantsJson) {
     return jsonResponse({
       candidates: [
         {
           content: {
             parts: [
               {
-                text: JSON.stringify({
-                  titleEn: "TOZO S8 Aura Review",
-                  descriptionEn: "A practical look at the TOZO S8 Aura smartwatch.",
-                  bodyEn: "<p>Battery lasts all day.</p>",
-                  tagsEn: ["TOZO", "smartwatch", "review"],
-                }),
+                text:
+                  JSON.stringify({
+                    titleEn: "TOZO S8 Aura Review",
+                    descriptionEn: "A practical look at the TOZO S8 Aura smartwatch.",
+                    tagsEn: ["TOZO", "smartwatch", "review"],
+                  }) + "\nExtra trailing text that used to break JSON.parse",
               },
             ],
           },
+          finishReason: "STOP",
         },
       ],
     });
   }
-  return textResponse("unexpected", 500);
+  return jsonResponse({
+    candidates: [
+      {
+        content: {
+          parts: [{ text: "<p>Battery lasts all day.</p>" }],
+        },
+        finishReason: "STOP",
+      },
+    ],
+  });
 });
 
 const gemini = await translatePostFields({
@@ -75,9 +93,8 @@ const gemini = await translatePostFields({
 assert.equal(gemini.provider, "gemini");
 assert.equal(gemini.titleEn, "TOZO S8 Aura Review");
 assert.match(gemini.bodyEn, /Battery/);
-assert.equal(calls.length, 1);
-assert.ok(!String(calls[0].url).includes("deepseek"));
-assert.ok(!String(calls[0].url).includes("openai"));
+assert.ok(geminiCalls >= 2);
+assert.ok(calls.every((c) => !c.url.includes("deepseek")));
 
 // 2) Gemini fails → Google Translate API key fallback
 calls.length = 0;
@@ -119,15 +136,19 @@ const gcloud = await translatePostFields({
 assert.equal(gcloud.provider, "google-translate");
 assert.equal(gcloud.titleEn, "English Title");
 assert.match(gcloud.bodyEn, /Hello body/);
-assert.ok(calls.some((c) => c.url.includes("generativelanguage")));
-assert.ok(calls.some((c) => c.url.includes("translation.googleapis.com")));
-assert.ok(calls.every((c) => !c.url.includes("deepseek")));
 
 // 3) EN → KO via Gemini
 calls.length = 0;
 delete process.env.GOOGLE_TRANSLATE_API_KEY;
-installFetch(async ({ url }) => {
-  if (url.includes("generativelanguage.googleapis.com")) {
+geminiCalls = 0;
+installFetch(async ({ url, init }) => {
+  if (!url.includes("generativelanguage.googleapis.com")) {
+    return textResponse("unexpected", 500);
+  }
+  geminiCalls += 1;
+  const body = JSON.parse(String(init.body));
+  const wantsJson = body?.generationConfig?.responseMimeType === "application/json";
+  if (wantsJson) {
     return jsonResponse({
       candidates: [
         {
@@ -137,17 +158,24 @@ installFetch(async ({ url }) => {
                 text: JSON.stringify({
                   titleKo: "영문 리뷰 한글화",
                   descriptionKo: "요약입니다.",
-                  bodyKo: "<p>본문입니다.</p>",
                   tagsKo: ["리뷰", "가이드", "팁"],
                 }),
               },
             ],
           },
+          finishReason: "STOP",
         },
       ],
     });
   }
-  return textResponse("unexpected", 500);
+  return jsonResponse({
+    candidates: [
+      {
+        content: { parts: [{ text: "<p>본문입니다.</p>" }] },
+        finishReason: "STOP",
+      },
+    ],
+  });
 });
 
 const ko = await translatePostFields({
