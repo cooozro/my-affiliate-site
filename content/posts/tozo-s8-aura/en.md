@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-30'
 createdAt: '2026-09-30T02:39:32.200Z'
-updatedAt: '2026-09-30T07:17:02.334Z'
+updatedAt: '2026-09-30T07:39:28.027Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -12,7 +12,7 @@ shareBottom: true
 coverImage: /images/posts/tozo-s8-aura/TOZOS8Aura.webp
 coverImageAlt: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
 coverImageAltKo: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
-coverImageProvider: manual-body
+coverImageProvider: admin-upload
 title: >-
   TOZO S8 Aura Smartwatch Deep Dive: A Head-to-Head Comparison with Apple and
   Samsung Flagships
@@ -28,6 +28,7 @@ tags:
   - AMOLEDWatch
   - TechBlog
   - WearableTech
+coverImageCredit: Uploaded via admin
 ---
 <article class="review-deep-dive-master" style="line-height: 1.8; color: #333; font-family: 'Noto Sans KR', sans-serif;">
   <header class="post-header" style="margin-bottom: 40px;">
