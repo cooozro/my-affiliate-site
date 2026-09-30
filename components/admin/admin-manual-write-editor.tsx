@@ -392,7 +392,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         <p className="mt-1 text-xs text-muted-foreground">
           본문에 커서를 둔 뒤 「본문 이미지 첨부」/「본문 삽입」을 누르면 그 자리에{" "}
           <code className="rounded bg-muted px-1">&lt;img&gt;</code>가 들어가고 자동 저장됩니다.
-          커버(섬네일)가 비어 있으면 첫 본문 이미지를 홈/어드민 목록 섬네일로 씁니다.
+          커버가 비어 있으면 첫 본문 이미지를 홈/목록 섬네일·OG용 커버로도 씁니다(본문 속 위치는
+          그대로). 글 상단 히어로는 본문과 같은 파일이면 중복으로 넣지 않습니다. 상단에만 따로
+          보이게 하려면 「커버 첨부/교체」로 다른 이미지를 넣으면 됩니다.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button
