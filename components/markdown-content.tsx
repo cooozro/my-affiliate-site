@@ -3,6 +3,11 @@ import type { Components } from "react-markdown";
 import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import {
+  dedentIndentedHtmlTags,
+  looksLikeHtmlDocument,
+  prepareHtmlDocument,
+} from "@/lib/content-html";
 import { headingIdForHelpNav } from "@/lib/help-nav";
 
 function plainTextFromChildren(children: ReactNode): string {
@@ -220,6 +225,19 @@ export function MarkdownContent({ content, className = "" }: MarkdownContentProp
     return null;
   }
 
+  // Full HTML bodies (manual write) — do not run through markdown indented-code rules.
+  if (looksLikeHtmlDocument(content)) {
+    return (
+      <div
+        className={`prose-custom prose-html ${className}`}
+        dangerouslySetInnerHTML={{ __html: prepareHtmlDocument(content) }}
+      />
+    );
+  }
+
+  // Mixed markdown + HTML: dedent tag lines so rehype-raw can parse them.
+  const prepared = dedentIndentedHtmlTags(content);
+
   return (
     <div className={`prose-custom ${className}`}>
       <ReactMarkdown
@@ -228,7 +246,7 @@ export function MarkdownContent({ content, className = "" }: MarkdownContentProp
         components={markdownComponents}
         urlTransform={markdownUrlTransform}
       >
-        {content}
+        {prepared}
       </ReactMarkdown>
     </div>
   );
