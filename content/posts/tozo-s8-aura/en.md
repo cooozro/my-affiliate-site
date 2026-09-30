@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-30'
 createdAt: '2026-09-30T02:39:01.073Z'
-updatedAt: '2026-09-30T02:39:01.073Z'
+updatedAt: '2026-09-30T02:39:15.377Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -25,6 +25,9 @@ tags:
   - AIPICK
   - 헬스케어워치
   - 웨어러블기기
+coverImage: /images/posts/tozo-s8-aura/TOZOS8Aura.webp
+coverImageProvider: admin-upload
+coverImageCredit: Uploaded via admin
 ---
 <article class="review-post">
   <header class="post-header">
