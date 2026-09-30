@@ -39,3 +39,26 @@ export function stripDangerousHtml(html: string): string {
 export function prepareHtmlDocument(content: string): string {
   return rewritePostMediaSrc(stripDangerousHtml(content.trim()));
 }
+
+export function normalizePostImageSrc(src: string): string {
+  return src.trim().replace(/\/api\/media\/posts\//, "/images/posts/");
+}
+
+export function firstBodyImageSrc(content: string): string | undefined {
+  const m = content.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+  const src = m?.[1]?.trim();
+  if (!src) return undefined;
+  return normalizePostImageSrc(src);
+}
+
+/** Keep list/OG cover; hide article hero when body already shows the same file. */
+export function shouldRenderCoverHero(
+  coverImage: string | undefined | null,
+  bodyHtml: string,
+): boolean {
+  if (!coverImage) return false;
+  const cover = normalizePostImageSrc(coverImage);
+  const bodyFirst = firstBodyImageSrc(bodyHtml);
+  if (bodyFirst && cover === bodyFirst) return false;
+  return true;
+}

@@ -55,9 +55,49 @@ assert.equal(
   '<img src="/api/media/posts/tozo-s8-aura/x.webp" alt="x" />',
 );
 
+function normalizePostImageSrc(src) {
+  return src.trim().replace(/\/api\/media\/posts\//, "/images/posts/");
+}
+function firstBodyImageSrc(content) {
+  const m = content.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+  const src = m?.[1]?.trim();
+  if (!src) return undefined;
+  return normalizePostImageSrc(src);
+}
+function shouldRenderCoverHero(coverImage, bodyHtml) {
+  if (!coverImage) return false;
+  const cover = normalizePostImageSrc(coverImage);
+  const bodyFirst = firstBodyImageSrc(bodyHtml);
+  if (bodyFirst && cover === bodyFirst) return false;
+  return true;
+}
+
+assert.equal(
+  shouldRenderCoverHero(
+    "/images/posts/tozo-s8-aura/TOZOS8Aura.webp",
+    '<p>x</p><img src="/images/posts/tozo-s8-aura/TOZOS8Aura.webp" />',
+  ),
+  false,
+);
+assert.equal(
+  shouldRenderCoverHero(
+    "/images/posts/tozo-s8-aura/cover.webp",
+    '<p>x</p><img src="/images/posts/tozo-s8-aura/TOZOS8Aura.webp" />',
+  ),
+  true,
+);
+assert.equal(shouldRenderCoverHero("", "<img src='/images/posts/a/b.webp' />"), false);
+
 // Real TOZO body must be treated as HTML doc (fixes preview table escape).
 assert.ok(body.includes("<table"));
 assert.ok(looksLikeHtmlDocument(body));
+assert.equal(
+  shouldRenderCoverHero(
+    "/images/posts/tozo-s8-aura/TOZOS8Aura.webp",
+    body,
+  ),
+  false,
+);
 
 console.log("content-html.test.mjs: ok");
 void createRequire;

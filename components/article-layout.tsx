@@ -9,6 +9,7 @@ import {
   assertTaglinePlacement,
   splitArticleBodyForTagline,
 } from "@/lib/guardian";
+import { shouldRenderCoverHero } from "@/lib/content-html";
 import { ARTICLE_SHELL } from "@/lib/layout";
 import type { EnrichedPost } from "@/lib/enrich-post";
 import type { Locale } from "@/lib/i18n/config";
@@ -114,6 +115,7 @@ export function ArticleLayout({
   const noticeLabel = locale === "ko" ? "투명성 고지" : "Transparency";
   const showTransparencyNotice =
     !(post.manualOrigin === true || post.writingProvider === "manual");
+  const showCoverHero = shouldRenderCoverHero(post.coverImage, body);
 
   return (
     <article className={ARTICLE_SHELL}>
@@ -160,10 +162,10 @@ export function ArticleLayout({
       ) : null}
 
       <ArticleProtection>
-        {post.coverImage ? (
+        {showCoverHero ? (
           <figure className="mb-10 overflow-hidden rounded-xl border border-border/60">
             <Image
-              src={post.coverImage}
+              src={post.coverImage!}
               alt={post.coverImageAlt ?? post.title}
               width={1200}
               height={675}
