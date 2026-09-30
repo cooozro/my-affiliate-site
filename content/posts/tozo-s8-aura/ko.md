@@ -1,8 +1,7 @@
 ---
-draft: true
+draft: false
 date: '2026-09-30'
-createdAt: '2026-09-30T02:39:32.200Z'
-updatedAt: '2026-09-30T13:15:12.124Z'
+updatedAt: '2026-09-30T13:15:44.026Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -29,6 +28,7 @@ tags:
   - AIPICK
   - 헬스케어워치
   - 웨어러블기기
+publishedAt: '2026-09-30T13:15:44.026Z'
 ---
 <h2 style="font-size: 22px; font-weight: 700; border-left: 4px solid #000; padding-left: 10px; margin-bottom: 20px;">1. 들어가며: 스마트워치 시장의 양극화와 실속형 제품의 대두</h2>
     <p style="margin-bottom: 15px;">오늘날 웨어러블 테크 시장은 거대한 두 개의 축으로 나뉘어 전개되고 있습니다. 한쪽에는 30만 원에서 70만 원을 호가하며 첨단 의료용 센서와 독자적인 모바일 앱 생태계를 자랑하는 애플(Apple)과 삼성(Samsung)의 하이엔드 플래그십 라인업이 자리 잡고 있습니다. 이들은 스마트폰과의 완벽한 연동성과 전문적인 건강 데이터 분석을 무기로 프리미엄 유저들의 손목을 장악하고 있습니다.</p>
