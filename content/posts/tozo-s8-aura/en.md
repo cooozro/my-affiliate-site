@@ -1,14 +1,18 @@
 ---
 draft: true
 date: '2026-09-30'
-createdAt: '2026-09-30T02:39:01.073Z'
-updatedAt: '2026-09-30T02:39:15.377Z'
+createdAt: '2026-09-30T02:39:24.766Z'
+updatedAt: '2026-09-30T02:39:24.766Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
 contentProfile: editorial
 shareTop: true
 shareBottom: true
+coverImage: /images/posts/tozo-s8-aura/TOZOS8Aura.webp
+coverImageAlt: 'TOZO S8 오라(Aura) 스마트워치 실사용 분석: 프리미엄 감성과 가성비를모두 잡은 웨어러블'
+coverImageAltKo: 'TOZO S8 오라(Aura) 스마트워치 실사용 분석: 프리미엄 감성과 가성비를모두 잡은 웨어러블'
+coverImageProvider: manual-body
 title: 'TOZO S8 오라(Aura) 스마트워치 실사용 분석: 프리미엄 감성과 가성비를모두 잡은 웨어러블'
 description: 'TOZO S8 오라(Aura) 스마트워치 실사용 분석: 프리미엄 감성과 가성비를모두 잡은 웨어러블'
 tags:
@@ -25,9 +29,6 @@ tags:
   - AIPICK
   - 헬스케어워치
   - 웨어러블기기
-coverImage: /images/posts/tozo-s8-aura/TOZOS8Aura.webp
-coverImageProvider: admin-upload
-coverImageCredit: Uploaded via admin
 ---
 <article class="review-post">
   <header class="post-header">
@@ -38,6 +39,9 @@ coverImageCredit: Uploaded via admin
     <p>스마트워치 시장이 대중화되면서 소비자들이 제품을 고르는 눈높이도 한층 높아졌습니다. 단순히 알림만 확인하는 도구를 넘어, 선명한 디스플레이와 디자인 완성도, 그리고 실용적인 헬스케어 기능을 모두 갖춘 제품을 찾는 이들이 많아졌습니다.</p>
     <p>이번 AIPICK 전문 리뷰팀이 집중 분석한 <strong>TOZO S8 Aura 스마트워치</strong>는 메탈 프레임의 세련된 디자인과 1.32인치 고해상도 AMOLED 디스플레이를 탑재해 가격 대비 뛰어난 완성도를 보여주는 모델입니다. 과연 어떤 매력이 숨어 있는지 스펙과 기능을 낱낱이 파헤쳐 보겠습니다.</p>
   </section>
+
+
+<img src="/images/posts/tozo-s8-aura/TOZOS8Aura.webp" alt="TOZO S8 오라(Aura) 스마트워치 실사용 분석: 프리미엄 감성과 가성비를모두 잡은 웨어러블" loading="lazy" style="max-width:100%;height:auto;" />
 
   <section class="feature-section">
     <h3>1. 디자인과 디스플레이: 1.32인치 AMOLED의 선명함</h3>
