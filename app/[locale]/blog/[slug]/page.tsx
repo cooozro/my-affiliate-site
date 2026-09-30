@@ -10,20 +10,16 @@ import type { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localizedPath } from "@/lib/i18n/paths";
 import { enrichPost } from "@/lib/enrich-post";
-import { getAllStaticBlogParams, getPostBySlug } from "@/lib/posts";
+import { getPostBySlugLive } from "@/lib/posts-live";
 import { siteConfig } from "@/lib/site";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  return getAllStaticBlogParams();
-}
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
@@ -33,7 +29,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   try {
-    const post = getPostBySlug(slug, { locale });
+    const post = await getPostBySlugLive(slug, { locale });
     return buildBlogPostMetadata({ locale, slug, post });
   } catch {
     return { title: dict.blog.notFound };
@@ -46,7 +42,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   let post;
   try {
-    post = await enrichPost(getPostBySlug(slug, { locale }), locale);
+    post = await enrichPost(await getPostBySlugLive(slug, { locale }), locale);
   } catch {
     notFound();
   }

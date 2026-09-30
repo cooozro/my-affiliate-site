@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath, revalidateTag } from "next/cache";
 import {
   canAccessAdmin,
   getAdminSessionFromCookies,
@@ -10,6 +11,7 @@ import {
   refreshCoverImage,
   removeCoverImage,
 } from "@/lib/admin-actions";
+import { AIPICK_POSTS_CACHE_TAG } from "@/lib/posts-live";
 
 type RouteContext = {
   params: Promise<{ slug: string }>;
@@ -21,6 +23,14 @@ async function requireAdmin(request: Request) {
     return false;
   }
   return true;
+}
+
+function bustPublicPostCaches(slug: string) {
+  revalidateTag(AIPICK_POSTS_CACHE_TAG);
+  revalidatePath("/en");
+  revalidatePath("/ko");
+  revalidatePath(`/en/blog/${slug}`);
+  revalidatePath(`/ko/blog/${slug}`);
 }
 
 export async function PATCH(request: Request, context: RouteContext) {
@@ -36,11 +46,13 @@ export async function PATCH(request: Request, context: RouteContext) {
   try {
     if (body.action === "publish") {
       const result = await publishPost(slug);
+      bustPublicPostCaches(slug);
       return NextResponse.json({ ok: true, ...result });
     }
 
     if (body.action === "draft") {
       const result = await draftPost(slug);
+      bustPublicPostCaches(slug);
       return NextResponse.json({ ok: true, ...result });
     }
 
@@ -51,6 +63,7 @@ export async function PATCH(request: Request, context: RouteContext) {
 
     if (body.action === "remove-cover") {
       const result = await removeCoverImage(slug);
+      bustPublicPostCaches(slug);
       return NextResponse.json({ ok: true, ...result });
     }
 
@@ -70,6 +83,7 @@ export async function DELETE(request: Request, context: RouteContext) {
 
   try {
     const result = await deletePost(slug);
+    bustPublicPostCaches(slug);
     return NextResponse.json({ ok: true, ...result });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Delete failed";
