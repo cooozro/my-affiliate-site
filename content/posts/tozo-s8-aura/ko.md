@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-30'
 createdAt: '2026-09-30T02:39:32.200Z'
-updatedAt: '2026-09-30T03:13:45.319Z'
+updatedAt: '2026-09-30T07:17:02.334Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -10,11 +10,11 @@ contentProfile: editorial
 shareTop: true
 shareBottom: true
 coverImage: /images/posts/tozo-s8-aura/TOZOS8Aura.webp
-coverImageAlt: 'TOZO S8 오라(Aura) vs 보급형 스마트워치: 무엇을 사야 할까?'
-coverImageAltKo: 'TOZO S8 오라(Aura) vs 보급형 스마트워치: 무엇을 사야 할까?'
+coverImageAlt: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
+coverImageAltKo: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
 coverImageProvider: manual-body
-title: 'TOZO S8 오라(Aura) vs 보급형 스마트워치: 무엇을 사야 할까?'
-description: 'TOZO S8 오라(Aura) vs 보급형 스마트워치: 무엇을 사야 할까?'
+title: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
+description: 'TOZO S8 오라(Aura) 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는?'
 tags:
   - TOZO
   - TOZOS8
