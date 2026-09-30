@@ -2,7 +2,7 @@
 draft: true
 date: '2026-09-30'
 createdAt: '2026-09-30T02:39:32.200Z'
-updatedAt: '2026-09-30T13:13:24.981Z'
+updatedAt: '2026-09-30T13:15:12.124Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -14,7 +14,7 @@ coverImageAlt: 'TOZO S8 오라Aura 스마트워치 완벽 분석: 애플·갤럭
 coverImageAltKo: 'TOZO S8 오라Aura 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는'
 coverImageProvider: manual-body
 title: 'TOZO S8 Aura 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는'
-description: 'TOZO S8 오라Aura 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는'
+description: 'TOZO S8 Aura 스마트워치 완벽 분석: 애플·갤럭시 플래그십 및 가성비 라이벌 모델과의 정면 비교, 과연 승자는'
 tags:
   - TOZO
   - TOZOS8
