@@ -204,7 +204,7 @@ export async function commitPostChanges(
 }
 
 
-/** Queue KO→EN using the same GitHub Actions secrets as the scheduler writer. */
+/** Queue KO→EN via GitHub Actions free translate (Gemini → Google Translate). */
 export async function dispatchManualTranslateWorkflow(slug: string): Promise<{
   ok: boolean;
   detail: string;

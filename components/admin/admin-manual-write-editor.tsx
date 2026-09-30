@@ -106,7 +106,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         data.translated
           ? "저장 완료 — 영문(en.md) 자동 번역 반영됨"
           : data.translationQueued
-            ? "저장 완료 — 영문은 스케줄러와 같은 GitHub Actions(DeepSeek)로 번역 예약됨. 1~2분 후 EN 확인"
+            ? "저장 완료 — 영문은 GitHub Actions(Gemini Free→Google Translate)로 번역 예약됨. 1~2분 후 EN 확인"
             : "저장 완료",
       );
       await loadImages(data.slug ?? slug);
@@ -275,7 +275,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         <div>
           <h1 className="text-xl font-semibold">수동 글쓰기</h1>
           <p className="mt-1 text-xs text-muted-foreground">
-            한국어 HTML/Markdown 작성 · 저장 시 영문 자동 번역 · 스케줄러 카운트 제외 · 투명성 고지 없음
+            한국어 HTML/Markdown 작성 · 저장 시 영문 자동 번역(Gemini Free→Google Translate) · 스케줄러 카운트 제외 · 투명성 고지 없음
           </p>
           {slug ? (
             <p className="mt-1 font-mono text-xs text-muted-foreground">{slug}</p>
