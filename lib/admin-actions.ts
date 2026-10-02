@@ -622,7 +622,7 @@ export async function publishPost(slug: string) {
 }
 
 export async function draftPost(slug: string) {
-  if (!slugExists(slug)) {
+  if (!(await slugExistsAsync(slug))) {
     throw new Error(`Post not found: ${slug}`);
   }
 

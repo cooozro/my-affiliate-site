@@ -3,9 +3,7 @@ import "server-only";
 import matter from "gray-matter";
 import {
   assertGithubAdminConfigured,
-  readPostFile,
   readPostFileAsync,
-  slugExists,
   slugExistsAsync,
   usesRemotePostStore,
   writePostFile,
@@ -83,6 +81,71 @@ function defaultTags(title: string): string[] {
   return words;
 }
 
+/** Coerce YAML draft field; default true only when the post is brand new. */
+export function resolveManualSaveDraft(
+  prev: Record<string, unknown>,
+): boolean {
+  const raw = prev.draft;
+  if (typeof raw === "boolean") return raw;
+  if (raw === "false" || raw === "0") return false;
+  if (raw === "true" || raw === "1") return true;
+  // No prior draft flag: treat as published if publishedAt already exists.
+  if (prev.publishedAt) return false;
+  return true;
+}
+
+/**
+ * Build shared frontmatter for a manual KO→EN save without clobbering publish state.
+ * (Bug: sync FS read on Vercel used stale/missing bundle → forced draft:true.)
+ */
+export function buildManualSaveSharedFrontmatter(
+  prevKo: Record<string, unknown>,
+  opts: {
+    now: string;
+    date: string;
+    coverImage?: string;
+    coverAlt: string;
+    coverFromBody?: string;
+    shareTop: boolean;
+    shareBottom: boolean;
+  },
+): Record<string, unknown> {
+  const draft = resolveManualSaveDraft(prevKo);
+  const shared: Record<string, unknown> = {
+    draft,
+    date: typeof prevKo.date === "string" && prevKo.date ? prevKo.date : opts.date,
+    updatedAt: opts.now,
+    manualOrigin: true,
+    automationBuffer: false,
+    writingProvider: "manual",
+    contentProfile: "editorial",
+    shareTop: opts.shareTop,
+    shareBottom: opts.shareBottom,
+  };
+
+  if (draft) {
+    shared.createdAt = prevKo.createdAt ?? opts.now;
+  } else if (prevKo.publishedAt) {
+    shared.publishedAt = prevKo.publishedAt;
+  } else {
+    // Was live (draft:false) but publishedAt missing — keep it live.
+    shared.publishedAt = opts.now;
+  }
+
+  if (opts.coverImage) {
+    shared.coverImage = opts.coverImage;
+    shared.coverImageAlt = opts.coverAlt;
+    shared.coverImageAltKo = opts.coverAlt;
+    shared.coverImageProvider =
+      prevKo.coverImageProvider ??
+      (opts.coverFromBody && opts.coverImage === opts.coverFromBody
+        ? "manual-body"
+        : "admin-upload");
+  }
+
+  return shared;
+}
+
 async function writeBothLocales(
   slug: string,
   ko: { data: Record<string, unknown>; content: string },
@@ -153,7 +216,7 @@ export async function saveManualPostFromKo(
   if (!existingSlug) {
     let n = 2;
     const base = slug;
-    while (slugExists(slug)) {
+    while (await slugExistsAsync(slug)) {
       slug = `${base}-${n}`;
       n += 1;
     }
@@ -194,7 +257,16 @@ export async function saveManualPostFromKo(
 
   const now = new Date().toISOString();
   const date = kstDateString();
-  const prevKo = slugExists(slug) ? readPostFile(slug, "ko").data : {};
+  // Always prefer GitHub (via readPostFileAsync) so a later manual save cannot
+  // clobber draft:false / publishedAt with a stale deploy-bundle snapshot.
+  let prevKo: Record<string, unknown> = {};
+  if (await slugExistsAsync(slug)) {
+    try {
+      prevKo = (await readPostFileAsync(slug, "ko")).data;
+    } catch {
+      prevKo = {};
+    }
+  }
   const prevCover =
     typeof prevKo.coverImage === "string" ? String(prevKo.coverImage) : "";
   const coverFromBody = firstBodyImageSrc(bodyKo);
@@ -213,30 +285,15 @@ export async function saveManualPostFromKo(
       : "") ||
     titleKo;
 
-  const shared = {
-    draft: prevKo.draft ?? true,
-    date: prevKo.date ?? date,
-    createdAt: prevKo.createdAt ?? now,
-    updatedAt: now,
-    manualOrigin: true,
-    automationBuffer: false,
-    writingProvider: "manual",
-    contentProfile: "editorial",
+  const shared = buildManualSaveSharedFrontmatter(prevKo, {
+    now,
+    date,
+    coverImage: coverImage || undefined,
+    coverAlt,
+    coverFromBody,
     shareTop: payload.shareTop !== false,
     shareBottom: payload.shareBottom !== false,
-    ...(coverImage
-      ? {
-          coverImage,
-          coverImageAlt: coverAlt,
-          coverImageAltKo: coverAlt,
-          coverImageProvider:
-            prevKo.coverImageProvider ??
-            (coverFromBody && coverImage === coverFromBody
-              ? "manual-body"
-              : "admin-upload"),
-        }
-      : {}),
-  };
+  });
 
   const koData = {
     ...shared,
