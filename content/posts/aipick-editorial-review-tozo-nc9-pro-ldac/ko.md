@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T05:55:47.654Z'
+updatedAt: '2026-10-02T05:58:36.430Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -42,22 +42,24 @@ tags:
 <meta name="description" content="TOZO NC9 Pro의 하이브리드 ANC 45dB, LDAC 코덱, 인터랙티브 디스플레이 케이스를 공식 스펙과 실사용 기준으로 분석했습니다.">
 <meta name="keywords" content="TOZO NC9 Pro 리뷰, TOZO NC9 Pro 배터리, TOZO NC9 Pro 단점">
 </head>
-<body>
+<body style="margin: 0; padding: 20px;">
 
 <article class="review-post" style="line-height: 1.8; font-size: 1.05rem; max-width: 850px; margin: 0 auto; word-break: keep-all; font-family: -apple-system, 'Noto Sans KR', sans-serif;">
 
   <!-- 상단 헤더 섹션 -->
-  <header class="post-header" style="margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.3); padding-bottom: 1.5rem;">
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
-
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
-
+  <header class="post-header" style="margin-bottom: 2.5rem; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.3); padding-bottom: 1.5rem;">
     <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 1rem;">
       [AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC, 장점과 한계를 함께 짚었습니다
     </h1>
-   
+    <p style="font-size: 1.1rem; opacity: 0.8; font-weight: 500;">
+      10만 원 이하 가성비 무선 이어폰의 새로운 기준, 스마트 디스플레이와 Hi-Res 고음질의 완벽한 조화를 파헤칩니다.
+    </p>
+  </header>
+
+  <!-- 대표 이미지 1장 -->
+  <div style="text-align: center; margin: 2.5rem 0;">
+    <img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%; height:auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+  </div>
 
   <!-- 도입부 -->
   <section class="intro-section" style="margin-bottom: 2.5rem; background: rgba(37, 99, 235, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #2563eb;">
@@ -69,18 +71,9 @@ tags:
     </p>
   </section>
 
-
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
-
-
   <!-- 1번 섹션 -->
   <section class="feature-section" style="margin-bottom: 3rem;">
     <h2 style="font-size: 1.5rem; font-weight: 700; border-bottom: 2px solid rgba(191, 219, 254, 0.4); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">
-
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
-
       1. 첫인상과 하드웨어: 1.47인치 인터랙티브 디스플레이
     </h2>
     <p style="margin-bottom: 1rem;">
@@ -122,7 +115,7 @@ tags:
     </p>
   </section>
 
-  <!-- 이미지 2: 언박싱 디테일 / 이어버드 단품 -->
+  <!-- 이미지 2: 언박싱 디테일 -->
   <div style="text-align: center; margin: 2.5rem 0;">
     <img src="/images/posts/aipick-tozo-nc9-pro-review/tozo-nc9-pro-earbuds-case-open-detail.jpg" alt="TOZO NC9 Pro 충전 케이스 내부와 거치된 이어폰, 보호 스티커가 부착된 이어폰 단품 사진" loading="lazy" style="max-width:100%; height:auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
   </div>
@@ -203,32 +196,30 @@ tags:
     </h2>
     <p style="margin-bottom: 1rem;">
       'Pro'라는 이름값을 하는지 궁금하신 분들을 위해, 확인 가능한 공식 자료를 기준으로 베이스 모델과 비교했습니다.</p>
-    <table style="border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.95rem;">
-      <thead>
-        <tr style="background:#f5f5f5;">
-          <th style="border:1px solid #ddd; padding:8px 12px; text-align:left;">항목</th>
-          <th style="border:1px solid #ddd; padding:8px 12px; text-align:left;">TOZO NC9 (베이스)</th>
-          <th style="border:1px solid #ddd; padding:8px 12px; text-align:left;">TOZO NC9 Pro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">ANC</td><td style="border:1px solid #ddd; padding:8px 12px;">하이브리드 ANC (최대 45dB)</td><td style="border:1px solid #ddd; padding:8px 12px;">하이브리드 ANC + 어댑티브 ANC</td></tr>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">코덱</td><td style="border:1px solid #ddd; padding:8px 12px;">SBC/AAC</td><td style="border:1px solid #ddd; padding:8px 12px;">SBC/AAC/LDAC</td></tr>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">공간음향</td><td style="border:1px solid #ddd; padding:8px 12px;">미지원</td><td style="border:1px solid #ddd; padding:8px 12px;">스페이셜 오디오 지원</td></tr>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">케이스 디스플레이</td><td style="border:1px solid #ddd; padding:8px 12px;">LED 표시등</td><td style="border:1px solid #ddd; padding:8px 12px;">1.47인치 터치 디스플레이</td></tr>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">배터리(이어폰+케이스, ANC OFF)</td><td style="border:1px solid #ddd; padding:8px 12px;">최대 59시간 (공식 공개)</td><td style="border:1px solid #ddd; padding:8px 12px;">공식 미공개 (디스플레이로 다소 감소 예상)</td></tr>
-        <tr><td style="border:1px solid #ddd; padding:8px 12px;">AI 기능</td><td style="border:1px solid #ddd; padding:8px 12px;">미지원</td><td style="border:1px solid #ddd; padding:8px 12px;">TOZO 앱 AI 챗 지원</td></tr>
-      </tbody>
-    </table>
+    <div style="width: 100%; overflow-x: auto;">
+      <table style="border-collapse: collapse; width: 100%; min-width: 600px; margin: 16px 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="background: rgba(128, 128, 128, 0.12);">
+            <th style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px; text-align:left;">항목</th>
+            <th style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px; text-align:left;">TOZO NC9 (베이스)</th>
+            <th style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px; text-align:left;">TOZO NC9 Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">ANC</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">하이브리드 ANC (최대 45dB)</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">하이브리드 ANC + 어댑티브 ANC</td></tr>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">코덱</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">SBC/AAC</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">SBC/AAC/LDAC</td></tr>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">공간음향</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">미지원</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">스페이셜 오디오 지원</td></tr>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">케이스 디스플레이</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">LED 표시등</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">1.47인치 터치 디스플레이</td></tr>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">배터리(이어폰+케이스, ANC OFF)</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">최대 59시간 (공식 공개)</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">공식 미공개 (디스플레이로 다소 감소 예상)</td></tr>
+          <tr><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">AI 기능</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">미지원</td><td style="border:1px solid rgba(128, 128, 128, 0.3); padding:10px 12px;">TOZO 앱 AI 챗 지원</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- 장단점 섹션 -->
   <section class="analysis-section" style="margin-bottom: 3rem; background: rgba(239, 68, 68, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #ef4444;">
     <h2 style="font-size: 1.5rem; font-weight: 700; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">
-
-
-<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
-
       6. AIPICK Skip & Risk 분석 (장단점 정리)
     </h2>
     <p style="margin-bottom: 1rem;">AIPICK은 무조건적인 찬양을 지양합니다. 장점뿐 아니라 실제 아쉬운 부분까지 확인해 보세요.</p>
@@ -242,7 +233,7 @@ tags:
     </ul>
 
     <p style="margin-bottom: 0.5rem; font-weight: 700;">단점 / 아쉬운 점</p>
-    <ul style="padding-left: 1.5rem;">
+    <ul style="padding-left: 1.5rem; margin: 0;">
       <li style="margin-bottom: 0.5rem;"><strong>iOS에서는 LDAC 체감 불가:</strong> 아이폰 사용자는 AAC로 연결되어 Pro 모델의 핵심 셀링 포인트 중 하나를 활용할 수 없습니다.</li>
       <li style="margin-bottom: 0.5rem;"><strong>디스플레이로 인한 케이스 배터리 소모:</strong> 정확한 수치는 공식 미공개이나, 구조상 베이스 모델보다 완충 후 총 사용 가능 시간이 줄어들 가능성이 있습니다.</li>
       <li><strong>터치 민감도 편차:</strong> 터치 컨트롤이 환경에 따라 과민하거나 둔감하게 반응할 수 있어, 실사용 시 직접 확인해 보시는 걸 권장합니다.</li>
@@ -261,7 +252,7 @@ tags:
       <li>환경 변화에 따라 자동으로 조절되는 ANC가 필요한 출퇴근길 사용자</li>
     </ul>
     <p style="margin-bottom: 0.5rem; font-weight: 700;">패스해도 되는 분</p>
-    <ul style="padding-left: 1.5rem;">
+    <ul style="padding-left: 1.5rem; margin: 0;">
       <li>아이폰 중심 사용자로 LDAC 활용이 불가능한 분</li>
       <li>디스플레이 기능보다 '배터리 최대치'가 가장 중요한 분 (이 경우 베이스 NC9가 더 합리적일 수 있습니다)</li>
       <li>애플 에어팟 프로, 소니 WF-1000XM 시리즈처럼 극도로 세밀한 공간음향 생태계 연동을 원하는 분</li>
@@ -286,7 +277,7 @@ tags:
   </section>
 
   <!-- 총평 섹션 -->
-  <section class="conclusion-section" style="background: rgba(59, 130, 246, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #3b82f6;">
+  <section class="conclusion-section" style="background: rgba(59, 130, 246, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #3b82f6; margin-bottom: 2rem;">
     <h2 style="font-size: 1.5rem; font-weight: 700; color: #3b82f6; margin-bottom: 1rem;">
       8. 총평: 스마트 기능에 비용을 지불할 가치가 있는가
     </h2>
@@ -295,14 +286,12 @@ tags:
     </p>
   </section>
 
-</article>
-
-
-  </header>
-
   <!-- 고지 섹션 -->
-  <section style="margin-bottom: 2rem; background: rgba(107, 114, 128, 0.08); padding: 1rem 1.4rem; border-radius: 10px; font-size: 0.92rem; color: #444; text-align:center;">
+  <section style="margin-bottom: 1rem; background: rgba(107, 114, 128, 0.08); padding: 1rem 1.4rem; border-radius: 10px; font-size: 0.92rem; text-align:center;">
     본 포스팅은 업체로부터 제품을 제공받아 작성되었습니다.
   </section>
+
+</article>
+
 </body>
 </html>
