@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T02:44:05.591Z'
+updatedAt: '2026-10-02T02:44:43.562Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -35,6 +35,9 @@ tags:
   - 고음질이어폰
 ---
 <img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
+
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
