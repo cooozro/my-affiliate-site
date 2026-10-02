@@ -30,14 +30,18 @@ type ArticleLayoutProps = {
 };
 
 function formatDate(date: string, locale: Locale) {
+  const parsed = new Date(date);
+  if (Number.isNaN(parsed.getTime())) return date;
   return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  }).format(new Date(date));
+  }).format(parsed);
 }
 
 function formatDateTime(date: string, locale: Locale) {
+  const parsed = new Date(date);
+  if (Number.isNaN(parsed.getTime())) return date;
   return new Intl.DateTimeFormat(locale === "ko" ? "ko-KR" : "en-US", {
     year: "numeric",
     month: "long",
@@ -45,7 +49,7 @@ function formatDateTime(date: string, locale: Locale) {
     hour: "numeric",
     minute: "2-digit",
     timeZone: "Asia/Seoul",
-  }).format(new Date(date));
+  }).format(parsed);
 }
 
 function ShareBar({

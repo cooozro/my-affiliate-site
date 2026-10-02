@@ -36,6 +36,42 @@ async function githubRequest(path: string, init: RequestInit = {}) {
   return response.json();
 }
 
+function contentBranch(): string {
+  return (
+    process.env.GITHUB_CONTENT_BRANCH?.trim() ||
+    process.env.VERCEL_GIT_COMMIT_REF?.trim() ||
+    "main"
+  );
+}
+
+/**
+ * Public markdown reads for the live site.
+ * Prefer raw.githubusercontent.com (no Contents API rate-limit burn). Fall back
+ * to the authenticated Contents API when the repo is private or raw misses.
+ */
+export async function readGithubFilePublic(path: string): Promise<{
+  content: string;
+  sha: string;
+}> {
+  const rawUrl = `https://raw.githubusercontent.com/${getRepo()}/${contentBranch()}/${path}`;
+  try {
+    const res = await fetch(rawUrl, {
+      headers: { Accept: "text/plain" },
+      next: { revalidate: 30 },
+    });
+    if (res.ok) {
+      return { content: await res.text(), sha: "" };
+    }
+  } catch {
+    /* try API */
+  }
+
+  if (!process.env.GITHUB_TOKEN?.trim()) {
+    throw new Error(`GitHub public read failed (no token): ${path}`);
+  }
+  return readGithubFile(path);
+}
+
 export async function readGithubFile(path: string): Promise<{
   content: string;
   sha: string;

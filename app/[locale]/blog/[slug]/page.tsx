@@ -42,28 +42,49 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   let post;
   try {
-    post = await enrichPost(await getPostBySlugLive(slug, { locale }), locale);
+    post = await getPostBySlugLive(slug, { locale });
   } catch {
     notFound();
+  }
+
+  try {
+    post = await enrichPost(post, locale);
+  } catch (error) {
+    // Enrichment (FX placeholders etc.) must not hard-404 a published article.
+    console.error(
+      "enrichPost failed; rendering raw post:",
+      slug,
+      locale,
+      error instanceof Error ? error.message : error,
+    );
   }
 
   const dict = await getDictionary(locale);
   const pageUrl = `${siteConfig.url}${localizedPath(locale, `/blog/${slug}`)}`;
 
-  const jsonLd = buildBlogPostPageJsonLd({
-    locale,
-    slug,
-    post,
-    pageUrl,
-    breadcrumbLabels: {
-      home: dict.nav.home,
-      articles: dict.home.latestPosts,
-    },
-  });
+  let jsonLd;
+  try {
+    jsonLd = buildBlogPostPageJsonLd({
+      locale,
+      slug,
+      post,
+      pageUrl,
+      breadcrumbLabels: {
+        home: dict.nav.home,
+        articles: dict.home.latestPosts,
+      },
+    });
+  } catch (error) {
+    console.error(
+      "buildBlogPostPageJsonLd failed:",
+      slug,
+      error instanceof Error ? error.message : error,
+    );
+  }
 
   return (
     <>
-      <JsonLd data={jsonLd} />
+      {jsonLd ? <JsonLd data={jsonLd} /> : null}
       <ArticleLayout
         post={post}
         locale={locale}

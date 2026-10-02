@@ -8,7 +8,7 @@ import "server-only";
 import matter from "gray-matter";
 import { unstable_cache } from "next/cache";
 import type { Locale } from "@/lib/i18n/config";
-import { listGithubDirectory, readGithubFile } from "@/lib/admin-services";
+import { listGithubDirectory, readGithubFilePublic } from "@/lib/admin-services";
 import {
   getHomePosts,
   getPostBySlug,
@@ -104,7 +104,7 @@ async function readGithubPost(
   locale: Locale,
 ): Promise<Post | null> {
   try {
-    const { content } = await readGithubFile(
+    const { content } = await readGithubFilePublic(
       `content/posts/${slug}/${locale}.md`,
     );
     return postFromMarkdown(slug, content);
@@ -155,24 +155,18 @@ const cachedHomePosts = unstable_cache(
   { revalidate: 60, tags: [AIPICK_POSTS_CACHE_TAG] },
 );
 
-const cachedGithubPost = unstable_cache(
-  async (slug: string, locale: Locale, includeDrafts: boolean) => {
-    const post = await readGithubPost(slug, locale);
-    if (!post) return null;
-    if (post.draft && !includeDrafts) return null;
-    return post;
-  },
-  ["aipick-post-github"],
-  { revalidate: 60, tags: [AIPICK_POSTS_CACHE_TAG] },
-);
-
-function canUseGithub(): boolean {
+function canUseGithubListing(): boolean {
   return usesRemotePostStore() && Boolean(process.env.GITHUB_TOKEN?.trim());
+}
+
+function canUseGithubPublic(): boolean {
+  // Public raw.githubusercontent.com works without a token for public repos.
+  return usesRemotePostStore();
 }
 
 /** Homepage list — GitHub first on Vercel, FS fallback. */
 export async function getHomePostsLive(locale: Locale): Promise<HomePost[]> {
-  if (canUseGithub()) {
+  if (canUseGithubListing()) {
     try {
       return await cachedHomePosts(locale);
     } catch (error) {
@@ -193,10 +187,15 @@ export async function getPostBySlugLive(
   const locale = options?.locale ?? "en";
   const includeDrafts = options?.includeDrafts ?? false;
 
-  if (canUseGithub()) {
+  if (canUseGithubPublic()) {
     try {
-      const remote = await cachedGithubPost(slug, locale, includeDrafts);
-      if (remote) return remote;
+      // Do NOT wrap misses in unstable_cache — a cached null (API blip / rate
+      // limit / prior draft) caused intermittent /en/blog/* 404s while the
+      // homepage card still rendered from a warmer list cache.
+      const remote = await readGithubPost(slug, locale);
+      if (remote && (includeDrafts || !remote.draft)) {
+        return remote;
+      }
     } catch (error) {
       console.error(
         "getPostBySlugLive GitHub failed; using deploy bundle:",
