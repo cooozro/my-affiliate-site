@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T05:53:24.231Z'
+updatedAt: '2026-10-02T05:55:47.654Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -225,6 +225,10 @@ tags:
   <!-- 장단점 섹션 -->
   <section class="analysis-section" style="margin-bottom: 3rem; background: rgba(239, 68, 68, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #ef4444;">
     <h2 style="font-size: 1.5rem; font-weight: 700; color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">
+
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+
       6. AIPICK Skip & Risk 분석 (장단점 정리)
     </h2>
     <p style="margin-bottom: 1rem;">AIPICK은 무조건적인 찬양을 지양합니다. 장점뿐 아니라 실제 아쉬운 부분까지 확인해 보세요.</p>
