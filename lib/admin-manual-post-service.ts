@@ -270,11 +270,12 @@ export async function saveManualPostFromKo(
   const prevCover =
     typeof prevKo.coverImage === "string" ? String(prevKo.coverImage) : "";
   const coverFromBody = firstBodyImageSrc(bodyKo);
+  // Explicit coverImage from editor (including "") wins over stale prevCover.
+  // Empty string → prefer first body image for OG/home, else clear.
   const coverImage =
-    (payload.coverImage && payload.coverImage.trim()) ||
-    prevCover ||
-    coverFromBody ||
-    "";
+    typeof payload.coverImage === "string"
+      ? payload.coverImage.trim() || coverFromBody || ""
+      : prevCover || coverFromBody || "";
   const coverAlt =
     (payload.coverImageAltKo && payload.coverImageAltKo.trim()) ||
     (typeof prevKo.coverImageAltKo === "string"
@@ -294,6 +295,14 @@ export async function saveManualPostFromKo(
     shareTop: payload.shareTop !== false,
     shareBottom: payload.shareBottom !== false,
   });
+
+  // Drop stale cover keys when no cover is selected.
+  if (!coverImage) {
+    delete shared.coverImage;
+    delete shared.coverImageAlt;
+    delete shared.coverImageAltKo;
+    delete shared.coverImageProvider;
+  }
 
   const koData = {
     ...shared,

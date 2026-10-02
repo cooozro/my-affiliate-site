@@ -25,8 +25,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
   const [publishing, setPublishing] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const coverInputRef = useRef<HTMLInputElement>(null);
-  const bodyImageInputRef = useRef<HTMLInputElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
   const bodyTextareaRef = useRef<HTMLTextAreaElement>(null);
   const bodySelectionRef = useRef<{ start: number; end: number }>({ start: 0, end: 0 });
 
@@ -77,7 +76,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         .split(/[,，]/)
         .map((t) => t.trim())
         .filter(Boolean);
-      const nextCover = coverOverride || coverImage || undefined;
+      // coverOverride === undefined → keep React state; "" clears / falls back server-side
+      const nextCover =
+        coverOverride !== undefined ? coverOverride : coverImage;
       const url = slug
         ? `/api/admin/manual-post/${encodeURIComponent(slug)}`
         : "/api/admin/manual-post";
@@ -102,6 +103,7 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
         setSlug(data.slug);
         window.history.replaceState(null, "", `/admin/write/${data.slug}`);
       }
+      if (typeof nextCover === "string") setCoverImage(nextCover);
       setMessage(
         data.translated
           ? "저장 완료 — 영문(en.md) 자동 번역 반영됨"
@@ -193,29 +195,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     return next;
   }
 
-  async function uploadCover(file: File) {
+  async function uploadImage(file: File) {
     if (!slug) {
-      setError("저장 후 커버를 업로드하세요.");
-      return;
-    }
-    const fd = new FormData();
-    fd.set("file", file);
-    fd.set("kind", "cover");
-    const res = await fetch(`/api/admin/posts/${encodeURIComponent(slug)}/images`, {
-      method: "POST",
-      body: fd,
-      credentials: "same-origin",
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error ?? "커버 업로드 실패");
-    setCoverImage(data.coverImage ?? data.webPath ?? "");
-    setMessage("커버 이미지 저장됨");
-    await loadImages(slug);
-  }
-
-  async function uploadBodyImage(file: File) {
-    if (!slug) {
-      setError("저장 후 본문 이미지를 업로드하세요.");
+      setError("먼저 제목·본문을 저장한 뒤 이미지를 첨부하세요.");
       return;
     }
     rememberBodySelection();
@@ -229,20 +211,10 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? "이미지 업로드 실패");
-    const insert = `\n\n<img src="${data.webPath}" alt="${(titleKo || "image").slice(0, 80)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
-    const nextBody = insertAtCursor(insert);
-    if (!coverImage) {
-      setCoverImage(data.webPath);
-      if (!coverAltKo) setCoverAltKo(titleKo.slice(0, 120));
-    }
-    setMessage(
-      !coverImage
-        ? `커서 위치에 이미지 삽입 + 커버(섬네일)로 설정: ${data.webPath}`
-        : `커서 위치에 이미지 삽입: ${data.webPath}`,
-    );
     await loadImages(slug);
-    // Persist so preview/home cards see the <img> and cover immediately.
-    await save(nextBody, !coverImage ? data.webPath : undefined);
+    setMessage(
+      `이미지 첨부됨: ${data.webPath} — 아래에서 「본문에 넣기」/「커버」를 선택하세요.`,
+    );
   }
 
   async function removeImage(filename: string) {
@@ -253,16 +225,48 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
     );
     const data = await res.json();
     if (!res.ok) throw new Error(data.error ?? "삭제 실패");
+    // Drop from body if present; clear cover if it pointed at this file.
+    const nextBody = bodyKo.replace(
+      new RegExp(
+        `<img\\b[^>]*\\bsrc=["'][^"']*${filename.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[^"']*["'][^>]*>`,
+        "gi",
+      ),
+      "",
+    );
+    const coverCleared = coverImage.includes(filename) ? "" : coverImage;
+    if (coverCleared !== coverImage) setCoverImage("");
+    if (nextBody !== bodyKo) setBodyKo(nextBody);
     await loadImages(slug);
+    await save(nextBody, coverCleared || undefined);
     setMessage(`이미지 삭제: ${filename}`);
   }
 
   function insertImageTag(webPath: string) {
     rememberBodySelection();
-    const tag = `\n\n<img src="${webPath}" alt="${(titleKo || "image").slice(0, 60)}" loading="lazy" style="max-width:100%;height:auto;" />\n`;
+    // Avoid stacking the same src if the caret region already has it nearby —
+    // still allow intentional re-insert; warn when already in body.
+    if (bodyKo.includes(`src="${webPath}"`) || bodyKo.includes(`src='${webPath}'`)) {
+      setMessage(`이미 본문에 있습니다: ${webPath} (커서 위치에 한 번 더 넣으려면 다시 누르세요)`);
+    }
+    const alt = (coverAltKo || titleKo || "image").slice(0, 80).replace(/"/g, "&quot;");
+    const tag = `\n\n<img src="${webPath}" alt="${alt}" loading="lazy" style="max-width:100%;height:auto;border-radius:10px;" />\n`;
     const nextBody = insertAtCursor(tag);
-    setMessage(`커서 위치에 이미지 삽입: ${webPath}`);
+    setMessage(`본문에 삽입: ${webPath}`);
     void save(nextBody);
+  }
+
+  async function setAsCover(webPath: string) {
+    setCoverImage(webPath);
+    if (!coverAltKo) setCoverAltKo(titleKo.slice(0, 120));
+    setMessage(`커버(홈·OG 섬네일)로 지정: ${webPath}`);
+    await save(undefined, webPath);
+  }
+
+  async function clearCover() {
+    setCoverImage("");
+    setMessage("커버 지정 해제 — 저장 시 본문 첫 이미지가 있으면 섬네일로만 씁니다(상단 히어로 중복 없음).");
+    // Persist empty cover by sending explicit empty via override sentinel
+    await save(undefined, "");
   }
 
   if (loading) {
@@ -390,49 +394,39 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
       <section className="rounded-xl border border-border p-4">
         <h2 className="text-sm font-semibold">이미지</h2>
         <p className="mt-1 text-xs text-muted-foreground">
-          본문에 커서를 둔 뒤 「본문 이미지 첨부」/「본문 삽입」을 누르면 그 자리에{" "}
-          <code className="rounded bg-muted px-1">&lt;img&gt;</code>가 들어가고 자동 저장됩니다.
-          커버가 비어 있으면 첫 본문 이미지를 홈/목록 섬네일·OG용 커버로도 씁니다(본문 속 위치는
-          그대로). 글 상단 히어로는 본문과 같은 파일이면 중복으로 넣지 않습니다. 상단에만 따로
-          보이게 하려면 「커버 첨부/교체」로 다른 이미지를 넣으면 됩니다.
+          「이미지 첨부」로 파일을 올린 뒤, 각 항목에서{" "}
+          <strong>본문에 넣기</strong>(커서 위치)와 <strong>커버</strong> 체크를
+          고르세요. 커버는 홈·목록·OG 섬네일용이며, 본문에 같은 파일이 있으면 글
+          상단 히어로는 중복으로 넣지 않습니다.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button
             type="button"
             onMouseDown={preserveSelectionOnToolbarMouseDown}
-            onClick={() => coverInputRef.current?.click()}
-            className="rounded border border-border px-3 py-1.5 text-xs"
+            onClick={() => imageInputRef.current?.click()}
+            disabled={!slug}
+            className="rounded border border-border px-3 py-1.5 text-xs disabled:opacity-40"
           >
-            커버 첨부/교체
+            이미지 첨부
           </button>
-          <button
-            type="button"
-            onMouseDown={preserveSelectionOnToolbarMouseDown}
-            onClick={() => bodyImageInputRef.current?.click()}
-            className="rounded border border-border px-3 py-1.5 text-xs"
-          >
-            본문 이미지 첨부
-          </button>
+          {coverImage ? (
+            <button
+              type="button"
+              onClick={() => void clearCover().catch((err) => setError((err as Error).message))}
+              className="rounded border border-border px-3 py-1.5 text-xs text-muted-foreground"
+            >
+              커버 지정 해제
+            </button>
+          ) : null}
         </div>
         <input
-          ref={coverInputRef}
+          ref={imageInputRef}
           type="file"
           accept="image/jpeg,image/png,image/webp"
           className="hidden"
           onChange={(e) => {
             const f = e.target.files?.[0];
-            if (f) void uploadCover(f).catch((err) => setError((err as Error).message));
-            e.target.value = "";
-          }}
-        />
-        <input
-          ref={bodyImageInputRef}
-          type="file"
-          accept="image/jpeg,image/png,image/webp"
-          className="hidden"
-          onChange={(e) => {
-            const f = e.target.files?.[0];
-            if (f) void uploadBodyImage(f).catch((err) => setError((err as Error).message));
+            if (f) void uploadImage(f).catch((err) => setError((err as Error).message));
             e.target.value = "";
           }}
         />
@@ -445,24 +439,60 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
           />
         </label>
         {coverImage ? (
-          <p className="mt-2 break-all font-mono text-xs text-muted-foreground">{coverImage}</p>
-        ) : null}
+          <p className="mt-2 break-all font-mono text-xs text-muted-foreground">
+            현재 커버: {coverImage}
+          </p>
+        ) : (
+          <p className="mt-2 text-xs text-muted-foreground">커버 미지정</p>
+        )}
         {images.length > 0 ? (
-          <ul className="mt-4 space-y-2">
-            {images.map((img) => (
-              <li
-                key={img.filename}
-                className="flex flex-wrap items-center justify-between gap-2 rounded border border-border/60 px-2 py-1.5 text-xs"
-              >
-                <span className="font-mono">{img.filename}</span>
-                <div className="flex gap-2">
+          <ul className="mt-4 space-y-3">
+            {images.map((img) => {
+              const isCover =
+                coverImage === img.webPath ||
+                coverImage.endsWith(`/${img.filename}`);
+              const inBody =
+                bodyKo.includes(`src="${img.webPath}"`) ||
+                bodyKo.includes(`src='${img.webPath}'`) ||
+                bodyKo.includes(img.filename);
+              return (
+                <li
+                  key={img.filename}
+                  className="flex flex-wrap items-center gap-3 rounded border border-border/60 px-2 py-2 text-xs"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/api/media/posts/${slug}/${img.filename}`}
+                    alt=""
+                    className="h-14 w-20 rounded object-cover bg-muted"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate font-mono">{img.filename}</p>
+                    <p className="text-[10px] text-muted-foreground">
+                      {inBody ? "본문 사용 중" : "본문 미삽입"}
+                      {isCover ? " · 커버" : ""}
+                    </p>
+                  </div>
+                  <label className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                    <input
+                      type="radio"
+                      name="manual-cover"
+                      checked={isCover}
+                      onChange={() =>
+                        void setAsCover(img.webPath).catch((err) =>
+                          setError((err as Error).message),
+                        )
+                      }
+                    />
+                    커버
+                  </label>
                   <button
                     type="button"
                     className="text-accent underline"
                     onMouseDown={preserveSelectionOnToolbarMouseDown}
                     onClick={() => insertImageTag(img.webPath)}
                   >
-                    본문 삽입
+                    본문에 넣기
                   </button>
                   <button
                     type="button"
@@ -475,9 +505,9 @@ export function AdminManualWriteEditor({ initialSlug }: Props) {
                   >
                     삭제
                   </button>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         ) : (
           <p className="mt-2 text-xs text-muted-foreground">첨부된 이미지 없음</p>

@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T05:58:36.430Z'
+updatedAt: '2026-10-02T06:07:05.024Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -9,8 +9,7 @@ contentProfile: editorial
 shareTop: true
 shareBottom: true
 publishedAt: '2026-10-01T13:16:17.531Z'
-coverImage: >-
-  /images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/kakaotalk_20260928_140500827_02.jpg
+coverImage: /images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg
 coverImageAlt: TOZO NC9 Pro
 coverImageAltKo: TOZO NC9 Pro
 coverImageProvider: manual-body
@@ -117,7 +116,7 @@ tags:
 
   <!-- 이미지 2: 언박싱 디테일 -->
   <div style="text-align: center; margin: 2.5rem 0;">
-    <img src="/images/posts/aipick-tozo-nc9-pro-review/tozo-nc9-pro-earbuds-case-open-detail.jpg" alt="TOZO NC9 Pro 충전 케이스 내부와 거치된 이어폰, 보호 스티커가 부착된 이어폰 단품 사진" loading="lazy" style="max-width:100%; height:auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo.jpg" alt="TOZO NC9 Pro 충전 케이스 내부와 거치된 이어폰, 보호 스티커가 부착된 이어폰 단품 사진" loading="lazy" style="max-width:100%; height:auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
   </div>
 
   <!-- 스펙 인포그래픽 -->
