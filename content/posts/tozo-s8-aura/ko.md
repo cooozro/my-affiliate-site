@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-09-30'
-updatedAt: '2026-10-02T00:27:43.986Z'
+updatedAt: '2026-10-02T00:28:10.707Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
