@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T02:48:01.072Z'
+updatedAt: '2026-10-02T02:49:40.965Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -72,8 +72,7 @@ tags:
 
   <!-- 고지 섹션 -->
   <section style="margin-bottom: 2rem; background: rgba(107, 114, 128, 0.08); padding: 1rem 1.4rem; border-radius: 10px; font-size: 0.92rem; color: #444;">
-    <strong>편집 고지:</strong> 본 리뷰는 제조사의 공식 스펙 자료와 공개된 사용자 리뷰를 교차 검토하여 작성되었습니다. (※ 실제 제품을 자비로 구매했는지, 업체로부터 제공받았는지에 따라 이 문장을 "본 제품은 자비로 구매하여 작성되었습니다" 또는 "본 포스팅은 업체로부터 제품을 제공받아 작성되었습니다"로 반드시 교체해 주세요 — 대가성 콘텐츠 고지는 공정거래위원회 가이드라인상 의무 사항입니다.)
-  </section>
+    <strong>편집 고지:</strong> "본 포스팅은 업체로부터 제품을 제공받아 작성되었습니다"  </section>
 
   <!-- 도입부 -->
   <section class="intro-section" style="margin-bottom: 2.5rem; background: rgba(37, 99, 235, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #2563eb;">
