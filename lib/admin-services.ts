@@ -56,8 +56,14 @@ export async function readGithubFilePublic(path: string): Promise<{
   const rawUrl = `https://raw.githubusercontent.com/${getRepo()}/${contentBranch()}/${path}`;
   try {
     const res = await fetch(rawUrl, {
-      headers: { Accept: "text/plain" },
-      next: { revalidate: 30 },
+      headers: {
+        Accept: "text/plain",
+        // Bust intermediary caches so admin publish/save shows immediately.
+        "Cache-Control": "no-cache",
+      },
+      // force-dynamic article pages must not serve a stale markdown snapshot
+      // (stale cover paths → broken hero / wrong body images).
+      cache: "no-store",
     });
     if (res.ok) {
       return { content: await res.text(), sha: "" };
