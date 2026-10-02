@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T05:47:43.428Z'
+updatedAt: '2026-10-02T05:51:10.978Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -48,6 +48,9 @@ tags:
 
   <!-- 상단 헤더 섹션 -->
   <header class="post-header" style="margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.3); padding-bottom: 1.5rem;">
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남" loading="lazy" style="max-width:100%;height:auto;" />
+
     <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 1rem;">
       [AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC, 장점과 한계를 함께 짚었습니다
     </h1>
