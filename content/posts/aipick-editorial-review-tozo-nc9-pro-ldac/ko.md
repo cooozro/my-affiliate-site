@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T03:11:17.621Z'
+updatedAt: '2026-10-02T03:11:48.857Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -15,7 +15,7 @@ coverImageAlt: TOZO NC9 Pro
 coverImageAltKo: TOZO NC9 Pro
 coverImageProvider: manual-body
 title: '[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남'
-description: '[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC의 타협 없는 만남'
+description: '[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석'
 tags:
   - TOZO NC9 Pro
   - TOZO
