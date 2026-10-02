@@ -3,7 +3,7 @@ import type { Dictionary } from "@/messages/en";
 const ko: Dictionary = {
   meta: {
     siteDescription:
-      "공개 스펙 교차 검증 구매 가이드 — 스마트폰, 가전, 전자기기. 실물 측정 랩이 아닙니다.",
+      "현대 전자기기를 위한 심층 테크 리뷰, 디바이스 분석 및 데이터 기반 구매 가이드",
   },
   nav: {
     home: "홈",

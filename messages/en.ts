@@ -1,7 +1,7 @@
 const en = {
   meta: {
     siteDescription:
-      "Public-spec buying guides for phones, gadgets, and home electronics — not a hands-on hardware lab.",
+      "Deep-dive tech reviews, devices, and data-driven buying guides for modern electronics.",
   },
   nav: {
     home: "Home",
