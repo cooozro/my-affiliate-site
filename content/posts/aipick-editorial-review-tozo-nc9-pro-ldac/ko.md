@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T03:03:41.188Z'
+updatedAt: '2026-10-02T03:10:14.290Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -51,18 +51,7 @@ tags:
     <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 1rem;">
       [AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LDAC, 장점과 한계를 함께 짚었습니다
     </h1>
-    <p style="font-size: 1.1rem; opacity: 0.8; font-weight: 500;">
-      10만 원 전후 가격대 무선 이어폰에서 스마트 디스플레이와 LDAC 고음질이 어떤 타협을 동반하는지, 공식 스펙과 실사용 기준으로 검토했습니다.
-    </p>
-    <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.8rem;">
-      작성: AIPICK 편집팀 | 최종 수정: 2026년 9월 | 읽는 시간 약 8분
-    </p>
-  </header>
-
-  <!-- 고지 섹션 -->
-  <section style="margin-bottom: 2rem; background: rgba(107, 114, 128, 0.08); padding: 1rem 1.4rem; border-radius: 10px; font-size: 0.92rem; color: #444; text-align:center;">
-    본 포스팅은 업체로부터 제품을 제공받아 작성되었습니다.
-  </section>
+   
 
   <!-- 도입부 -->
   <section class="intro-section" style="margin-bottom: 2.5rem; background: rgba(37, 99, 235, 0.08); padding: 1.8rem; border-radius: 12px; border-left: 5px solid #2563eb;">
@@ -74,10 +63,10 @@ tags:
     </p>
   </section>
 
-  <!-- 이미지 1: 패키지/박스 unboxing shot -->
-  <div style="text-align: center; margin: 2.5rem 0;">
-    <img src="/images/posts/aipick-tozo-nc9-pro-review/tozo-nc9-pro-unboxing-package-hires-ldac.jpg" alt="TOZO NC9 Pro 패키지 박스와 Hi-Res Audio Wireless, LDAC 인증 마크, 충전 케이스 디스플레이에 표시된 시간과 배터리 잔량" loading="lazy" style="max-width:100%; height:auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-  </div>
+
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+
 
   <!-- 1번 섹션 -->
   <section class="feature-section" style="margin-bottom: 3rem;">
@@ -293,5 +282,13 @@ tags:
   </section>
 
 </article>
+
+
+  </header>
+
+  <!-- 고지 섹션 -->
+  <section style="margin-bottom: 2rem; background: rgba(107, 114, 128, 0.08); padding: 1rem 1.4rem; border-radius: 10px; font-size: 0.92rem; color: #444; text-align:center;">
+    본 포스팅은 업체로부터 제품을 제공받아 작성되었습니다.
+  </section>
 </body>
 </html>
