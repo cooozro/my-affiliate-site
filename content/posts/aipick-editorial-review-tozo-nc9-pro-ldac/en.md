@@ -1,8 +1,7 @@
 ---
-draft: true
-date: '2026-10-02'
-createdAt: '2026-10-02T00:14:48.242Z'
-updatedAt: '2026-10-02T00:14:48.242Z'
+draft: false
+date: '2026-10-01'
+updatedAt: '2026-10-02T00:19:18.108Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -27,6 +26,7 @@ tags:
   - Hi-Res Audio
   - Tech Review
   - AIPICK
+publishedAt: '2026-10-01T13:16:17.531Z'
 ---
 <article class="review-post" style="line-height: 1.8; font-size: 1.05rem; max-width: 850px; margin: 0 auto; word-break: keep-all;">
   
