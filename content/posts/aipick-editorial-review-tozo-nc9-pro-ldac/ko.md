@@ -1,7 +1,7 @@
 ---
 draft: false
 date: '2026-10-01'
-updatedAt: '2026-10-02T05:51:22.003Z'
+updatedAt: '2026-10-02T05:53:24.231Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -77,6 +77,10 @@ tags:
   <!-- 1번 섹션 -->
   <section class="feature-section" style="margin-bottom: 3rem;">
     <h2 style="font-size: 1.5rem; font-weight: 700; border-bottom: 2px solid rgba(191, 219, 254, 0.4); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">
+
+
+<img src="/images/posts/aipick-editorial-review-tozo-nc9-pro-ldac/tozo-nc9-pro.jpg" alt="[AIPICK Editorial Review] TOZO NC9 Pro 실사용 분석: 스마트 디스플레이와 LD" loading="lazy" style="max-width:100%;height:auto;" />
+
       1. 첫인상과 하드웨어: 1.47인치 인터랙티브 디스플레이
     </h2>
     <p style="margin-bottom: 1rem;">
