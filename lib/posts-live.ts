@@ -205,5 +205,12 @@ export async function getPostBySlugLive(
     }
   }
 
-  return getPostBySlug(slug, { locale, includeDrafts });
+  try {
+    return getPostBySlug(slug, { locale, includeDrafts });
+  } catch (error) {
+    // After Hobby tracing excludes content/, FS fallback is often empty.
+    throw new Error(
+      `Post not found: ${slug}/${locale} (${error instanceof Error ? error.message : "no source"})`,
+    );
+  }
 }
