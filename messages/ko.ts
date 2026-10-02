@@ -17,7 +17,7 @@ const ko: Dictionary = {
     rss: "RSS",
     rights: "All rights reserved.",
     publicationTagline:
-      "AI Pick & Report는 공개 스펙을 교차 검증하는 독립 구매 가이드 편집부이며, 실물을 측정하는 하드웨어 랩이 아닙니다.",
+      "휴대폰, 테크 디바이스, 가젯, 홈 가전에 대한 철저한 실사용 리뷰와 데이터 기반 구매 가이드를 제공하는 독립 테크 에디토리얼 데스크",
   },
   home: {
     title: "홈",

@@ -15,7 +15,7 @@ const en = {
     rss: "RSS",
     rights: "All rights reserved.",
     publicationTagline:
-      "AI Pick & Report is an independent buying-guide desk that cross-checks public specs — not a hands-on hardware lab.",
+      "An independent tech desk delivering rigorous hands-on reviews and data-driven buying guides for phones, tech devices, gadgets, and home electronics.",
   },
   home: {
     title: "Home",
