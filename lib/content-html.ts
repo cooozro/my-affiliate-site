@@ -25,11 +25,39 @@ export function dedentIndentedHtmlTags(content: string): string {
  * Full pasted HTML documents nest <html>/<body> inside our layout and can
  * confuse the browser (duplicate chrome / odd image remounts). Prefer the
  * inner <article>, else <body> children.
+ *
+ * Translators sometimes inject a premature </article></body></html> mid-body
+ * (seen on EN manual posts). Use the outermost article span and strip those
+ * false document closers so later sections are not dropped.
  */
 export function extractRenderableHtml(content: string): string {
   const trimmed = content.trim();
-  const article = trimmed.match(/<article\b[^>]*>[\s\S]*?<\/article>/i);
-  if (article) return article[0].trim();
+  const open = /<article\b[^>]*>/i.exec(trimmed);
+  if (open && open.index !== undefined) {
+    const start = open.index;
+    const closes = [...trimmed.matchAll(/<\/article>/gi)];
+    if (closes.length > 0) {
+      const last = closes[closes.length - 1];
+      const end = (last.index ?? start) + last[0].length;
+      let chunk = trimmed.slice(start, end);
+      // Remove early document/article closers that still leave more article body.
+      chunk = chunk.replace(
+        /<\/article>\s*<\/body>\s*<\/html>(?:\s*<\/ul>)?(?:\s*<\/section>)?(?=[\s\S]*<\/article>)/gi,
+        "",
+      );
+      // If multiple </article> remain, keep only the final closer.
+      const innerCloses = [...chunk.matchAll(/<\/article>/gi)];
+      if (innerCloses.length > 1) {
+        for (let i = 0; i < innerCloses.length - 1; i += 1) {
+          const m = innerCloses[i];
+          if (m.index === undefined) continue;
+          chunk =
+            chunk.slice(0, m.index) + chunk.slice(m.index + m[0].length);
+        }
+      }
+      return chunk.trim();
+    }
+  }
   const body = trimmed.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i);
   if (body?.[1]) return body[1].trim();
   return trimmed;

@@ -22,6 +22,24 @@ test("extracts article from full HTML document", () => {
   assert.match(prepared, /\/api\/media\/posts\/a\/b\.jpg/);
 });
 
+test("keeps later sections when translator inserts early </article></body></html>", () => {
+  const broken = `<!DOCTYPE html><html><body>
+<article class="x">
+<section><h2>1. One</h2><p>a</p></section>
+</article>
+</body>
+</html></ul>
+</section>
+<section><h2>2. Two</h2><p>b</p></section>
+<section><h2>8. End</h2><p>c</p></section>
+</article>
+</body></html>`;
+  const extracted = extractRenderableHtml(broken);
+  assert.match(extracted, /2\. Two/);
+  assert.match(extracted, /8\. End/);
+  assert.equal((extracted.match(/<\/article>/gi) || []).length, 1);
+});
+
 test("shouldRenderCoverHero hides when body already has same cover", () => {
   const body = `<img src="/images/posts/s/cover.jpg" alt="x" />`;
   assert.equal(
