@@ -78,12 +78,8 @@ function buildSearchText(post: Post, sibling?: Post): string {
   return chunks.filter(Boolean).join(" ").toLowerCase();
 }
 
-function ensurePostsDirectory(): void {
-  if (!fs.existsSync(POSTS_DIRECTORY)) {
-    throw new Error(
-      `content/posts folder not found: ${POSTS_DIRECTORY}`,
-    );
-  }
+function ensurePostsDirectory(): boolean {
+  return fs.existsSync(POSTS_DIRECTORY);
 }
 
 function getPostFilePath(slug: string, locale: Locale): string {
@@ -148,7 +144,9 @@ export function isPublicListPost(meta: Pick<PostMeta, "draft" | "noindex">): boo
 }
 
 function getAllSlugDirs(): string[] {
-  ensurePostsDirectory();
+  // On Vercel Hobby we exclude content/ from function tracing; GitHub live reads
+  // cover public routes. Missing FS must not throw (breaks metadata/hreflang).
+  if (!ensurePostsDirectory()) return [];
 
   return fs
     .readdirSync(POSTS_DIRECTORY, { withFileTypes: true })

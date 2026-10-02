@@ -6,7 +6,6 @@
 import type { Metadata } from "next";
 import { locales, ogLocales } from "@/lib/i18n/config";
 import { localizedPath } from "@/lib/i18n/paths";
-import { getPostSlugs } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 import type { BlogPostGuardianInput } from "@/lib/guardian/types";
 
@@ -50,12 +49,10 @@ export function buildBlogPostMetadata(
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        locales
-          .filter((l) => getPostSlugs(l).includes(slug))
-          .map((l) => [
-            l,
-            `${siteConfig.url}${localizedPath(l, `/blog/${slug}`)}`,
-          ]),
+        locales.map((l) => [
+          l,
+          `${siteConfig.url}${localizedPath(l, `/blog/${slug}`)}`,
+        ]),
       ),
     },
   };
