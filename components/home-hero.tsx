@@ -27,7 +27,7 @@ export function HomeHero({ description }: HomeHeroProps) {
       <div className="absolute inset-0 flex items-end">
         <div className={`flex w-full items-end ${CONTENT_SHELL} pb-8 sm:pb-10 md:pb-12`}>
           <h1 className="sr-only">{siteConfig.name}</h1>
-          <p className="max-w-3xl font-sans text-sm leading-relaxed text-white/90 sm:text-base md:text-lg lg:text-xl">
+          <p className="w-full max-w-full text-pretty font-sans text-[0.9375rem] leading-snug text-white/90 sm:text-base sm:leading-relaxed md:text-lg lg:max-w-none lg:text-xl lg:leading-relaxed xl:text-[1.375rem]">
             {description}
           </p>
         </div>
