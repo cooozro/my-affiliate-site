@@ -1,8 +1,7 @@
 ---
-draft: true
-date: '2026-09-15'
-createdAt: '2026-09-15T03:23:06.823Z'
-updatedAt: '2026-09-15T03:23:06.823Z'
+draft: false
+date: '2026-11-25'
+updatedAt: '2026-11-25T02:35:50.926Z'
 manualOrigin: true
 automationBuffer: false
 writingProvider: manual
@@ -18,6 +17,7 @@ tags:
   - FoldableiPhone
   - iPhoneDuoProblems
   - iPhoneDuoWeight
+publishedAt: '2026-11-25T02:35:50.926Z'
 ---
 <h1 style="font-size:1.85em;color:#0f172a;margin-bottom:14px;line-height:1.32;">
 Apple’s First Foldable Isn’t a Flagship. It’s a $2,000 Beta Test.
